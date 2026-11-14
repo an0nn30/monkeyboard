@@ -1,0 +1,9 @@
+.superpowers/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+.DS_Store
+
+keyboard-engine/target/
+
+__pycache__/

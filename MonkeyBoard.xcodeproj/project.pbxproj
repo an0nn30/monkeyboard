@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB1100000000000000000001 = {isa = PBXBuildFile; fileRef = BB1100000000000000000002; };
+		A554C0908A6B40B6A8000001 /* KeypressFeedback.swift in App */ = {isa = PBXBuildFile; fileRef = A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */; };
+		A554C0908A6B40B6A8000002 /* KeypressFeedback.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */; };
+		10F0C7C80E5D2DBEE097D025 /* KeyboardTypingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F415B391E00B94095304371 /* KeyboardTypingTests.swift */; };
+		7F1104F39BF31DC86A03D812 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE84E9111416B7C4FCE4F2 /* KeyboardViewController.swift */; };
+		9542B1EE6763F36E91BAEEC7 /* MonkeyBoardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A67810A0A83A645D9FB21135 /* MonkeyBoardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1521AC249C9C58D98FFF5B0 /* KeyboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */; };
+		A554C0908A6B40B6A8000006 /* WordCorrections.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554C0908A6B40B6A8000007 /* WordCorrections.swift */; };
+		F01E4187097073B07D62EDE3 /* MonkeyBoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E82B2B6DC3C8CE3505CEA /* MonkeyBoardApp.swift */; };
+		F428ADC15523D29965D8A1C2 /* KeyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49F9E39446E10A4A749FA9 /* KeyPreview.swift */; };
+		F70BB204E083FA42C1D64BBF /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */; };
+		DC1200000000000000000001 /* SentenceDecoder.swift */ = {isa = PBXBuildFile; fileRef = DD1200000000000000000001; };
+		DC1200000000000000000002 /* MonkeyDecoder.mlpackage */ = {isa = PBXBuildFile; fileRef = DD1200000000000000000002; };
+		DC1200000000000000000003 /* decoder-vocab.tsv */ = {isa = PBXBuildFile; fileRef = DD1200000000000000000003; };
+		DC1300000000000000000001 /* leek-review.bin */ = {isa = PBXBuildFile; fileRef = DD1300000000000000000001; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30FD8DA3665A115CD65FBC9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 985959785319747668373CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23A624D7185B4AF2DBB7CC02;
+			remoteInfo = MonkeyBoardKeyboard;
+		};
+		8819326A5F1B4B9D5C1B0A77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 985959785319747668373CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F508F7CB1E9A7DFC0915D5F7;
+			remoteInfo = MonkeyBoard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BFE38EAACC7438E4F0663AA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9542B1EE6763F36E91BAEEC7 /* MonkeyBoardKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BB1100000000000000000002 /* WordNet-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "keyboard-engine/model/semantics/WordNet-LICENSE.txt"; sourceTree = SOURCE_ROOT; };
+		A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeypressFeedback.swift; sourceTree = "<group>"; };
+		A554C0908A6B40B6A8000004 /* SharedSettings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharedSettings.entitlements; sourceTree = "<group>"; };
+		2F415B391E00B94095304371 /* KeyboardTypingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTypingTests.swift; sourceTree = "<group>"; };
+		3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModel.swift; sourceTree = "<group>"; };
+		A554C0908A6B40B6A8000007 /* WordCorrections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCorrections.swift; sourceTree = "<group>"; };
+		4340A2698209F2C8891CD72D /* MonkeyBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DDE84E9111416B7C4FCE4F2 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		7F49F9E39446E10A4A749FA9 /* KeyPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPreview.swift; sourceTree = "<group>"; };
+		A555BBB2F263B2EA186466BD /* MonkeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67810A0A83A645D9FB21135 /* MonkeyBoardKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonkeyBoardKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51E82B2B6DC3C8CE3505CEA /* MonkeyBoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyBoardApp.swift; sourceTree = "<group>"; };
+		D90FA404B14F44BBE52F11CD /* Keyboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Keyboard-Info.plist"; sourceTree = "<group>"; };
+		DD1200000000000000000001 /* SentenceDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard/SentenceDecoder.swift"; sourceTree = SOURCE_ROOT; };
+		DD1200000000000000000002 /* MonkeyDecoder.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "keyboard-engine/model/decoder15m/MonkeyDecoder.mlpackage"; sourceTree = SOURCE_ROOT; };
+		DD1200000000000000000003 /* decoder-vocab.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "keyboard-engine/model/decoder15m/decoder-vocab.tsv"; sourceTree = SOURCE_ROOT; };
+		DD1300000000000000000001 /* leek-review.bin */ = {isa = PBXFileReference; lastKnownFileType = file; path = "keyboard-engine/model/decoder15m/leek-review.bin"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2E88FBA07979B66A55D39FBC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D90FA404B14F44BBE52F11CD /* Keyboard-Info.plist */,
+				A554C0908A6B40B6A8000004 /* SharedSettings.entitlements */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		40330AC15B9B4360CF36A5DF = {
+			isa = PBXGroup;
+			children = (
+				DD1200000000000000000001 /* SentenceDecoder.swift */,
+				DD1200000000000000000002 /* MonkeyDecoder.mlpackage */,
+				DD1200000000000000000003 /* decoder-vocab.tsv */,
+				DD1300000000000000000001 /* leek-review.bin */,
+				4229A49FF531BA6F4EAEB8B4 /* App */,
+				BB1100000000000000000002 /* WordNet-LICENSE.txt */,
+				A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */,
+				B065A3306758C6882394ED94 /* Keyboard */,
+				AB620C0894166BAB7FD0E274 /* UITests */,
+				2E88FBA07979B66A55D39FBC /* Configuration */,
+				4EDC8BFAFC6BD936B849F38C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4229A49FF531BA6F4EAEB8B4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D51E82B2B6DC3C8CE3505CEA /* MonkeyBoardApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4EDC8BFAFC6BD936B849F38C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A555BBB2F263B2EA186466BD /* MonkeyBoard.app */,
+				A67810A0A83A645D9FB21135 /* MonkeyBoardKeyboard.appex */,
+				4340A2698209F2C8891CD72D /* MonkeyBoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB620C0894166BAB7FD0E274 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F415B391E00B94095304371 /* KeyboardTypingTests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		B065A3306758C6882394ED94 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7F49F9E39446E10A4A749FA9 /* KeyPreview.swift */,
+				400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */,
+				A554C0908A6B40B6A8000007 /* WordCorrections.swift */,
+				3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */,
+				7DDE84E9111416B7C4FCE4F2 /* KeyboardViewController.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23A624D7185B4AF2DBB7CC02 /* MonkeyBoardKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5F347DD9CCE6D46614148C /* Build configuration list for PBXNativeTarget "MonkeyBoardKeyboard" */;
+			buildPhases = (
+				AAE000000000000000000007 /* Build Rust engine */,
+				0AD7F4453B4997B7177EC3B3 /* Sources */,
+				DD1200000000000000000004 /* Decoder resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonkeyBoardKeyboard;
+			productName = MonkeyBoardKeyboard;
+			productReference = A67810A0A83A645D9FB21135 /* MonkeyBoardKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		327BB7A087916F307D50394A /* MonkeyBoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3895F21BC6C5408A8C16DD /* Build configuration list for PBXNativeTarget "MonkeyBoardUITests" */;
+			buildPhases = (
+				3ADA6000EB31B9FB5E3E95B3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64789BE06F9265AFB0E7C85E /* PBXTargetDependency */,
+			);
+			name = MonkeyBoardUITests;
+			productName = MonkeyBoardUITests;
+			productReference = 4340A2698209F2C8891CD72D /* MonkeyBoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F508F7CB1E9A7DFC0915D5F7 /* MonkeyBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D55CDBCD2AC249BD9F179FA /* Build configuration list for PBXNativeTarget "MonkeyBoard" */;
+			buildPhases = (
+				99676A4E42AFD4005E3B3934 /* Sources */,
+				9BFE38EAACC7438E4F0663AA /* Embed App Extensions */,
+				BB1100000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1986F017A41723304AC2F67E /* PBXTargetDependency */,
+			);
+			name = MonkeyBoard;
+			productName = MonkeyBoard;
+			productReference = A555BBB2F263B2EA186466BD /* MonkeyBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB1100000000000000000003 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (BB1100000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+		DD1200000000000000000004 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (DC1200000000000000000003, DC1300000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXProject section */
+		985959785319747668373CC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					327BB7A087916F307D50394A = {
+						TestTargetID = F508F7CB1E9A7DFC0915D5F7;
+					};
+				};
+			};
+			buildConfigurationList = E7D1FE59799B28DD1744118E /* Build configuration list for PBXProject "MonkeyBoard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40330AC15B9B4360CF36A5DF;
+			productRefGroup = 4EDC8BFAFC6BD936B849F38C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F508F7CB1E9A7DFC0915D5F7 /* MonkeyBoard */,
+				23A624D7185B4AF2DBB7CC02 /* MonkeyBoardKeyboard */,
+				327BB7A087916F307D50394A /* MonkeyBoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+        AAE000000000000000000007 /* Build Rust engine */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = ();
+            inputPaths = ("$(SRCROOT)/keyboard-engine/src/lib.rs", "$(SRCROOT)/keyboard-engine/src/neural.rs", "$(SRCROOT)/keyboard-engine/src/semantics.rs", "$(SRCROOT)/keyboard-engine/model/semantics/vocab.txt", "$(SRCROOT)/keyboard-engine/model/semantics/vectors.i8", "$(SRCROOT)/keyboard-engine/model/neural/weights.i8", "$(SRCROOT)/keyboard-engine/model/neural/vocab.txt", "$(SRCROOT)/keyboard-engine/include/monkeyboard.h", "$(SRCROOT)/keyboard-engine/model/edit-phrases.tsv", "$(SRCROOT)/keyboard-engine/model/paired-edits.tsv", "$(SRCROOT)/keyboard-engine/model/attested-edits.tsv", "$(SRCROOT)/keyboard-engine/model/boundary-counts.tsv", "$(SRCROOT)/keyboard-engine/model/paired-next.tsv", "$(SRCROOT)/keyboard-engine/model/next.tsv", "$(SRCROOT)/keyboard-engine/model/predict.tsv", "$(SRCROOT)/keyboard-engine/model/words.tsv", "$(SRCROOT)/keyboard-engine/training/display-words.txt", "$(SRCROOT)/keyboard-engine/Cargo.toml", "$(SRCROOT)/keyboard-engine/Cargo.lock", "$(SRCROOT)/keyboard-engine/build-ios.sh");
+            name = "Build Rust engine";
+            outputPaths = ("$(DERIVED_FILE_DIR)/libmonkeyboard_engine.a");
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/bash;
+            shellScript = "set -eu\nMB_ENGINE_OUT=\"$DERIVED_FILE_DIR\" \"$SRCROOT/keyboard-engine/build-ios.sh\" \"$PLATFORM_NAME\" $ARCHS\n";
+        };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AD7F4453B4997B7177EC3B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1200000000000000000001 /* SentenceDecoder.swift */,
+				DC1200000000000000000002 /* MonkeyDecoder.mlpackage */,
+				F428ADC15523D29965D8A1C2 /* KeyPreview.swift in Sources */,
+				A554C0908A6B40B6A8000002 /* KeypressFeedback.swift in Keyboard */,
+				D1521AC249C9C58D98FFF5B0 /* KeyboardModel.swift in Sources */,
+				A554C0908A6B40B6A8000006 /* WordCorrections.swift in Sources */,
+				F70BB204E083FA42C1D64BBF /* KeyboardView.swift in Sources */,
+				7F1104F39BF31DC86A03D812 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ADA6000EB31B9FB5E3E95B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F0C7C80E5D2DBEE097D025 /* KeyboardTypingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99676A4E42AFD4005E3B3934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01E4187097073B07D62EDE3 /* MonkeyBoardApp.swift in Sources */,
+				A554C0908A6B40B6A8000001 /* KeypressFeedback.swift in App */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1986F017A41723304AC2F67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23A624D7185B4AF2DBB7CC02 /* MonkeyBoardKeyboard */;
+			targetProxy = 30FD8DA3665A115CD65FBC9D /* PBXContainerItemProxy */;
+		};
+		64789BE06F9265AFB0E7C85E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F508F7CB1E9A7DFC0915D5F7 /* MonkeyBoard */;
+			targetProxy = 8819326A5F1B4B9D5C1B0A77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ADE843AAC8C79FA5ACA0D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dustin.monkeyboard.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TEST_TARGET_NAME = MonkeyBoard;
+			};
+			name = Release;
+		};
+		23B39CF8F751B1D21922521B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Configuration/SharedSettings.entitlements;
+				DEVELOPMENT_TEAM = G8Y2U3KKZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MonkeyBoard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dustin.monkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		433548979C024CC63B5F3B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 19;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		768BDB6DD76CBE6D0F90D450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+                ENABLE_USER_SCRIPT_SANDBOXING = NO;
+                SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/keyboard-engine/include\"";
+                OTHER_LDFLAGS = ("$(inherited)", "$(DERIVED_FILE_DIR)/libmonkeyboard_engine.a");
+				CODE_SIGN_ENTITLEMENTS = Configuration/SharedSettings.entitlements;
+				DEVELOPMENT_TEAM = G8Y2U3KKZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/Keyboard-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dustin.monkeyboard.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B800A40FDE6F0A0218D9BCD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 19;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0AFAEDB6D9AAA3E89B23638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+                ENABLE_USER_SCRIPT_SANDBOXING = NO;
+                SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/keyboard-engine/include\"";
+                OTHER_LDFLAGS = ("$(inherited)", "$(DERIVED_FILE_DIR)/libmonkeyboard_engine.a");
+				CODE_SIGN_ENTITLEMENTS = Configuration/SharedSettings.entitlements;
+				DEVELOPMENT_TEAM = G8Y2U3KKZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/Keyboard-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dustin.monkeyboard.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EBD979CFB1A59D747C1287B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Configuration/SharedSettings.entitlements;
+				DEVELOPMENT_TEAM = G8Y2U3KKZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MonkeyBoard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dustin.monkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FE1AAA0A05913304EFA8DA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dustin.monkeyboard.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TEST_TARGET_NAME = MonkeyBoard;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D55CDBCD2AC249BD9F179FA /* Build configuration list for PBXNativeTarget "MonkeyBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B39CF8F751B1D21922521B /* Debug */,
+				EBD979CFB1A59D747C1287B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5F347DD9CCE6D46614148C /* Build configuration list for PBXNativeTarget "MonkeyBoardKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0AFAEDB6D9AAA3E89B23638 /* Debug */,
+				768BDB6DD76CBE6D0F90D450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7D1FE59799B28DD1744118E /* Build configuration list for PBXProject "MonkeyBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433548979C024CC63B5F3B8D /* Debug */,
+				B800A40FDE6F0A0218D9BCD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3895F21BC6C5408A8C16DD /* Build configuration list for PBXNativeTarget "MonkeyBoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1AAA0A05913304EFA8DA65 /* Debug */,
+				0ADE843AAC8C79FA5ACA0D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 985959785319747668373CC6 /* Project object */;
+}

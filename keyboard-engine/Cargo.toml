@@ -1,0 +1,17 @@
+[package]
+name = "monkeyboard-engine"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[features]
+default = ["lm-neural"]
+lm-neural = []
+
+[lib]
+crate-type = ["staticlib", "rlib"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
