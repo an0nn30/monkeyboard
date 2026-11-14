@@ -9,16 +9,16 @@ private final class KeyButton: UIButton {
     private let face = UIView()
     var faceInset = CGSize.zero
 
-    func setFaceColor(_ color: UIColor) {
+    func setFaceColor(_ color: UIColor, radius: CGFloat = 5) {
         if face.superview == nil {
             face.isUserInteractionEnabled = false
-            face.layer.cornerRadius = 5
             face.layer.cornerCurve = .continuous
             // UIKit lazily inserts its image view when the key changes layers.
             // Keep the painted cap behind all button content, including new symbols.
             face.layer.zPosition = -1
             insertSubview(face, at: 0)
         }
+        face.layer.cornerRadius = radius
         face.backgroundColor = color
         backgroundColor = .clear
     }
@@ -75,6 +75,7 @@ final class KeyboardView: UIView {
     private let optionsButton = UIButton(type: .system)
     private let layoutButton = UIButton(type: .system)
     private let expandButton = UIButton(type: .system)
+    private let keypadGlobe = UIButton(type: .custom)
     static let minimumSplitWidth: CGFloat = 560
     private var suggestions: [UIButton] = []
     private var rows: [[UIButton]] = []
@@ -94,7 +95,9 @@ final class KeyboardView: UIView {
     var onKey: ((Key) -> Void)?
     var onTouch: (() -> Void)?
     var onWord: ((String) -> Void)?
-    var configureGlobe: ((UIButton) -> Void)?
+    var configureGlobe: ((UIButton) -> Void)? {
+        didSet { configureGlobe?(keypadGlobe) }
+    }
     var onToggleLayout: (() -> Void)?
     var onExpand: (() -> Void)?
     var onDismiss: (() -> Void)?
@@ -155,6 +158,12 @@ final class KeyboardView: UIView {
         expandButton.isHidden = true
         expandButton.addAction(UIAction { [weak self] _ in self?.onExpand?() }, for: .touchUpInside)
         addSubview(expandButton)
+        keypadGlobe.setImage(UIImage(systemName: "globe"), for: .normal)
+        keypadGlobe.tintColor = Self.ink
+        keypadGlobe.accessibilityLabel = "Next keyboard"
+        keypadGlobe.accessibilityIdentifier = "key-Next keyboard"
+        keypadGlobe.isHidden = true
+        addSubview(keypadGlobe)
     }
 
     required init?(coder: NSCoder) { fatalError("Use init()") }
@@ -176,9 +185,15 @@ final class KeyboardView: UIView {
 
     func update(_ model: KeyboardModel, returnTitle: String?, animateLayout: Bool = false) {
         guard displayedModel != model || displayedReturnTitle != returnTitle else { return }
+        let keypad = model.layer == .keypad
+        let wasKeypad = displayedModel?.layer == .keypad
         if animateLayout { layoutIfNeeded(); resetTouches() }
         displayedModel = model
         displayedReturnTitle = returnTitle
+        toolbar.isHidden = keypad
+        // Decimal takes the lower-left cell. Keep the system keyboard switch
+        // available below the grid on hosts that require an in-extension globe.
+        keypadGlobe.isHidden = !(keypad && model.keyboardType == .decimalPad && model.needsGlobe)
         expandButton.isHidden = model.oneHanded == .fullWidth
         expandButton.setImage(UIImage(systemName: model.oneHanded == .left ? "chevron.right" : "chevron.left"),
                               for: .normal)
@@ -187,7 +202,8 @@ final class KeyboardView: UIView {
                               for: .normal)
         let next = model.rows
         // Preserve the control that owns a touch when one-shot shift changes case.
-        if rows.map(\.count) != next.map(\.count) || keys.flatMap({ $0 }).contains(.globe) != model.needsGlobe {
+        if keypad != wasKeypad || rows.map(\.count) != next.map(\.count)
+            || keys.last?.firstIndex(of: .globe) != next.last?.firstIndex(of: .globe) {
             resetTouches()
             rows.flatMap { $0 }.forEach { $0.removeFromSuperview() }
             rows = next.map { row in
@@ -239,9 +255,28 @@ final class KeyboardView: UIView {
                     label = returnTitle ?? "Return"; color = accent
                 }
                 button.setTitle(title, for: .normal)
+                if keypad {
+                    // UIKit's number pad uses phone legends as labels; each key inserts only its digit.
+                    let legends = ["", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
+                    let legend = i < 3 ? legends[i * 3 + j] : ""
+                    let digit = title?.first?.isWholeNumber == true
+                    color = digit ? Self.keyFill : .clear
+                    size = 25
+                    if let title, !legend.isEmpty {
+                        let caption = NSMutableAttributedString(string: title, attributes: [.font: UIFont.systemFont(ofSize: size)])
+                        caption.append(NSAttributedString(string: "\n" + legend, attributes: [
+                            .font: UIFont.systemFont(ofSize: 9, weight: .semibold), .kern: 1.3
+                        ]))
+                        button.titleLabel?.numberOfLines = 2
+                        button.titleLabel?.textAlignment = .center
+                        button.setAttributedTitle(caption, for: .normal)
+                    } else {
+                        button.setAttributedTitle(nil, for: .normal)
+                    }
+                }
                 button.setImage(symbol.flatMap { UIImage(systemName: $0) }, for: .normal)
                 button.titleLabel?.font = .systemFont(ofSize: size)
-                if let cap = button as? KeyButton { cap.setFaceColor(color) }
+                if let cap = button as? KeyButton { cap.setFaceColor(color, radius: keypad ? 9 : 5) }
                 else { button.backgroundColor = color }
                 button.accessibilityLabel = label
                 button.accessibilityIdentifier = "key-" + label
@@ -277,11 +312,12 @@ final class KeyboardView: UIView {
         let inset: CGFloat = 4
         let hand = displayedModel?.oneHanded ?? .fullWidth
         let typingArea = hand.typingArea(in: bounds)
+        let keypad = displayedModel?.layer == .keypad
         let available = typingArea.insetBy(dx: inset, dy: 0)
         let gap: CGFloat = typingArea.width < 360 ? 3 : 4
         let rowGap: CGFloat = bounds.height < 220 ? 5 : 7
         // This strip also provides headroom for top-row previews inside the extension.
-        let top = min(61, max(46, bounds.height * 0.23))
+        let top: CGFloat = keypad ? 0 : min(61, max(46, bounds.height * 0.23))
         toolbar.frame = CGRect(x: available.minX, y: 0, width: available.width, height: top)
         if hand != .fullWidth {
             let gutterX = hand == .left ? typingArea.maxX : bounds.minX
@@ -290,6 +326,10 @@ final class KeyboardView: UIView {
             expandButton.frame = CGRect(x: gutterX + (gutterWidth - targetWidth) / 2,
                                         y: top + (bounds.height - top - 52) / 2,
                                         width: targetWidth, height: 52)
+        }
+        if keypad {
+            layoutKeypad(in: typingArea)
+            return
         }
         let height = max(1, (bounds.height - top - 5 - 3 * rowGap) / 4)
         let split = displayedModel?.isSplit == true
@@ -362,6 +402,23 @@ final class KeyboardView: UIView {
         }
     }
 
+    private func layoutKeypad(in area: CGRect) {
+        let grid = area.insetBy(dx: 5, dy: 6)
+        let footer: CGFloat = keypadGlobe.isHidden ? 0 : 44
+        let cellWidth = grid.width / 3
+        let cellHeight = (grid.height - footer) / 4
+        for (r, row) in rows.enumerated() {
+            for (c, button) in row.enumerated() {
+                // On integer pads without an in-extension globe the first cell stays empty.
+                let column = c + 3 - row.count
+                button.frame = CGRect(x: grid.minX + CGFloat(column) * cellWidth,
+                                      y: grid.minY + CGFloat(r) * cellHeight, width: cellWidth, height: cellHeight)
+                (button as? KeyButton)?.faceInset = CGSize(width: 3, height: 3)
+            }
+        }
+        keypadGlobe.frame = CGRect(x: grid.minX, y: grid.maxY - footer, width: 44, height: footer)
+    }
+
     func keycapFrame(of button: UIButton, presented: Bool = false) -> CGRect {
         let frame = presented && CACurrentMediaTime() < motionEndsAt
             ? button.layer.presentation()?.frame ?? button.frame : button.frame
@@ -379,6 +436,10 @@ final class KeyboardView: UIView {
         var best = CGFloat.infinity
         for row in rows {
             for cap in row where cap.isUserInteractionEnabled && !cap.isHidden {
+                if displayedModel?.layer == .keypad {
+                    if cap.frame.contains(point) { return cap }
+                    continue
+                }
                 let r = visibleFrame(of: cap)
                 if r.contains(point) { return cap }
                 guard let key = cap as? KeyButton, case .type = key.key else { continue }
@@ -395,6 +456,7 @@ final class KeyboardView: UIView {
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         guard isUserInteractionEnabled, !isHidden, alpha > 0.01, bounds.contains(point),
               !rows.isEmpty, point.y >= toolbar.frame.maxY else { return super.hitTest(point, with: event) }
+        if !keypadGlobe.isHidden, keypadGlobe.frame.contains(point) { return keypadGlobe }
         if let cap = nearestCap(at: point) { return cap }
         if !expandButton.isHidden, visibleFrame(of: expandButton).contains(point) { return expandButton }
         return self
@@ -405,7 +467,8 @@ final class KeyboardView: UIView {
             guard let key = nearestCap(at: point) as? KeyButton, case .type = key.key else { return nil }
             return key
         }
-        return visibleFrame(of: source).insetBy(dx: -3, dy: -3).contains(point) ? source : nil
+        let frame = displayedModel?.layer == .keypad ? source.frame : visibleFrame(of: source)
+        return frame.insetBy(dx: -3, dy: -3).contains(point) ? source : nil
     }
 
     fileprivate func begin(_ source: KeyButton) {
@@ -441,7 +504,7 @@ final class KeyboardView: UIView {
         held[id]?.alpha = 1
         held[id] = target
         target?.alpha = 0.72
-        guard let target, case let .type(char) = target.key else {
+        guard displayedModel?.layer != .keypad, let target, case let .type(char) = target.key else {
             previews.removeValue(forKey: id)?.removeFromSuperview()
             return
         }

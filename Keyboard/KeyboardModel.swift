@@ -35,7 +35,17 @@ enum OneHandedLayout: Int, CaseIterable {
 }
 
 struct KeyboardModel: Equatable {
-    enum Layer { case letters, numbers, symbols }
+    enum Layer {
+        case letters, numbers, symbols, keypad
+
+        static func initial(for type: UIKeyboardType) -> Self {
+            switch type {
+            case .numberPad, .asciiCapableNumberPad, .decimalPad: return .keypad
+            case .numbersAndPunctuation: return .numbers
+            default: return .letters
+            }
+        }
+    }
     enum Shift { case lower, upper, locked }
     var layer = Layer.letters
     var shift = Shift.lower
@@ -47,6 +57,15 @@ struct KeyboardModel: Equatable {
     var rows: [[Key]] {
         let lines: [String]
         switch layer {
+        case .keypad:
+            func digit(_ value: Int) -> Key {
+                .type(keyboardType == .asciiCapableNumberPad ? String(value) : value.formatted(.number.locale(.current)))
+            }
+            var bottom: [Key] = []
+            if keyboardType == .decimalPad { bottom.append(.type(Locale.current.decimalSeparator ?? ".")) }
+            else if needsGlobe { bottom.append(.globe) }
+            bottom += [digit(0), .delete]
+            return [(1...3).map(digit), (4...6).map(digit), (7...9).map(digit), bottom]
         case .letters: lines = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
         case .numbers: lines = ["1234567890", "-/:;()$&@", ".,?!'"]
         case .symbols: lines = ["[]{}#%^*+=", "_\\|~<>€£¥", ".,?!'"]

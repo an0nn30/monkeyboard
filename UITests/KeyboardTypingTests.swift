@@ -20,6 +20,53 @@ final class KeyboardTypingTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    func testNumericFieldsUseKeypadAndRestoreTextKeyboard() throws {
+        let host = XCUIApplication()
+        host.launch()
+        host.textViews["draft"].tap()
+        selectMonkeyBoard(in: host)
+        let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
+        // Use a real host's input traits and change focus without dismissing its keyboard.
+        let html = """
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>input{display:block;font-size:18px;margin:12px}</style>
+        <input aria-label="Integer" inputmode="numeric">
+        <input aria-label="Amount" inputmode="decimal">
+        <input aria-label="Name" type="text">
+        """
+        let url = try XCTUnwrap(URL(string: "data:text/html;base64," + Data(html.utf8).base64EncodedString()))
+        safari.open(url)
+        let amount = safari.textFields["Amount"]
+        XCTAssertTrue(amount.waitForExistence(timeout: 10))
+        amount.tap()
+        let shot = XCTAttachment(screenshot: safari.screenshot())
+        shot.name = "Decimal keypad"
+        shot.lifetime = .keepAlways
+        add(shot)
+
+        func key(_ value: String) -> XCUIElement { safari.buttons["key-" + value] }
+        XCTAssertTrue(key("1").waitForExistence(timeout: 3), "Enable and select MonkeyBoard before running.")
+        XCTAssertFalse(key("ABC").exists)
+        XCTAssertFalse(safari.buttons["keyboard-options"].exists)
+        let separator = Locale.current.decimalSeparator ?? "."
+        for value in ["1", separator, "5", "Delete", "2"] { key(value).tap() }
+        XCTAssertEqual(amount.value as? String, "1" + separator + "2")
+        let whole = safari.textFields["Integer"]
+        whole.tap()
+        XCTAssertFalse(key(separator).exists)
+        XCTAssertFalse(key("Space").exists)
+        XCTAssertGreaterThan(key("4").frame.minY, key("1").frame.minY)
+        XCTAssertEqual(key("0").frame.midX, key("2").frame.midX, accuracy: 2)
+        for value in ["0", "9", "8"] { key(value).tap() }
+        XCTAssertEqual(whole.value as? String, "098")
+        key("Delete").press(forDuration: 0.85)
+        XCTAssertEqual(whole.value as? String ?? "", "")
+        safari.textFields["Name"].tap()
+        XCTAssertTrue(letter("a", in: safari).waitForExistence(timeout: 3))
+        key("123").tap()
+        XCTAssertTrue(key("#+=").exists)
+    }
+
     func testSymbolPagesShowActionIconsAndRespectReturnSetting() throws {
         let app = XCUIApplication()
         app.launch()

@@ -193,7 +193,7 @@ final class KeyboardViewController: UIInputViewController {
             contextNeedsSetup = false
             openedSymbolsFromLetters = false
             model.keyboardType = kind
-            model.layer = [.numbersAndPunctuation, .numberPad, .decimalPad, .asciiCapableNumberPad].contains(kind) ? .numbers : .letters
+            model.layer = .initial(for: kind)
             model.shift = .lower
             lastShift = nil
             applyAutoCase()
@@ -220,6 +220,15 @@ final class KeyboardViewController: UIInputViewController {
     }
 
     private func press(_ key: Key) {
+        // Numeric fields edit the host selection literally, including a localized decimal separator.
+        if model.layer == .keypad {
+            switch key {
+            case let .type(value): textDocumentProxy.insertText(value)
+            case .delete: textDocumentProxy.deleteBackward()
+            default: break
+            }
+            return
+        }
         validateReview()
         nextWordTask?.cancel()
         if key != .shift { lastShift = nil }
@@ -461,6 +470,7 @@ final class KeyboardViewController: UIInputViewController {
     private func scheduleSuggestions() {
         nextWordTask?.cancel()
         suggestionTask?.cancel()
+        guard model.layer != .keypad else { return }
         // Keep dictionary work out of the touch-down and key-commit paths.
         let task = DispatchWorkItem { [weak self] in self?.refreshSuggestions() }
         suggestionTask = task
