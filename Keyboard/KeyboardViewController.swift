@@ -34,6 +34,8 @@ final class KeyboardViewController: UIInputViewController {
     private var lastCorrection: WordEdit?
     private var keptSpelling: String?
     private var autoCorrect = true
+    private var returnAfterSymbol = true
+    private var openedSymbolsFromLetters = false
     private lazy var feedback = KeypressPlayer(view: board)
     private var strength = KeypressFeedback.initial
     private var lastShift: TimeInterval?
@@ -110,6 +112,7 @@ final class KeyboardViewController: UIInputViewController {
         prefersSplit = WideKeyboardLayout.prefersSplit
         preferredHand = OneHandedSetting.storedValue.flatMap(OneHandedLayout.init(rawValue:)) ?? .fullWidth
         autoCorrect = AutoCorrectionSetting.isEnabled
+        returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
         corrections.usesSentenceContext = SentenceScoringSetting.isEnabled
         usesTransformer = corrections.usesSentenceContext && TransformerSetting.isEnabled
         corrections.preparesTransformerReviews = usesTransformer
@@ -188,6 +191,7 @@ final class KeyboardViewController: UIInputViewController {
         let kind = proxy.keyboardType ?? .default
         if contextNeedsSetup || kind != model.keyboardType {
             contextNeedsSetup = false
+            openedSymbolsFromLetters = false
             model.keyboardType = kind
             model.layer = [.numbersAndPunctuation, .numberPad, .decimalPad, .asciiCapableNumberPad].contains(kind) ? .numbers : .letters
             model.shift = .lower
@@ -230,7 +234,9 @@ final class KeyboardViewController: UIInputViewController {
                 model.shift = model.shift == .lower ? .upper : .lower
                 lastShift = now
             }
-        case .layer: model.layer = model.layer == .letters ? .numbers : .letters
+        case .layer:
+            openedSymbolsFromLetters = model.layer == .letters
+            model.layer = openedSymbolsFromLetters ? .numbers : .letters
         case .symbols: model.layer = model.layer == .numbers ? .symbols : .numbers
         case .globe: advanceToNextInputMode()
         case .delete:
@@ -245,6 +251,10 @@ final class KeyboardViewController: UIInputViewController {
                 pendingReview?.suffix += value
                 textDocumentProxy.insertText(value)
                 keptSpelling = nil
+            }
+            if openedSymbolsFromLetters && returnAfterSymbol {
+                model.layer = .letters
+                openedSymbolsFromLetters = false
             }
             applyAutoCase()
         case .space, .rightSpace: insertDelimiter(" "); applyAutoCase()

@@ -69,6 +69,8 @@ private struct KeyboardSettings: View {
     @State private var saveFailed = false
     @State private var split = WideKeyboardLayout.prefersSplit
     @State private var layoutSaveFailed = false
+    @State private var returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
+    @State private var symbolSaveFailed = false
     @State private var autoCorrect = AutoCorrectionSetting.isEnabled
     @State private var correctionSaveFailed = false
     @State private var useSentence = SentenceScoringSetting.isEnabled
@@ -94,6 +96,18 @@ private struct KeyboardSettings: View {
                 Text("Layout")
             } footer: {
                 Text("Places keys and a spacebar under each thumb when there’s room. You can also switch layouts from the keyboard.")
+            }
+            Section {
+                Toggle("Return to letters after a symbol", isOn: Binding(
+                    get: { returnAfterSymbol },
+                    set: { enabled in
+                        symbolSaveFailed = !ReturnAfterSymbolSetting.save(enabled)
+                        if !symbolSaveFailed { returnAfterSymbol = enabled }
+                    }
+                )).accessibilityIdentifier("return-after-symbol")
+                if symbolSaveFailed { Text("Couldn’t save this setting. Try again.").foregroundStyle(.red) }
+            } footer: {
+                Text("When you open 123 or #+=, typing one number or symbol switches back to ABC.")
             }
             Section {
                 Toggle("Auto-Correction", isOn: Binding(
@@ -196,6 +210,7 @@ private struct KeyboardSettings: View {
         useSentence = SentenceScoringSetting.isEnabled
         transformer = TransformerSetting.isEnabled
         split = WideKeyboardLayout.prefersSplit
+        returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
         percent = KeypressFeedback.storedPercent() ?? KeypressFeedback.initial
     }
 }

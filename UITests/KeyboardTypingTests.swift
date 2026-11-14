@@ -20,17 +20,82 @@ final class KeyboardTypingTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    func testSymbolPagesShowActionIconsAndRespectReturnSetting() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        func key(_ title: String) -> XCUIElement { app.buttons["key-" + title] }
+        func checkIcons() throws {
+            for title in ["Delete", "Return"] {
+                // Inspect the middle of the painted key. Its accessibility label
+                // still exists when an opaque key face covers the glyph.
+                let image = try XCTUnwrap(key(title).screenshot().image.cgImage)
+                let center = CGRect(x: CGFloat(image.width) * 0.2, y: CGFloat(image.height) * 0.2,
+                                    width: CGFloat(image.width) * 0.6, height: CGFloat(image.height) * 0.6)
+                let crop = try XCTUnwrap(image.cropping(to: center))
+                let gray = try XCTUnwrap(CGContext(data: nil, width: crop.width, height: crop.height,
+                    bitsPerComponent: 8, bytesPerRow: crop.width, space: CGColorSpaceCreateDeviceGray(),
+                    bitmapInfo: CGImageAlphaInfo.none.rawValue))
+                gray.draw(crop, in: CGRect(x: 0, y: 0, width: crop.width, height: crop.height))
+                let pixels = UnsafeBufferPointer(start: try XCTUnwrap(gray.data).assumingMemoryBound(to: UInt8.self),
+                                                 count: crop.width * crop.height)
+                XCTAssertGreaterThan(Int(pixels.max()!) - Int(pixels.min()!), 45, "\(title) icon is blank")
+            }
+        }
+        key("123").tap()
+        try checkIcons()
+        key("Delete").tap()
+        key("#+=").tap()
+        try checkIcons()
+        key("=").tap()
+        XCTAssertTrue(letter("a", in: app).exists)
+        key("123").tap()
+        key("5").tap()
+        XCTAssertTrue(letter("a", in: app).exists)
+        XCTAssertEqual(draft.value as? String, "=5")
+
+        func changeSetting(_ enabled: Bool) {
+            app.buttons["hide-keyboard"].tap()
+            app.buttons["keyboard-settings"].tap()
+            let toggle = app.switches["return-after-symbol"]
+            XCTAssertEqual(toggle.value as? String, enabled ? "0" : "1")
+            toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap()
+            XCTAssertEqual(toggle.value as? String, enabled ? "1" : "0")
+        }
+        changeSetting(false)
+        app.terminate()
+        app.launch()
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        key("123").tap()
+        key("7").tap()
+        key("8").tap()
+        key("Delete").tap()
+        key("Return").tap()
+        key("#+=").tap()
+        key("[").tap()
+        key("]").tap()
+        XCTAssertEqual(draft.value as? String, "7\n[]")
+        XCTAssertTrue(key("ABC").exists)
+        changeSetting(true)
+    }
+
     func testTypingWithInstalledExtension() throws {
         let app = XCUIApplication()
         app.launch()
         let settings = app.buttons["keyboard-settings"]
         settings.tap()
         let slider = app.sliders["firmness-slider"]
+        app.swipeUp()
         XCTAssertTrue(slider.waitForExistence(timeout: 3))
         slider.adjust(toNormalizedSliderPosition: 0.84)
         let chosen = try XCTUnwrap(slider.value as? String)
         XCTAssertTrue(chosen.contains("%"))
-        app.buttons["Try a keypress"].tap()
+        let preview = app.buttons["Try a keypress"]
+        if !preview.isHittable { app.swipeUp() }
+        preview.tap()
         let back = app.buttons["BackButton"]
         if back.exists { back.tap() } else { app.navigationBars.buttons.element(boundBy: 0).tap() }
         let draft = app.textViews["draft"]
@@ -54,8 +119,8 @@ final class KeyboardTypingTests: XCTestCase {
         key("123").tap()
         key("2").tap()
         key("Delete").tap()
+        key("123").tap()
         key("7").tap()
-        key("ABC").tap()
         XCTAssertEqual(draft.value as? String, initial + "i 7")
         let q = letter("q")
         q.press(forDuration: 0.2, thenDragTo: letter("w"))
@@ -482,6 +547,7 @@ final class KeyboardTypingTests: XCTestCase {
         capture("Right-handed cover keyboard")
         app.buttons["key-123"].tap()
         app.buttons["key-0"].tap()
+        app.buttons["key-123"].tap()
         app.buttons["key-#+="].tap()
         app.buttons["key-="].tap()
         XCTAssertEqual((draft.value as? String)?.lowercased(), "p0=")
@@ -539,11 +605,14 @@ final class KeyboardTypingTests: XCTestCase {
         rightSpace.tap()
         app.buttons["key-123"].tap()
         app.buttons["key-1"].tap()
+        app.buttons["key-123"].tap()
         app.buttons["key-0"].tap()
+        app.buttons["key-123"].tap()
         app.buttons["key-#+="].tap()
         app.buttons["key-["].tap()
+        app.buttons["key-123"].tap()
+        app.buttons["key-#+="].tap()
         app.buttons["key-="].tap()
-        app.buttons["key-ABC"].tap()
         XCTAssertEqual(draft.value as? String, firstLetter + " j 10[=")
 
         let gutter = leftSpace.coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 0.5))

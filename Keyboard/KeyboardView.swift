@@ -6,7 +6,7 @@ private final class KeyButton: UIButton {
     weak var board: KeyboardView?
     var acceptsCurrentTouch = false
 
-    let face = UIView()
+    private let face = UIView()
     var faceInset = CGSize.zero
 
     func setFaceColor(_ color: UIColor) {
@@ -14,9 +14,11 @@ private final class KeyButton: UIButton {
             face.isUserInteractionEnabled = false
             face.layer.cornerRadius = 5
             face.layer.cornerCurve = .continuous
+            // UIKit lazily inserts its image view when the key changes layers.
+            // Keep the painted cap behind all button content, including new symbols.
+            face.layer.zPosition = -1
             insertSubview(face, at: 0)
         }
-        sendSubviewToBack(face)
         face.backgroundColor = color
         backgroundColor = .clear
     }

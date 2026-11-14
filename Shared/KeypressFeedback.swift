@@ -6,6 +6,7 @@ private enum KeyboardSetting: String {
     case firmness = "keypress-firmness"
     case split = "split-wide-layout"
     case oneHanded = "one-handed-layout"
+    case returnAfterSymbol = "return-after-symbol"
     case autocorrection = "autocorrection"
     case transformer = "decoder-15m"
     case sentenceScoring = "sentence-scoring"
@@ -47,6 +48,11 @@ enum WideKeyboardLayout {
 enum OneHandedSetting {
     static var storedValue: Int? { KeyboardSetting.oneHanded.read() }
     static func save(_ value: Int) -> Bool { KeyboardSetting.oneHanded.save(UInt8(clamping: value)) }
+}
+
+enum ReturnAfterSymbolSetting {
+    static var isEnabled: Bool { (KeyboardSetting.returnAfterSymbol.read() ?? 1) != 0 }
+    static func save(_ enabled: Bool) -> Bool { KeyboardSetting.returnAfterSymbol.save(enabled ? 1 : 0) }
 }
 
 enum AutoCorrectionSetting {
