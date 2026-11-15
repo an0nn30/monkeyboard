@@ -1,6 +1,14 @@
 import UIKit
 import MonkeyBoardEngine
 
+private extension UITextDocumentProxy {
+    // During host transitions UIKit can return nil from this nonnull ObjC getter.
+    // Read the object before bridging it to Swift's UUID.
+    var attachedDocumentID: UUID? {
+        perform(#selector(getter: UITextDocumentProxy.documentIdentifier))?.takeUnretainedValue() as? UUID
+    }
+}
+
 final class KeyboardViewController: UIInputViewController {
     private let board = KeyboardView()
     private var model = KeyboardModel()
@@ -32,6 +40,25 @@ final class KeyboardViewController: UIInputViewController {
     private var revisionTask: Operation?
     private var deferredReview: PendingReview?
     private var nextWordTask: Operation?
+    private struct GlideContext: Equatable {
+        let document: UUID
+        let before: String
+        let after: String
+    }
+    private struct GlideWord {
+        let origin: GlideContext
+        let separator: String
+        let word: String
+        let alternatives: [String]
+        var inserted: String { separator + word }
+        var expected: GlideContext {
+            GlideContext(document: origin.document, before: String((origin.before + inserted).suffix(160)), after: origin.after)
+        }
+    }
+    private var glideEnabled = true
+    private var glideStartGeneration: Int?
+    private var glideFieldEligible = false
+    private var glideWord: GlideWord?
     private var lastCorrection: WordEdit?
     private var keptSpelling: String?
     private struct OwnedRun {
@@ -95,6 +122,12 @@ final class KeyboardViewController: UIInputViewController {
         }
         board.onLetterGeometry = { [weak self] in self?.corrections.neighborMasks = $0 }
         board.onKey = { [weak self] key in self?.press(key) }
+        board.onGlideStart = { [weak self] in
+            guard let self, self.glideEnabled, self.glideFieldEligible else { return false }
+            self.glideStartGeneration = self.contextGeneration
+            return true
+        }
+        board.onGlide = { [weak self] stroke in self?.commitGlide(stroke) ?? false }
         board.onTouch = { [weak self] in self?.playFeedback() }
         board.onWord = { [weak self] word in self?.insertSuggestion(word) }
         board.onDismiss = { [weak self] in self?.dismissKeyboard() }
@@ -134,6 +167,7 @@ final class KeyboardViewController: UIInputViewController {
         keyboardFont = .stored
         prefersSplit = WideKeyboardLayout.prefersSplit
         preferredHand = OneHandedSetting.storedValue.flatMap(OneHandedLayout.init(rawValue:)) ?? .fullWidth
+        glideEnabled = GlideTypingSetting.isEnabled
         autoCorrect = AutoCorrectionSetting.isEnabled
         returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
         corrections.usesSentenceContext = SentenceScoringSetting.isEnabled
@@ -170,6 +204,8 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        glideWord = nil
+        glideStartGeneration = nil
         abandonSentence()
         run = nil
         board.resetTouches()
@@ -213,6 +249,7 @@ final class KeyboardViewController: UIInputViewController {
         case .light: board.overrideUserInterfaceStyle = .light
         default: board.overrideUserInterfaceStyle = .unspecified
         }
+        glideFieldEligible = allowsWordSuggestions && !insideWord
         let kind = proxy.keyboardType ?? .default
         if contextNeedsSetup || kind != model.keyboardType {
             contextNeedsSetup = false
@@ -271,7 +308,76 @@ final class KeyboardViewController: UIInputViewController {
         model.shift = upper ? .upper : .lower
     }
 
+    private func glideContext() -> GlideContext? {
+        let proxy = textDocumentProxy
+        guard glideEnabled, model.layer == .letters, allowsWordSuggestions, !insideWord,
+              let before = proxy.documentContextBeforeInput ?? (proxy.hasText ? nil : "") else { return nil }
+        return GlideContext(document: proxy.documentIdentifier, before: String(before.suffix(160)),
+                            after: String((proxy.documentContextAfterInput ?? "").prefix(32)))
+    }
+
+    private func commitGlide(_ stroke: GlideStroke) -> Bool {
+        defer { glideStartGeneration = nil }
+        // A focus or cursor change while the finger is down cancels this input.
+        guard glideStartGeneration == contextGeneration, let origin = glideContext() else { return true }
+        let keys = stroke.centers.map { MBKeyCenter(x: Float($0.x/stroke.pitch.width), y: Float($0.y/stroke.pitch.height)) }
+        let points = stroke.samples.map { MBGlideSample(x: Float($0.point.x/stroke.pitch.width),
+                                                        y: Float($0.point.y/stroke.pitch.height), seconds: Float($0.seconds)) }
+        var buffer = [CChar](repeating: 0, count: 128)
+        guard !origin.before.utf8.contains(0),
+              mb_glide_v1(keys, keys.count, points, points.count, origin.before, &buffer, buffer.count) > 0 else { return false }
+        let casing = textDocumentProxy.autocapitalizationType
+        let needsSpace = origin.before.last.map { $0.isLetter || $0.isNumber || ".,!?;:)]}".contains($0) } ?? false
+        let autoUpper = lastShift == nil && needsSpace && (casing == .words ||
+            (casing == .sentences && origin.before.last.map { ".!?".contains($0) } == true))
+        let options = String(cString: buffer).split(separator: "\t").map { token -> String in
+            let word = String(token)
+            if model.shift == .locked { return word.uppercased() }
+            if model.shift == .upper || autoUpper || word.hasPrefix("i'") { return word.prefix(1).uppercased() + word.dropFirst() }
+            return word
+        }
+        guard let word = options.first else { return false }
+        let receipt = GlideWord(origin: origin, separator: needsSpace ? " " : "", word: word, alternatives: options)
+        abandonSentence()
+        discardReview()
+        run = nil
+        lastCorrection = nil
+        keptSpelling = nil
+        suggestionTask?.cancel()
+        nextWordTask?.cancel()
+        lastShift = nil
+        textDocumentProxy.insertText(receipt.inserted)
+        glideWord = receipt
+        board.setSuggestions(options)
+        applyAutoCase()
+        updateKeys()
+        return true
+    }
+
+    private func handleKeyAfterGlide(_ key: Key) -> Bool {
+        guard let receipt = glideWord else { return false }
+        guard receipt.expected == glideContext() else { glideWord = nil; return false }
+        switch key {
+        case .shift: return false
+        case .space, .rightSpace, .enter: keptSpelling = receipt.word
+        case let .type(mark) where [".", ",", "!", "?", ";", ":"].contains(mark): keptSpelling = receipt.word
+        case .delete:
+            glideWord = nil
+            for _ in receipt.inserted { textDocumentProxy.deleteBackward() }
+            applyAutoCase()
+            updateKeys()
+            scheduleSuggestions()
+            return true
+        case let .type(letter) where letter.first?.isLetter == true:
+            textDocumentProxy.insertText(" ")
+        default: break
+        }
+        glideWord = nil
+        return false
+    }
+
     private func press(_ key: Key) {
+        if handleKeyAfterGlide(key) { return }
         // Numeric fields edit the host selection literally, including a localized decimal separator.
         if model.layer == .keypad {
             switch key {
@@ -791,7 +897,20 @@ final class KeyboardViewController: UIInputViewController {
 
     private func refreshSuggestions() {
         let proxy = textDocumentProxy
-        candidateDocument = proxy.documentIdentifier
+        guard let document = proxy.attachedDocumentID else {
+            candidateDocument = nil
+            candidateWords = []
+            board.setSuggestions([])
+            return
+        }
+        if let receipt = glideWord {
+            if receipt.expected == glideContext() {
+                board.setSuggestions(receipt.alternatives)
+                return
+            }
+            glideWord = nil
+        }
+        candidateDocument = document
         candidateContext = String((proxy.documentContextBeforeInput ?? "").suffix(160))
         candidatePrefix = prefix()
         candidateGeneration = contextGeneration
@@ -801,10 +920,10 @@ final class KeyboardViewController: UIInputViewController {
                 candidateWords = corrections.nextWords(before: candidateContext)
                 if usesTransformer {
                     let context = candidateContext
-                    let document = candidateDocument
                     nextWordTask = decoder.submit({ try $0.nextWords(before: context) }) { [weak self] words in
                         guard let self, !words.isEmpty, self.allowsWordSuggestions, !self.insideWord,
-                              self.model.layer == .letters, self.textDocumentProxy.documentIdentifier == document,
+                              self.model.layer == .letters,
+                              self.textDocumentProxy.attachedDocumentID == document,
                               String((self.textDocumentProxy.documentContextBeforeInput ?? "").suffix(160)) == context
                         else { return }
                         self.candidateWords = words
@@ -822,6 +941,20 @@ final class KeyboardViewController: UIInputViewController {
 
     private func insertSuggestion(_ word: String) {
         let proxy = textDocumentProxy
+        if let receipt = glideWord {
+            guard receipt.expected == glideContext(), receipt.alternatives.contains(word) else {
+                glideWord = nil
+                refreshSuggestions()
+                return
+            }
+            if word != receipt.word {
+                for _ in receipt.word { proxy.deleteBackward() }
+                proxy.insertText(word)
+                glideWord = GlideWord(origin: receipt.origin, separator: receipt.separator,
+                                      word: word, alternatives: receipt.alternatives)
+            }
+            return
+        }
         guard allowsWordSuggestions, candidateGeneration == contextGeneration, candidateWords.contains(word),
               candidateDocument == proxy.documentIdentifier,
               candidateContext == String((proxy.documentContextBeforeInput ?? "").suffix(160)), !insideWord,

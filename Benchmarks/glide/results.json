@@ -1,0 +1,27 @@
+{
+  "gestures": 512,
+  "sessions": 15,
+  "top1": 406,
+  "top3": 440,
+  "no_guess": 12,
+  "by_word_length": {
+    "2-3": {
+      "gestures": 189,
+      "top1": 150,
+      "top3": 163
+    },
+    "4-6": {
+      "gestures": 175,
+      "top1": 143,
+      "top3": 159
+    },
+    "7+": {
+      "gestures": 148,
+      "top1": 113,
+      "top3": 118
+    }
+  },
+  "median_ms": 0.17,
+  "p95_ms": 0.55,
+  "prefix_sha256": "6057480f6127fed3083b8e848fd4f16273c5b912057e531629dee867e17f3e01"
+}

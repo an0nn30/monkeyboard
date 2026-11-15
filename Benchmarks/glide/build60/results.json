@@ -1,0 +1,322 @@
+{
+  "cohort_sha256": "6bfeead1fe21d5d4c62c0187c987e6d83e786cd853323a166686e4e0d1db0951",
+  "sessions": 91,
+  "overall": {
+    "gestures": 4096,
+    "build59": {
+      "top1": 3277,
+      "top3": 3630,
+      "no_guess": 73,
+      "median_ms": 0.597,
+      "p95_ms": 3.085
+    },
+    "build60": {
+      "top1": 3284,
+      "top3": 3640,
+      "no_guess": 73,
+      "median_ms": 0.636,
+      "p95_ms": 3.252
+    },
+    "gained": 12,
+    "lost": 5
+  },
+  "2-3": {
+    "gestures": 1496,
+    "build59": {
+      "top1": 1200,
+      "top3": 1333,
+      "no_guess": 65,
+      "median_ms": 0.15,
+      "p95_ms": 1.255
+    },
+    "build60": {
+      "top1": 1200,
+      "top3": 1333,
+      "no_guess": 65,
+      "median_ms": 0.152,
+      "p95_ms": 1.268
+    },
+    "gained": 0,
+    "lost": 0
+  },
+  "4-6": {
+    "gestures": 1459,
+    "build59": {
+      "top1": 1136,
+      "top3": 1279,
+      "no_guess": 3,
+      "median_ms": 0.812,
+      "p95_ms": 3.064
+    },
+    "build60": {
+      "top1": 1136,
+      "top3": 1279,
+      "no_guess": 3,
+      "median_ms": 0.819,
+      "p95_ms": 3.013
+    },
+    "gained": 0,
+    "lost": 0
+  },
+  "7+": {
+    "gestures": 1141,
+    "build59": {
+      "top1": 941,
+      "top3": 1018,
+      "no_guess": 5,
+      "median_ms": 1.464,
+      "p95_ms": 3.775
+    },
+    "build60": {
+      "top1": 948,
+      "top3": 1028,
+      "no_guess": 5,
+      "median_ms": 1.639,
+      "p95_ms": 4.243
+    },
+    "gained": 12,
+    "lost": 5
+  },
+  "long_gained": [
+    {
+      "id": 638203,
+      "word": "soldiers",
+      "build59": [
+        "soviets",
+        "sorrows",
+        "suitors"
+      ],
+      "build60": [
+        "soldiers",
+        "soviets",
+        "sorrows"
+      ]
+    },
+    {
+      "id": 741056,
+      "word": "jackets",
+      "build59": [
+        "january's",
+        "jammeh's",
+        "janeway's"
+      ],
+      "build60": [
+        "jackets",
+        "january's",
+        "jammeh's"
+      ]
+    },
+    {
+      "id": 654219,
+      "word": "illustrations",
+      "build59": [
+        "imperfections",
+        "importations",
+        "innovations"
+      ],
+      "build60": [
+        "illustrations",
+        "imperfections",
+        "importations"
+      ]
+    },
+    {
+      "id": 741157,
+      "word": "jeopardy",
+      "build59": [
+        "brousseau",
+        "brosseau",
+        "heidari"
+      ],
+      "build60": [
+        "jeopardy",
+        "brousseau",
+        "brosseau"
+      ]
+    },
+    {
+      "id": 600237,
+      "word": "changes",
+      "build59": [
+        "changers",
+        "channers",
+        "chambers"
+      ],
+      "build60": [
+        "changes",
+        "changers",
+        "channers"
+      ]
+    },
+    {
+      "id": 683233,
+      "word": "attacks",
+      "build59": [
+        "audacious",
+        "australia",
+        "arisaka"
+      ],
+      "build60": [
+        "attacks",
+        "audacious",
+        "australia"
+      ]
+    },
+    {
+      "id": 650136,
+      "word": "himself",
+      "build59": [
+        "bookmarked",
+        "himself",
+        "bookmarks"
+      ],
+      "build60": [
+        "himself",
+        "bookmarked",
+        "bookmarks"
+      ]
+    },
+    {
+      "id": 776608,
+      "word": "difference",
+      "build59": [
+        "divergence",
+        "distend",
+        "distance"
+      ],
+      "build60": [
+        "difference",
+        "divergence",
+        "distend"
+      ]
+    },
+    {
+      "id": 756055,
+      "word": "elsewhere",
+      "build59": [
+        "etiquette",
+        "elevate",
+        "expatriate"
+      ],
+      "build60": [
+        "elsewhere",
+        "etiquette",
+        "elevate"
+      ]
+    },
+    {
+      "id": 707726,
+      "word": "football",
+      "build59": [
+        "softball",
+        "skirball",
+        "floorball"
+      ],
+      "build60": [
+        "football",
+        "softball",
+        "skirball"
+      ]
+    },
+    {
+      "id": 651755,
+      "word": "carriers",
+      "build59": [
+        "carpets",
+        "careerists",
+        "caskets"
+      ],
+      "build60": [
+        "carriers",
+        "carpets",
+        "careerists"
+      ]
+    },
+    {
+      "id": 703618,
+      "word": "mission",
+      "build59": [
+        "mountain",
+        "mousson",
+        "moulson"
+      ],
+      "build60": [
+        "mission",
+        "mountain",
+        "mousson"
+      ]
+    }
+  ],
+  "long_lost": [
+    {
+      "id": 719533,
+      "word": "volleyball",
+      "build59": [
+        "volleyball",
+        "comeback",
+        "vietnam"
+      ],
+      "build60": [
+        "comeback",
+        "volleyball",
+        "vietnam"
+      ]
+    },
+    {
+      "id": 631351,
+      "word": "clontarf",
+      "build59": [
+        "clontarf",
+        "contrast",
+        "contest"
+      ],
+      "build60": [
+        "contrast",
+        "clontarf",
+        "contest"
+      ]
+    },
+    {
+      "id": 762530,
+      "word": "embossed",
+      "build59": [
+        "embossed",
+        "enclosed",
+        "recorded"
+      ],
+      "build60": [
+        "revised",
+        "embossed",
+        "enclosed"
+      ]
+    },
+    {
+      "id": 650751,
+      "word": "americanized",
+      "build59": [
+        "americanized",
+        "americanised",
+        "americanist"
+      ],
+      "build60": [
+        "subsidized",
+        "americanized",
+        "americanised"
+      ]
+    },
+    {
+      "id": 632596,
+      "word": "sandbags",
+      "build59": [
+        "sandbags",
+        "damages",
+        "sandbaggers"
+      ],
+      "build60": [
+        "damages",
+        "sandbags",
+        "sandbaggers"
+      ]
+    }
+  ]
+}

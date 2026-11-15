@@ -1,0 +1,938 @@
+{
+  "recovered": {
+    "correct": 8,
+    "count": 8,
+    "examples": [
+      {
+        "id": 186830,
+        "word": "partnered",
+        "build59": [
+          "laundered",
+          "oakleaf",
+          "patinated"
+        ],
+        "build60": [
+          "partnered",
+          "laundered",
+          "oakleaf"
+        ]
+      },
+      {
+        "id": 180906,
+        "word": "manufacturers",
+        "build59": [
+          "manafort's",
+          "mementos",
+          "manufactories"
+        ],
+        "build60": [
+          "manufacturers",
+          "manafort's",
+          "mementos"
+        ]
+      },
+      {
+        "id": 154960,
+        "word": "independence",
+        "build59": [
+          "independance",
+          "independence",
+          "inalienable"
+        ],
+        "build60": [
+          "independence",
+          "independance",
+          "inalienable"
+        ]
+      },
+      {
+        "id": 347843,
+        "word": "features",
+        "build59": [
+          "farrow's",
+          "fairs",
+          "fatties"
+        ],
+        "build60": [
+          "features",
+          "farrow's",
+          "fairs"
+        ]
+      },
+      {
+        "id": 180088,
+        "word": "following",
+        "build59": [
+          "flowing",
+          "flowering",
+          "foregoing"
+        ],
+        "build60": [
+          "following",
+          "flowing",
+          "flowering"
+        ]
+      },
+      {
+        "id": 155142,
+        "word": "however",
+        "build59": [
+          "hoerner",
+          "bieber",
+          "boehner"
+        ],
+        "build60": [
+          "however",
+          "hoerner",
+          "bieber"
+        ]
+      },
+      {
+        "id": 287391,
+        "word": "paternal",
+        "build59": [
+          "pasternak",
+          "paternal",
+          "oosterbeek"
+        ],
+        "build60": [
+          "paternal",
+          "pasternak",
+          "oosterbeek"
+        ]
+      },
+      {
+        "id": 237407,
+        "word": "prestigious",
+        "build59": [
+          "parodies",
+          "prestigious",
+          "pesticides"
+        ],
+        "build60": [
+          "prestigious",
+          "parodies",
+          "pesticides"
+        ]
+      }
+    ]
+  },
+  "retained": {
+    "correct": 58,
+    "count": 58,
+    "examples": [
+      {
+        "id": 182473,
+        "word": "fratton",
+        "build59": [
+          "fratton",
+          "reason",
+          "frattin"
+        ],
+        "build60": [
+          "fratton",
+          "reason",
+          "frattin"
+        ]
+      },
+      {
+        "id": 347335,
+        "word": "calvinistic",
+        "build59": [
+          "calvinistic",
+          "calculating",
+          "calcific"
+        ],
+        "build60": [
+          "calvinistic",
+          "calculating",
+          "calcific"
+        ]
+      },
+      {
+        "id": 262959,
+        "word": "doctrinaire",
+        "build59": [
+          "doctrinaire",
+          "defibrillator",
+          "demodulator"
+        ],
+        "build60": [
+          "doctrinaire",
+          "defibrillator",
+          "demodulator"
+        ]
+      },
+      {
+        "id": 240989,
+        "word": "lacrimal",
+        "build59": [
+          "lacrimal",
+          "lachrymal",
+          "lagoonal"
+        ],
+        "build60": [
+          "lacrimal",
+          "lachrymal",
+          "lagoonal"
+        ]
+      },
+      {
+        "id": 237310,
+        "word": "sarandon",
+        "build59": [
+          "sarandon",
+          "stagnation",
+          "standin"
+        ],
+        "build60": [
+          "sarandon",
+          "stagnation",
+          "standin"
+        ]
+      },
+      {
+        "id": 302021,
+        "word": "liguria",
+        "build59": [
+          "liguria",
+          "liturgies",
+          "luxuries"
+        ],
+        "build60": [
+          "liguria",
+          "liturgies",
+          "luxuries"
+        ]
+      },
+      {
+        "id": 240274,
+        "word": "chesterton",
+        "build59": [
+          "chesterton",
+          "chatterton",
+          "chaeyeon"
+        ],
+        "build60": [
+          "chesterton",
+          "chatterton",
+          "chaeyeon"
+        ]
+      },
+      {
+        "id": 240970,
+        "word": "superiorly",
+        "build59": [
+          "superiorly",
+          "superiority",
+          "spritely"
+        ],
+        "build60": [
+          "superiorly",
+          "superiority",
+          "spritely"
+        ]
+      },
+      {
+        "id": 266312,
+        "word": "necktie",
+        "build59": [
+          "necktie",
+          "brexiteer",
+          "before"
+        ],
+        "build60": [
+          "necktie",
+          "brexiteer",
+          "before"
+        ]
+      },
+      {
+        "id": 266746,
+        "word": "ukraine",
+        "build59": [
+          "ukraine",
+          "interactive",
+          "immersive"
+        ],
+        "build60": [
+          "ukraine",
+          "interactive",
+          "immersive"
+        ]
+      },
+      {
+        "id": 262226,
+        "word": "concerned",
+        "build59": [
+          "concerned",
+          "commanded",
+          "consented"
+        ],
+        "build60": [
+          "concerned",
+          "commanded",
+          "consented"
+        ]
+      },
+      {
+        "id": 180878,
+        "word": "peridot",
+        "build59": [
+          "peridot",
+          "profit",
+          "proudfoot"
+        ],
+        "build60": [
+          "peridot",
+          "profit",
+          "proudfoot"
+        ]
+      },
+      {
+        "id": 348340,
+        "word": "disputes",
+        "build59": [
+          "disputes",
+          "discourses",
+          "studies"
+        ],
+        "build60": [
+          "disputes",
+          "discourses",
+          "studies"
+        ]
+      },
+      {
+        "id": 184476,
+        "word": "spokespeople",
+        "build59": [
+          "spokespeople",
+          "sportspeople",
+          "salespeople"
+        ],
+        "build60": [
+          "spokespeople",
+          "sportspeople",
+          "salespeople"
+        ]
+      },
+      {
+        "id": 241944,
+        "word": "moorland",
+        "build59": [
+          "moorland",
+          "northland",
+          "morland"
+        ],
+        "build60": [
+          "moorland",
+          "northland",
+          "morland"
+        ]
+      },
+      {
+        "id": 206835,
+        "word": "identical",
+        "build59": [
+          "identical",
+          "ishizaki",
+          "izhevsk"
+        ],
+        "build60": [
+          "identical",
+          "ishizaki",
+          "izhevsk"
+        ]
+      },
+      {
+        "id": 250568,
+        "word": "rockport",
+        "build59": [
+          "rockport",
+          "rocket",
+          "rockley"
+        ],
+        "build60": [
+          "rockport",
+          "rocket",
+          "rockley"
+        ]
+      },
+      {
+        "id": 315373,
+        "word": "aurelia",
+        "build59": [
+          "aurelia",
+          "aguadilla",
+          "ayala"
+        ],
+        "build60": [
+          "aurelia",
+          "aguadilla",
+          "ayala"
+        ]
+      },
+      {
+        "id": 235056,
+        "word": "degrees",
+        "build59": [
+          "degrees",
+          "debts",
+          "debra"
+        ],
+        "build60": [
+          "degrees",
+          "debts",
+          "debra"
+        ]
+      },
+      {
+        "id": 240738,
+        "word": "fallacious",
+        "build59": [
+          "fallacious",
+          "fallacies",
+          "falsehoods"
+        ],
+        "build60": [
+          "fallacious",
+          "fallacies",
+          "falsehoods"
+        ]
+      },
+      {
+        "id": 287364,
+        "word": "paternally",
+        "build59": [
+          "paternally",
+          "pathetically",
+          "practically"
+        ],
+        "build60": [
+          "paternally",
+          "pathetically",
+          "practically"
+        ]
+      },
+      {
+        "id": 180465,
+        "word": "malpighian",
+        "build59": [
+          "malpighian",
+          "manoogian",
+          "markovian"
+        ],
+        "build60": [
+          "malpighian",
+          "manoogian",
+          "markovian"
+        ]
+      },
+      {
+        "id": 154130,
+        "word": "dorsally",
+        "build59": [
+          "dorsally",
+          "doesn't",
+          "digitally"
+        ],
+        "build60": [
+          "dorsally",
+          "doesn't",
+          "digitally"
+        ]
+      },
+      {
+        "id": 185532,
+        "word": "programs",
+        "build59": [
+          "programs",
+          "orleans",
+          "puritans"
+        ],
+        "build60": [
+          "programs",
+          "orleans",
+          "puritans"
+        ]
+      },
+      {
+        "id": 184995,
+        "word": "offices",
+        "build59": [
+          "offices",
+          "officers",
+          "office's"
+        ],
+        "build60": [
+          "offices",
+          "officers",
+          "office's"
+        ]
+      },
+      {
+        "id": 268190,
+        "word": "literature",
+        "build59": [
+          "literature",
+          "keystore",
+          "kraus"
+        ],
+        "build60": [
+          "literature",
+          "keystore",
+          "kraus"
+        ]
+      },
+      {
+        "id": 264558,
+        "word": "technophobia",
+        "build59": [
+          "technophobia",
+          "trypophobia",
+          "tecnologia"
+        ],
+        "build60": [
+          "technophobia",
+          "trypophobia",
+          "tecnologia"
+        ]
+      },
+      {
+        "id": 194185,
+        "word": "finished",
+        "build59": [
+          "finished",
+          "fisted",
+          "finishes"
+        ],
+        "build60": [
+          "finished",
+          "fisted",
+          "finishes"
+        ]
+      },
+      {
+        "id": 155417,
+        "word": "barstow",
+        "build59": [
+          "barstow",
+          "basedow",
+          "bharatiya"
+        ],
+        "build60": [
+          "barstow",
+          "basedow",
+          "bharatiya"
+        ]
+      },
+      {
+        "id": 302358,
+        "word": "unibody",
+        "build59": [
+          "unibody",
+          "unionist",
+          "unluckiest"
+        ],
+        "build60": [
+          "unibody",
+          "unionist",
+          "unluckiest"
+        ]
+      },
+      {
+        "id": 327475,
+        "word": "mudstone",
+        "build59": [
+          "mudstone",
+          "murdstone",
+          "missile"
+        ],
+        "build60": [
+          "mudstone",
+          "murdstone",
+          "missile"
+        ]
+      },
+      {
+        "id": 244007,
+        "word": "paperbacks",
+        "build59": [
+          "paperbacks",
+          "pathogenesis",
+          "parlements"
+        ],
+        "build60": [
+          "paperbacks",
+          "pathogenesis",
+          "parlements"
+        ]
+      },
+      {
+        "id": 235831,
+        "word": "industrial",
+        "build59": [
+          "industrial",
+          "investigational",
+          "insurrectional"
+        ],
+        "build60": [
+          "industrial",
+          "investigational",
+          "insurrectional"
+        ]
+      },
+      {
+        "id": 265182,
+        "word": "crossroads",
+        "build59": [
+          "crossroads",
+          "crusties",
+          "visits"
+        ],
+        "build60": [
+          "crossroads",
+          "crusties",
+          "visits"
+        ]
+      },
+      {
+        "id": 184627,
+        "word": "gallica",
+        "build59": [
+          "gallica",
+          "gala",
+          "gallina"
+        ],
+        "build60": [
+          "gallica",
+          "gala",
+          "gallina"
+        ]
+      },
+      {
+        "id": 165286,
+        "word": "illinois",
+        "build59": [
+          "illinois",
+          "illinois's",
+          "olympia"
+        ],
+        "build60": [
+          "illinois",
+          "illinois's",
+          "olympia"
+        ]
+      },
+      {
+        "id": 154200,
+        "word": "distinct",
+        "build59": [
+          "distinct",
+          "district",
+          "disjunct"
+        ],
+        "build60": [
+          "distinct",
+          "district",
+          "disjunct"
+        ]
+      },
+      {
+        "id": 181476,
+        "word": "bridgeton",
+        "build59": [
+          "bridgeton",
+          "brustein",
+          "brotherton"
+        ],
+        "build60": [
+          "bridgeton",
+          "brustein",
+          "brotherton"
+        ]
+      },
+      {
+        "id": 186474,
+        "word": "jeepneys",
+        "build59": [
+          "jeepneys",
+          "jehovah's",
+          "jehovahs"
+        ],
+        "build60": [
+          "jeepneys",
+          "jehovah's",
+          "jehovahs"
+        ]
+      },
+      {
+        "id": 259983,
+        "word": "soledad",
+        "build59": [
+          "soledad",
+          "superdad",
+          "spread"
+        ],
+        "build60": [
+          "soledad",
+          "superdad",
+          "spread"
+        ]
+      },
+      {
+        "id": 181846,
+        "word": "farmlands",
+        "build59": [
+          "farmlands",
+          "falklands",
+          "farmland"
+        ],
+        "build60": [
+          "farmlands",
+          "falklands",
+          "farmland"
+        ]
+      },
+      {
+        "id": 260595,
+        "word": "unabridged",
+        "build59": [
+          "unabridged",
+          "unabsorbed",
+          "underachievers"
+        ],
+        "build60": [
+          "unabridged",
+          "unabsorbed",
+          "underachievers"
+        ]
+      },
+      {
+        "id": 165274,
+        "word": "thompson",
+        "build59": [
+          "thompson",
+          "thomlinson",
+          "tomlinson"
+        ],
+        "build60": [
+          "thompson",
+          "thomlinson",
+          "tomlinson"
+        ]
+      },
+      {
+        "id": 243327,
+        "word": "copilot",
+        "build59": [
+          "copilot",
+          "couloir",
+          "color"
+        ],
+        "build60": [
+          "copilot",
+          "couloir",
+          "color"
+        ]
+      },
+      {
+        "id": 181784,
+        "word": "marathas",
+        "build59": [
+          "marathas",
+          "natasha's",
+          "narratives"
+        ],
+        "build60": [
+          "marathas",
+          "natasha's",
+          "narratives"
+        ]
+      },
+      {
+        "id": 241281,
+        "word": "enchilada",
+        "build59": [
+          "enchilada",
+          "enchiladas",
+          "encourages"
+        ],
+        "build60": [
+          "enchilada",
+          "enchiladas",
+          "encourages"
+        ]
+      },
+      {
+        "id": 335254,
+        "word": "overridden",
+        "build59": [
+          "overridden",
+          "overriden",
+          "overdriven"
+        ],
+        "build60": [
+          "overridden",
+          "overriden",
+          "overdriven"
+        ]
+      },
+      {
+        "id": 265643,
+        "word": "asthmatic",
+        "build59": [
+          "asthmatic",
+          "somatic",
+          "acrobatic"
+        ],
+        "build60": [
+          "asthmatic",
+          "somatic",
+          "acrobatic"
+        ]
+      },
+      {
+        "id": 206335,
+        "word": "general",
+        "build59": [
+          "general",
+          "verbal",
+          "bergdahl"
+        ],
+        "build60": [
+          "general",
+          "verbal",
+          "bergdahl"
+        ]
+      },
+      {
+        "id": 201920,
+        "word": "northeast",
+        "build59": [
+          "northeast",
+          "northwest",
+          "norbert"
+        ],
+        "build60": [
+          "northeast",
+          "northwest",
+          "norbert"
+        ]
+      },
+      {
+        "id": 254344,
+        "word": "conclusively",
+        "build59": [
+          "conclusively",
+          "convulsively",
+          "cognitively"
+        ],
+        "build60": [
+          "conclusively",
+          "convulsively",
+          "cognitively"
+        ]
+      },
+      {
+        "id": 185447,
+        "word": "brickwork",
+        "build59": [
+          "brickwork",
+          "belchertown",
+          "brainstorm"
+        ],
+        "build60": [
+          "brickwork",
+          "belchertown",
+          "brainstorm"
+        ]
+      },
+      {
+        "id": 186531,
+        "word": "jeepney",
+        "build59": [
+          "jeepney",
+          "jewellery",
+          "jewelery"
+        ],
+        "build60": [
+          "jeepney",
+          "jewellery",
+          "jewelery"
+        ]
+      },
+      {
+        "id": 241755,
+        "word": "circumnavigates",
+        "build59": [
+          "circumnavigates",
+          "circumnavigated",
+          "circumnavigate"
+        ],
+        "build60": [
+          "circumnavigates",
+          "circumnavigated",
+          "circumnavigate"
+        ]
+      },
+      {
+        "id": 242869,
+        "word": "reporting",
+        "build59": [
+          "reporting",
+          "reprint",
+          "reposting"
+        ],
+        "build60": [
+          "reporting",
+          "reprint",
+          "reposting"
+        ]
+      },
+      {
+        "id": 240466,
+        "word": "starched",
+        "build59": [
+          "starched",
+          "stretched",
+          "starved"
+        ],
+        "build60": [
+          "starched",
+          "stretched",
+          "starved"
+        ]
+      },
+      {
+        "id": 349868,
+        "word": "childers",
+        "build59": [
+          "childers",
+          "collars",
+          "coolers"
+        ],
+        "build60": [
+          "childers",
+          "collars",
+          "coolers"
+        ]
+      },
+      {
+        "id": 206414,
+        "word": "applegate",
+        "build59": [
+          "applegate",
+          "aldgate",
+          "apostate"
+        ],
+        "build60": [
+          "applegate",
+          "aldgate",
+          "apostate"
+        ]
+      }
+    ]
+  }
+}

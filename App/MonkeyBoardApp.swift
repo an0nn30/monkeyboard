@@ -71,6 +71,8 @@ private struct KeyboardSettings: View {
     @State private var layoutSaveFailed = false
     @State private var returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
     @State private var symbolSaveFailed = false
+    @State private var glideEnabled = GlideTypingSetting.isEnabled
+    @State private var glideSaveFailed = false
     @State private var autoCorrect = AutoCorrectionSetting.isEnabled
     @State private var correctionSaveFailed = false
     @State private var useSentence = SentenceScoringSetting.isEnabled
@@ -116,6 +118,14 @@ private struct KeyboardSettings: View {
                 Text("When you open 123 or #+=, typing one number or symbol switches back to ABC.")
             }
             Section {
+                Toggle("Glide typing", isOn: Binding(
+                    get: { glideEnabled },
+                    set: { value in
+                        glideSaveFailed = !GlideTypingSetting.save(value)
+                        if !glideSaveFailed { glideEnabled = value }
+                    }
+                )).accessibilityIdentifier("glide-typing")
+                if glideSaveFailed { Text("Couldn’t save Glide typing. Try again.").foregroundStyle(.red) }
                 Toggle("Auto-Correction", isOn: Binding(
                     get: { autoCorrect },
                     set: { newValue in
@@ -222,6 +232,7 @@ private struct KeyboardSettings: View {
     }
 
     private func reload() {
+        glideEnabled = GlideTypingSetting.isEnabled
         autoCorrect = AutoCorrectionSetting.isEnabled
         useSentence = SentenceScoringSetting.isEnabled
         transformer = TransformerSetting.isEnabled

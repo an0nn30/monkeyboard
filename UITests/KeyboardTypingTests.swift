@@ -909,6 +909,102 @@ final class KeyboardTypingTests: XCTestCase {
         if toggle.exists { toggle.tap() }
     }
 
+    // Establish the preferences a gesture test relies on, preserving the prior settings.
+    private func enableForTest(_ identifier: String, inSettingsOf app: XCUIApplication) {
+        func control() -> XCUIElement {
+            let toggle = app.switches[identifier]
+            if !toggle.isHittable { app.swipeUp() }
+            XCTAssertTrue(toggle.isHittable)
+            return toggle
+        }
+        let toggle = control()
+        guard toggle.value as? String == "0" else {
+            XCTAssertEqual(toggle.value as? String, "1")
+            return
+        }
+        addTeardownBlock {
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+            let restored = control()
+            if restored.value as? String == "1" {
+                restored.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap()
+            }
+            XCTAssertEqual(restored.value as? String, "0")
+        }
+        toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap()
+        XCTAssertEqual(toggle.value as? String, "1")
+    }
+
+    func testGlideInsertionAlternativesSpacingAndUndo() {
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        enableForTest("glide-typing", inSettingsOf: app)
+        let back = app.buttons["BackButton"]
+        if back.exists { back.tap() } else { app.navigationBars.buttons.element(boundBy: 0).tap() }
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+
+        func glide(_ first: String, _ last: String) {
+            letter(first, in: app).press(forDuration: 0.12, thenDragTo: letter(last, in: app))
+        }
+        func expect(_ text: String) {
+            XCTAssertEqual((draft.value as? String)?.lowercased() ?? "", text)
+        }
+
+        glide("t", "o")
+        expect("to")
+        let too = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@ AND label ==[c] %@",
+                                                  "suggestion-", "too")).firstMatch
+        XCTAssertTrue(too.waitForExistence(timeout: 2))
+        too.tap()
+        expect("too")
+        glide("g", "o")
+        expect("too go")
+        app.buttons["key-Delete"].tap()
+        expect("too")
+        glide("t", "o")
+        expect("too to")
+        app.buttons["key-."].tap()
+        expect("too to.")
+        glide("g", "o")
+        expect("too to. go")
+        letter("x", in: app).tap()
+        expect("too to. go x")
+        letter("q", in: app).press(forDuration: 0.12, thenDragTo: letter("w", in: app))
+        expect("too to. go xw")
+    }
+
+    func testDisablingGlideKeepsSlideToLetter() {
+        let app = XCUIApplication()
+        func openSetting() -> XCUIElement {
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+            let toggle = app.switches["glide-typing"]
+            if !toggle.isHittable { app.swipeUp() }
+            XCTAssertTrue(toggle.isHittable)
+            return toggle
+        }
+        let toggle = openSetting()
+        let original = toggle.value as? String
+        func flip(_ element: XCUIElement) {
+            element.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap()
+        }
+        addTeardownBlock {
+            let control = openSetting()
+            if control.value as? String != original { flip(control) }
+        }
+        if original == "1" { flip(toggle) }
+        XCTAssertEqual(toggle.value as? String, "0")
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        letter("t", in: app).press(forDuration: 0.12, thenDragTo: letter("o", in: app))
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "o")
+    }
+
     func testOneHandedKeyboardOnCoverDisplay() throws {
         let app = XCUIApplication()
         app.launch()
@@ -947,8 +1043,8 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertLessThan(p.frame.maxX, right - 40)
         XCTAssertEqual(q.frame.height, height, accuracy: 1)
         checkHidePosition()
-        q.press(forDuration: 0.15, thenDragTo: p)
-        XCTAssertEqual((draft.value as? String)?.lowercased(), "p")
+        q.press(forDuration: 0.15, thenDragTo: letter("w", in: app))
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "w")
         capture("Left-handed cover keyboard")
 
         choose("Right Hand")
@@ -958,14 +1054,15 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(menu.frame.minX, q.frame.minX - 3)
         let edge = q.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
         edge.press(forDuration: 0.15, thenDragTo: edge.withOffset(CGVector(dx: -35, dy: 0)))
-        XCTAssertEqual((draft.value as? String)?.lowercased(), "p")
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "w")
         capture("Right-handed cover keyboard")
         app.buttons["key-123"].tap()
         app.buttons["key-0"].tap()
-        app.buttons["key-123"].tap()
+        if app.buttons["key-123"].exists { app.buttons["key-123"].tap() }
         app.buttons["key-#+="].tap()
         app.buttons["key-="].tap()
-        XCTAssertEqual((draft.value as? String)?.lowercased(), "p0=")
+        if app.buttons["key-ABC"].exists { app.buttons["key-ABC"].tap() }
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "w0=")
         app.buttons["hide-keyboard"].tap()
         draft.tap()
         XCTAssertTrue(p.waitForExistence(timeout: 3))
@@ -993,6 +1090,8 @@ final class KeyboardTypingTests: XCTestCase {
             XCTAssertEqual(split.value as? String, "1")
         }
         enableSplit()
+        enableForTest("return-after-symbol", inSettingsOf: app)
+        enableForTest("glide-typing", inSettingsOf: app)
         let back = app.buttons["BackButton"]
         if back.exists { back.tap() } else { app.navigationBars.buttons.element(boundBy: 0).tap() }
         let draft = app.textViews["draft"]
@@ -1013,6 +1112,9 @@ final class KeyboardTypingTests: XCTestCase {
         let y = letter("y")
         XCTAssertGreaterThan(y.frame.minX - t.frame.maxX, 50)
         XCTAssertGreaterThan(rightSpace.frame.minX - leftSpace.frame.maxX, 50)
+        t.press(forDuration: 0.12, thenDragTo: letter("o"))
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "to")
+        app.buttons["key-Delete"].tap()
         let firstLetter = letter("f").label
         letter("f").tap()
         leftSpace.tap()

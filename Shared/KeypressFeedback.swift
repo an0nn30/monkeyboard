@@ -9,6 +9,7 @@ enum KeyboardSetting: String {
     case split = "split-wide-layout"
     case oneHanded = "one-handed-layout"
     case returnAfterSymbol = "return-after-symbol"
+    case glideTyping = "glide-typing"
     case autocorrection = "autocorrection"
     case transformer = "decoder-15m"
     case sentenceScoring = "sentence-scoring"
@@ -67,6 +68,11 @@ enum OneHandedSetting {
 enum ReturnAfterSymbolSetting {
     static var isEnabled: Bool { (KeyboardSetting.returnAfterSymbol.read() ?? 1) != 0 }
     static func save(_ enabled: Bool) -> Bool { KeyboardSetting.returnAfterSymbol.save(enabled ? 1 : 0) }
+}
+
+enum GlideTypingSetting {
+    static var isEnabled: Bool { (KeyboardSetting.glideTyping.read() ?? 1) != 0 }
+    static func save(_ value: Bool) -> Bool { KeyboardSetting.glideTyping.save(value ? 1 : 0) }
 }
 
 enum AutoCorrectionSetting {

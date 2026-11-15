@@ -36,12 +36,17 @@ private final class KeyButton: UIButton {
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         guard let board else { return false }
         acceptsCurrentTouch = true
-        board.begin(self)
+        board.begin(self, at: touch.location(in: board), time: touch.timestamp)
         return true
     }
 
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         guard let board, acceptsCurrentTouch else { return false }
+        if board.isTracing(self) {
+            for sample in event?.coalescedTouches(for: touch) ?? [touch] {
+                board.sample(self, at: sample.location(in: board), time: sample.timestamp)
+            }
+        }
         board.move(self, to: touch.location(in: board))
         return true
     }
@@ -49,6 +54,7 @@ private final class KeyButton: UIButton {
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         guard let board, let touch, acceptsCurrentTouch else { return }
         acceptsCurrentTouch = false
+        board.sample(self, at: touch.location(in: board), time: touch.timestamp)
         board.finish(self, at: touch.location(in: board))
     }
 
@@ -60,6 +66,47 @@ private final class KeyButton: UIButton {
     override func accessibilityActivate() -> Bool {
         board?.activate(key)
         return true
+    }
+}
+
+/// Coordinates stay in view space for drawing and are scaled by the actual
+/// key pitches for decoding. Only the currently held stroke is retained.
+final class GlideStroke {
+    typealias Sample = (point: CGPoint, seconds: TimeInterval)
+    let centers: [CGPoint]
+    let pitch: CGSize
+    let startTime: TimeInterval
+    let bounds: CGRect
+    private(set) var samples: [Sample]
+    private(set) var isGlide = false
+    private var distance: CGFloat = 0
+    private var reach: CGFloat = 0
+
+    init?(centers: [CGPoint], point: CGPoint, time: TimeInterval, bounds: CGRect) {
+        guard centers.count == 26 else { return nil }
+        // W and Q share a bank in every layout, as do A and Q.
+        let horizontal = abs(centers[22].x - centers[16].x)
+        let vertical = abs(centers[0].y - centers[16].y)
+        guard horizontal > 4, vertical > 4 else { return nil }
+        self.centers = centers
+        pitch = CGSize(width: horizontal, height: vertical)
+        startTime = time
+        samples = [(point, 0)]
+        self.bounds = bounds
+    }
+
+    func append(_ point: CGPoint, time: TimeInterval) {
+        guard let last = samples.last, time >= startTime + last.seconds - 0.000001 else { return }
+        let step = hypot((point.x-last.point.x)/pitch.width, (point.y-last.point.y)/pitch.height)
+        guard step >= 0.035 else { return }
+        distance += step
+        let first = samples[0].point
+        reach = max(reach, hypot((point.x-first.x)/pitch.width, (point.y-first.y)/pitch.height))
+        if samples.count == 256 {
+            samples = samples.enumerated().compactMap { $0.offset.isMultiple(of: 2) ? $0.element : nil }
+        }
+        samples.append((point, max(last.seconds,time-startTime)))
+        if distance >= 1.6 && reach >= 1.3 { isGlide = true }
     }
 }
 
@@ -108,8 +155,15 @@ final class KeyboardView: UIView {
     var onLetterGeometry: (([UInt32]) -> Void)?
     private var geometryArea = CGRect.null
     private var geometrySplit: Bool?
+    private var letterCenters = [CGPoint](repeating: .zero, count: 26)
     var onKey: ((Key) -> Void)?
     var onTouch: (() -> Void)?
+    var onGlideStart: (() -> Bool)?
+    var onGlide: ((GlideStroke) -> Bool)?
+    private var activeFingers = Set<ObjectIdentifier>()
+    private var glideOwner: ObjectIdentifier?
+    private var stroke: GlideStroke?
+    private let trail = GlideTrail()
     var onWord: ((String) -> Void)?
     var configureGlobe: ((UIButton) -> Void)? {
         didSet { configureGlobe?(keypadGlobe) }
@@ -122,6 +176,9 @@ final class KeyboardView: UIView {
 
     init() {
         super.init(frame: .zero)
+        registerForTraitChanges([UITraitUserInterfaceStyle.self]) { (view: KeyboardView, _) in
+            view.trail.setAccent(view.displayedAccent, traits: view.traitCollection)
+        }
         // The system draws one tinted surface through the extension and its outer margins.
         isOpaque = false
         // The extension is hosted in a remote surface. Fully transparent
@@ -206,6 +263,9 @@ final class KeyboardView: UIView {
             for button in suggestions { button.titleLabel?.font = suggestionFont }
         }
         displayedFont = font
+        if displayedModel == nil || displayedAccent != accentColor {
+            trail.setAccent(accentColor, traits: traitCollection)
+        }
         displayedAccent = accentColor
         let accent = accentColor ?? defaultAccent
         let keypad = model.layer == .keypad
@@ -421,7 +481,10 @@ final class KeyboardView: UIView {
                 for (c, key) in line.enumerated() {
                     guard case let .type(text) = key, let ascii = text.lowercased().utf8.first,
                           (97...122).contains(ascii) else { continue }
-                    centers.append((Int(ascii) - 97, keycapFrame(of: rows[r][c])))
+                    let index = Int(ascii) - 97
+                    let frame = keycapFrame(of: rows[r][c])
+                    centers.append((index, frame))
+                    letterCenters[index] = CGPoint(x: frame.midX, y: frame.midY)
                 }
             }
             var masks = [UInt32](repeating: 0, count: 26)
@@ -511,7 +574,38 @@ final class KeyboardView: UIView {
         return frame.insetBy(dx: -3, dy: -3).contains(point) ? source : nil
     }
 
-    fileprivate func begin(_ source: KeyButton) {
+    private func endStroke() {
+        stroke = nil
+        glideOwner = nil
+    }
+
+    private func cancelStroke() {
+        if let stroke { trail.cancel(stroke) }
+        endStroke()
+    }
+
+    private func beginStroke(_ source: KeyButton, point: CGPoint, time: TimeInterval) {
+        guard displayedModel?.layer == .letters, CACurrentMediaTime() >= motionEndsAt,
+              case let .type(text) = source.key, text.count == 1, text.first?.isLetter == true,
+              onGlideStart?() == true else { return }
+        guard !letterCenters.contains(.zero),
+              let path = GlideStroke(centers: letterCenters, point: point, time: time, bounds: bounds) else { return }
+        stroke = path
+        glideOwner = ObjectIdentifier(source)
+    }
+
+    fileprivate func isTracing(_ source: KeyButton) -> Bool { glideOwner == ObjectIdentifier(source) }
+
+    fileprivate func sample(_ source: KeyButton, at point: CGPoint, time: TimeInterval) {
+        guard isTracing(source), let stroke else { return }
+        guard bounds == stroke.bounds else { cancelStroke(); return }
+        stroke.append(point, time: time)
+    }
+
+    fileprivate func begin(_ source: KeyButton, at point: CGPoint, time: TimeInterval) {
+        activeFingers.insert(ObjectIdentifier(source))
+        if activeFingers.count == 1 { beginStroke(source, point: point, time: time) }
+        else { cancelStroke() }
         lingering.forEach { $0.removeFromSuperview() }
         lingering.removeAll()
         onTouch?()
@@ -533,6 +627,11 @@ final class KeyboardView: UIView {
     }
 
     fileprivate func move(_ source: KeyButton, to point: CGPoint) {
+        if isTracing(source), let stroke, stroke.isGlide {
+            track(source, target: nil)
+            trail.follow(stroke, in: self)
+            return
+        }
         let target = button(at: point, from: source)
         if source.key == .delete && target == nil { stopRepeating() }
         track(source, target: target)
@@ -557,6 +656,13 @@ final class KeyboardView: UIView {
     fileprivate func finish(_ source: KeyButton, at point: CGPoint) {
         guard source.superview === self else { return }
         let target = button(at: point, from: source)
+        if isTracing(source), let path = stroke, path.isGlide {
+            endStroke()
+            cancel(source)
+            guard let target, case let .type(text) = target.key, text.first?.isLetter == true else { return }
+            if onGlide?(path) != true { onKey?(target.key) }
+            return
+        }
         track(source, target: target)
         let id = ObjectIdentifier(source)
         let alreadyDeleted = source.key == .delete && repeated
@@ -573,6 +679,8 @@ final class KeyboardView: UIView {
 
     fileprivate func cancel(_ source: KeyButton) {
         let id = ObjectIdentifier(source)
+        activeFingers.remove(id)
+        if isTracing(source) { cancelStroke() }
         held.removeValue(forKey: id)?.alpha = 1
         previews.removeValue(forKey: id)?.removeFromSuperview()
         if deleteOwner == id { stopRepeating() }
@@ -583,6 +691,9 @@ final class KeyboardView: UIView {
     private func stopRepeating() { repeatDelete?.invalidate(); repeatDelete = nil; deleteOwner = nil }
 
     func resetTouches() {
+        endStroke()
+        trail.clear()
+        activeFingers.removeAll()
         stopRepeating()
         for case let button as KeyButton in rows.joined() { button.acceptsCurrentTouch = false }
         held.values.forEach { $0.alpha = 1 }

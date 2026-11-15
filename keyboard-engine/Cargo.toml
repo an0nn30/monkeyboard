@@ -7,6 +7,7 @@ publish = false
 [features]
 default = ["lm-neural"]
 lm-neural = []
+glide-training = []
 
 [lib]
 crate-type = ["staticlib", "rlib"]

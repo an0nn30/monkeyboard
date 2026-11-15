@@ -1,0 +1,336 @@
+{
+  "cohort_sha256": "3ec61307619a31b94895314de66c7dc6e3d91374987669361b3b3b475ae4ed99",
+  "sessions": 175,
+  "overall": {
+    "gestures": 8192,
+    "build60": {
+      "top1": 6626,
+      "top3": 7321,
+      "no_guess": 96,
+      "median_ms": 0.726,
+      "p95_ms": 3.546
+    },
+    "build61": {
+      "top1": 6636,
+      "top3": 7327,
+      "no_guess": 96,
+      "median_ms": 0.674,
+      "p95_ms": 3.328
+    },
+    "gained": 14,
+    "lost": 4
+  },
+  "2-3": {
+    "gestures": 2891,
+    "build60": {
+      "top1": 2345,
+      "top3": 2604,
+      "no_guess": 94,
+      "median_ms": 0.165,
+      "p95_ms": 1.372
+    },
+    "build61": {
+      "top1": 2345,
+      "top3": 2604,
+      "no_guess": 94,
+      "median_ms": 0.154,
+      "p95_ms": 1.293
+    },
+    "gained": 0,
+    "lost": 0
+  },
+  "4-6": {
+    "gestures": 2996,
+    "build60": {
+      "top1": 2361,
+      "top3": 2654,
+      "no_guess": 1,
+      "median_ms": 0.941,
+      "p95_ms": 3.329
+    },
+    "build61": {
+      "top1": 2361,
+      "top3": 2656,
+      "no_guess": 1,
+      "median_ms": 0.887,
+      "p95_ms": 3.158
+    },
+    "gained": 0,
+    "lost": 0
+  },
+  "7+": {
+    "gestures": 2305,
+    "build60": {
+      "top1": 1920,
+      "top3": 2063,
+      "no_guess": 1,
+      "median_ms": 1.698,
+      "p95_ms": 4.324
+    },
+    "build61": {
+      "top1": 1930,
+      "top3": 2067,
+      "no_guess": 1,
+      "median_ms": 1.588,
+      "p95_ms": 4.098
+    },
+    "gained": 14,
+    "lost": 4
+  },
+  "long_gained": [
+    {
+      "id": 1017762,
+      "word": "headquarters",
+      "build60": [
+        "graduates",
+        "hahaha",
+        "hathaway's"
+      ],
+      "build61": [
+        "headquarters",
+        "graduates",
+        "hahaha"
+      ]
+    },
+    {
+      "id": 971443,
+      "word": "propositional",
+      "build60": [
+        "professional",
+        "propositional",
+        "prepositional"
+      ],
+      "build61": [
+        "propositional",
+        "prepositional",
+        "professional"
+      ]
+    },
+    {
+      "id": 955095,
+      "word": "captured",
+      "build60": [
+        "calories",
+        "castleford",
+        "captioned"
+      ],
+      "build61": [
+        "captured",
+        "calories",
+        "castleford"
+      ]
+    },
+    {
+      "id": 976092,
+      "word": "alternates",
+      "build60": [
+        "alternate",
+        "alternates",
+        "alienates"
+      ],
+      "build61": [
+        "alternates",
+        "alienates",
+        "alternate"
+      ]
+    },
+    {
+      "id": 946605,
+      "word": "constantly",
+      "build60": [
+        "conversely",
+        "constantly",
+        "collaterally"
+      ],
+      "build61": [
+        "constantly",
+        "conversely",
+        "collaterally"
+      ]
+    },
+    {
+      "id": 978021,
+      "word": "rudyard",
+      "build60": [
+        "trusted",
+        "rudyard",
+        "rusted"
+      ],
+      "build61": [
+        "rudyard",
+        "rusted",
+        "frustrated"
+      ]
+    },
+    {
+      "id": 1037243,
+      "word": "whitish",
+      "build60": [
+        "whorish",
+        "whitish",
+        "whitefish"
+      ],
+      "build61": [
+        "whitish",
+        "whorish",
+        "whitefish"
+      ]
+    },
+    {
+      "id": 1082568,
+      "word": "banking",
+      "build60": [
+        "babbling",
+        "baffling",
+        "balling"
+      ],
+      "build61": [
+        "banking",
+        "babbling",
+        "baffling"
+      ]
+    },
+    {
+      "id": 862075,
+      "word": "incubation",
+      "build60": [
+        "unchain",
+        "incubation",
+        "indication"
+      ],
+      "build61": [
+        "incubation",
+        "unchain",
+        "indication"
+      ]
+    },
+    {
+      "id": 968156,
+      "word": "thurles",
+      "build60": [
+        "turtles",
+        "thurles",
+        "titles"
+      ],
+      "build61": [
+        "thurles",
+        "turtles",
+        "titles"
+      ]
+    },
+    {
+      "id": 1075881,
+      "word": "eventually",
+      "build60": [
+        "revisit",
+        "eventually",
+        "referentiality"
+      ],
+      "build61": [
+        "eventually",
+        "referentiality",
+        "revisit"
+      ]
+    },
+    {
+      "id": 951152,
+      "word": "station",
+      "build60": [
+        "straiton",
+        "staughton",
+        "staunton"
+      ],
+      "build61": [
+        "station",
+        "straiton",
+        "staughton"
+      ]
+    },
+    {
+      "id": 1059475,
+      "word": "pigeonholes",
+      "build60": [
+        "possible",
+        "pigeonholes",
+        "pigeonhole"
+      ],
+      "build61": [
+        "pigeonholes",
+        "pigeonhole",
+        "pigeonholed"
+      ]
+    },
+    {
+      "id": 985721,
+      "word": "declared",
+      "build60": [
+        "deckard",
+        "deviated",
+        "damaged"
+      ],
+      "build61": [
+        "declared",
+        "deckard",
+        "deviated"
+      ]
+    }
+  ],
+  "long_lost": [
+    {
+      "id": 937776,
+      "word": "deceived",
+      "build60": [
+        "deceived",
+        "described",
+        "deveined"
+      ],
+      "build61": [
+        "described",
+        "deceived",
+        "deveined"
+      ]
+    },
+    {
+      "id": 964453,
+      "word": "worcester",
+      "build60": [
+        "worcester",
+        "worchester",
+        "woodchester"
+      ],
+      "build61": [
+        "worchester",
+        "woodchester",
+        "wifebeater"
+      ]
+    },
+    {
+      "id": 913024,
+      "word": "strangers",
+      "build60": [
+        "strangers",
+        "surrenders",
+        "sydney's"
+      ],
+      "build61": [
+        "surrenders",
+        "strangers",
+        "sydney's"
+      ]
+    },
+    {
+      "id": 1072620,
+      "word": "bavaria",
+      "build60": [
+        "bavaria",
+        "barbarossa",
+        "barbarella"
+      ],
+      "build61": [
+        "barbarossa",
+        "bavaria",
+        "barbarella"
+      ]
+    }
+  ]
+}

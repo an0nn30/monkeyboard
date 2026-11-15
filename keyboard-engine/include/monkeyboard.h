@@ -58,4 +58,10 @@ int32_t mb_short_unseen_v1(const char *word);
 int32_t mb_short_pool_v1(const char *word, char *out, size_t capacity);
 // Joint spelling and missing-space ranker. 1 = write repair, 0 = keep, -1 = invalid.
 int32_t mb_residual53_v1(const char *left, const char *typed, const char *right, char *out, size_t capacity);
+// English letter centers in a..z order, expressed in the same key-pitch units
+// as the touch samples. The output holds up to three tab-separated words.
+typedef struct { float x, y; } MBKeyCenter;
+typedef struct { float x, y, seconds; } MBGlideSample;
+int32_t mb_glide_v1(const MBKeyCenter *keys, size_t key_count, const MBGlideSample *samples, size_t count,
+                    const char *context, char *out, size_t capacity);
 #endif
