@@ -39,6 +39,7 @@ final class KeyboardViewController: UIInputViewController {
     private lazy var feedback = KeypressPlayer(view: board)
     private var strength = KeypressFeedback.initial
     private var lastShift: TimeInterval?
+    private var accentColor: UIColor?
     private var lastSelectedWordShift: KeyboardModel.Shift?
     private var height: NSLayoutConstraint?
     private var candidateDocument: UUID?
@@ -110,6 +111,7 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        accentColor = KeyboardTint.stored()?.keyColor
         prefersSplit = WideKeyboardLayout.prefersSplit
         preferredHand = OneHandedSetting.storedValue.flatMap(OneHandedLayout.init(rawValue:)) ?? .fullWidth
         autoCorrect = AutoCorrectionSetting.isEnabled
@@ -318,7 +320,7 @@ final class KeyboardViewController: UIInputViewController {
         case .continue: title = "Continue"
         default: title = nil
         }
-        board.update(model, returnTitle: title, animateLayout: animateLayout)
+        board.update(model, returnTitle: title, accentColor: accentColor, animateLayout: animateLayout)
     }
 
     private func playFeedback() {

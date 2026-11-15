@@ -72,7 +72,7 @@ final class KeyboardView: UIView {
         traits.userInterfaceStyle == .dark ? UIColor(white: 0.22, alpha: 1) :
             UIColor(red: 0.75, green: 0.77, blue: 0.81, alpha: 1)
     }
-    private let accent = UIColor { traits in
+    private let defaultAccent = UIColor { traits in
         traits.userInterfaceStyle == .dark ? UIColor(red: 0.29, green: 0.36, blue: 0.47, alpha: 1) :
             UIColor(red: 0.75, green: 0.83, blue: 0.95, alpha: 1)
     }
@@ -96,6 +96,7 @@ final class KeyboardView: UIView {
     private var keys: [[Key]] = []
     private var displayedModel: KeyboardModel?
     private var displayedReturnTitle: String?
+    private var displayedAccent: UIColor?
     private var held: [ObjectIdentifier: KeyButton] = [:]
     private var previews: [ObjectIdentifier: KeyPreview] = [:]
     private var lingering: [KeyPreview] = []
@@ -196,8 +197,10 @@ final class KeyboardView: UIView {
         }
     }
 
-    func update(_ model: KeyboardModel, returnTitle: String?, animateLayout: Bool = false) {
-        guard displayedModel != model || displayedReturnTitle != returnTitle else { return }
+    func update(_ model: KeyboardModel, returnTitle: String?, accentColor: UIColor? = nil, animateLayout: Bool = false) {
+        guard displayedModel != model || displayedReturnTitle != returnTitle || displayedAccent != accentColor else { return }
+        displayedAccent = accentColor
+        let accent = accentColor ?? defaultAccent
         let keypad = model.layer == .keypad
         let wasKeypad = displayedModel?.layer == .keypad
         if animateLayout { layoutIfNeeded(); resetTouches() }

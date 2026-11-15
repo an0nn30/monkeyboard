@@ -81,6 +81,12 @@ private struct KeyboardSettings: View {
 
     var body: some View {
         Form {
+            NavigationLink {
+                AppearanceSettings()
+            } label: {
+                Label("Appearance", systemImage: "paintpalette")
+            }
+            .accessibilityIdentifier("appearance-settings")
             Section {
                 Toggle("Split on wide screens", isOn: Binding(
                     get: { split },

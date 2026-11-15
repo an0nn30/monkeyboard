@@ -1,8 +1,9 @@
 import Security
 import UIKit
 
-/// One byte per preference in the local access group shared by the app and keyboard.
-private enum KeyboardSetting: String {
+/// Preferences in the local keychain access group shared by the app and keyboard.
+enum KeyboardSetting: String {
+    case accentTint = "accent-tint-srgb"
     case firmness = "keypress-firmness"
     case split = "split-wide-layout"
     case oneHanded = "one-handed-layout"
@@ -17,17 +18,29 @@ private enum KeyboardSetting: String {
          kSecAttrAccount: rawValue]
     }
 
-    func read() -> Int? {
+    func readData() -> Data? {
         var request = query
         request[kSecReturnData] = true
         var item: CFTypeRef?
-        guard SecItemCopyMatching(request as CFDictionary, &item) == errSecSuccess,
-              let data = item as? Data, data.count == 1, let byte = data.first else { return nil }
+        guard SecItemCopyMatching(request as CFDictionary, &item) == errSecSuccess else { return nil }
+        return item as? Data
+    }
+
+    func read() -> Int? {
+        guard let data = readData(), data.count == 1, let byte = data.first else { return nil }
         return Int(byte)
     }
 
     func save(_ byte: UInt8, onlyIfMissing: Bool = false) -> Bool {
-        let data = Data([byte])
+        save(Data([byte]), onlyIfMissing: onlyIfMissing)
+    }
+
+    func remove() -> Bool {
+        let status = SecItemDelete(query as CFDictionary)
+        return status == errSecSuccess || status == errSecItemNotFound
+    }
+
+    func save(_ data: Data, onlyIfMissing: Bool = false) -> Bool {
         var item = query
         item[kSecValueData] = data
         item[kSecAttrAccessible] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
