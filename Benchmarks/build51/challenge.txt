@@ -1,0 +1,46 @@
+context|Can you [sent|send] the photo of the cracked hinge to the caretaker?
+context|We should [fine|find] the spare opener before the guests arrive.
+context|I put a [pear|pair] of safety glasses on the workbench.
+context|I [herd|heard] the parcel hit the front step during lunch.
+context|Is that [tour|your] paper bag on the back of the chair?
+context|Could you check [of|if] the greenhouse door is properly closed?
+context|The last driver [us|is] waiting outside the service entrance.
+context|Put the plastic tray [be|by] the bucket once it's dry.
+context|I was hoping to go [hope|home] after the meter reading.
+context|We could leave right [not|now] if your bag is ready.
+context|She took the last orange [form|from] the basket in the lobby.
+context|I've got [me|my] badge clipped to the wrong coat.
+context|Can we [meat|meet] where the two cycle paths join?
+context|There's enough [flower|flour] in the small tin for one more loaf.
+context|I want to [right|write] a note for the family next door.
+context|I can't recall [wear|where] we bought those brass curtain rings.
+context|We'll wait [four|for] the next delivery before moving the shelves.
+context|It helps to [reed|read] both sides of the parking permit.
+mixed|[Diid|Did] you put the [lugagge|luggage] in the hall by the lift?
+mixed|[THe|The] back [pedla|pedal] on the bike squeaks in the rain.
+mixed|[MMy|My] brother left the [trowle|trowel] next to the rosemary pot.
+mixed|[Th e|The] [cupbaord|cupboard] over the radio is where we keep the cards.
+mixed|Please grab [teh|the] clean [towle|towel] from the airing cupboard.
+mixed|I put the [receip t|receipt] in a little [pockte|pocket] near the zip.
+mixed|Does the last [tra in|train] still stop at the [smal l|small] station?
+mixed|We can [birng|bring] a bag of [sugra|sugar] when we come for tea.
+mixed|I'm taking my [sis ter|sister] to the [the atre|theatre] on Thursday.
+mixed|The broken [mir ror|mirror] was tucked behind the old [des k|desk].
+mixed|I think my [swim ming|swimming] goggles are under the [sea t|seat].
+mixed|Put the [dr ink|drink] on the low [tab le|table] near the window.
+keep|We're going to a do for the retiring coach after the match.
+keep|The dog on that card looks just like the one we used to have.
+keep|I do wish someone would turn down the music near the entrance.
+keep|Leave the blinds up if the plants still need more sun.
+keep|She gave me a paper map when the phone battery died.
+keep|The herd stood quietly in the patch of grass behind the shop.
+keep|Put a pear and a wedge of cheese in each lunchbox.
+keep|There's a fine scratch on the back of the new silver frame.
+keep|The ride from here is shorter if we avoid the bridge.
+keep|The loose bolt rolls around whenever we open the toolbox.
+keep|I sent the parcel by ordinary post on the way to work.
+keep|The flower on the label is a different shade of yellow.
+keep|We have enough thyme left for the stew this evening.
+keep|All four bags have the same little blue tag on them.
+keep|You can take a break while I put up the washing line.
+keep|Our luggage is in the little room beyond the stairs.

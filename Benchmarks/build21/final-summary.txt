@@ -1,0 +1,29 @@
+build group cases recovered exact false_splits changed_intended
+final20	be-by	66	1	1	0	0
+final20	all	2499	918	2017	0	11
+final20	if-of	126	66	66	0	0
+final20	id-is	126	91	91	0	0
+final20	od-of	126	112	112	0	0
+final20	ti-to	96	80	79	0	1
+final20	other-short	165	114	113	0	1
+final20	long-typo	204	171	171	0	0
+final20	join	480	283	282	0	1
+final20	keep-be	165	0	164	0	1
+final20	keep-if	105	0	104	0	1
+final20	clean	840	0	834	0	6
+final21	be-by	66	42	42	0	0
+final21	all	2499	1105	2206	0	9
+final21	if-of	126	102	102	0	0
+final21	id-is	126	109	109	0	0
+final21	od-of	126	122	122	0	0
+final21	ti-to	96	87	86	0	1
+final21	other-short	165	124	124	0	0
+final21	long-typo	204	171	171	0	0
+final21	join	480	348	347	0	1
+final21	keep-be	165	0	164	0	1
+final21	keep-if	105	0	105	0	0
+final21	clean	840	0	834	0	6
+exact increases 199 decreases 10
+recovered increases 196 decreases 9
+false_splits increases 0 decreases 0
+changed_intended increases 1 decreases 3

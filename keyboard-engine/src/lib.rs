@@ -1,8 +1,25 @@
 //! Stateless English lexical and contextual ranking. No network or user data storage.
+mod context21;
+mod contractions;
+mod rejoin53;
+mod frames53;
+mod literal53;
 #[cfg(feature = "lm-neural")]
 mod neural;
 #[cfg(feature = "lm-neural")]
 mod semantics;
+mod short_words;
+mod cloze27;
+mod contrast40;
+mod evidence45;
+mod refine26;
+mod surface31;
+mod window34;
+mod real25;
+mod textspell30;
+mod wordnet22;
+mod denoise22;
+mod spelling22;
 use std::{
     collections::{HashMap, HashSet},
     ffi::{c_char, CStr},
@@ -223,8 +240,7 @@ fn next_words(context: &str) -> Vec<&'static str> {
     }
     out
 }
-// Small editorial list for unambiguous recurring errors and omitted apostrophes.
-// Ambiguous real words (were/we're, well/we'll, its/it's) never go in this list.
+// Editorial fallback for frequent letter typos. Apostrophe placement is learned.
 fn conventional(w: &str) -> Option<&'static str> {
     Some(match w {
         "teh" => "the",
@@ -235,39 +251,7 @@ fn conventional(w: &str) -> Option<&'static str> {
         "definately" | "definatly" => "definitely",
         "adress" => "address",
         "i" => "I",
-        "im" | "i'm" => "I'm",
-        "ive" | "i've" => "I've",
-        "i'll" => "I'll",
-        "i'd" => "I'd",
-        "youd" => "you'd",
-        "youve" => "you've",
-        "youll" => "you'll",
-        "theyve" => "they've",
-        "theyll" => "they'll",
-        "theyd" => "they'd",
-        "werent" => "weren't",
-        "shouldnt" => "shouldn't",
-        "hadnt" => "hadn't",
-        "shouldve" => "should've",
-        "wouldve" => "would've",
-        "couldve" => "could've",
-        "mustve" => "must've",
-        "mightve" => "might've",
-        "dont" => "don't",
-        "doesnt" => "doesn't",
-        "didnt" => "didn't",
-        "wasnt" => "wasn't",
-        "couldnt" => "couldn't",
-        "wouldnt" => "wouldn't",
-        "isnt" => "isn't",
-        "arent" => "aren't",
-        "youre" => "you're",
-        "theyre" => "they're",
-        "havent" => "haven't",
-        "hasnt" => "hasn't",
-        "thats" => "that's",
-        "whats" => "what's",
-        _ => return None,
+        _ => return contractions::conventional(w),
     })
 }
 // Find words with two omitted letters, or one omission plus one neighboring
@@ -402,6 +386,33 @@ fn evidence(a: &str, b: &str) -> u32 {
     observations(&format!("{a} {b}")).max(pair_count(a, b))
 }
 
+// Exact single-word entries from the system wordlist. Keep the shipping
+// subset to spellings that could plausibly be mistaken for two known words.
+static WHOLE_COMPOUNDS: LazyLock<Vec<&str>> = LazyLock::new(|| {
+    include_str!("../model/whole-compounds.txt")
+        .lines()
+        .collect()
+});
+fn whole_compound(word: &str) -> bool {
+    let contains = |s: &str| WHOLE_COMPOUNDS.binary_search(&s).is_ok();
+    contains(word)
+        || word.strip_suffix('s').is_some_and(contains)
+        || word.strip_suffix("es").is_some_and(contains)
+}
+/// # Safety
+/// word must point to a valid NUL-terminated string.
+#[no_mangle]
+pub unsafe extern "C" fn mb_whole_compound_v1(word: *const c_char) -> i32 {
+    if word.is_null() {
+        return 0;
+    }
+    i32::from(
+        unsafe { CStr::from_ptr(word) }
+            .to_str()
+            .is_ok_and(|s| s.len() <= 32 && whole_compound(s)),
+    )
+}
+
 // UIKit supplies dictionary segmentation candidates that the finite n-gram
 // tables may never have seen. Corroborate the boundary, not just the two words.
 fn supports_native_split(prev: &str, word: &str, candidate: &str, rank: u32) -> bool {
@@ -430,6 +441,86 @@ fn supports_native_split(prev: &str, word: &str, candidate: &str, rank: u32) -> 
     let freq = |s: &str| WORDS.get(s).copied().unwrap_or(0).max(observations(s));
     let inner = evidence(a, b);
     let lead = evidence(prev, a);
+    // An unknown compound can also have a plausible spaced dictionary guess.
+    // Without repeated pair evidence, require a grammatical boundary rather
+    // than accepting two dictionary nouns merely because the string is long.
+    let grammar_word = |s: &str| {
+        matches!(
+            s,
+            "a" | "an"
+                | "the"
+                | "my"
+                | "your"
+                | "his"
+                | "her"
+                | "our"
+                | "their"
+                | "of"
+                | "in"
+                | "at"
+                | "with"
+                | "for"
+                | "by"
+                | "from"
+                | "to"
+                | "and"
+                | "or"
+                | "but"
+                | "when"
+                | "if"
+                | "than"
+                | "that"
+                | "this"
+                | "these"
+                | "those"
+                | "is"
+                | "are"
+                | "was"
+                | "were"
+                | "be"
+                | "been"
+                | "has"
+                | "have"
+                | "had"
+                | "he"
+                | "she"
+                | "they"
+                | "we"
+                | "you"
+                | "it"
+                | "i"
+                | "us"
+                | "them"
+                | "me"
+                | "will"
+                | "can"
+                | "should"
+                | "would"
+                | "might"
+                | "could"
+                | "not"
+                | "any"
+                | "some"
+                | "before"
+                | "after"
+                | "until"
+        )
+    };
+    let inflected = |s: &str| {
+        (s.len() >= 5 && (s.ends_with("ed") || s.ends_with("ing")))
+            || (s.len() >= 5 && s.ends_with('s') && !s.ends_with("ss"))
+    };
+    let grammatical = grammar_word(a)
+        || grammar_word(b)
+        || inflected(a)
+        || inflected(b)
+        || (evidence("to", a) >= 4 && (evidence("can", a) >= 2 || evidence("will", a) >= 2));
+    if inner < 6 && !grammatical {
+        return false;
+    }
+    if word.len() == 4 && lead < 2 {
+        return false;
+    }
     if inner >= 6 || (inner >= 2 && lead >= 2) {
         return true;
     }
@@ -512,6 +603,40 @@ fn boundary_candidate(prev: &str, word: &str) -> Option<(i32, String)> {
         return None;
     }
     Some((stage, format!("{a} {b}")))
+}
+
+/// # Safety
+/// Both inputs must point to UTF-8 C strings; out must hold capacity writable bytes.
+#[no_mangle]
+pub unsafe extern "C" fn mb_trained_split_v1(
+    previous: *const c_char,
+    word: *const c_char,
+    out: *mut c_char,
+    capacity: usize,
+) -> i32 {
+    if previous.is_null() || word.is_null() || out.is_null() || capacity == 0 {
+        return -1;
+    }
+    let (Ok(p), Ok(w)) = (
+        unsafe { CStr::from_ptr(previous) }.to_str(),
+        unsafe { CStr::from_ptr(word) }.to_str(),
+    ) else {
+        return -1;
+    };
+    if p.len() > 80 {
+        return 0;
+    }
+    let Some((_, form)) = context21::split(p, w) else {
+        return 0;
+    };
+    if form.len() >= capacity {
+        return -1;
+    }
+    unsafe {
+        std::ptr::copy_nonoverlapping(form.as_ptr(), out.cast(), form.len());
+        *out.add(form.len()) = 0;
+    }
+    1
 }
 
 /// # Safety

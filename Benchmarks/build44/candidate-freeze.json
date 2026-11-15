@@ -1,0 +1,37 @@
+{
+  "time_utc": "2026-11-14T20:53:35.601147+00:00",
+  "selected": 44,
+  "fixture_sha256": "dcb4560a15fbfe8935992d5913f655bbc5456e3631f9906a110577ec3f43de9e",
+  "simulator": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+  "compiled_replay_sha256": {
+    "39": "c48bba54a359d9342685b00a796c1f514b775d0f759325098648f3767b55b0f4",
+    "40": "45c313cb49e76c118338a82e90f3ca3e00aa2d231eb79eeb9affd144f9d909b1",
+    "44": "6e991314f56e441d7b0e9ce4e9120c2e24cae7c91b14cb09031dd6204ef323ac"
+  },
+  "extension_sha256": {
+    "39": "81ae2098b361c54026eaf01d59267acd280406f2f5c87c6951745532e66e7a19",
+    "40": "f53c6856af6c6807d82431dac10cd144a2a8e3191f6e92772240a584082d0647",
+    "44": "592483faf855edcfc17b2d6c0566980cfce58d5150961a84af96ce13e72eaccb"
+  },
+  "input_sha256": {
+    "Benchmarks/build41/fresh.json": "dcb4560a15fbfe8935992d5913f655bbc5456e3631f9906a110577ec3f43de9e",
+    "Benchmarks/build41/regressions.json": "21eb018166eccf8efb6ae25da50f490fe3daa5917b5366723f7417c32c733ff0",
+    "Keyboard/WordCorrections.swift": "6386b4a52f3dcd47319921249bd85ece66ef01ff7102a31ebdea996887989b1b",
+    "Keyboard/KeyboardViewController.swift": "52e8c051da123c5b97d5298d05df9e0d6acec3cce05afd23bf0466fa25a7b51e",
+    "keyboard-engine/include/monkeyboard.h": "303aaef008e0bbb54514802883cb3ec9ebe73c42578a9ef33074e52abe046e3f",
+    "keyboard-engine/src/wordnet22.rs": "57fa7cf782c7447af71cd3932961b0af410868b8f5a25144abb85145648e613a",
+    "keyboard-engine/src/surface31.rs": "e04788f7643b5bbb4be33ec8b5412ac362659d9d44d129d0bb2d58e5da310cce",
+    "keyboard-engine/src/denoise22.rs": "7ff43c0d0cba2dcea38169b281a570b4b227fcc353d791ab7b77aba07c60c166",
+    "keyboard-engine/src/contrast40.rs": "b17d55b7e8411dfd41e9f5b19f6468506b7199eac1f05c22e761abd7bbce7478",
+    "keyboard-engine/training/contrast42.py": "58916f08fb204fcaac2a1f65696cb056592d1f3ca0541117a828f6392b4f237f",
+    "keyboard-engine/training/contrast40.py": "cd70d81176a5c7a2a20229f11aa9a84c9d560cbacf900643bb67a9f4faddd39e",
+    "keyboard-engine/training/calibrate40.py": "00790bc6098e7a9c0e25f8b809bdd4680ac0825317127d5fd1b31c7ec21b46a2",
+    "MonkeyBoard.xcodeproj/project.pbxproj": "4021303054b36fbd5a67981013fdcd092b71c09f74f01eff5af4049e9d92cba1",
+    "Benchmarks/build17/Adapter.swift": "2c38d9bc9904a73ef56fdcc171d48b812f959ec499f51b446b82c3abe398e0fd",
+    "Benchmarks/build22/blind/score.py": "627442f8c8b8a562892d5b72b6926ed841b6b136de7b65dd7a84f7be0cda6c92",
+    "keyboard-engine/model/contrast42/features.txt": "76106791a7b74f4a067a71d6638d01899b9d1c525db733abe0b98def5548b3a6",
+    "keyboard-engine/model/contrast42/fit.json": "2a6a2dc6c79314b242c114bdc122583f301e2fe2b37101ff0651702fb1c7e53b",
+    "keyboard-engine/model/contrast42/models.tsv": "985d5fc1bbe7f4ed5fc9f3a67b314a8cc5c5d4a2b0cbb3b5b285ad60461a6bc9",
+    "keyboard-engine/model/contrast42/weights.bin": "070c573402d6c11d754fe56e1f43b51f304aedf06a523d16c127578e77464c83"
+  }
+}

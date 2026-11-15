@@ -1,0 +1,24 @@
+{
+  "source_messages": {
+    "paired": 60146,
+    "cc0": 37408,
+    "sms": 3222
+  },
+  "fit_desktop": 31818,
+  "fit_replay": 666,
+  "fit_replay_literal": 134,
+  "fit_named_and_casual": 1075,
+  "calibration_desktop": 21010,
+  "calibration_desktop_vetoes": 12,
+  "development_decisions": 78,
+  "development_literal_decisions": 16,
+  "development_restored": 7,
+  "development_correct_repairs_vetoed": 0,
+  "feature_count": 52,
+  "thresholds": [
+    4.5,
+    2.5,
+    2.5,
+    4.0
+  ]
+}

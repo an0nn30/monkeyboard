@@ -1,0 +1,5 @@
+The contextual wrong-word detector was trained by MonkeyBoard using synthetic spelling substitutions in public English sentences.
+
+Tatoeba contributors. English CC0 sentence export. https://tatoeba.org/en/downloads
+
+Taskmaster-1 written dialogues. Bill Byrne, Karthik Krishnamoorthi, Chinnadhurai Sankar, Arvind Neelakantan, Amit Dubey, Kyu-Young Kim and Andy Cedilnik, Google LLC. Licensed under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Source https://github.com/google-research-datasets/Taskmaster/tree/d92cb6af3005f1dc09c39e75e7daf4a04905e00b/TM-1-2019. English utterances were sampled and synthetically corrupted. The supplied model contains learned weights.

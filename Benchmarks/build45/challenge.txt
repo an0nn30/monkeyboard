@@ -1,0 +1,56 @@
+context|Can you [sent|send] the new floor plan to the electrician tonight?
+context|We [herd|heard] the kettle whistle from the backyard.
+context|Could you check [of|if] our gate opens from the alley?
+context|The box [us|is] still waiting beside the old elevator.
+context|Let's go [hope|home] before the last ferry leaves.
+context|Put the heavy pots [be|by] the wooden bench.
+context|I can leave right [not|now] if the parking lot is clear.
+context|I think [tour|your] sketch belongs in the hallway.
+context|The spare key fell [form|from] the shelf beside the sink.
+context|She put [me|my] scarf over the back of the chair.
+context|Did they [fine|find] the book under the folding table?
+context|I only asked [four|for] a little mustard on mine.
+context|Would you [witch|switch] the red and blue labels?
+context|Could we [meat|meet] behind the cinema after lunch?
+context|I need a [pear|pair] of plain socks for the trip.
+context|Please [right|write] the locker number inside the lid.
+context|The band wants to [reed|read] the notes before dinner.
+context|There was a [leek|leak] in the pipe behind the dryer.
+context|Someone left [there|their] lunch on the radiator.
+context|Don't [loose|lose] the receipt for the new hinges.
+context|The [break|brake] pedal felt stiff when we pulled away.
+context|Please [weight|wait] until the paint on the rail is dry.
+context|We ran out of [flower|flour] halfway through the bread recipe.
+context|I have to [by|buy] a new latch for this gate.
+context|The dogs wagged [they're|their] tails when the bell rang.
+context|I know [wear|where] she parked the rental van.
+context|She took a deep [breadth|breath] before lifting the lid.
+context|Do we have [thyme|time] for another lap around the lake?
+mixed|[Diid|Did] I leave my [jackte|jacket] on the ferry?
+mixed|[THe|The] [packgae|package] was waiting behind the planter.
+mixed|[MMy|My] brother needs a clean [towle|towel] for the gym.
+mixed|Can you bring [teh|the] spare [chager|charger] to the picnic?
+mixed|We left the [tick ets|tickets] for the [mvoie|movie] in your car.
+mixed|They moved [hte|the] meeting [tpo|to] the lunch room.
+mixed|I'll leave my [lib rary|library] books by the [dor|door].
+mixed|Please pick up the [kidsat|kids at] the [staiton|station] before six.
+mixed|The [reicpe|recipe] says to let the [buter|butter] soften first.
+mixed|I put [yoyr|your] glasses [besdie|beside] the coffee tin.
+keep|The herd stopped near the fence when the truck went past.
+keep|I sent the floor plan to the contractor on Tuesday.
+keep|The shelf gave way when we added the last heavy box.
+keep|I do wish the rain would stop before the ferry leaves.
+keep|Keep the old badge if the new one feels too stiff.
+keep|The reins are hanging on a peg behind the tack room.
+keep|Our vacation starts the day after the science fair.
+keep|Please leave the leek on the board until the stock boils.
+keep|She picked a pear that smelled sweet near the stem.
+keep|Write the word thyme next to the rosemary on the sign.
+keep|The florist found a white flower that matched the paint.
+keep|I'm still in fine shape for a walk along the pier.
+keep|He took a break after the last trip up the stairs.
+keep|We're moving the desk by the window next month.
+keep|They sent us a photo of the missing lunchbox yesterday.
+keep|It's a loose fit until the second screw is tight.
+keep|I'll wait here while you check the bread in the oven.
+keep|She noted the hole in the lining before mending it.

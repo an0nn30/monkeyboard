@@ -1,0 +1,146 @@
+# Authored messages. [typed>intended] marks a correction or control.
+# [>first|second] marks a prediction prompt. The first choice completes the example.
+@development
+I left the [umbrellla>umbrella] in your trunk
+Can you bring some [cofee>coffee] on your way
+I'll grab a [botttle>bottle] of water
+The [pacakge>package] got here early
+My [chargre>charger] is on your desk
+Please put the [butetr>butter] back in the fridge
+The [tockets>tickets] are under your name
+Pick up the [grocerries>groceries] before you head home
+The last [bua>bus] just left
+Please send the [addrrss>address] again
+Can you [remimd>remind] me after work
+Do you have the [reciept>receipt] for the stroller
+That was a [relaly>really] good game
+Meet me by the [elvator>elevator] on the left
+I'll [brimg>bring] the spare helmet
+I think I [forgpt>forgot] my wallet
+She [dropped>dropped] her phone again
+My roommate [lets>lets] the cat outside
+[Lets>Let's] order dinner before it gets late
+I think [were>were] is the word she circled
+We [were>were] halfway to the lake
+The password is [teh>teh] for the demo
+I ordered [pho>pho] with extra broth
+He wrote [BRB>BRB] on the sticky note
+Bring the [leek>leek] for the stew
+She found a [leek>leak] under the sink
+I can't find [mykeys>my keys] anywhere
+Could you [pickme>pick me] up after practice
+I think [thsi>this] belongs to you
+Can you try [tjis>this] on the other laptop
+I hope [yhr>the] mechanic calls today
+My [train>train] leaves in ten minutes
+I [cant>can't] find my other glove
+I [havent>haven't] checked the mailbox
+The kids [werent>weren't] ready to leave
+[Its>It's] getting cold in here
+The dog wagged [its>its] tail all morning
+Please bring a [pare>pair] of clean socks
+I'll take the [pear>pear] out of the lunchbox
+I use [tmrw>tmrw] in texts with my sister
+Someone parked [across>across] our driveway
+I gave him a [heads>heads] up yesterday
+It might be a [minite>minute] before I get there
+I'm on my [>way] back from rehearsal
+Can you give me a [>call|hand|minute] when you get home
+Don't forget to pick [>up] your charger
+I'll be there in a [>minute|bit|second] if traffic clears
+Did you get my [>message|text|email] about dinner
+Please let me [>know] when it opens
+I need to charge my [>phone|laptop] before we leave
+Hold on a [>second|minute] while I look
+I ran out of [>milk|time|gas] on the way home
+Can we move it to [>tomorrow|Friday|Monday] instead
+It's right around the [>corner] from the library
+I'm waiting at the bus [>stop|station] on Elm
+Send me a [>photo|picture|text] of the sign
+I left it on the kitchen [>counter|table] near the sink
+Give me a heads [>up] before you knock
+Do you know what [>time] practice starts
+I'll meet you after [>work|school|practice] by the gate
+I haven't heard [>back|from] since Tuesday
+Plug it [>in] before you go
+Let's do the [>dishes|laundry] before the movie
+I'm picking her [>up] at the airport
+Talk to you [>later|soon|tomorrow] after the meeting
+I'll pay you [>back] tomorrow
+I can drop it [>off] on my way home
+How long does it [>take] to get there
+Could you put it [>away|back|down] for me
+We are running [>late|low|out] again
+I'll be right [>back|there] after this
+@holdout
+Could you put the [scisors>scissors] in the drawer
+I left my [sunnglasses>sunglasses] in the car
+Please bring your [sweaetr>sweater] to the game
+She took a [pucture>picture] of the menu
+The [elevatpr>elevator] is stuck on our floor
+Did the [delivry>delivery] make it to your door
+I put a [balnket>blanket] on the couch
+Can you check the [weatjer>weather] for Saturday
+I'm [runing>running] a few minutes behind
+I really [apreciate>appreciate] the ride
+My [metting>meeting] went longer than expected
+Let's wait [untill>until] the rain stops
+I saved you a [sanwich>sandwich] from lunch
+Can you [forwqrd>forward] the email to her
+They moved our [appoitment>appointment] to Monday
+Check the [pockrt>pocket] of your blue coat
+I have an extra [kry>key] for the garage
+She [borowed>borrowed] my spare chair
+I can [defintely>definitely] make it tomorrow
+That was [suprising>surprising] to hear
+Please [sendthe>send the] photos when you can
+She left [herbag>her bag] under the bench
+We [wont>won't] get there by seven
+I [didnt>didn't] get the alert
+He [doesnt>doesn't] need another ticket
+[Lets>Let's] check the freezer first
+The app [lets>lets] you change the color
+He lets [us>us] stay after closing
+I'll grab [its>its] collar from the closet
+[Were>Were] you there for the opening song
+I wrote [yhid>yhid] as the puzzle code
+Save it as [QZMP>QZMP] so I can search
+I sent [idk>idk] in the group chat
+The label says [Miso>Miso] on the front
+My cousin plays the [bass>bass] at church
+She put a [leek>leek] in the noodle soup
+I think we found a [leek>leak] behind the shower
+A [manor>manor] sits at the end of the road
+Try the [trail>trail] along the river
+He [read>read] the whole thing on the train
+I [texted>texted] the address to your dad
+I got a [fare>fare] estimate from the driver
+I [guess>guess] it depends on the weather
+I'll text you as soon [>as] the doors open
+Are you on your [>way|own|break] to the gym
+I'll see you in the [>morning|evening|lobby] before work
+Can I call you [>back|later|tomorrow] after dinner
+Please pick me [>up] at the side entrance
+The spare key is under the [>mat|rug|doormat] outside
+I just got [>home|back|off] from the dentist
+Thanks so [>much] for getting us seats
+I think we're out [>of] almond milk
+Send me the tracking [>number|link] when it ships
+Could you turn off the [>lights|oven|stove] downstairs
+I left my phone [>charger|at|in] by your desk
+Where did you park the [>car|truck|van] this time
+I can give you a [>ride|call|hand] after class
+How about the day after [>tomorrow] instead
+I'm going to bed [>early|now|soon] tonight
+Let me know if you [>can|need|want] a ride
+It should be ready by [>noon|tomorrow|Monday] if all goes well
+I'll leave the porch [>light] on for you
+We need to take the dog for a [>walk] before dark
+Sorry I missed your [>call|text|message] earlier
+Keep an eye [>on|out] while I'm gone
+Did you leave a [>message|note|tip] at the front desk
+Do you mind if I [>bring|call|come] a friend
+I should be able [>to] come after lunch
+I put the leftovers in the [>fridge|freezer|refrigerator] for tomorrow
+We can split the [>bill|cost|check] when we get there
+I'm looking forward [>to] seeing everyone

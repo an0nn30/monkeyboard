@@ -1,0 +1,16 @@
+{
+  "simulator": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+  "app_version": 54,
+  "extension_version": 54,
+  "installed_extension_sha256": "e62162e3b3d08c56cb161194119601582d9c7fc552d8a2ba7ab729a266a5ef7f",
+  "physical_device": false,
+  "installed_keyboard_tests": [
+    "testContextRepairsEarlierRealWordWithoutLosingTheFollowingWordOnUndo",
+    "testLowercaseNameIsNotReplacedByAnotherName",
+    "testRejoiningWordPreservesIndependentCorrection",
+    "testRejoinsMistypedSpaceWithoutRewritingNearbyName",
+    "testWordCorrectionAndUndo"
+  ],
+  "rust_tests_passed": 24,
+  "scorer_tests_passed": 9
+}

@@ -1,0 +1,1012 @@
+{
+  "source_messages": 230048,
+  "annotated_misses": 28,
+  "observed_directions": 86,
+  "models": [
+    {
+      "literal": "ad",
+      "alternative": "add",
+      "training": [
+        18,
+        494
+      ],
+      "calibration": [
+        1,
+        72
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 15
+    },
+    {
+      "literal": "al",
+      "alternative": "all",
+      "training": [
+        53,
+        3366
+      ],
+      "calibration": [
+        15,
+        622
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 110
+    },
+    {
+      "literal": "an",
+      "alternative": "and",
+      "training": [
+        4988,
+        5010
+      ],
+      "calibration": [
+        963,
+        3500
+      ],
+      "threshold": 4.99,
+      "false_edits": 0,
+      "caught": 1624
+    },
+    {
+      "literal": "ant",
+      "alternative": "aunt",
+      "training": [
+        9,
+        226
+      ],
+      "calibration": [
+        2,
+        34
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 32
+    },
+    {
+      "literal": "are",
+      "alternative": "our",
+      "training": [
+        5006,
+        837
+      ],
+      "calibration": [
+        2392,
+        145
+      ],
+      "threshold": 3.66,
+      "false_edits": 0,
+      "caught": 70
+    },
+    {
+      "literal": "be",
+      "alternative": "by",
+      "training": [
+        5004,
+        5005
+      ],
+      "calibration": [
+        1518,
+        1038
+      ],
+      "threshold": 4.54,
+      "false_edits": 0,
+      "caught": 633
+    },
+    {
+      "literal": "ben",
+      "alternative": "been",
+      "training": [
+        41,
+        1727
+      ],
+      "calibration": [
+        9,
+        299
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 108
+    },
+    {
+      "literal": "buy",
+      "alternative": "by",
+      "training": [
+        738,
+        5005
+      ],
+      "calibration": [
+        124,
+        1038
+      ],
+      "threshold": 3.12,
+      "false_edits": 0,
+      "caught": 704
+    },
+    {
+      "literal": "by",
+      "alternative": "buy",
+      "training": [
+        5005,
+        738
+      ],
+      "calibration": [
+        1038,
+        124
+      ],
+      "threshold": 3.91,
+      "false_edits": 0,
+      "caught": 101
+    },
+    {
+      "literal": "dad",
+      "alternative": "add",
+      "training": [
+        251,
+        494
+      ],
+      "calibration": [
+        48,
+        72
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 58
+    },
+    {
+      "literal": "date",
+      "alternative": "update",
+      "training": [
+        248,
+        593
+      ],
+      "calibration": [
+        51,
+        114
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 112
+    },
+    {
+      "literal": "died",
+      "alternative": "did",
+      "training": [
+        39,
+        5006
+      ],
+      "calibration": [
+        6,
+        1029
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 766
+    },
+    {
+      "literal": "do",
+      "alternative": "dog",
+      "training": [
+        5002,
+        416
+      ],
+      "calibration": [
+        1566,
+        62
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 45
+    },
+    {
+      "literal": "ed",
+      "alternative": "stayed",
+      "training": [
+        32,
+        473
+      ],
+      "calibration": [
+        8,
+        66
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 60
+    },
+    {
+      "literal": "four",
+      "alternative": "for",
+      "training": [
+        1233,
+        5030
+      ],
+      "calibration": [
+        206,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 2710
+    },
+    {
+      "literal": "get",
+      "alternative": "forget",
+      "training": [
+        3966,
+        838
+      ],
+      "calibration": [
+        742,
+        128
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 117
+    },
+    {
+      "literal": "go",
+      "alternative": "to",
+      "training": [
+        3586,
+        5032
+      ],
+      "calibration": [
+        661,
+        3500
+      ],
+      "threshold": 3.7,
+      "false_edits": 0,
+      "caught": 2817
+    },
+    {
+      "literal": "god",
+      "alternative": "good",
+      "training": [
+        113,
+        2736
+      ],
+      "calibration": [
+        18,
+        532
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 185
+    },
+    {
+      "literal": "got",
+      "alternative": "forgot",
+      "training": [
+        2162,
+        720
+      ],
+      "calibration": [
+        464,
+        134
+      ],
+      "threshold": 5.2,
+      "false_edits": 0,
+      "caught": 6
+    },
+    {
+      "literal": "he",
+      "alternative": "the",
+      "training": [
+        2417,
+        5115
+      ],
+      "calibration": [
+        435,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 2927
+    },
+    {
+      "literal": "herd",
+      "alternative": "heard",
+      "training": [
+        10,
+        641
+      ],
+      "calibration": [
+        2,
+        121
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 51
+    },
+    {
+      "literal": "his",
+      "alternative": "this",
+      "training": [
+        1773,
+        5019
+      ],
+      "calibration": [
+        334,
+        1367
+      ],
+      "threshold": 4.62,
+      "false_edits": 0,
+      "caught": 403
+    },
+    {
+      "literal": "hope",
+      "alternative": "home",
+      "training": [
+        438,
+        463
+      ],
+      "calibration": [
+        77,
+        96
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 45
+    },
+    {
+      "literal": "hour",
+      "alternative": "our",
+      "training": [
+        95,
+        837
+      ],
+      "calibration": [
+        17,
+        145
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 61
+    },
+    {
+      "literal": "id",
+      "alternative": "is",
+      "training": [
+        42,
+        5016
+      ],
+      "calibration": [
+        6,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 1249
+    },
+    {
+      "literal": "if",
+      "alternative": "of",
+      "training": [
+        3273,
+        5014
+      ],
+      "calibration": [
+        565,
+        3500
+      ],
+      "threshold": 4.07,
+      "false_edits": 0,
+      "caught": 2386
+    },
+    {
+      "literal": "im",
+      "alternative": "in",
+      "training": [
+        75,
+        5027
+      ],
+      "calibration": [
+        13,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 1872
+    },
+    {
+      "literal": "in",
+      "alternative": "on",
+      "training": [
+        5027,
+        5026
+      ],
+      "calibration": [
+        3500,
+        2401
+      ],
+      "threshold": 4.96,
+      "false_edits": 0,
+      "caught": 752
+    },
+    {
+      "literal": "iran",
+      "alternative": "ran",
+      "training": [
+        10,
+        1842
+      ],
+      "calibration": [
+        2,
+        347
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 338
+    },
+    {
+      "literal": "knew",
+      "alternative": "new",
+      "training": [
+        68,
+        2760
+      ],
+      "calibration": [
+        16,
+        504
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 257
+    },
+    {
+      "literal": "let",
+      "alternative": "left",
+      "training": [
+        2801,
+        855
+      ],
+      "calibration": [
+        508,
+        162
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 133
+    },
+    {
+      "literal": "lies",
+      "alternative": "lives",
+      "training": [
+        35,
+        1041
+      ],
+      "calibration": [
+        7,
+        175
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 160
+    },
+    {
+      "literal": "life",
+      "alternative": "like",
+      "training": [
+        367,
+        5003
+      ],
+      "calibration": [
+        76,
+        2779
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 2186
+    },
+    {
+      "literal": "loves",
+      "alternative": "lives",
+      "training": [
+        57,
+        1041
+      ],
+      "calibration": [
+        9,
+        175
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 160
+    },
+    {
+      "literal": "me",
+      "alternative": "my",
+      "training": [
+        5007,
+        5009
+      ],
+      "calibration": [
+        2296,
+        1959
+      ],
+      "threshold": 5.34,
+      "false_edits": 0,
+      "caught": 1462
+    },
+    {
+      "literal": "meat",
+      "alternative": "meet",
+      "training": [
+        263,
+        513
+      ],
+      "calibration": [
+        52,
+        103
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 78
+    },
+    {
+      "literal": "mr",
+      "alternative": "me",
+      "training": [
+        69,
+        5007
+      ],
+      "calibration": [
+        12,
+        2296
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 1537
+    },
+    {
+      "literal": "ms",
+      "alternative": "me",
+      "training": [
+        10,
+        5007
+      ],
+      "calibration": [
+        5,
+        2296
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 409
+    },
+    {
+      "literal": "my",
+      "alternative": "me",
+      "training": [
+        5009,
+        5007
+      ],
+      "calibration": [
+        1959,
+        2296
+      ],
+      "threshold": 5.74,
+      "false_edits": 0,
+      "caught": 1742
+    },
+    {
+      "literal": "need",
+      "alternative": "needs",
+      "training": [
+        5001,
+        872
+      ],
+      "calibration": [
+        1006,
+        153
+      ],
+      "threshold": 3.6,
+      "false_edits": 0,
+      "caught": 127
+    },
+    {
+      "literal": "not",
+      "alternative": "now",
+      "training": [
+        4399,
+        1442
+      ],
+      "calibration": [
+        807,
+        279
+      ],
+      "threshold": 3.96,
+      "false_edits": 0,
+      "caught": 124
+    },
+    {
+      "literal": "of",
+      "alternative": "if",
+      "training": [
+        5014,
+        3273
+      ],
+      "calibration": [
+        3500,
+        565
+      ],
+      "threshold": 5.87,
+      "false_edits": 0,
+      "caught": 288
+    },
+    {
+      "literal": "oh",
+      "alternative": "on",
+      "training": [
+        756,
+        5026
+      ],
+      "calibration": [
+        143,
+        2401
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 1923
+    },
+    {
+      "literal": "on",
+      "alternative": "in",
+      "training": [
+        5026,
+        5027
+      ],
+      "calibration": [
+        2401,
+        3500
+      ],
+      "threshold": 5.37,
+      "false_edits": 0,
+      "caught": 578
+    },
+    {
+      "literal": "sea",
+      "alternative": "see",
+      "training": [
+        148,
+        2860
+      ],
+      "calibration": [
+        30,
+        520
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 412
+    },
+    {
+      "literal": "sent",
+      "alternative": "send",
+      "training": [
+        502,
+        1385
+      ],
+      "calibration": [
+        90,
+        258
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 205
+    },
+    {
+      "literal": "sing",
+      "alternative": "sign",
+      "training": [
+        55,
+        206
+      ],
+      "calibration": [
+        3,
+        34
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 25
+    },
+    {
+      "literal": "son",
+      "alternative": "soon",
+      "training": [
+        243,
+        272
+      ],
+      "calibration": [
+        47,
+        53
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 35
+    },
+    {
+      "literal": "st",
+      "alternative": "at",
+      "training": [
+        50,
+        5009
+      ],
+      "calibration": [
+        13,
+        1726
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 715
+    },
+    {
+      "literal": "sun",
+      "alternative": "son",
+      "training": [
+        104,
+        243
+      ],
+      "calibration": [
+        20,
+        47
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 39
+    },
+    {
+      "literal": "their",
+      "alternative": "there",
+      "training": [
+        3573,
+        4872
+      ],
+      "calibration": [
+        656,
+        892
+      ],
+      "threshold": 3.32,
+      "false_edits": 0,
+      "caught": 786
+    },
+    {
+      "literal": "then",
+      "alternative": "than",
+      "training": [
+        1124,
+        1242
+      ],
+      "calibration": [
+        222,
+        216
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 142
+    },
+    {
+      "literal": "thus",
+      "alternative": "this",
+      "training": [
+        21,
+        5019
+      ],
+      "calibration": [
+        2,
+        1367
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 68
+    },
+    {
+      "literal": "to",
+      "alternative": "too",
+      "training": [
+        5032,
+        1004
+      ],
+      "calibration": [
+        3500,
+        199
+      ],
+      "threshold": 4.99,
+      "false_edits": 0,
+      "caught": 91
+    },
+    {
+      "literal": "to",
+      "alternative": "two",
+      "training": [
+        5032,
+        2904
+      ],
+      "calibration": [
+        3500,
+        516
+      ],
+      "threshold": 5.39,
+      "false_edits": 0,
+      "caught": 248
+    },
+    {
+      "literal": "too",
+      "alternative": "to",
+      "training": [
+        1004,
+        5032
+      ],
+      "calibration": [
+        199,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 2780
+    },
+    {
+      "literal": "top",
+      "alternative": "to",
+      "training": [
+        348,
+        5032
+      ],
+      "calibration": [
+        73,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 2666
+    },
+    {
+      "literal": "tour",
+      "alternative": "your",
+      "training": [
+        137,
+        5004
+      ],
+      "calibration": [
+        34,
+        1364
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 781
+    },
+    {
+      "literal": "two",
+      "alternative": "to",
+      "training": [
+        2904,
+        5032
+      ],
+      "calibration": [
+        516,
+        3500
+      ],
+      "threshold": 5.04,
+      "false_edits": 0,
+      "caught": 2199
+    },
+    {
+      "literal": "un",
+      "alternative": "in",
+      "training": [
+        14,
+        5027
+      ],
+      "calibration": [
+        4,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 610
+    },
+    {
+      "literal": "us",
+      "alternative": "is",
+      "training": [
+        353,
+        5016
+      ],
+      "calibration": [
+        65,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 2222
+    },
+    {
+      "literal": "weak",
+      "alternative": "week",
+      "training": [
+        15,
+        336
+      ],
+      "calibration": [
+        3,
+        59
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 11
+    },
+    {
+      "literal": "wish",
+      "alternative": "with",
+      "training": [
+        96,
+        5015
+      ],
+      "calibration": [
+        21,
+        1739
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 494
+    },
+    {
+      "literal": "year",
+      "alternative": "years",
+      "training": [
+        372,
+        426
+      ],
+      "calibration": [
+        93,
+        85
+      ],
+      "threshold": 3.47,
+      "false_edits": 0,
+      "caught": 33
+    },
+    {
+      "literal": "yo",
+      "alternative": "to",
+      "training": [
+        31,
+        5032
+      ],
+      "calibration": [
+        6,
+        3500
+      ],
+      "threshold": 4.7,
+      "false_edits": 0,
+      "caught": 260
+    },
+    {
+      "literal": "yo",
+      "alternative": "you",
+      "training": [
+        31,
+        5015
+      ],
+      "calibration": [
+        6,
+        3500
+      ],
+      "threshold": 3.0,
+      "false_edits": 0,
+      "caught": 1243
+    },
+    {
+      "literal": "you",
+      "alternative": "your",
+      "training": [
+        5015,
+        5004
+      ],
+      "calibration": [
+        3500,
+        1364
+      ],
+      "threshold": 6.36,
+      "false_edits": 0,
+      "caught": 301
+    }
+  ]
+}

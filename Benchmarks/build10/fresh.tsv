@@ -1,0 +1,71 @@
+# Frozen before training. Project-authored. Includes context probes, ordinary typos, and deliberate spellings.
+fix	The bus driver waved as I hurried over because I really needed a ried	ride
+fix	The library had my favorite author so I settled down for a good ried	read
+fix	The pizza was covered with cheese and I only wanted one more slixe	slice
+fix	The projector stopped working during my talk so I went back to the previous slixe	slide
+fix	My mother called about our family dinner and asked if I could call my dsd	dad
+fix	My son fell asleep in his room and I gently tucked him into his bedd	bed
+fix	The storm flooded the sidewalks so I brought my rubber boats	boots
+keep	The harbor was filling up with sailors so I went outside to see the boats	boats
+fix	The coffee shop near the station has a special on my favorite latye	latte
+fix	The clock in my office stopped again and I think it made me latye	late
+fix	The movie at the theater is about to start and I want a good sear	seat
+keep	The chef has the pan smoking hot because he wants a good sear	sear
+fix	The bakery had fresh bread this morning so I bought a whole loaf of bred	bread
+fix	The mechanic said that the engine was fine but we needed a new tired	tire
+fix	The restaurant finally opened after the renovation and we booked a tabke	table
+fix	The train pulled away before I could buy the tickey	ticket
+fix	My sister found a wallet outside and asked if it was minw	mine
+fix	I left my glasses at the offcie	office
+fix	We missed the last ferry so we're staying overnigth	overnight
+fix	Can someone bring the spare chargwr	charger
+fix	Everyone is meeting outside the ststion	station
+fix	Do you still have my blue jackrt	jacket
+fix	They're playing our favorite sohg	song
+fix	I can come over right after breajfast	breakfast
+fix	Please save us a parking spoy	spot
+fix	My camera battery died just before the pictuer	picture
+fix	The oven beeped and I checked the tiemr	timer
+fix	I forgot my umbrella at the librsry	library
+fix	The soup needs a pinch of saly	salt
+fix	Let me know when your flight labds	lands
+keep	Ask the new neighbor about her cat Miso	Miso
+keep	Sent the details to NASA	NASA
+keep	That new band sounds dope	dope
+keep	Is the event still on btw	btw
+keep	I'm feeling a little tired	tired
+keep	Her bike has two flat tires	tires
+keep	I love the sound of rain	rain
+keep	Can someone check the mail	mail
+keep	She knows how to sear	sear
+keep	He's reading about the history of lead	lead
+keep	The label says crème	crème
+keep	Please feel free to bring your own mug	mug
+keep	My usual order is an iced latte	latte
+keep	Check with Noelle	Noelle
+keep	This meeting could be an email	email
+keep	I'll text when I get home safely	safely
+keep	That's the link for dev.bred	bred
+keep	Look for @latye	latye
+keep	The login field is user_tabke	tabke
+keep	My roommate says yep	yep
+fix	I packed my swimsuit this morning because we wanted to spend all day at the beack	beach
+fix	I packed a picnic for the park because we wanted to eat lunch on the beack	bench
+fix	There was fresh snow on the mountain and my brother wanted to try the new slops	slopes
+keep	The sink was full of muddy water and he carried out the slops	slops
+fix	The photographer checked the lens before asking me to stand beside the camerw	camera
+fix	The mechanic checked the wheels before asking me to stand beside the cartt	cart
+fix	The surfers grabbed their boards and we all made our way over to the beack	beach
+fix	The park had one empty seat and we all made our way over to the beack	bench
+fix	The pizza was still hot when I asked her if I could have another slixe	slice
+fix	The slideshow moved too quickly so I asked her if I could have another slixe	slide
+fix	My library card was in my pocket when I went back upstairs to find the boog	book
+fix	My left foot was getting wet when I went back upstairs to find the boog	boot
+next	I can drop the kids off on my	way
+next	The leftover pizza is still in the	fridge|oven|kitchen|box
+next	Ping me as soon as you're ready to	go|leave|start
+next	Looks like we're running a little	late|behind
+next	I have a few errands to	run|do
+next	Could you pick me up from the	station|airport|office|store|gym
+next	The library texted to say my book is ready for	pickup|collection
+next	I'll send you the address when I get	home|there|back

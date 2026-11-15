@@ -1,0 +1,2 @@
+{"inputs": 6, "threshold": 0.4500000000000001, "train": {"recovered": 51, "damaged": 1, "other": 1, "original_wrongs": 76}, "validation": {"recovered": 44, "damaged": 12, "other": 1, "original_wrongs": 86}}
+{"inputs": 9, "threshold": 0.3500000000000001, "train": {"recovered": 54, "damaged": 3, "other": 1, "original_wrongs": 76}, "validation": {"recovered": 47, "damaged": 10, "other": 4, "original_wrongs": 86}}

@@ -1,0 +1,962 @@
+id	split	kind	typed	expected	gap	slot
+spoken-be-by0	external	be-by	Yes, that's fine be me.	Yes, that's fine by me.		3
+spoken-be-by1	external	be-by	So I want them to serve fountain drinks, have seating nearby and I don't want to seat be the bathrooms.	So I want them to serve fountain drinks, have seating nearby and I don't want to seat by the bathrooms.		17
+spoken-be-by2	external	be-by	You can help me be you can get me an appointment for my car and tell the Auto Imports I'm having issues with my car.	You can help me by you can get me an appointment for my car and tell the Auto Imports I'm having issues with my car.		4
+spoken-be-by3	external	be-by	Can you tell me who stars in the film, be the way?	Can you tell me who stars in the film, by the way?		9
+spoken-be-by4	external	be-by	Does it offer outdoor seating, be any chance?	Does it offer outdoor seating, by any chance?		5
+spoken-be-by5	external	be-by	And do you know what my driver's ETA is, be any chance?	And do you know what my driver's ETA is, by any chance?		9
+spoken-be-by6	external	be-by	I am looking for a highly rated restaurant in San Francisco that's be the pier, that's easy to walk to from the pier.	I am looking for a highly rated restaurant in San Francisco that's by the pier, that's easy to walk to from the pier.		12
+spoken-be-by7	external	be-by	Like be Fairfax, it's in Hollywood.	Like by Fairfax, it's in Hollywood.		1
+spoken-be-by8	external	be-by	Can you tell me the primary type of cuisine served be the first location?	Can you tell me the primary type of cuisine served by the first location?		10
+spoken-be-by9	external	be-by	Hey, You can help me be placing an order from Starbucks.	Hey, You can help me by placing an order from Starbucks.		5
+spoken-be-by10	external	be-by	Maybe you can help me out be finding a restaurant for me to dine at tonight.	Maybe you can help me out by finding a restaurant for me to dine at tonight.		6
+spoken-be-by11	external	be-by	Are there any UberPools available be chance?	Are there any UberPools available by chance?		5
+spoken-be-by12	external	be-by	Well, I'm hoping to get it there be next Friday.	Well, I'm hoping to get it there by next Friday.		7
+spoken-be-by13	external	be-by	Starbucks be the Target in Cerritos, California.	Starbucks by the Target in Cerritos, California.		1
+spoken-be-by14	external	be-by	Would you happen to know who directed the movie be the way?	Would you happen to know who directed the movie by the way?		9
+spoken-be-by15	external	be-by	Do you go be any characteristics to search?	Do you go by any characteristics to search?		3
+spoken-be-by16	external	be-by	What is the runtime of the movie, be the way?	What is the runtime of the movie, by the way?		7
+spoken-be-by17	external	be-by	Yes, I can get there be then.	Yes, I can get there by then.		5
+spoken-be-by18	external	be-by	It is the Courtyard be Marriott, Portland in in Maine.	It is the Courtyard by Marriott, Portland in in Maine.		4
+spoken-be-by19	external	be-by	The particular movie I want to watch which is Mission Impossible be Tom Cruise.	The particular movie I want to watch which is Mission Impossible by Tom Cruise.		11
+spoken-be-by20	external	be-by	Maybe something down be the water with a good view.	Maybe something down by the water with a good view.		3
+spoken-be-by21	external	be-by	Do they have outdoor seating be any chance?	Do they have outdoor seating by any chance?		5
+spoken-be-by22	external	be-by	Just to make sure, it has to be checked be someone at Intelligent auto imports.	Just to make sure, it has to be checked by someone at Intelligent auto imports.		9
+spoken-be-by23	external	be-by	Does does Kim restaurant have garlic noodles be chance?	Does does Kim restaurant have garlic noodles by chance?		7
+spoken-be-by24	external	be-by	It's be the Walmart in Wattsburg.	It's by the Walmart in Wattsburg.		1
+spoken-be-by25	external	be-by	Sorry about the noise, be the way.	Sorry about the noise, by the way.		4
+spoken-be-by26	external	be-by	Awesome, and does the other place sell wine be the bottle?	Awesome, and does the other place sell wine by the bottle?		8
+spoken-be-by27	external	be-by	Hi, I'd like to go see a movie be myself in Flint, Michigan.	Hi, I'd like to go see a movie by myself in Flint, Michigan.		8
+spoken-be-by28	external	be-by	I will be riding be myself.	I will be riding by myself.		4
+spoken-be-by29	external	be-by	Okay, and be any chance do they offer outdoor sitting or is it just all indoors sounds it could be all indoors.	Okay, and by any chance do they offer outdoor sitting or is it just all indoors sounds it could be all indoors.		2
+spoken-be-by30	external	be-by	Meaning that it has to be cooked be real Mexican cooks.	Meaning that it has to be cooked by real Mexican cooks.		7
+spoken-be-by31	external	be-by	Did you send my receipt over be email or text?	Did you send my receipt over by email or text?		6
+spoken-be-by32	external	be-by	Hi, I'd like to order a black and white mocha from the Starbucks on be the Locks Fair Mall.	Hi, I'd like to order a black and white mocha from the Starbucks on by the Locks Fair Mall.		14
+spoken-be-by33	external	be-by	Oh, that will be held be I will also take an oil change.	Oh, that will be held by I will also take an oil change.		5
+spoken-be-by34	external	be-by	Perfect, be any chance do you know what translates to in English?	Perfect, by any chance do you know what translates to in English?		1
+spoken-be-by35	external	be-by	I'd like to narrow those two choices down be characteristics.	I'd like to narrow those two choices down by characteristics.		8
+spoken-be-by36	external	be-by	Are you able to assist me be placing an order at a new pizzeria called Bella Luna?	Are you able to assist me by placing an order at a new pizzeria called Bella Luna?		6
+spoken-be-by37	external	be-by	Is it playing The Upside be chance?	Is it playing The Upside by chance?		5
+spoken-be-by38	external	be-by	It's the Courtyard be Marriott.	It's the Courtyard by Marriott.		3
+spoken-be-by39	external	be-by	Yeah, be the water looking out of the water.	Yeah, by the water looking out of the water.		1
+spoken-be-by40	external	be-by	It's going to be the DoutbleTree be Hilton.	It's going to be the DoutbleTree by Hilton.		6
+spoken-od-of0	external	od-of	I'd like it to be sort od fast, casual and really anything that doesn't have complaints about the cleanliness, I would like to see.	I'd like it to be sort of fast, casual and really anything that doesn't have complaints about the cleanliness, I would like to see.		6
+spoken-od-of1	external	od-of	Can I get a gluten-free crust, please, for all four od them?	Can I get a gluten-free crust, please, for all four of them?		11
+spoken-od-of2	external	od-of	I need two small chicken bacon pizzas, both od them with thick crusts.	I need two small chicken bacon pizzas, both of them with thick crusts.		8
+spoken-od-of3	external	od-of	Medium for both od them.	Medium for both of them.		3
+spoken-od-of4	external	od-of	We are above kind od located at.	We are above kind of located at.		4
+spoken-od-of5	external	od-of	Yeah, but can I get a booth instead od a table?	Yeah, but can I get a booth instead of a table?		8
+spoken-od-of6	external	od-of	I notice last night that some od my lights are out on my car.	I notice last night that some of my lights are out on my car.		6
+spoken-od-of7	external	od-of	And what's the average rating od the second one?	And what's the average rating of the second one?		5
+spoken-od-of8	external	od-of	Can I get extra cheese on all od them?	Can I get extra cheese on all of them?		7
+spoken-od-of9	external	od-of	What's the estimated cost od that?	What's the estimated cost of that?		4
+spoken-od-of10	external	od-of	Can you give me the phone number od Azul?	Can you give me the phone number of Azul?		7
+spoken-od-of11	external	od-of	Something in the middle od the theater.	Something in the middle of the theater.		4
+spoken-od-of12	external	od-of	And the types od food that I like are Italian, Mexican, and traditional American.	And the types of food that I like are Italian, Mexican, and traditional American.		3
+spoken-od-of13	external	od-of	Several lights are out on the inside and outside od the car.	Several lights are out on the inside and outside of the car.		9
+spoken-od-of14	external	od-of	Can I get whipped cream on top, topped with a dash od cinnamon, please?	Can I get whipped cream on top, topped with a dash of cinnamon, please?		11
+spoken-od-of15	external	od-of	I would like to get a car for a party od two, preferably extra large.	I would like to get a car for a party of two, preferably extra large.		10
+spoken-od-of16	external	od-of	Give me the phone number od it.	Give me the phone number of it.		5
+spoken-od-of17	external	od-of	On one od them, can I get Canadian bacon and pineapple and the other one, can I get spinach deluxe but hold the onions on that one?	On one of them, can I get Canadian bacon and pineapple and the other one, can I get spinach deluxe but hold the onions on that one?		2
+spoken-od-of18	external	od-of	A Pool ride please and there'll be two od us.	A Pool ride please and there'll be two of us.		8
+spoken-od-of19	external	od-of	Oh yeah, what kind od food does mikuni have?	Oh yeah, what kind of food does mikuni have?		4
+spoken-od-of20	external	od-of	And do either Hard Knocks or Annie April's, do either od those have like barbecue food items?	And do either Hard Knocks or Annie April's, do either of those have like barbecue food items?		10
+spoken-od-of21	external	od-of	So can you find me a couple od places that are highly rated and that are open on Sunday and you know, maybe they've got outdoor seating?	So can you find me a couple of places that are highly rated and that are open on Sunday and you know, maybe they've got outdoor seating?		7
+spoken-od-of22	external	od-of	Do you know if either od them offer high chairs?	Do you know if either of them offer high chairs?		5
+spoken-od-of23	external	od-of	I need an Yes, there's five od us.	I need an Yes, there's five of us.		6
+spoken-od-of24	external	od-of	I seem to be leaking a lot od oil out of the car.	I seem to be leaking a lot of oil out of the car.		7
+spoken-od-of25	external	od-of	Okay, I like to confirm the right type, the fair estimate, and drivers ETA along with estimation the estimated duration od the truck.	Okay, I like to confirm the right type, the fair estimate, and drivers ETA along with estimation the estimated duration of the truck.		20
+spoken-od-of26	external	od-of	I would like to get it at the Starbucks or at the University od Houston.	I would like to get it at the Starbucks or at the University of Houston.		13
+spoken-od-of27	external	od-of	mushrooms to one od them.	mushrooms to one of them.		3
+spoken-od-of28	external	od-of	Well, I want two od them to be veggie lovers and then the other one I want to be a chicken alfredo.	Well, I want two of them to be veggie lovers and then the other one I want to be a chicken alfredo.		4
+spoken-od-of29	external	od-of	And two medium pizzas that are in Two medium pizzas that are plain cheese, and I would like extra cheese on all four od those.	And two medium pizzas that are in Two medium pizzas that are plain cheese, and I would like extra cheese on all four of those.		23
+spoken-od-of30	external	od-of	Yes, I need Espresso coffee, a cup od coffee.	Yes, I need Espresso coffee, a cup of coffee.		7
+spoken-od-of31	external	od-of	I need There's six od us.	I need There's six of us.		4
+spoken-od-of32	external	od-of	Somewhere not too quiet, kind od a fun vibe.	Somewhere not too quiet, kind of a fun vibe.		5
+spoken-od-of33	external	od-of	I would like two od them, the chicken barque and then two veggie lovers.	I would like two of them, the chicken barque and then two veggie lovers.		4
+spoken-od-of34	external	od-of	I want four large pizzas all od them with extra cheese.	I want four large pizzas all of them with extra cheese.		6
+spoken-od-of35	external	od-of	Does either one od them have a wine list?	Does either one of them have a wine list?		3
+spoken-od-of36	external	od-of	Yes, I would like you to like take me to The Metropolitan Museum od Art.	Yes, I would like you to like take me to The Metropolitan Museum of Art.		13
+spoken-od-of37	external	od-of	And do you know the estimated duration od the trip?	And do you know the estimated duration of the trip?		7
+spoken-od-of38	external	od-of	for tonight And I need two od them, I'm coming with a friend.	for tonight And I need two of them, I'm coming with a friend.		6
+spoken-od-of39	external	od-of	Enjoy the rest od your evening.	Enjoy the rest of your evening.		3
+spoken-od-of40	external	od-of	Two od them meat lovers.	Two of them meat lovers.		1
+spoken-od-of41	external	od-of	I would like all od the pizzas on gluten-free crust.	I would like all of the pizzas on gluten-free crust.		4
+spoken-od-of42	external	od-of	Can I add caramel on top od the caramel?	Can I add caramel on top of the caramel?		6
+spoken-od-of43	external	od-of	There are There are four od us, though.	There are There are four of us, though.		5
+spoken-od-of44	external	od-of	Does Burma Superstar have a lot od vegan options?	Does Burma Superstar have a lot of vegan options?		6
+spoken-od-of45	external	od-of	Okay, what is the estimated duration od the trip?	Okay, what is the estimated duration of the trip?		6
+spoken-od-of46	external	od-of	I need to go to University od Pennsylvania in Philadelphia, Pennsylvania.	I need to go to University of Pennsylvania in Philadelphia, Pennsylvania.		6
+spoken-od-of47	external	od-of	Okay, what time od flavors can I put in there?	Okay, what time of flavors can I put in there?		3
+spoken-od-of48	external	od-of	Sure, then instead od that, I am looking at the mini.	Sure, then instead of that, I am looking at the mini.		3
+spoken-od-of49	external	od-of	I'd like a Venti Americano with a splash od coconut milk.	I'd like a Venti Americano with a splash of coconut milk.		8
+spoken-od-of50	external	od-of	On one od them, I would like plain meat lover's.	On one of them, I would like plain meat lover's.		2
+spoken-od-of51	external	od-of	Low price is always good but I also want someplace that has a high rating from previous customers and something that's not part od a chain.	Low price is always good but I also want someplace that has a high rating from previous customers and something that's not part of a chain.		23
+spoken-od-of52	external	od-of	Yeah, I'm going to get three large pizzas, all od them with extra cheese, and two of them need to be veggie lovers.	Yeah, I'm going to get three large pizzas, all of them with extra cheese, and two of them need to be veggie lovers.		9
+spoken-od-of53	external	od-of	And I'd like all od those thin crust.	And I'd like all of those thin crust.		4
+spoken-od-of54	external	od-of	Can you get find a couple od other restaurants for me that might be Greek in that area?	Can you get find a couple of other restaurants for me that might be Greek in that area?		6
+spoken-od-of55	external	od-of	And I want all od them with extra cheese.	And I want all of them with extra cheese.		4
+spoken-od-of56	external	od-of	I'm going with a friend od mine.	I'm going with a friend of mine.		5
+spoken-od-of57	external	od-of	And what was the duration od the trip?	And what was the duration of the trip?		5
+spoken-od-of58	external	od-of	Can I get four small pizzas, two od them with only cheese and two of them meat lovers?	Can I get four small pizzas, two of them with only cheese and two of them meat lovers?		7
+spoken-od-of59	external	od-of	One od them is just pepperoni.	One of them is just pepperoni.		1
+spoken-od-of60	external	od-of	for a party od four.	for a party of four.		3
+spoken-od-of61	external	od-of	This will be a shared ride od five people.	This will be a shared ride of five people.		6
+spoken-od-of62	external	od-of	What kind od car is is it?	What kind of car is is it?		2
+spoken-od-of63	external	od-of	And both od them sized venti, and with milk.	And both of them sized venti, and with milk.		2
+spoken-od-of64	external	od-of	Could I get pepperoni sausage and onions on all od them?	Could I get pepperoni sausage and onions on all of them?		9
+spoken-od-of65	external	od-of	One od them, I would like just butter.	One of them, I would like just butter.		1
+spoken-od-of66	external	od-of	I had some vandalism recently, and as a result od that, some lights within my car and outside my car are out.	I had some vandalism recently, and as a result of that, some lights within my car and outside my car are out.		9
+spoken-od-of67	external	od-of	Has to have a enough room for a table od four.	Has to have a enough room for a table of four.		9
+spoken-od-of68	external	od-of	Actually, could you put extra cheese on all od them?	Actually, could you put extra cheese on all of them?		8
+spoken-od-of69	external	od-of	Is the steakhouse near the harbor or is it in a different part od the city?	Is the steakhouse near the harbor or is it in a different part of the city?		13
+spoken-od-of70	external	od-of	I'm kind od in the mood for Italian food, but I want somewhere that has like indoor seating.	I'm kind of in the mood for Italian food, but I want somewhere that has like indoor seating.		2
+spoken-od-of71	external	od-of	The name od the bar would be The Violet Hour.	The name of the bar would be The Violet Hour.		2
+spoken-od-of72	external	od-of	Okay, and what is the estimated duration od the trip?	Okay, and what is the estimated duration of the trip?		7
+spoken-od-of73	external	od-of	Which od these is the cheapest?	Which of these is the cheapest?		1
+spoken-od-of74	external	od-of	And could I also get an extra shot od espresso in that?	And could I also get an extra shot of espresso in that?		8
+spoken-od-of75	external	od-of	A couple A group od my friends and I are going mall hopping.	A couple A group of my friends and I are going mall hopping.		4
+spoken-od-of76	external	od-of	and then six shots od espresso.	and then six shots of espresso.		4
+spoken-od-of77	external	od-of	I was hoping for sort od a California cuisine, a contemporary.	I was hoping for sort of a California cuisine, a contemporary.		5
+spoken-od-of78	external	od-of	Can I get a side od fries, then?	Can I get a side of fries, then?		5
+spoken-od-of79	external	od-of	Out od the three, which gets the highest customer ratings?	Out of the three, which gets the highest customer ratings?		1
+spoken-od-of80	external	od-of	When is the estimated time od arrival?	When is the estimated time of arrival?		5
+spoken-od-of81	external	od-of	I said if they had a lot od parking.	I said if they had a lot of parking.		7
+spoken-od-of82	external	od-of	Let's get sausage and bacon on one od them.	Let's get sausage and bacon on one of them.		7
+spoken-od-of83	external	od-of	What What would be the driver's estimated time od arrival?	What What would be the driver's estimated time of arrival?		8
+spoken-od-of84	external	od-of	If that's a part od the tuneup, then that would be fine.	If that's a part of the tuneup, then that would be fine.		4
+spoken-od-of85	external	od-of	Yes, both od them will be.	Yes, both of them will be.		2
+spoken-od-of86	external	od-of	How much is a plate od food at the first choice that you just said?	How much is a plate of food at the first choice that you just said?		5
+spoken-od-of87	external	od-of	I need to adjust the amount od people.	I need to adjust the amount of people.		6
+spoken-od-of88	external	od-of	Any od them serve seafood?	Any of them serve seafood?		1
+spoken-od-of89	external	od-of	Mediums, both od them medium.	Mediums, both of them medium.		2
+spoken-od-of90	external	od-of	So, what type od menu do they have?	So, what type of menu do they have?		3
+spoken-od-of91	external	od-of	I would also like it to have parking od some kind.	I would also like it to have parking of some kind.		8
+spoken-od-of92	external	od-of	One od them I want Mediterranean, and the other one, pesto veggie, and I want extra cheese on both.	One of them I want Mediterranean, and the other one, pesto veggie, and I want extra cheese on both.		1
+spoken-od-of93	external	od-of	What kind od flavors can I add to the mocha?	What kind of flavors can I add to the mocha?		2
+spoken-od-of94	external	od-of	Yeah, can you tell me the name od the director?	Yeah, can you tell me the name of the director?		7
+spoken-od-of95	external	od-of	Yes, I want to order a cup od coffee from Starbucks espresso beverages.	Yes, I want to order a cup of coffee from Starbucks espresso beverages.		7
+spoken-od-of96	external	od-of	Make one od them a meat lover's, one a veggie lover, and the other one a chicken barbecue pizza.	Make one of them a meat lover's, one a veggie lover, and the other one a chicken barbecue pizza.		2
+spoken-od-of97	external	od-of	And what is the ambience od each restaurant?	And what is the ambience of each restaurant?		5
+spoken-od-of98	external	od-of	One I'd like veggie lovers and the other I'd like meat lovers but both od them need extra cheese.	One I'd like veggie lovers and the other I'd like meat lovers but both of them need extra cheese.		14
+spoken-od-of99	external	od-of	And then which od the two places has a quieter atmosphere?	And then which of the two places has a quieter atmosphere?		3
+spoken-od-of100	external	od-of	Could you make all od them thin crust?	Could you make all of them thin crust?		4
+spoken-od-of101	external	od-of	I'm starting out at Victoria Gardens mall in the City od Ontario, California.	I'm starting out at Victoria Gardens mall in the City of Ontario, California.		10
+spoken-od-of102	external	od-of	Yeah, I'd like them both to be od thick crust.	Yeah, I'd like them both to be of thick crust.		7
+spoken-od-of103	external	od-of	For one od the pizzas, I want them to be a Meat Lovers.	For one of the pizzas, I want them to be a Meat Lovers.		2
+spoken-od-of104	external	od-of	What kind od ribs do they serve?	What kind of ribs do they serve?		2
+spoken-od-of105	external	od-of	I'd like to see the movie in the City od Newport Beach, California.	I'd like to see the movie in the City of Newport Beach, California.		9
+spoken-od-of106	external	od-of	Several od the the lights don't work.	Several of the the lights don't work.		1
+spoken-od-of107	external	od-of	There are couple od videos.	There are couple of videos.		3
+spoken-od-of108	external	od-of	I want to figure out the cost, the type od car that you have.	I want to figure out the cost, the type of car that you have.		9
+spoken-od-of109	external	od-of	All od them with thick crust.	All of them with thick crust.		1
+spoken-od-of110	external	od-of	For one od them, I would like Meat Lovers, but minus the Canadian bacon.	For one of them, I would like Meat Lovers, but minus the Canadian bacon.		2
+spoken-od-of111	external	od-of	Like, do I have to wear any specific kind od attire?	Like, do I have to wear any specific kind of attire?		9
+spoken-od-of112	external	od-of	I think I like the sound od the wacko one.	I think I like the sound of the wacko one.		6
+spoken-od-of113	external	od-of	No, there's going to be four od us.	No, there's going to be four of us.		6
+spoken-od-of114	external	od-of	What is the price od each one?	What is the price of each one?		4
+spoken-od-of115	external	od-of	I'm looking for, you know, an assortment od pastas and just different sausage meals and stuff like that.	I'm looking for, you know, an assortment of pastas and just different sausage meals and stuff like that.		7
+spoken-od-of116	external	od-of	Can you Can you do a shot od vanilla in that, also.	Can you Can you do a shot of vanilla in that, also.		7
+spoken-od-of117	external	od-of	And what is the number od the restaurant?	And what is the number of the restaurant?		5
+spoken-od-of118	external	od-of	Well well, when I drive there's a noise when I turn, so it's kind od disturbing.	Well well, when I drive there's a noise when I turn, so it's kind of disturbing.		14
+spoken-od-of119	external	od-of	Could you make sure that both od them pizzas have a gluten-free crust?	Could you make sure that both of them pizzas have a gluten-free crust?		6
+spoken-od-of120	external	od-of	What is the average cost od both of these places?	What is the average cost of both of these places?		5
+spoken-od-of121	external	od-of	And then one od them, I want it to be a.	And then one of them, I want it to be a.		3
+spoken-od-of122	external	od-of	I'm going to need four small pizzas, all od them with gluten-free crust.	I'm going to need four small pizzas, all of them with gluten-free crust.		8
+spoken-od-of123	external	od-of	I'm in need od a drop-off at the Preston Royal, please.	I'm in need of a drop-off at the Preston Royal, please.		3
+spoken-od-of124	external	od-of	I also like to know the duration od the trip.	I also like to know the duration of the trip.		7
+spoken-od-of125	external	od-of	I need two medium pizzas with both od them having onions, garlic and chicken on them.	I need two medium pizzas with both of them having onions, garlic and chicken on them.		7
+spoken-od-of126	external	od-of	cook it front od you or let you cook it.	cook it front of you or let you cook it.		3
+spoken-od-of127	external	od-of	Can you look in the area od Lakewood?	Can you look in the area of Lakewood?		6
+spoken-od-of128	external	od-of	Then can you confirm the estimated duration od the trip?	Then can you confirm the estimated duration of the trip?		7
+spoken-od-of129	external	od-of	What is the average rating od barbecue?	What is the average rating of barbecue?		5
+spoken-od-of130	external	od-of	What type od cars do you have?	What type of cars do you have?		2
+spoken-od-of131	external	od-of	Types od food I like include pizza, Chinese, Vietnamese.	Types of food I like include pizza, Chinese, Vietnamese.		1
+spoken-od-of132	external	od-of	Can you confirm the type od ride?	Can you confirm the type of ride?		5
+spoken-od-of133	external	od-of	Can you inform me as to the director od Isn't it Romantic, please?	Can you inform me as to the director of Isn't it Romantic, please?		8
+spoken-od-of134	external	od-of	So it's probably a little more expensive just cuz od the cost of living out there.	So it's probably a little more expensive just cuz of the cost of living out there.		9
+spoken-od-of135	external	od-of	I said I need a cup od coffee.	I said I need a cup of coffee.		6
+spoken-od-of136	external	od-of	Again who's the director od the movie?	Again who's the director of the movie?		4
+spoken-od-of137	external	od-of	I was thinking about something like kind od upscale California or American food.	I was thinking about something like kind of upscale California or American food.		7
+spoken-od-of138	external	od-of	Okay and how about the driver's ETA and the duration od the trip, please?	Okay and how about the driver's ETA and the duration of the trip, please?		10
+spoken-od-of139	external	od-of	I would like for any od those restaurants to have.	I would like for any of those restaurants to have.		5
+spoken-od-of140	external	od-of	What Where is his estimated time od arrival?	What Where is his estimated time of arrival?		6
+spoken-od-of141	external	od-of	I'd like them to be medium, both od them.	I'd like them to be medium, both of them.		7
+spoken-od-of142	external	od-of	What type od milk does Starbucks have?	What type of milk does Starbucks have?		2
+spoken-od-of143	external	od-of	Do you know od any place besides Ballerina's?	Do you know of any place besides Ballerina's?		3
+spoken-od-of144	external	od-of	I would like thick crust on all od them.	I would like thick crust on all of them.		7
+spoken-od-of145	external	od-of	I hope that I do, and I hope you enjoy the rest od your day.	I hope that I do, and I hope you enjoy the rest of your day.		12
+spoken-od-of146	external	od-of	I want all od three with thick crust.	I want all of three with thick crust.		3
+spoken-od-of147	external	od-of	And I was thinking od getting Chinese food, but I want to get something like upscale and is like highly rated.	And I was thinking of getting Chinese food, but I want to get something like upscale and is like highly rated.		4
+spoken-od-of148	external	od-of	Give me the type od foods.	Give me the type of foods.		4
+spoken-od-of149	external	od-of	What is the time od day that does Shanghai Garden have the most customer traffic?	What is the time of day that does Shanghai Garden have the most customer traffic?		4
+spoken-ti-to0	external	ti-to	From Bella Luna ti New Pizzeria.	From Bella Luna to New Pizzeria.		3
+spoken-ti-to1	external	ti-to	Hi, I want ti book an appointment tomorrow for to secure my car seen at Intelligent Auto Imports.	Hi, I want to book an appointment tomorrow for to secure my car seen at Intelligent Auto Imports.		3
+spoken-ti-to2	external	ti-to	Those are the two movies I'd like ti watch.	Those are the two movies I'd like to watch.		7
+spoken-ti-to3	external	ti-to	There I'd like ti get an Uber.	There I'd like to get an Uber.		3
+spoken-ti-to4	external	ti-to	I need ti get three.	I need to get three.		2
+spoken-ti-to5	external	ti-to	I'd like one of them ti be a supreme but add Anchovies and extra sauce.	I'd like one of them to be a supreme but add Anchovies and extra sauce.		5
+spoken-ti-to6	external	ti-to	I need ti go to Midway Airport.	I need to go to Midway Airport.		2
+spoken-ti-to7	external	ti-to	I'd like ti know the estimated time of arrival.	I'd like to know the estimated time of arrival.		2
+spoken-ti-to8	external	ti-to	It needs ti have steak sauce.	It needs to have steak sauce.		2
+spoken-ti-to9	external	ti-to	I still want ti go to Peet's.	I still want to go to Peet's.		3
+spoken-ti-to10	external	ti-to	I need appointment letter ti repair shop.	I need appointment letter to repair shop.		4
+spoken-ti-to11	external	ti-to	I'd like ti order coffee for pickup at my local Starbucks.	I'd like to order coffee for pickup at my local Starbucks.		2
+spoken-ti-to12	external	ti-to	I don't think we actually need ti sit together.	I don't think we actually need to sit together.		6
+spoken-ti-to13	external	ti-to	I wanted ti order from a from a Peet's here in Sunnyvale.	I wanted to order from a from a Peet's here in Sunnyvale.		2
+spoken-ti-to14	external	ti-to	I need one that's going ti fit six people, so an XL.	I need one that's going to fit six people, so an XL.		5
+spoken-ti-to15	external	ti-to	Not bad, I need ti order a Starbucks drink, please.	Not bad, I need to order a Starbucks drink, please.		4
+spoken-ti-to16	external	ti-to	Hi, I'd like ti get a nice sit-down restaurant in San Francisco, California.	Hi, I'd like to get a nice sit-down restaurant in San Francisco, California.		3
+spoken-ti-to17	external	ti-to	I'd like ti get a medium margherita pizza with thick crust.	I'd like to get a medium margherita pizza with thick crust.		2
+spoken-ti-to18	external	ti-to	Hello, I need ti order a pizza from Bella Luna and I need to get two pizzas that are both large size.	Hello, I need to order a pizza from Bella Luna and I need to get two pizzas that are both large size.		3
+spoken-ti-to19	external	ti-to	I want ti book a Uber cab.	I want to book a Uber cab.		2
+spoken-ti-to20	external	ti-to	I'm trying ti order some pizzas from Bella Luna.	I'm trying to order some pizzas from Bella Luna.		2
+spoken-ti-to21	external	ti-to	I'm going from the Birchwood Mall in Fort Gratiot ti Port Huron Lanes.	I'm going from the Birchwood Mall in Fort Gratiot to Port Huron Lanes.		9
+spoken-ti-to22	external	ti-to	When I'm at a long When I'm at sitting at a long traffic like, my car tends ti stall.	When I'm at a long When I'm at sitting at a long traffic like, my car tends to stall.		17
+spoken-ti-to23	external	ti-to	I would like ti order a Uber from the Santa Cruz Beach Boardwalk to Hotel Solares.	I would like to order a Uber from the Santa Cruz Beach Boardwalk to Hotel Solares.		3
+spoken-ti-to24	external	ti-to	And I want all of them ti have a thick crust.	And I want all of them to have a thick crust.		6
+spoken-ti-to25	external	ti-to	I got ti order three pizzas.	I got to order three pizzas.		2
+spoken-ti-to26	external	ti-to	I want ti order the coffee in Starbucks.	I want to order the coffee in Starbucks.		2
+spoken-ti-to27	external	ti-to	I would like ti take order of caramel macchiato.	I would like to take order of caramel macchiato.		3
+spoken-ti-to28	external	ti-to	I'm trying ti make an appointment to get my car checked up at intelligent add-on parts.	I'm trying to make an appointment to get my car checked up at intelligent add-on parts.		2
+spoken-ti-to29	external	ti-to	I'd like ti buy a movie ticket to go see Aquaman.	I'd like to buy a movie ticket to go see Aquaman.		2
+spoken-ti-to30	external	ti-to	Today, I need your help finding an Uber ti bring me to a destination I'm trying to get to.	Today, I need your help finding an Uber to bring me to a destination I'm trying to get to.		8
+spoken-ti-to31	external	ti-to	Hi, I'd like ti book some movie tickets, please.	Hi, I'd like to book some movie tickets, please.		3
+spoken-ti-to32	external	ti-to	I was hoping you could help me find something ti eat nearby.	I was hoping you could help me find something to eat nearby.		9
+spoken-ti-to33	external	ti-to	I need ti make an appointment for auto repair.	I need to make an appointment for auto repair.		2
+spoken-ti-to34	external	ti-to	I don't know where I want ti go, so I was hoping to get ideas.	I don't know where I want to go, so I was hoping to get ideas.		6
+spoken-ti-to35	external	ti-to	I would like them ti have sushi if possible, and alcohol has to be available.	I would like them to have sushi if possible, and alcohol has to be available.		4
+spoken-ti-to36	external	ti-to	I want ti order cappuccino.	I want to order cappuccino.		2
+spoken-ti-to37	external	ti-to	Hi, I need ti arrange for a visit in Vancouver, Washington.	Hi, I need to arrange for a visit in Vancouver, Washington.		3
+spoken-ti-to38	external	ti-to	Hi, I need ti order a Lyft or an Uber.	Hi, I need to order a Lyft or an Uber.		3
+spoken-ti-to39	external	ti-to	Hi, I'd like ti order a Espresso from a Starbucks of Mulch Highway in Jacksonville, Florida.	Hi, I'd like to order a Espresso from a Starbucks of Mulch Highway in Jacksonville, Florida.		3
+spoken-ti-to40	external	ti-to	All my information seems ti be correct.	All my information seems to be correct.		4
+spoken-ti-to41	external	ti-to	I'm trying ti get a an Uber.	I'm trying to get a an Uber.		2
+spoken-ti-to42	external	ti-to	Hey, can you add whipped cream ti that?	Hey, can you add whipped cream to that?		6
+spoken-ti-to43	external	ti-to	And I want both of them ti have big crusts.	And I want both of them to have big crusts.		6
+spoken-ti-to44	external	ti-to	I was wanting ti find somewhere to eat in Sacramento for lunch.	I was wanting to find somewhere to eat in Sacramento for lunch.		3
+spoken-ti-to45	external	ti-to	I was wondering if you can help me find a place ti have some lunch.	I was wondering if you can help me find a place to have some lunch.		11
+spoken-ti-to46	external	ti-to	When I'm driving, I think the tires are misaligned because the car is pulling ti the left.	When I'm driving, I think the tires are misaligned because the car is pulling to the left.		14
+spoken-ti-to47	external	ti-to	I need ti have a tune up.	I need to have a tune up.		2
+spoken-ti-to48	external	ti-to	How long it going ti take?	How long it going to take?		4
+spoken-ti-to49	external	ti-to	And the first one, I want it ti be a Buffalo chicken pizza.	And the first one, I want it to be a Buffalo chicken pizza.		7
+spoken-ti-to50	external	ti-to	I want ti order some Peet's on Catalina Boulevard in San Diego.	I want to order some Peet's on Catalina Boulevard in San Diego.		2
+spoken-ti-to51	external	ti-to	Now I won't have ti wait all day for that.	Now I won't have to wait all day for that.		4
+spoken-ti-to52	external	ti-to	I would like ti order a ticket for The Kid Who Would Be King in Santa Cruz, California.	I would like to order a ticket for The Kid Who Would Be King in Santa Cruz, California.		3
+spoken-ti-to53	external	ti-to	Perfect, I'd like ti choose Frank Fat's, please.	Perfect, I'd like to choose Frank Fat's, please.		3
+spoken-ti-to54	external	ti-to	I'd like it ti be nearby.	I'd like it to be nearby.		3
+spoken-ti-to55	external	ti-to	Can you I'd like ti purchase three tickets, please.	Can you I'd like to purchase three tickets, please.		4
+spoken-ti-to56	external	ti-to	I 'm trying ti find a nice sit down restaurant in San Francisco.	I 'm trying to find a nice sit down restaurant in San Francisco.		3
+spoken-ti-to57	external	ti-to	I would like ti purchase some movie tickets.	I would like to purchase some movie tickets.		3
+spoken-ti-to58	external	ti-to	I want ti find a restaurant in Sacramento.	I want to find a restaurant in Sacramento.		2
+spoken-ti-to59	external	ti-to	Yeah, I'll I'll take I want ti like to order some new some pizzas from the new pizzeria in Bella Luna, please.	Yeah, I'll I'll take I want to like to order some new some pizzas from the new pizzeria in Bella Luna, please.		6
+spoken-ti-to60	external	ti-to	It's just making some noise when I turn, so I just someone ti look at it.	It's just making some noise when I turn, so I just someone to look at it.		12
+spoken-ti-to61	external	ti-to	I'm currently at The Dandelion restaurant in Philadelphia, and I'm looking ti hitch an Uber ride to the airport.	I'm currently at The Dandelion restaurant in Philadelphia, and I'm looking to hitch an Uber ride to the airport.		11
+spoken-ti-to62	external	ti-to	I'd like ti know who stars stars in that film.	I'd like to know who stars stars in that film.		2
+spoken-ti-to63	external	ti-to	Yeah, I'm looking for a nice sit-down place ti eat in San Francisco and I'm kind of have a hankering for sushi.	Yeah, I'm looking for a nice sit-down place to eat in San Francisco and I'm kind of have a hankering for sushi.		9
+spoken-ti-to64	external	ti-to	I'm looking for an Uber from the World of Coca-Cola in Atlanta, Georgia ti Bone's Restaurant in Atlanta, Georgia.	I'm looking for an Uber from the World of Coca-Cola in Atlanta, Georgia to Bone's Restaurant in Atlanta, Georgia.		14
+spoken-ti-to65	external	ti-to	I'd like ti get a venti cinnamon almond milk macchiato with coconut milk and half the syrup and an extra shot.	I'd like to get a venti cinnamon almond milk macchiato with coconut milk and half the syrup and an extra shot.		2
+spoken-ti-to66	external	ti-to	Hi, today I need your help finding some coffee ti get to buy from Starbucks.	Hi, today I need your help finding some coffee to get to buy from Starbucks.		9
+spoken-ti-to67	external	ti-to	I'm looking for a place ti have lunch in Sacramento, California inside the Arden Fair Mall.	I'm looking for a place to have lunch in Sacramento, California inside the Arden Fair Mall.		5
+spoken-ti-to68	external	ti-to	I want ti be picked up at the Birchfield Library in Burchfield, Michigan.	I want to be picked up at the Birchfield Library in Burchfield, Michigan.		2
+spoken-ti-to69	external	ti-to	I'm currently in New Haven, Connecticut, and I need ti go from the Bow Tie Criterion Cinemas to the Yale Law School.	I'm currently in New Haven, Connecticut, and I need to go from the Bow Tie Criterion Cinemas to the Yale Law School.		9
+spoken-ti-to70	external	ti-to	and it's going ti be for two people.	and it's going to be for two people.		3
+spoken-ti-to71	external	ti-to	Hi, I was wanting ti order some coffee from Starbucks.	Hi, I was wanting to order some coffee from Starbucks.		4
+spoken-ti-to72	external	ti-to	I would like ti order pizza from Bella Luna.	I would like to order pizza from Bella Luna.		3
+spoken-ti-to73	external	ti-to	I'm in Tampa, Florida and I would like us ti go to AMC West Shore.	I'm in Tampa, Florida and I would like us to go to AMC West Shore.		9
+spoken-ti-to74	external	ti-to	I need ti book a Uber.	I need to book a Uber.		2
+spoken-ti-to75	external	ti-to	Can I get the phone number ti Olive Garden?	Can I get the phone number to Olive Garden?		6
+spoken-ti-to76	external	ti-to	I want ti see What Men Want.	I want to see What Men Want.		2
+spoken-ti-to77	external	ti-to	I want ti know who directed that movie.	I want to know who directed that movie.		2
+spoken-ti-to78	external	ti-to	Okay, let's Let's go with the the second one, and I would like ti book a a reservation, please.	Okay, let's Let's go with the the second one, and I would like to book a a reservation, please.		13
+spoken-ti-to79	external	ti-to	I was wanting ti book an Uber, the Birchwood Mall in Fort Gratiot, Michigan.	I was wanting to book an Uber, the Birchwood Mall in Fort Gratiot, Michigan.		3
+spoken-ti-to80	external	ti-to	And I would like it ti have a full bar at the restaurant.	And I would like it to have a full bar at the restaurant.		5
+spoken-ti-to81	external	ti-to	I want the third one ti be salami with extra pepperoni.	I want the third one to be salami with extra pepperoni.		5
+spoken-ti-to82	external	ti-to	Well, I would like ti go that restaurant.	Well, I would like to go that restaurant.		4
+spoken-ti-to83	external	ti-to	I would like ti schedule a mechanic for Intelligent auto imports.	I would like to schedule a mechanic for Intelligent auto imports.		3
+spoken-ti-to84	external	ti-to	I want you ti help me order an Uber.	I want you to help me order an Uber.		3
+spoken-ti-to85	external	ti-to	Yes, I would like ti place some order for three pizzas.	Yes, I would like to place some order for three pizzas.		4
+spoken-ti-to86	external	ti-to	On the second small pizza, I want it ti be a Tuscan pizza.	On the second small pizza, I want it to be a Tuscan pizza.		8
+spoken-ti-to87	external	ti-to	How How close is the first one ti me?	How How close is the first one to me?		7
+spoken-ti-to88	external	ti-to	I'm currently in Burbank, California at the Granville restaurant, and I need ti go to the Hollywoodland.	I'm currently in Burbank, California at the Granville restaurant, and I need to go to the Hollywoodland.		12
+spoken-ti-to89	external	ti-to	And I would also like the temperature ti be extra hot.	And I would also like the temperature to be extra hot.		7
+spoken-ti-to90	external	ti-to	My car is pulling ti the left.	My car is pulling to the left.		4
+spoken-ti-to91	external	ti-to	I think I'd like ti have a.	I think I'd like to have a.		4
+spoken-ti-to92	external	ti-to	I would like ti pick it up, please.	I would like to pick it up, please.		3
+spoken-ti-to93	external	ti-to	Is it possible we could ti get a regular ride, like a UberX?	Is it possible we could to get a regular ride, like a UberX?		5
+spoken-ti-to94	external	ti-to	I want ti see the Legoland two.	I want to see the Legoland two.		2
+spoken-ti-to95	external	ti-to	Anything close ti downtown will do.	Anything close to downtown will do.		2
+spoken-ti-to96	external	ti-to	Hey, I needed help scheduling an appointment ti get my car worked on.	Hey, I needed help scheduling an appointment to get my car worked on.		7
+spoken-ti-to97	external	ti-to	The car refuses ti start.	The car refuses to start.		3
+spoken-ti-to98	external	ti-to	We want ti be picked up from Balboa Park.	We want to be picked up from Balboa Park.		2
+spoken-ti-to99	external	ti-to	So, I wanted ti see if you could get me some tickets.	So, I wanted to see if you could get me some tickets.		3
+spoken-ti-to100	external	ti-to	Perfect, that's all I need ti know.	Perfect, that's all I need to know.		5
+spoken-ti-to101	external	ti-to	I need ti get a left.	I need to get a left.		2
+spoken-ti-to102	external	ti-to	New York City from airport ti my residence.	New York City from airport to my residence.		5
+spoken-ti-to103	external	ti-to	Yes, and I want all of them ti have gluten-free crust.	Yes, and I want all of them to have gluten-free crust.		7
+spoken-ti-to104	external	ti-to	Looking ti make an appointment at the auto shop Intelligent Auto Imports.	Looking to make an appointment at the auto shop Intelligent Auto Imports.		1
+spoken-ti-to105	external	ti-to	I need ti go to the Bow Tie Cinemas Landmark in Stamford, Connecticut to the nearest McDonald's.	I need to go to the Bow Tie Cinemas Landmark in Stamford, Connecticut to the nearest McDonald's.		2
+spoken-ti-to106	external	ti-to	Hello, I'm looking for a nice, sit down restaurant ti have dinner in San Francisco, California.	Hello, I'm looking for a nice, sit down restaurant to have dinner in San Francisco, California.		9
+spoken-ti-to107	external	ti-to	I'll like ti go with Uber regular, please.	I'll like to go with Uber regular, please.		2
+spoken-ti-to108	external	ti-to	I would like ti place an order at the Starbucks, Goldenrod, Orlando, Florida.	I would like to place an order at the Starbucks, Goldenrod, Orlando, Florida.		3
+spoken-ti-to109	external	ti-to	I like you ti confirm the ride type and the the amount of money.	I like you to confirm the ride type and the the amount of money.		3
+spoken-ti-to110	external	ti-to	I I'm not going ti be able to make that one.	I I'm not going to be able to make that one.		4
+spoken-ti-to111	external	ti-to	I'd like ti be picked up from the Sheraton Gateway Los Angeles hotel.	I'd like to be picked up from the Sheraton Gateway Los Angeles hotel.		2
+spoken-ti-to112	external	ti-to	I I need two tickets at least, cuz I'm going ti be going with a friend, and that would be probably ideal.	I I need two tickets at least, cuz I'm going to be going with a friend, and that would be probably ideal.		10
+spoken-ti-to113	external	ti-to	Hi, I'd like ti get tickets for a movie tonight to go see A Star Is Born.	Hi, I'd like to get tickets for a movie tonight to go see A Star Is Born.		3
+spoken-ti-to114	external	ti-to	I want ti be dropped off at Santa Barbara City College.	I want to be dropped off at Santa Barbara City College.		2
+spoken-ti-to115	external	ti-to	I can go ti the one in Champaign.	I can go to the one in Champaign.		3
+spoken-ti-to116	external	ti-to	Actually, I like ti bring it in as soon as possible if I could.	Actually, I like to bring it in as soon as possible if I could.		3
+spoken-ti-to117	external	ti-to	I'd like ti see ASAP the next showing today.	I'd like to see ASAP the next showing today.		2
+spoken-ti-to118	external	ti-to	Hi, I was looking ti order two small pizzas from Bella Luna.	Hi, I was looking to order two small pizzas from Bella Luna.		4
+spoken-ti-to119	external	ti-to	I need ti go to our hotel.	I need to go to our hotel.		2
+spoken-ti-to120	external	ti-to	I'd like ti know who stars in this movie, too.	I'd like to know who stars in this movie, too.		2
+spoken-ti-to121	external	ti-to	I need ti I need to make an appointment at Intelligent Auto auto Imports.	I need to I need to make an appointment at Intelligent Auto auto Imports.		2
+spoken-ti-to122	external	ti-to	I was looking ti get some coffee from the Fort Gratiot Starbucks.	I was looking to get some coffee from the Fort Gratiot Starbucks.		3
+spoken-ti-to123	external	ti-to	Yeah, I'd like ti go see The Upside in Atlanta, Georgia tonight.	Yeah, I'd like to go see The Upside in Atlanta, Georgia tonight.		3
+spoken-ti-to124	external	ti-to	Hello, I would like ti see the movie The Lego Movie in Phoenix, Arizona.	Hello, I would like to see the movie The Lego Movie in Phoenix, Arizona.		4
+spoken-ti-to125	external	ti-to	Oh, I'd like ti get some movie tickets to go see Aquaman for two people in Davenport, Iowa.	Oh, I'd like to get some movie tickets to go see Aquaman for two people in Davenport, Iowa.		3
+spoken-ti-to126	external	ti-to	I'd like ti order an iced White Chocolate Mocha with whipped cream and one sugar.	I'd like to order an iced White Chocolate Mocha with whipped cream and one sugar.		2
+spoken-ti-to127	external	ti-to	Need ti make an appointment to Intelligent Auto Imports.	Need to make an appointment to Intelligent Auto Imports.		1
+spoken-ti-to128	external	ti-to	Yes, but first of all, before you give me the phone number, do they have access ti wheelchair?	Yes, but first of all, before you give me the phone number, do they have access to wheelchair?		16
+spoken-ti-to129	external	ti-to	On the first one, I'm going ti do a cheese pizza, with extra cheese and Parmesan cheese, with some cracked red pepper and olive oil drizzled over it.	On the first one, I'm going to do a cheese pizza, with extra cheese and Parmesan cheese, with some cracked red pepper and olive oil drizzled over it.		6
+spoken-keep-be0	external	keep-be	The next showing would be fine.	The next showing would be fine.		
+spoken-keep-be1	external	keep-be	I want all of them to be thin crust.	I want all of them to be thin crust.		
+spoken-keep-be2	external	keep-be	That will be it, thank you.	That will be it, thank you.		
+spoken-keep-be3	external	keep-be	Yeah, the next available one will be good.	Yeah, the next available one will be good.		
+spoken-keep-be4	external	keep-be	And it needs to be for two.	And it needs to be for two.		
+spoken-keep-be5	external	keep-be	I'd I'd like to be picked up from the Red Roof Inn in Johnson City.	I'd I'd like to be picked up from the Red Roof Inn in Johnson City.		
+spoken-keep-be6	external	keep-be	It needs to be later this evening.	It needs to be later this evening.		
+spoken-keep-be7	external	keep-be	And for both pizzas, I would like them to be large and thick crust.	And for both pizzas, I would like them to be large and thick crust.		
+spoken-keep-be8	external	keep-be	Well, if you can figure out if the place is busy at the time, I'd prefer it not to be too busy tonight.	Well, if you can figure out if the place is busy at the time, I'd prefer it not to be too busy tonight.		
+spoken-keep-be9	external	keep-be	I don't want it to be too too expensive.	I don't want it to be too too expensive.		
+spoken-keep-be10	external	keep-be	Underneath the car, there seems to be a lot of oil leaking.	Underneath the car, there seems to be a lot of oil leaking.		
+spoken-keep-be11	external	keep-be	Drinks, alcohol and drinks to be served there?	Drinks, alcohol and drinks to be served there?		
+spoken-keep-be12	external	keep-be	I want my one pizza to be chicken barbecue with onions.	I want my one pizza to be chicken barbecue with onions.		
+spoken-keep-be13	external	keep-be	I'd like there to be parking, some live music would be great, and close to the water.	I'd like there to be parking, some live music would be great, and close to the water.		
+spoken-keep-be14	external	keep-be	I want it to be kind of a nice restaurant.	I want it to be kind of a nice restaurant.		
+spoken-keep-be15	external	keep-be	No, I will be able to find the location myself.	No, I will be able to find the location myself.		
+spoken-keep-be16	external	keep-be	Do you know the estimate duration for the trip I will be taking with the Uber?	Do you know the estimate duration for the trip I will be taking with the Uber?		
+spoken-keep-be17	external	keep-be	It seems to be having an oil leak.	It seems to be having an oil leak.		
+spoken-keep-be18	external	keep-be	So, you know, I was hoping that they would be able to take credit card.	So, you know, I was hoping that they would be able to take credit card.		
+spoken-keep-be19	external	keep-be	How long was that going to be taking?	How long was that going to be taking?		
+spoken-keep-be20	external	keep-be	So, as soon as possible, we'll be out there.	So, as soon as possible, we'll be out there.		
+spoken-keep-be21	external	keep-be	A nice steak place would be good.	A nice steak place would be good.		
+spoken-keep-be22	external	keep-be	I would be at the Houston Museum of Natural Science.	I would be at the Houston Museum of Natural Science.		
+spoken-keep-be23	external	keep-be	I guess that would be all.	I guess that would be all.		
+spoken-keep-be24	external	keep-be	And I guess if I had a food requirement, if you can find something spicy, that would be nice.	And I guess if I had a food requirement, if you can find something spicy, that would be nice.		
+spoken-keep-be25	external	keep-be	I think it was supposed to be an UberX.	I think it was supposed to be an UberX.		
+spoken-keep-be26	external	keep-be	There'll be four of us in the party.	There'll be four of us in the party.		
+spoken-keep-be27	external	keep-be	And it'd be great if it also had either a parking lot or valet parking.	And it'd be great if it also had either a parking lot or valet parking.		
+spoken-keep-be28	external	keep-be	Looking to get two large pizzas and they both need to be veggie lovers with extra cheese.	Looking to get two large pizzas and they both need to be veggie lovers with extra cheese.		
+spoken-keep-be29	external	keep-be	Yeah, because we will be sharing it.	Yeah, because we will be sharing it.		
+spoken-keep-be30	external	keep-be	My car seems to be pulling to the left.	My car seems to be pulling to the left.		
+spoken-keep-be31	external	keep-be	It's going to be four of us.	It's going to be four of us.		
+spoken-keep-be32	external	keep-be	The ladies show and you'll be fine.	The ladies show and you'll be fine.		
+spoken-keep-be33	external	keep-be	This will be San Francisco, California.	This will be San Francisco, California.		
+spoken-keep-be34	external	keep-be	Well, I don't want it to be too expensive and if possible I want the restaurant to have dessert.	Well, I don't want it to be too expensive and if possible I want the restaurant to have dessert.		
+spoken-keep-be35	external	keep-be	No, that'll be it for me for today.	No, that'll be it for me for today.		
+spoken-keep-be36	external	keep-be	I would like to be picked up at Kilroy's Grill in Broad Ripple.	I would like to be picked up at Kilroy's Grill in Broad Ripple.		
+spoken-keep-be37	external	keep-be	And I don't want it to be I don't want it to require formal address.	And I don't want it to be I don't want it to require formal address.		
+spoken-keep-be38	external	keep-be	It should be for Intelligent auto Imports.	It should be for Intelligent auto Imports.		
+spoken-keep-be39	external	keep-be	I'd like to be taken to Loews Hotel, also in Philadelphia.	I'd like to be taken to Loews Hotel, also in Philadelphia.		
+spoken-keep-be40	external	keep-be	And they all need to be glue and free crust, please.	And they all need to be glue and free crust, please.		
+spoken-keep-be41	external	keep-be	I need to be picked up at JFK Airport.	I need to be picked up at JFK Airport.		
+spoken-keep-be42	external	keep-be	And how fast can the driver be here?	And how fast can the driver be here?		
+spoken-keep-be43	external	keep-be	I'll be picking up in store, please.	I'll be picking up in store, please.		
+spoken-keep-be44	external	keep-be	It's just going to be me and my significant other, so two people.	It's just going to be me and my significant other, so two people.		
+spoken-keep-be45	external	keep-be	That's correct, but I need all four pizzas to be a size large and it's important that they all four of them have a gluten-free crust.	That's correct, but I need all four pizzas to be a size large and it's important that they all four of them have a gluten-free crust.		
+spoken-keep-be46	external	keep-be	A tabletop would be fine.	A tabletop would be fine.		
+spoken-keep-be47	external	keep-be	I would like to be picked up along with my party at the airport, the Dallas Airport and take us home.	I would like to be picked up along with my party at the airport, the Dallas Airport and take us home.		
+spoken-keep-be48	external	keep-be	I'm I'm I'm going to be at Puddingstone Reservoir in Pomona.	I'm I'm I'm going to be at Puddingstone Reservoir in Pomona.		
+spoken-keep-be49	external	keep-be	You know what, I would like for it to be not too expensive.	You know what, I would like for it to be not too expensive.		
+spoken-keep-be50	external	keep-be	I'd also like it to be someplace that can handle a large crowd.	I'd also like it to be someplace that can handle a large crowd.		
+spoken-keep-be51	external	keep-be	It's going to be five.	It's going to be five.		
+spoken-keep-be52	external	keep-be	I'd like them to be Supremes without green peppers.	I'd like them to be Supremes without green peppers.		
+spoken-keep-be53	external	keep-be	I I need their phone number, and that should be all.	I I need their phone number, and that should be all.		
+spoken-keep-be54	external	keep-be	It's going to be for pickup.	It's going to be for pickup.		
+spoken-keep-be55	external	keep-be	So I need it to be one that has outdoor sitting.	So I need it to be one that has outdoor sitting.		
+spoken-keep-be56	external	keep-be	Yeah, you know, that'll be fine.	Yeah, you know, that'll be fine.		
+spoken-keep-be57	external	keep-be	Next Friday would be great.	Next Friday would be great.		
+spoken-keep-be58	external	keep-be	This time it's going to be five.	This time it's going to be five.		
+spoken-keep-be59	external	keep-be	And I want the second one to be a chicken bacon ranch pizza with onions.	And I want the second one to be a chicken bacon ranch pizza with onions.		
+spoken-keep-be60	external	keep-be	Yeah, I want it to be fairly cheap.	Yeah, I want it to be fairly cheap.		
+spoken-keep-be61	external	keep-be	I don't want to have any kind of wait and live music would be nice.	I don't want to have any kind of wait and live music would be nice.		
+spoken-keep-be62	external	keep-be	Nope, that would be perfect.	Nope, that would be perfect.		
+spoken-keep-be63	external	keep-be	Yes, I really need to get my vehicle in to be checked out for a problem at intelligent auto imports.	Yes, I really need to get my vehicle in to be checked out for a problem at intelligent auto imports.		
+spoken-keep-be64	external	keep-be	I'm looking for some fast food that would be inside the Arden Fair mall in Sacramento.	I'm looking for some fast food that would be inside the Arden Fair mall in Sacramento.		
+spoken-keep-be65	external	keep-be	Okay, go ahead and order it for to be ready now or as soon as possible.	Okay, go ahead and order it for to be ready now or as soon as possible.		
+spoken-keep-be66	external	keep-be	Hi, I'm going to be landing in the Seattle-Tacoma International Airport soon, and I need a pickup for six people.	Hi, I'm going to be landing in the Seattle-Tacoma International Airport soon, and I need a pickup for six people.		
+spoken-keep-be67	external	keep-be	One should chicken bacon ranch and the other should be meat lovers.	One should chicken bacon ranch and the other should be meat lovers.		
+spoken-keep-be68	external	keep-be	I want one to be a Hawaiian pizza, one supreme, one extra pepperoni, sausage and bacon.	I want one to be a Hawaiian pizza, one supreme, one extra pepperoni, sausage and bacon.		
+spoken-keep-be69	external	keep-be	Will the fare be the same?	Will the fare be the same?		
+spoken-keep-be70	external	keep-be	Additional proteins would be nice if they did things like buffalo burgers but that's not necessary.	Additional proteins would be nice if they did things like buffalo burgers but that's not necessary.		
+spoken-keep-be71	external	keep-be	Yes, but if some if they fix something it could be applied to that, correct?	Yes, but if some if they fix something it could be applied to that, correct?		
+spoken-keep-be72	external	keep-be	Well, will it be ready for pick up?	Well, will it be ready for pick up?		
+spoken-keep-be73	external	keep-be	And the next available showing in the Philadelphia area would be perfect.	And the next available showing in the Philadelphia area would be perfect.		
+spoken-keep-be74	external	keep-be	It's going to be a pickup, please.	It's going to be a pickup, please.		
+spoken-keep-be75	external	keep-be	The first one I'd like to be vegetarian and the other Hawaiian, please.	The first one I'd like to be vegetarian and the other Hawaiian, please.		
+spoken-keep-be76	external	keep-be	I don't really have a preference, but if it could be tomorrow, it will be perfect.	I don't really have a preference, but if it could be tomorrow, it will be perfect.		
+spoken-keep-be77	external	keep-be	Yeah, I need it to be moderately priced, not too busy and no children.	Yeah, I need it to be moderately priced, not too busy and no children.		
+spoken-keep-be78	external	keep-be	And I don't want it to be too busy for lunch.	And I don't want it to be too busy for lunch.		
+spoken-keep-be79	external	keep-be	will be for three people.	will be for three people.		
+spoken-keep-be80	external	keep-be	I'd like it to be small.	I'd like it to be small.		
+spoken-keep-be81	external	keep-be	I'd like to be dropped off at Barton Creek Square in Austin, Texas.	I'd like to be dropped off at Barton Creek Square in Austin, Texas.		
+spoken-keep-be82	external	keep-be	Well, I would like to be able to see it at the next available showtime.	Well, I would like to be able to see it at the next available showtime.		
+spoken-keep-be83	external	keep-be	Okay, and that should be at the the Starbucks on Main Street and Fairfax.	Okay, and that should be at the the Starbucks on Main Street and Fairfax.		
+spoken-keep-be84	external	keep-be	I'd also like for the ride type to be an XL.	I'd also like for the ride type to be an XL.		
+spoken-keep-be85	external	keep-be	Um, I would like to be picked up at Regal Cinemas.	Um, I would like to be picked up at Regal Cinemas.		
+spoken-keep-be86	external	keep-be	And, how soon will it be ready?	And, how soon will it be ready?		
+spoken-keep-be87	external	keep-be	No, that would That would be all.	No, that would That would be all.		
+spoken-keep-be88	external	keep-be	Nope, that would be it for me.	Nope, that would be it for me.		
+spoken-keep-be89	external	keep-be	Like what would be one of the one good dish from each?	Like what would be one of the one good dish from each?		
+spoken-keep-be90	external	keep-be	I needed it to be for four people indoor.	I needed it to be for four people indoor.		
+spoken-keep-be91	external	keep-be	I need to be picked up at the West Shore Plaza.	I need to be picked up at the West Shore Plaza.		
+spoken-keep-be92	external	keep-be	Yep, to be picked up at the Bridgeport location on East Main Street.	Yep, to be picked up at the Bridgeport location on East Main Street.		
+spoken-keep-be93	external	keep-be	And is that Are they ready to pick up now cuz we are ready to be picked up.	And is that Are they ready to pick up now cuz we are ready to be picked up.		
+spoken-keep-be94	external	keep-be	The size for all of them should be small.	The size for all of them should be small.		
+spoken-keep-be95	external	keep-be	It's going to be four to you.	It's going to be four to you.		
+spoken-keep-be96	external	keep-be	That will be all right.	That will be all right.		
+spoken-keep-be97	external	keep-be	There will be five people.	There will be five people.		
+spoken-keep-be98	external	keep-be	Hi, I need a pickup from my hotel to be taken to a restaurant this evening.	Hi, I need a pickup from my hotel to be taken to a restaurant this evening.		
+spoken-keep-be99	external	keep-be	I need it to be ready as soon as possible.	I need it to be ready as soon as possible.		
+spoken-keep-be100	external	keep-be	I guess thin crust would be okay.	I guess thin crust would be okay.		
+spoken-keep-be101	external	keep-be	And I would also prefer that they serve alcohol, that would be my preferences.	And I would also prefer that they serve alcohol, that would be my preferences.		
+spoken-keep-be102	external	keep-be	Yes, and I'll be taking a friend.	Yes, and I'll be taking a friend.		
+spoken-keep-be103	external	keep-be	Actually, I'd like to add mushrooms to all three of those, so it would be a chicken and mushroom pizza.	Actually, I'd like to add mushrooms to all three of those, so it would be a chicken and mushroom pizza.		
+spoken-keep-be104	external	keep-be	Also, the food has to be organic.	Also, the food has to be organic.		
+spoken-keep-be105	external	keep-be	I want one to be buffalo chicken and I want one with tomatoes, bacon and onions.	I want one to be buffalo chicken and I want one with tomatoes, bacon and onions.		
+spoken-keep-be106	external	keep-be	Let me know when they'll be ready for pickup.	Let me know when they'll be ready for pickup.		
+spoken-keep-be107	external	keep-be	What would be the thing that I have to try?	What would be the thing that I have to try?		
+spoken-keep-be108	external	keep-be	You know, it would be ideal if they had Wi-Fi but it's not absolutely essential.	You know, it would be ideal if they had Wi-Fi but it's not absolutely essential.		
+spoken-keep-be109	external	keep-be	It's going to be for four people.	It's going to be for four people.		
+spoken-keep-be110	external	keep-be	Do it now, and let me know when it's ready to be picked up.	Do it now, and let me know when it's ready to be picked up.		
+spoken-keep-be111	external	keep-be	I need them to be able to take credit cards, and maybe something that has a good variety of foods.	I need them to be able to take credit cards, and maybe something that has a good variety of foods.		
+spoken-keep-be112	external	keep-be	And I'd like to be picked.	And I'd like to be picked.		
+spoken-keep-be113	external	keep-be	And ideally, it would be they would be able to call it a party of six or more.	And ideally, it would be they would be able to call it a party of six or more.		
+spoken-keep-be114	external	keep-be	I'd like one pizza to be cheese, one to be pepperoni, and one to be bacon and sausage.	I'd like one pizza to be cheese, one to be pepperoni, and one to be bacon and sausage.		
+spoken-keep-be115	external	keep-be	My last one, I would like that to be a.	My last one, I would like that to be a.		
+spoken-keep-be116	external	keep-be	I I want it to be in Fisherman's Wharf.	I I want it to be in Fisherman's Wharf.		
+spoken-keep-be117	external	keep-be	The price has to be pretty cheap.	The price has to be pretty cheap.		
+spoken-keep-be118	external	keep-be	And the the third one will be cheese only.	And the the third one will be cheese only.		
+spoken-keep-be119	external	keep-be	Asian food would be good.	Asian food would be good.		
+spoken-keep-be120	external	keep-be	And I want to be taken to the NHRA Motorsports Museum.	And I want to be taken to the NHRA Motorsports Museum.		
+spoken-keep-be121	external	keep-be	I like to be quiet, I like it to be quick, and I like it to be small.	I like to be quiet, I like it to be quick, and I like it to be small.		
+spoken-keep-be122	external	keep-be	I want the second one to be chicken with sausage.	I want the second one to be chicken with sausage.		
+spoken-keep-be123	external	keep-be	No, I would also like for the whip cream on the drink to be light.	No, I would also like for the whip cream on the drink to be light.		
+spoken-keep-be124	external	keep-be	I would prefer that they have a rating of four stars and up, and a buffet for lunch would be great.	I would prefer that they have a rating of four stars and up, and a buffet for lunch would be great.		
+spoken-keep-be125	external	keep-be	Should be right beside the zoo.	Should be right beside the zoo.		
+spoken-keep-be126	external	keep-be	Yeah, that'd be extra set of toppings on top of my regular toppings.	Yeah, that'd be extra set of toppings on top of my regular toppings.		
+spoken-keep-be127	external	keep-be	I'll be at like a traffic light, and it'll stall.	I'll be at like a traffic light, and it'll stall.		
+spoken-keep-be128	external	keep-be	I want it to have high-quality food, a quiet ambiance, and I want the restaurant to be very clean.	I want it to have high-quality food, a quiet ambiance, and I want the restaurant to be very clean.		
+spoken-keep-be129	external	keep-be	I don't want it to be busy for lunch, like I don't want a long wait.	I don't want it to be busy for lunch, like I don't want a long wait.		
+spoken-keep-be130	external	keep-be	is when I need to be picked up.	is when I need to be picked up.		
+spoken-keep-be131	external	keep-be	Nope, that will be That will be it for today.	Nope, that will be That will be it for today.		
+spoken-keep-be132	external	keep-be	And if they serve soju drinks, that would be awesome, too.	And if they serve soju drinks, that would be awesome, too.		
+spoken-keep-be133	external	keep-be	Actually, I just want to be your pick up in Atlantic Terminal Mall.	Actually, I just want to be your pick up in Atlantic Terminal Mall.		
+spoken-keep-be134	external	keep-be	And both of them I want to be gluten-free.	And both of them I want to be gluten-free.		
+spoken-keep-be135	external	keep-be	I need the appointment to be next Friday.	I need the appointment to be next Friday.		
+spoken-keep-be136	external	keep-be	I'm in Chicago right now with a group, and we need to be picked up.	I'm in Chicago right now with a group, and we need to be picked up.		
+spoken-keep-be137	external	keep-be	Now that will be awesome.	Now that will be awesome.		
+spoken-keep-be138	external	keep-be	Not running as good as it should be and I think it's due for one.	Not running as good as it should be and I think it's due for one.		
+spoken-keep-be139	external	keep-be	When will they be ready?	When will they be ready?		
+spoken-keep-by0	external	keep-by	Hey, I wanted to order a drink from the Starbucks by my house.	Hey, I wanted to order a drink from the Starbucks by my house.		
+spoken-keep-by1	external	keep-by	I like indoor seating, by the way.	I like indoor seating, by the way.		
+spoken-keep-by2	external	keep-by	I was hoping to come by today.	I was hoping to come by today.		
+spoken-keep-by3	external	keep-by	I was looking to have my car looked at by the wonderful people at auto imports, I believe the name of their location is intelligent.	I was looking to have my car looked at by the wonderful people at auto imports, I believe the name of their location is intelligent.		
+spoken-keep-by4	external	keep-by	Do they have any openings tomorrow by any chance?	Do they have any openings tomorrow by any chance?		
+spoken-keep-by5	external	keep-by	And then do BJ's have gluten-free bread by any chance?	And then do BJ's have gluten-free bread by any chance?		
+spoken-keep-by6	external	keep-by	I want easy to get to by mass transit buses.	I want easy to get to by mass transit buses.		
+spoken-keep-by7	external	keep-by	I would like to come by at least by tomorrow.	I would like to come by at least by tomorrow.		
+spoken-keep-by8	external	keep-by	Who directed it, by the way?	Who directed it, by the way?		
+spoken-keep-by9	external	keep-by	one that's close by my location.	one that's close by my location.		
+spoken-join0	external	join	Hey, I need toorder a lift.	Hey, I need to order a lift.	14	
+spoken-join1	external	join	Hello, I would like to book two tickets movie tickets to go seeBumblebee.	Hello, I would like to book two tickets movie tickets to go see Bumblebee.	63	
+spoken-join2	external	join	Could you help mewith a place to find lunch in Sacramento?	Could you help me with a place to find lunch in Sacramento?	17	
+spoken-join3	external	join	Ittakes care of all my needs, I believe.	It takes care of all my needs, I believe.	2	
+spoken-join4	external	join	I'dlike to order one large California-style pizza on gluten-free crust and then I need to choose two different types of pizzas.	I'd like to order one large California-style pizza on gluten-free crust and then I need to choose two different types of pizzas.	3	
+spoken-join5	external	join	Do Does the first one have lunchspecials?	Do Does the first one have lunch specials?	32	
+spoken-join6	external	join	Thankyou very much for your help this afternoon.	Thank you very much for your help this afternoon.	5	
+spoken-join7	external	join	It was a goodevening.	It was a good evening.	13	
+spoken-join8	external	join	I'd like to seeOn the Basis of Sex.	I'd like to see On the Basis of Sex.	15	
+spoken-join9	external	join	You'vebeen a big help.	You've been a big help.	6	
+spoken-join10	external	join	The second one would be aSicilian pizza.	The second one would be a Sicilian pizza.	25	
+spoken-join11	external	join	I'm thinking of a good steakhousethat's in the downtown area.	I'm thinking of a good steakhouse that's in the downtown area.	33	
+spoken-join12	external	join	Could you give me the phone number for therestaurant?	Could you give me the phone number for the restaurant?	42	
+spoken-join13	external	join	Doesthat include the distance?	Does that include the distance?	4	
+spoken-join14	external	join	Which one hasbetter ratings?	Which one has better ratings?	13	
+spoken-join15	external	join	Not at all, it's Jonesj o n e s.	Not at all, it's Jones j o n e s.	22	
+spoken-join16	external	join	Do theyhave like a thick crust?	Do they have like a thick crust?	7	
+spoken-join17	external	join	I'm goingto be landing in the Phoenix Sky Harbor airport.	I'm going to be landing in the Phoenix Sky Harbor airport.	9	
+spoken-join18	external	join	If you said two, I missedthe second one.	If you said two, I missed the second one.	25	
+spoken-join19	external	join	Dallas, Texas and I need help finding a movieto watch, please.	Dallas, Texas and I need help finding a movie to watch, please.	45	
+spoken-join20	external	join	Give me the secondoption.	Give me the second option.	18	
+spoken-join21	external	join	It was so loud in there, you had to literally yell your order a couple times, and you know, it was hard toget out of line.	It was so loud in there, you had to literally yell your order a couple times, and you know, it was hard to get out of line.	106	
+spoken-join22	external	join	Does Olive Gardenserve alcohol?	Does Olive Garden serve alcohol?	17	
+spoken-join23	external	join	I'd like it tohave seamless delivery.	I'd like it to have seamless delivery.	14	
+spoken-join24	external	join	I mean how muchin all?	I mean how much in all?	15	
+spoken-join25	external	join	Can I have one that's a meat lover'spizza?	Can I have one that's a meat lover's pizza?	36	
+spoken-join26	external	join	I want it tohave a kids' menu.	I want it to have a kids' menu.	12	
+spoken-join27	external	join	And I'm thinking fourpeople.	And I'm thinking four people.	21	
+spoken-join28	external	join	All ofthem thin crust please.	All of them thin crust please.	6	
+spoken-join29	external	join	Actually, makethat for Glass.	Actually, make that for Glass.	14	
+spoken-join30	external	join	Okay, but I need six so I guess I'll takeit this yard.	Okay, but I need six so I guess I'll take it this yard.	41	
+spoken-join31	external	join	No, Ithink that's everything.	No, I think that's everything.	5	
+spoken-join32	external	join	What are their specials at BellaWhat are the specials at Bella Luna?	What are their specials at Bella What are the specials at Bella Luna?	32	
+spoken-join33	external	join	I needto take my car to mechanic.	I need to take my car to mechanic.	6	
+spoken-join34	external	join	I also love Vietnamese food andKorean food.	I also love Vietnamese food and Korean food.	31	
+spoken-join35	external	join	Sorry, can yourepeat that one more time?	Sorry, can you repeat that one more time?	14	
+spoken-join36	external	join	No, justmake sure it's sent to my mobile phone.	No, just make sure it's sent to my mobile phone.	8	
+spoken-join37	external	join	Yes, BrasserieProvence in Louisville, Kentucky.	Yes, Brasserie Provence in Louisville, Kentucky.	14	
+spoken-join38	external	join	HobokenGrill, I will go for that.	Hoboken Grill, I will go for that.	7	
+spoken-join39	external	join	Thethird one, can I get a veggie lovers pizza?	The third one, can I get a veggie lovers pizza?	3	
+spoken-join40	external	join	I'm right herein New York.	I'm right here in New York.	14	
+spoken-join41	external	join	Doesthe first restaurant have patio seating as well, or no?	Does the first restaurant have patio seating as well, or no?	4	
+spoken-join42	external	join	I'mlooking for it's a sitting type of cuisine.	I'm looking for it's a sitting type of cuisine.	3	
+spoken-join43	external	join	No, Ithink that sounds good.	No, I think that sounds good.	5	
+spoken-join44	external	join	If that's the closest one And what's the estimated durationof the trip?	If that's the closest one And what's the estimated duration of the trip?	59	
+spoken-join45	external	join	Thank Yeah, can you tellme who directed this movie?	Thank Yeah, can you tell me who directed this movie?	24	
+spoken-join46	external	join	ThisThe name is for Sam Harris.	This The name is for Sam Harris.	4	
+spoken-join47	external	join	Sure, it's Lynn l y nn.	Sure, it's Lynn l y n n.	21	
+spoken-join48	external	join	And I prefer a lunch specials and abar.	And I prefer a lunch specials and a bar.	35	
+spoken-join49	external	join	I need tobook a room.	I need to book a room.	9	
+spoken-join50	external	join	Alright, you can place theorder, please.	Alright, you can place the order, please.	26	
+spoken-join51	external	join	I see, and what have youlearned today?	I see, and what have you learned today?	24	
+spoken-join52	external	join	One pizza that'sjust pepperoni.	One pizza that's just pepperoni.	16	
+spoken-join53	external	join	To order twomedium pizzas, meat lovers specials.	To order two medium pizzas, meat lovers specials.	12	
+spoken-join54	external	join	Could Ihave four small pizzas?	Could I have four small pizzas?	7	
+spoken-join55	external	join	All right, let's go ahead and bookit I guess.	All right, let's go ahead and book it I guess.	34	
+spoken-join56	external	join	What isthe fee for inspection?	What is the fee for inspection?	7	
+spoken-join57	external	join	I would liketo get an appointment for my car at Intelligence auto Imports.	I would like to get an appointment for my car at Intelligence auto Imports.	12	
+spoken-join58	external	join	Yes, you cango ahead and place the order.	Yes, you can go ahead and place the order.	12	
+spoken-join59	external	join	I wantbook a I want book a restaurant.	I want book a I want book a restaurant.	6	
+spoken-join60	external	join	Hi, I need torequest a Lyft.	Hi, I need to request a Lyft.	13	
+spoken-join61	external	join	Confirm the orderand I will pick it up later.	Confirm the order and I will pick it up later.	17	
+spoken-join62	external	join	Okay, please confirmthe driver's ETA.	Okay, please confirm the driver's ETA.	20	
+spoken-join63	external	join	I want to book two ticketsfor the movie Glass in Vancouver, Washington.	I want to book two tickets for the movie Glass in Vancouver, Washington.	26	
+spoken-join64	external	join	the one next toPanda Express.	the one next to Panda Express.	15	
+spoken-join65	external	join	I need extra cheese on all threepizzas.	I need extra cheese on all three pizzas.	32	
+spoken-join66	external	join	Iwould like the Claude.	I would like the Claude.	1	
+spoken-join67	external	join	Which Which of these choices has morevegetarian, vegan choices?	Which Which of these choices has more vegetarian, vegan choices?	37	
+spoken-join68	external	join	Instead, Ithink I've had it with almond milk.	Instead, I think I've had it with almond milk.	10	
+spoken-join69	external	join	The third pizza can I get ameat lovers pizza?	The third pizza can I get a meat lovers pizza?	27	
+spoken-join70	external	join	Yes, that'scorrect, with extra cheese.	Yes, that's correct, with extra cheese.	11	
+spoken-join71	external	join	Give meGive me reservation for the waterfront restaurant.	Give me Give me reservation for the waterfront restaurant.	7	
+spoken-join72	external	join	an Italian restaurantthat has kids's menus, a happy hour, and is pretty fancy.	an Italian restaurant that has kids's menus, a happy hour, and is pretty fancy.	21	
+spoken-join73	external	join	That's all I needfor today.	That's all I need for today.	17	
+spoken-join74	external	join	Okay, letme book this appointment.	Okay, let me book this appointment.	9	
+spoken-join75	external	join	You know what, I don't think I toldyou what kind of car I have.	You know what, I don't think I told you what kind of car I have.	35	
+spoken-join76	external	join	Well, they better be the bestpizzas in the world.	Well, they better be the best pizzas in the world.	29	
+spoken-join77	external	join	I don't really have a preference, so youknow, just whenever is whenever is convenient earliest.	I don't really have a preference, so you know, just whenever is whenever is convenient earliest.	40	
+spoken-join78	external	join	I would like one with just pepperoni, one with pepperoni sausage, one all vegetarian pizza, and one spicybarbecue pizza.	I would like one with just pepperoni, one with pepperoni sausage, one all vegetarian pizza, and one spicy barbecue pizza.	105	
+spoken-join79	external	join	I want to bookrestaurant for Sacramento, California.	I want to book restaurant for Sacramento, California.	14	
+spoken-join80	external	join	Yeah, Ineed to order an Uber, please.	Yeah, I need to order an Uber, please.	7	
+spoken-join81	external	join	I'd reallylike it for next Friday, please.	I'd really like it for next Friday, please.	10	
+spoken-join82	external	join	Do I have to have a I don't have to havea reservation, I would imagine.	Do I have to have a I don't have to have a reservation, I would imagine.	40	
+spoken-join83	external	join	Could you Could youhelp me find a a restaurant?	Could you Could you help me find a a restaurant?	19	
+spoken-join84	external	join	Whatare the times for both?	What are the times for both?	4	
+spoken-join85	external	join	I'd like to go see a movie inKent, Washington.	I'd like to go see a movie in Kent, Washington.	29	
+spoken-join86	external	join	I needto take my car to the mechanic's.	I need to take my car to the mechanic's.	6	
+spoken-join87	external	join	Ibelieve it's just called Santiago Botanic Garden.	I believe it's just called Santiago Botanic Garden.	1	
+spoken-join88	external	join	Sea food, I like sushi, and I likeItalian food.	Sea food, I like sushi, and I like Italian food.	34	
+spoken-join89	external	join	So, I just need to be the pet engine in thewilly.	So, I just need to be the pet engine in the willy.	43	
+spoken-join90	external	join	Hi, I want to order two small gluten-freepizzas from Bella Luna.	Hi, I want to order two small gluten-free pizzas from Bella Luna.	41	
+spoken-join91	external	join	three medium Hawaiianpizzas with extra cheese.	three medium Hawaiian pizzas with extra cheese.	21	
+spoken-join92	external	join	When I turn onmy car, there's a noise happening.	When I turn on my car, there's a noise happening.	14	
+spoken-join93	external	join	You don'tneed You don't need to change anything, you placed order now, please?	You don't need You don't need to change anything, you placed order now, please?	9	
+spoken-join94	external	join	Whereis San Jalisco located?	Where is San Jalisco located?	5	
+spoken-join95	external	join	It's Donald d on a l d, like the duck.	It's Donald d o n a l d, like the duck.	15	
+spoken-join96	external	join	And this is forfive people.	And this is for five people.	15	
+spoken-join97	external	join	I need four small pizzas, and I need them to begluten-free crust, please.	I need four small pizzas, and I need them to be gluten-free crust, please.	47	
+spoken-join98	external	join	I would like it tobe maybe slightly upscale.	I would like it to be maybe slightly upscale.	18	
+spoken-join99	external	join	Could you tell me how long thismovie will be?	Could you tell me how long this movie will be?	31	
+spoken-join100	external	join	I want four largepizzas with jalapeno feta cheese and black olives.	I want four large pizzas with jalapeno feta cheese and black olives.	17	
+spoken-join101	external	join	So, I was hoping you could help mebuy one.	So, I was hoping you could help me buy one.	34	
+spoken-join102	external	join	Can you book me a ticket toAquaman in Sandy Springs, Atlanta?	Can you book me a ticket to Aquaman in Sandy Springs, Atlanta?	27	
+spoken-join103	external	join	Yeah, they bothneed to be on a gluten-free crust.	Yeah, they both need to be on a gluten-free crust.	15	
+spoken-join104	external	join	I'm looking for a nice sit-down restaurant to eatat.	I'm looking for a nice sit-down restaurant to eat at.	49	
+spoken-join105	external	join	Yes, that'll workfor me.	Yes, that'll work for me.	17	
+spoken-join106	external	join	It needs to be in the downtownarea and have good reviews I guess.	It needs to be in the downtown area and have good reviews I guess.	30	
+spoken-join107	external	join	Could I havea nonfat milk?	Could I have a nonfat milk?	12	
+spoken-join108	external	join	I also want to ask for the restaurants that are listed, howexpensive are they?	I also want to ask for the restaurants that are listed, how expensive are they?	59	
+spoken-join109	external	join	Andat Monsieur Benjamin, how is the food quality?	And at Monsieur Benjamin, how is the food quality?	3	
+spoken-join110	external	join	What are theprice ranges for the first restaurant?	What are the price ranges for the first restaurant?	12	
+spoken-join111	external	join	I'm really allergic to dogs, so I'd like to know if theylet pets in there?	I'm really allergic to dogs, so I'd like to know if they let pets in there?	56	
+spoken-join112	external	join	No, could youplease give me the address?	No, could you please give me the address?	13	
+spoken-join113	external	join	I need apayment fee for a mechanic.	I need a payment fee for a mechanic.	8	
+spoken-join114	external	join	I'dlike an iced caffe mocha.	I'd like an iced caffe mocha.	3	
+spoken-join115	external	join	Okay, and does the Japanese one have a kidsmenu or do they just offer the normal stuff to everybody?	Okay, and does the Japanese one have a kids menu or do they just offer the normal stuff to everybody?	43	
+spoken-join116	external	join	Well, youprobably deserved it, then.	Well, you probably deserved it, then.	9	
+spoken-join117	external	join	I want it to be reasonablypriced.	I want it to be reasonably priced.	26	
+spoken-join118	external	join	Can I make anappointment for intelligent auto import, please?	Can I make an appointment for intelligent auto import, please?	13	
+spoken-join119	external	join	Maybe something havea good bar lots of beers on top.	Maybe something have a good bar lots of beers on top.	20	
+spoken-join120	external	join	It needs to be kind of cheap cuzI'm on a budget.	It needs to be kind of cheap cuz I'm on a budget.	32	
+spoken-join121	external	join	The place shouldoffer should offer indoor seating and late opening closing time, and a limited amount of people.	The place should offer should offer indoor seating and late opening closing time, and a limited amount of people.	16	
+spoken-join122	external	join	What is the top ratedone?	What is the top rated one?	21	
+spoken-join123	external	join	Isthere a second choice, how is it?	Is there a second choice, how is it?	2	
+spoken-join124	external	join	What amI supposed to do here?	What am I supposed to do here?	7	
+spoken-join125	external	join	And the third, if I could have that as a Hawaiianpizza, please?	And the third, if I could have that as a Hawaiian pizza, please?	49	
+spoken-join126	external	join	a r n ol d a.	a r n o l d a.	7	
+spoken-join127	external	join	I needthree of them, please.	I need three of them, please.	6	
+spoken-join128	external	join	Do either one ofthem have a kid's menu?	Do either one of them have a kid's menu?	16	
+spoken-join129	external	join	What are the prices like on the last placethat you brought up?	What are the prices like on the last place that you brought up?	42	
+spoken-join130	external	join	Can you confirmfor me the ride type?	Can you confirm for me the ride type?	15	
+spoken-join131	external	join	Does Bistro SFhave takeout available?	Does Bistro SF have takeout available?	14	
+spoken-join132	external	join	Well, it soundspretty good.	Well, it sounds pretty good.	15	
+spoken-join133	external	join	I'm looking tomake a reservation for dinner.	I'm looking to make a reservation for dinner.	14	
+spoken-join134	external	join	I'd liketo book some movie tickets.	I'd like to book some movie tickets.	8	
+spoken-join135	external	join	I want to take a friend tonight at the Lincoln Square Center inNew York City.	I want to take a friend tonight at the Lincoln Square Center in New York City.	63	
+spoken-join136	external	join	Just can you repeat it one more time forme?	Just can you repeat it one more time for me?	40	
+spoken-join137	external	join	I am trying to placean order.	I am trying to place an order.	20	
+spoken-join138	external	join	No, Iwant an XL Lyft.	No, I want an XL Lyft.	5	
+spoken-join139	external	join	Youdon't need to change anything.	You don't need to change anything.	3	
+spoken-join140	external	join	Can we go ahead and placea reservation for two people at Finos?	Can we go ahead and place a reservation for two people at Finos?	25	
+spoken-join141	external	join	I'd alsolike some crab rangoon.	I'd also like some crab rangoon.	8	
+spoken-join142	external	join	Do they bothhave outdoor seating?	Do they both have outdoor seating?	12	
+spoken-join143	external	join	Itson Maplewood Ave in Maplewood, New Jersey.	Its on Maplewood Ave in Maplewood, New Jersey.	3	
+spoken-join144	external	join	What time doesit open?	What time does it open?	14	
+spoken-join145	external	join	Yeah, my name, MarkM.	Yeah, my name, Mark M.	19	
+spoken-join146	external	join	With extra cheese, everything with extracheese, please.	With extra cheese, everything with extra cheese, please.	40	
+spoken-join147	external	join	I'd liketo get a shared pool lift.	I'd like to get a shared pool lift.	8	
+spoken-join148	external	join	How about I gosee another movie?	How about I go see another movie?	14	
+spoken-join149	external	join	Hi, my name is Monica and I need toschedule a lift for five people and we are ready now.	Hi, my name is Monica and I need to schedule a lift for five people and we are ready now.	35	
+spoken-join150	external	join	Can you just book thereservation for the first restaurant?	Can you just book the reservation for the first restaurant?	21	
+spoken-join151	external	join	Okay, thefirst one sounds good.	Okay, the first one sounds good.	9	
+spoken-join152	external	join	Canyou change it to regular instead of UberX?	Can you change it to regular instead of UberX?	3	
+spoken-join153	external	join	All right, Igot it.	All right, I got it.	12	
+spoken-join154	external	join	But you can tell me who stars in thefilm?	But you can tell me who stars in the film?	36	
+spoken-join155	external	join	Okay, and whatabout the other place?	Okay, and what about the other place?	14	
+spoken-join156	external	join	Yes, this is Intelligent AutoImports.	Yes, this is Intelligent Auto Imports.	29	
+spoken-join157	external	join	Order a car tocome pick me up.	Order a car to come pick me up.	14	
+spoken-join158	external	join	That thatsounds like a winner.	That that sounds like a winner.	9	
+spoken-join159	external	join	I wasthinking The Prodigy.	I was thinking The Prodigy.	5	
+spoken-join160	external	join	Ineed to have a Uber pick me and my friends up from the bar and take me back to my house.	I need to have a Uber pick me and my friends up from the bar and take me back to my house.	1	
+spoken-join161	external	join	How about a caramel bruleelatte?	How about a caramel brulee latte?	26	
+spoken-join162	external	join	I want all quarter meatlover pizzas.	I want all quarter meat lover pizzas.	23	
+spoken-join163	external	join	How muchwas it, again?	How much was it, again?	8	
+spoken-join164	external	join	How do I get from AMCTheater to Broms?	How do I get from AMC Theater to Broms?	21	
+spoken-join165	external	join	Which one hasthe biggest ratings?	Which one has the biggest ratings?	13	
+spoken-join166	external	join	Can I just get you to confirm the details one more time for me pleaseso I can write them down?	Can I just get you to confirm the details one more time for me please so I can write them down?	69	
+spoken-join167	external	join	Does second optionhave a coat rack like a place where you can hang your coat?	Does second option have a coat rack like a place where you can hang your coat?	18	
+spoken-join168	external	join	Can I have vanilla beanwith whipped cream?	Can I have vanilla bean with whipped cream?	23	
+spoken-join169	external	join	Andthe third pizza, I want a chicken barbecue, please.	And the third pizza, I want a chicken barbecue, please.	3	
+spoken-join170	external	join	I want toget two pizzas.	I want to get two pizzas.	9	
+spoken-join171	external	join	Okay, get me a Get me an XL ifthat'll get me six riders.	Okay, get me a Get me an XL if that'll get me six riders.	30	
+spoken-join172	external	join	There are two are with me, Ineed a Uber X Uber X taxi.	There are two are with me, I need a Uber X Uber X taxi.	28	
+spoken-join173	external	join	Arethere any appointments available tomorrow?	Are there any appointments available tomorrow?	3	
+spoken-join174	external	join	Yeah, I have itright now.	Yeah, I have it right now.	15	
+spoken-join175	external	join	And can we make allthree thick crust?	And can we make all three thick crust?	19	
+spoken-join176	external	join	I'm thinkingof going with an iced cappuccino with cold foam.	I'm thinking of going with an iced cappuccino with cold foam.	12	
+spoken-join177	external	join	Hi, I'd like to order a Starbucks Cafe Mocha ventiwith whole milk and whipped cream.	Hi, I'd like to order a Starbucks Cafe Mocha venti with whole milk and whipped cream.	50	
+spoken-join178	external	join	I'll gowith that restaurant as my option and my choice, please.	I'll go with that restaurant as my option and my choice, please.	7	
+spoken-join179	external	join	I'm looking to book a some movie tickets in the NewYork City area if you could help me out.	I'm looking to book a some movie tickets in the New York City area if you could help me out.	51	
+spoken-join180	external	join	Okay, and couldyou tell me the customer rating for both restaurants?	Okay, and could you tell me the customer rating for both restaurants?	15	
+spoken-join181	external	join	Do they haveoutdoor seating, beer, and kid-friendly?	Do they have outdoor seating, beer, and kid-friendly?	12	
+spoken-join182	external	join	I'd like Italian food, and I would like a place that serves Italian withoutdoor seating, gluten-free and vegan options, and family-style portions.	I'd like Italian food, and I would like a place that serves Italian with outdoor seating, gluten-free and vegan options, and family-style portions.	72	
+spoken-join183	external	join	Well reviewedand has maybe outdoor seating.	Well reviewed and has maybe outdoor seating.	13	
+spoken-join184	external	join	Hi, I would like to Iwould like to order a coffee from the Starbucks on Ward Parkway in Kansas City.	Hi, I would like to I would like to order a coffee from the Starbucks on Ward Parkway in Kansas City.	21	
+spoken-join185	external	join	Hi, I'd like to order an Uber from Logan International Airport to the BostonHarbor Hotel in Boston, Massachusetts.	Hi, I'd like to order an Uber from Logan International Airport to the Boston Harbor Hotel in Boston, Massachusetts.	76	
+spoken-join186	external	join	If it hasa you know, somewhere easy to park, that'd be helpful, too.	If it has a you know, somewhere easy to park, that'd be helpful, too.	9	
+spoken-join187	external	join	Can you help me make areservation?	Can you help me make a reservation?	22	
+spoken-join188	external	join	We're closeto the downtown area.	We're close to the downtown area.	11	
+spoken-join189	external	join	Iwant a Italian restaurant.	I want a Italian restaurant.	1	
+spoken-join190	external	join	Whattype of ride is it?	What type of ride is it?	4	
+spoken-join191	external	join	I'd like to make an appointment at an auto repair shop called Intelligent AutoImports.	I'd like to make an appointment at an auto repair shop called Intelligent Auto Imports.	78	
+spoken-join192	external	join	Thank you so much for thatinformation.	Thank you so much for that information.	26	
+spoken-join193	external	join	AMC Mercado sounds likea good option.	AMC Mercado sounds like a good option.	23	
+spoken-join194	external	join	Can you confirm the right type, the cost, the ETA and the estimated durationof my trip?	Can you confirm the right type, the cost, the ETA and the estimated duration of my trip?	76	
+spoken-join195	external	join	I'm thinking aboutgetting some Indian food.	I'm thinking about getting some Indian food.	18	
+spoken-join196	external	join	Actually, I'dlike to get a veggie lovers.	Actually, I'd like to get a veggie lovers.	13	
+spoken-join197	external	join	Alright, but whereis your favorite meal?	Alright, but where is your favorite meal?	18	
+spoken-join198	external	join	I'd liketo order a Venti iced caramel latte from Starbucks.	I'd like to order a Venti iced caramel latte from Starbucks.	8	
+spoken-join199	external	join	Okay, on the last one I want pepperoni, sausage and brownbeef.	Okay, on the last one I want pepperoni, sausage and brown beef.	57	
+spoken-join200	external	join	Can you help mefind a place to eat, please?	Can you help me find a place to eat, please?	15	
+spoken-join201	external	join	Now with the secondplace, do they serve fresh lobster?	Now with the second place, do they serve fresh lobster?	19	
+spoken-join202	external	join	Giveme two tickets to the last showing, please.	Give me two tickets to the last showing, please.	4	
+spoken-join203	external	join	II got two people.	I I got two people.	1	
+spoken-join204	external	join	Can I get a deep dish withextra cheese and one.	Can I get a deep dish with extra cheese and one.	26	
+spoken-join205	external	join	I needed three threeoptions.	I needed three three options.	20	
+spoken-join206	external	join	Iwant book movie ticket.	I want book movie ticket.	1	
+spoken-join207	external	join	Can you confirm all the detailsnow, please?	Can you confirm all the details now, please?	31	
+spoken-join208	external	join	I also wanted extra sauce on the pepperoni and baconone.	I also wanted extra sauce on the pepperoni and bacon one.	52	
+spoken-join209	external	join	Both of thosethick crust.	Both of those thick crust.	13	
+spoken-join210	external	join	I'm going to need a three pizza I'm going to need threepizzas all large.	I'm going to need a three pizza I'm going to need three pizzas all large.	55	
+spoken-join211	external	join	I would like tosee the new LEGO movie, and I would like two tickets.	I would like to see the new LEGO movie, and I would like two tickets.	15	
+spoken-join212	external	join	Okay, well let's doBJ's, then.	Okay, well let's do BJ's, then.	19	
+spoken-join213	external	join	Can you book me some tickets for A Dog's Way Home atthe Regal cinema in Lexington, Kentucky?	Can you book me some tickets for A Dog's Way Home at the Regal cinema in Lexington, Kentucky?	52	
+spoken-join214	external	join	Ithink I'll go with Lyft.	I think I'll go with Lyft.	1	
+spoken-join215	external	join	Pickme up at the Cottonwood Mall.	Pick me up at the Cottonwood Mall.	4	
+spoken-join216	external	join	Makean appointment at intelligent auto import.	Make an appointment at intelligent auto import.	4	
+spoken-join217	external	join	Could you give metheir phone number?	Could you give me their phone number?	17	
+spoken-join218	external	join	Add almond milk toit.	Add almond milk to it.	18	
+spoken-join219	external	join	Gough, g o ug h.	Gough, g o u g h.	12	
+spoken-join220	external	join	wa m s r e y.	w a m s r e y.	1	
+spoken-join221	external	join	Can I gettickets for the Gandhui Murder?	Can I get tickets for the Gandhui Murder?	9	
+spoken-join222	external	join	Hey there, I'd like to order a pizza from BellaLuna.	Hey there, I'd like to order a pizza from Bella Luna.	47	
+spoken-join223	external	join	Let's go with garliccloves.	Let's go with garlic cloves.	20	
+spoken-join224	external	join	Yeah, I need to order a couple of pizzas from aplaced called Bella Luna.	Yeah, I need to order a couple of pizzas from a placed called Bella Luna.	47	
+spoken-join225	external	join	I want to gotto the a certain mall.	I want to got to the a certain mall.	13	
+spoken-join226	external	join	Howlate are the restaurants open?	How late are the restaurants open?	3	
+spoken-join227	external	join	Does the first one have outdoorseating?	Does the first one have outdoor seating?	31	
+spoken-join228	external	join	No, let'sdo Uber X.	No, let's do Uber X.	9	
+spoken-join229	external	join	I'm glad that youcould today.	I'm glad that you could today.	17	
+spoken-join230	external	join	All right, I'll lookfor them.	All right, I'll look for them.	20	
+spoken-join231	external	join	I want themall to have thick crust.	I want them all to have thick crust.	11	
+spoken-join232	external	join	torate how expensive a restaurant is.	to rate how expensive a restaurant is.	2	
+spoken-join233	external	join	Looking for a restaurantthat's open late.	Looking for a restaurant that's open late.	24	
+spoken-join234	external	join	Hey, I was wondering if you couldhelp me schedule a pick up from the airport here.	Hey, I was wondering if you could help me schedule a pick up from the airport here.	33	
+spoken-join235	external	join	I want a plain bageland then a large coffee.	I want a plain bagel and then a large coffee.	20	
+spoken-join236	external	join	I'd like to order some coffee for pickup.	I'd like to order some coffee for pick up.	38	
+spoken-join237	external	join	And there's always a noise when Iturn.	And there's always a noise when I turn.	33	
+spoken-join238	external	join	I wouldlike it to be a casual atmosphere with outdoor dining.	I would like it to be a casual atmosphere with outdoor dining.	7	
+spoken-join239	external	join	And on the second pizza, I would like it to be a meat loverspizza.	And on the second pizza, I would like it to be a meat lovers pizza.	60	
+spoken-join240	external	join	I don't knowwhat's happening, but it's just leaking oil all over my driveway.	I don't know what's happening, but it's just leaking oil all over my driveway.	12	
+spoken-join241	external	join	Hi, I'm looking to book some movietickets in Philadelphia.	Hi, I'm looking to book some movie tickets in Philadelphia.	34	
+spoken-join242	external	join	No, it should begood.	No, it should be good.	16	
+spoken-join243	external	join	I do not have a preference just whenever isgood.	I do not have a preference just whenever is good.	43	
+spoken-join244	external	join	Yeah, wegot six people here.	Yeah, we got six people here.	8	
+spoken-join245	external	join	Could you help me with making an appointment with my auto repairshop?	Could you help me with making an appointment with my auto repair shop?	64	
+spoken-join246	external	join	One, I'm looking fora more formal environment.	One, I'm looking for a more formal environment.	20	
+spoken-join247	external	join	Whendoes Sotto Mare experience a lot of customer traffic?	When does Sotto Mare experience a lot of customer traffic?	4	
+spoken-join248	external	join	Okay, I'dlike to make an appointment at Intelligence Auto Imports.	Okay, I'd like to make an appointment at Intelligence Auto Imports.	9	
+spoken-join249	external	join	The closestlocation to be in Manhattan.	The closest location to be in Manhattan.	11	
+spoken-join250	external	join	Does The Waterboytake serve dessert?	Does The Waterboy take serve dessert?	17	
+spoken-join251	external	join	I'mlooking for a lasagna.	I'm looking for a lasagna.	3	
+spoken-join252	external	join	I needto make a change.	I need to make a change.	6	
+spoken-join253	external	join	Okay, could youtell me how long?	Okay, could you tell me how long?	15	
+spoken-join254	external	join	Hi, I like to schedule an appointment for Intelligent AutoImports, please.	Hi, I like to schedule an appointment for Intelligent Auto Imports, please.	58	
+spoken-join255	external	join	I think the onethat is near Harvest Moon.	I think the one that is near Harvest Moon.	15	
+spoken-join256	external	join	For the first one, I wouldlike feta cheese and pepperoni.	For the first one, I would like feta cheese and pepperoni.	26	
+spoken-join257	external	join	Can Iactually get the phone number for that restaurant?	Can I actually get the phone number for that restaurant?	5	
+spoken-join258	external	join	I want to write aUber.	I want to write a Uber.	17	
+spoken-join259	external	join	Whatshowtimes do they have available tomorrow?	What showtimes do they have available tomorrow?	4	
+spoken-join260	external	join	Can youtell me again once?	Can you tell me again once?	7	
+spoken-join261	external	join	I'm glad that you were able to help me with this today and get thisreservation going.	I'm glad that you were able to help me with this today and get this reservation going.	67	
+spoken-join262	external	join	Make itMake them both a thin crust.	Make it Make them both a thin crust.	7	
+spoken-join263	external	join	Okay, what bout CaptainMarvel?	Okay, what bout Captain Marvel?	23	
+spoken-join264	external	join	one cafe Americano, onecappuccino.	one cafe Americano, one cappuccino.	23	
+spoken-join265	external	join	Now, what kind of seafoodare we talking about?	Now, what kind of seafood are we talking about?	25	
+spoken-join266	external	join	And is it justindoor seating?	And is it just indoor seating?	14	
+spoken-join267	external	join	Take away and I could take somehome, and I want to be able to access the restaurant with my wheelchair.	Take away and I could take some home, and I want to be able to access the restaurant with my wheelchair.	31	
+spoken-join268	external	join	I was thinking somethingthat was cheap with outdoor seating and.	I was thinking something that was cheap with outdoor seating and.	24	
+spoken-join269	external	join	Yeah, itis in the movie.	Yeah, it is in the movie.	8	
+spoken-join270	external	join	Hey, how are youdoing?	Hey, how are you doing?	16	
+spoken-join271	external	join	I'd like toadd that, too.	I'd like to add that, too.	11	
+spoken-join272	external	join	I was looking to find a place to sit down andeat in San Francisco.	I was looking to find a place to sit down and eat in San Francisco.	45	
+spoken-join273	external	join	Yeah, that one rightthere, the first one.	Yeah, that one right there, the first one.	20	
+spoken-join274	external	join	Just give me whateveryou have.	Just give me whatever you have.	21	
+spoken-join275	external	join	I'd like to find a sit-downrestaurant in San Francisco, California.	I'd like to find a sit-down restaurant in San Francisco, California.	27	
+spoken-join276	external	join	Last name c h ri s.	Last name c h r i s.	15	
+spoken-join277	external	join	I get the oneat.	I get the one at.	13	
+spoken-join278	external	join	Is Thai Basil closer to me than the firstoption?	Is Thai Basil closer to me than the first option?	41	
+spoken-join279	external	join	What is the Wrong Time for themovie?	What is the Wrong Time for the movie?	30	
+spoken-join280	external	join	Pepperoni, black olives, ham, and bananapeppers.	Pepperoni, black olives, ham, and banana peppers.	40	
+spoken-join281	external	join	Can you make thesize of venti, please?	Can you make the size of venti, please?	16	
+spoken-join282	external	join	Is In-N-Out busy duringthe day?	Is In-N-Out busy during the day?	23	
+spoken-join283	external	join	You know, I need to go ahead and try to get an Well, I need to get an appointment at a my repair shop the Intelligenceauto imports.	You know, I need to go ahead and try to get an Well, I need to get an appointment at a my repair shop the Intelligence auto imports.	118	
+spoken-join284	external	join	showing sounds like itworks.	showing sounds like it works.	22	
+spoken-join285	external	join	I'm trying to makean order at Starbucks.	I'm trying to make an order at Starbucks.	18	
+spoken-join286	external	join	I'd like to place an order for pickupat Bella Luna Pizzeria.	I'd like to place an order for pickup at Bella Luna Pizzeria.	37	
+spoken-join287	external	join	BJ's, do they also takecredit cards there?	BJ's, do they also take credit cards there?	23	
+spoken-join288	external	join	I'll pick a differenttime.	I'll pick a different time.	21	
+spoken-join289	external	join	I need to finda Brazilian restaurant.	I need to find a Brazilian restaurant.	14	
+spoken-join290	external	join	Hi, I'm looking to find a nicesit-down restaurant for dinner in San Francisco, California, please.	Hi, I'm looking to find a nice sit-down restaurant for dinner in San Francisco, California, please.	30	
+spoken-join291	external	join	Looking to see the newCaptain Marvel movie.	Looking to see the new Captain Marvel movie.	22	
+spoken-join292	external	join	Well, I would like two of them to bepepperoni lovers.	Well, I would like two of them to be pepperoni lovers.	36	
+spoken-join293	external	join	I need to book a movie movietickets.	I need to book a movie movie tickets.	28	
+spoken-join294	external	join	Oh, Mary PoppinsReturns sound wonderful.	Oh, Mary Poppins Returns sound wonderful.	16	
+spoken-join295	external	join	Can you find an earlier showing atanother theater?	Can you find an earlier showing at another theater?	34	
+spoken-join296	external	join	I would like to find a restaurant inSan Francisco for today tonight.	I would like to find a restaurant in San Francisco for today tonight.	36	
+spoken-join297	external	join	Is thereanother theater nearby?	Is there another theater nearby?	8	
+spoken-join298	external	join	And dothey both have a bar area?	And do they both have a bar area?	6	
+spoken-join299	external	join	That's That'd begreat, too.	That's That'd be great, too.	16	
+spoken-join300	external	join	Can you please confirmmy order, please?	Can you please confirm my order, please?	22	
+spoken-join301	external	join	Well, I would have loved to get it in sooner, but thatwould have to work.	Well, I would have loved to get it in sooner, but that would have to work.	54	
+spoken-join302	external	join	Okay, can you give me the phone number for the BuckhornGrill?	Okay, can you give me the phone number for the Buckhorn Grill?	55	
+spoken-join303	external	join	No, I think I'll stick with the normal Whipped Cream withthe Cinnamon and Nutmeg Sprinkle sprinkling on top.	No, I think I'll stick with the normal Whipped Cream with the Cinnamon and Nutmeg Sprinkle sprinkling on top.	57	
+spoken-join304	external	join	Canyou make those pizzas thin-crust too?	Can you make those pizzas thin-crust too?	3	
+spoken-join305	external	join	I'd like to gosee Escape Room tonight.	I'd like to go see Escape Room tonight.	14	
+spoken-join306	external	join	I wanted to have DoorDash delivery, I wantit to be on a main avenue.	I wanted to have DoorDash delivery, I want it to be on a main avenue.	42	
+spoken-join307	external	join	Ahigh food ratings, good reviews, and also fast.	A high food ratings, good reviews, and also fast.	1	
+spoken-join308	external	join	I like to placea drink order from Starbucks.	I like to place a drink order from Starbucks.	15	
+spoken-join309	external	join	Do a sharedpool ride.	Do a shared pool ride.	11	
+spoken-join310	external	join	I was looking, actually, for Brazilianfood.	I was looking, actually, for Brazilian food.	38	
+spoken-join311	external	join	Willthere be a kids menu?	Will there be a kids menu?	4	
+spoken-join312	external	join	Let's doit, I don't have a preference whatever.	Let's do it, I don't have a preference whatever.	8	
+spoken-join313	external	join	Ineed milk without sugar.	I need milk without sugar.	1	
+spoken-join314	external	join	Yeah, I want to watch itin IMAX.	Yeah, I want to watch it in IMAX.	24	
+spoken-join315	external	join	Give me four largepizzas.	Give me four large pizzas.	18	
+spoken-join316	external	join	I was wondering if you couldhelp me get a ride later tonight.	I was wondering if you could help me get a ride later tonight.	28	
+spoken-join317	external	join	How about a movie that should be openingthis week called The Aftermath?	How about a movie that should be opening this week called The Aftermath?	40	
+spoken-join318	external	join	Let merepeat that again.	Let me repeat that again.	6	
+spoken-join319	external	join	I think Ilike that one.	I think I like that one.	9	
+spoken-join320	external	join	Well number three and number four, Iwould like them both to be the same.	Well number three and number four, I would like them both to be the same.	36	
+spoken-join321	external	join	I am closet to the Starbucks onBroadway Avenue in Tyler, Texas.	I am closet to the Starbucks on Broadway Avenue in Tyler, Texas.	31	
+spoken-join322	external	join	That beingsaid I would like to place my reservation at the Spruce location, please.	That being said I would like to place my reservation at the Spruce location, please.	10	
+spoken-join323	external	join	Alright, I'd like to purchasethe two tickets, please.	Alright, I'd like to purchase the two tickets, please.	29	
+spoken-join324	external	join	Okay, and what is modernItalian food?	Okay, and what is modern Italian food?	24	
+spoken-join325	external	join	like a restaurant inSan Francisco, California.	like a restaurant in San Francisco, California.	20	
+spoken-join326	external	join	Let's Let's go with the onewith the burgers, then.	Let's Let's go with the one with the burgers, then.	27	
+spoken-join327	external	join	And how long Iwould.	And how long I would.	14	
+spoken-join328	external	join	How long is the tripsupposed to take?	How long is the trip supposed to take?	20	
+spoken-join329	external	join	Hi, I'd like to order a coffee from Starbucks on NorthBend Road in Cincinnati, Ohio.	Hi, I'd like to order a coffee from Starbucks on North Bend Road in Cincinnati, Ohio.	54	
+spoken-join330	external	join	I'd like a restaurant that takesVisa or MasterCard.	I'd like a restaurant that takes Visa or MasterCard.	32	
+spoken-join331	external	join	I wentto shopping mall.	I went to shopping mall.	6	
+spoken-join332	external	join	But can you change the the temperature ofthe of the milk from steamed to extra hot?	But can you change the the temperature of the of the milk from steamed to extra hot?	41	
+spoken-join333	external	join	CouldI have the phone number for the first place?	Could I have the phone number for the first place?	5	
+spoken-join334	external	join	I want tokill myself.	I want to kill myself.	9	
+spoken-join335	external	join	I'dlike it to be lower priced.	I'd like it to be lower priced.	3	
+spoken-join336	external	join	Hi, I'dlike to order some pizzas, please.	Hi, I'd like to order some pizzas, please.	7	
+spoken-join337	external	join	How long's the trip fromthe Veterans Museum to the restaurant?	How long's the trip from the Veterans Museum to the restaurant?	24	
+spoken-join338	external	join	Actually, can youmake it from right now?	Actually, can you make it from right now?	17	
+spoken-join339	external	join	Let's do baconand onion and extra cheese.	Let's do bacon and onion and extra cheese.	14	
+spoken-join340	external	join	Ineed it to be maybe a big place.	I need it to be maybe a big place.	1	
+spoken-join341	external	join	We aregoing to be going to the Santa Monica Pier.	We are going to be going to the Santa Monica Pier.	6	
+spoken-join342	external	join	Yes, youcan go ahead and book that for me now.	Yes, you can go ahead and book that for me now.	8	
+spoken-join343	external	join	I wouldlike a grande espresso.	I would like a grande espresso.	7	
+spoken-join344	external	join	Isthere anywhere that is playing Five Feet Apart?	Is there anywhere that is playing Five Feet Apart?	2	
+spoken-join345	external	join	I need an Uber XL right now to pick up my partyof six, please.	I need an Uber XL right now to pick up my party of six, please.	47	
+spoken-join346	external	join	You'rethe best as always.	You're the best as always.	6	
+spoken-join347	external	join	Philadelphia Imean, Camden right now.	Philadelphia I mean, Camden right now.	14	
+spoken-join348	external	join	The second option does it havea kids meal a kids menu.	The second option does it have a kids meal a kids menu.	30	
+spoken-join349	external	join	Therewill be two people.	There will be two people.	5	
+spoken-join350	external	join	Could you I wanted ablack and white mocha.	Could you I wanted a black and white mocha.	20	
+spoken-join351	external	join	Could you tell me the typeof cuisines?	Could you tell me the type of cuisines?	26	
+spoken-join352	external	join	Hey, I'd like to ordera coffee.	Hey, I'd like to order a coffee.	22	
+spoken-join353	external	join	Ineed an UberX to come pick me up.	I need an UberX to come pick me up.	1	
+spoken-join354	external	join	Yes, I want itto be wheelchair accessible.	Yes, I want it to be wheelchair accessible.	14	
+spoken-join355	external	join	I need to make a reservation for a lunch placein Sacramento, California.	I need to make a reservation for a lunch place in Sacramento, California.	46	
+spoken-join356	external	join	Hello, I'd like to find somewhere to eatlunch in Sacramento.	Hello, I'd like to find somewhere to eat lunch in Sacramento.	40	
+spoken-join357	external	join	Chinesefood or Mexican food.	Chinese food or Mexican food.	7	
+spoken-join358	external	join	iwould like to order four pizzas from Bella Luna, please.	i would like to order four pizzas from Bella Luna, please.	1	
+spoken-join359	external	join	I'd like somewhere that hassome good ratings.	I'd like somewhere that has some good ratings.	27	
+spoken-clean0	external	clean	Hi, I'd like to order an Uber from the Fairmont San Francisco hotel to Spruce restaurant.	Hi, I'd like to order an Uber from the Fairmont San Francisco hotel to Spruce restaurant.		
+spoken-clean1	external	clean	Actually a cheese menu would be helpful, and also I would like to make sure four stars and up as far as there are reviews and ratings.	Actually a cheese menu would be helpful, and also I would like to make sure four stars and up as far as there are reviews and ratings.		
+spoken-clean2	external	clean	I want another one to be a meat lovers with pepperoni and chorizo and bacon.	I want another one to be a meat lovers with pepperoni and chorizo and bacon.		
+spoken-clean3	external	clean	I want to go to the second option.	I want to go to the second option.		
+spoken-clean4	external	clean	And you thought you will spill your drink.	And you thought you will spill your drink.		
+spoken-clean5	external	clean	Just some good American or Californian fair.	Just some good American or Californian fair.		
+spoken-clean6	external	clean	We got six people, please.	We got six people, please.		
+spoken-clean7	external	clean	No, I think that's all we needed today.	No, I think that's all we needed today.		
+spoken-clean8	external	clean	Hi, I need to schedule an appointment to take my car to the mechanic.	Hi, I need to schedule an appointment to take my car to the mechanic.		
+spoken-clean9	external	clean	Hey, I'm looking for some help booking tickets in the Philadelphia area, can you help me out?	Hey, I'm looking for some help booking tickets in the Philadelphia area, can you help me out?		
+spoken-clean10	external	clean	Do the XL I guess.	Do the XL I guess.		
+spoken-clean11	external	clean	Do they Do they both serve beer on tap?	Do they Do they both serve beer on tap?		
+spoken-clean12	external	clean	a five-star review on the internet.	a five-star review on the internet.		
+spoken-clean13	external	clean	I want two large pizzas with extra cheese on veggie lover's as toppings.	I want two large pizzas with extra cheese on veggie lover's as toppings.		
+spoken-clean14	external	clean	So, the movie I want to see is The Prodigy.	So, the movie I want to see is The Prodigy.		
+spoken-clean15	external	clean	Hey, I'd like to place an order for pick up, please.	Hey, I'd like to place an order for pick up, please.		
+spoken-clean16	external	clean	Yeah, any kind of showtime tonight.	Yeah, any kind of showtime tonight.		
+spoken-clean17	external	clean	Good, could you help me order a pizza from Bella Luna?	Good, could you help me order a pizza from Bella Luna?		
+spoken-clean18	external	clean	The exterior lights, my blinkers.	The exterior lights, my blinkers.		
+spoken-clean19	external	clean	I want to see the movie Arctic playing in Minneapolis, Minnesota.	I want to see the movie Arctic playing in Minneapolis, Minnesota.		
+spoken-clean20	external	clean	Go ahead and book that appointment, then.	Go ahead and book that appointment, then.		
+spoken-clean21	external	clean	I don't have any price preferences, but it shouldn't have any kind of dress code or anything, so not like an upscale place.	I don't have any price preferences, but it shouldn't have any kind of dress code or anything, so not like an upscale place.		
+spoken-clean22	external	clean	Yeah, that's definitely what we want.	Yeah, that's definitely what we want.		
+spoken-clean23	external	clean	Can you repeat what coffee that is again?	Can you repeat what coffee that is again?		
+spoken-clean24	external	clean	It will probably work out.	It will probably work out.		
+spoken-clean25	external	clean	Can I order a Starbucks espresso drink?	Can I order a Starbucks espresso drink?		
+spoken-clean26	external	clean	That doesn't sound very well, do they allow kids in the establishment?	That doesn't sound very well, do they allow kids in the establishment?		
+spoken-clean27	external	clean	I want to book a restaurant, table one.	I want to book a restaurant, table one.		
+spoken-clean28	external	clean	I need three small extra-cheese pizzas.	I need three small extra-cheese pizzas.		
+spoken-clean29	external	clean	I was looking to see Glass.	I was looking to see Glass.		
+spoken-clean30	external	clean	I'd like to see Greta, please.	I'd like to see Greta, please.		
+spoken-clean31	external	clean	I'd like a place that is kind of darker.	I'd like a place that is kind of darker.		
+spoken-clean32	external	clean	Let's go with the first option, please.	Let's go with the first option, please.		
+spoken-clean33	external	clean	I don't know how to explain it precisely.	I don't know how to explain it precisely.		
+spoken-clean34	external	clean	So, that's two veggie lovers and then one thin crust extra cheese small pie.	So, that's two veggie lovers and then one thin crust extra cheese small pie.		
+spoken-clean35	external	clean	I was hoping to get some Korean barbecue.	I was hoping to get some Korean barbecue.		
+spoken-clean36	external	clean	I will like the restaurant to have a bar.	I will like the restaurant to have a bar.		
+spoken-clean37	external	clean	Can I get whipped cream on it, as well?	Can I get whipped cream on it, as well?		
+spoken-clean38	external	clean	Thank you very much, and have a nice evening.	Thank you very much, and have a nice evening.		
+spoken-clean39	external	clean	On the first one, I would like just plain pepperoni.	On the first one, I would like just plain pepperoni.		
+spoken-clean40	external	clean	Can you give me a listing?	Can you give me a listing?		
+spoken-clean41	external	clean	Skip the whip cream, then.	Skip the whip cream, then.		
+spoken-clean42	external	clean	Two tickets to that, please.	Two tickets to that, please.		
+spoken-clean43	external	clean	f r a n c i s Francis.	f r a n c i s Francis.		
+spoken-clean44	external	clean	today would probably be best for all of us.	today would probably be best for all of us.		
+spoken-clean45	external	clean	My car pulls to the left.	My car pulls to the left.		
+spoken-clean46	external	clean	can you make them all thin crust?	can you make them all thin crust?		
+spoken-clean47	external	clean	I'd like to be picked up at Three Blind Mice Irish Pub.	I'd like to be picked up at Three Blind Mice Irish Pub.		
+spoken-clean48	external	clean	Yeah, I wanted to make an order from Bella Luna.	Yeah, I wanted to make an order from Bella Luna.		
+spoken-clean49	external	clean	And also I'd want extra cheese on all.	And also I'd want extra cheese on all.		
+spoken-clean50	external	clean	Let me get a iced latte.	Let me get a iced latte.		
+spoken-clean51	external	clean	Hey, I need to order a lyft for five people.	Hey, I need to order a lyft for five people.		
+spoken-clean52	external	clean	I want two croissant in California.	I want two croissant in California.		
+spoken-clean53	external	clean	I'm looking for one in Daytona Beach.	I'm looking for one in Daytona Beach.		
+spoken-clean54	external	clean	Okay, let's do Italian then.	Okay, let's do Italian then.		
+spoken-clean55	external	clean	Yeah, let's let's confirm the order.	Yeah, let's let's confirm the order.		
+spoken-clean56	external	clean	Yep, that fine with me.	Yep, that fine with me.		
+spoken-clean57	external	clean	One was just pepperoni and the other with pepperoni bacon and feather cheese, and I'd like both of those with gluten free crust.	One was just pepperoni and the other with pepperoni bacon and feather cheese, and I'd like both of those with gluten free crust.		
+spoken-clean58	external	clean	Is Don Quixote's waited on?	Is Don Quixote's waited on?		
+spoken-clean59	external	clean	I'd like a reservation to Birdsong, please.	I'd like a reservation to Birdsong, please.		
+spoken-clean60	external	clean	The Eclipse Theater in Las Vegas, Nevada.	The Eclipse Theater in Las Vegas, Nevada.		
+spoken-clean61	external	clean	I think the last one would just have.	I think the last one would just have.		
+spoken-clean62	external	clean	I'm in San Francisco and I'm looking for a sit down place to have dinner.	I'm in San Francisco and I'm looking for a sit down place to have dinner.		
+spoken-clean63	external	clean	I wanted it to not too expensive.	I wanted it to not too expensive.		
+spoken-clean64	external	clean	No, I would like three pizzas.	No, I would like three pizzas.		
+spoken-clean65	external	clean	Yeah, that will be perfect.	Yeah, that will be perfect.		
+spoken-clean66	external	clean	I wanted to order four pizzas to Bella Luna.	I wanted to order four pizzas to Bella Luna.		
+spoken-clean67	external	clean	Can can Yeah, I want to go see some movies later.	Can can Yeah, I want to go see some movies later.		
+spoken-clean68	external	clean	Book it for now to be picked up as soon as possible.	Book it for now to be picked up as soon as possible.		
+spoken-clean69	external	clean	So, please tell me the last show time.	So, please tell me the last show time.		
+spoken-clean70	external	clean	I like Asian fusion food.	I like Asian fusion food.		
+spoken-clean71	external	clean	How long did you say it would take for the trip?	How long did you say it would take for the trip?		
+spoken-clean72	external	clean	And I have currently a party of four people.	And I have currently a party of four people.		
+spoken-clean73	external	clean	And I need to get to a restaurant in Rittenhouse Square in Philadelphia.	And I need to get to a restaurant in Rittenhouse Square in Philadelphia.		
+spoken-clean74	external	clean	Okay, how about How To Train Your Dragon?	Okay, how about How To Train Your Dragon?		
+spoken-clean75	external	clean	The first one, I want pepperoni.	The first one, I want pepperoni.		
+spoken-clean76	external	clean	I need two small pizzas on veggie lover's and another one with onions and I want them thin crust.	I need two small pizzas on veggie lover's and another one with onions and I want them thin crust.		
+spoken-clean77	external	clean	Which ones are playing at Which ones Which ones is is the movie playing at?	Which ones are playing at Which ones Which ones is is the movie playing at?		
+spoken-clean78	external	clean	Yeah, let's hear more about the first one.	Yeah, let's hear more about the first one.		
+spoken-clean79	external	clean	Yes, that's where I want to go to.	Yes, that's where I want to go to.		
+spoken-clean80	external	clean	All right, thank you so much for helping me out.	All right, thank you so much for helping me out.		
+spoken-clean81	external	clean	I'm in Sacramento at the Arden Fair mall, and I was looking for something to eat.	I'm in Sacramento at the Arden Fair mall, and I was looking for something to eat.		
+spoken-clean82	external	clean	Well we're going to need four large pizzas.	Well we're going to need four large pizzas.		
+spoken-clean83	external	clean	I would like to order an UberXL.	I would like to order an UberXL.		
+spoken-clean84	external	clean	Can I book a reservation?	Can I book a reservation?		
+spoken-clean85	external	clean	I like Mexican, Latin food, Japanese food, and Italian food.	I like Mexican, Latin food, Japanese food, and Italian food.		
+spoken-clean86	external	clean	I'd like to make an appointment at Intelligent Auto Imports.	I'd like to make an appointment at Intelligent Auto Imports.		
+spoken-clean87	external	clean	But can I make sure that all four pizzas are thick crust?	But can I make sure that all four pizzas are thick crust?		
+spoken-clean88	external	clean	One topping, can I have a supreme pizza with everything on it, and the second topping, can I get a veggie lover pizza, please?	One topping, can I have a supreme pizza with everything on it, and the second topping, can I get a veggie lover pizza, please?		
+spoken-clean89	external	clean	And which one has the cheapest prices?	And which one has the cheapest prices?		
+spoken-clean90	external	clean	Can I get two tickets to the next showing of Captain Marvel in the theaters in Houston, Texas?	Can I get two tickets to the next showing of Captain Marvel in the theaters in Houston, Texas?		
+spoken-clean91	external	clean	No, like I said just I'd like something a bit more Hayan that has good food, but it's not too pricey.	No, like I said just I'd like something a bit more Hayan that has good food, but it's not too pricey.		
+spoken-clean92	external	clean	Spider-Man enter the Spider-Verse.	Spider-Man enter the Spider-Verse.		
+spoken-clean93	external	clean	with an extra shot of espresso.	with an extra shot of espresso.		
+spoken-clean94	external	clean	I hear weird sounds in my car.	I hear weird sounds in my car.		
+spoken-clean95	external	clean	Italian, some place small and quiet.	Italian, some place small and quiet.		
+spoken-clean96	external	clean	I am looking to eat fast food, something that's not too expensive.	I am looking to eat fast food, something that's not too expensive.		
+spoken-clean97	external	clean	I live in Warrington, Pennsylvania warrington.	I live in Warrington, Pennsylvania warrington.		
+spoken-clean98	external	clean	And are there any other options?	And are there any other options?		
+spoken-clean99	external	clean	I'd like to get a nice like a reservation at a nice sit-down restaurant for dinner in San Francisco.	I'd like to get a nice like a reservation at a nice sit-down restaurant for dinner in San Francisco.		
+spoken-clean100	external	clean	I would like to pick Johnny Rockets.	I would like to pick Johnny Rockets.		
+spoken-clean101	external	clean	Do they have large or small menu?	Do they have large or small menu?		
+spoken-clean102	external	clean	I'd like to get three small pizzas.	I'd like to get three small pizzas.		
+spoken-clean103	external	clean	Hi, I'm looking for a restaurant in San Francisco, California.	Hi, I'm looking for a restaurant in San Francisco, California.		
+spoken-clean104	external	clean	Hi, can I order a lift, please?	Hi, can I order a lift, please?		
+spoken-clean105	external	clean	I would like to know the best movie theater in Wichita, Kansas.	I would like to know the best movie theater in Wichita, Kansas.		
+spoken-clean106	external	clean	No, but thank you so much.	No, but thank you so much.		
+spoken-clean107	external	clean	What time are they opened till?	What time are they opened till?		
+spoken-clean108	external	clean	How What What ride type did we get?	How What What ride type did we get?		
+spoken-clean109	external	clean	I was curious, can they accommodate large groups?	I was curious, can they accommodate large groups?		
+spoken-clean110	external	clean	And I'd like to have that service done at Intelligent Auto Imports.	And I'd like to have that service done at Intelligent Auto Imports.		
+spoken-clean111	external	clean	Which one of those two has the highest reviews online?	Which one of those two has the highest reviews online?		
+spoken-clean112	external	clean	And on the third I would like tomatoes and onions, please.	And on the third I would like tomatoes and onions, please.		
+spoken-clean113	external	clean	Yes, I need an Uber, please.	Yes, I need an Uber, please.		
+spoken-clean114	external	clean	I need to book a movie.	I need to book a movie.		
+spoken-clean115	external	clean	And can you add whipped cream to it?	And can you add whipped cream to it?		
+spoken-clean116	external	clean	I'd like to get it for Vessel, New York.	I'd like to get it for Vessel, New York.		
+spoken-clean117	external	clean	I want a venti venti vanilla latte with caramel.	I want a venti venti vanilla latte with caramel.		
+spoken-clean118	external	clean	I'd like to get some movie tickets today.	I'd like to get some movie tickets today.		
+spoken-clean119	external	clean	I would like to order three small thin crust pizzas with pepperoni, cheese, and mushrooms from Bella Luna.	I would like to order three small thin crust pizzas with pepperoni, cheese, and mushrooms from Bella Luna.		
+spoken-clean120	external	clean	Hey, I'm in Sacramento inside the Arden Fair Mall and I was looking for some Chinese food.	Hey, I'm in Sacramento inside the Arden Fair Mall and I was looking for some Chinese food.		
+spoken-clean121	external	clean	Hey, thank you very much for your help.	Hey, thank you very much for your help.		
+spoken-clean122	external	clean	Right now, I want some Italian food.	Right now, I want some Italian food.		
+spoken-clean123	external	clean	I would like to book a reservation for there.	I would like to book a reservation for there.		
+spoken-clean124	external	clean	I'm in Las Vegas, Nevada right now, and I need help finding a movie to watch, I mean, book, please.	I'm in Las Vegas, Nevada right now, and I need help finding a movie to watch, I mean, book, please.		
+spoken-clean125	external	clean	I'd like four pizzas small size, chicken BBQ for the topping.	I'd like four pizzas small size, chicken BBQ for the topping.		
+spoken-clean126	external	clean	How about a Chinese restaurant?	How about a Chinese restaurant?		
+spoken-clean127	external	clean	anchovies and pepperoni and the other one i want a buffalo chicken.	anchovies and pepperoni and the other one i want a buffalo chicken.		
+spoken-clean128	external	clean	Right now I'm staying in Richmond, Virginia and I'm looking to go to to Harlem Springs.	Right now I'm staying in Richmond, Virginia and I'm looking to go to to Harlem Springs.		
+spoken-clean129	external	clean	Okay, I I'll take I guess if that's the only ride type that would take six people I'll take a UberXL.	Okay, I I'll take I guess if that's the only ride type that would take six people I'll take a UberXL.		

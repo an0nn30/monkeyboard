@@ -1,0 +1,52 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+        "deviceName" : "iPhone Duo",
+        "modelName" : "iPhone",
+        "osBuildNumber" : "24B91016s",
+        "osVersion" : "27.2",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 1,
+      "passedTests" : 3,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "MonkeyBoard · Built with macOS 27.0.1",
+  "expectedFailures" : 0,
+  "failedTests" : 1,
+  "finishTime" : 1794754232.28,
+  "passedTests" : 3,
+  "result" : "Failed",
+  "runtimeWarnings" : [
+
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1794754148.287,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "Test crashed with signal kill.",
+      "targetName" : "MonkeyBoardUITests",
+      "testIdentifier" : 3,
+      "testIdentifierString" : "KeyboardTypingTests/testSentenceModelDistinguishesASeatFromFlowers()",
+      "testIdentifierURL" : "test://com.apple.xcode/MonkeyBoard/MonkeyBoardUITests/KeyboardTypingTests/testSentenceModelDistinguishesASeatFromFlowers",
+      "testName" : "testSentenceModelDistinguishesASeatFromFlowers()"
+    }
+  ],
+  "title" : "Test - MonkeyBoard",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 4
+}

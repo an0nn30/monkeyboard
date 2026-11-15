@@ -9,11 +9,13 @@ final class SentenceDecoder {
         let typed: String
         let leading: String
         let alternatives: [String]
+        var shortWord = false
+        var missingLetterOnly = false
         var followingWordLimit: Int {
-            typed.lowercased() == "leek" && alternatives.contains("leek") ? 5 : 3
+            if shortWord { return 2 }
+            return typed.lowercased() == "leek" && alternatives.contains("leek") ? 5 : 3
         }
 
-        var isGoesInflection: Bool { typed == "gos" }
     }
 
     private let model: MLModel
@@ -59,12 +61,13 @@ final class SentenceDecoder {
         return matches.map { ids[string.substring(with: $0.range)] ?? 0 }
     }
 
-    private func predict(_ sequence: [Int], feature: String = "logits") throws -> MLMultiArray {
+    private func predict(_ sequence: [Int], feature: String = "legacyLogits") throws -> MLMultiArray {
         let input = try MLMultiArray(shape: [1, 32], dataType: .int32)
         let ptr = input.dataPointer.bindMemory(to: Int32.self, capacity: Self.window)
         for i in 0..<Self.window { ptr[i] = i < sequence.count ? Int32(sequence[i]) : 0 }
         let features = try MLDictionaryFeatureProvider(dictionary: ["tokens": MLFeatureValue(multiArray: input)])
         let result = try model.prediction(from: features)
+        let feature = feature == "legacyLogits" && model.modelDescription.outputDescriptionsByName["legacyLogits"] == nil ? "logits" : feature
         let width = feature == "states" ? Self.stateWidth : words.count
         guard let output = result.featureValue(for: feature)?.multiArrayValue,
               output.dataType == .float16, output.shape.map(\.intValue) == [1, Self.window, width] else {
@@ -84,7 +87,7 @@ final class SentenceDecoder {
         let prefix = tokens(text)
         guard !prefix.isEmpty else { return [] }
         let sequence = Array(([1] + prefix).suffix(Self.window))
-        let output = try predict(sequence)
+        let output = try predict(sequence, feature: "logits")
         let scores = logits(output, at: sequence.count - 1)
         let allowed = display.map { scores[$0] }
         let probabilities = vForce.exp(vDSP.add(-vDSP.maximum(allowed), allowed))
@@ -208,25 +211,54 @@ final class SentenceDecoder {
         return try classifierScore(leftIDs: [1] + ["there", "is", "a"].compactMap { ids[$0] }) >= 2
     }
 
+    // log P(replacement, right | sentence) - log P(literal, right | sentence).
+    private func substitutionMargin(leading: String, literal: Int, replacement: Int, right: Int, adapted: Bool) throws -> Float {
+        let left = Array(([1] + tokens(leading)).suffix(Self.window - 1))
+        let feature = adapted ? "logits" : "legacyLogits"
+        let prior = logits(try predict(left, feature: feature), at: left.count - 1)
+        func nextLogP(_ preceding: Int) throws -> Float {
+            let row = logits(try predict(left + [preceding], feature: feature), at: left.count)
+            let peak = vDSP.maximum(row)
+            return row[right] - peak - log(vDSP.sum(vForce.exp(vDSP.add(-peak, row))))
+        }
+        return try prior[replacement] - prior[literal] + nextLogP(replacement) - nextLogP(literal)
+    }
+
     /// Compare the joint likelihood of each spelling and the words actually typed after it.
     func revision(_ review: Review, committed: String, following: String) throws -> String? {
-        if review.typed == "us", committed == "us", review.alternatives == ["us", "is"] {
-            let words = following.lowercased().split(whereSeparator: { $0.isWhitespace })
-            guard words.count >= 2, ["a", "an"].contains(words[0]), words[1].allSatisfy(\.isLetter),
-                  let predicate = ids["is"], let literal = ids["us"], let article = ids[String(words[0])]
-            else { return nil }
-            let left = Array(([1] + tokens(review.leading)).suffix(Self.window - 1))
-            let prior = logits(try predict(left), at: left.count - 1)
-            // Compare P(is, article | subject) with P(us, article | subject).
-            // The second continuation word confirms the noun phrase is underway;
-            // it needn't be in the decoder vocabulary (e.g. a job title).
-            func articleLogP(_ preceding: Int) throws -> Float {
-                let row = logits(try predict(left + [preceding]), at: left.count)
-                let peak = vDSP.maximum(row)
-                return row[article] - peak - log(vDSP.sum(vForce.exp(vDSP.add(-peak, row))))
+        if review.shortWord {
+            let word = review.typed.lowercased()
+            let left = String(review.leading.suffix(180)), right = String(following.prefix(60))
+            guard committed == review.typed, !left.utf8.contains(0), !right.utf8.contains(0) else { return nil }
+            var result = [CChar](repeating: 0, count: 32)
+            if review.missingLetterOnly || mb_short_word_v1(left, word, right, &result, result.count) != 1 {
+                // An unseen missing-letter error can have no recorded phrase.
+                // Compare the plausible longer words using the full sentence.
+                var buffer = [CChar](repeating: 0, count: 96)
+                guard mb_short_pool_v1(word, &buffer, buffer.count) == 1,
+                      let next = tokens(right).first, next != 0 else { return nil }
+                let seq = Array(([1] + tokens(left)).suffix(Self.window - 1))
+                let prior = logits(try predict(seq), at: seq.count - 1)
+                var scores: [(String, Float)] = []
+                for piece in String(cString: buffer).split(separator: "\t") {
+                    guard let id = ids[String(piece)] else { continue }
+                    let row = logits(try predict(seq + [id]), at: seq.count)
+                    let peak = vDSP.maximum(row)
+                    scores.append((String(piece), prior[id] + row[next] - peak - log(vDSP.sum(vForce.exp(vDSP.add(-peak, row))))))
+                }
+                scores.sort { $0.1 > $1.1 }
+                guard scores.count >= 2, let winner = scores.first, winner.1 - scores[1].1 >= 2.8,
+                      let id = ids[winner.0], prior[id] >= -1 else { return nil }
+                return review.typed.first?.isUppercase == true ? winner.0.capitalized : winner.0
             }
-            let margin = try prior[predicate] - prior[literal] + articleLogP(predicate) - articleLogP(literal)
-            return margin >= 3.5 ? "is" : nil
+            let best = String(cString: result)
+            // A real-word replacement must also beat the literal under the adapted
+            // transformer. A missing vocabulary ID supplies no likelihood evidence.
+            if let original = ids[word], let candidate = ids[best], let next = tokens(right).first, next != 0 {
+                guard try substitutionMargin(leading: review.leading, literal: original, replacement: candidate, right: next,
+                                             adapted: mb_short_new_readout_v1(left, word, right, best) == 1) >= 2.4 else { return nil }
+            }
+            return review.typed.first?.isUppercase == true ? best.prefix(1).uppercased() + best.dropFirst() : best
         }
         if review.alternatives.count == 1, let split = review.alternatives.first, split.contains(" "),
            split.replacingOccurrences(of: " ", with: "") == review.typed.lowercased(), committed == review.typed {
@@ -279,9 +311,6 @@ final class SentenceDecoder {
         if incumbent != literal, !pool.contains(incumbent) { pool.append(incumbent) }
         guard !pool.isEmpty else { return nil }
         func prior(_ word: String) -> Float {
-            // A common missing e in the third-person inflection. WordCorrections
-            // admits this accepted spelling only in a singular subject position.
-            if review.isGoesInflection, word == "goes" { return 5.5 }
             return word == incumbent && word != literal ? 2 : 0
         }
         // Abstain on broad candidate pools. Omitting contenders would inflate confidence.
@@ -305,9 +334,7 @@ final class SentenceDecoder {
         scores.sort { $0.score > $1.score }
         guard let best = scores.first, best.word != incumbent,
               best.score - (scores.dropFirst().first?.score ?? -.infinity) >= 2.3 else { return nil }
-        if review.isGoesInflection {
-            guard best.word == "goes" else { return nil }
-        } else {
+        do {
             // Require odds for the observed continuation to support changing the word.
             // For an uncleared typo compare against replay with the literal's token.
             let reference: Float

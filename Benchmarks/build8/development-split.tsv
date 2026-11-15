@@ -1,0 +1,82 @@
+kind	context	expected	build6	candidate
+fix	Im	I'm	Im	I'm
+fix	Sorry im	I'm	im	I'm
+fix	On second thought Im	I'm	Im	I'm
+fix	Ive	I've	Ive	I've
+fix	Looks like ive	I've	ive	I've
+fix	i'm	I'm	i'm	I'm
+fix	Sounds like i	I	i	I
+fix	I think youll	you'll	you'll	you'll
+fix	He said hedve	he'd've	hedve	hedve
+fix	We werent	weren't	werent	weren't
+fix	They shouldve	should've	should've	should've
+fix	We couldve	could've	could've	could've
+fix	She wouldve	would've	would've	would've
+fix	You mustve	must've	must've	must've
+fix	Oh I didnt	didn't	didnt	didn't
+fix	My phone isnt	isn't	isnt	isn't
+fix	We’re goign	going	goign	going
+fix	Just parkign	parking	parkign	parking
+fix	Leaving in a minite	minute	minute	minute
+fix	I'm nearly tehre	there	tehre	there
+fix	That's awesoem	awesome	awesome	awesome
+fix	What tiem	time	tiem	time
+fix	Can you grab grocreies	groceries	groceries	groceries
+fix	Have you seen my walelt	wallet	wallet	wallet
+fix	I'm gettign	getting	gettign	getting
+fix	I'll call you tomrrow	tomorrow	tomorrow	tomorrow
+keep	Send me an IM	IM	IM	IM
+keep	I feel ill	ill	ill	ill
+keep	Check my ID	ID	ID	ID
+keep	We were	were	were	were
+keep	It hurt its	its	its	its
+keep	She did well	well	well	well
+keep	He works on a shell	shell	shell	shell
+keep	I dug a shed	shed	shed	shed
+keep	After lunch I’ll	I’ll	I’ll	I’ll
+keep	Text me rn	rn	rn	rn
+keep	I'm almost there lol	lol	lol	lol
+keep	Just say idk	idk	idk	idk
+keep	Okay brb	brb	brb	brb
+keep	Running late btw	btw	btw	btw
+keep	omw	omw	omw	omw
+keep	Haha nah	nah	nah	nah
+keep	The group chat said yall	yall	yall	yall
+keep	Ask McKay	McKay	McKay	McKay
+keep	Send it to @im	im	im	im
+keep	Visit example.ive	ive	ive	ive
+keep	The variable is user_im	im	im	im
+keep	Type in /youll	youll	youll	youll
+keep	Follow #werent	werent	werent	werent
+next	Be there in five	minutes|seconds	I|the|you	minutes|people|year
+next	I'm on my	way|phone|break	I|the|you	way|break|phone
+next	Give me a	call|minute|second	I|the|you	hand|coffee|second
+next	Sorry I'm running	late|behind	I|the|you	late|out|all
+next	Did you get	home|it|there	I|the|you	the|me|a
+next	How was your	day|trip|weekend	I|the|you	day|weekend|help
+next	Are you still	coming|there|up	I|the|you	coming|up|at
+next	I'll pick you	up	I|the|you	up|have|to
+next	Can you call	me|back	I|the|you	me|an|and
+next	Text me when	you|you're	I|the|you	I|the|they
+next	Want to grab	dinner|lunch|coffee	I|the|you	a|coffee|something
+next	I'll let you	know	I|the|you	know|get|check
+next	I am pulling	up|in|out	I|the|you	to|in|a
+next	See you after	work|school|lunch	I|the|you	the|a|that
+next	I left it at	home|work|school	I|the|you	home|the|work
+next	What time do	you|we	I|the|you	they|you|I
+next	Do we need	anything|to|more	I|the|you	to|more|a
+next	I'll be home	soon|late|tonight	I|the|you	before|late|soon
+next	That works for	me|us	I|the|you	me|a|us
+next	Thanks for the	heads|help|ride	I|the|you	help|heads|lift
+next	Drive	safe|safely|carefully	I|the|you	a|on|to
+next	Be right	there|back	I|the|you	there|back|now
+next	Sounds like a	plan|good|great	I|the|you	good|plan|great
+next	Let me check	my|the|with	I|the|you	with|my|the
+next	What do you	need|think|want	I|the|you	have|think|need
+next	I'll meet you	at|there|outside	I|the|you	there|at|by
+next	Are we still	on|going|meeting	I|the|you	going|meeting|have
+next	Will you be	home|there|around	I|the|you	around|there|a
+next	Have you seen	my|the|it	I|the|you	a|my|that
+next	Do you mind	if|helping|grabbing	I|the|you	if|calling|making
+next	Have a great	day|time|weekend	I|the|you	day|night|time
+next	Don't forget to	bring|call|text	I|the|you	get|call|grab

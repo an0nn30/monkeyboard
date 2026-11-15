@@ -1,0 +1,52 @@
+multi|I thnik your walelt fell behidn the radiator.|I think your wallet fell behind the radiator.
+multi|She brough teh tray in form the balcony.|She brought the tray in from the balcony.
+multi|Woudl you mind cheking teh hinges before dinner?|Would you mind checking the hinges before dinner?
+multi|I pakced the pie inthe tin with the lopsdied lid.|I packed the pie in the tin with the lopsided lid.
+multi|Dara foudn my glasses nest ot the laundry basket.|Dara found my glasses next to the laundry basket.
+multi|Did we odrer the extra pilows four the guest bed?|Did we order the extra pillows for the guest bed?
+multi|My headphnes are ud onthe shelf above the towels.|My headphones are up on the shelf above the towels.
+multi|The black pot is hevaier thna it lokos.|The black pot is heavier than it looks.
+multi|Bring a cuople of lemnos fi you pass the market.|Bring a couple of lemons if you pass the market.
+multi|Wehre did the tin of materess patches end pu?|Where did the tin of mattress patches end up?
+short|I have ot change the batteries in both lights.|I have to change the batteries in both lights.
+short|Meet me st the gate with the tiny brass owl.|Meet me at the gate with the tiny brass owl.
+short|I put a coin ni each empty cup.|I put a coin in each empty cup.
+short|The mug is om the stack of old menus.|The mug is on the stack of old menus.
+short|Can we go bt train for the last bit?|Can we go by train for the last bit?
+short|Scoot ov so Lina can reach the window.|Scoot up so Lina can reach the window.
+real-word|Let me know of your workshop ends early.|Let me know if your workshop ends early.
+real-word|There was a trail if sugar across the counter.|There was a trail of sugar across the counter.
+real-word|I found the receipt be the glove box.|I found the receipt by the glove box.
+real-word|The whole choir us waiting at the side entrance.|The whole choir is waiting at the side entrance.
+real-word|Please sing the card before you seal it.|Please sign the card before you seal it.
+real-word|I want to lend the spare room to my ant next month.|I want to lend the spare room to my aunt next month.
+real-word|We should meat near the ticket booth at noon.|We should meet near the ticket booth at noon.
+real-word|He herd the front door close from upstairs.|He heard the front door close from upstairs.
+boundary|My neighborsent the photo of your missing cat.|My neighbor sent the photo of your missing cat.
+boundary|Can you emailme the picture of the shelf?|Can you email me the picture of the shelf?
+boundary|I left my pass port in the gray suitcase.|I left my passport in the gray suitcase.
+boundary|Your tooth brush is still in the blue cup.|Your toothbrush is still in the blue cup.
+punctuation|I havent seen the delivery van all afternoon.|I haven't seen the delivery van all afternoon.
+punctuation|Thats not where Milos scooter usually goes.|That's not where Milo's scooter usually goes.
+punctuation|The windows open but the dogs sleeping.|The window's open but the dog's sleeping.
+punctuation|Well take the footpath once the puddles dry.|We'll take the footpath once the puddles dry.
+clean-name|Zuri thinks Bo should name the kitten Fig.
+clean-name|Maeve made focaccia with Za'atar on top.
+clean-name|Ask Ren if Anouk still has the headlamp.
+clean-name|Bea and Fen are biking down from Red Hook.
+clean-name|Rafi named the vacuum Bloop last night.
+clean-slang|ngl that purple rug kinda works here
+clean-slang|idk where ur second slipper went
+clean-slang|yep lemme finish this bowl and I'll head over
+clean-slang|Those lil carrots are for the soup.
+clean-slang|oof the porch light just went out again
+clean-real|Aunt June said an ant was crawling on her pie.
+clean-real|Get the meat from the cooler before we meet them.
+clean-real|The choir will sing while we sign the poster.
+clean-real|Sit by me if the dog wants to be near us.
+clean-real|I heard the herd coming down the lane.
+clean-real|We were almost out of flour when Jo called.
+clean-case|Can you leave the eBay box on the stoop?
+clean-punctuation|Who's bringing the rolls, and who's bringing jam?
+clean-punctuation|You wrote "mint" twice on my list!
+clean-punctuation|Wait... is it the green or the gray tab?

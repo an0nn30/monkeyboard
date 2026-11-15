@@ -1,0 +1,27 @@
+{
+  "baseline_build": 39,
+  "candidate_build": 40,
+  "replay_sha256": {
+    "39": "c48bba54a359d9342685b00a796c1f514b775d0f759325098648f3767b55b0f4",
+    "40": "45c313cb49e76c118338a82e90f3ca3e00aa2d231eb79eeb9affd144f9d909b1"
+  },
+  "compiled_candidate_extension_library_sha256": "0d5e5e43d71d5907ae9d07cf3978d232803359a146ab9e6c848f9a83286a2ad0",
+  "fresh_and_supplemental_training_overlap": 0,
+  "inputs": {
+    "Benchmarks/build40/fresh.json": "3ed1bf84aa6e5f03b47cfb92f322809ef3ee51d8a47f553192b02016934201c8",
+    "Benchmarks/build40/training-misses.json": "131ed19bd7b2d67050164c7d91a70a22837a57c9a46ec3ed0e0620c65d7aef54",
+    "Keyboard/WordCorrections.swift": "f56491ab7bcf59947e91634f9460c986f15903c1271d7cbb0e6acccf3ae7b4ac",
+    "MonkeyBoard.xcodeproj/project.pbxproj": "268dabee62dd8fe50ce468ddde91fa2034d036ef0040581af1e1f1318cd36179",
+    "keyboard-engine/model/contrast40/features.txt": "ba07a76d2ce54183a186acf6b51d908c34ef702d102b8bb8e12562566255a984",
+    "keyboard-engine/model/contrast40/fit.json": "f44b3fc2f46844da8f47f6329c5ba7a5f587b1e421241d7c3103b965171cbe6d",
+    "keyboard-engine/model/contrast40/models.tsv": "b63b1e88150e09e230e9740738b7e720a389341111c8fb288027aead128f814b",
+    "keyboard-engine/model/contrast40/weights.bin": "1883b9e01328e3a0bcd5f3d054b2050c73dfad19029c901ea5c85e4f56a39963",
+    "keyboard-engine/src/cloze27.rs": "1ceb2ab726102022933384fca0a6adf145f43cc1a474a16c0a77cee1b5ac4583",
+    "keyboard-engine/src/contrast40.rs": "249d9dd8c09cf6740a72ff9a4021eec36548c26beb40deb62cc4007f2b04321f",
+    "keyboard-engine/src/lib.rs": "acf74a10d3114b3854a2dec62fbe1113fecc9b7f64d3342b1062023ea54ba755",
+    "keyboard-engine/src/wordnet22.rs": "de62b24348a5e91c1c181ce6505e6f09b100455671f8c38db8f2dccc63d00bef",
+    "keyboard-engine/training/calibrate40.py": "297236a6cbb6a5cc85c8098b4dce82ef059eb21de59df3d484523687ae5ae5f8",
+    "keyboard-engine/training/context40-practice.txt": "3af731e7ed98fa96572ce2aa4c0a3efd1d3313eb76d2785a4772fe4b56f9d715",
+    "keyboard-engine/training/contrast40.py": "ab107da5a8bb78c348016683830fd15f575e81c9f13447c3873f4884bd34ef4b"
+  }
+}

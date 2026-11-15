@@ -1,0 +1,32 @@
+# Inferred intended words from the Duo session. "its" is ambiguous at word entry.
+fix	Yhis	This
+fix	I completely understand thay	that
+fix	We know whays	what's
+fix	I'm tryin	trying
+fix	Make sure rha	that
+fix	We know gow	how
+fix	Use the keyboar	keyboard
+fix	As yoy	you
+keep	The dog wagged its	its
+keep	Call the doctor ASAP	ASAP
+keep	Hey yo	yo
+keep	lol	lol
+keep	My friend is Ty	Ty
+keep	Sent this to @yoy	yoy
+keep	File is user_gow	gow
+keep	Use example.yhis	yhis
+keep	My wrist hurts	hurts
+keep	Meeting with Gow	Gow
+keep	This is a good try	try
+keep	Ask Rha	Rha
+fix	Is thay	that
+fix	We have some prpbems	problems
+fix	What shold	should
+fix	What should be hapeing	happening
+fix	Use context to figurr	figure
+fix	To figure ut	out
+keep	Go to UT	UT
+keep	Music syllable ut	ut
+keep	I’m happy with my figures	figures
+keep	The evidence was scant	scant
+keep	Meet me at the pier	pier

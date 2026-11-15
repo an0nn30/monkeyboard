@@ -1,0 +1,135 @@
+{
+  "at_least_80_percent": {
+    "all_fixed": true,
+    "noisy_exact": false,
+    "real-word_fixed": false
+  },
+  "event_counts": {
+    "baseline": {
+      "all": 213,
+      "all_fixed": 115,
+      "clean": 138,
+      "clean_exact": 125,
+      "collateral": 28,
+      "correct_words": 2454,
+      "missing-space": 45,
+      "missing-space_fixed": 34,
+      "noisy": 138,
+      "noisy_exact": 40,
+      "ordinary": 101,
+      "ordinary_fixed": 77,
+      "real-word": 67,
+      "real-word_fixed": 4
+    },
+    "candidate": {
+      "all": 213,
+      "all_fixed": 188,
+      "clean": 138,
+      "clean_exact": 130,
+      "collateral": 19,
+      "correct_words": 2454,
+      "missing-space": 45,
+      "missing-space_fixed": 44,
+      "noisy": 138,
+      "noisy_exact": 105,
+      "ordinary": 101,
+      "ordinary_fixed": 96,
+      "real-word": 67,
+      "real-word_fixed": 48
+    }
+  },
+  "events_fixed": {
+    "all": {
+      "baseline": 115,
+      "candidate": 188,
+      "gained": 75,
+      "lost": 2,
+      "total": 213
+    },
+    "missing-space": {
+      "baseline": 34,
+      "candidate": 44,
+      "gained": 10,
+      "lost": 0,
+      "total": 45
+    },
+    "ordinary": {
+      "baseline": 77,
+      "candidate": 96,
+      "gained": 21,
+      "lost": 2,
+      "total": 101
+    },
+    "real-word": {
+      "baseline": 4,
+      "candidate": 48,
+      "gained": 44,
+      "lost": 0,
+      "total": 67
+    }
+  },
+  "fixture_sha256": "520d9741d5dee5c39daf200be81ef0c043388d80b2aaf3d5177a4ba98c9f0d2d",
+  "freeze_sha256": "7f5b46b49043cc887da192b38a00d72e2b20ab41ad7e4c94b329e79f6d517c62",
+  "input_sha256": {
+    "baseline.jsonl.gz": "84299e646728c762be1ac8cf9bb2fde33a21ef7d41833c45f5bab9916e9788cb",
+    "candidate.jsonl.gz": "9a0f88230ad296a8a6188e2652c01b17a33dff240d8a4107fbdf5674bcd6b651"
+  },
+  "messages_exact": {
+    "clean": {
+      "baseline": 125,
+      "candidate": 130,
+      "gained": 7,
+      "lost": 2,
+      "total": 138
+    },
+    "noisy": {
+      "baseline": 40,
+      "candidate": 105,
+      "gained": 67,
+      "lost": 2,
+      "total": 138
+    }
+  },
+  "originally_correct_words_preserved": {
+    "baseline": 2426,
+    "candidate": 2435,
+    "gained": 19,
+    "lost": 10,
+    "total": 2454
+  },
+  "other_metrics": {
+    "baseline": {
+      "damaged_words_replaced_with_another_wrong_word_or_deleted": 11,
+      "exact": 165,
+      "originally_correct_words_changed": 28
+    },
+    "candidate": {
+      "damaged_words_replaced_with_another_wrong_word_or_deleted": 4,
+      "exact": 235,
+      "originally_correct_words_changed": 19
+    }
+  },
+  "protected_preserved": {
+    "name": {
+      "baseline": 61,
+      "candidate": 68,
+      "gained": 10,
+      "lost": 3,
+      "total": 76
+    },
+    "slang": {
+      "baseline": 53,
+      "candidate": 58,
+      "gained": 5,
+      "lost": 0,
+      "total": 58
+    },
+    "valid-word": {
+      "baseline": 48,
+      "candidate": 48,
+      "gained": 0,
+      "lost": 0,
+      "total": 48
+    }
+  }
+}

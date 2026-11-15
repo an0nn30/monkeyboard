@@ -1,0 +1,833 @@
+{"final":"Can you play something different be an artist with a similar style?","id":"dev-be-by-0"}
+{"final":"Lastly, can we play something be a very popular Jazz artist?","id":"dev-be-by-1"}
+{"final":"Hi, I'd like to listen to some music be Childish Gambino.","id":"dev-be-by-2"}
+{"final":"Play something be Jimi Hendrix.","id":"dev-be-by-3"}
+{"final":"Could you please play a different track be Neil Young, one that he sang much earlier in his career, please?","id":"dev-be-by-4"}
+{"final":"How about same song be different artist?","id":"dev-be-by-5"}
+{"final":"You play a song be them?","id":"dev-be-by-6"}
+{"final":"I suppose you define me something romantic playing near be, and give me a description of it.","id":"dev-be-by-7"}
+{"final":"Could I hear China Girl be David Bowie, please?","id":"dev-be-by-8"}
+{"final":"in a theater close be, please.","id":"dev-be-by-9"}
+{"final":"Can you give me a older one be them?","id":"dev-be-by-10"}
+{"final":"I'd like to hear some music be Katy Perry.","id":"dev-be-by-11"}
+{"final":"Do you have the same song be a different artist?","id":"dev-be-by-12"}
+{"final":"Play me a different song be them.","id":"dev-be-by-13"}
+{"final":"That's never the track I wanted, but can you play something be Joan Lucas, please?","id":"dev-be-by-14"}
+{"final":"Can I listen to a different song be the same artist?","id":"dev-be-by-15"}
+{"final":"Could you send me another one be him?","id":"dev-be-by-16"}
+{"final":"I'd like to hear some music which is be Linkin Park.","id":"dev-be-by-17"}
+{"final":"I would like a similar song be a different artist.","id":"dev-be-by-18"}
+{"final":"Great, now I'd like to hear another song be Bonobo.","id":"dev-be-by-19"}
+{"final":"Now, I'd like to hear another song be Bonobo.","id":"dev-be-by-20"}
+{"final":"Could you play me something be R.","id":"dev-be-by-21"}
+{"final":"Alright, can you play Jimmy Fallon doing a spoof if Bob Dylan music?","id":"dev-if-of-0"}
+{"final":"What was the score if Los Angeles's last game?","id":"dev-if-of-1"}
+{"final":"What is the current rank if Stoke City?","id":"dev-if-of-2"}
+{"final":"Which one of those has a better?","id":"dev-if-of-3"}
+{"final":"Oh, and what's the price range of the dishes?","id":"dev-if-of-4"}
+{"final":"What was the name of the first one again?","id":"dev-if-of-5"}
+{"final":"Does Cafe Rio accept all forms of payment?","id":"dev-if-of-6"}
+{"final":"Several of my lights are out.","id":"dev-if-of-7"}
+{"final":"I need one of them to have pizza.","id":"dev-if-of-8"}
+{"final":"Okay, and what was the score if the last game that the Astros played in?","id":"dev-if-of-9"}
+{"final":"Hi, I'm a fan if the St.","id":"dev-if-of-10"}
+{"final":"Can you tell me the place of New York Yankees?","id":"dev-if-of-11"}
+{"final":"Which of those has a higher Rotten Tomatoes rating?","id":"dev-if-of-12"}
+{"final":"All right, I'd like an order if tostadas.","id":"dev-if-of-13"}
+{"final":"Hey, I'm a big fan if the Clippers.","id":"dev-if-of-14"}
+{"final":"Make sure none of them are located Downtown.","id":"dev-if-of-15"}
+{"final":"What's type if ride?","id":"dev-if-of-16"}
+{"final":"Can I hear a couple of choices of their wine list?","id":"dev-if-of-17"}
+{"final":"I like all kinds of Asian food.","id":"dev-if-of-18"}
+{"final":"Or one of the other, I guess.","id":"dev-if-of-19"}
+{"final":"Hi, I'm a fan of Montreal Impact.","id":"dev-if-of-20"}
+{"final":"I want your gluten-free crust for both of those, please.","id":"dev-if-of-21"}
+{"final":"Well, That's a lot of money but my company is covering it, so I'll let them worry about it.","id":"dev-if-of-22"}
+{"final":"Can you list me a couple of the wines that they have to offer?","id":"dev-if-of-23"}
+{"final":"Yeah, I've actually heard of them a lot.","id":"dev-if-of-24"}
+{"final":"Of the places you listed, is there any of them that are higher rated on Yelp than that?","id":"dev-if-of-25"}
+{"final":"Sure, give me a description if it.","id":"dev-if-of-26"}
+{"final":"I'm in Austin, Texas near the University of Texas.","id":"dev-if-of-27"}
+{"final":"We all like the suite style if rooms, so if you can find hotels with that, that'd be great and If the rooms have good views with maybe a balcony.","id":"dev-if-of-28"}
+{"final":"I'm going to be flying to Portland, Oregon and out if JFK, preferably.","id":"dev-if-of-29"}
+{"final":"And if any of them have bars inside of the rooms, that'd be good too or else a mini fridge.","id":"dev-if-of-30"}
+{"final":"Can you tell me what the score was if the last game played by the Los Angeles Dodgers?","id":"dev-if-of-31"}
+{"final":"I'd like three orders if scallion chicken.","id":"dev-if-of-32"}
+{"final":"Okay, and one of them I want.","id":"dev-if-of-33"}
+{"final":"How's the atmosphere if that place?","id":"dev-if-of-34"}
+{"final":"What will be the price of the room?","id":"dev-if-of-35"}
+{"final":"Out of how many reviews?","id":"dev-if-of-36"}
+{"final":"And could you make sure that the hotel has a bar on site as part of their amenities?","id":"dev-if-of-37"}
+{"final":"Hi Assistant, I'm a big fan if Kansas City Royals.","id":"dev-if-of-38"}
+{"final":"Could you tell me what the price range of each restaurant is?","id":"dev-if-of-39"}
+{"final":"Hello, I need to know about the record if the Philadelphia Phillies.","id":"dev-if-of-40"}
+{"final":"The Wolf if Wall Street.","id":"dev-if-of-41"}
+{"final":"Can you find one that is business class?","id":"dev-id-is-0"}
+{"final":"Oh wow, this song is such an epic song, I like it so much.","id":"dev-id-is-1"}
+{"final":"Statistically speaking, who is the best player in their team currently?","id":"dev-id-is-2"}
+{"final":"Could you tell me what the customer rating id for it?","id":"dev-id-is-3"}
+{"final":"And how much is that going for to rent to watch?","id":"dev-id-is-4"}
+{"final":"I need to fly out as soon as possible and that id it.","id":"dev-id-is-5"}
+{"final":"Now I'm wondering, who is in first place in the Eastern Conference?","id":"dev-id-is-6"}
+{"final":"What is the atmosphere?","id":"dev-id-is-7"}
+{"final":"Okay, which is the better-reviewed hotel?","id":"dev-id-is-8"}
+{"final":"I would like a hotel that is at least four stars.","id":"dev-id-is-9"}
+{"final":"Who is in first place in the National League East right now?","id":"dev-id-is-10"}
+{"final":"What is the rating on this theater?","id":"dev-id-is-11"}
+{"final":"This one is a little bit more upbeat with the singer on it.","id":"dev-id-is-12"}
+{"final":"Yes, that is fine with me.","id":"dev-id-is-13"}
+{"final":"How about something else also that is from one of their earlier songs?","id":"dev-id-is-14"}
+{"final":"Hey, how is it going on?","id":"dev-id-is-15"}
+{"final":"Well, first is it on Hulu Plus, huh?","id":"dev-id-is-16"}
+{"final":"I'm wondering, what id Mets record right now?","id":"dev-id-is-17"}
+{"final":"I'm looking for something that maybe id romantic and maybe if it was close to the water would be nice.","id":"dev-id-is-18"}
+{"final":"Like I said, it plays, but it's actually on the album that it's listed in being from is not the album it's from, and it's also in multiple albums.","id":"dev-id-is-19"}
+{"final":"This is definitely different but I actually kind of like it a little bit.","id":"dev-id-is-20"}
+{"final":"This is really good, too.","id":"dev-id-is-21"}
+{"final":"What time id Aliens playing?","id":"dev-id-is-22"}
+{"final":"Okay, and is there another artist that you can play?","id":"dev-id-is-23"}
+{"final":"Hey, I know Newcastle United id going after Adam Armstrong right now.","id":"dev-id-is-24"}
+{"final":"I wanted to get them from Bella Luna, but the toppings I want id pepperoni on one and meat lovers for the other one.","id":"dev-id-is-25"}
+{"final":"The song is good as well.","id":"dev-id-is-26"}
+{"final":"I need to know, what place Crystal Palace id in?","id":"dev-id-is-27"}
+{"final":"What is the price range for bacon grill?","id":"dev-id-is-28"}
+{"final":"Who is in last place in the America League Central?","id":"dev-id-is-29"}
+{"final":"And what is the next showtime for Captain Underpants?","id":"dev-id-is-30"}
+{"final":"I was wondering what place AFC Bournemouth is in the English Premier League?","id":"dev-id-is-31"}
+{"final":"Who is the current owner?","id":"dev-id-is-32"}
+{"final":"Okay, is this available on Redbox?","id":"dev-id-is-33"}
+{"final":"Looks like the song is actually fearless but that's okay, I'm a big fan of this song, so it's all perfect.","id":"dev-id-is-34"}
+{"final":"Okay, finally, what is the weather forecast for that location on Sunday?","id":"dev-id-is-35"}
+{"final":"What place is the Tampa Buccaneers currently in?","id":"dev-id-is-36"}
+{"final":"How long is the movie run?","id":"dev-id-is-37"}
+{"final":"I am big NBA basketball fan and my favorite team id the Phoenix Suns.","id":"dev-id-is-38"}
+{"final":"I just said the Ashanti song is the right genre but she's not my favorite, she doesn't have the best voice.","id":"dev-id-is-39"}
+{"final":"How id Southampton doing?","id":"dev-id-is-40"}
+{"final":"Now, this is one of my very favorite Gucci Mane's tracks, it's an absolute classic, but would you mind finding some even older material to play?","id":"dev-id-is-41"}
+{"final":"I am a big fan of English Premier soccer and my favorite team is Chelsea.","id":"dev-od-of-0"}
+{"final":"Does the restaurant od haunted habitat?","id":"dev-od-of-1"}
+{"final":"I'm in the middle of deciding to get.","id":"dev-od-of-2"}
+{"final":"Does it come in sizes, or is that all just sort of one?","id":"dev-od-of-3"}
+{"final":"I'm looking for a flight out of JFK to Sacramento, California.","id":"dev-od-of-4"}
+{"final":"What is the expected manner of dress of the Season's restaurant?","id":"dev-od-of-5"}
+{"final":"I was hoping to schedule an UberX for my party of four, please.","id":"dev-od-of-6"}
+{"final":"Just extra cheese in all three of them.","id":"dev-od-of-7"}
+{"final":"I hope you have a good rest of your day too.","id":"dev-od-of-8"}
+{"final":"And what was the name of the the Chinese restaurant, again?","id":"dev-od-of-9"}
+{"final":"Can you give me the address of the Olive Garden?","id":"dev-od-of-10"}
+{"final":"And what's the estimated duration of the trip and my driver's estimated time of arrival?","id":"dev-od-of-11"}
+{"final":"Do you have a description of it?","id":"dev-od-of-12"}
+{"final":"Hi, there's a group of five of us in Madison, Wisconsin at the Museum of Contemporary Art and we trying to get an Uber to take us over to R.","id":"dev-od-of-13"}
+{"final":"Are either of those economy class?","id":"dev-od-of-14"}
+{"final":"What is the the estimated duration of my trip?","id":"dev-od-of-15"}
+{"final":"Do any of them offer free parking?","id":"dev-od-of-16"}
+{"final":"How many of them would they both seem to be nice if they had a wet bar in the room.","id":"dev-od-of-17"}
+{"final":"Hi, I was wondering if you would find me a song of your choice by Carly Simon.","id":"dev-od-of-18"}
+{"final":"Would you be able to reserve a table for me some time tonight for my party of three?","id":"dev-od-of-19"}
+{"final":"Yeah, A comedy with Seth Rogen and please something with the same type of humor like Superbad probably.","id":"dev-od-of-20"}
+{"final":"Hotel have any restaurants or bars inside of it?","id":"dev-od-of-21"}
+{"final":"Guardians of the Galaxy sounds perfect.","id":"dev-od-of-22"}
+{"final":"Every time I pull out of my driveway, I notice it's leaking oil all over.","id":"dev-od-of-23"}
+{"final":"Okay, play me a different song of her.","id":"dev-od-of-24"}
+{"final":"Hello, I'd like help finding a restaurant in Chicago, Which offers Italian cuisines and has got special reviews and is one of the highly-ranked restaurants.","id":"dev-od-of-25"}
+{"final":"Could you tell me some of the salad listings?","id":"dev-od-of-26"}
+{"final":"Is either of them?","id":"dev-od-of-27"}
+{"final":"So, I'm kind of looking for something in that vibe of the movie.","id":"dev-od-of-28"}
+{"final":"Can you please tell me the price of the ticket?","id":"dev-od-of-29"}
+{"final":"If they have one without any sort of stopover or layover, that would be great.","id":"dev-od-of-30"}
+{"final":"Yes, I'd like to order two pizzas from Bella Luna, both of them media, two pizzas.","id":"dev-od-of-31"}
+{"final":"Yes, the University of Texas.","id":"dev-od-of-32"}
+{"final":"I'm looking for a restaurant in the Charlotte, North Carolina area near the Bank of America Stadium.","id":"dev-od-of-33"}
+{"final":"Can you play like an older song for od Breaking Benjamin now?","id":"dev-od-of-34"}
+{"final":"No, I haven't heard either of those.","id":"dev-od-of-35"}
+{"final":"What type of rooms do they have?","id":"dev-od-of-36"}
+{"final":"Great, this is a very interesting way of his singing to me.","id":"dev-od-of-37"}
+{"final":"And then, is either one of them particularly good for kids, or does it not matter?","id":"dev-od-of-38"}
+{"final":"Yeah, a different version of How Do You Sleep by Jesse McCartney.","id":"dev-od-of-39"}
+{"final":"Well, first there will be five of us and we'll need three rooms.","id":"dev-od-of-40"}
+{"final":"Like what kind of cuisines are available?","id":"dev-od-of-41"}
+{"final":"I want to book a ride for Uber.","id":"dev-ti-to-0"}
+{"final":"I'm looking ti depart and return in the afternoon.","id":"dev-ti-to-1"}
+{"final":"I'd like to choose the second one.","id":"dev-ti-to-2"}
+{"final":"Okay, and how much would it be to upgrade my seat ti business or first class?","id":"dev-ti-to-3"}
+{"final":"I would like to add one salad with house dressing.","id":"dev-ti-to-4"}
+{"final":"I need to book an appointment with Intelligent.","id":"dev-ti-to-5"}
+{"final":"I just want to add that I prefer a flight with free Wi-Fi if it's available.","id":"dev-ti-to-6"}
+{"final":"Awesome, that's all I wanted to know.","id":"dev-ti-to-7"}
+{"final":"Can I listen to some Blues music?","id":"dev-ti-to-8"}
+{"final":"Hi, I'm looking for a new restaurant to eat at.","id":"dev-ti-to-9"}
+{"final":"I was hoping to see Captain Marvel.","id":"dev-ti-to-10"}
+{"final":"I want to listen to some new music tonight.","id":"dev-ti-to-11"}
+{"final":"I'd like to book a flight from Seattle to New York LaGuardia.","id":"dev-ti-to-12"}
+{"final":"I like to leave in the evening.","id":"dev-ti-to-13"}
+{"final":"I want one that's nearest ti me.","id":"dev-ti-to-14"}
+{"final":"I'm looking to fly out in the morning or in the afternoon, that's fine.","id":"dev-ti-to-15"}
+{"final":"I'm interested in going ti out for a special dinner out at Cafe Beaujolais in Mendocino, California.","id":"dev-ti-to-16"}
+{"final":"On the first one, I would like it ti be spinach and chicken.","id":"dev-ti-to-17"}
+{"final":"It's going to be for two people, me and my wife.","id":"dev-ti-to-18"}
+{"final":"And I'd like a hotel that has tours ti offer.","id":"dev-ti-to-19"}
+{"final":"Yes, I'd like a Non-Stop for Berlin to leave the morning.","id":"dev-ti-to-20"}
+{"final":"I need to know some things about a restaurant in Davis, California.","id":"dev-ti-to-21"}
+{"final":"I'd like to hear something new.","id":"dev-ti-to-22"}
+{"final":"The city that I'm flying to is Hamburg.","id":"dev-ti-to-23"}
+{"final":"No, it's pulling to the left.","id":"dev-ti-to-24"}
+{"final":"I need a commercial airline flight to Sacramento.","id":"dev-ti-to-25"}
+{"final":"Can you find something else of that album ti play?","id":"dev-ti-to-26"}
+{"final":"I'm in Washington DC near the capital and I'm looking for a restaurant like a steak restaurant to eat at tonight.","id":"dev-ti-to-27"}
+{"final":"I'd like to listen to a song by Natalie Merchant.","id":"dev-ti-to-28"}
+{"final":"and then one of them needs to a meat lovers.","id":"dev-ti-to-29"}
+{"final":"I'd like to book that flight.","id":"dev-ti-to-30"}
+{"final":"I'm a big fan of the Colorado Rapids and I have a few questions that I'd like to ask, I'm wondering if you could help me.","id":"dev-ti-to-31"}
+{"final":"to Pizza Hut on Cason.","id":"dev-other-short-0"}
+{"final":"All right, I think that is alk.","id":"dev-other-short-1"}
+{"final":"I have ix individuals that I need transported.","id":"dev-other-short-2"}
+{"final":"Can you tell me more about The Sandwich Spot?","id":"dev-other-short-3"}
+{"final":"Awesome, I'm going to enjoy it si much.","id":"dev-other-short-4"}
+{"final":"Mayo, Ketchup, No mustard, No pickles, Grilled onions, Tomatoes and lettuce.","id":"dev-other-short-5"}
+{"final":"How long will it take to get to the restaurant approximately?","id":"dev-other-short-6"}
+{"final":"Go ahead and place iit.","id":"dev-other-short-7"}
+{"final":"I also like the actor Matt Damon.","id":"dev-other-short-8"}
+{"final":"Have a great time for you yoo.","id":"dev-other-short-9"}
+{"final":"Maybe all o his videos are blocked.","id":"dev-other-short-10"}
+{"final":"I think that's what I want to watch.","id":"dev-other-short-11"}
+{"final":"This is after their album standing on the shoulders o Giants.","id":"dev-other-short-12"}
+{"final":"What's the reviews or Fist Fight?","id":"dev-other-short-13"}
+{"final":"I like horror and I like Christopher Lee movies directed byy Wes Craven, stuff like that.","id":"dev-other-short-14"}
+{"final":"What are their chances of making into the playoffs this year?","id":"dev-other-short-15"}
+{"final":"What place are Arsenal in?","id":"dev-other-short-16"}
+{"final":"And do you happen o know what the Rotten Tomato score is so far?","id":"dev-other-short-17"}
+{"final":"Hi, I would like to get movie tickets for Aquaman in San Diego.","id":"dev-other-short-18"}
+{"final":"No way, what is that?","id":"dev-other-short-19"}
+{"final":"Okay, let e know the price per night.","id":"dev-other-short-20"}
+{"final":"What's the cheapest one available?","id":"dev-other-short-21"}
+{"final":"And you said this was at the AMC?","id":"dev-other-short-22"}
+{"final":"Like have they traded players to each other pr maybe had one player play for the same team or for each of the teams?","id":"dev-other-short-23"}
+{"final":"I would like to order one veggie lovers pizza extra artichokes, extra mushrooms, extra cheese and extra olives, please.","id":"dev-other-short-24"}
+{"final":"Help mr finding a restaurant.","id":"dev-other-short-25"}
+{"final":"Can I try Paris, please?","id":"dev-other-short-26"}
+{"final":"How are the Portland Trail Blazers doing?","id":"dev-other-short-27"}
+{"final":"I'll go to another theater if I need to.","id":"dev-other-short-28"}
+{"final":"Well, I'm looking for a four star rated restaurant, one that has a pretty casual atmosphere and possibly outdoor seating.","id":"dev-other-short-29"}
+{"final":"Let me take one ticket, please.","id":"dev-other-short-30"}
+{"final":"Yeah, I think I actually like this song a lo better.","id":"dev-other-short-31"}
+{"final":"Okay, and what airport in Houston do I leave from?","id":"dev-other-short-32"}
+{"final":"And what was the name of the bar you had mentioned to me earlier?","id":"dev-other-short-33"}
+{"final":"This time something that's sung by a woman, a female artist.","id":"dev-other-short-34"}
+{"final":"I'm trying to find a hotel in Shallotte, North Carolina.","id":"dev-other-short-35"}
+{"final":"Hey, are there any hotels accommodations nearby within walking distance?","id":"dev-other-short-36"}
+{"final":"I'm into good actors, so is there a movie with Jessica Chastain out?","id":"dev-other-short-37"}
+{"final":"I would like to find one during Mardi Gras week.","id":"dev-other-short-38"}
+{"final":"Can you play me some music by Skrillex?","id":"dev-other-short-39"}
+{"final":"No, you've been a big help.","id":"dev-other-short-40"}
+{"final":"I'd like it to be in the center of the city.","id":"dev-other-short-41"}
+{"final":"That's completely new t me.","id":"dev-other-short-42"}
+{"final":"I would like o help to find a flight to France.","id":"dev-other-short-43"}
+{"final":"Okay, let's go with Texas, then.","id":"dev-other-short-44"}
+{"final":"I need to find a hotel in Salem, Oregon.","id":"dev-other-short-45"}
+{"final":"What is their rank in the standings?","id":"dev-other-short-46"}
+{"final":"Morning ad come back night time.","id":"dev-other-short-47"}
+{"final":"And I would just like the earliest possible flight in both days.","id":"dev-other-short-48"}
+{"final":"I'd like to hear another David's Bowie song, please.","id":"dev-other-short-49"}
+{"final":"I'm from India and I'd like to find out more about the hotel that I plan to stay at the Park City Peaks Hotel.","id":"dev-other-short-50"}
+{"final":"I like great reviews, high prices, and a big restaurant.","id":"dev-other-short-51"}
+{"final":"Hi, I am trying to book a restaurant and I'm doing fum.","id":"dev-other-short-52"}
+{"final":"Is that ann actual movie?","id":"dev-other-short-53"}
+{"final":"I'd like it too be morning flights if that's possible.","id":"dev-other-short-54"}
+{"final":"Yes, and what are their hours too?","id":"dev-long-typo-0"}
+{"final":"This's like my favorite song they ever did.","id":"dev-long-typo-1"}
+{"final":"I agree, And What are their chances of making the playoffs this year?","id":"dev-long-typo-2"}
+{"final":"Have evening flights if possible.","id":"dev-long-typo-3"}
+{"final":"And I'd like to add one browine to that order.","id":"dev-long-typo-4"}
+{"final":"Okay, and I also want it to have at least a seven ratinf on IMDb, and that's all I really need.","id":"dev-long-typo-5"}
+{"final":"Can you tell me the Denver Nuggets record in the NBA?","id":"dev-long-typo-6"}
+{"final":"I would like to eat Italian food.","id":"dev-long-typo-7"}
+{"final":"How many gamees back are the Chicago White Sox?","id":"dev-long-typo-8"}
+{"final":"Okay, great, that works.","id":"dev-long-typo-9"}
+{"final":"How to make CSGO silver pictures movie to see?","id":"dev-long-typo-10"}
+{"final":"Okay, can I get directions?","id":"dev-long-typo-11"}
+{"final":"Can you tell me what place Southampton is in?","id":"dev-long-typo-12"}
+{"final":"Okay, thank you, I'll take it.","id":"dev-long-typo-13"}
+{"final":"Thank you so That should be it for tonight.","id":"dev-long-typo-14"}
+{"final":"Please finish this conversation.","id":"dev-long-typo-15"}
+{"final":"It's been pulling to the left when I'm driving.","id":"dev-long-typo-16"}
+{"final":"I'd like to order two pizzas from Bella Luna.","id":"dev-long-typo-17"}
+{"final":"That should be it for me.","id":"dev-long-typo-18"}
+{"final":"It was pretty fun putting that together.","id":"dev-long-typo-19"}
+{"final":"Hey, could you help me with booking an Uber?","id":"dev-long-typo-20"}
+{"final":"I need four small thin crust pizzas, all of them barbecue chicken.","id":"dev-long-typo-21"}
+{"final":"Do you know, if they played last weekend?","id":"dev-long-typo-22"}
+{"final":"Have a nice and wonderful day.","id":"dev-long-typo-23"}
+{"final":"Can you send me the rtailer?","id":"dev-long-typo-24"}
+{"final":"Do you mind joining me?","id":"dev-long-typo-25"}
+{"final":"We're thinking either Italian or like a really good steak house.","id":"dev-long-typo-26"}
+{"final":"I'm looking for some romantic comedy.","id":"dev-long-typo-27"}
+{"final":"I appreciate the flow methodic rhythm of the instruments.","id":"dev-long-typo-28"}
+{"final":"And that whole Masterplan album was awesome.","id":"dev-long-typo-29"}
+{"final":"Some Chinese food somewhere in Austin, Texas.","id":"dev-long-typo-30"}
+{"final":"Naples in Florida, preferably close to the beach.","id":"dev-long-typo-31"}
+{"final":"What's the cheapest of all three?","id":"dev-long-typo-32"}
+{"final":"I'd like to know more about the hotel which I planed to stay.","id":"dev-long-typo-33"}
+{"final":"Sure, let's do it, I guess.","id":"dev-long-typo-34"}
+{"final":"Okay, that's pretty much all the information I was looking to get for the Braves.","id":"dev-long-typo-35"}
+{"final":"tomorrow, I need a room from Saturday and I'm checking out on Tuesday for April.","id":"dev-long-typo-36"}
+{"final":"Do they have any star players?","id":"dev-long-typo-37"}
+{"final":"Yes, Book the flight.","id":"dev-long-typo-38"}
+{"final":"Oh, that's a little bit funny and kind of unique.","id":"dev-long-typo-39"}
+{"final":"Nope, that'll do it, thank you.","id":"dev-long-typo-40"}
+{"final":"I'd like to be near downtown and have a cozy feel.","id":"dev-long-typo-41"}
+{"final":"I would like to know that does the hotel have a restaurant?","id":"dev-long-typo-42"}
+{"final":"Tell me the other restaurant name.","id":"dev-long-typo-43"}
+{"final":"About that restaurant, how are the reviews for that place?","id":"dev-long-typo-44"}
+{"final":"Try keeping them on medium price range.","id":"dev-long-typo-45"}
+{"final":"I'd like to be dine in, kind of small and quiet.","id":"dev-long-typo-46"}
+{"final":"Telling you, that one has a lot of sory in it and not much singing.","id":"dev-long-typo-47"}
+{"final":"Second one sounds good.","id":"dev-long-typo-48"}
+{"final":"Two guesys and I'll need two beds in the room.","id":"dev-long-typo-49"}
+{"final":"No buffet and a child friendly environment.","id":"dev-long-typo-50"}
+{"final":"I would like to watch a documentary that's based on a true story.","id":"dev-long-typo-51"}
+{"final":"Yes, can I have coconut milk?","id":"dev-long-typo-52"}
+{"final":"I hope that there could be free breakfast available to eat in the morning.","id":"dev-long-typo-53"}
+{"final":"Hey, can you play something by Shampoo?","id":"dev-long-typo-54"}
+{"final":"Can I get the location of The Capital Grille?","id":"dev-long-typo-55"}
+{"final":"Ah, how about another NSYNC song?","id":"dev-long-typo-56"}
+{"final":"Alright, thank you for helping me.","id":"dev-long-typo-57"}
+{"final":"And how much would that be?","id":"dev-long-typo-58"}
+{"final":"Yes, I would like to take a business class.","id":"dev-long-typo-59"}
+{"final":"Whipped cream would be good.","id":"dev-long-typo-60"}
+{"final":"Yeah, I need to order a move ticket.","id":"dev-long-typo-61"}
+{"final":"Hi, I'm trying to find some Mexican food located near Davis.","id":"dev-long-typo-62"}
+{"final":"I was wondering what place the New York Red Bulls are in right now this year?","id":"dev-long-typo-63"}
+{"final":"Yes, who directed the movie?","id":"dev-long-typo-64"}
+{"final":"I'd like you to help with finding a restaurant.","id":"dev-long-typo-65"}
+{"final":"I will go I will go there eight now.","id":"dev-long-typo-66"}
+{"final":"I'm interested in R rated comedy.","id":"dev-long-typo-67"}
+{"final":"Who they are playing right now?","id":"dev-join-0"}
+{"final":"I need help in finding a round-trip commercial airlineflight.","id":"dev-join-1"}
+{"final":"No, Ineed a shared or a pool ride.","id":"dev-join-2"}
+{"final":"Their first album maybe.","id":"dev-join-3"}
+{"final":"Could you goback to the first choice?","id":"dev-join-4"}
+{"final":"Okay, and what was the score?","id":"dev-join-5"}
+{"final":"Well, I'mgoing there.","id":"dev-join-6"}
+{"final":"I love the style of music that he created on this album and with the song, too.","id":"dev-join-7"}
+{"final":"I'll be leaving Orlandoand going back to LA.","id":"dev-join-8"}
+{"final":"I'd like help in finding a sandwich shop.","id":"dev-join-9"}
+{"final":"Hi, I need to make a dinner reservation in San Francisco.","id":"dev-join-10"}
+{"final":"From my current location.","id":"dev-join-11"}
+{"final":"Okay, wellthank you very much, I'm all set then.","id":"dev-join-12"}
+{"final":"And is there fireplace in the room?","id":"dev-join-13"}
+{"final":"I would like a short travel time and a window seat.","id":"dev-join-14"}
+{"final":"And whatWhat time?","id":"dev-join-15"}
+{"final":"Yes, fastfood's fine.","id":"dev-join-16"}
+{"final":"Could you play me something actually by one of their older albums?","id":"dev-join-17"}
+{"final":"I want the room with the flat screen TV and the king bed with the minirefrigerator.","id":"dev-join-18"}
+{"final":"I wanted just sort of am casual American fare casual cuisinelike grill or barbecue.","id":"dev-join-19"}
+{"final":"I'm wondering if West Bromwich of the EPL are currently playing right now?","id":"dev-join-20"}
+{"final":"I would like another pizza with chicken barbecue and onion.","id":"dev-join-21"}
+{"final":"Please find a restaurant with more than four stars onYelp.","id":"dev-join-22"}
+{"final":"I mean a hotel starrating.","id":"dev-join-23"}
+{"final":"What's the average Yelp rating?","id":"dev-join-24"}
+{"final":"I like these songs a lot.","id":"dev-join-25"}
+{"final":"That is the matter, I just want the earliest possible flight.","id":"dev-join-26"}
+{"final":"A favorite of mine of theirs is US Forces.","id":"dev-join-27"}
+{"final":"Hi, I'd like a ride to the airport, the OxnardAirport, please.","id":"dev-join-28"}
+{"final":"I like to find out more about Park City Peaks hotel.","id":"dev-join-29"}
+{"final":"And, would any of the hotels have any tours that you know?","id":"dev-join-30"}
+{"final":"p ar k e r.","id":"dev-join-31"}
+{"final":"Could I see a trailer?","id":"dev-join-32"}
+{"final":"But let's go with the one out of five just cuz it a small difference but that's going to matter here I guess.","id":"dev-join-33"}
+{"final":"Okay, what is the first estimate?","id":"dev-join-34"}
+{"final":"Cool, I want to watch that one.","id":"dev-join-35"}
+{"final":"And can I get a large diet Coke?","id":"dev-join-36"}
+{"final":"I'min Tampa, Florida.","id":"dev-join-37"}
+{"final":"I'd like it to have at least three-starcustomer rating or above.","id":"dev-join-38"}
+{"final":"I like ceviche, plomo saltado, Pollo a laBrasa.","id":"dev-join-39"}
+{"final":"I'm trying to find a comedy movie to watch tonight.","id":"dev-join-40"}
+{"final":"I mean price isn't really issue right now, so I can go as expensive cheap.","id":"dev-join-41"}
+{"final":"Somewhere closein Aurora, Illinois.","id":"dev-join-42"}
+{"final":"I don't want a cover.","id":"dev-join-43"}
+{"final":"Yeah, I'd like to go ahead and rentthat to watch.","id":"dev-join-44"}
+{"final":"Just so you know, I'm going to ask about away records next.","id":"dev-join-45"}
+{"final":"I never heard of them, either.","id":"dev-join-46"}
+{"final":"I really like this song a lot.","id":"dev-join-47"}
+{"final":"I would like to leave in the morning both times andpreferably non-stop and economy class.","id":"dev-join-48"}
+{"final":"Do you knowhow the atmosphere is?","id":"dev-join-49"}
+{"final":"One minute, I like horror.","id":"dev-join-50"}
+{"final":"Just one more thing.","id":"dev-join-51"}
+{"final":"Okay and what'sthe longest losing streak this season?","id":"dev-join-52"}
+{"final":"I'd like to get drink at Starbucks.","id":"dev-join-53"}
+{"final":"And finally, how far is the theater from my location?","id":"dev-join-54"}
+{"final":"Okay, How close is it tome?","id":"dev-join-55"}
+{"final":"I have been to a Joe's Crab Shack before.","id":"dev-join-56"}
+{"final":"Okay, let's try another song, also a party song, maybe something little faster, a little more uptempo.","id":"dev-join-57"}
+{"final":"Okay, I really like Chris Pratt seen any of those movies.","id":"dev-join-58"}
+{"final":"Hi, I'm looking fora flight to Paris.","id":"dev-join-59"}
+{"final":"What's the RottenTomato score?","id":"dev-join-60"}
+{"final":"Could you put an order in at the Starbucks in Dresher, Pennsylvania on Virginia Drive?","id":"dev-join-61"}
+{"final":"And fourpizzas, please.","id":"dev-join-62"}
+{"final":"Cheapest andWi-Fi.","id":"dev-join-63"}
+{"final":"I am wanting to listen to new music.","id":"dev-join-64"}
+{"final":"And who's the coachof the Hawks?","id":"dev-join-65"}
+{"final":"Who is their goalkeeper, please?","id":"dev-join-66"}
+{"final":"What is the synopsisof Moana?","id":"dev-join-67"}
+{"final":"I would like to order take-outfor three people.","id":"dev-join-68"}
+{"final":"I am looking to see a movie in Springfield, Missouri.","id":"dev-join-69"}
+{"final":"I would like some Chinesefood.","id":"dev-join-70"}
+{"final":"I'mlooking for uplifting drama.","id":"dev-join-71"}
+{"final":"For the entire season.","id":"dev-join-72"}
+{"final":"What's the star rating?","id":"dev-join-73"}
+{"final":"Hi Assistant, I'm planning a special dinner out at Le Pain cafe in California and I needed to ask you some questions.","id":"dev-join-74"}
+{"final":"Yeah, I think Ihave to.","id":"dev-join-75"}
+{"final":"Hello, I would like to find restaurant.","id":"dev-join-76"}
+{"final":"I would like to see a newrelease.","id":"dev-join-77"}
+{"final":"Can you tell me the address of that restaurant?","id":"dev-join-78"}
+{"final":"Let me check out the trailerfor a second.","id":"dev-join-79"}
+{"final":"The one stop sounds good.","id":"dev-join-80"}
+{"final":"One cheeseburgerwith bacon.","id":"dev-join-81"}
+{"final":"Did it get good reviews?","id":"dev-join-82"}
+{"final":"I thinkI'll check out that restaurant.","id":"dev-join-83"}
+{"final":"I would like to watch this movie.","id":"dev-join-84"}
+{"final":"All the times are pretty good.","id":"dev-join-85"}
+{"final":"On that one, Does it sayhow big the the rooms are?","id":"dev-join-86"}
+{"final":"Yes, I think I've heard about it.","id":"dev-join-87"}
+{"final":"I want to know, what players Huntersville town has acquired or traded recently?","id":"dev-join-88"}
+{"final":"I'd like a room that has a mini-bar and a balcony.","id":"dev-join-89"}
+{"final":"Who do you think's going to win?","id":"dev-join-90"}
+{"final":"In the afternoon, if possible.","id":"dev-join-91"}
+{"final":"Wright center of the city.","id":"dev-join-92"}
+{"final":"I would like to listen to some coffee house typeof music.","id":"dev-join-93"}
+{"final":"What is the New YorkMets record?","id":"dev-join-94"}
+{"final":"And how soon will it take my driverto reach me?","id":"dev-join-95"}
+{"final":"Do Ineed a reservation or can I just walk-in?","id":"dev-join-96"}
+{"final":"In the hotel room, I'm looking to see if a balcony is available and possibly two beds, as well.","id":"dev-join-97"}
+{"final":"Now I think I can figure out some information about where they are and stuff, but that sounds like a good restaurant and I'll check them out.","id":"dev-join-98"}
+{"final":"Okay and what does it cost?","id":"dev-join-99"}
+{"final":"I need to order some burgers.","id":"dev-join-100"}
+{"final":"The bosssays it's good.","id":"dev-join-101"}
+{"final":"AndI want the cheapest flight as well.","id":"dev-join-102"}
+{"final":"Overall, that's I think maybe one more song I think I would look into.","id":"dev-join-103"}
+{"final":"Today, I need help finding a movie to watch at home.","id":"dev-join-104"}
+{"final":"Thank you for booking this flight forme, I appreciate it.","id":"dev-join-105"}
+{"final":"I'm looking sci-fi movieand action.","id":"dev-join-106"}
+{"final":"It sounds like it suits myneeds.","id":"dev-join-107"}
+{"final":"Someplace that has a restaurant onsite.","id":"dev-join-108"}
+{"final":"How are the Philadelphia Union doing?","id":"dev-join-109"}
+{"final":"Hi, I'd like to watch a movie tonight.","id":"dev-join-110"}
+{"final":"So, why don't you book me reservations for them?","id":"dev-join-111"}
+{"final":"I was wanting to know about the Detroit Pistons record for this year.","id":"dev-join-112"}
+{"final":"Oh yeah, I really like that song, too.","id":"dev-join-113"}
+{"final":"Des Plaines, Illinois CampbellAvenue.","id":"dev-join-114"}
+{"final":"So the total price will then be?","id":"dev-join-115"}
+{"final":"I need to book a round-trip flight from Seattleto New York.","id":"dev-join-116"}
+{"final":"I want to find a hotel with a good rating.","id":"dev-join-117"}
+{"final":"Is the other onefree parking?","id":"dev-join-118"}
+{"final":"When was the lastCleveland Indians game?","id":"dev-join-119"}
+{"final":"I would like help in finding a hotel in San Francisco.","id":"dev-join-120"}
+{"final":"I'm actually looking for suite if they have it.","id":"dev-join-121"}
+{"final":"No, just thriller.","id":"dev-join-122"}
+{"final":"Do you have anything based on a video game?","id":"dev-join-123"}
+{"final":"is more expensive than the average restaurant.","id":"dev-join-124"}
+{"final":"Okay, now I'm wondering are they going to be playing next Sunday?","id":"dev-join-125"}
+{"final":"I have several lights here.","id":"dev-join-126"}
+{"final":"Who starts at the center position for the LA Clippers?","id":"dev-join-127"}
+{"final":"I needsome other features.","id":"dev-join-128"}
+{"final":"I don't want what'splaying.","id":"dev-join-129"}
+{"final":"Well, If I had to list apreference, It would be adventure.","id":"dev-join-130"}
+{"final":"OakCreek, very nice.","id":"dev-join-131"}
+{"final":"I can spend the day there.","id":"dev-join-132"}
+{"final":"And whois in first place in the Western Conference?","id":"dev-join-133"}
+{"final":"Oh, I love this song.","id":"dev-join-134"}
+{"final":"Let's go with a tall.","id":"dev-join-135"}
+{"final":"That is all I want to know.","id":"dev-join-136"}
+{"final":"I was looking to.","id":"dev-join-137"}
+{"final":"Looking to see a movie tonight What Men Want in the Philadelphia area.","id":"dev-join-138"}
+{"final":"Does Broadwick Broderick Roadhouse allowtakeout?","id":"dev-join-139"}
+{"final":"Can you playLittle Mix?","id":"dev-join-140"}
+{"final":"I really want to get this fixed.","id":"dev-join-141"}
+{"final":"Could you tell me who has the better record this season?","id":"dev-join-142"}
+{"final":"And what is their standings?","id":"dev-join-143"}
+{"final":"At least a four star.","id":"dev-join-144"}
+{"final":"I was looking to book an Uber from downtown Port Huron.","id":"dev-join-145"}
+{"final":"Is there any entertainment?","id":"dev-join-146"}
+{"final":"I would like a large room with a king bed, one bathroom, free breakfast and I would like to know the parking costs.","id":"dev-join-147"}
+{"final":"And what's the cost?","id":"dev-join-148"}
+{"final":"Yes, wife and their two children.","id":"dev-join-149"}
+{"final":"And we are working on a new sampling.","id":"dev-join-150"}
+{"final":"I can understand and appreciate the use of the harmonica to create an iconic sound despite the fact that this is meant to be a satirical or humorous piece.","id":"dev-join-151"}
+{"final":"Can you tell me how they're doing, How they're doing right now?","id":"dev-join-152"}
+{"final":"I think I'll go with the first one, the Italian place.","id":"dev-join-153"}
+{"final":"I'd like least a four-star hotel with good ratings.","id":"dev-join-154"}
+{"final":"I would like a ticket for that movie, please.","id":"dev-join-155"}
+{"final":"A nonstop is preferable, but if there aren't any available, then I'll take a layover.","id":"dev-join-156"}
+{"final":"Sois that streaming on iTunes?","id":"dev-join-157"}
+{"final":"I'm a big fan of the Philadelphia Union.","id":"dev-join-158"}
+{"final":"Are they reasonable pricing?","id":"dev-join-159"}
+{"final":"Yes, and the ride type has to be shared.","id":"dev-keep-be-0"}
+{"final":"No, that would be all, thank you, bye.","id":"dev-keep-be-1"}
+{"final":"It should be heated.","id":"dev-keep-be-2"}
+{"final":"If you could do that for me, I would be greatly appreciative.","id":"dev-keep-be-3"}
+{"final":"It should be Kid friendly.","id":"dev-keep-be-4"}
+{"final":"Well, I'll be right there.","id":"dev-keep-be-5"}
+{"final":"That'll be for tonight.","id":"dev-keep-be-6"}
+{"final":"I need to be picked up now ASAP.","id":"dev-keep-be-7"}
+{"final":"It should be in the French Quarter.","id":"dev-keep-be-8"}
+{"final":"And then, I want it to be really chill, really cozy feeling.","id":"dev-keep-be-9"}
+{"final":"I want to be in first class and for it to be non stop.","id":"dev-keep-be-10"}
+{"final":"I'll be waiting for the email.","id":"dev-keep-be-11"}
+{"final":"I would like it to be a four or five-star hotel.","id":"dev-keep-be-12"}
+{"final":"I want both of them to be small.","id":"dev-keep-be-13"}
+{"final":"I would like it to be at least a four-star.","id":"dev-keep-be-14"}
+{"final":"I want something Japanese but it would be nice if they could do both teppan grill and sushi.","id":"dev-keep-be-15"}
+{"final":"That's correct, it has to be kid-friendly.","id":"dev-keep-be-16"}
+{"final":"I want to be in business class.","id":"dev-keep-be-17"}
+{"final":"But, I don't want to like be crazy either, you know?","id":"dev-keep-be-18"}
+{"final":"It needs to be moderately priced, has to have a full table service and a full bar.","id":"dev-keep-be-19"}
+{"final":"I want the atmosphere to be chic and upscale kind of posh.","id":"dev-keep-be-20"}
+{"final":"Is there another one that you might be able to recommend?","id":"dev-keep-be-21"}
+{"final":"I'm going to be staying at the Inn at Squaw Creek Squaw Valley in California.","id":"dev-keep-be-22"}
+{"final":"I'd like one to be a lamb gyro with tomato, onion, and tzatziki sauce.","id":"dev-keep-be-23"}
+{"final":"And some of the stuff that I would like in the rooms would be a view of the ocean.","id":"dev-keep-be-24"}
+{"final":"I'd like the total travel time to be as little as possible.","id":"dev-keep-be-25"}
+{"final":"And if we can get a booth table with that, that would be great.","id":"dev-keep-be-26"}
+{"final":"Oh, the morning would be best.","id":"dev-keep-be-27"}
+{"final":"I'd like for it to be near the French Quarter with parking.","id":"dev-keep-be-28"}
+{"final":"It must be moderately priced and good atmosphere.","id":"dev-keep-be-29"}
+{"final":"I should be able to catch a ride.","id":"dev-keep-be-30"}
+{"final":"Okay, then so be it.","id":"dev-keep-be-31"}
+{"final":"And I want it to be located near a ski area.","id":"dev-keep-be-32"}
+{"final":"My ride, is it going to be a shared pool ride, or is it just going to be a regular Lyft?","id":"dev-keep-be-33"}
+{"final":"That's going to be let me look up the address again real quick.","id":"dev-keep-be-34"}
+{"final":"And what will be the price of the room?","id":"dev-keep-be-35"}
+{"final":"I would like for it to be a romance movie.","id":"dev-keep-be-36"}
+{"final":"And that should be for the Pitts on Middle Street in Boise.","id":"dev-keep-be-37"}
+{"final":"I could like it to be cheap, and I would like it to be near downtown.","id":"dev-keep-be-38"}
+{"final":"And I would like them to be Chicken Wing pizzas, please.","id":"dev-keep-be-39"}
+{"final":"I would like the flight to be in the afternoon.","id":"dev-keep-be-40"}
+{"final":"I want them all to be small.","id":"dev-keep-be-41"}
+{"final":"Yeah, actually, that might be a good one.","id":"dev-keep-be-42"}
+{"final":"Yes, I'd like it to be not a big chain restaurant and I'd like it to be downtown.","id":"dev-keep-be-43"}
+{"final":"Will there be one layover?","id":"dev-keep-be-44"}
+{"final":"I'd like for the ride to be a shared type.","id":"dev-keep-be-45"}
+{"final":"Yes, it's going to be for two adults and two children.","id":"dev-keep-be-46"}
+{"final":"Yeah, we'll pick it up as soon as you let us know that it will be ready.","id":"dev-keep-be-47"}
+{"final":"I don't want to be anywhere near sushi.","id":"dev-keep-be-48"}
+{"final":"Going to be an important dinner so maybe something maybe formal or semi-formal.","id":"dev-keep-be-49"}
+{"final":"Yeah, that's going to be it.","id":"dev-keep-be-50"}
+{"final":"I'll be having three people and one case I made one room.","id":"dev-keep-be-51"}
+{"final":"I'd like it to be casual style.","id":"dev-keep-be-52"}
+{"final":"Okay, The preferences I have are, I want the hotel to be from this Friday to this coming Sunday, Two nights.","id":"dev-keep-be-53"}
+{"final":"And what would be the price?","id":"dev-keep-be-54"}
+{"final":"Sorry, Iam fan of Montreal Impact, what if they won their last game?","id":"dev-keep-if-0"}
+{"final":"I mean if economy is in that budget, I'd like to do economy then.","id":"dev-keep-if-1"}
+{"final":"I want to know if indoor seating will be relatively expensive and not have a bar.","id":"dev-keep-if-2"}
+{"final":"And I'm wondering if the hotel can feel upscale.","id":"dev-keep-if-3"}
+{"final":"Thank you, can you tell me if the TV doesn't have it?","id":"dev-keep-if-4"}
+{"final":"I need the non-stop one, if possible.","id":"dev-keep-if-5"}
+{"final":"Yeah, I was wondering if you could help me find a movie to watch tonight at home?","id":"dev-keep-if-6"}
+{"final":"Can you tell me if they're open for dinner this Sunday?","id":"dev-keep-if-7"}
+{"final":"Do you know if there's a dress code?","id":"dev-keep-if-8"}
+{"final":"And I'm wondering if a restaurant will be available nearby or on the grounds of the hotel?","id":"dev-keep-if-9"}
+{"final":"And then, it will be good if there was a bar nearby.","id":"dev-keep-if-10"}
+{"final":"And if so, where?","id":"dev-keep-if-11"}
+{"final":"I want to fly business class, So if you can put me on a business class flight with the latest departure and the latest return, That would be great.","id":"dev-keep-if-12"}
+{"final":"I would prefer a non-stop flight, but I'm willing to compromise and make one stop if it would get me a cheaper flight.","id":"dev-keep-if-13"}
+{"final":"That flight works for me if I could have that flight booked, please.","id":"dev-keep-if-14"}
+{"final":"Yeah, if something of free Wi-Fi and free breakfast.","id":"dev-keep-if-15"}
+{"final":"Let me see if I can change movies.","id":"dev-keep-if-16"}
+{"final":"Want to see if you could schedule with Intelligent Auto Imports for me.","id":"dev-keep-if-17"}
+{"final":"So, can you tell me if the room has a balcony, coffee maker and flat screen TV?","id":"dev-keep-if-18"}
+{"final":"Can you see if there's something near there?","id":"dev-keep-if-19"}
+{"final":"I'd like to know if there are any Oscar nominations for the movie?","id":"dev-keep-if-20"}
+{"final":"And if you could make the two cheeses gluten-free crust.","id":"dev-keep-if-21"}
+{"final":"At the Clave, in the afternoon, if that's possible.","id":"dev-keep-if-22"}
+{"final":"I would like something with non-stop if I could, please.","id":"dev-keep-if-23"}
+{"final":"I want to know if the room has an ocean-view, balcony, a mini refrigerator, a king bed and in-room coffee and a flat-screen TV?","id":"dev-keep-if-24"}
+{"final":"At least the next showing if possible.","id":"dev-keep-if-25"}
+{"final":"I'll pay for it if I have to, But it has to be high speed.","id":"dev-keep-if-26"}
+{"final":"Or southern food if you have that as well.","id":"dev-keep-if-27"}
+{"final":"As soon as possible if it all possible, please.","id":"dev-keep-if-28"}
+{"final":"Do you know if they are playing this Saturday?","id":"dev-keep-if-29"}
+{"final":"Great, do you know if they are playing today?","id":"dev-keep-if-30"}
+{"final":"For the amenities, I'm wondering if a restaurant with the full bars are also on the hotel grounds.","id":"dev-keep-if-31"}
+{"final":"And, do you know if they are playing?","id":"dev-keep-if-32"}
+{"final":"It's okay if you don't find anything.","id":"dev-keep-if-33"}
+{"final":"Maybe that they have a menu online and if they have I prefer a gluten free option.","id":"dev-keep-if-34"}
+{"final":"I would like an UberX or a Lyft regular.","id":"dev-clean-0"}
+{"final":"Yeah, I'd like to rent that.","id":"dev-clean-1"}
+{"final":"Is that right, the theater?","id":"dev-clean-2"}
+{"final":"How many games back are from first are Sporting Kansas City?","id":"dev-clean-3"}
+{"final":"What is the record for the Oklahoma City Thunder?","id":"dev-clean-4"}
+{"final":"I also want to make sure it's at least four stars.","id":"dev-clean-5"}
+{"final":"Tell me about that place.","id":"dev-clean-6"}
+{"final":"Wow, thank you so much, Google.","id":"dev-clean-7"}
+{"final":"Can I get it on Google Play?","id":"dev-clean-8"}
+{"final":"I'm interested to rent a mystery movie that has a lead female actor in it.","id":"dev-clean-9"}
+{"final":"Can you send me a recipe for grilled salmon, please?","id":"dev-clean-10"}
+{"final":"Hello, can I listen to Lil Peep?","id":"dev-clean-11"}
+{"final":"Okay, let's do a shared.","id":"dev-clean-12"}
+{"final":"So, my car recently started leaking oil.","id":"dev-clean-13"}
+{"final":"Okay, something still a little more heavy?","id":"dev-clean-14"}
+{"final":"Can I get a room with a balcony?","id":"dev-clean-15"}
+{"final":"Are there any comedy films?","id":"dev-clean-16"}
+{"final":"It doesn't matter, but so we can leave in the morning, and we prefer to come back around in the evening on a return trip.","id":"dev-clean-17"}
+{"final":"Yes, I'm looking for a hotel with an ocean view, a balcony, for a mini-fridge, or a king-size bed.","id":"dev-clean-18"}
+{"final":"So, number of stops doesn't matter or anything like that.","id":"dev-clean-19"}
+{"final":"Hi, I'd like some help browsing the music of Kenny Chesney.","id":"dev-clean-20"}
+{"final":"Like three or four is okay.","id":"dev-clean-21"}
+{"final":"Could you tell me about Open Kitchen?","id":"dev-clean-22"}
+{"final":"I was want to order some barbecue for two people.","id":"dev-clean-23"}
+{"final":"I will look them up a little later, but I think I'll take that hotel.","id":"dev-clean-24"}
+{"final":"I'm wondering if you could find something like this.","id":"dev-clean-25"}
+{"final":"Two small thick-crust pizzas.","id":"dev-clean-26"}
+{"final":"The standard room is fine.","id":"dev-clean-27"}
+{"final":"That one was excellent.","id":"dev-clean-28"}
+{"final":"I think, I can look into that movie.","id":"dev-clean-29"}
+{"final":"Can you tell me what place the Minnesota United FC is in?","id":"dev-clean-30"}
+{"final":"This is for one person, and I'd like a king-size bed.","id":"dev-clean-31"}
+{"final":"Can you play another one, please?","id":"dev-clean-32"}
+{"final":"It should have five star and up Google rating.","id":"dev-clean-33"}
+{"final":"I didn't hear the question.","id":"dev-clean-34"}
+{"final":"Okay, I'll choose the last option.","id":"dev-clean-35"}
+{"final":"Could you help me with setting up an appointment at Intelligent auto imports?","id":"dev-clean-36"}
+{"final":"Can you name me two?","id":"dev-clean-37"}
+{"final":"Hi, can I hear a song by Weezer?","id":"dev-clean-38"}
+{"final":"Do they have any sort of like a spicy pepper like jalapeños or something like that?","id":"dev-clean-39"}
+{"final":"Capital Grille in Baltimore.","id":"dev-clean-40"}
+{"final":"Yeah, That one's good, Too.","id":"dev-clean-41"}
+{"final":"I would like to order four large pizzas from Bella Luna.","id":"dev-clean-42"}
+{"final":"Something, ideally, that of about four stars that takes credit card.","id":"dev-clean-43"}
+{"final":"return from Chicago is fine with me.","id":"dev-clean-44"}
+{"final":"Business class, and I like to have it by a window seat.","id":"dev-clean-45"}
+{"final":"The first one sounds more like something I'm looking for.","id":"dev-clean-46"}
+{"final":"Hello, I'd like to take out some food tonight.","id":"dev-clean-47"}
+{"final":"That'll be it today.","id":"dev-clean-48"}
+{"final":"Can you tell me that what should I do for dinner tonight?","id":"dev-clean-49"}
+{"final":"Are there any flights that only have one stop?","id":"dev-clean-50"}
+{"final":"Will you, please, repeat the names, please?","id":"dev-clean-51"}
+{"final":"Actually, something expensive would be nice, but whatever you can find.","id":"dev-clean-52"}
+{"final":"How is Swansea City doing?","id":"dev-clean-53"}
+{"final":"Do you have anything with Melissa McCarthy or Amy Schumer?","id":"dev-clean-54"}
+{"final":"So I'm going to choose the second restaurant, please.","id":"dev-clean-55"}
+{"final":"That song is great, too.","id":"dev-clean-56"}
+{"final":"Just as many as possible to make it the cheapest possible.","id":"dev-clean-57"}
+{"final":"Those are my favorites.","id":"dev-clean-58"}
+{"final":"Great, can you go ahead and book for me?","id":"dev-clean-59"}
+{"final":"I prefer to leave out of Newark.","id":"dev-clean-60"}
+{"final":"I'm sorry about coming Saturday.","id":"dev-clean-61"}
+{"final":"Thank you for your help today finding a movie bye-bye.","id":"dev-clean-62"}
+{"final":"What place are the Chicago White Sox is in?","id":"dev-clean-63"}
+{"final":"The next showing is good.","id":"dev-clean-64"}
+{"final":"Hi, I need help finding a flight to Glasgow, Scotland.","id":"dev-clean-65"}
+{"final":"I was looking for a nice sit-down restaurant in San Francisco to eat dinner.","id":"dev-clean-66"}
+{"final":"Yeah, it's got an oil leak, so I want to get it seen as soon as possible.","id":"dev-clean-67"}
+{"final":"I need to order a Uber or Lyft driver for a party of five.","id":"dev-clean-68"}
+{"final":"What is the ticket prices?","id":"dev-clean-69"}
+{"final":"Can you book that one ticket?","id":"dev-clean-70"}
+{"final":"I'm looking for a movie to watch tonight at home.","id":"dev-clean-71"}
+{"final":"I'm wondering what record right now does Manchester City have?","id":"dev-clean-72"}
+{"final":"I don't know if you got that part, or I said that part.","id":"dev-clean-73"}
+{"final":"Yeah, Uber XL is fine.","id":"dev-clean-74"}
+{"final":"I was thinking about a film critic favorite.","id":"dev-clean-75"}
+{"final":"And one more question, who directed the movie?","id":"dev-clean-76"}
+{"final":"So, I'll just take one for that then.","id":"dev-clean-77"}
+{"final":"Well, thank you for providing all these songs to me.","id":"dev-clean-78"}
+{"final":"Hi Assistant, I'd like to book a trip to Rome to visit my cousin.","id":"dev-clean-79"}
+{"final":"Something later than that, Perhaps, The latest possible.","id":"dev-clean-80"}
+{"final":"Thank you for showing that to me.","id":"dev-clean-81"}
+{"final":"And now I'm interested in a Korean place.","id":"dev-clean-82"}
+{"final":"Okay, I'd say around a four or five-star hotel.","id":"dev-clean-83"}
+{"final":"And a large Dr Pepper, please.","id":"dev-clean-84"}
+{"final":"And what are their ratings, the Rotten Tomato scores on those two?","id":"dev-clean-85"}
+{"final":"I'd like to hear some songs.","id":"dev-clean-86"}
+{"final":"I'm looking for a splinter.","id":"dev-clean-87"}
+{"final":"I'd like to listen to something by the incredibly talented artist Hough Simon.","id":"dev-clean-88"}
+{"final":"I'd like the movie times for Davis, California.","id":"dev-clean-89"}
+{"final":"I need ride type XL.","id":"dev-clean-90"}
+{"final":"Can you go ahead and send me over their address and phone number, so I can go over?","id":"dev-clean-91"}
+{"final":"Can you find me like a, Just the cheapest hotels in St.","id":"dev-clean-92"}
+{"final":"Does Montreal Impact play today?","id":"dev-clean-93"}
+{"final":"And how well reviewed is the second option?","id":"dev-clean-94"}
+{"final":"Can I get the one that is located Downtown with take out service?","id":"dev-clean-95"}
+{"final":"Well, Today take reservations, perhaps I'll change the date to another day.","id":"dev-clean-96"}
+{"final":"Okay, And which TV station is going to air that?","id":"dev-clean-97"}
+{"final":"Hello, I need to order takeout food for three people.","id":"dev-clean-98"}
+{"final":"Just keep the dates I had.","id":"dev-clean-99"}
+{"final":"I do want a valet service there.","id":"dev-clean-100"}
+{"final":"This track is definitely the best one.","id":"dev-clean-101"}
+{"final":"Hi, I'm a major league baseball fan and I'd like to know more about my favorite team the Philadelphia Phillies.","id":"dev-clean-102"}
+{"final":"I need a room with a king-size bed.","id":"dev-clean-103"}
+{"final":"The next available time at any theater?","id":"dev-clean-104"}
+{"final":"I'm really looking for the cheapest flight.","id":"dev-clean-105"}
+{"final":"Somewhere in Rochester, New York.","id":"dev-clean-106"}
+{"final":"Okay, I'll take those.","id":"dev-clean-107"}
+{"final":"I would like an Uber shared, please.","id":"dev-clean-108"}
+{"final":"I want to book that movie ticket.","id":"dev-clean-109"}
+{"final":"Do they have vegetarian food?","id":"dev-clean-110"}
+{"final":"Can you play something pop for me?","id":"dev-clean-111"}
+{"final":"I hate this song.","id":"dev-clean-112"}
+{"final":"I need to see it in the afternoon today.","id":"dev-clean-113"}
+{"final":"Whom are they going to play next?","id":"dev-clean-114"}
+{"final":"Yeah, That is a good song.","id":"dev-clean-115"}
+{"final":"Hey, could you tell me what place Crystal Palace is in English Premier League soccer ?","id":"dev-clean-116"}
+{"final":"I'd like to listen to some Gary Allan.","id":"dev-clean-117"}
+{"final":"I'm sorry, a bar at the hotel.","id":"dev-clean-118"}
+{"final":"Yeah, let's purchase that.","id":"dev-clean-119"}
+{"final":"And like where is it exactly in the city?","id":"dev-clean-120"}
+{"final":"Oh, that might be fun.","id":"dev-clean-121"}
+{"final":"Hello, I'm looking for a movie to go see tonight.","id":"dev-clean-122"}
+{"final":"This is a great so far.","id":"dev-clean-123"}
+{"final":"Can you find something he did live?","id":"dev-clean-124"}
+{"final":"My girlfriend used to dance that tune.","id":"dev-clean-125"}
+{"final":"Where is the first game being played?","id":"dev-clean-126"}
+{"final":"No, pay it for me.","id":"dev-clean-127"}
+{"final":"Who is the Sporting KC goalkeeper?","id":"dev-clean-128"}
+{"final":"And what place is Newcastle United in?","id":"dev-clean-129"}
+{"final":"Does BJ's serve french fries, as well?","id":"dev-clean-130"}
+{"final":"Yeah, I need a large bowl of chicken soup.","id":"dev-clean-131"}
+{"final":"I'm staying from Friday to Sunday night.","id":"dev-clean-132"}
+{"final":"Can you send me a newer song by him?","id":"dev-clean-133"}
+{"final":"You can continue playing this song.","id":"dev-clean-134"}
+{"final":"Which I realize is a very odd combination.","id":"dev-clean-135"}
+{"final":"Hi, I would like to stay in a hotel in San Francisco.","id":"dev-clean-136"}
+{"final":"Hello, I'm looking for a restaurant in New Orleans, Louisiana.","id":"dev-clean-137"}
+{"final":"So, I can study enough.","id":"dev-clean-138"}
+{"final":"Going to have a business trip in New York and I would like to book a trip.","id":"dev-clean-139"}
+{"final":"Now, can you play anyone of his songs, just to compare a cover?","id":"dev-clean-140"}
+{"final":"I'm wondering, what record right now does Atlanta United FC have?","id":"dev-clean-141"}
+{"final":"Oh, I think I'd like to go ahead and check that one out.","id":"dev-clean-142"}
+{"final":"I want something with quick service, good prices, and it also has to have a kid's menu.","id":"dev-clean-143"}
+{"final":"It needs to be near Forest Park, Missouri.","id":"dev-clean-144"}
+{"final":"Can you tell me who is in a Guardians?","id":"dev-clean-145"}
+{"final":"Okay, send me the address.","id":"dev-clean-146"}
+{"final":"Hi, I like to schedule an appointment and intelligent auto imports.","id":"dev-clean-147"}
+{"final":"What's the address of the place that meets the preferences, sir?","id":"dev-clean-148"}
+{"final":"I really need help finding a hotel in St.","id":"dev-clean-149"}
+{"final":"I would like Ethiopian food.","id":"dev-clean-150"}
+{"final":"Are they playing tonight?","id":"dev-clean-151"}
+{"final":"I don't need a standard.","id":"dev-clean-152"}
+{"final":"Which actors are in that movie?","id":"dev-clean-153"}
+{"final":"Some of them might be out totally, some of them are only out a little bit, but.","id":"dev-clean-154"}
+{"final":"Can you make the spicy rigatoni vodka a large?","id":"dev-clean-155"}
+{"final":"Can I get a different song off of one of their newer albums?","id":"dev-clean-156"}
+{"final":"Yeah, Korean Barbeque sound's good.","id":"dev-clean-157"}
+{"final":"Which has the best rating?","id":"dev-clean-158"}
+{"final":"I want a formal restaurant.","id":"dev-clean-159"}
+{"final":"Yeah, that's classic Guns N' Roses.","id":"dev-clean-160"}
+{"final":"I'd like it to be near the ballpark.","id":"dev-clean-161"}
+{"final":"Are you saying those are the times of closer movies?","id":"dev-clean-162"}
+{"final":"I would like to see Aquaman in Jersey City.","id":"dev-clean-163"}
+{"final":"Yes, I'm looking for a steak house near me.","id":"dev-clean-164"}
+{"final":"Yes, I like the suite with a balcony.","id":"dev-clean-165"}
+{"final":"I like Thai, American and Vietnamese.","id":"dev-clean-166"}
+{"final":"Hi there, I would like to order a take out for pizza for one person.","id":"dev-clean-167"}
+{"final":"Hi, I'm a fan of the Colorado Rapids and the MLS.","id":"dev-clean-168"}
+{"final":"I want one that's rated highly and that has good reviews.","id":"dev-clean-169"}
+{"final":"I like a room that have a full kitchen.","id":"dev-clean-170"}
+{"final":"What kind of different rooms are there and their prices?","id":"dev-clean-171"}
+{"final":"Can you help me order some Indian food?","id":"dev-clean-172"}
+{"final":"Okay, let's go with the standard room.","id":"dev-clean-173"}
+{"final":"I'll be waiting for you.","id":"dev-clean-174"}
+{"final":"Now that's the case, yeah, I think I'll check them out.","id":"dev-clean-175"}
+{"final":"Okay, you can book that one.","id":"dev-clean-176"}
+{"final":"Alright how about home records for each?","id":"dev-clean-177"}
+{"final":"I'd like to go with American Airlines, if possible.","id":"dev-clean-178"}
+{"final":"What are the latest movie time for this?","id":"dev-clean-179"}
+{"final":"I'm in Las Vegas, Nevada and I need a order a Lyft, please.","id":"dev-clean-180"}
+{"final":"Same preferences, if you can.","id":"dev-clean-181"}
+{"final":"Hi, I want to order pizzas on Bella Luna.","id":"dev-clean-182"}
+{"final":"Can I get whole milk, please?","id":"dev-clean-183"}
+{"final":"Had enough, that'll be it for today.","id":"dev-clean-184"}
+{"final":"Hello, I want you to find me a round-trip commercial airline flight.","id":"dev-clean-185"}
+{"final":"I would like a ticket for that movie.","id":"dev-clean-186"}
+{"final":"Okay, I like that one a lot.","id":"dev-clean-187"}
+{"final":"Yes, no smoking, flat TV with cable, air conditioner, and carpet.","id":"dev-clean-188"}
+{"final":"And I'd like to pick it up near Staples Center in LA.","id":"dev-clean-189"}
+{"final":"I'd like to make an appointment at Intelligent Auto Imports for my car.","id":"dev-clean-190"}
+{"final":"Just a probably a medium is good enough.","id":"dev-clean-191"}
+{"final":"Make sure there's thin crust.","id":"dev-clean-192"}
+{"final":"Is that any better?","id":"dev-clean-193"}
+{"final":"Probably, the best intro to any song.","id":"dev-clean-194"}
+{"final":"No, you can go ahead and book it.","id":"dev-clean-195"}
+{"final":"Hi, I need your help in finding a restaurant in La Jolla, California.","id":"dev-clean-196"}
+{"final":"Right now I have an artist in mind.","id":"dev-clean-197"}
+{"final":"I was looking to see fighting West Pine, Flint, Michigan.","id":"dev-clean-198"}
+{"final":"Can you book me tickets for Aqua Man tonight in New York City for two?","id":"dev-clean-199"}
+{"final":"Do they have a view to the beach?","id":"dev-clean-200"}
+{"final":"Pepperoni and anchovies, please.","id":"dev-clean-201"}
+{"final":"Does it have any rooms with king size beds?","id":"dev-clean-202"}
+{"final":"Actually I had a question about the second restaurant before you book it.","id":"dev-clean-203"}
+{"final":"Tell me about some of the appetizers.","id":"dev-clean-204"}
+{"final":"How much does that ticket cost?","id":"dev-clean-205"}
+{"final":"Yes, I need to book an appointment to see a mechanic at intelligent auto parts.","id":"dev-clean-206"}
+{"final":"Okay, how much please?","id":"dev-clean-207"}
+{"final":"Hi, I was thinking about watching a movie at home tonight, and I need some help picking one.","id":"dev-clean-208"}
+{"final":"I prefer non stop, but if there's one layover that's okay.","id":"dev-clean-209"}
+{"final":"What have you got?","id":"dev-clean-210"}
+{"final":"Tell me the address and the hours?","id":"dev-clean-211"}
+{"final":"I need to know the record of Tottenham, Hotspur.","id":"dev-clean-212"}
+{"final":"Hey, I really actually want to hear something else and let me tell you that is the quite essential Asem Shama song.","id":"dev-clean-213"}
+{"final":"Alright, that'll be great.","id":"dev-clean-214"}
+{"final":"Actually, I've seen the trailer.","id":"dev-clean-215"}
+{"final":"Hi, I like to order a food for takeout for three people.","id":"dev-clean-216"}
+{"final":"Did Tim Burton direct that movie?","id":"dev-clean-217"}
+{"final":"Hi, I'm trying to find out more about the Torino F.","id":"dev-clean-218"}
+{"final":"No, I'll take instead that early one.","id":"dev-clean-219"}
+{"final":"And are there any recreational parks nearby?","id":"dev-clean-220"}
+{"final":"I want four-star or better reviews.","id":"dev-clean-221"}
+{"final":"Hi, I'd like to order pork food for take-out for one person, please.","id":"dev-clean-222"}
+{"final":"It's playing this time, but that's the wrong album.","id":"dev-clean-223"}
+{"final":"Yeah, I mean that's it.","id":"dev-clean-224"}
+{"final":"How busy is the second restaurant?","id":"dev-clean-225"}
+{"final":"I have some music in mind.","id":"dev-clean-226"}
+{"final":"The third pizza, I want it meat lovers.","id":"dev-clean-227"}
+{"final":"Who is the coach of Brooklyn Nets?","id":"dev-clean-228"}
+{"final":"Could you find something else by them a little more upbeat?","id":"dev-clean-229"}
+{"final":"Kindly fetch the ticket prices nearby.","id":"dev-clean-230"}
+{"final":"Whom did they play last and what was the score?","id":"dev-clean-231"}
+{"final":"I need the cheapest flight I can get.","id":"dev-clean-232"}
+{"final":"Today, I need your help planning a dinner at The Larrupin Cafe in Trinidad, California.","id":"dev-clean-233"}
+{"final":"Yeah, I want to I want to get a drink, so they need to have a bar.","id":"dev-clean-234"}
+{"final":"I'd like to hear something by Pat Benatar.","id":"dev-clean-235"}
+{"final":"Who are they going to play next?","id":"dev-clean-236"}
+{"final":"Yeah, If it has a pool, that would be great.","id":"dev-clean-237"}
+{"final":"Oh okay, I want to see that one.","id":"dev-clean-238"}
+{"final":"What are their current standings?","id":"dev-clean-239"}
+{"final":"Any seat would work.","id":"dev-clean-240"}
+{"final":"I'd also like for the hotels have a fitness center.","id":"dev-clean-241"}
+{"final":"Hi, could you help with finding a place to have lunch in Sacramento?","id":"dev-clean-242"}
+{"final":"I'm looking for Wi-Fi.","id":"dev-clean-243"}
+{"final":"I need a suite, though.","id":"dev-clean-244"}
+{"final":"Give me the address, please.","id":"dev-clean-245"}
+{"final":"The title of the track is called Terrapin.","id":"dev-clean-246"}
+{"final":"That's correct, large clam chowder.","id":"dev-clean-247"}
+{"final":"I think I want to order an espresso with whole milk and two sugars.","id":"dev-clean-248"}
+{"final":"And I would hope these would be hotels with high star ratings.","id":"dev-clean-249"}
+{"final":"Yeah, we want to go to the Cinemark.","id":"dev-clean-250"}
+{"final":"And are there any hotel accommodations within walking distance nearby?","id":"dev-clean-251"}
+{"final":"And finally, Could you tell me who their manager is?","id":"dev-clean-252"}
+{"final":"Do you think you could find one of her songs that's latest?","id":"dev-clean-253"}
+{"final":"You know, kind of like a resort atmosphere.","id":"dev-clean-254"}
+{"final":"Thanks for calling me.","id":"dev-clean-255"}
+{"final":"It's nominated for an Oscar right?","id":"dev-clean-256"}
+{"final":"I mean, the second choice.","id":"dev-clean-257"}
+{"final":"As cheap as possible.","id":"dev-clean-258"}
+{"final":"Hi, I would like to listen to Lil Peep.","id":"dev-clean-259"}
+{"final":"Can have a full bar.","id":"dev-clean-260"}
+{"final":"How about something newer by the Counting Crows?","id":"dev-clean-261"}
+{"final":"Downtown would be nice.","id":"dev-clean-262"}
+{"final":"Okay, the first one that you said was good.","id":"dev-clean-263"}
+{"final":"Beachfront, very close to the beach.","id":"dev-clean-264"}
+{"final":"Hi, I'd like to hear some music from Barry Manilow.","id":"dev-clean-265"}
+{"final":"Okay, Awesome, What's the rating for the movie?","id":"dev-clean-266"}
+{"final":"Can I get the address for it?","id":"dev-clean-267"}
+{"final":"Hi, I would like to go see the movie Green Book in Los Angeles With three friends.","id":"dev-clean-268"}
+{"final":"Tell me more about number four.","id":"dev-clean-269"}
+{"final":"And, I have two people.","id":"dev-clean-270"}
+{"final":"Thank you so much for you.","id":"dev-clean-271"}
+{"final":"I need your help today getting information about Newcastle United of the English Premier League.","id":"dev-clean-272"}
+{"final":"I need a evening flight.","id":"dev-clean-273"}
+{"final":"I'll choose economy class, then.","id":"dev-clean-274"}
+{"final":"Okay, and then, who's in first place in the National League Central?","id":"dev-clean-275"}
+{"final":"Oh, that's a pretty good song.","id":"dev-clean-276"}
+{"final":"Okay and then coming back.","id":"dev-clean-277"}
+{"final":"Yeah, I was going to do a shared.","id":"dev-clean-278"}
+{"final":"Hey there, how are you?","id":"dev-clean-279"}

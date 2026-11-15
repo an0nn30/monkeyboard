@@ -1,0 +1,9 @@
+{
+  "archived_missed_word_slots": 69,
+  "recovered_from_those_69": 25,
+  "archived_clean_messages_changed": 15,
+  "restored_from_those_15": 4,
+  "holdout_rows": 298,
+  "unique_messages": 149,
+  "all_frozen_hashes_match": true
+}

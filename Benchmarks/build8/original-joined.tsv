@@ -1,0 +1,85 @@
+kind	context	expected	build6	candidate
+fix	Can you send teh	the	the	the
+fix	I will definately	definitely	definitely	definitely
+fix	We should meet tomorow	tomorrow	tomorrow	tomorrow
+fix	I left my keybaord	keyboard	keyboard	keyboard
+fix	I was thinkong	thinking	thinking	thinking
+fix	They were alraedy	already	already	already
+fix	Will you be therr	there	therr	therr
+fix	I'll see you agian	again	agian	again
+fix	Let's talk abotu	about	about	about
+fix	It felt wierd	weird	weird	weird
+fix	I can probablt	probably	probablt	probably
+fix	He hasn't replued	replied	replied	replied
+fix	She is comming	coming	comming	coming
+fix	It's a beautfiul	beautiful	beautiful	beautiful
+fix	I need a cofffee	coffee	coffee	coffee
+fix	Please tell thme	them	thme	thme
+fix	You shoudl	should	should	should
+fix	She woudl	would	would	would
+fix	All of thier	their	their	their
+fix	I dont	don't	don't	don't
+fix	Thnaks	Thanks	Thanks	Thanks
+fix	This is perfetc	perfect	perfect	perfect
+fix	He lives near the libary	library	library	library
+fix	I will recieve	receive	receive	receive
+fix	Do you remmeber	remember	remember	remember
+fix	The delivery is runnign	running	running	running
+fix	They had a differnet	different	differnet	different
+fix	That's a confsuing	confusing	confusing	confusing
+fix	I am actaully	actually	actually	actually
+fix	We got spmething	something	something	something
+keep	I feel well	well	well	well
+keep	Meet me by the well	well	well	well
+keep	I read it on Reddit	Reddit	Reddit	Reddit
+keep	Talk to Dustin	Dustin	Dustin	Dustin
+keep	Sent by Siobhan	Siobhan	Siobhan	Siobhan
+keep	I write SwiftUI	SwiftUI	SwiftUI	SwiftUI
+keep	I loved the café	café	café	café
+keep	That's naïve	naïve	naïve	naïve
+keep	This is kinda	kinda	kinda	kinda
+keep	I said yep	yep	yep	yep
+keep	Send the link pls	pls	pls	pls
+keep	I will message ASAP	ASAP	ASAP	ASAP
+keep	Try user_id	id	id	id
+keep	Open example.teh	teh	teh	teh
+keep	Write to me@teh	teh	teh	teh
+keep	The path is /teh	teh	teh	teh
+keep	The tag is #teh	teh	teh	teh
+keep	I need their	their	their	their
+keep	I want dessert	dessert	dessert	dessert
+keep	The color is teal	teal	teal	teal
+keep	Sitting still	still	still	still
+keep	Here’s what I’ll	I’ll	I’ll	I’ll
+keep	My favorite app is MonkeyBoard	MonkeyBoard	MonkeyBoard	MonkeyBoard
+keep	I signed it Zella	Zella	Zella	Zella
+keep	Saw 🌿 today	today	today	today
+keep	Her username is al3x	x	x	x
+keep	Take a different route	route	route	route
+keep	It happened once	once	once	once
+keep	That's sick	sick	sick	sick
+keep	I use git	git	git	git
+next	I'm already on my	way	I|the|you	way|car|phone
+next	I'll see you	later	I|the|you	at|in|soon
+next	Thank you so	much	I|the|you	much|I|that
+next	Let me	know	I|the|you	know|a|get
+next	Do you want	to	I|the|you	to|me|anything
+next	I just got	home	I|the|you	it|the|a
+next	I don't	know	I|the|you	want|think|know
+next	Can you pick	up	I|the|you	up|it|me
+next	I'm running	late	I|the|you	late|out|all
+next	Talk to you	soon	I|the|you	later|soon|tomorrow
+next	See you in	the	I|the|you	a|the|about
+next	Are you still	there	I|the|you	coming|up|at
+next	We should grab	coffee	I|the|you	a|the|her
+next	What do you	think	I|the|you	have|think|need
+next	I have no	idea	I|the|you	idea|time|problem
+next	That sounds	good	I|the|you	good|great|like
+next	I'll be right	back	I|the|you	there|back|outside
+next	Have a good	night	I|the|you	night|day|one
+next	Please call me	back	I|the|you	an|a|the
+next	Looking forward	to	I|the|you	to|me|the
+next	My keys are in	the	I|the|you	the|a|town
+next	Send me the	address	I|the|you	address|receipt|tickets
+next	I left my	wallet	I|the|you	phone|book|house
+next	Tell me	why	I|the|you	the|what|how

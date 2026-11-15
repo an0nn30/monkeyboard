@@ -7,3 +7,34 @@ xcuserdata/
 keyboard-engine/target/
 
 __pycache__/
+.ruff_cache/
+
+# Local replay data derived from the desktop S:/C: training file.
+typo_sentences.md
+/Benchmarks/build17/sentences.tsv
+/Benchmarks/build17/confirmation.tsv
+/Benchmarks/build17/*.jsonl
+/Benchmarks/build18/sentences.tsv
+/Benchmarks/build18/challenge.tsv
+/Benchmarks/build18/*.jsonl
+/Benchmarks/build19/sentences.tsv
+/Benchmarks/build19/confirmation.tsv
+/Benchmarks/build19/audit.tsv
+/Benchmarks/build19/*.jsonl
+/Benchmarks/build20/short.tsv
+/Benchmarks/build20/short*.jsonl
+/Benchmarks/build20/development20.jsonl
+/Benchmarks/build20/examples*.jsonl
+/Benchmarks/build21/paired.tsv
+/Benchmarks/build21/paired*.jsonl
+/Benchmarks/build21/regression*.jsonl
+/Benchmarks/**/desktop*.jsonl.gz
+/Benchmarks/**/desktop-check*.json
+/Benchmarks/**/clean-*.jsonl.gz
+/Benchmarks/build41/regressions.json
+/Benchmarks/**/regressions-*.jsonl.gz
+/Benchmarks/**/regressions-summary.json
+
+# Recovery material tied to the local author's chat archive.
+/Benchmarks/build56/holdout/custody.json
+/Benchmarks/build56/holdout/authored.recovery.sealed

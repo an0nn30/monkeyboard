@@ -1,0 +1,40 @@
+{
+  "frozen_input_files_verified": 99,
+  "simulator": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+  "installed_bundle_versions": {
+    "dev.dustin.monkeyboard": "39",
+    "dev.dustin.monkeyboard.keyboard": "39"
+  },
+  "benchmark_inputs_and_outputs": {
+    "desktop": {
+      "matched_unique_ids": 100000,
+      "raw_candidate_sha256": "8db72dcd96a97ab233d870b4c817180f2c77f871ffd863eb430a53bf458c81d9",
+      "raw_baseline_sha256": "90a58bf31607a1b19e40f73b11ce51e9a2f4c1ef9542ce72a40cfcb8b9016c58"
+    },
+    "clean": {
+      "matched_unique_ids": 10764,
+      "raw_candidate_sha256": "b838994b5d9431ffc56dc6b532d46b61e0fe421a92a25a3a7c94aaa6da9a361a",
+      "raw_baseline_sha256": "fcae4bb8dead25311d1c79fcdbe21850cf5f3d96b05b8a7bd1663d67baf33f6d"
+    },
+    "review": {
+      "matched_unique_ids": 356,
+      "raw_candidate_sha256": "166eab206f0cc259ac2a3b98a4961810703352b551f91bb3e8f7993e3647f2f3",
+      "raw_baseline_sha256": "7189af9d9be247064da56b33cac189fb46bd80d1ea3f7f1a00a0381a312654cf"
+    },
+    "final": {
+      "matched_unique_ids": 356,
+      "raw_candidate_sha256": "877d2fe81e7293aee0e657a7c8254a4c2b73196b737a449fb550b9a1d23a5800",
+      "raw_baseline_sha256": "86111bc4340225c71953a7ec7c692d72293039d2e6892738114b3bf3e98bb4ff"
+    }
+  },
+  "second_100k_simulator_run_matched_first_by_id": true,
+  "xctest_key_tap_cases_passed": [
+    "testAnotherAfterTestAndUndo",
+    "testContextRepairsEarlierRealWordWithoutLosingTheFollowingWordOnUndo",
+    "testLearnedShortWordsInTheTypingField",
+    "testTextingContractionAndUndo",
+    "testTrainedContextPreservesTenseAndMeaning"
+  ],
+  "rust_unit_tests_passed": 17,
+  "scorer_unit_tests_passed": 9
+}

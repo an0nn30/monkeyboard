@@ -1,0 +1,53 @@
+# Locked before tuning; use only after selecting the build. Same rubric as development.
+fix	Hey im	I'm
+fix	Hang on Ive	I've
+fix	ill text when im	I'm
+fix	She said theyve	they've
+fix	The kids werent	weren't
+fix	We mightve	might've
+fix	I thought youd	you'd
+fix	It shouldnt	shouldn't
+fix	We hadnt	hadn't
+fix	I couldnt	couldn't
+fix	Let's grab breafkast	breakfast
+fix	Stuck in traffci	traffic
+fix	They're waitign	waiting
+fix	Are you outsied	outside
+fix	The train is delyaed	delayed
+fix	Did you get my messgae	message
+keep	I think its	its
+keep	I lost my id	id
+keep	Check the oil well	well
+keep	It was his best shot	shot
+keep	Sounds good tbh	tbh
+keep	Are you free rn	rn
+keep	Share the ETA	ETA
+keep	I saw the handle @Ive	Ive
+keep	Go to docs.im	im
+keep	I'm pretty sure	sure
+keep	Talk to Zuri	Zuri
+keep	She sells seashells	seashells
+keep	Send me a dm	dm
+keep	That's a sick pic	pic
+keep	We're meeting Jae	Jae
+keep	The archived format is IM	IM
+next	We can hang	out|here|there
+next	I'll swing	by|over|around
+next	I'm stuck in	traffic|line|town
+next	Tell me when	you|you're|to
+next	Can you save me a	seat|spot|slice
+next	I'm just heading	out|home|over
+next	We're almost	there|home|done
+next	Where are my	keys|shoes|glasses
+next	I'll see you on	Monday|Friday|Saturday
+next	Can I give you a	call|ride|hand
+next	Just got off the	phone|bus|train
+next	Meet me out	front|back|there
+next	What should we	eat|bring|do
+next	Are you on your	way|phone|own
+next	Didn't mean to	wake|send|bother
+next	Call me as soon as	you|possible
+next	I'm not sure	if|what|yet
+next	It's been a	long|while|busy
+next	We can leave	in|now|after
+next	Can you bring a	charger|jacket|bag

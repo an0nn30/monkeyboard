@@ -187,6 +187,16 @@ private struct KeyboardSettings: View {
                             Link("Original dataset", destination: URL(string: "https://github.com/google-research-datasets/Taskmaster/tree/master/TM-1-2019")!)
                             Link("Creative Commons Attribution 4.0", destination: URL(string: "https://creativecommons.org/licenses/by/4.0/")!)
                         }
+                        Section("Taskmaster-2 · 2020") {
+                            Text("Google LLC and the Taskmaster contributors. MonkeyBoard uses English conversational transcripts to train its prediction and word-boundary models.")
+                            Link("Original dataset", destination: URL(string: "https://github.com/google-research-datasets/Taskmaster/tree/d92cb6af3005f1dc09c39e75e7daf4a04905e00b/TM-2-2020")!)
+                            Link("Creative Commons Attribution 4.0", destination: URL(string: "https://creativecommons.org/licenses/by/4.0/")!)
+                        }
+                        Section("SMS Spam Collection") {
+                            Text("Tiago Almeida and José María Gómez Hidalgo. MonkeyBoard uses separate groups of non-spam messages to learn casual spellings, train word-context weights, and evaluate corrections.")
+                            Link("UCI dataset", destination: URL(string: "https://archive.ics.uci.edu/dataset/228/sms+spam+collection")!)
+                            Link("Creative Commons Attribution 4.0", destination: URL(string: "https://creativecommons.org/licenses/by/4.0/")!)
+                        }
                         Section("WordNet 3.0") {
                             Text("MonkeyBoard derives word relationships from Princeton University’s English noun definitions.")
                             if let url = Bundle.main.url(forResource: "WordNet-LICENSE", withExtension: "txt"),

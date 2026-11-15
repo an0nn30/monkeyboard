@@ -1,0 +1,53 @@
+kind	context	expected	build6	candidate
+fix	Hey im	I'm	im	I'm
+fix	Hang on Ive	I've	Ive	I've
+fix	ill text when im	I'm	im	I'm
+fix	She said theyve	they've	they've	they've
+fix	The kids werent	weren't	werent	weren't
+fix	We mightve	might've	might've	might've
+fix	I thought youd	you'd	youd	you'd
+fix	It shouldnt	shouldn't	shouldn't	shouldn't
+fix	We hadnt	hadn't	hadnt	hadn't
+fix	I couldnt	couldn't	couldnt	couldn't
+fix	Let's grab breafkast	breakfast	breakfast	breakfast
+fix	Stuck in traffci	traffic	traffic	traffic
+fix	They're waitign	waiting	waiting	waiting
+fix	Are you outsied	outside	outsied	outside
+fix	The train is delyaed	delayed	delayed	delayed
+fix	Did you get my messgae	message	message	message
+keep	I think its	its	its	its
+keep	I lost my id	id	id	id
+keep	Check the oil well	well	well	well
+keep	It was his best shot	shot	shot	shot
+keep	Sounds good tbh	tbh	tbh	tbh
+keep	Are you free rn	rn	rn	rn
+keep	Share the ETA	ETA	ETA	ETA
+keep	I saw the handle @Ive	Ive	Ive	Ive
+keep	Go to docs.im	im	im	im
+keep	I'm pretty sure	sure	sure	sure
+keep	Talk to Zuri	Zuri	Zuri	Zuri
+keep	She sells seashells	seashells	seashells	seashells
+keep	Send me a dm	dm	dm	dm
+keep	That's a sick pic	pic	pic	pic
+keep	We're meeting Jae	Jae	Jae	Jae
+keep	The archived format is IM	IM	IM	IM
+next	We can hang	out|here|there	I|the|you	on|up|out
+next	I'll swing	by|over|around	I|the|you	by|my|I
+next	I'm stuck in	traffic|line|town	I|the|you	the|my|a
+next	Tell me when	you|you're|to	I|the|you	I|the|they
+next	Can you save me a	seat|spot|slice	I|the|you	coffee|ride|car
+next	I'm just heading	out|home|over	I|the|you	to|out|over
+next	We're almost	there|home|done	I|the|you	all|everything|done
+next	Where are my	keys|shoes|glasses	I|the|you	other|car|best
+next	I'll see you on	Monday|Friday|Saturday	I|the|you	the|my|that
+next	Can I give you a	call|ride|hand	I|the|you	call|head|time
+next	Just got off the	phone|bus|train	I|the|you	car|street|one
+next	Meet me out	front|back|there	I|the|you	of|with|a
+next	What should we	eat|bring|do	I|the|you	go|call|do
+next	Are you on your	way|phone|own	I|the|you	way|help|own
+next	Didn't mean to	wake|send|bother	I|the|you	be|say|break
+next	Call me as soon as	you|possible	I|the|you	possible|you|they
+next	I'm not sure	if|what|yet	I|the|you	what|if|I
+next	It's been a	long|while|busy	I|the|you	long|while|day
+next	We can leave	in|now|after	I|the|you	the|it|that
+next	Can you bring a	charger|jacket|bag	I|the|you	friend|coffee|good

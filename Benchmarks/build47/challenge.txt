@@ -1,0 +1,60 @@
+context|Could you [sent|send] a photo of the chipped saucer when you get home?
+context|That [pear|pair] of garden gloves belongs to my sister.
+context|I might [fine|find] another copy in the box by the stairs.
+context|I [herd|heard] the delivery van pull away a minute ago.
+context|Check [of|if] the small freezer has room for the cake.
+context|The crate of oranges [us|is] blocking the footpath again.
+context|I have to go [hope|home] before the plumber gets there.
+context|Leave the folding chair [be|by] the register for Omar.
+context|I can take the dog right [not|now] while the roads are dry.
+context|I found [tour|your] yellow measuring tape in our shed.
+context|Please get the spare cord [form|from] the bench by the doorway.
+context|Anyone know [wear|where] the drumsticks ended up after practice?
+context|I need to [right|write] the mileage down before the counter resets.
+context|Could we [meat|meet] near the bell tower once the parade ends?
+context|I want to [by|buy] one of those lamps for the reading nook.
+context|He left a fresh [leek|leak] in the hose after he cut the hedge.
+context|I almost hit the [break|brake] when the paper bag blew across the road.
+context|There's no [thyme|time] to change buses before the appointment.
+context|I need plain [flower|flour] for the biscuits this afternoon.
+context|Please wait [four|for] the second coat to dry before you touch it.
+context|I think you handed [my|me] the garage receipt by mistake.
+context|Can you take [me|my] uniform to the cleaner with yours?
+context|The movers left [there|their] trolley next to the long ramp.
+context|Be careful or we might [loose|lose] one of these tiny washers.
+context|We can [reed|read] the back of the carton together.
+context|Park the truck [inn|in] the empty bay after you unload it.
+context|All three of us [road|rode] in the same taxi to rehearsal.
+context|They were [aloud|allowed] to leave the folding tables in the hall.
+mixed|[THe|The] bike needs a new [pedla|pedal] before our trip.
+mixed|[Diid|Did] I leave my [lugagge|luggage] next to the ticket machine?
+mixed|[MMy|My] brother is looking for the [trowle|trowel] we borrowed.
+mixed|[Hwo|How] much [sugra|sugar] goes into this jar of jam?
+mixed|I'd like [teh|the] blue [swea ter|sweater] with the little fox on it.
+mixed|My [sist er|sister] put the clean mugs on the [shlef|shelf].
+mixed|The [phot os|photos] from the trip are [stil|still] on my camera.
+mixed|We should [vedify|verify] the address before [semding|sending] this parcel.
+mixed|Are we [meetin|meeting] at the [corn er|corner] by the bakery?
+mixed|I'll bring a [blankte|blanket] if the [wather|weather] turns cold.
+mixed|The receipt [isin|is in] the blue [foldre|folder] on my desk.
+mixed|I can get the [grcoeries|groceries] after [wrk|work] if you need me to.
+keep|We sent a postcard with the lighthouse on it last summer.
+keep|The pear on the windowsill is almost ready to eat.
+keep|I do wish the mail came earlier on Fridays.
+keep|Put this away if there's any chance of rain tonight.
+keep|The herd moved out of the shade when the wind picked up.
+keep|My leash has a loose stitch next to the handle.
+keep|The whole band stopped for a break near the bridge.
+keep|Where is the do being held after the last day of class?
+keep|We gave the dog plenty of water before the trip back.
+keep|The reins belong in the bag hanging by the tack-room door.
+keep|It's by far the shortest route to our new apartment.
+keep|A fine dust covered the box of old negatives.
+keep|I planted a leek in the square bed by the shed.
+keep|Someone pressed a flower between the last two pages.
+keep|She added fresh thyme to the butter and let it cool.
+keep|You can park beside the inn until dinner is over.
+keep|Please read the two names aloud so we can check our list.
+keep|We took the road that runs along the back of the orchard.
+keep|I hope the striped scarf turns up after the concert.
+keep|All four bowls are in the cupboard over the kettle.

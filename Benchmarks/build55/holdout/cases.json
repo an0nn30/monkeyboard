@@ -1,0 +1,6173 @@
+[
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "for his",
+        "expected_index": 4,
+        "typed": "forhis",
+        "typed_index": 4
+      }
+    ],
+    "expected": "avi needs a reed for his clarinet before practice.",
+    "id": "new55-0110-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0110",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "avi",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "reed",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 110,
+    "split": "blind",
+    "typed": "avi needs a reed forhis clarinet before practice."
+  },
+  {
+    "edits": [],
+    "expected": "avi needs a reed for his clarinet before practice.",
+    "id": "new55-0110-c",
+    "kind": "clean",
+    "pair_id": "new55-0110",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "avi",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "reed",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 110,
+    "split": "blind",
+    "typed": "avi needs a reed for his clarinet before practice."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "bunch",
+        "expected_index": 2,
+        "typed": "bucnh",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "screws",
+        "expected_index": 4,
+        "typed": "screews",
+        "typed_index": 4
+      }
+    ],
+    "expected": "There's a bunch of screws rolling around in my tote.",
+    "id": "new55-0124-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0124",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 124,
+    "split": "blind",
+    "typed": "There's a bucnh of screews rolling around in my tote."
+  },
+  {
+    "edits": [],
+    "expected": "There's a bunch of screws rolling around in my tote.",
+    "id": "new55-0124-c",
+    "kind": "clean",
+    "pair_id": "new55-0124",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 124,
+    "split": "blind",
+    "typed": "There's a bunch of screws rolling around in my tote."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "metal splinter",
+        "expected_index": 3,
+        "typed": "metalsplinter",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "staple",
+        "expected_index": 7,
+        "typed": "staplr",
+        "typed_index": 6
+      }
+    ],
+    "expected": "bea got a metal splinter pulling the staple out.",
+    "id": "new55-0085-n",
+    "kind": "mixed",
+    "pair_id": "new55-0085",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "bea",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 85,
+    "split": "blind",
+    "typed": "bea got a metalsplinter pulling the staplr out."
+  },
+  {
+    "edits": [],
+    "expected": "bea got a metal splinter pulling the staple out.",
+    "id": "new55-0085-c",
+    "kind": "clean",
+    "pair_id": "new55-0085",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "bea",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 85,
+    "split": "blind",
+    "typed": "bea got a metal splinter pulling the staple out."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "beside the",
+        "expected_index": 4,
+        "typed": "besidethe",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "printer",
+        "expected_index": 6,
+        "typed": "prniter",
+        "typed_index": 5
+      }
+    ],
+    "expected": "mabli left her scarf beside the printer on our floor.",
+    "id": "new55-0068-n",
+    "kind": "mixed",
+    "pair_id": "new55-0068",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "mabli",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 68,
+    "split": "blind",
+    "typed": "mabli left her scarf besidethe prniter on our floor."
+  },
+  {
+    "edits": [],
+    "expected": "mabli left her scarf beside the printer on our floor.",
+    "id": "new55-0068-c",
+    "kind": "clean",
+    "pair_id": "new55-0068",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "mabli",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 68,
+    "split": "blind",
+    "typed": "mabli left her scarf beside the printer on our floor."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "hear",
+        "expected_index": 2,
+        "typed": "here",
+        "typed_index": 2
+      }
+    ],
+    "expected": "I can't hear anything with these earplugs in.",
+    "id": "new55-0031-n",
+    "kind": "real-word",
+    "pair_id": "new55-0031",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 31,
+    "split": "blind",
+    "typed": "I can't here anything with these earplugs in."
+  },
+  {
+    "edits": [],
+    "expected": "I can't hear anything with these earplugs in.",
+    "id": "new55-0031-c",
+    "kind": "clean",
+    "pair_id": "new55-0031",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 31,
+    "split": "blind",
+    "typed": "I can't hear anything with these earplugs in."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "wiggle",
+        "expected_index": 2,
+        "typed": "wiglgle",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "cord",
+        "expected_index": 4,
+        "typed": "corfd",
+        "typed_index": 4
+      }
+    ],
+    "expected": "you hafta wiggle the cord a bit to get it to charge.",
+    "id": "new55-0123-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0123",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 1,
+        "text": "hafta",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 123,
+    "split": "blind",
+    "typed": "you hafta wiglgle the corfd a bit to get it to charge."
+  },
+  {
+    "edits": [],
+    "expected": "you hafta wiggle the cord a bit to get it to charge.",
+    "id": "new55-0123-c",
+    "kind": "clean",
+    "pair_id": "new55-0123",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 1,
+        "text": "hafta",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 123,
+    "split": "blind",
+    "typed": "you hafta wiggle the cord a bit to get it to charge."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "whose",
+        "expected_index": 3,
+        "typed": "who's",
+        "typed_index": 3
+      }
+    ],
+    "expected": "I don't know whose lunchbox this is.",
+    "id": "new55-0064-n",
+    "kind": "real-word",
+    "pair_id": "new55-0064",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 64,
+    "split": "blind",
+    "typed": "I don't know who's lunchbox this is."
+  },
+  {
+    "edits": [],
+    "expected": "I don't know whose lunchbox this is.",
+    "id": "new55-0064-c",
+    "kind": "clean",
+    "pair_id": "new55-0064",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 64,
+    "split": "blind",
+    "typed": "I don't know whose lunchbox this is."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "tread",
+        "expected_index": 7,
+        "typed": "treat",
+        "typed_index": 7
+      }
+    ],
+    "expected": "Ewan keeps getting rocks stuck in the tread on his tires.",
+    "id": "new55-0037-n",
+    "kind": "real-word",
+    "pair_id": "new55-0037",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ewan",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 37,
+    "split": "blind",
+    "typed": "Ewan keeps getting rocks stuck in the treat on his tires."
+  },
+  {
+    "edits": [],
+    "expected": "Ewan keeps getting rocks stuck in the tread on his tires.",
+    "id": "new55-0037-c",
+    "kind": "clean",
+    "pair_id": "new55-0037",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ewan",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 37,
+    "split": "blind",
+    "typed": "Ewan keeps getting rocks stuck in the tread on his tires."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "smell",
+        "expected_index": 3,
+        "typed": "small",
+        "typed_index": 3
+      }
+    ],
+    "expected": "omg I can smell the garlic all the way out here.",
+    "id": "new55-0066-n",
+    "kind": "real-word",
+    "pair_id": "new55-0066",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "omg",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 66,
+    "split": "blind",
+    "typed": "omg I can small the garlic all the way out here."
+  },
+  {
+    "edits": [],
+    "expected": "omg I can smell the garlic all the way out here.",
+    "id": "new55-0066-c",
+    "kind": "clean",
+    "pair_id": "new55-0066",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "omg",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 66,
+    "split": "blind",
+    "typed": "omg I can smell the garlic all the way out here."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "deep",
+        "expected_index": 5,
+        "typed": "deed",
+        "typed_index": 5
+      }
+    ],
+    "expected": "tbh that pool is too deep for the little ones to stand in.",
+    "id": "new55-0057-n",
+    "kind": "real-word",
+    "pair_id": "new55-0057",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "tbh",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 57,
+    "split": "blind",
+    "typed": "tbh that pool is too deed for the little ones to stand in."
+  },
+  {
+    "edits": [],
+    "expected": "tbh that pool is too deep for the little ones to stand in.",
+    "id": "new55-0057-c",
+    "kind": "clean",
+    "pair_id": "new55-0057",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "tbh",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 57,
+    "split": "blind",
+    "typed": "tbh that pool is too deep for the little ones to stand in."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "bring",
+        "expected_index": 2,
+        "typed": "being",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "sunglasses",
+        "expected_index": 4,
+        "typed": "sunglases",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Did you bring my sunglasses with you today?",
+    "id": "new55-0026-n",
+    "kind": "mixed",
+    "pair_id": "new55-0026",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 26,
+    "split": "blind",
+    "typed": "Did you being my sunglases with you today?"
+  },
+  {
+    "edits": [],
+    "expected": "Did you bring my sunglasses with you today?",
+    "id": "new55-0026-c",
+    "kind": "clean",
+    "pair_id": "new55-0026",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 26,
+    "split": "blind",
+    "typed": "Did you bring my sunglasses with you today?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "scale",
+        "expected_index": 4,
+        "typed": "scalp",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Could you read the scale while I stand on it?",
+    "id": "new55-0054-n",
+    "kind": "real-word",
+    "pair_id": "new55-0054",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 54,
+    "split": "blind",
+    "typed": "Could you read the scalp while I stand on it?"
+  },
+  {
+    "edits": [],
+    "expected": "Could you read the scale while I stand on it?",
+    "id": "new55-0054-c",
+    "kind": "clean",
+    "pair_id": "new55-0054",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 54,
+    "split": "blind",
+    "typed": "Could you read the scale while I stand on it?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "wax",
+        "expected_index": 1,
+        "typed": "max",
+        "typed_index": 1
+      }
+    ],
+    "expected": "The wax on the candle melted onto the cake.",
+    "id": "new55-0067-n",
+    "kind": "real-word",
+    "pair_id": "new55-0067",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 67,
+    "split": "blind",
+    "typed": "The max on the candle melted onto the cake."
+  },
+  {
+    "edits": [],
+    "expected": "The wax on the candle melted onto the cake.",
+    "id": "new55-0067-c",
+    "kind": "clean",
+    "pair_id": "new55-0067",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 67,
+    "split": "blind",
+    "typed": "The wax on the candle melted onto the cake."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "rang",
+        "expected_index": 2,
+        "typed": "rank",
+        "typed_index": 2
+      }
+    ],
+    "expected": "The doorbell rang twice while you were in the shower.",
+    "id": "new55-0052-n",
+    "kind": "real-word",
+    "pair_id": "new55-0052",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 52,
+    "split": "blind",
+    "typed": "The doorbell rank twice while you were in the shower."
+  },
+  {
+    "edits": [],
+    "expected": "The doorbell rang twice while you were in the shower.",
+    "id": "new55-0052-c",
+    "kind": "clean",
+    "pair_id": "new55-0052",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 52,
+    "split": "blind",
+    "typed": "The doorbell rang twice while you were in the shower."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "clover",
+        "expected_index": 4,
+        "typed": "clocer",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "frost",
+        "expected_index": 9,
+        "typed": "frosrt",
+        "typed_index": 9
+      }
+    ],
+    "expected": "she wants to sow clover as soon as the frost is gone.",
+    "id": "new55-0135-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0135",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "sow",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 135,
+    "split": "blind",
+    "typed": "she wants to sow clocer as soon as the frosrt is gone."
+  },
+  {
+    "edits": [],
+    "expected": "she wants to sow clover as soon as the frost is gone.",
+    "id": "new55-0135-c",
+    "kind": "clean",
+    "pair_id": "new55-0135",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "sow",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 135,
+    "split": "blind",
+    "typed": "she wants to sow clover as soon as the frost is gone."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "badger",
+        "expected_index": 3,
+        "typed": "badgre",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "digging",
+        "expected_index": 4,
+        "typed": "digigng",
+        "typed_index": 4
+      }
+    ],
+    "expected": "dara saw a badger digging under the fence this morning.",
+    "id": "new55-0113-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0113",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "dara",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 113,
+    "split": "blind",
+    "typed": "dara saw a badgre digigng under the fence this morning."
+  },
+  {
+    "edits": [],
+    "expected": "dara saw a badger digging under the fence this morning.",
+    "id": "new55-0113-c",
+    "kind": "clean",
+    "pair_id": "new55-0113",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "dara",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 113,
+    "split": "blind",
+    "typed": "dara saw a badger digging under the fence this morning."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "baker",
+        "expected_index": 1,
+        "typed": "baekr",
+        "typed_index": 1
+      },
+      {
+        "category": "missing-space",
+        "expected": "paper crown",
+        "expected_index": 5,
+        "typed": "papercrown",
+        "typed_index": 5
+      }
+    ],
+    "expected": "The baker put a little paper crown on the loaf.",
+    "id": "new55-0075-n",
+    "kind": "mixed",
+    "pair_id": "new55-0075",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 75,
+    "split": "blind",
+    "typed": "The baekr put a little papercrown on the loaf."
+  },
+  {
+    "edits": [],
+    "expected": "The baker put a little paper crown on the loaf.",
+    "id": "new55-0075-c",
+    "kind": "clean",
+    "pair_id": "new55-0075",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 75,
+    "split": "blind",
+    "typed": "The baker put a little paper crown on the loaf."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "peel",
+        "expected_index": 4,
+        "typed": "peal",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "piece",
+        "expected_index": 9,
+        "typed": "peice",
+        "typed_index": 9
+      }
+    ],
+    "expected": "omar said the apple peel comes off in one piece.",
+    "id": "new55-0007-n",
+    "kind": "mixed",
+    "pair_id": "new55-0007",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "omar",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 7,
+    "split": "blind",
+    "typed": "omar said the apple peal comes off in one peice."
+  },
+  {
+    "edits": [],
+    "expected": "omar said the apple peel comes off in one piece.",
+    "id": "new55-0007-c",
+    "kind": "clean",
+    "pair_id": "new55-0007",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "omar",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 7,
+    "split": "blind",
+    "typed": "omar said the apple peel comes off in one piece."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "witnessed",
+        "expected_index": 3,
+        "typed": "wintessed",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "waffle",
+        "expected_index": 9,
+        "typed": "waflle",
+        "typed_index": 9
+      }
+    ],
+    "expected": "yall I just witnessed a squirrel stealing an entire waffle.",
+    "id": "new55-0126-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0126",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "yall",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 126,
+    "split": "blind",
+    "typed": "yall I just wintessed a squirrel stealing an entire waflle."
+  },
+  {
+    "edits": [],
+    "expected": "yall I just witnessed a squirrel stealing an entire waffle.",
+    "id": "new55-0126-c",
+    "kind": "clean",
+    "pair_id": "new55-0126",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "yall",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 126,
+    "split": "blind",
+    "typed": "yall I just witnessed a squirrel stealing an entire waffle."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "vouch",
+        "expected_index": 2,
+        "typed": "couch",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "witnessed",
+        "expected_index": 6,
+        "typed": "witnesesd",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Fiadh can vouch for me, she witnessed the whole thing.",
+    "id": "new55-0014-n",
+    "kind": "mixed",
+    "pair_id": "new55-0014",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Fiadh",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 14,
+    "split": "blind",
+    "typed": "Fiadh can couch for me, she witnesesd the whole thing."
+  },
+  {
+    "edits": [],
+    "expected": "Fiadh can vouch for me, she witnessed the whole thing.",
+    "id": "new55-0014-c",
+    "kind": "clean",
+    "pair_id": "new55-0014",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Fiadh",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 14,
+    "split": "blind",
+    "typed": "Fiadh can vouch for me, she witnessed the whole thing."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "rubber duck",
+        "expected_index": 2,
+        "typed": "rubberduck",
+        "typed_index": 2
+      }
+    ],
+    "expected": "How'd the rubber duck end up behind the fridge?",
+    "id": "new55-0098-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0098",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 98,
+    "split": "blind",
+    "typed": "How'd the rubberduck end up behind the fridge?"
+  },
+  {
+    "edits": [],
+    "expected": "How'd the rubber duck end up behind the fridge?",
+    "id": "new55-0098-c",
+    "kind": "clean",
+    "pair_id": "new55-0098",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 98,
+    "split": "blind",
+    "typed": "How'd the rubber duck end up behind the fridge?"
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "my note",
+        "expected_index": 2,
+        "typed": "mynote",
+        "typed_index": 2
+      }
+    ],
+    "expected": "Idris saw my note taped under the buzzer.",
+    "id": "new55-0090-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0090",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Idris",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 90,
+    "split": "blind",
+    "typed": "Idris saw mynote taped under the buzzer."
+  },
+  {
+    "edits": [],
+    "expected": "Idris saw my note taped under the buzzer.",
+    "id": "new55-0090-c",
+    "kind": "clean",
+    "pair_id": "new55-0090",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Idris",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 90,
+    "split": "blind",
+    "typed": "Idris saw my note taped under the buzzer."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "water bottle",
+        "expected_index": 4,
+        "typed": "waterbottle",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "barbershop",
+        "expected_index": 8,
+        "typed": "barbreshop",
+        "typed_index": 7
+      }
+    ],
+    "expected": "brb I left my water bottle at the barbershop.",
+    "id": "new55-0076-n",
+    "kind": "mixed",
+    "pair_id": "new55-0076",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "brb",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 76,
+    "split": "blind",
+    "typed": "brb I left my waterbottle at the barbreshop."
+  },
+  {
+    "edits": [],
+    "expected": "brb I left my water bottle at the barbershop.",
+    "id": "new55-0076-c",
+    "kind": "clean",
+    "pair_id": "new55-0076",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "brb",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 76,
+    "split": "blind",
+    "typed": "brb I left my water bottle at the barbershop."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "due",
+        "expected_index": 3,
+        "typed": "duel",
+        "typed_index": 3
+      }
+    ],
+    "expected": "Your flight is due to land just after three.",
+    "id": "new55-0047-n",
+    "kind": "real-word",
+    "pair_id": "new55-0047",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 47,
+    "split": "blind",
+    "typed": "Your flight is duel to land just after three."
+  },
+  {
+    "edits": [],
+    "expected": "Your flight is due to land just after three.",
+    "id": "new55-0047-c",
+    "kind": "clean",
+    "pair_id": "new55-0047",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 47,
+    "split": "blind",
+    "typed": "Your flight is due to land just after three."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "bells",
+        "expected_index": 7,
+        "typed": "bellels",
+        "typed_index": 7
+      },
+      {
+        "category": "ordinary",
+        "expected": "recording",
+        "expected_index": 10,
+        "typed": "reocrding",
+        "typed_index": 10
+      }
+    ],
+    "expected": "jani has the peal of the church bells on a recording.",
+    "id": "new55-0116-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0116",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "jani",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "peal",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 116,
+    "split": "blind",
+    "typed": "jani has the peal of the church bellels on a reocrding."
+  },
+  {
+    "edits": [],
+    "expected": "jani has the peal of the church bells on a recording.",
+    "id": "new55-0116-c",
+    "kind": "clean",
+    "pair_id": "new55-0116",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "jani",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "peal",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 116,
+    "split": "blind",
+    "typed": "jani has the peal of the church bells on a recording."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "send over",
+        "expected_index": 2,
+        "typed": "sendover",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "number",
+        "expected_index": 6,
+        "typed": "nubmer",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Have Pilar send over the tracking number when it ships.",
+    "id": "new55-0072-n",
+    "kind": "mixed",
+    "pair_id": "new55-0072",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "Pilar",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 72,
+    "split": "blind",
+    "typed": "Have Pilar sendover the tracking nubmer when it ships."
+  },
+  {
+    "edits": [],
+    "expected": "Have Pilar send over the tracking number when it ships.",
+    "id": "new55-0072-c",
+    "kind": "clean",
+    "pair_id": "new55-0072",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "Pilar",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 72,
+    "split": "blind",
+    "typed": "Have Pilar send over the tracking number when it ships."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "fare",
+        "expected_index": 1,
+        "typed": "fair",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "dollars",
+        "expected_index": 6,
+        "typed": "dollras",
+        "typed_index": 6
+      }
+    ],
+    "expected": "The fare went up to four dollars each way.",
+    "id": "new55-0004-n",
+    "kind": "mixed",
+    "pair_id": "new55-0004",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 4,
+    "split": "blind",
+    "typed": "The fair went up to four dollras each way."
+  },
+  {
+    "edits": [],
+    "expected": "The fare went up to four dollars each way.",
+    "id": "new55-0004-c",
+    "kind": "clean",
+    "pair_id": "new55-0004",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 4,
+    "split": "blind",
+    "typed": "The fare went up to four dollars each way."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "other charger",
+        "expected_index": 2,
+        "typed": "othercharger",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "barely",
+        "expected_index": 7,
+        "typed": "bareky",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Bring the other charger because this cord barely reaches.",
+    "id": "new55-0077-n",
+    "kind": "mixed",
+    "pair_id": "new55-0077",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 77,
+    "split": "blind",
+    "typed": "Bring the othercharger because this cord bareky reaches."
+  },
+  {
+    "edits": [],
+    "expected": "Bring the other charger because this cord barely reaches.",
+    "id": "new55-0077-c",
+    "kind": "clean",
+    "pair_id": "new55-0077",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 77,
+    "split": "blind",
+    "typed": "Bring the other charger because this cord barely reaches."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "chowder",
+        "expected_index": 4,
+        "typed": "chowdrr",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "better",
+        "expected_index": 6,
+        "typed": "betetr",
+        "typed_index": 6
+      }
+    ],
+    "expected": "selin swears the clam chowder is better here.",
+    "id": "new55-0125-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0125",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "selin",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "clam",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 125,
+    "split": "blind",
+    "typed": "selin swears the clam chowdrr is betetr here."
+  },
+  {
+    "edits": [],
+    "expected": "selin swears the clam chowder is better here.",
+    "id": "new55-0125-c",
+    "kind": "clean",
+    "pair_id": "new55-0125",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "selin",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "clam",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 125,
+    "split": "blind",
+    "typed": "selin swears the clam chowder is better here."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "dial",
+        "expected_index": 2,
+        "typed": "dual",
+        "typed_index": 2
+      }
+    ],
+    "expected": "turn the dial on the radio till you hear our station.",
+    "id": "new55-0040-n",
+    "kind": "real-word",
+    "pair_id": "new55-0040",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 40,
+    "split": "blind",
+    "typed": "turn the dual on the radio till you hear our station."
+  },
+  {
+    "edits": [],
+    "expected": "turn the dial on the radio till you hear our station.",
+    "id": "new55-0040-c",
+    "kind": "clean",
+    "pair_id": "new55-0040",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 40,
+    "split": "blind",
+    "typed": "turn the dial on the radio till you hear our station."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "marinara",
+        "expected_index": 3,
+        "typed": "marjnara",
+        "typed_index": 3
+      }
+    ],
+    "expected": "smh he got marinara all over our new tablecloth.",
+    "id": "new55-0137-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0137",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "smh",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 137,
+    "split": "blind",
+    "typed": "smh he got marjnara all over our new tablecloth."
+  },
+  {
+    "edits": [],
+    "expected": "smh he got marinara all over our new tablecloth.",
+    "id": "new55-0137-c",
+    "kind": "clean",
+    "pair_id": "new55-0137",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "smh",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 137,
+    "split": "blind",
+    "typed": "smh he got marinara all over our new tablecloth."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "couch",
+        "expected_index": 4,
+        "typed": "couhc",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "elevator",
+        "expected_index": 7,
+        "typed": "elevatpr",
+        "typed_index": 7
+      }
+    ],
+    "expected": "we're tryna get the couch into the elevator sideways.",
+    "id": "new55-0131-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0131",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 1,
+        "text": "tryna",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 131,
+    "split": "blind",
+    "typed": "we're tryna get the couhc into the elevatpr sideways."
+  },
+  {
+    "edits": [],
+    "expected": "we're tryna get the couch into the elevator sideways.",
+    "id": "new55-0131-c",
+    "kind": "clean",
+    "pair_id": "new55-0131",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 1,
+        "text": "tryna",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 131,
+    "split": "blind",
+    "typed": "we're tryna get the couch into the elevator sideways."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "they",
+        "expected_index": 3,
+        "typed": "then",
+        "typed_index": 3
+      }
+    ],
+    "expected": "Can you believe they sent the reminder after the deadline?",
+    "id": "new55-0046-n",
+    "kind": "real-word",
+    "pair_id": "new55-0046",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 46,
+    "split": "blind",
+    "typed": "Can you believe then sent the reminder after the deadline?"
+  },
+  {
+    "edits": [],
+    "expected": "Can you believe they sent the reminder after the deadline?",
+    "id": "new55-0046-c",
+    "kind": "clean",
+    "pair_id": "new55-0046",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 46,
+    "split": "blind",
+    "typed": "Can you believe they sent the reminder after the deadline?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "mitt",
+        "expected_index": 4,
+        "typed": "mist",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "skillet",
+        "expected_index": 7,
+        "typed": "skilelt",
+        "typed_index": 7
+      }
+    ],
+    "expected": "You need an oven mitt for that skillet, it's hot.",
+    "id": "new55-0013-n",
+    "kind": "mixed",
+    "pair_id": "new55-0013",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 13,
+    "split": "blind",
+    "typed": "You need an oven mist for that skilelt, it's hot."
+  },
+  {
+    "edits": [],
+    "expected": "You need an oven mitt for that skillet, it's hot.",
+    "id": "new55-0013-c",
+    "kind": "clean",
+    "pair_id": "new55-0013",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 13,
+    "split": "blind",
+    "typed": "You need an oven mitt for that skillet, it's hot."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "vote",
+        "expected_index": 3,
+        "typed": "veto",
+        "typed_index": 3
+      }
+    ],
+    "expected": "imo you should vote for whoever you want.",
+    "id": "new55-0034-n",
+    "kind": "real-word",
+    "pair_id": "new55-0034",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "imo",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 34,
+    "split": "blind",
+    "typed": "imo you should veto for whoever you want."
+  },
+  {
+    "edits": [],
+    "expected": "imo you should vote for whoever you want.",
+    "id": "new55-0034-c",
+    "kind": "clean",
+    "pair_id": "new55-0034",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "imo",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 34,
+    "split": "blind",
+    "typed": "imo you should vote for whoever you want."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "jury",
+        "expected_index": 7,
+        "typed": "fury",
+        "typed_index": 7
+      }
+    ],
+    "expected": "The court wants us to report for jury duty next month.",
+    "id": "new55-0058-n",
+    "kind": "real-word",
+    "pair_id": "new55-0058",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 58,
+    "split": "blind",
+    "typed": "The court wants us to report for fury duty next month."
+  },
+  {
+    "edits": [],
+    "expected": "The court wants us to report for jury duty next month.",
+    "id": "new55-0058-c",
+    "kind": "clean",
+    "pair_id": "new55-0058",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 58,
+    "split": "blind",
+    "typed": "The court wants us to report for jury duty next month."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "steam keeps",
+        "expected_index": 2,
+        "typed": "steamkeeps",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "glasses",
+        "expected_index": 7,
+        "typed": "galsess",
+        "typed_index": 6
+      }
+    ],
+    "expected": "idk the steam keeps fogging up my glasses.",
+    "id": "new55-0084-n",
+    "kind": "mixed",
+    "pair_id": "new55-0084",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "idk",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 84,
+    "split": "blind",
+    "typed": "idk the steamkeeps fogging up my galsess."
+  },
+  {
+    "edits": [],
+    "expected": "idk the steam keeps fogging up my glasses.",
+    "id": "new55-0084-c",
+    "kind": "clean",
+    "pair_id": "new55-0084",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "idk",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 84,
+    "split": "blind",
+    "typed": "idk the steam keeps fogging up my glasses."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "owe",
+        "expected_index": 4,
+        "typed": "own",
+        "typed_index": 4
+      }
+    ],
+    "expected": "The receipt says they owe us a refund if we return it today.",
+    "id": "new55-0033-n",
+    "kind": "real-word",
+    "pair_id": "new55-0033",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 33,
+    "split": "blind",
+    "typed": "The receipt says they own us a refund if we return it today."
+  },
+  {
+    "edits": [],
+    "expected": "The receipt says they owe us a refund if we return it today.",
+    "id": "new55-0033-c",
+    "kind": "clean",
+    "pair_id": "new55-0033",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 33,
+    "split": "blind",
+    "typed": "The receipt says they owe us a refund if we return it today."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "by her",
+        "expected_index": 4,
+        "typed": "byher",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Elske has a loom by her desk for weaving.",
+    "id": "new55-0101-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0101",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Elske",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "loom",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 101,
+    "split": "blind",
+    "typed": "Elske has a loom byher desk for weaving."
+  },
+  {
+    "edits": [],
+    "expected": "Elske has a loom by her desk for weaving.",
+    "id": "new55-0101-c",
+    "kind": "clean",
+    "pair_id": "new55-0101",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Elske",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "loom",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 101,
+    "split": "blind",
+    "typed": "Elske has a loom by her desk for weaving."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "attic stairs",
+        "expected_index": 2,
+        "typed": "atticstairs",
+        "typed_index": 2
+      }
+    ],
+    "expected": "fyi our attic stairs creak even if you tiptoe.",
+    "id": "new55-0092-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0092",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "fyi",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 92,
+    "split": "blind",
+    "typed": "fyi our atticstairs creak even if you tiptoe."
+  },
+  {
+    "edits": [],
+    "expected": "fyi our attic stairs creak even if you tiptoe.",
+    "id": "new55-0092-c",
+    "kind": "clean",
+    "pair_id": "new55-0092",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "fyi",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 92,
+    "split": "blind",
+    "typed": "fyi our attic stairs creak even if you tiptoe."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "neighbor plays",
+        "expected_index": 1,
+        "typed": "neighborplays",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "cello",
+        "expected_index": 4,
+        "typed": "clelo",
+        "typed_index": 3
+      }
+    ],
+    "expected": "Our neighbor plays the cello around this time most evenings.",
+    "id": "new55-0073-n",
+    "kind": "mixed",
+    "pair_id": "new55-0073",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 73,
+    "split": "blind",
+    "typed": "Our neighborplays the clelo around this time most evenings."
+  },
+  {
+    "edits": [],
+    "expected": "Our neighbor plays the cello around this time most evenings.",
+    "id": "new55-0073-c",
+    "kind": "clean",
+    "pair_id": "new55-0073",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 73,
+    "split": "blind",
+    "typed": "Our neighbor plays the cello around this time most evenings."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "cheek",
+        "expected_index": 6,
+        "typed": "check",
+        "typed_index": 6
+      },
+      {
+        "category": "ordinary",
+        "expected": "chips",
+        "expected_index": 9,
+        "typed": "cips",
+        "typed_index": 9
+      }
+    ],
+    "expected": "I bit the inside of my cheek eating those chips.",
+    "id": "new55-0005-n",
+    "kind": "mixed",
+    "pair_id": "new55-0005",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 5,
+    "split": "blind",
+    "typed": "I bit the inside of my check eating those cips."
+  },
+  {
+    "edits": [],
+    "expected": "I bit the inside of my cheek eating those chips.",
+    "id": "new55-0005-c",
+    "kind": "clean",
+    "pair_id": "new55-0005",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 5,
+    "split": "blind",
+    "typed": "I bit the inside of my cheek eating those chips."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "puppy",
+        "expected_index": 1,
+        "typed": "pupoy",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "fetch",
+        "expected_index": 4,
+        "typed": "fecth",
+        "typed_index": 4
+      }
+    ],
+    "expected": "our puppy learned to fetch the paper fr.",
+    "id": "new55-0133-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0133",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 7,
+        "text": "fr",
+        "typed_index": 7
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 133,
+    "split": "blind",
+    "typed": "our pupoy learned to fecth the paper fr."
+  },
+  {
+    "edits": [],
+    "expected": "our puppy learned to fetch the paper fr.",
+    "id": "new55-0133-c",
+    "kind": "clean",
+    "pair_id": "new55-0133",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 7,
+        "text": "fr",
+        "typed_index": 7
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 133,
+    "split": "blind",
+    "typed": "our puppy learned to fetch the paper fr."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "above this",
+        "expected_index": 4,
+        "typed": "abovethis",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Dad says the lintel above this door is solid oak.",
+    "id": "new55-0112-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0112",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "lintel",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 112,
+    "split": "blind",
+    "typed": "Dad says the lintel abovethis door is solid oak."
+  },
+  {
+    "edits": [],
+    "expected": "Dad says the lintel above this door is solid oak.",
+    "id": "new55-0112-c",
+    "kind": "clean",
+    "pair_id": "new55-0112",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "lintel",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 112,
+    "split": "blind",
+    "typed": "Dad says the lintel above this door is solid oak."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "you pack",
+        "expected_index": 1,
+        "typed": "youpack",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "separate",
+        "expected_index": 4,
+        "typed": "seprate",
+        "typed_index": 3
+      }
+    ],
+    "expected": "Could you pack a separate bag for the damp towels?",
+    "id": "new55-0083-n",
+    "kind": "mixed",
+    "pair_id": "new55-0083",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 83,
+    "split": "blind",
+    "typed": "Could youpack a seprate bag for the damp towels?"
+  },
+  {
+    "edits": [],
+    "expected": "Could you pack a separate bag for the damp towels?",
+    "id": "new55-0083-c",
+    "kind": "clean",
+    "pair_id": "new55-0083",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 83,
+    "split": "blind",
+    "typed": "Could you pack a separate bag for the damp towels?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "fasten",
+        "expected_index": 4,
+        "typed": "fatten",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "seatbelt",
+        "expected_index": 6,
+        "typed": "seatblet",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Our pilot said to fasten your seatbelt when the sign comes on.",
+    "id": "new55-0020-n",
+    "kind": "mixed",
+    "pair_id": "new55-0020",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 20,
+    "split": "blind",
+    "typed": "Our pilot said to fatten your seatblet when the sign comes on."
+  },
+  {
+    "edits": [],
+    "expected": "Our pilot said to fasten your seatbelt when the sign comes on.",
+    "id": "new55-0020-c",
+    "kind": "clean",
+    "pair_id": "new55-0020",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 20,
+    "split": "blind",
+    "typed": "Our pilot said to fasten your seatbelt when the sign comes on."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "gears",
+        "expected_index": 5,
+        "typed": "bears",
+        "typed_index": 5
+      }
+    ],
+    "expected": "That bike doesn't have any gears to shift.",
+    "id": "new55-0053-n",
+    "kind": "real-word",
+    "pair_id": "new55-0053",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 53,
+    "split": "blind",
+    "typed": "That bike doesn't have any bears to shift."
+  },
+  {
+    "edits": [],
+    "expected": "That bike doesn't have any gears to shift.",
+    "id": "new55-0053-c",
+    "kind": "clean",
+    "pair_id": "new55-0053",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 53,
+    "split": "blind",
+    "typed": "That bike doesn't have any gears to shift."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "tin",
+        "expected_index": 6,
+        "typed": "tan",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Pour the batter into a muffin tin and bake it.",
+    "id": "new55-0044-n",
+    "kind": "real-word",
+    "pair_id": "new55-0044",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 44,
+    "split": "blind",
+    "typed": "Pour the batter into a muffin tan and bake it."
+  },
+  {
+    "edits": [],
+    "expected": "Pour the batter into a muffin tin and bake it.",
+    "id": "new55-0044-c",
+    "kind": "clean",
+    "pair_id": "new55-0044",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 44,
+    "split": "blind",
+    "typed": "Pour the batter into a muffin tin and bake it."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "plenty left",
+        "expected_index": 2,
+        "typed": "plentyleft",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "second",
+        "expected_index": 8,
+        "typed": "secodn",
+        "typed_index": 7
+      }
+    ],
+    "expected": "nah there's plenty left if you want a second helping.",
+    "id": "new55-0079-n",
+    "kind": "mixed",
+    "pair_id": "new55-0079",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "nah",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 79,
+    "split": "blind",
+    "typed": "nah there's plentyleft if you want a secodn helping."
+  },
+  {
+    "edits": [],
+    "expected": "nah there's plenty left if you want a second helping.",
+    "id": "new55-0079-c",
+    "kind": "clean",
+    "pair_id": "new55-0079",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "nah",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 79,
+    "split": "blind",
+    "typed": "nah there's plenty left if you want a second helping."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "photo",
+        "expected_index": 5,
+        "typed": "phpto",
+        "typed_index": 5
+      },
+      {
+        "category": "ordinary",
+        "expected": "blinked",
+        "expected_index": 9,
+        "typed": "blinkrd",
+        "typed_index": 9
+      }
+    ],
+    "expected": "I dunno who took the photo but wen definitely blinked.",
+    "id": "new55-0128-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0128",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 1,
+        "text": "dunno",
+        "typed_index": 1
+      },
+      {
+        "category": "name",
+        "expected_index": 7,
+        "text": "wen",
+        "typed_index": 7
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 128,
+    "split": "blind",
+    "typed": "I dunno who took the phpto but wen definitely blinkrd."
+  },
+  {
+    "edits": [],
+    "expected": "I dunno who took the photo but wen definitely blinked.",
+    "id": "new55-0128-c",
+    "kind": "clean",
+    "pair_id": "new55-0128",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 1,
+        "text": "dunno",
+        "typed_index": 1
+      },
+      {
+        "category": "name",
+        "expected_index": 7,
+        "text": "wen",
+        "typed_index": 7
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 128,
+    "split": "blind",
+    "typed": "I dunno who took the photo but wen definitely blinked."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "sticker",
+        "expected_index": 1,
+        "typed": "stciker",
+        "typed_index": 1
+      },
+      {
+        "category": "missing-space",
+        "expected": "hand wash",
+        "expected_index": 3,
+        "typed": "handwash",
+        "typed_index": 3
+      }
+    ],
+    "expected": "The sticker says hand wash so I'll do the sweater myself.",
+    "id": "new55-0080-n",
+    "kind": "mixed",
+    "pair_id": "new55-0080",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 80,
+    "split": "blind",
+    "typed": "The stciker says handwash so I'll do the sweater myself."
+  },
+  {
+    "edits": [],
+    "expected": "The sticker says hand wash so I'll do the sweater myself.",
+    "id": "new55-0080-c",
+    "kind": "clean",
+    "pair_id": "new55-0080",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 80,
+    "split": "blind",
+    "typed": "The sticker says hand wash so I'll do the sweater myself."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "ticket machine",
+        "expected_index": 2,
+        "typed": "ticketmachine",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "swallow",
+        "expected_index": 4,
+        "typed": "swaollow",
+        "typed_index": 3
+      }
+    ],
+    "expected": "did the ticket machine swallow your coins too?",
+    "id": "new55-0074-n",
+    "kind": "mixed",
+    "pair_id": "new55-0074",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 74,
+    "split": "blind",
+    "typed": "did the ticketmachine swaollow your coins too?"
+  },
+  {
+    "edits": [],
+    "expected": "did the ticket machine swallow your coins too?",
+    "id": "new55-0074-c",
+    "kind": "clean",
+    "pair_id": "new55-0074",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 74,
+    "split": "blind",
+    "typed": "did the ticket machine swallow your coins too?"
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "with milk",
+        "expected_index": 5,
+        "typed": "withmilk",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Can you thin the roux with milk before I add the cheese?",
+    "id": "new55-0102-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0102",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 4,
+        "text": "roux",
+        "typed_index": 4
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 102,
+    "split": "blind",
+    "typed": "Can you thin the roux withmilk before I add the cheese?"
+  },
+  {
+    "edits": [],
+    "expected": "Can you thin the roux with milk before I add the cheese?",
+    "id": "new55-0102-c",
+    "kind": "clean",
+    "pair_id": "new55-0102",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 4,
+        "text": "roux",
+        "typed_index": 4
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 102,
+    "split": "blind",
+    "typed": "Can you thin the roux with milk before I add the cheese?"
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "outside",
+        "expected_index": 4,
+        "typed": "outsidw",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "drain",
+        "expected_index": 6,
+        "typed": "drainm",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Sawsan left the keg outside to drain overnight.",
+    "id": "new55-0130-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0130",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Sawsan",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "keg",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 130,
+    "split": "blind",
+    "typed": "Sawsan left the keg outsidw to drainm overnight."
+  },
+  {
+    "edits": [],
+    "expected": "Sawsan left the keg outside to drain overnight.",
+    "id": "new55-0130-c",
+    "kind": "clean",
+    "pair_id": "new55-0130",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Sawsan",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "keg",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 130,
+    "split": "blind",
+    "typed": "Sawsan left the keg outside to drain overnight."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "would fit",
+        "expected_index": 3,
+        "typed": "wouldfit",
+        "typed_index": 3
+      }
+    ],
+    "expected": "imo a sconce would fit better than another floor lamp.",
+    "id": "new55-0100-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0100",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "imo",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "sconce",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 100,
+    "split": "blind",
+    "typed": "imo a sconce wouldfit better than another floor lamp."
+  },
+  {
+    "edits": [],
+    "expected": "imo a sconce would fit better than another floor lamp.",
+    "id": "new55-0100-c",
+    "kind": "clean",
+    "pair_id": "new55-0100",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "imo",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "sconce",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 100,
+    "split": "blind",
+    "typed": "imo a sconce would fit better than another floor lamp."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "on hold",
+        "expected_index": 2,
+        "typed": "onhold",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "plumber",
+        "expected_index": 6,
+        "typed": "plubmer",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Ren is on hold with the plumber now.",
+    "id": "new55-0082-n",
+    "kind": "mixed",
+    "pair_id": "new55-0082",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ren",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 82,
+    "split": "blind",
+    "typed": "Ren is onhold with the plubmer now."
+  },
+  {
+    "edits": [],
+    "expected": "Ren is on hold with the plumber now.",
+    "id": "new55-0082-c",
+    "kind": "clean",
+    "pair_id": "new55-0082",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ren",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 82,
+    "split": "blind",
+    "typed": "Ren is on hold with the plumber now."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "rings",
+        "expected_index": 8,
+        "typed": "wings",
+        "typed_index": 8
+      }
+    ],
+    "expected": "My screen is black but the phone still rings when I call it.",
+    "id": "new55-0065-n",
+    "kind": "real-word",
+    "pair_id": "new55-0065",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 65,
+    "split": "blind",
+    "typed": "My screen is black but the phone still wings when I call it."
+  },
+  {
+    "edits": [],
+    "expected": "My screen is black but the phone still rings when I call it.",
+    "id": "new55-0065-c",
+    "kind": "clean",
+    "pair_id": "new55-0065",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 65,
+    "split": "blind",
+    "typed": "My screen is black but the phone still rings when I call it."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "grab breakfast",
+        "expected_index": 2,
+        "typed": "grabbreakfast",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "diner",
+        "expected_index": 6,
+        "typed": "dnier",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Can we grab breakfast at that diner by the river?",
+    "id": "new55-0069-n",
+    "kind": "mixed",
+    "pair_id": "new55-0069",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 69,
+    "split": "blind",
+    "typed": "Can we grabbreakfast at that dnier by the river?"
+  },
+  {
+    "edits": [],
+    "expected": "Can we grab breakfast at that diner by the river?",
+    "id": "new55-0069-c",
+    "kind": "clean",
+    "pair_id": "new55-0069",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 69,
+    "split": "blind",
+    "typed": "Can we grab breakfast at that diner by the river?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "lend",
+        "expected_index": 2,
+        "typed": "land",
+        "typed_index": 2
+      }
+    ],
+    "expected": "Can ravi lend me a few bucks until payday?",
+    "id": "new55-0042-n",
+    "kind": "real-word",
+    "pair_id": "new55-0042",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "ravi",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 42,
+    "split": "blind",
+    "typed": "Can ravi land me a few bucks until payday?"
+  },
+  {
+    "edits": [],
+    "expected": "Can ravi lend me a few bucks until payday?",
+    "id": "new55-0042-c",
+    "kind": "clean",
+    "pair_id": "new55-0042",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "ravi",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 42,
+    "split": "blind",
+    "typed": "Can ravi lend me a few bucks until payday?"
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "ticket",
+        "expected_index": 2,
+        "typed": "tikcet",
+        "typed_index": 2
+      },
+      {
+        "category": "real-word",
+        "expected": "than",
+        "expected_index": 5,
+        "typed": "then",
+        "typed_index": 5
+      }
+    ],
+    "expected": "The last ticket costs more than I can spare.",
+    "id": "new55-0018-n",
+    "kind": "mixed",
+    "pair_id": "new55-0018",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 18,
+    "split": "blind",
+    "typed": "The last tikcet costs more then I can spare."
+  },
+  {
+    "edits": [],
+    "expected": "The last ticket costs more than I can spare.",
+    "id": "new55-0018-c",
+    "kind": "clean",
+    "pair_id": "new55-0018",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 18,
+    "split": "blind",
+    "typed": "The last ticket costs more than I can spare."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "purple sock",
+        "expected_index": 3,
+        "typed": "purplesock",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "pillowcase",
+        "expected_index": 7,
+        "typed": "pillowcaes",
+        "typed_index": 6
+      }
+    ],
+    "expected": "I found a purple sock inside the pillowcase.",
+    "id": "new55-0070-n",
+    "kind": "mixed",
+    "pair_id": "new55-0070",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 70,
+    "split": "blind",
+    "typed": "I found a purplesock inside the pillowcaes."
+  },
+  {
+    "edits": [],
+    "expected": "I found a purple sock inside the pillowcase.",
+    "id": "new55-0070-c",
+    "kind": "clean",
+    "pair_id": "new55-0070",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 70,
+    "split": "blind",
+    "typed": "I found a purple sock inside the pillowcase."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "rains",
+        "expected_index": 6,
+        "typed": "reins",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Bring an umbrella in case it rains on the walk home.",
+    "id": "new55-0049-n",
+    "kind": "real-word",
+    "pair_id": "new55-0049",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 49,
+    "split": "blind",
+    "typed": "Bring an umbrella in case it reins on the walk home."
+  },
+  {
+    "edits": [],
+    "expected": "Bring an umbrella in case it rains on the walk home.",
+    "id": "new55-0049-c",
+    "kind": "clean",
+    "pair_id": "new55-0049",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 49,
+    "split": "blind",
+    "typed": "Bring an umbrella in case it rains on the walk home."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "be worth",
+        "expected_index": 1,
+        "typed": "beworth",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "picture",
+        "expected_index": 5,
+        "typed": "pctiure",
+        "typed_index": 4
+      }
+    ],
+    "expected": "might be worth taking a picture of the parking sign.",
+    "id": "new55-0086-n",
+    "kind": "mixed",
+    "pair_id": "new55-0086",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 86,
+    "split": "blind",
+    "typed": "might beworth taking a pctiure of the parking sign."
+  },
+  {
+    "edits": [],
+    "expected": "might be worth taking a picture of the parking sign.",
+    "id": "new55-0086-c",
+    "kind": "clean",
+    "pair_id": "new55-0086",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 86,
+    "split": "blind",
+    "typed": "might be worth taking a picture of the parking sign."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "floor",
+        "expected_index": 4,
+        "typed": "flour",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "library",
+        "expected_index": 7,
+        "typed": "libray",
+        "typed_index": 7
+      }
+    ],
+    "expected": "we're on the second floor of the library.",
+    "id": "new55-0008-n",
+    "kind": "mixed",
+    "pair_id": "new55-0008",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 8,
+    "split": "blind",
+    "typed": "we're on the second flour of the libray."
+  },
+  {
+    "edits": [],
+    "expected": "we're on the second floor of the library.",
+    "id": "new55-0008-c",
+    "kind": "clean",
+    "pair_id": "new55-0008",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 8,
+    "split": "blind",
+    "typed": "we're on the second floor of the library."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "mute",
+        "expected_index": 3,
+        "typed": "mule",
+        "typed_index": 3
+      }
+    ],
+    "expected": "I had to mute my mic so nobody heard the blender.",
+    "id": "new55-0056-n",
+    "kind": "real-word",
+    "pair_id": "new55-0056",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 56,
+    "split": "blind",
+    "typed": "I had to mule my mic so nobody heard the blender."
+  },
+  {
+    "edits": [],
+    "expected": "I had to mute my mic so nobody heard the blender.",
+    "id": "new55-0056-c",
+    "kind": "clean",
+    "pair_id": "new55-0056",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 56,
+    "split": "blind",
+    "typed": "I had to mute my mic so nobody heard the blender."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "floss",
+        "expected_index": 3,
+        "typed": "flops",
+        "typed_index": 3
+      }
+    ],
+    "expected": "Don't forget to floss between your teeth tonight.",
+    "id": "new55-0038-n",
+    "kind": "real-word",
+    "pair_id": "new55-0038",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 38,
+    "split": "blind",
+    "typed": "Don't forget to flops between your teeth tonight."
+  },
+  {
+    "edits": [],
+    "expected": "Don't forget to floss between your teeth tonight.",
+    "id": "new55-0038-c",
+    "kind": "clean",
+    "pair_id": "new55-0038",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 38,
+    "split": "blind",
+    "typed": "Don't forget to floss between your teeth tonight."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "room",
+        "expected_index": 2,
+        "typed": "roam",
+        "typed_index": 2
+      }
+    ],
+    "expected": "Is there room for another chair at your table?",
+    "id": "new55-0036-n",
+    "kind": "real-word",
+    "pair_id": "new55-0036",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 36,
+    "split": "blind",
+    "typed": "Is there roam for another chair at your table?"
+  },
+  {
+    "edits": [],
+    "expected": "Is there room for another chair at your table?",
+    "id": "new55-0036-c",
+    "kind": "clean",
+    "pair_id": "new55-0036",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 36,
+    "split": "blind",
+    "typed": "Is there room for another chair at your table?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "chalk",
+        "expected_index": 5,
+        "typed": "chock",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Ludo brought a box of chalk to draw on the sidewalk.",
+    "id": "new55-0061-n",
+    "kind": "real-word",
+    "pair_id": "new55-0061",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ludo",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 61,
+    "split": "blind",
+    "typed": "Ludo brought a box of chock to draw on the sidewalk."
+  },
+  {
+    "edits": [],
+    "expected": "Ludo brought a box of chalk to draw on the sidewalk.",
+    "id": "new55-0061-c",
+    "kind": "clean",
+    "pair_id": "new55-0061",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ludo",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 61,
+    "split": "blind",
+    "typed": "Ludo brought a box of chalk to draw on the sidewalk."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "hang tight",
+        "expected_index": 1,
+        "typed": "hangtight",
+        "typed_index": 1
+      }
+    ],
+    "expected": "Just hang tight until the wet floor dries.",
+    "id": "new55-0091-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0091",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 91,
+    "split": "blind",
+    "typed": "Just hangtight until the wet floor dries."
+  },
+  {
+    "edits": [],
+    "expected": "Just hang tight until the wet floor dries.",
+    "id": "new55-0091-c",
+    "kind": "clean",
+    "pair_id": "new55-0091",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 91,
+    "split": "blind",
+    "typed": "Just hang tight until the wet floor dries."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "iron",
+        "expected_index": 5,
+        "typed": "icon",
+        "typed_index": 5
+      },
+      {
+        "category": "ordinary",
+        "expected": "wrinkles",
+        "expected_index": 7,
+        "typed": "wrnikles",
+        "typed_index": 7
+      }
+    ],
+    "expected": "rn I still need to iron the wrinkles out of this shirt.",
+    "id": "new55-0022-n",
+    "kind": "mixed",
+    "pair_id": "new55-0022",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "rn",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 22,
+    "split": "blind",
+    "typed": "rn I still need to icon the wrnikles out of this shirt."
+  },
+  {
+    "edits": [],
+    "expected": "rn I still need to iron the wrinkles out of this shirt.",
+    "id": "new55-0022-c",
+    "kind": "clean",
+    "pair_id": "new55-0022",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "rn",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 22,
+    "split": "blind",
+    "typed": "rn I still need to iron the wrinkles out of this shirt."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "orange marks",
+        "expected_index": 3,
+        "typed": "orangemarks",
+        "typed_index": 3
+      }
+    ],
+    "expected": "noor said the orange marks show where they'll dig.",
+    "id": "new55-0094-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0094",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "noor",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 94,
+    "split": "blind",
+    "typed": "noor said the orangemarks show where they'll dig."
+  },
+  {
+    "edits": [],
+    "expected": "noor said the orange marks show where they'll dig.",
+    "id": "new55-0094-c",
+    "kind": "clean",
+    "pair_id": "new55-0094",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "noor",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 94,
+    "split": "blind",
+    "typed": "noor said the orange marks show where they'll dig."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "choir",
+        "expected_index": 1,
+        "typed": "chair",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "wedding",
+        "expected_index": 5,
+        "typed": "wedidng",
+        "typed_index": 5
+      }
+    ],
+    "expected": "The choir sang at her wedding last summer.",
+    "id": "new55-0025-n",
+    "kind": "mixed",
+    "pair_id": "new55-0025",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 25,
+    "split": "blind",
+    "typed": "The chair sang at her wedidng last summer."
+  },
+  {
+    "edits": [],
+    "expected": "The choir sang at her wedding last summer.",
+    "id": "new55-0025-c",
+    "kind": "clean",
+    "pair_id": "new55-0025",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 25,
+    "split": "blind",
+    "typed": "The choir sang at her wedding last summer."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "poked right",
+        "expected_index": 2,
+        "typed": "pokedright",
+        "typed_index": 2
+      }
+    ],
+    "expected": "The awl poked right through that leather belt.",
+    "id": "new55-0108-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0108",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 1,
+        "text": "awl",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 108,
+    "split": "blind",
+    "typed": "The awl pokedright through that leather belt."
+  },
+  {
+    "edits": [],
+    "expected": "The awl poked right through that leather belt.",
+    "id": "new55-0108-c",
+    "kind": "clean",
+    "pair_id": "new55-0108",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 1,
+        "text": "awl",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 108,
+    "split": "blind",
+    "typed": "The awl poked right through that leather belt."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "waist",
+        "expected_index": 7,
+        "typed": "wrist",
+        "typed_index": 7
+      }
+    ],
+    "expected": "These shorts have a string at the waist you can tighten.",
+    "id": "new55-0048-n",
+    "kind": "real-word",
+    "pair_id": "new55-0048",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 48,
+    "split": "blind",
+    "typed": "These shorts have a string at the wrist you can tighten."
+  },
+  {
+    "edits": [],
+    "expected": "These shorts have a string at the waist you can tighten.",
+    "id": "new55-0048-c",
+    "kind": "clean",
+    "pair_id": "new55-0048",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 48,
+    "split": "blind",
+    "typed": "These shorts have a string at the waist you can tighten."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "cone",
+        "expected_index": 6,
+        "typed": "cane",
+        "typed_index": 6
+      },
+      {
+        "category": "ordinary",
+        "expected": "stitches",
+        "expected_index": 12,
+        "typed": "stithces",
+        "typed_index": 12
+      }
+    ],
+    "expected": "The vet gave our dog a cone so he can't lick his stitches.",
+    "id": "new55-0012-n",
+    "kind": "mixed",
+    "pair_id": "new55-0012",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 12,
+    "split": "blind",
+    "typed": "The vet gave our dog a cane so he can't lick his stithces."
+  },
+  {
+    "edits": [],
+    "expected": "The vet gave our dog a cone so he can't lick his stitches.",
+    "id": "new55-0012-c",
+    "kind": "clean",
+    "pair_id": "new55-0012",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 12,
+    "split": "blind",
+    "typed": "The vet gave our dog a cone so he can't lick his stitches."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "brake",
+        "expected_index": 2,
+        "typed": "break",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "started",
+        "expected_index": 5,
+        "typed": "strated",
+        "typed_index": 5
+      }
+    ],
+    "expected": "My left brake light just started blinking again.",
+    "id": "new55-0002-n",
+    "kind": "mixed",
+    "pair_id": "new55-0002",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 2,
+    "split": "blind",
+    "typed": "My left break light just strated blinking again."
+  },
+  {
+    "edits": [],
+    "expected": "My left brake light just started blinking again.",
+    "id": "new55-0002-c",
+    "kind": "clean",
+    "pair_id": "new55-0002",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 2,
+    "split": "blind",
+    "typed": "My left brake light just started blinking again."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "blue folder",
+        "expected_index": 1,
+        "typed": "bluefolder",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "receipt",
+        "expected_index": 5,
+        "typed": "reciept",
+        "typed_index": 4
+      }
+    ],
+    "expected": "The blue folder has a receipt from the bike shop.",
+    "id": "new55-0081-n",
+    "kind": "mixed",
+    "pair_id": "new55-0081",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 81,
+    "split": "blind",
+    "typed": "The bluefolder has a reciept from the bike shop."
+  },
+  {
+    "edits": [],
+    "expected": "The blue folder has a receipt from the bike shop.",
+    "id": "new55-0081-c",
+    "kind": "clean",
+    "pair_id": "new55-0081",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 81,
+    "split": "blind",
+    "typed": "The blue folder has a receipt from the bike shop."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "claim",
+        "expected_index": 5,
+        "typed": "clam",
+        "typed_index": 5
+      },
+      {
+        "category": "ordinary",
+        "expected": "flight",
+        "expected_index": 8,
+        "typed": "flgiht",
+        "typed_index": 8
+      }
+    ],
+    "expected": "Meet us at the baggage claim after your flight lands.",
+    "id": "new55-0011-n",
+    "kind": "mixed",
+    "pair_id": "new55-0011",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 11,
+    "split": "blind",
+    "typed": "Meet us at the baggage clam after your flgiht lands."
+  },
+  {
+    "edits": [],
+    "expected": "Meet us at the baggage claim after your flight lands.",
+    "id": "new55-0011-c",
+    "kind": "clean",
+    "pair_id": "new55-0011",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 11,
+    "split": "blind",
+    "typed": "Meet us at the baggage claim after your flight lands."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "beads",
+        "expected_index": 5,
+        "typed": "beaks",
+        "typed_index": 5
+      }
+    ],
+    "expected": "My bracelet snapped and the beads went all over the rug.",
+    "id": "new55-0059-n",
+    "kind": "real-word",
+    "pair_id": "new55-0059",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 59,
+    "split": "blind",
+    "typed": "My bracelet snapped and the beaks went all over the rug."
+  },
+  {
+    "edits": [],
+    "expected": "My bracelet snapped and the beads went all over the rug.",
+    "id": "new55-0059-c",
+    "kind": "clean",
+    "pair_id": "new55-0059",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 59,
+    "split": "blind",
+    "typed": "My bracelet snapped and the beads went all over the rug."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "sole",
+        "expected_index": 1,
+        "typed": "soul",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "bottom",
+        "expected_index": 6,
+        "typed": "bototm",
+        "typed_index": 6
+      }
+    ],
+    "expected": "My sole is coming off the bottom of this boot.",
+    "id": "new55-0017-n",
+    "kind": "mixed",
+    "pair_id": "new55-0017",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 17,
+    "split": "blind",
+    "typed": "My soul is coming off the bototm of this boot."
+  },
+  {
+    "edits": [],
+    "expected": "My sole is coming off the bottom of this boot.",
+    "id": "new55-0017-c",
+    "kind": "clean",
+    "pair_id": "new55-0017",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 17,
+    "split": "blind",
+    "typed": "My sole is coming off the bottom of this boot."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "drawer sticks",
+        "expected_index": 3,
+        "typed": "drawersticks",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "handle",
+        "expected_index": 9,
+        "typed": "hanlde",
+        "typed_index": 8
+      }
+    ],
+    "expected": "btw the second drawer sticks unless you tug the handle.",
+    "id": "new55-0071-n",
+    "kind": "mixed",
+    "pair_id": "new55-0071",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "btw",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 71,
+    "split": "blind",
+    "typed": "btw the second drawersticks unless you tug the hanlde."
+  },
+  {
+    "edits": [],
+    "expected": "btw the second drawer sticks unless you tug the handle.",
+    "id": "new55-0071-c",
+    "kind": "clean",
+    "pair_id": "new55-0071",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "btw",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 71,
+    "split": "blind",
+    "typed": "btw the second drawer sticks unless you tug the handle."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "on",
+        "expected_index": 2,
+        "typed": "in",
+        "typed_index": 2
+      }
+    ],
+    "expected": "He's still on the phone with his sister so give him a minute.",
+    "id": "new55-0041-n",
+    "kind": "real-word",
+    "pair_id": "new55-0041",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 41,
+    "split": "blind",
+    "typed": "He's still in the phone with his sister so give him a minute."
+  },
+  {
+    "edits": [],
+    "expected": "He's still on the phone with his sister so give him a minute.",
+    "id": "new55-0041-c",
+    "kind": "clean",
+    "pair_id": "new55-0041",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 41,
+    "split": "blind",
+    "typed": "He's still on the phone with his sister so give him a minute."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "dyed",
+        "expected_index": 5,
+        "typed": "died",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Ines is getting her hair dyed purple again.",
+    "id": "new55-0050-n",
+    "kind": "real-word",
+    "pair_id": "new55-0050",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ines",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 50,
+    "split": "blind",
+    "typed": "Ines is getting her hair died purple again."
+  },
+  {
+    "edits": [],
+    "expected": "Ines is getting her hair dyed purple again.",
+    "id": "new55-0050-c",
+    "kind": "clean",
+    "pair_id": "new55-0050",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Ines",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 50,
+    "split": "blind",
+    "typed": "Ines is getting her hair dyed purple again."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "house",
+        "expected_index": 6,
+        "typed": "hiuse",
+        "typed_index": 6
+      },
+      {
+        "category": "ordinary",
+        "expected": "suitcase",
+        "expected_index": 10,
+        "typed": "suitcsae",
+        "typed_index": 10
+      }
+    ],
+    "expected": "Sumi found a deed to the house in an old suitcase.",
+    "id": "new55-0119-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0119",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Sumi",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "deed",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 119,
+    "split": "blind",
+    "typed": "Sumi found a deed to the hiuse in an old suitcsae."
+  },
+  {
+    "edits": [],
+    "expected": "Sumi found a deed to the house in an old suitcase.",
+    "id": "new55-0119-c",
+    "kind": "clean",
+    "pair_id": "new55-0119",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Sumi",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "deed",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 119,
+    "split": "blind",
+    "typed": "Sumi found a deed to the house in an old suitcase."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "waved",
+        "expected_index": 3,
+        "typed": "waived",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "windshield",
+        "expected_index": 8,
+        "typed": "windshiled",
+        "typed_index": 8
+      }
+    ],
+    "expected": "The bus driver waved at me through the windshield.",
+    "id": "new55-0016-n",
+    "kind": "mixed",
+    "pair_id": "new55-0016",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 16,
+    "split": "blind",
+    "typed": "The bus driver waived at me through the windshiled."
+  },
+  {
+    "edits": [],
+    "expected": "The bus driver waved at me through the windshield.",
+    "id": "new55-0016-c",
+    "kind": "clean",
+    "pair_id": "new55-0016",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 16,
+    "split": "blind",
+    "typed": "The bus driver waved at me through the windshield."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "taking turns",
+        "expected_index": 3,
+        "typed": "takingturns",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "cranky",
+        "expected_index": 7,
+        "typed": "crakny",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Thanks CJ for taking turns with my cranky toddler.",
+    "id": "new55-0089-n",
+    "kind": "mixed",
+    "pair_id": "new55-0089",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "CJ",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 89,
+    "split": "blind",
+    "typed": "Thanks CJ for takingturns with my crakny toddler."
+  },
+  {
+    "edits": [],
+    "expected": "Thanks CJ for taking turns with my cranky toddler.",
+    "id": "new55-0089-c",
+    "kind": "clean",
+    "pair_id": "new55-0089",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "CJ",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 89,
+    "split": "blind",
+    "typed": "Thanks CJ for taking turns with my cranky toddler."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "shook out",
+        "expected_index": 2,
+        "typed": "shookout",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "blanket",
+        "expected_index": 5,
+        "typed": "blnaket",
+        "typed_index": 4
+      }
+    ],
+    "expected": "He just shook out the blanket and a quarter fell out.",
+    "id": "new55-0088-n",
+    "kind": "mixed",
+    "pair_id": "new55-0088",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 88,
+    "split": "blind",
+    "typed": "He just shookout the blnaket and a quarter fell out."
+  },
+  {
+    "edits": [],
+    "expected": "He just shook out the blanket and a quarter fell out.",
+    "id": "new55-0088-c",
+    "kind": "clean",
+    "pair_id": "new55-0088",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 88,
+    "split": "blind",
+    "typed": "He just shook out the blanket and a quarter fell out."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "dent",
+        "expected_index": 2,
+        "typed": "bent",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "bumper",
+        "expected_index": 5,
+        "typed": "bupmer",
+        "typed_index": 5
+      }
+    ],
+    "expected": "there's a dent in the bumper where I backed into the pole.",
+    "id": "new55-0028-n",
+    "kind": "mixed",
+    "pair_id": "new55-0028",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 28,
+    "split": "blind",
+    "typed": "there's a bent in the bupmer where I backed into the pole."
+  },
+  {
+    "edits": [],
+    "expected": "there's a dent in the bumper where I backed into the pole.",
+    "id": "new55-0028-c",
+    "kind": "clean",
+    "pair_id": "new55-0028",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 28,
+    "split": "blind",
+    "typed": "there's a dent in the bumper where I backed into the pole."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "knead",
+        "expected_index": 4,
+        "typed": "need",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "dough",
+        "expected_index": 6,
+        "typed": "duogh",
+        "typed_index": 6
+      }
+    ],
+    "expected": "ngl I had to knead that dough for ages.",
+    "id": "new55-0003-n",
+    "kind": "mixed",
+    "pair_id": "new55-0003",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "ngl",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 3,
+    "split": "blind",
+    "typed": "ngl I had to need that duogh for ages."
+  },
+  {
+    "edits": [],
+    "expected": "ngl I had to knead that dough for ages.",
+    "id": "new55-0003-c",
+    "kind": "clean",
+    "pair_id": "new55-0003",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "ngl",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 3,
+    "split": "blind",
+    "typed": "ngl I had to knead that dough for ages."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "sign",
+        "expected_index": 2,
+        "typed": "sing",
+        "typed_index": 2
+      }
+    ],
+    "expected": "Did nils sign his name at the bottom of the form?",
+    "id": "new55-0055-n",
+    "kind": "real-word",
+    "pair_id": "new55-0055",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "nils",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 55,
+    "split": "blind",
+    "typed": "Did nils sing his name at the bottom of the form?"
+  },
+  {
+    "edits": [],
+    "expected": "Did nils sign his name at the bottom of the form?",
+    "id": "new55-0055-c",
+    "kind": "clean",
+    "pair_id": "new55-0055",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "nils",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 55,
+    "split": "blind",
+    "typed": "Did nils sign his name at the bottom of the form?"
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "lunch",
+        "expected_index": 8,
+        "typed": "lunxh",
+        "typed_index": 8
+      },
+      {
+        "category": "ordinary",
+        "expected": "rush",
+        "expected_index": 9,
+        "typed": "ruhs",
+        "typed_index": 9
+      }
+    ],
+    "expected": "Y'all know Tamsin takes a break after the lunch rush.",
+    "id": "new55-0114-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0114",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "Y'all",
+        "typed_index": 0
+      },
+      {
+        "category": "name",
+        "expected_index": 2,
+        "text": "Tamsin",
+        "typed_index": 2
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 5,
+        "text": "break",
+        "typed_index": 5
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 114,
+    "split": "blind",
+    "typed": "Y'all know Tamsin takes a break after the lunxh ruhs."
+  },
+  {
+    "edits": [],
+    "expected": "Y'all know Tamsin takes a break after the lunch rush.",
+    "id": "new55-0114-c",
+    "kind": "clean",
+    "pair_id": "new55-0114",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "Y'all",
+        "typed_index": 0
+      },
+      {
+        "category": "name",
+        "expected_index": 2,
+        "text": "Tamsin",
+        "typed_index": 2
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 5,
+        "text": "break",
+        "typed_index": 5
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 114,
+    "split": "blind",
+    "typed": "Y'all know Tamsin takes a break after the lunch rush."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "hem",
+        "expected_index": 3,
+        "typed": "hen",
+        "typed_index": 3
+      }
+    ],
+    "expected": "salma stitched the hem of my dress by hand.",
+    "id": "new55-0032-n",
+    "kind": "real-word",
+    "pair_id": "new55-0032",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "salma",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 32,
+    "split": "blind",
+    "typed": "salma stitched the hen of my dress by hand."
+  },
+  {
+    "edits": [],
+    "expected": "salma stitched the hem of my dress by hand.",
+    "id": "new55-0032-c",
+    "kind": "clean",
+    "pair_id": "new55-0032",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "salma",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 32,
+    "split": "blind",
+    "typed": "salma stitched the hem of my dress by hand."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "serving",
+        "expected_index": 7,
+        "typed": "serivng",
+        "typed_index": 7
+      },
+      {
+        "category": "ordinary",
+        "expected": "bowls",
+        "expected_index": 8,
+        "typed": "bolws",
+        "typed_index": 8
+      }
+    ],
+    "expected": "Arvid put his cane down near the serving bowls.",
+    "id": "new55-0127-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0127",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Arvid",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "cane",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 127,
+    "split": "blind",
+    "typed": "Arvid put his cane down near the serivng bolws."
+  },
+  {
+    "edits": [],
+    "expected": "Arvid put his cane down near the serving bowls.",
+    "id": "new55-0127-c",
+    "kind": "clean",
+    "pair_id": "new55-0127",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Arvid",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "cane",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 127,
+    "split": "blind",
+    "typed": "Arvid put his cane down near the serving bowls."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "your",
+        "expected_index": 4,
+        "typed": "you",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Where did you put your spare batteries?",
+    "id": "new55-0035-n",
+    "kind": "real-word",
+    "pair_id": "new55-0035",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 35,
+    "split": "blind",
+    "typed": "Where did you put you spare batteries?"
+  },
+  {
+    "edits": [],
+    "expected": "Where did you put your spare batteries?",
+    "id": "new55-0035-c",
+    "kind": "clean",
+    "pair_id": "new55-0035",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 35,
+    "split": "blind",
+    "typed": "Where did you put your spare batteries?"
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "umbrella",
+        "expected_index": 5,
+        "typed": "umbrelal",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Did Jae bring the blue umbrella by any chance?",
+    "id": "new55-0138-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0138",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "Jae",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 138,
+    "split": "blind",
+    "typed": "Did Jae bring the blue umbrelal by any chance?"
+  },
+  {
+    "edits": [],
+    "expected": "Did Jae bring the blue umbrella by any chance?",
+    "id": "new55-0138-c",
+    "kind": "clean",
+    "pair_id": "new55-0138",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 1,
+        "text": "Jae",
+        "typed_index": 1
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 138,
+    "split": "blind",
+    "typed": "Did Jae bring the blue umbrella by any chance?"
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "borrow both",
+        "expected_index": 2,
+        "typed": "borrowboth",
+        "typed_index": 2
+      }
+    ],
+    "expected": "You can borrow both books, I've already read them.",
+    "id": "new55-0095-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0095",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 95,
+    "split": "blind",
+    "typed": "You can borrowboth books, I've already read them."
+  },
+  {
+    "edits": [],
+    "expected": "You can borrow both books, I've already read them.",
+    "id": "new55-0095-c",
+    "kind": "clean",
+    "pair_id": "new55-0095",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 95,
+    "split": "blind",
+    "typed": "You can borrow both books, I've already read them."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "along here",
+        "expected_index": 3,
+        "typed": "alonghere",
+        "typed_index": 3
+      }
+    ],
+    "expected": "Make a pleat along here and pin it for me.",
+    "id": "new55-0103-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0103",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "pleat",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 103,
+    "split": "blind",
+    "typed": "Make a pleat alonghere and pin it for me."
+  },
+  {
+    "edits": [],
+    "expected": "Make a pleat along here and pin it for me.",
+    "id": "new55-0103-c",
+    "kind": "clean",
+    "pair_id": "new55-0103",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "pleat",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 103,
+    "split": "blind",
+    "typed": "Make a pleat along here and pin it for me."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "ripe",
+        "expected_index": 3,
+        "typed": "rope",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "tonight",
+        "expected_index": 10,
+        "typed": "tonghit",
+        "typed_index": 10
+      }
+    ],
+    "expected": "zuri picked the ripe mango because we wanna eat it tonight.",
+    "id": "new55-0019-n",
+    "kind": "mixed",
+    "pair_id": "new55-0019",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "zuri",
+        "typed_index": 0
+      },
+      {
+        "category": "slang",
+        "expected_index": 7,
+        "text": "wanna",
+        "typed_index": 7
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 19,
+    "split": "blind",
+    "typed": "zuri picked the rope mango because we wanna eat it tonghit."
+  },
+  {
+    "edits": [],
+    "expected": "zuri picked the ripe mango because we wanna eat it tonight.",
+    "id": "new55-0019-c",
+    "kind": "clean",
+    "pair_id": "new55-0019",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "zuri",
+        "typed_index": 0
+      },
+      {
+        "category": "slang",
+        "expected_index": 7,
+        "text": "wanna",
+        "typed_index": 7
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 19,
+    "split": "blind",
+    "typed": "zuri picked the ripe mango because we wanna eat it tonight."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "with",
+        "expected_index": 3,
+        "typed": "wish",
+        "typed_index": 3
+      }
+    ],
+    "expected": "I could go with you if you wait ten minutes.",
+    "id": "new55-0045-n",
+    "kind": "real-word",
+    "pair_id": "new55-0045",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 45,
+    "split": "blind",
+    "typed": "I could go wish you if you wait ten minutes."
+  },
+  {
+    "edits": [],
+    "expected": "I could go with you if you wait ten minutes.",
+    "id": "new55-0045-c",
+    "kind": "clean",
+    "pair_id": "new55-0045",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 45,
+    "split": "blind",
+    "typed": "I could go with you if you wait ten minutes."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "movie",
+        "expected_index": 4,
+        "typed": "movje",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "starts",
+        "expected_index": 5,
+        "typed": "strats",
+        "typed_index": 5
+      }
+    ],
+    "expected": "lemme know when the movie starts, I'm still getting popcorn.",
+    "id": "new55-0115-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0115",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "lemme",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 115,
+    "split": "blind",
+    "typed": "lemme know when the movje strats, I'm still getting popcorn."
+  },
+  {
+    "edits": [],
+    "expected": "lemme know when the movie starts, I'm still getting popcorn.",
+    "id": "new55-0115-c",
+    "kind": "clean",
+    "pair_id": "new55-0115",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "lemme",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 115,
+    "split": "blind",
+    "typed": "lemme know when the movie starts, I'm still getting popcorn."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "wrapped",
+        "expected_index": 1,
+        "typed": "wrpaped",
+        "typed_index": 1
+      },
+      {
+        "category": "real-word",
+        "expected": "bow",
+        "expected_index": 6,
+        "typed": "bowl",
+        "typed_index": 6
+      }
+    ],
+    "expected": "My wrapped present still needs a bow on top.",
+    "id": "new55-0010-n",
+    "kind": "mixed",
+    "pair_id": "new55-0010",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 10,
+    "split": "blind",
+    "typed": "My wrpaped present still needs a bowl on top."
+  },
+  {
+    "edits": [],
+    "expected": "My wrapped present still needs a bow on top.",
+    "id": "new55-0010-c",
+    "kind": "clean",
+    "pair_id": "new55-0010",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 10,
+    "split": "blind",
+    "typed": "My wrapped present still needs a bow on top."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "blew",
+        "expected_index": 2,
+        "typed": "blue",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "candles",
+        "expected_index": 6,
+        "typed": "cndles",
+        "typed_index": 6
+      }
+    ],
+    "expected": "lol I blew out all the candles in one go.",
+    "id": "new55-0027-n",
+    "kind": "mixed",
+    "pair_id": "new55-0027",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "lol",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 27,
+    "split": "blind",
+    "typed": "lol I blue out all the cndles in one go."
+  },
+  {
+    "edits": [],
+    "expected": "lol I blew out all the candles in one go.",
+    "id": "new55-0027-c",
+    "kind": "clean",
+    "pair_id": "new55-0027",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "lol",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 27,
+    "split": "blind",
+    "typed": "lol I blew out all the candles in one go."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "dive headfirst",
+        "expected_index": 4,
+        "typed": "diveheadfirst",
+        "typed_index": 4
+      }
+    ],
+    "expected": "I watched a tern dive headfirst for a fish off the pier.",
+    "id": "new55-0111-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0111",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "tern",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 111,
+    "split": "blind",
+    "typed": "I watched a tern diveheadfirst for a fish off the pier."
+  },
+  {
+    "edits": [],
+    "expected": "I watched a tern dive headfirst for a fish off the pier.",
+    "id": "new55-0111-c",
+    "kind": "clean",
+    "pair_id": "new55-0111",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "tern",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 111,
+    "split": "blind",
+    "typed": "I watched a tern dive headfirst for a fish off the pier."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "right",
+        "expected_index": 6,
+        "typed": "rigjt",
+        "typed_index": 6
+      },
+      {
+        "category": "ordinary",
+        "expected": "hearing",
+        "expected_index": 9,
+        "typed": "hearign",
+        "typed_index": 9
+      }
+    ],
+    "expected": "Edda didn't want to waive her right to a hearing.",
+    "id": "new55-0134-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0134",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Edda",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 4,
+        "text": "waive",
+        "typed_index": 4
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 134,
+    "split": "blind",
+    "typed": "Edda didn't want to waive her rigjt to a hearign."
+  },
+  {
+    "edits": [],
+    "expected": "Edda didn't want to waive her right to a hearing.",
+    "id": "new55-0134-c",
+    "kind": "clean",
+    "pair_id": "new55-0134",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Edda",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 4,
+        "text": "waive",
+        "typed_index": 4
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 134,
+    "split": "blind",
+    "typed": "Edda didn't want to waive her right to a hearing."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "still takes",
+        "expected_index": 4,
+        "typed": "stilltakes",
+        "typed_index": 4
+      }
+    ],
+    "expected": "lmk if the ferry still takes bikes on weekdays.",
+    "id": "new55-0109-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0109",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "lmk",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "ferry",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 109,
+    "split": "blind",
+    "typed": "lmk if the ferry stilltakes bikes on weekdays."
+  },
+  {
+    "edits": [],
+    "expected": "lmk if the ferry still takes bikes on weekdays.",
+    "id": "new55-0109-c",
+    "kind": "clean",
+    "pair_id": "new55-0109",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "lmk",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "ferry",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 109,
+    "split": "blind",
+    "typed": "lmk if the ferry still takes bikes on weekdays."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "rode",
+        "expected_index": 2,
+        "typed": "rodeo",
+        "typed_index": 2
+      }
+    ],
+    "expected": "yep we rode the Ferris wheel three times in a row.",
+    "id": "new55-0062-n",
+    "kind": "real-word",
+    "pair_id": "new55-0062",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "yep",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 62,
+    "split": "blind",
+    "typed": "yep we rodeo the Ferris wheel three times in a row."
+  },
+  {
+    "edits": [],
+    "expected": "yep we rode the Ferris wheel three times in a row.",
+    "id": "new55-0062-c",
+    "kind": "clean",
+    "pair_id": "new55-0062",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "yep",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 62,
+    "split": "blind",
+    "typed": "yep we rode the Ferris wheel three times in a row."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "thin",
+        "expected_index": 2,
+        "typed": "chin",
+        "typed_index": 2
+      }
+    ],
+    "expected": "You're on thin ice walking across that pond in November.",
+    "id": "new55-0063-n",
+    "kind": "real-word",
+    "pair_id": "new55-0063",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 63,
+    "split": "blind",
+    "typed": "You're on chin ice walking across that pond in November."
+  },
+  {
+    "edits": [],
+    "expected": "You're on thin ice walking across that pond in November.",
+    "id": "new55-0063-c",
+    "kind": "clean",
+    "pair_id": "new55-0063",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 63,
+    "split": "blind",
+    "typed": "You're on thin ice walking across that pond in November."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "cutter",
+        "expected_index": 4,
+        "typed": "cuttwr",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "candle",
+        "expected_index": 7,
+        "typed": "canlde",
+        "typed_index": 7
+      }
+    ],
+    "expected": "Pema has a wick cutter in her candle kit.",
+    "id": "new55-0122-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0122",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Pema",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "wick",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 122,
+    "split": "blind",
+    "typed": "Pema has a wick cuttwr in her canlde kit."
+  },
+  {
+    "edits": [],
+    "expected": "Pema has a wick cutter in her candle kit.",
+    "id": "new55-0122-c",
+    "kind": "clean",
+    "pair_id": "new55-0122",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Pema",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "wick",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 122,
+    "split": "blind",
+    "typed": "Pema has a wick cutter in her candle kit."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "peeled off",
+        "expected_index": 2,
+        "typed": "peeledoff",
+        "typed_index": 2
+      }
+    ],
+    "expected": "The label peeled off but the jam is definitely plum.",
+    "id": "new55-0096-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0096",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 96,
+    "split": "blind",
+    "typed": "The label peeledoff but the jam is definitely plum."
+  },
+  {
+    "edits": [],
+    "expected": "The label peeled off but the jam is definitely plum.",
+    "id": "new55-0096-c",
+    "kind": "clean",
+    "pair_id": "new55-0096",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 96,
+    "split": "blind",
+    "typed": "The label peeled off but the jam is definitely plum."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "allowed back",
+        "expected_index": 2,
+        "typed": "allowedback",
+        "typed_index": 2
+      }
+    ],
+    "expected": "Am I allowed back inside after scanning my pass?",
+    "id": "new55-0093-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0093",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 93,
+    "split": "blind",
+    "typed": "Am I allowedback inside after scanning my pass?"
+  },
+  {
+    "edits": [],
+    "expected": "Am I allowed back inside after scanning my pass?",
+    "id": "new55-0093-c",
+    "kind": "clean",
+    "pair_id": "new55-0093",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 93,
+    "split": "blind",
+    "typed": "Am I allowed back inside after scanning my pass?"
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "go",
+        "expected_index": 3,
+        "typed": "got",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "dentist",
+        "expected_index": 10,
+        "typed": "dentsit",
+        "typed_index": 10
+      }
+    ],
+    "expected": "I wanted to go with you but I have a dentist appointment.",
+    "id": "new55-0024-n",
+    "kind": "mixed",
+    "pair_id": "new55-0024",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 24,
+    "split": "blind",
+    "typed": "I wanted to got with you but I have a dentsit appointment."
+  },
+  {
+    "edits": [],
+    "expected": "I wanted to go with you but I have a dentist appointment.",
+    "id": "new55-0024-c",
+    "kind": "clean",
+    "pair_id": "new55-0024",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 24,
+    "split": "blind",
+    "typed": "I wanted to go with you but I have a dentist appointment."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "rinse",
+        "expected_index": 1,
+        "typed": "rise",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "ladle",
+        "expected_index": 6,
+        "typed": "lalde",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Please rinse the soap off the ladle before serving soup.",
+    "id": "new55-0021-n",
+    "kind": "mixed",
+    "pair_id": "new55-0021",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 21,
+    "split": "blind",
+    "typed": "Please rise the soap off the lalde before serving soup."
+  },
+  {
+    "edits": [],
+    "expected": "Please rinse the soap off the ladle before serving soup.",
+    "id": "new55-0021-c",
+    "kind": "clean",
+    "pair_id": "new55-0021",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 21,
+    "split": "blind",
+    "typed": "Please rinse the soap off the ladle before serving soup."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "paint chips",
+        "expected_index": 1,
+        "typed": "paintchips",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "lighter",
+        "expected_index": 4,
+        "typed": "ligther",
+        "typed_index": 3
+      }
+    ],
+    "expected": "The paint chips look lighter once they're on the wall.",
+    "id": "new55-0087-n",
+    "kind": "mixed",
+    "pair_id": "new55-0087",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 87,
+    "split": "blind",
+    "typed": "The paintchips look ligther once they're on the wall."
+  },
+  {
+    "edits": [],
+    "expected": "The paint chips look lighter once they're on the wall.",
+    "id": "new55-0087-c",
+    "kind": "clean",
+    "pair_id": "new55-0087",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 87,
+    "split": "blind",
+    "typed": "The paint chips look lighter once they're on the wall."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "wick",
+        "expected_index": 4,
+        "typed": "wink",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "candle",
+        "expected_index": 7,
+        "typed": "candel",
+        "typed_index": 7
+      }
+    ],
+    "expected": "I put a fresh wick in that candle for you.",
+    "id": "new55-0009-n",
+    "kind": "mixed",
+    "pair_id": "new55-0009",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 9,
+    "split": "blind",
+    "typed": "I put a fresh wink in that candel for you."
+  },
+  {
+    "edits": [],
+    "expected": "I put a fresh wick in that candle for you.",
+    "id": "new55-0009-c",
+    "kind": "clean",
+    "pair_id": "new55-0009",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 9,
+    "split": "blind",
+    "typed": "I put a fresh wick in that candle for you."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "lid",
+        "expected_index": 3,
+        "typed": "kid",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "fits",
+        "expected_index": 5,
+        "typed": "fistt",
+        "typed_index": 5
+      }
+    ],
+    "expected": "I found the lid that fits your big green saucepan.",
+    "id": "new55-0015-n",
+    "kind": "mixed",
+    "pair_id": "new55-0015",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 15,
+    "split": "blind",
+    "typed": "I found the kid that fistt your big green saucepan."
+  },
+  {
+    "edits": [],
+    "expected": "I found the lid that fits your big green saucepan.",
+    "id": "new55-0015-c",
+    "kind": "clean",
+    "pair_id": "new55-0015",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 15,
+    "split": "blind",
+    "typed": "I found the lid that fits your big green saucepan."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "buzzer",
+        "expected_index": 6,
+        "typed": "buzer",
+        "typed_index": 6
+      }
+    ],
+    "expected": "zola said you gotta press the buzzer twice.",
+    "id": "new55-0136-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0136",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "zola",
+        "typed_index": 0
+      },
+      {
+        "category": "slang",
+        "expected_index": 3,
+        "text": "gotta",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 136,
+    "split": "blind",
+    "typed": "zola said you gotta press the buzer twice."
+  },
+  {
+    "edits": [],
+    "expected": "zola said you gotta press the buzzer twice.",
+    "id": "new55-0136-c",
+    "kind": "clean",
+    "pair_id": "new55-0136",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "zola",
+        "typed_index": 0
+      },
+      {
+        "category": "slang",
+        "expected_index": 3,
+        "text": "gotta",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 136,
+    "split": "blind",
+    "typed": "zola said you gotta press the buzzer twice."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "that glint",
+        "expected_index": 3,
+        "typed": "thatglint",
+        "typed_index": 3
+      }
+    ],
+    "expected": "ikr I saw that glint too when the sun came out.",
+    "id": "new55-0097-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0097",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "ikr",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 97,
+    "split": "blind",
+    "typed": "ikr I saw thatglint too when the sun came out."
+  },
+  {
+    "edits": [],
+    "expected": "ikr I saw that glint too when the sun came out.",
+    "id": "new55-0097-c",
+    "kind": "clean",
+    "pair_id": "new55-0097",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "ikr",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 97,
+    "split": "blind",
+    "typed": "ikr I saw that glint too when the sun came out."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "looks worse",
+        "expected_index": 4,
+        "typed": "looksworse",
+        "typed_index": 4
+      }
+    ],
+    "expected": "mina thinks my sty looks worse today, my eyelid is all puffy.",
+    "id": "new55-0105-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0105",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "mina",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "sty",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 105,
+    "split": "blind",
+    "typed": "mina thinks my sty looksworse today, my eyelid is all puffy."
+  },
+  {
+    "edits": [],
+    "expected": "mina thinks my sty looks worse today, my eyelid is all puffy.",
+    "id": "new55-0105-c",
+    "kind": "clean",
+    "pair_id": "new55-0105",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "mina",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "sty",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 105,
+    "split": "blind",
+    "typed": "mina thinks my sty looks worse today, my eyelid is all puffy."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "hand",
+        "expected_index": 5,
+        "typed": "band",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Use the back of your hand to check his forehead.",
+    "id": "new55-0060-n",
+    "kind": "real-word",
+    "pair_id": "new55-0060",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 60,
+    "split": "blind",
+    "typed": "Use the back of your band to check his forehead."
+  },
+  {
+    "edits": [],
+    "expected": "Use the back of your hand to check his forehead.",
+    "id": "new55-0060-c",
+    "kind": "clean",
+    "pair_id": "new55-0060",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 60,
+    "split": "blind",
+    "typed": "Use the back of your hand to check his forehead."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "paid",
+        "expected_index": 2,
+        "typed": "pail",
+        "typed_index": 2
+      }
+    ],
+    "expected": "I finally paid off the entire balance on my card.",
+    "id": "new55-0051-n",
+    "kind": "real-word",
+    "pair_id": "new55-0051",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 51,
+    "split": "blind",
+    "typed": "I finally pail off the entire balance on my card."
+  },
+  {
+    "edits": [],
+    "expected": "I finally paid off the entire balance on my card.",
+    "id": "new55-0051-c",
+    "kind": "clean",
+    "pair_id": "new55-0051",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 51,
+    "split": "blind",
+    "typed": "I finally paid off the entire balance on my card."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "around each",
+        "expected_index": 3,
+        "typed": "aroundeach",
+        "typed_index": 3
+      }
+    ],
+    "expected": "We used grout around each tile and it dried overnight.",
+    "id": "new55-0106-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0106",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "grout",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 106,
+    "split": "blind",
+    "typed": "We used grout aroundeach tile and it dried overnight."
+  },
+  {
+    "edits": [],
+    "expected": "We used grout around each tile and it dried overnight.",
+    "id": "new55-0106-c",
+    "kind": "clean",
+    "pair_id": "new55-0106",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "grout",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 106,
+    "split": "blind",
+    "typed": "We used grout around each tile and it dried overnight."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "feed",
+        "expected_index": 2,
+        "typed": "feat",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "kibble",
+        "expected_index": 6,
+        "typed": "kibbel",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Did you feed the cat her kibble already?",
+    "id": "new55-0030-n",
+    "kind": "mixed",
+    "pair_id": "new55-0030",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 30,
+    "split": "blind",
+    "typed": "Did you feat the cat her kibbel already?"
+  },
+  {
+    "edits": [],
+    "expected": "Did you feed the cat her kibble already?",
+    "id": "new55-0030-c",
+    "kind": "clean",
+    "pair_id": "new55-0030",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 30,
+    "split": "blind",
+    "typed": "Did you feed the cat her kibble already?"
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "tripped",
+        "expected_index": 1,
+        "typed": "tirpped",
+        "typed_index": 1
+      },
+      {
+        "category": "ordinary",
+        "expected": "cable",
+        "expected_index": 4,
+        "typed": "cabke",
+        "typed_index": 4
+      }
+    ],
+    "expected": "I tripped on the cable and unplugged the whole thing.",
+    "id": "new55-0117-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0117",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 117,
+    "split": "blind",
+    "typed": "I tirpped on the cabke and unplugged the whole thing."
+  },
+  {
+    "edits": [],
+    "expected": "I tripped on the cable and unplugged the whole thing.",
+    "id": "new55-0117-c",
+    "kind": "clean",
+    "pair_id": "new55-0117",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 117,
+    "split": "blind",
+    "typed": "I tripped on the cable and unplugged the whole thing."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "those bricks",
+        "expected_index": 5,
+        "typed": "thosebricks",
+        "typed_index": 5
+      }
+    ],
+    "expected": "ty for helping kit haul those bricks upstairs.",
+    "id": "new55-0104-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0104",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "ty",
+        "typed_index": 0
+      },
+      {
+        "category": "name",
+        "expected_index": 3,
+        "text": "kit",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 104,
+    "split": "blind",
+    "typed": "ty for helping kit haul thosebricks upstairs."
+  },
+  {
+    "edits": [],
+    "expected": "ty for helping kit haul those bricks upstairs.",
+    "id": "new55-0104-c",
+    "kind": "clean",
+    "pair_id": "new55-0104",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "ty",
+        "typed_index": 0
+      },
+      {
+        "category": "name",
+        "expected_index": 3,
+        "text": "kit",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 104,
+    "split": "blind",
+    "typed": "ty for helping kit haul those bricks upstairs."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "slice",
+        "expected_index": 4,
+        "typed": "slcie",
+        "typed_index": 4
+      },
+      {
+        "category": "ordinary",
+        "expected": "pizza",
+        "expected_index": 6,
+        "typed": "pizaz",
+        "typed_index": 6
+      }
+    ],
+    "expected": "imma leave the last slice of pizza for you.",
+    "id": "new55-0118-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0118",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "imma",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 118,
+    "split": "blind",
+    "typed": "imma leave the last slcie of pizaz for you."
+  },
+  {
+    "edits": [],
+    "expected": "imma leave the last slice of pizza for you.",
+    "id": "new55-0118-c",
+    "kind": "clean",
+    "pair_id": "new55-0118",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "imma",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 118,
+    "split": "blind",
+    "typed": "imma leave the last slice of pizza for you."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "key",
+        "expected_index": 2,
+        "typed": "keg",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "doormat",
+        "expected_index": 6,
+        "typed": "doormta",
+        "typed_index": 6
+      }
+    ],
+    "expected": "The spare key is under the doormat like always.",
+    "id": "new55-0029-n",
+    "kind": "mixed",
+    "pair_id": "new55-0029",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 29,
+    "split": "blind",
+    "typed": "The spare keg is under the doormta like always."
+  },
+  {
+    "edits": [],
+    "expected": "The spare key is under the doormat like always.",
+    "id": "new55-0029-c",
+    "kind": "clean",
+    "pair_id": "new55-0029",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 29,
+    "split": "blind",
+    "typed": "The spare key is under the doormat like always."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "sew",
+        "expected_index": 2,
+        "typed": "sow",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "button",
+        "expected_index": 4,
+        "typed": "butotn",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Can you sew the button back onto my coat before Friday?",
+    "id": "new55-0001-n",
+    "kind": "mixed",
+    "pair_id": "new55-0001",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 1,
+    "split": "blind",
+    "typed": "Can you sow the butotn back onto my coat before Friday?"
+  },
+  {
+    "edits": [],
+    "expected": "Can you sew the button back onto my coat before Friday?",
+    "id": "new55-0001-c",
+    "kind": "clean",
+    "pair_id": "new55-0001",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 1,
+    "split": "blind",
+    "typed": "Can you sew the button back onto my coat before Friday?"
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "smells",
+        "expected_index": 2,
+        "typed": "smelks",
+        "typed_index": 2
+      },
+      {
+        "category": "ordinary",
+        "expected": "bonfire",
+        "expected_index": 5,
+        "typed": "bonfier",
+        "typed_index": 5
+      }
+    ],
+    "expected": "My hair smells like that bonfire even after a shower.",
+    "id": "new55-0120-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0120",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 120,
+    "split": "blind",
+    "typed": "My hair smelks like that bonfier even after a shower."
+  },
+  {
+    "edits": [],
+    "expected": "My hair smells like that bonfire even after a shower.",
+    "id": "new55-0120-c",
+    "kind": "clean",
+    "pair_id": "new55-0120",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 120,
+    "split": "blind",
+    "typed": "My hair smells like that bonfire even after a shower."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "kettle",
+        "expected_index": 3,
+        "typed": "kennel",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "whistle",
+        "expected_index": 5,
+        "typed": "whitsle",
+        "typed_index": 5
+      }
+    ],
+    "expected": "Wait for the kettle to whistle before you pour it.",
+    "id": "new55-0006-n",
+    "kind": "mixed",
+    "pair_id": "new55-0006",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 6,
+    "split": "blind",
+    "typed": "Wait for the kennel to whitsle before you pour it."
+  },
+  {
+    "edits": [],
+    "expected": "Wait for the kettle to whistle before you pour it.",
+    "id": "new55-0006-c",
+    "kind": "clean",
+    "pair_id": "new55-0006",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 6,
+    "split": "blind",
+    "typed": "Wait for the kettle to whistle before you pour it."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "match",
+        "expected_index": 11,
+        "typed": "macth",
+        "typed_index": 11
+      },
+      {
+        "category": "ordinary",
+        "expected": "tomorrow",
+        "expected_index": 12,
+        "typed": "tomororw",
+        "typed_index": 12
+      }
+    ],
+    "expected": "finna crash at the place roan shares with luz after the match tomorrow.",
+    "id": "new55-0121-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0121",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "finna",
+        "typed_index": 0
+      },
+      {
+        "category": "name",
+        "expected_index": 5,
+        "text": "roan",
+        "typed_index": 5
+      },
+      {
+        "category": "name",
+        "expected_index": 8,
+        "text": "luz",
+        "typed_index": 8
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 121,
+    "split": "blind",
+    "typed": "finna crash at the place roan shares with luz after the macth tomororw."
+  },
+  {
+    "edits": [],
+    "expected": "finna crash at the place roan shares with luz after the match tomorrow.",
+    "id": "new55-0121-c",
+    "kind": "clean",
+    "pair_id": "new55-0121",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "finna",
+        "typed_index": 0
+      },
+      {
+        "category": "name",
+        "expected_index": 5,
+        "text": "roan",
+        "typed_index": 5
+      },
+      {
+        "category": "name",
+        "expected_index": 8,
+        "text": "luz",
+        "typed_index": 8
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 121,
+    "split": "blind",
+    "typed": "finna crash at the place roan shares with luz after the match tomorrow."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "drill",
+        "expected_index": 3,
+        "typed": "grill",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "holes",
+        "expected_index": 6,
+        "typed": "hloes",
+        "typed_index": 6
+      }
+    ],
+    "expected": "Teo used a drill to make holes for the shelf.",
+    "id": "new55-0023-n",
+    "kind": "mixed",
+    "pair_id": "new55-0023",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Teo",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 23,
+    "split": "blind",
+    "typed": "Teo used a grill to make hloes for the shelf."
+  },
+  {
+    "edits": [],
+    "expected": "Teo used a drill to make holes for the shelf.",
+    "id": "new55-0023-c",
+    "kind": "clean",
+    "pair_id": "new55-0023",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Teo",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 23,
+    "split": "blind",
+    "typed": "Teo used a drill to make holes for the shelf."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "by reception",
+        "expected_index": 4,
+        "typed": "byreception",
+        "typed_index": 4
+      }
+    ],
+    "expected": "There's a little nook by reception where you can nurse.",
+    "id": "new55-0099-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0099",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "nook",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 99,
+    "split": "blind",
+    "typed": "There's a little nook byreception where you can nurse."
+  },
+  {
+    "edits": [],
+    "expected": "There's a little nook by reception where you can nurse.",
+    "id": "new55-0099-c",
+    "kind": "clean",
+    "pair_id": "new55-0099",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "nook",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 99,
+    "split": "blind",
+    "typed": "There's a little nook by reception where you can nurse."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "charter",
+        "expected_index": 5,
+        "typed": "charetr",
+        "typed_index": 5
+      },
+      {
+        "category": "ordinary",
+        "expected": "member",
+        "expected_index": 8,
+        "typed": "membrer",
+        "typed_index": 8
+      }
+    ],
+    "expected": "There's a veto in the charter if any member objects.",
+    "id": "new55-0129-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0129",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "veto",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 129,
+    "split": "blind",
+    "typed": "There's a veto in the charetr if any membrer objects."
+  },
+  {
+    "edits": [],
+    "expected": "There's a veto in the charter if any member objects.",
+    "id": "new55-0129-c",
+    "kind": "clean",
+    "pair_id": "new55-0129",
+    "protected": [
+      {
+        "category": "valid-word",
+        "expected_index": 2,
+        "text": "veto",
+        "typed_index": 2
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 129,
+    "split": "blind",
+    "typed": "There's a veto in the charter if any member objects."
+  },
+  {
+    "edits": [
+      {
+        "category": "ordinary",
+        "expected": "brought",
+        "expected_index": 6,
+        "typed": "brouhgt",
+        "typed_index": 6
+      },
+      {
+        "category": "ordinary",
+        "expected": "charcoal",
+        "expected_index": 8,
+        "typed": "charcaol",
+        "typed_index": 8
+      }
+    ],
+    "expected": "yves brought a grill and I brought the charcoal.",
+    "id": "new55-0132-n",
+    "kind": "ordinary",
+    "pair_id": "new55-0132",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "yves",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "grill",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 132,
+    "split": "blind",
+    "typed": "yves brought a grill and I brouhgt the charcaol."
+  },
+  {
+    "edits": [],
+    "expected": "yves brought a grill and I brought the charcoal.",
+    "id": "new55-0132-c",
+    "kind": "clean",
+    "pair_id": "new55-0132",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "yves",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "grill",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 132,
+    "split": "blind",
+    "typed": "yves brought a grill and I brought the charcoal."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "pale stripe",
+        "expected_index": 3,
+        "typed": "palestripe",
+        "typed_index": 3
+      },
+      {
+        "category": "ordinary",
+        "expected": "watch",
+        "expected_index": 9,
+        "typed": "watvh",
+        "typed_index": 8
+      }
+    ],
+    "expected": "aisha thinks that pale stripe is from wearing her watch in the sun.",
+    "id": "new55-0078-n",
+    "kind": "mixed",
+    "pair_id": "new55-0078",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "aisha",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 78,
+    "split": "blind",
+    "typed": "aisha thinks that palestripe is from wearing her watvh in the sun."
+  },
+  {
+    "edits": [],
+    "expected": "aisha thinks that pale stripe is from wearing her watch in the sun.",
+    "id": "new55-0078-c",
+    "kind": "clean",
+    "pair_id": "new55-0078",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "aisha",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 78,
+    "split": "blind",
+    "typed": "aisha thinks that pale stripe is from wearing her watch in the sun."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "door",
+        "expected_index": 8,
+        "typed": "deer",
+        "typed_index": 8
+      }
+    ],
+    "expected": "pls take your muddy shoes off at the door.",
+    "id": "new55-0043-n",
+    "kind": "real-word",
+    "pair_id": "new55-0043",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "pls",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 43,
+    "split": "blind",
+    "typed": "pls take your muddy shoes off at the deer."
+  },
+  {
+    "edits": [],
+    "expected": "pls take your muddy shoes off at the door.",
+    "id": "new55-0043-c",
+    "kind": "clean",
+    "pair_id": "new55-0043",
+    "protected": [
+      {
+        "category": "slang",
+        "expected_index": 0,
+        "text": "pls",
+        "typed_index": 0
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 43,
+    "split": "blind",
+    "typed": "pls take your muddy shoes off at the door."
+  },
+  {
+    "edits": [
+      {
+        "category": "missing-space",
+        "expected": "with no",
+        "expected_index": 4,
+        "typed": "withno",
+        "typed_index": 4
+      }
+    ],
+    "expected": "Orla found a spaniel with no tag wandering outside.",
+    "id": "new55-0107-n",
+    "kind": "missing-space",
+    "pair_id": "new55-0107",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Orla",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "spaniel",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 107,
+    "split": "blind",
+    "typed": "Orla found a spaniel withno tag wandering outside."
+  },
+  {
+    "edits": [],
+    "expected": "Orla found a spaniel with no tag wandering outside.",
+    "id": "new55-0107-c",
+    "kind": "clean",
+    "pair_id": "new55-0107",
+    "protected": [
+      {
+        "category": "name",
+        "expected_index": 0,
+        "text": "Orla",
+        "typed_index": 0
+      },
+      {
+        "category": "valid-word",
+        "expected_index": 3,
+        "text": "spaniel",
+        "typed_index": 3
+      }
+    ],
+    "source": "independently-authored",
+    "source_id": 107,
+    "split": "blind",
+    "typed": "Orla found a spaniel with no tag wandering outside."
+  },
+  {
+    "edits": [
+      {
+        "category": "real-word",
+        "expected": "his",
+        "expected_index": 4,
+        "typed": "him",
+        "typed_index": 4
+      }
+    ],
+    "expected": "The dog won't eat his food unless I sit beside him.",
+    "id": "new55-0039-n",
+    "kind": "real-word",
+    "pair_id": "new55-0039",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 39,
+    "split": "blind",
+    "typed": "The dog won't eat him food unless I sit beside him."
+  },
+  {
+    "edits": [],
+    "expected": "The dog won't eat his food unless I sit beside him.",
+    "id": "new55-0039-c",
+    "kind": "clean",
+    "pair_id": "new55-0039",
+    "protected": [],
+    "source": "independently-authored",
+    "source_id": 39,
+    "split": "blind",
+    "typed": "The dog won't eat his food unless I sit beside him."
+  }
+]

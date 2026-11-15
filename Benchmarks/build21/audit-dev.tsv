@@ -1,0 +1,834 @@
+id	split	kind	typed	expected	gap	slot	domain	dialogue
+dev-be-by-0	dev	be-by	Hey Assistant, I'd like to hear something be by David Boyle.	Hey Assistant, I'd like to hear something by by David Boyle.		7	music	dlg-7fc0a101-c919-41da-a501-c90e6fc38f3e
+dev-be-by-1	dev	be-by	Can I get another song be him?	Can I get another song by him?		5	music	dlg-fb7199ea-8f4e-42c7-9f95-671fe1d0c065
+dev-be-by-2	dev	be-by	Can you play something be August Burns Red?	Can you play something by August Burns Red?		4	music	dlg-bbd41791-22e2-47b5-a409-b62ceab42aa9
+dev-be-by-3	dev	be-by	But can you play it be a different artist?	But can you play it by a different artist?		5	music	dlg-88e203c4-d4bb-4218-b345-3ba5ab2881e8
+dev-be-by-4	dev	be-by	My preference would be business class, and I want to be be a window.	My preference would be business class, and I want to be by a window.		11	flights	dlg-4d7ce6c1-1dfb-4c8b-b70e-8c1e90929b9d
+dev-be-by-5	dev	be-by	All right, now can you find the song Closer be Nine Inch Nails.	All right, now can you find the song Closer by Nine Inch Nails.		9	music	dlg-a94565a4-33ae-42df-9381-1272932af74d
+dev-be-by-6	dev	be-by	Yes, Can you play something be Rapsody?	Yes, Can you play something by Rapsody?		5	music	dlg-8ff8ff83-81fd-4627-a3ac-deb611ae728b
+dev-be-by-7	dev	be-by	Can you play songs for me be Whitney Houston.	Can you play songs for me by Whitney Houston.		6	music	dlg-dbb62b90-69d4-4c39-af19-136ef0897d68
+dev-be-by-8	dev	be-by	Hi, I was wanting to listen to some music, I was thinking something be Confined.	Hi, I was wanting to listen to some music, I was thinking something by Confined.		13	music	dlg-22215449-a9cc-49ef-aa4f-5031bc86074d
+dev-be-by-9	dev	be-by	Play something be Rancid.	Play something by Rancid.		2	music	dlg-0548c8d0-1409-416f-a878-633edd367663
+dev-be-by-10	dev	be-by	Can you play the same song be a different artist, please?	Can you play the same song by a different artist, please?		6	music	dlg-1201ea87-88ac-4850-96a4-432046194433
+dev-be-by-11	dev	be-by	If you can play something be Bruno Mars poppy music?	If you can play something by Bruno Mars poppy music?		5	music	dlg-f1feec78-5180-4060-9d4d-314f3ddc0779
+dev-be-by-12	dev	be-by	How about a cover by a famous group be Big Star?	How about a cover by a famous group by Big Star?		8	music	dlg-e8723cec-57ea-4a4a-96f2-cf9e38f80147
+dev-be-by-13	dev	be-by	Can you play another song be JP Cooper?	Can you play another song by JP Cooper?		5	music	dlg-2ea00aa9-bb4e-4919-8477-5f7509263aa4
+dev-be-by-14	dev	be-by	Hi, I'm looking for a song be Usher.	Hi, I'm looking for a song by Usher.		6	music	dlg-1e8bc96f-c4df-4717-a12e-66e777007318
+dev-be-by-15	dev	be-by	Lastly, could you play a different track in the Reggae genre done be a male vocalist?	Lastly, could you play a different track in the Reggae genre done by a male vocalist?		12	music	dlg-17881703-a860-4598-b2ac-7786e7c963d4
+dev-be-by-16	dev	be-by	Can you get some new one be the same artist?	Can you get some new one by the same artist?		6	music	dlg-a42200bb-1d8d-4f9c-9c07-b048b6e5b194
+dev-be-by-17	dev	be-by	How about one more be Musiq Soulchild?	How about one more by Musiq Soulchild?		4	music	dlg-bd805c1b-faee-4147-b2ce-3602944189b7
+dev-be-by-18	dev	be-by	Hi, I'd like to here some music be Counting Crows, please.	Hi, I'd like to here some music by Counting Crows, please.		7	music	dlg-6b4bcc47-58e9-4cc8-bea3-6049f810501b
+dev-be-by-19	dev	be-by	Can you play another song be him?	Can you play another song by him?		5	music	dlg-2ea00aa9-bb4e-4919-8477-5f7509263aa4
+dev-be-by-20	dev	be-by	Hi, Can you play me something be Chris Stapleton?	Hi, Can you play me something by Chris Stapleton?		6	music	dlg-a5ae1183-9333-4afa-ad8a-4c1954a1d1cb
+dev-be-by-21	dev	be-by	Do you have something even older be them?	Do you have something even older by them?		6	music	dlg-27cf6865-bdec-4f43-bf68-5dbdc39d9940
+dev-if-of-0	dev	if-of	Are any if those Downtown?	Are any of those Downtown?		2	restaurant-search	dlg-3adbc7b8-5176-4e6a-922b-58a7fd30f6ea
+dev-if-of-1	dev	if-of	I can use one if those.	I can use one of those.		4	movies	dlg-ee4beeaf-f166-4193-9d8e-82a40e01d430
+dev-if-of-2	dev	if-of	I would like meat lover's on all if them.	I would like meat lover's on all of them.		7	woz-dialogs	dlg-ac0310fc-07d7-4caa-a592-59712068b76e
+dev-if-of-3	dev	if-of	This is kind if cool.	This is kind of cool.		3	music	dlg-7c789766-df0b-46e7-8838-1b579838b0fa
+dev-if-of-4	dev	if-of	Who is the coach if the LA Clippers?	Who is the coach of the LA Clippers?		4	sports	dlg-6f8fa591-a814-4920-8fc7-3605f6518bcb
+dev-if-of-5	dev	if-of	And the price if that one is?	And the price of that one is?		3	flights	dlg-597d72f4-f99b-4fe9-848d-bb8343797b94
+dev-if-of-6	dev	if-of	Cool, and you're sure I can get just a slice if pizza there?	Cool, and you're sure I can get just a slice of pizza there?		10	restaurant-search	dlg-4198bf3f-8e95-488d-a93c-a78d0f6c2bb1
+dev-if-of-7	dev	if-of	That sounds perfect and can you tell me who do either if them have a restaurant with a full bar on their hotel grounds?	That sounds perfect and can you tell me who do either of them have a restaurant with a full bar on their hotel grounds?		11	hotels	dlg-3b2f7121-6486-447d-9c93-5f12a162e092
+dev-if-of-8	dev	if-of	Hi, I'm a fan if the New York City Football Club and I would like to know about their win-loss record.	Hi, I'm a fan of the New York City Football Club and I would like to know about their win-loss record.		4	sports	dlg-9b1bb072-6456-458e-8ca2-7fa6dd709112
+dev-if-of-9	dev	if-of	Yes, both if them are new artists.	Yes, both of them are new artists.		2	music	dlg-5926a818-fcca-453c-8486-4915033ede27
+dev-if-of-10	dev	if-of	That's still one if my favorites from them.	That's still one of my favorites from them.		3	music	dlg-f3dd86ac-a713-4d85-97a9-c2f31537d75f
+dev-if-of-11	dev	if-of	Can you give me the address if the theater?	Can you give me the address of the theater?		6	movies	dlg-84f66857-8b82-4934-81be-38edf0613c82
+dev-if-of-12	dev	if-of	I'm looking for a political type if movie and I'm looking to go through Netflix.	I'm looking for a political type of movie and I'm looking to go through Netflix.		6	movies	dlg-34fc0e52-b843-4150-ad75-bb4771f790db
+dev-if-of-13	dev	if-of	Looking for a Chris Ryan if Iowa.	Looking for a Chris Ryan of Iowa.		5	flights	dlg-03e0a059-911e-4306-971a-a133ce1343ba
+dev-if-of-14	dev	if-of	Hello Assistant, I'm fan if the Orlando Magic.	Hello Assistant, I'm fan of the Orlando Magic.		4	sports	dlg-f7a5a2f4-f693-4e46-ac07-d6711c87e317
+dev-if-of-15	dev	if-of	Oh, I said I never heard if fairport connection.	Oh, I said I never heard of fairport connection.		6	music	dlg-9753eaf9-be92-48a3-ad99-59df3ce601be
+dev-if-of-16	dev	if-of	So, when is the first game if Cleveland?	So, when is the first game of Cleveland?		6	sports	dlg-e572c8d9-02bf-468b-895c-29e573963b0d
+dev-if-of-17	dev	if-of	Can you please take care if that for me?	Can you please take care of that for me?		5	woz-dialogs	dlg-a21acb08-99bd-4e6f-a386-f30785fe6a0a
+dev-if-of-18	dev	if-of	I need the one which has a bit if quality and atmosphere and I am located in Downtown California.	I need the one which has a bit of quality and atmosphere and I am located in Downtown California.		8	restaurant-search	dlg-d6ab98a6-6e43-496d-aace-a76978acb578
+dev-if-of-19	dev	if-of	Who's the director if this?	Who's the director of this?		3	movies	dlg-3a037382-cd19-41bf-8ffb-89766b74cb96
+dev-if-of-20	dev	if-of	Who's the manager if Stoke City?	Who's the manager of Stoke City?		3	sports	dlg-71472f6e-15e2-4511-93a6-7da88a3cda00
+dev-if-of-21	dev	if-of	Do you think you could play one if his albums that was more critically received?	Do you think you could play one of his albums that was more critically received?		7	music	dlg-fbc4d1f2-fd3b-41bc-8c72-83c2157f12c8
+dev-if-of-22	dev	if-of	Hey, can you tell me sort if the similarities between Crystal Palace and Tottenham HotSpur?	Hey, can you tell me sort of the similarities between Crystal Palace and Tottenham HotSpur?		6	sports	dlg-626369dd-20c5-4101-9f4a-71d7515ce9f9
+dev-if-of-23	dev	if-of	Hello, I need to know about the record if the soccer team Arsenal.	Hello, I need to know about the record of the soccer team Arsenal.		8	sports	dlg-cfaaee6e-24ba-4674-a8bd-83d7c5659c8d
+dev-if-of-24	dev	if-of	It's one if the best albums that Bonobo put out.	It's one of the best albums that Bonobo put out.		2	music	dlg-0bfcdbe7-a3ba-4bd7-bb94-4fe475a1781a
+dev-if-of-25	dev	if-of	Could I see a trailer if The House, please?	Could I see a trailer of The House, please?		5	movies	dlg-6b1e55b9-c136-4c8b-bb6b-d23558eb1197
+dev-if-of-26	dev	if-of	What was the score if the last Tennessee Titan game?	What was the score of the last Tennessee Titan game?		4	sports	dlg-0d8965ce-d4f2-4030-881d-a35f712f81c0
+dev-if-of-27	dev	if-of	And the rooms should have all if the following, do you understand?	And the rooms should have all of the following, do you understand?		6	hotels	dlg-991b7b3a-7fb3-43b9-af8c-ecec54c082da
+dev-if-of-28	dev	if-of	The Village if Cross Keys.	The Village of Cross Keys.		2	woz-dialogs	dlg-1cfc68d4-0e3c-40e8-876a-d695f94a5df3
+dev-if-of-29	dev	if-of	I'm a big fan if AFC Bournemouth.	I'm a big fan of AFC Bournemouth.		4	sports	dlg-f47bb318-db09-4d99-a154-5f1a94d12d37
+dev-if-of-30	dev	if-of	Hi, could you tell me a little bit if information about the NFL.	Hi, could you tell me a little bit of information about the NFL.		8	sports	dlg-d1062b84-137f-4b82-b065-b020089f0999
+dev-if-of-31	dev	if-of	Okay, Actually, Logan was one if those that I was looking into.	Okay, Actually, Logan was one of those that I was looking into.		5	movies	dlg-61773cb0-eb7f-46ba-9848-205cb230b96e
+dev-if-of-32	dev	if-of	And then I'd like a tall on all if them.	And then I'd like a tall on all of them.		8	woz-dialogs	dlg-4cdbeee0-4758-483b-a103-d4a364997472
+dev-if-of-33	dev	if-of	I'm hoping that you can help me today gathering information about the Atlanta Braves if the MLB.	I'm hoping that you can help me today gathering information about the Atlanta Braves of the MLB.		14	sports	dlg-d650c5cc-802a-41ef-8d68-d3f4a4a3608d
+dev-if-of-34	dev	if-of	And what is the name if the stadium they play in?	And what is the name of the stadium they play in?		5	sports	dlg-d1af768c-7265-472f-9d4b-783f14cc94cb
+dev-if-of-35	dev	if-of	Just out if curiosity, where are the layovers?	Just out of curiosity, where are the layovers?		2	flights	dlg-9c7ca139-3a58-41e1-82f4-50ef6380c160
+dev-if-of-36	dev	if-of	Are there any female covers if this song or a song like this?	Are there any female covers of this song or a song like this?		5	music	dlg-a3346174-bb27-4c92-9419-3af2ad3efc55
+dev-if-of-37	dev	if-of	Is there another artist that you could play for me that's kind if like Fifth Harmony and Becky G together?	Is there another artist that you could play for me that's kind of like Fifth Harmony and Becky G together?		12	music	dlg-ed51fd06-c682-4257-8032-5304c067cae4
+dev-if-of-38	dev	if-of	I need one if them to be a taco pizza, one of them to be meat lovers, one of them to be.	I need one of them to be a taco pizza, one of them to be meat lovers, one of them to be.		3	woz-dialogs	dlg-440051e0-f0b9-4faf-be38-0144aadb5857
+dev-if-of-39	dev	if-of	I'm near Seattle, near the University if Washington.	I'm near Seattle, near the University of Washington.		6	movies	dlg-6a03859b-b7aa-408d-a926-9d834d033260
+dev-if-of-40	dev	if-of	A different version if Beautiful Soul.	A different version of Beautiful Soul.		3	music	dlg-f8435420-db5f-4267-8c5b-a344ca36abd6
+dev-if-of-41	dev	if-of	Preferably kind if later at night.	Preferably kind of later at night.		2	woz-dialogs	dlg-ec44a71f-6b19-426c-b004-8ec657333b9e
+dev-id-is-0	dev	id-is	How What How expensive id that?	How What How expensive is that?		4	woz-dialogs	dlg-ec44a71f-6b19-426c-b004-8ec657333b9e
+dev-id-is-1	dev	id-is	And id it a nonstop flight?	And is it a nonstop flight?		1	flights	dlg-11a17546-0622-48be-b3d2-c318f1c7cb39
+dev-id-is-2	dev	id-is	Okay and who id the Chicago Fire's leading scorer?	Okay and who is the Chicago Fire's leading scorer?		3	sports	dlg-af443bf1-0dbe-40fe-a91d-d706a8f7bc4c
+dev-id-is-3	dev	id-is	If they have one with a layover, I want to know how long that layover id going to be.	If they have one with a layover, I want to know how long that layover is going to be.		15	flights	dlg-6b71498f-d25f-4856-a495-49c3bb25ea58
+dev-id-is-4	dev	id-is	What id the shortest of those three movies you suggested?	What is the shortest of those three movies you suggested?		1	movies	dlg-1b6407e1-052d-4d71-b1b5-4727c71c1e32
+dev-id-is-5	dev	id-is	Could you play something that id sung primarily by a female artist in Reggae?	Could you play something that is sung primarily by a female artist in Reggae?		5	music	dlg-17881703-a860-4598-b2ac-7786e7c963d4
+dev-id-is-6	dev	id-is	Who id the starting point guard for the Brooklyn Nets?	Who is the starting point guard for the Brooklyn Nets?		1	sports	dlg-ee9f986f-6c8f-4da0-a52b-dc22c72cafbd
+dev-id-is-7	dev	id-is	Is it all for valet or id it have its own parking lot?	Is it all for valet or is it have its own parking lot?		6	woz-dialogs	dlg-284ffae5-205c-43fc-b282-e0ab1d2b966e
+dev-id-is-8	dev	id-is	All right, who id the Warriors' starting center?	All right, who is the Warriors' starting center?		3	sports	dlg-388c9f02-ce84-4e18-8df1-054a9c11b466
+dev-id-is-9	dev	id-is	Downtown id a good area.	Downtown is a good area.		1	hotels	dlg-64c335f8-56bd-49b0-9619-9fd91d4532aa
+dev-id-is-10	dev	id-is	Okay, and what id the closest theater near me that's playing that movie?	Okay, and what is the closest theater near me that's playing that movie?		3	movies	dlg-6520b667-1253-4de7-8d5b-4744e8297ef7
+dev-id-is-11	dev	id-is	My pickup location id Brenda's French Soul Food.	My pickup location is Brenda's French Soul Food.		3	woz-dialogs	dlg-a3606e4e-90ea-42f1-83cd-2e80560ee6da
+dev-id-is-12	dev	id-is	And id it close to the convention center?	And is it close to the convention center?		1	hotels	dlg-ae59a0d7-ded6-4361-9eb9-f6ca47186758
+dev-id-is-13	dev	id-is	Do I have to make a reservation, or id it walk-in?	Do I have to make a reservation, or is it walk-in?		8	restaurant-search	dlg-6dfc69a2-b112-4f3b-9f92-40b450df804d
+dev-id-is-14	dev	id-is	How long id the drive from Fairfield, California to there?	How long is the drive from Fairfield, California to there?		2	restaurant-search	dlg-5ed3361a-40bf-4c14-bb36-4c3466b59e08
+dev-id-is-15	dev	id-is	Now, id that available on Xfinity?	Now, is that available on Xfinity?		1	movies	dlg-3a749f37-90a1-49e3-a23d-1bbbe3cb7b8f
+dev-id-is-16	dev	id-is	The one which id the main airport.	The one which is the main airport.		3	flights	dlg-7d7150d3-0b1a-4e8b-8d62-27902f362ffe
+dev-id-is-17	dev	id-is	This song id pretty great.	This song is pretty great.		2	music	dlg-8ff8ff83-81fd-4627-a3ac-deb611ae728b
+dev-id-is-18	dev	id-is	Now I'm also wondering, who id the current goal keeper for Toronto?	Now I'm also wondering, who is the current goal keeper for Toronto?		5	sports	dlg-b2cba0f7-d90c-44f9-a439-7c28b7fb423d
+dev-id-is-19	dev	id-is	If the team is called Brighton and someone asked you the population, I would expect they would expect the population of the town the team id named for.	If the team is called Brighton and someone asked you the population, I would expect they would expect the population of the town the team is named for.		25	sports	dlg-d1af768c-7265-472f-9d4b-783f14cc94cb
+dev-id-is-20	dev	id-is	Did you know my favorite team id the Detroit Pistons?	Did you know my favorite team is the Detroit Pistons?		6	sports	dlg-2b0eb015-d7e1-4172-8ca0-f2b6088f7a20
+dev-id-is-21	dev	id-is	This id an amazing song and I love it, but I was actually listening to it.	This is an amazing song and I love it, but I was actually listening to it.		1	music	dlg-eb454745-3ecb-4c95-bdd4-2c9fae0e85a1
+dev-id-is-22	dev	id-is	How far id the theater from my location?	How far is the theater from my location?		2	movies	dlg-d07172ad-ccbb-43d9-a357-49c337835061
+dev-id-is-23	dev	id-is	Yap, that id correct.	Yap, that is correct.		2	woz-dialogs	dlg-ed946ef1-c12a-4837-b1dc-897e33e1e881
+dev-id-is-24	dev	id-is	He realizes this id a hard request.	He realizes this is a hard request.		3	movies	dlg-ef061074-8a50-4b87-960f-03a504fcfc4c
+dev-id-is-25	dev	id-is	How much id the meals there?	How much is the meals there?		2	woz-dialogs	dlg-40f1f04b-1f47-4b20-a3e7-803847815ec5
+dev-id-is-26	dev	id-is	If you put those preferences into a system, id there anything coming up particularly inspiring?	If you put those preferences into a system, is there anything coming up particularly inspiring?		8	movies	dlg-9dcaf1a7-9501-445e-b429-9dcea8b76c9d
+dev-id-is-27	dev	id-is	Who id the LA Rams' quarterback right now?	Who is the LA Rams' quarterback right now?		1	sports	dlg-42842348-478a-4751-9478-7f42251d6151
+dev-id-is-28	dev	id-is	How much for a night id that?	How much for a night is that?		5	hotels	dlg-4a658a3b-7e00-4de1-91bb-49e3e2d0a88d
+dev-id-is-29	dev	id-is	Thanks, who id their coach?	Thanks, who is their coach?		2	sports	dlg-eda6212d-baf5-44bf-8bb5-d9e60dc8c039
+dev-id-is-30	dev	id-is	How far id that from home?	How far is that from home?		2	restaurant-search	dlg-fc205799-a555-4213-a5ff-973062a43702
+dev-id-is-31	dev	id-is	And id Applebee's inside the mall?	And is Applebee's inside the mall?		1	woz-dialogs	dlg-7bba05ea-5f49-4fc1-8cbd-979b59d48712
+dev-id-is-32	dev	id-is	What id the customer review rating of that hotel?	What is the customer review rating of that hotel?		1	hotels	dlg-003fa5f0-3457-464b-b22b-e74194fe172a
+dev-id-is-33	dev	id-is	Who id the starting center this year?	Who is the starting center this year?		1	sports	dlg-f7a5a2f4-f693-4e46-ac07-d6711c87e317
+dev-id-is-34	dev	id-is	What place id Manchester United in?	What place is Manchester United in?		2	sports	dlg-33a8d46b-048f-4323-b9d0-63edbaf5b4aa
+dev-id-is-35	dev	id-is	Can you Do you know much that parking garage charges per hour, or id that.	Can you Do you know much that parking garage charges per hour, or is that.		13	woz-dialogs	dlg-284ffae5-205c-43fc-b282-e0ab1d2b966e
+dev-id-is-36	dev	id-is	I'm looking for a San Francisco restaurant that's a nice sit-in, either Mexican or Chinese food, four stars, and id near the San Francisco Bay and close to downtown.	I'm looking for a San Francisco restaurant that's a nice sit-in, either Mexican or Chinese food, four stars, and is near the San Francisco Bay and close to downtown.		20	woz-dialogs	dlg-806e28d4-d2ea-4bd4-81ed-6eddcd75772a
+dev-id-is-37	dev	id-is	What id the median dish price?	What is the median dish price?		1	woz-dialogs	dlg-6cfcfdab-3ab5-448b-b5d4-f4d90b795a64
+dev-id-is-38	dev	id-is	What id Los Angeles Lakers record?	What is Los Angeles Lakers record?		1	sports	dlg-374c039b-056c-4593-b370-941a0b135b6f
+dev-id-is-39	dev	id-is	And who id their head coach?	And who is their head coach?		2	sports	dlg-29f98de7-1e87-4fd0-8adb-3201addd1d15
+dev-id-is-40	dev	id-is	I understand that music video id working.	I understand that music video is working.		5	music	dlg-b8fe1f9c-bfb3-4b36-86c6-09c035eeee45
+dev-id-is-41	dev	id-is	What id the Mets overall score?	What is the Mets overall score?		1	sports	dlg-f47b8190-9e9b-4422-8080-e479f2f5f92f
+dev-od-of-0	dev	od-of	Do they have any kind od specials?	Do they have any kind of specials?		5	woz-dialogs	dlg-fb4e9a6c-1316-42bb-ab89-6a0bc3da031d
+dev-od-of-1	dev	od-of	Well, book it and get me out od here.	Well, book it and get me out of here.		7	flights	dlg-e11de364-0a20-46dc-9ee7-fcf9aa4ca5b8
+dev-od-of-2	dev	od-of	What part od the city is that located?	What part of the city is that located?		2	restaurant-search	dlg-2f465d9f-94bf-40b0-97f0-643b5dcdbe52
+dev-od-of-3	dev	od-of	I'm going to be flying out od JFK Airport.	I'm going to be flying out of JFK Airport.		6	flights	dlg-929a3d39-b778-4c93-93c9-976a28b9f3ec
+dev-od-of-4	dev	od-of	All right, on one od them I would like extra cheese, hamburger, bacon, and pepperoni.	All right, on one of them I would like extra cheese, hamburger, bacon, and pepperoni.		4	woz-dialogs	dlg-775ceea0-ccc2-4e26-a43d-3efc48487773
+dev-od-of-5	dev	od-of	What are the prices od the rooms?	What are the prices of the rooms?		4	hotels	dlg-45291bf0-14ed-4ba7-a0bd-2505a607274d
+dev-od-of-6	dev	od-of	Some kind od thriller, maybe.	Some kind of thriller, maybe.		2	movies	dlg-029dcd3a-fd96-4730-8fb0-0bbffc343a4c
+dev-od-of-7	dev	od-of	Okay and out od those could you pick two that you think are the least commercial?	Okay and out of those could you pick two that you think are the least commercial?		3	movies	dlg-76133d0a-0932-43f1-9a3a-40e19f3f5edd
+dev-od-of-8	dev	od-of	Can you tell me two names od their pitchers, please?	Can you tell me two names of their pitchers, please?		6	sports	dlg-18c0bd9d-b4d8-41df-a924-5d3b953715f3
+dev-od-of-9	dev	od-of	Can you play one od the most modern album?	Can you play one of the most modern album?		4	music	dlg-7a6ed7d3-5dfb-4f57-baed-4b36f49f9623
+dev-od-of-10	dev	od-of	I'm looking for a kind od like a resort style place.	I'm looking for a kind of like a resort style place.		5	hotels	dlg-85a22eb6-95e2-4fb6-b1dd-745db8a504d2
+dev-od-of-11	dev	od-of	What were the names od the three restaurants that you suggested?	What were the names of the three restaurants that you suggested?		4	woz-dialogs	dlg-05b7c34e-3886-4f1d-a69b-67ec865241fa
+dev-od-of-12	dev	od-of	Something that's kid friendly and kind od in the mid price range will be good.	Something that's kid friendly and kind of in the mid price range will be good.		6	woz-dialogs	dlg-0782be59-4e88-426c-906f-09e2df2ff3d4
+dev-od-of-13	dev	od-of	None od them are for Trojan or Seniors.	None of them are for Trojan or Seniors.		1	movies	dlg-652418a1-4c4c-4ecb-9bde-bdaea874e81a
+dev-od-of-14	dev	od-of	What's the name od the movie again?	What's the name of the movie again?		3	movies	dlg-067bb41b-f63b-4107-bb1c-a4c1be5d333c
+dev-od-of-15	dev	od-of	And can you make sure that it has a star rating od three and a half?	And can you make sure that it has a star rating of three and a half?		11	hotels	dlg-160d6d5a-b7b7-4e0a-a963-1753c40fa7b4
+dev-od-of-16	dev	od-of	Like I need one od those.	Like I need one of those.		4	hotels	dlg-0280c9a0-babe-4b2a-b2f4-79164c576582
+dev-od-of-17	dev	od-of	What type od rooms do they have at the Renaissance?	What type of rooms do they have at the Renaissance?		2	hotels	dlg-4c3a6ade-afb4-4b4f-b60e-a1167c695bc5
+dev-od-of-18	dev	od-of	What was the score od the last Texas Ranger game?	What was the score of the last Texas Ranger game?		4	sports	dlg-1856bb87-ee7b-4a01-bd28-ef23b93b8664
+dev-od-of-19	dev	od-of	One more question, what was the name od two pitchers on their team?	One more question, what was the name of two pitchers on their team?		7	sports	dlg-5824037e-9d1a-467e-9bb4-c7a2620fbab1
+dev-od-of-20	dev	od-of	Are any od those other movies?	Are any of those other movies?		2	movies	dlg-b9529950-3556-46ab-ac3f-17a1baf34c25
+dev-od-of-21	dev	od-of	Can you tell me the rating od that one?	Can you tell me the rating of that one?		6	hotels	dlg-83a95d29-223b-4e98-8221-8a8ca7291ae8
+dev-od-of-22	dev	od-of	Can I get one order od linguini?	Can I get one order of linguini?		5	food-ordering	dlg-5823e8ec-ae6d-4e8e-b343-ec33261e8de5
+dev-od-of-23	dev	od-of	I would love some barbecue chicken with a side od mashed potatoes and maybe like vegetables, also, on the side.	I would love some barbecue chicken with a side of mashed potatoes and maybe like vegetables, also, on the side.		9	food-ordering	dlg-5c7cfba8-64d8-481f-871e-02d716c63880
+dev-od-of-24	dev	od-of	On one od them can I do spinach, and avocado, with red onion?	On one of them can I do spinach, and avocado, with red onion?		2	woz-dialogs	dlg-cb197bf1-5d8e-4167-9d3c-a46fe66bb242
+dev-od-of-25	dev	od-of	What was the score od the Brooklyn Nets last game?	What was the score of the Brooklyn Nets last game?		4	sports	dlg-ee9f986f-6c8f-4da0-a52b-dc22c72cafbd
+dev-od-of-26	dev	od-of	Allright, and can you give me an example od there appetizers?	Allright, and can you give me an example of there appetizers?		8	restaurant-search	dlg-d2d09446-8f5b-4753-99bf-e5cb91675145
+dev-od-of-27	dev	od-of	I'm looking for a burger maybe not too fat with a lot od toppings like, I would love picos and onions, catch up, cheese with the whole wheat bun.	I'm looking for a burger maybe not too fat with a lot of toppings like, I would love picos and onions, catch up, cheese with the whole wheat bun.		12	food-ordering	dlg-ae0c18dc-5585-4a5c-8d71-93427b306e8c
+dev-od-of-28	dev	od-of	Greek I like any kind od kebabs.	Greek I like any kind of kebabs.		5	restaurant-search	dlg-a95d6b14-5c68-4073-9562-07dbd88b74c0
+dev-od-of-29	dev	od-of	I need to order a couple od movie tickets, please.	I need to order a couple of movie tickets, please.		6	woz-dialogs	dlg-81e974b9-f38e-4d5b-ac1b-0e50be90bfce
+dev-od-of-30	dev	od-of	I'm a really big fan od Boston Red Sox, can you give me some information on Boston Red Sox?	I'm a really big fan of Boston Red Sox, can you give me some information on Boston Red Sox?		5	sports	dlg-22311437-e000-4214-8ab6-865e1872509d
+dev-od-of-31	dev	od-of	How about a order some kind od bread sticks or cheesy bread?	How about a order some kind of bread sticks or cheesy bread?		6	food-ordering	dlg-32bb9aaa-fbb0-4097-9f40-3d369e7c4d7b
+dev-od-of-32	dev	od-of	Could you play me a cover od someone singing this song by a different artist?	Could you play me a cover of someone singing this song by a different artist?		6	music	dlg-cd5036ad-86b3-4be2-aa92-7067a4871117
+dev-od-of-33	dev	od-of	And could you give me a couple choices od their wine list?	And could you give me a couple choices of their wine list?		8	restaurant-search	dlg-a8de2de9-f3c5-49b0-a2d9-a896f667afe0
+dev-od-of-34	dev	od-of	three packets od Splenda.	three packets of Splenda.		2	woz-dialogs	dlg-671687d5-958b-4cb8-b80a-5b3da1ec465d
+dev-od-of-35	dev	od-of	I appreciate the use od clapping to introduce the song.	I appreciate the use of clapping to introduce the song.		4	music	dlg-a00360b5-c00e-4e35-9247-ee2d41c60797
+dev-od-of-36	dev	od-of	What was the score od Southampton's last game?	What was the score of Southampton's last game?		4	sports	dlg-900d195d-94e5-46f3-8f77-080edc344548
+dev-od-of-37	dev	od-of	The ratings od the hotel should be three stars and above.	The ratings of the hotel should be three stars and above.		2	hotels	dlg-bb783229-9f1b-4d5c-9cec-249d29126027
+dev-od-of-38	dev	od-of	I need to fly to Seattle in the first-class seating, leaving out od JFK.	I need to fly to Seattle in the first-class seating, leaving out of JFK.		13	flights	dlg-c677c6ef-fdbe-44b5-b6c9-211af6a834d9
+dev-od-of-39	dev	od-of	From the Museum od Contemporary Art to R.	From the Museum of Contemporary Art to R.		3	woz-dialogs	dlg-3a5b2bb8-0003-4598-94bc-4dd16db8f231
+dev-od-of-40	dev	od-of	I need to know the record od the New England Revolution.	I need to know the record of the New England Revolution.		6	sports	dlg-bcb7159a-42eb-4521-8324-90ef330de82c
+dev-od-of-41	dev	od-of	That's really funny because it's just kind od read my mind.	That's really funny because it's just kind of read my mind.		7	music	dlg-693b5df6-3a93-48ee-a369-975fa434d49d
+dev-ti-to-0	dev	ti-to	Can you email me a link ti that movie?	Can you email me a link to that movie?		6	movies	dlg-35d4a2b6-aad1-4dc4-b93e-9cfecbf79afa
+dev-ti-to-1	dev	ti-to	Can you send all the details ti me now?	Can you send all the details to me now?		6	restaurant-search	dlg-3d64b451-b9b5-4d34-a6b7-0e3f1a03b8a0
+dev-ti-to-2	dev	ti-to	I'd like ti get an Uber for two people.	I'd like to get an Uber for two people.		2	woz-dialogs	dlg-cb16b382-f73e-4a60-85dd-b812ad2a2991
+dev-ti-to-3	dev	ti-to	I need ti place an order for Bella Luna, please.	I need to place an order for Bella Luna, please.		2	woz-dialogs	dlg-f4a855ba-d840-43d7-947e-b15eb5a7c862
+dev-ti-to-4	dev	ti-to	And I need it ti be downtown.	And I need it to be downtown.		4	restaurant-search	dlg-ab1329a8-af59-44c4-9a18-09557d39310c
+dev-ti-to-5	dev	ti-to	And I'd also like this ti be a sit-down restaurant.	And I'd also like this to be a sit-down restaurant.		5	restaurant-search	dlg-b3436986-d571-477c-9c5b-ab02351269fd
+dev-ti-to-6	dev	ti-to	I'd like ti find a seafood restaurant nearby.	I'd like to find a seafood restaurant nearby.		2	restaurant-search	dlg-5edf15c3-ed28-4485-ad47-5dd512f9946c
+dev-ti-to-7	dev	ti-to	Hey, I'm trying ti get some pizzas tonight.	Hey, I'm trying to get some pizzas tonight.		3	woz-dialogs	dlg-440051e0-f0b9-4faf-be38-0144aadb5857
+dev-ti-to-8	dev	ti-to	Hi, I'd like ti order a pizza for take out, please.	Hi, I'd like to order a pizza for take out, please.		3	food-ordering	dlg-90f9c318-ebff-4ef1-91b7-5f82d88d7ae2
+dev-ti-to-9	dev	ti-to	Hello Assistant, I'd like to find a movie ti watch at home.	Hello Assistant, I'd like to find a movie to watch at home.		8	movies	dlg-c7e5706e-cc4a-4137-af66-d2529fa41809
+dev-ti-to-10	dev	ti-to	Hello, I'd like ti order a lift.	Hello, I'd like to order a lift.		3	woz-dialogs	dlg-f8e95c7a-c8c3-4a61-a1d7-1407dc608272
+dev-ti-to-11	dev	ti-to	Also want ti add that I'm not really concerned about the price.	Also want to add that I'm not really concerned about the price.		2	restaurant-search	dlg-4ee2b35d-ef4a-48ca-94c2-3ae3bf0cf318
+dev-ti-to-12	dev	ti-to	High restaurant health score they have to be able ti carry out have to have online ordering.	High restaurant health score they have to be able to carry out have to have online ordering.		9	woz-dialogs	dlg-f42f60ea-81ef-4e4c-860d-03e5697410b3
+dev-ti-to-13	dev	ti-to	I need guide ti offering a coffee drink, please.	I need guide to offering a coffee drink, please.		3	woz-dialogs	dlg-f50fe81f-4518-47e2-ae20-4ada3f258914
+dev-ti-to-14	dev	ti-to	I need ti order a food for takeout.	I need to order a food for takeout.		2	food-ordering	dlg-a67747d1-1406-4984-a7db-79604f15eaab
+dev-ti-to-15	dev	ti-to	Today, I'm looking ti listen to some music.	Today, I'm looking to listen to some music.		3	music	dlg-b9346684-2467-4a38-a25f-9edfd227e76d
+dev-ti-to-16	dev	ti-to	I'm in Seattle, Washington, and I would like ti get some coffee at Peet's Coffee.	I'm in Seattle, Washington, and I would like to get some coffee at Peet's Coffee.		8	woz-dialogs	dlg-3df41ed8-43d6-4b13-b8c4-92ddf5523739
+dev-ti-to-17	dev	ti-to	Well, That's pretty much all the information I was looking ti get about the LA Galaxy.	Well, That's pretty much all the information I was looking to get about the LA Galaxy.		10	sports	dlg-0ee4ea1a-4fe2-479d-9360-bba70b4581f7
+dev-ti-to-18	dev	ti-to	I enjoyed listening ti the songs.	I enjoyed listening to the songs.		3	music	dlg-5962735d-4640-45d3-8136-3e9b0453ed71
+dev-ti-to-19	dev	ti-to	I'd like ti order a caramel brulee latte from Starbucks.	I'd like to order a caramel brulee latte from Starbucks.		2	woz-dialogs	dlg-b3decd36-cc1a-4a23-b345-f53adac221fd
+dev-ti-to-20	dev	ti-to	Yeah, I need ti place an order from a place called Bella Luna, it's a pizza place.	Yeah, I need to place an order from a place called Bella Luna, it's a pizza place.		3	woz-dialogs	dlg-187ffb64-d13d-4b49-a9fc-efb7ffcb7007
+dev-ti-to-21	dev	ti-to	Hi, I'm looking for a restaurant ti eat, inside or near walking distance of the Arden Fair Mall in Sacramento, California.	Hi, I'm looking for a restaurant to eat, inside or near walking distance of the Arden Fair Mall in Sacramento, California.		6	woz-dialogs	dlg-b014c8fc-e3e1-4dd6-b300-b96d849da3d8
+dev-ti-to-22	dev	ti-to	I'm looking ti get a flight to Portland, Oregon.	I'm looking to get a flight to Portland, Oregon.		2	flights	dlg-269ff11d-7cd9-4350-ab6e-a4ca5713c1e6
+dev-ti-to-23	dev	ti-to	I'd like it ti be close to Bourbon Street.	I'd like it to be close to Bourbon Street.		3	hotels	dlg-13323c3c-0c15-4cfe-91d1-a94d13795858
+dev-ti-to-24	dev	ti-to	No, but I'd like it ti be close to the beach.	No, but I'd like it to be close to the beach.		5	hotels	dlg-1897865b-fa2f-470e-a97a-1a4a121ae35e
+dev-ti-to-25	dev	ti-to	I'd like one ti be a lamb.	I'd like one to be a lamb.		3	food-ordering	dlg-744e7942-2e09-4d31-82a6-6d9a6310702e
+dev-ti-to-26	dev	ti-to	Okay, I'm going ti go on Sunday.	Okay, I'm going to go on Sunday.		3	restaurant-search	dlg-a8de2de9-f3c5-49b0-a2d9-a896f667afe0
+dev-ti-to-27	dev	ti-to	I'd like help finding a movie ti see at the theater.	I'd like help finding a movie to see at the theater.		6	movies	dlg-6b1e55b9-c136-4c8b-bb6b-d23558eb1197
+dev-ti-to-28	dev	ti-to	Can I buy tickets ti you?	Can I buy tickets to you?		4	movies	dlg-d78c23b1-ea2c-4fb7-b594-444c02696ba9
+dev-ti-to-29	dev	ti-to	An Indian restaurant and I would like that ti be near Downtown.	An Indian restaurant and I would like that to be near Downtown.		8	restaurant-search	dlg-56922eb9-3290-4467-8922-6c13f8dc31ff
+dev-ti-to-30	dev	ti-to	He got a little bit more progressive, when it came ti this style.	He got a little bit more progressive, when it came to this style.		10	music	dlg-7d814fa9-237c-4d7a-8c4b-c4d057e5fd1e
+dev-ti-to-31	dev	ti-to	Looking ti fly out in the morning.	Looking to fly out in the morning.		1	flights	dlg-31ac46a7-729e-45fd-a503-74bdd5c8f5ed
+dev-other-short-0	dev	other-short	No, I think would do ut.	No, I think would do it.		5	woz-dialogs	dlg-8277cc07-2da6-446c-842b-453b0f2500fc
+dev-other-short-1	dev	other-short	Okay, sounds good andd thank you.	Okay, sounds good and thank you.		3	restaurant-search	dlg-b630a9ea-5b37-495e-a5cd-e53d2165967b
+dev-other-short-2	dev	other-short	What kind if Chinese buffets are there?	What kind of Chinese buffets are there?		2	restaurant-search	dlg-fde7d990-f9a0-4744-996e-8d148a0a53a3
+dev-other-short-3	dev	other-short	I'd like some help n browsing the music of the Backstreet Boys.	I'd like some help in browsing the music of the Backstreet Boys.		4	music	dlg-e38932eb-cce4-400d-9f0a-4381078d7f37
+dev-other-short-4	dev	other-short	It's the only one I acn take, right?	It's the only one I can take, right?		5	restaurant-search	dlg-3d64b451-b9b5-4d34-a6b7-0e3f1a03b8a0
+dev-other-short-5	dev	other-short	Could you help me with booking a car repair appointment aat Intelligent Auto Imports?	Could you help me with booking a car repair appointment at Intelligent Auto Imports?		10	woz-dialogs	dlg-2b941079-a69d-4923-9d45-48a058d763bf
+dev-other-short-6	dev	other-short	Hello, I'd like some help finding a movie ro rent.	Hello, I'd like some help finding a movie to rent.		8	movies	dlg-4fcf85ab-8ac7-4fcd-9abc-dee0343ab2d8
+dev-other-short-7	dev	other-short	I would like it t have an Oscar nomination.	I would like it to have an Oscar nomination.		4	movies	dlg-238d5629-5da4-485d-8574-65ca1d5e1fd8
+dev-other-short-8	dev	other-short	No, I want i starring Tom Hanks.	No, I want it starring Tom Hanks.		3	movies	dlg-e41b6f28-774a-4730-82e8-20caabbf7766
+dev-other-short-9	dev	other-short	Assistant, Can I hear something y the artist Peter Gabriel?	Assistant, Can I hear something by the artist Peter Gabriel?		5	music	dlg-7fc0a101-c919-41da-a501-c90e6fc38f3e
+dev-other-short-10	dev	other-short	Okay, I guess make it a XL, then.	Okay, I guess make it an XL, then.		5	woz-dialogs	dlg-3e86ca74-81d6-4c08-84fd-9bc8abf73fbb
+dev-other-short-11	dev	other-short	Can you tell me what the running time is gor this movie?	Can you tell me what the running time is for this movie?		9	woz-dialogs	dlg-a41a928f-7a7e-47fc-b61d-84d1998a549e
+dev-other-short-12	dev	other-short	I'll tune into i.	I'll tune into it.		3	sports	dlg-25a9f00d-fb6b-4b35-b1bf-fb5df0276c27
+dev-other-short-13	dev	other-short	Alright, that's all I needed ro know.	Alright, that's all I needed to know.		5	sports	dlg-adf1a319-130a-45bf-927f-58933ebdb2ef
+dev-other-short-14	dev	other-short	Parking available, either a lot r a valet.	Parking available, either a lot or a valet.		5	woz-dialogs	dlg-234ed693-b119-4d79-8bec-f8cef867277d
+dev-other-short-15	dev	other-short	That That works dor me.	That That works for me.		3	woz-dialogs	dlg-966e8722-338d-4e0e-932c-5c544f150e1a
+dev-other-short-16	dev	other-short	Yeah, I'm looking for a sit-down restaurant un San Francisco, California.	Yeah, I'm looking for a sit-down restaurant in San Francisco, California.		8	woz-dialogs	dlg-92f9a20c-d723-47a8-b044-8a5ac595802a
+dev-other-short-17	dev	other-short	Is there movie tickets available niw?	Is there movie tickets available now?		5	movies	dlg-6a1a576a-12c1-4591-a9ac-bf6f5c9a1045
+dev-other-short-18	dev	other-short	Like how long is hte Kingsman like run time movie time?	Like how long is the Kingsman like run time movie time?		4	movies	dlg-99901a85-b66e-428d-b58f-088875aed94c
+dev-other-short-19	dev	other-short	No price choices, sny price.	No price choices, any price.		3	restaurant-search	dlg-7cd93797-6360-4129-8c71-b8d7c730bd65
+dev-other-short-20	dev	other-short	Do I need a reservation fr the Broadway Roadhouse?	Do I need a reservation for the Broadway Roadhouse?		5	woz-dialogs	dlg-992478e7-bc87-4a5d-a141-7be72bf9264d
+dev-other-short-21	dev	other-short	Want ot leave from New York City and go to Jamaica and back.	Want to leave from New York City and go to Jamaica and back.		1	flights	dlg-d8f2c3cb-64ac-4e2d-afe3-a7a0e17530c0
+dev-other-short-22	dev	other-short	I would like help finding a flight ot France.	I would like help finding a flight to France.		7	flights	dlg-72932e00-7c2b-455e-bb3a-2971d5f38276
+dev-other-short-23	dev	other-short	I'm just looking gor a tune-up.	I'm just looking for a tune-up.		3	woz-dialogs	dlg-9f5008a3-0ca4-4097-995a-7ced943d422b
+dev-other-short-24	dev	other-short	Hi, I'm a fan fo the Minnesota Twins.	Hi, I'm a fan of the Minnesota Twins.		4	sports	dlg-bf5cb550-075b-4625-adac-8e8b9eb90826
+dev-other-short-25	dev	other-short	I need a nice sit down restaurant for dinner inn San Francisco, California.	I need a nice sit down restaurant for dinner in San Francisco, California.		9	woz-dialogs	dlg-21628cdc-5d50-46df-9858-2f7a85a506ed
+dev-other-short-26	dev	other-short	This would ve four people.	This would be four people.		2	woz-dialogs	dlg-4fc62267-81d4-4337-be83-89b674baa98a
+dev-other-short-27	dev	other-short	Yeah, I was wondering if ou could tell me how the St.	Yeah, I was wondering if you could tell me how the St.		5	sports	dlg-c6e0b3c3-de45-4023-b340-e1aa00dcb5b3
+dev-other-short-28	dev	other-short	And it's on San Diego, like in in Encinitas in California.	And it's in San Diego, like in in Encinitas in California.		2	woz-dialogs	dlg-e55c321b-c63d-4bad-b4a7-601256040744
+dev-other-short-29	dev	other-short	No isn't, thank yuo.	No isn't, thank you.		3	woz-dialogs	dlg-7fcde09a-890e-485a-b31a-40af8fe9726b
+dev-other-short-30	dev	other-short	I have too visit some family there next week, Tuesday.	I have to visit some family there next week, Tuesday.		2	flights	dlg-d742c8e3-a14c-4e36-87c1-ee53fdd3fd9d
+dev-other-short-31	dev	other-short	Okay, of those wto, definitely the Courtyard.	Okay, of those two, definitely the Courtyard.		3	hotels	dlg-83a95d29-223b-4e98-8221-8a8ca7291ae8
+dev-other-short-32	dev	other-short	Between rhe Southampton goalkeeper and the Everton goalkeeper, who is older?	Between the Southampton goalkeeper and the Everton goalkeeper, who is older?		1	sports	dlg-c587dc81-bc77-4d7a-a779-6dec288f4c38
+dev-other-short-33	dev	other-short	Also comedy amd a box office hit.	Also comedy and a box office hit.		2	movies	dlg-c4353b5a-646a-4027-8b16-74655decdcb0
+dev-other-short-34	dev	other-short	Okay, Let's fo the moussaka and also an order or baklava and spanakopita.	Okay, Let's do the moussaka and also an order or baklava and spanakopita.		2	restaurant-search	dlg-c961fec4-2187-4e9d-b8ea-635474128e57
+dev-other-short-35	dev	other-short	Meaning, how many arw they back from first place?	Meaning, how many are they back from first place?		3	sports	dlg-6c7ebab7-64a3-43a2-8b56-0ddf7ebd3e7f
+dev-other-short-36	dev	other-short	Okay, let's goo with the first restaurant then.	Okay, let's go with the first restaurant then.		2	woz-dialogs	dlg-ec44a71f-6b19-426c-b004-8ec657333b9e
+dev-other-short-37	dev	other-short	Yes, thank you very much ffor your help.	Yes, thank you very much for your help.		5	restaurant-search	dlg-7f78d454-56e5-4372-9887-18c0634f4e6e
+dev-other-short-38	dev	other-short	I like this pne the best.	I like this one the best.		3	music	dlg-51a65804-4980-494a-8d7b-23a35e6bae09
+dev-other-short-39	dev	other-short	Yes, takeout foe two, please, Chinese food.	Yes, takeout for two, please, Chinese food.		2	food-ordering	dlg-739be9f6-37bd-453f-b360-9a3022f8f064
+dev-other-short-40	dev	other-short	Two adults and twwo kids, and it's for the third weekend in February, Friday through Sunday.	Two adults and two kids, and it's for the third weekend in February, Friday through Sunday.		3	hotels	dlg-12d94ac7-d148-4058-a119-aff64d53a7e3
+dev-other-short-41	dev	other-short	Could we have a reservation set up foe that location for my party of four?	Could we have a reservation set up for that location for my party of four?		7	woz-dialogs	dlg-0cf8193e-e543-498e-9dd6-f90fdf43e985
+dev-other-short-42	dev	other-short	What's tthe average customer review?	What's the average customer review?		1	woz-dialogs	dlg-c3f47f73-3967-4e49-8ad9-984fe5309a24
+dev-other-short-43	dev	other-short	So lastly, just tell me who their catcher i on their team.	So lastly, just tell me who their catcher is on their team.		8	sports	dlg-adf1a319-130a-45bf-927f-58933ebdb2ef
+dev-other-short-44	dev	other-short	I would like to find a round-trip commercial airline flight from Seattle t Boston.	I would like to find a round-trip commercial airline flight from Seattle to Boston.		13	flights	dlg-d939da1f-9347-44fa-a2ba-f7e064746c0e
+dev-other-short-45	dev	other-short	I'm looking on Naples Florida.	I'm looking in Naples Florida.		2	hotels	dlg-f43dd5bb-255d-46b6-b515-ceef8602de21
+dev-other-short-46	dev	other-short	Tell me a little more about ut.	Tell me a little more about it.		6	restaurant-search	dlg-5cdd463c-9a09-404e-8849-2149b0fcf80d
+dev-other-short-47	dev	other-short	Okay, what's the score right now since, you told mee they are playing today?	Okay, what's the score right now since, you told me they are playing today?		9	sports	dlg-b98c9f6d-a8cd-4ec9-85b4-5176a291364d
+dev-other-short-48	dev	other-short	Now, cn you play me Tom Sawyer by Rush, I think?	Now, can you play me Tom Sawyer by Rush, I think?		1	music	dlg-89678836-d29f-46ad-9731-0600bb7e20d1
+dev-other-short-49	dev	other-short	I'm looking ti find a restaurant that's rated between three and five stars.	I'm looking to find a restaurant that's rated between three and five stars.		2	restaurant-search	dlg-3e08cb04-a48e-4259-a07b-cc02eea5bbfc
+dev-other-short-50	dev	other-short	I think I'd like to rent t.	I think I'd like to rent it.		6	movies	dlg-6f673b53-3c68-4c31-a02f-f98b01679d6e
+dev-other-short-51	dev	other-short	I'll goo with Delta, I got a good experience with them.	I'll go with Delta, I got a good experience with them.		1	flights	dlg-f7098efb-00a7-4191-98f3-30607bc2bd58
+dev-other-short-52	dev	other-short	I need three tickets fr the most the the soonest showing of Cold Pursuit.	I need three tickets for the most the the soonest showing of Cold Pursuit.		4	woz-dialogs	dlg-7363bc5d-eeb9-4c02-bee9-0e40421e0969
+dev-other-short-53	dev	other-short	My favorite i Kelly Clarkson.	My favorite is Kelly Clarkson.		2	music	dlg-59c5efad-8dba-40d8-90bd-5a0c54f684d4
+dev-other-short-54	dev	other-short	I would like tto book a hotel in New Orleans.	I would like to book a hotel in New Orleans.		3	hotels	dlg-7b848e1d-db2d-42d4-bfa1-db3f74a206ea
+dev-long-typo-0	dev	long-typo	What are the novie times and location for Hidden Figures?	What are the movie times and location for Hidden Figures?		3	movies	dlg-544f1676-362e-4560-9271-0859e5274a88
+dev-long-typo-1	dev	long-typo	You said it was cose to the water, right?	You said it was close to the water, right?		4	restaurant-search	dlg-f30f4744-76f1-4118-b635-ab8fc8f9c4d6
+dev-long-typo-2	dev	long-typo	Hi, I'm trying to plan a dinner out at Mother in Sacramento, California and I had some questiins about it.	Hi, I'm trying to plan a dinner out at Mother in Sacramento, California and I had some questions about it.		17	restaurant-search	dlg-4e828928-0145-4d8a-a0d9-eb4fe1706bcf
+dev-long-typo-3	dev	long-typo	Yes, that sound's great thank.	Yes, that sound's great thanks.		4	hotels	dlg-4b88c4a2-ccee-4c28-a001-7f8b94a7c3dc
+dev-long-typo-4	dev	long-typo	Okay, I tthink that'll be fine.	Okay, I think that'll be fine.		2	hotels	dlg-7f7d5604-0ba0-43ed-8306-c216cbcfad80
+dev-long-typo-5	dev	long-typo	So, what baout the hotels around?	So, what about the hotels around?		2	hotels	dlg-1c75eacc-20aa-43b4-a50a-23db30100093
+dev-long-typo-6	dev	long-typo	The car makes a noise when turninng.	The car makes a noise when turning.		6	woz-dialogs	dlg-294347d7-b9c9-4468-ac0d-c4196e3b3dd7
+dev-long-typo-7	dev	long-typo	I want to know what pllace The Earthquakes are?	I want to know what place The Earthquakes are?		5	sports	dlg-7d050a4c-1549-469e-afcc-976cfa6e8abb
+dev-long-typo-8	dev	long-typo	They are proobably together.	They are probably together.		2	sports	dlg-36785a49-1557-428f-a90a-fa4cc3b894b5
+dev-long-typo-9	dev	long-typo	Okay, what about hotel ameities?	Okay, what about hotel amenities?		4	hotels	dlg-4637bb8b-ba00-4547-980d-9bf3aedab1a5
+dev-long-typo-10	dev	long-typo	Are tthere any movie theaters near Downtown Houston?	Are there any movie theaters near Downtown Houston?		1	woz-dialogs	dlg-725de125-b783-49f9-a875-0e4c10983b3a
+dev-long-typo-11	dev	long-typo	They were all outstandign.	They were all outstanding.		3	music	dlg-ba34a2d5-7ea5-4214-b93c-22d90a192d12
+dev-long-typo-12	dev	long-typo	What timed are available for reservation?	What times are available for reservation?		1	restaurant-search	dlg-cebb9990-defd-4837-8857-e2be95afc1db
+dev-long-typo-13	dev	long-typo	Free breakfast is optiona.	Free breakfast is optional.		3	hotels	dlg-b746b88f-68e1-4d57-9177-e1059aba00a9
+dev-long-typo-14	dev	long-typo	Can you find me a deal, pleasw?	Can you find me a deal, please?		6	hotels	dlg-15f6f217-9275-471d-b002-6f114446d3c8
+dev-long-typo-15	dev	long-typo	Please give me their phhone number.	Please give me their phone number.		4	woz-dialogs	dlg-e5ca0e97-8eda-41bf-9d30-81d771389b16
+dev-long-typo-16	dev	long-typo	I was wondering if you could help me make an appoinment today at Intelligent Auto Imports to get my car looked at.	I was wondering if you could help me make an appointment today at Intelligent Auto Imports to get my car looked at.		10	woz-dialogs	dlg-9f5008a3-0ca4-4097-995a-7ced943d422b
+dev-long-typo-17	dev	long-typo	I'm in the mood for anyhting.	I'm in the mood for anything.		5	movies	dlg-15808d68-06a0-4be1-afed-b499e6f7befa
+dev-long-typo-18	dev	long-typo	Hi, how are the Kansas City Chiefs soing?	Hi, how are the Kansas City Chiefs doing?		7	sports	dlg-ab23be6e-e5a9-406f-b970-a13b3555c7db
+dev-long-typo-19	dev	long-typo	Did you need informaton about my car?	Did you need information about my car?		3	woz-dialogs	dlg-9d4afb25-fce0-4a49-a14e-7a1afde8f826
+dev-long-typo-20	dev	long-typo	Okay, that sound reasonable.	Okay, that sounds reasonable.		2	woz-dialogs	dlg-6cfcfdab-3ab5-448b-b5d4-f4d90b795a64
+dev-long-typo-21	dev	long-typo	Is it located insde the city?	Is it located inside the city?		3	hotels	dlg-5cba68e0-4c32-486b-84d2-1c9c94f8d540
+dev-long-typo-22	dev	long-typo	That one also sounds geat.	That one also sounds great.		4	flights	dlg-a9436954-ab09-4d92-a2b4-6a8d00447493
+dev-long-typo-23	dev	long-typo	Okay, I would like to watvh Wonder Woman.	Okay, I would like to watch Wonder Woman.		5	movies	dlg-4b6a54ac-eade-4ed5-a517-8cbcdbf9e262
+dev-long-typo-24	dev	long-typo	I'm also lookiing into having in-room coffee and a flatscreen TV.	I'm also looking into having in-room coffee and a flatscreen TV.		2	hotels	dlg-44e90b8f-64f2-47dd-a422-7a6fa4d10e8e
+dev-long-typo-25	dev	long-typo	So, here's the thinng.	So, here's the thing.		3	woz-dialogs	dlg-1a3ca297-ae7f-42a0-ad44-d9182b6052bd
+dev-long-typo-26	dev	long-typo	Does the first choice have caandles on the table or no?	Does the first choice have candles on the table or no?		5	woz-dialogs	dlg-fd6c87fb-adeb-4415-921b-fa64ceb42030
+dev-long-typo-27	dev	long-typo	I would like newer matwrial.	I would like newer material.		4	music	dlg-04a2b858-c17a-40ef-a157-49d8ff206321
+dev-long-typo-28	dev	long-typo	I do not need anythiing else.	I do not need anything else.		4	sports	dlg-551f342a-4333-408b-a0f2-f5d8f989e715
+dev-long-typo-29	dev	long-typo	I'd like to find a pizzs shop.	I'd like to find a pizza shop.		5	restaurant-search	dlg-308b695e-f583-4ec3-b3b1-aefad639c607
+dev-long-typo-30	dev	long-typo	Does the seocnd one have a kid's menu?	Does the second one have a kid's menu?		2	woz-dialogs	dlg-88742773-4317-4750-a1ab-c11022030741
+dev-long-typo-31	dev	long-typo	I'm not looking for anything too expensive and is within walking disttance of my location.	I'm not looking for anything too expensive and is within walking distance of my location.		11	woz-dialogs	dlg-8fa6b889-b474-471f-aefa-f43645ccaf65
+dev-long-typo-32	dev	long-typo	How many games backers does Chicago have for first palce?	How many games backers does Chicago have for first place?		9	sports	dlg-f18261c0-e9e3-4853-a915-586b3514def6
+dev-long-typo-33	dev	long-typo	What's the latest novie for Kingsman?	What's the latest movie for Kingsman?		3	movies	dlg-1442d1c2-7adb-424e-b6db-2c9faec188ad
+dev-long-typo-34	dev	long-typo	I perfer Midway International.	I prefer Midway International.		1	flights	dlg-a9436954-ab09-4d92-a2b4-6a8d00447493
+dev-long-typo-35	dev	long-typo	What's the bag pollicy for carry-on?	What's the bag policy for carry-on?		3	flights	dlg-143e324f-f3f0-4da3-98dd-85131c1af710
+dev-long-typo-36	dev	long-typo	And what airport in Prague do I land at, pleaase?	And what airport in Prague do I land at, please?		9	flights	dlg-f7ee7e77-9fa5-4189-8c3a-4658a5cb58ca
+dev-long-typo-37	dev	long-typo	Okay, I'd like braekfast burritos food for take off for three people.	Okay, I'd like breakfast burritos food for take off for three people.		3	food-ordering	dlg-f6fdbdfc-90e7-4e37-9162-e2ddb94d379e
+dev-long-typo-38	dev	long-typo	As soon as oossible, any time.	As soon as possible, any time.		3	woz-dialogs	dlg-16908932-e3e5-4307-9813-2f7052a46d6f
+dev-long-typo-39	dev	long-typo	From a dhopping mall to another shopping mall.	From a shopping mall to another shopping mall.		2	woz-dialogs	dlg-b3651919-103c-4599-80c4-d98ccc41c5c1
+dev-long-typo-40	dev	long-typo	I'd like to get an appointmnt set to take my car to mechanic.	I'd like to get an appointment set to take my car to mechanic.		5	woz-dialogs	dlg-0d716d3e-24c0-4892-af42-67cc86987cf6
+dev-long-typo-41	dev	long-typo	Okay, what is the first one caleld?	Okay, what is the first one called?		6	restaurant-search	dlg-9ab81025-f0c3-4034-9a5c-9efbb299253c
+dev-long-typo-42	dev	long-typo	I'd like a Lyft for this eening.	I'd like a Lyft for this evening.		6	woz-dialogs	dlg-874487da-3759-42a7-a512-14ab00ffb0f5
+dev-long-typo-43	dev	long-typo	Find me resaurants in Chico, California.	Find me restaurants in Chico, California.		2	restaurant-search	dlg-027a9101-0f75-48e7-98fb-7d5c0a78c004
+dev-long-typo-44	dev	long-typo	Go ahad and do that.	Go ahead and do that.		1	woz-dialogs	dlg-6b74b370-a9f4-4af2-8bb2-f4cf150c9345
+dev-long-typo-45	dev	long-typo	Who did they play lastl?	Who did they play lastly?		4	sports	dlg-f1af1530-fd48-4d43-87ee-a8d5596228ae
+dev-long-typo-46	dev	long-typo	I'll chooes the first one, then.	I'll choose the first one, then.		1	woz-dialogs	dlg-701d5a7d-12ac-4445-9f5b-6b7ee74f1dd8
+dev-long-typo-47	dev	long-typo	Can you find one that's slightly less pouplar?	Can you find one that's slightly less popular?		7	music	dlg-a3346174-bb27-4c92-9419-3af2ad3efc55
+dev-long-typo-48	dev	long-typo	Yeah, I want a msall Coca-Cola.	Yeah, I want a small Coca-Cola.		4	food-ordering	dlg-89ed84cf-ee14-4beb-b8fa-5f8484f7ce9f
+dev-long-typo-49	dev	long-typo	And where is the stopove?	And where is the stopover?		4	flights	dlg-c78c236e-6bf6-45d5-bde6-84ad8795b71f
+dev-long-typo-50	dev	long-typo	Support major credit carrds' companies?	Support major credit cards' companies?		3	woz-dialogs	dlg-362a9814-0ada-4a43-b74d-a7338c242526
+dev-long-typo-51	dev	long-typo	Yeah, I'm in La Jolla, California right now, looking for a pplace to have some smoothies.	Yeah, I'm in La Jolla, California right now, looking for a place to have some smoothies.		11	restaurant-search	dlg-69a5eb9d-1dbd-47a1-9db2-f85dd642936b
+dev-long-typo-52	dev	long-typo	Oh men, I want to get it looked at today if I oculd.	Oh men, I want to get it looked at today if I could.		12	woz-dialogs	dlg-45c6f584-5f58-46ae-8c84-50f36c53d8b5
+dev-long-typo-53	dev	long-typo	Hey, that's good, but I'm wonderign if you can play something from earlier in his career.	Hey, that's good, but I'm wondering if you can play something from earlier in his career.		5	music	dlg-4b76f7f7-6ea5-4c72-85e9-6bf5bf0bd5b6
+dev-long-typo-54	dev	long-typo	I'd like to listen something by a female musician of the same fenre.	I'd like to listen something by a female musician of the same genre.		12	music	dlg-1a20560a-e200-4bcb-a88b-f7c079152713
+dev-long-typo-55	dev	long-typo	What was the frist one?	What was the first one?		3	hotels	dlg-4a658a3b-7e00-4de1-91bb-49e3e2d0a88d
+dev-long-typo-56	dev	long-typo	But I do need the earliest poossible flight you can find.	But I do need the earliest possible flight you can find.		6	flights	dlg-0a559552-4aa3-44a6-85d3-7a1ee1f8a134
+dev-long-typo-57	dev	long-typo	I would like a comeyd.	I would like a comedy.		4	movies	dlg-f13bd911-5a81-4373-ab14-3d0451c1c584
+dev-long-typo-58	dev	long-typo	I want to order a ppizza from Bella Luna.	I want to order a pizza from Bella Luna.		5	woz-dialogs	dlg-586cf844-1706-4dcb-91a8-2354ae573f56
+dev-long-typo-59	dev	long-typo	Yes, that's perfectlyy fine.	Yes, that's perfectly fine.		2	woz-dialogs	dlg-5fd9a429-a57a-41ed-8716-81ac6b07cd5b
+dev-long-typo-60	dev	long-typo	This one is perfect, thhank you.	This one is perfect, thank you.		4	music	dlg-fbc4d1f2-fd3b-41bc-8c72-83c2157f12c8
+dev-long-typo-61	dev	long-typo	Yeah, I'm a English Premier League soccer fan and my favoorite team is Watford.	Yeah, I'm a English Premier League soccer fan and my favorite team is Watford.		10	sports	dlg-78b22224-6e98-42ff-b9dd-c40149473de7
+dev-long-typo-62	dev	long-typo	Sorry, can I chanfe my order?	Sorry, can I change my order?		3	woz-dialogs	dlg-984fd1f4-2728-4b91-be4b-c7370dfebc64
+dev-long-typo-63	dev	long-typo	On the first one, I want feta cheese and spinaach, and on the second one, I want wheatgrass and tomato.	On the first one, I want feta cheese and spinach, and on the second one, I want wheatgrass and tomato.		9	woz-dialogs	dlg-180fce85-e885-41ef-946c-5cb4fb3427a0
+dev-long-typo-64	dev	long-typo	I don't relaly like what's playing.	I don't really like what's playing.		2	music	dlg-942304a5-1717-470f-8811-32f48f3e0c27
+dev-long-typo-65	dev	long-typo	Order pixza from Bella Luna Pizzeria.	Order pizza from Bella Luna Pizzeria.		1	woz-dialogs	dlg-9ecc3205-5a1d-40fa-97f5-030a5d7bc5e8
+dev-long-typo-66	dev	long-typo	You know what, this is a very importannt meeting.	You know what, this is a very important meeting.		7	flights	dlg-f4dd3923-5e44-4f2d-81bb-2e97f7e3e526
+dev-long-typo-67	dev	long-typo	Who are they playin in their next game?	Who are they playing in their next game?		3	sports	dlg-71472f6e-15e2-4511-93a6-7da88a3cda00
+dev-join-0	dev	join	the American AirlineCenter.	the American Airline Center.	20		woz-dialogs	dlg-1acb25d6-9bb4-468b-ba19-b49c19aba94a
+dev-join-1	dev	join	I'd like to goin April.	I'd like to go in April.	14		flights	dlg-5c8e22ed-6b6d-499b-a6e6-7e3395b5c686
+dev-join-2	dev	join	Canyou tell me the actors that are in Split?	Can you tell me the actors that are in Split?	3		movies	dlg-45eb0095-fa01-4113-951b-063e9e4a044c
+dev-join-3	dev	join	So I take it because Ihave six people in my party I'm only allowed to take an Uber XL?	So I take it because I have six people in my party I'm only allowed to take an Uber XL?	22		woz-dialogs	dlg-e6c7cfbd-5e08-417c-b39c-decae26763f8
+dev-join-4	dev	join	Now, I'm wonderingdid the Mets play today?	Now, I'm wondering did the Mets play today?	18		sports	dlg-de475a06-4ad6-4b3b-8550-501ee7373476
+dev-join-5	dev	join	Oh, That's pretty much all the informationI was looking for the Pittsburgh Pirates.	Oh, That's pretty much all the information I was looking for the Pittsburgh Pirates.	42		sports	dlg-a45fcafb-773f-4170-a327-b7fb5690c1d1
+dev-join-6	dev	join	Tell memore about Cheesecake Factory.	Tell me more about Cheesecake Factory.	7		restaurant-search	dlg-02067664-a2d2-412d-9ced-dab1c92f9f81
+dev-join-7	dev	join	Alright, great andwhat is the name of the theater closest to me where it's playing?	Alright, great and what is the name of the theater closest to me where it's playing?	18		movies	dlg-159ac47d-d7f5-4b23-8891-ac6fdbdbe6f0
+dev-join-8	dev	join	It can'tbe that high.	It can't be that high.	8		restaurant-search	dlg-4198bf3f-8e95-488d-a93c-a78d0f6c2bb1
+dev-join-9	dev	join	Yeah, that was going to be mynext question.	Yeah, that was going to be my next question.	29		woz-dialogs	dlg-86950bff-025b-478b-97e8-12b3f67566d0
+dev-join-10	dev	join	Yes, itwill work out for me.	Yes, it will work out for me.	7		flights	dlg-8292940e-24f9-4312-867a-fbb752fffefd
+dev-join-11	dev	join	UberXL, thatsounds great.	UberXL, that sounds great.	12		woz-dialogs	dlg-df35d95e-4c1a-439c-a0a7-b6637dd2a323
+dev-join-12	dev	join	Iam in New York City, Manhattan area.	I am in New York City, Manhattan area.	1		restaurant-search	dlg-8e7acfe2-660f-48fe-81c6-9e7179fe4997
+dev-join-13	dev	join	I'll checkthis out.	I'll check this out.	10		movies	dlg-75f214e3-e968-4cef-b4b3-af02b2d68f30
+dev-join-14	dev	join	You madea good choice, assistant.	You made a good choice, assistant.	8		music	dlg-913fe7ab-907a-4356-a2f9-f64199dbc5f3
+dev-join-15	dev	join	Americano with wholemilk.	Americano with whole milk.	20		woz-dialogs	dlg-3ba09f10-a937-44f0-8189-e65afe108841
+dev-join-16	dev	join	I'm trying to find a hotel that isclose to the beach.	I'm trying to find a hotel that is close to the beach.	34		hotels	dlg-44e90b8f-64f2-47dd-a422-7a6fa4d10e8e
+dev-join-17	dev	join	Can you tellme how the Atlanta United are doing this year?	Can you tell me how the Atlanta United are doing this year?	12		sports	dlg-ef211f7b-d447-494a-8be1-addc578bb43e
+dev-join-18	dev	join	Yeah, I'd like toplace an order for some Indian food.	Yeah, I'd like to place an order for some Indian food.	17		food-ordering	dlg-07a5eb77-8852-41f7-a885-bf6c2c9404d1
+dev-join-19	dev	join	I'd likeit to have the kosher meal.	I'd like it to have the kosher meal.	8		flights	dlg-d54b4611-4d0e-468e-b9f0-e474a3333275
+dev-join-20	dev	join	Howlong do you think it'll take?	How long do you think it'll take?	3		woz-dialogs	dlg-9669a21d-ffa9-4b39-a98a-b9c02f5683b1
+dev-join-21	dev	join	Oh, now I'd like tohear one more song by Bonobo.	Oh, now I'd like to hear one more song by Bonobo.	19		music	dlg-7bf846bb-2764-4e66-8837-ca21e4182629
+dev-join-22	dev	join	I need a round-trip commercial air lineflight departing Seattle arriving Denver, and I'd like to depart sometime today in the morning.	I need a round-trip commercial air line flight departing Seattle arriving Denver, and I'd like to depart sometime today in the morning.	39		flights	dlg-461fa03e-4714-4d12-8bde-e7f9b8f4de89
+dev-join-23	dev	join	Okay, I'll tell myfriends to expect me then.	Okay, I'll tell my friends to expect me then.	18		flights	dlg-143e324f-f3f0-4da3-98dd-85131c1af710
+dev-join-24	dev	join	I really don't like the instrument tool used in thisone.	I really don't like the instrument tool used in this one.	52		music	dlg-43ef54be-0378-4240-b2ed-8b65384f2c85
+dev-join-25	dev	join	Hello, canyou play some music similar to Wage War?	Hello, can you play some music similar to Wage War?	10		music	dlg-b2192313-2c56-422a-ab55-1dd162e30bce
+dev-join-26	dev	join	It's twowords and one of my favorite song is in a Ruby Danger film movie.	It's two words and one of my favorite song is in a Ruby Danger film movie.	8		music	dlg-b976ae8a-323f-415d-9626-5f2acc5b5769
+dev-join-27	dev	join	I want to have arestaurant in Chico, California.	I want to have a restaurant in Chico, California.	16		restaurant-search	dlg-24fadbd8-d026-4980-91c4-2e8fc2799194
+dev-join-28	dev	join	Just a regularone.	Just a regular one.	14		woz-dialogs	dlg-f8e95c7a-c8c3-4a61-a1d7-1407dc608272
+dev-join-29	dev	join	Okay, I would like two tickets for RogueOne.	Okay, I would like two tickets for Rogue One.	40		movies	dlg-38f05aa2-0179-4d40-b34d-10a5008304cb
+dev-join-30	dev	join	I'm wondering who is the manager rightnow of the Braves?	I'm wondering who is the manager right now of the Braves?	38		sports	dlg-d650c5cc-802a-41ef-8d68-d3f4a4a3608d
+dev-join-31	dev	join	Different song, Sameartist.	Different song, Same artist.	20		music	dlg-55e53a68-8a7f-4f9c-b3fd-9fec95fcf86d
+dev-join-32	dev	join	Like Lasagna with meat sauce anda side of two meatballs.	Like Lasagna with meat sauce and a side of two meatballs.	32		food-ordering	dlg-45206bab-3716-469f-989b-f617de055238
+dev-join-33	dev	join	Marriott Summit Watch ParkCity Utah.	Marriott Summit Watch Park City Utah.	26		hotels	dlg-4637bb8b-ba00-4547-980d-9bf3aedab1a5
+dev-join-34	dev	join	Iwant to keep the mortgage.	I want to keep the mortgage.	1		woz-dialogs	dlg-597da2b8-d3b1-44a9-9e7e-a95561e28761
+dev-join-35	dev	join	Oh, this songis good.	Oh, this song is good.	13		music	dlg-e2e00b26-31c8-4463-b4c2-9f92aaa37950
+dev-join-36	dev	join	I'lltake a chicken bacon ranch pizza.	I'll take a chicken bacon ranch pizza.	4		woz-dialogs	dlg-e8bcb719-fdf1-4531-bb69-496935a60ff8
+dev-join-37	dev	join	I would want one that has a good rating, that'sreasonably priced, and that has good service.	I would want one that has a good rating, that's reasonably priced, and that has good service.	47		woz-dialogs	dlg-ae5fb0b7-e3cf-4797-899e-ddd6b4eba3cb
+dev-join-38	dev	join	Do you knowDavid Courtney?	Do you know David Courtney?	11		music	dlg-72a3e798-8fdb-4cdb-9681-5e7ec702d5a6
+dev-join-39	dev	join	Do theyhave skimmed milk?	Do they have skimmed milk?	7		woz-dialogs	dlg-c23f53d9-a60c-46db-b03c-be791c397bb5
+dev-join-40	dev	join	I was hoping to get anAmericano.	I was hoping to get an Americano.	22		woz-dialogs	dlg-24b2e664-a994-4163-aef9-9ba767032bf6
+dev-join-41	dev	join	Okay, can I check thestatus?	Okay, can I check the status?	21		woz-dialogs	dlg-8313c609-bf71-4087-8718-27216fbfb2ad
+dev-join-42	dev	join	Hi, I'm inSacramento, California.	Hi, I'm in Sacramento, California.	10		woz-dialogs	dlg-a7dbe1a7-435f-455b-829d-a29a48bf0cdd
+dev-join-43	dev	join	So, it's going tobe a new experience for me.	So, it's going to be a new experience for me.	17		restaurant-search	dlg-f2c3e33c-6c3a-4e5c-b920-c3f0649b63d8
+dev-join-44	dev	join	We'd prefer freethough.	We'd prefer free though.	16		hotels	dlg-c3e88fac-36ea-4c41-9e3c-2263cc365c57
+dev-join-45	dev	join	That's all I want to knowtoday, bye-bye.	That's all I want to know today, bye-bye.	25		restaurant-search	dlg-9dde1271-8710-4d29-a2aa-989896da6e2d
+dev-join-46	dev	join	I have some English PremierLeague soccer questions.	I have some English Premier League soccer questions.	27		sports	dlg-03c5a994-ed33-4c6c-978a-ebf5598006a5
+dev-join-47	dev	join	And Wi-Fion board.	And Wi-Fi on board.	9		flights	dlg-3c4671de-6e91-41d9-a4f8-4eb2fabe504a
+dev-join-48	dev	join	You werevery helpful.	You were very helpful.	8		restaurant-search	dlg-5ed3361a-40bf-4c14-bb36-4c3466b59e08
+dev-join-49	dev	join	Finally, who'stheir striker?	Finally, who's their striker?	14		sports	dlg-902708fc-6ae6-41e7-bfff-e78e1c81c395
+dev-join-50	dev	join	Could you play mesome songs by them?	Could you play me some songs by them?	17		music	dlg-f224c792-487a-44b5-b177-7f258632282a
+dev-join-51	dev	join	Hi, I need to book a hotel in PalmSprings, California.	Hi, I need to book a hotel in Palm Springs, California.	34		hotels	dlg-3adc3d12-d6e6-440d-ae38-60b0a6d44860
+dev-join-52	dev	join	Who will theyplay next against on Sunday?	Who will they play next against on Sunday?	13		sports	dlg-6c0310cd-4742-45f0-ae37-75e58b6ae9e3
+dev-join-53	dev	join	Justone ticket for myself.	Just one ticket for myself.	4		woz-dialogs	dlg-5fd9a429-a57a-41ed-8716-81ac6b07cd5b
+dev-join-54	dev	join	I need toget movie tickets to see Spider-Man universe movie.	I need to get movie tickets to see Spider-Man universe movie.	9		woz-dialogs	dlg-14098240-d80b-4767-9502-1ddcf5269635
+dev-join-55	dev	join	And on average how much is each thing on themenu?	And on average how much is each thing on the menu?	44		woz-dialogs	dlg-43dad3b0-7451-4edd-8899-794e079b12d6
+dev-join-56	dev	join	And who's theirgoalkeeper right now?	And who's their goalkeeper right now?	15		sports	dlg-fa659b2c-d8d7-4581-96a7-00d4b46a4df6
+dev-join-57	dev	join	DoI need to dress up or is it casual?	Do I need to dress up or is it casual?	2		restaurant-search	dlg-c23e3c26-2440-46b7-9a9a-ee65154b1261
+dev-join-58	dev	join	And I'm looking for aone-bedroom.	And I'm looking for a one-bedroom.	21		hotels	dlg-18a73e08-932d-4b74-b1bc-d75ccca19452
+dev-join-59	dev	join	Arethere any parking costs or valet fees for the Omni Hotel?	Are there any parking costs or valet fees for the Omni Hotel?	3		hotels	dlg-0e800cc1-f0c6-438d-b258-e8510326301b
+dev-join-60	dev	join	I'm a major NFL fan, and my favorite team is theKansas City Chiefs, but I would like to know more about the LA Rams.	I'm a major NFL fan, and my favorite team is the Kansas City Chiefs, but I would like to know more about the LA Rams.	48		sports	dlg-42842348-478a-4751-9478-7f42251d6151
+dev-join-61	dev	join	You know what, it'd be great if the roomhad a balcony.	You know what, it'd be great if the room had a balcony.	40		hotels	dlg-83a95d29-223b-4e98-8221-8a8ca7291ae8
+dev-join-62	dev	join	I'd like help finding a movieto go see with my spouse.	I'd like help finding a movie to go see with my spouse.	29		movies	dlg-5119df16-bc09-4a5a-a2a6-1df1c7ef3ff6
+dev-join-63	dev	join	This is actually the versionfrom the correct album.	This is actually the version from the correct album.	28		music	dlg-f79a6a96-6286-4db7-b29f-6d448677043d
+dev-join-64	dev	join	Just the regular stuff, TV, phone, I would like to have a balcony in the French Quarter if that'spossible.	Just the regular stuff, TV, phone, I would like to have a balcony in the French Quarter if that's possible.	97		hotels	dlg-598f942d-e7ec-4c5b-84e6-e16e03bab8f4
+dev-join-65	dev	join	Yeah, what timeis it playing, the next?	Yeah, what time is it playing, the next?	15		movies	dlg-04f6ada8-d02a-49da-9ab5-137b10d244fe
+dev-join-66	dev	join	I'm looking for a room with amicrowave and a fireplace.	I'm looking for a room with a microwave and a fireplace.	29		hotels	dlg-5ff30bcf-0a0f-4702-966a-8dbf3208c67e
+dev-join-67	dev	join	Okay, I'll takethe king-size one.	Okay, I'll take the king-size one.	15		hotels	dlg-b858b9f3-ac77-4936-9ffc-053d0af508de
+dev-join-68	dev	join	You know, I'm going tochange track and go for Kingsman.	You know, I'm going to change track and go for Kingsman.	22		movies	dlg-1b6407e1-052d-4d71-b1b5-4727c71c1e32
+dev-join-69	dev	join	Yes, I'm trying to find a movie to see in a theater but I movedthe seaweed in a theater.	Yes, I'm trying to find a movie to see in a theater but I moved the seaweed in a theater.	63		movies	dlg-6520b667-1253-4de7-8d5b-4744e8297ef7
+dev-join-70	dev	join	Olympic andOlive in Los Angeles.	Olympic and Olive in Los Angeles.	11		woz-dialogs	dlg-cd91fe2a-8500-449d-b7c7-753b51a67a9b
+dev-join-71	dev	join	We'rejust going to do the sausage and hash brown burritos.	We're just going to do the sausage and hash brown burritos.	5		food-ordering	dlg-479aaf7b-f0da-48ca-9f41-4f6d4cfbacb4
+dev-join-72	dev	join	I want a place that haslive lobsters that I could pick out one and eat it, get it steamed fresh.	I want a place that has live lobsters that I could pick out one and eat it, get it steamed fresh.	23		restaurant-search	dlg-f30f4744-76f1-4118-b635-ab8fc8f9c4d6
+dev-join-73	dev	join	Hello, I'd like to go see themovie Aquaman.	Hello, I'd like to go see the movie Aquaman.	29		woz-dialogs	dlg-955d92fc-582b-49df-b7c4-ad09aedf705b
+dev-join-74	dev	join	Hi, What is therecord of the New York Mets?	Hi, What is the record of the New York Mets?	15		sports	dlg-612dc624-171a-4716-933a-7db2316149a7
+dev-join-75	dev	join	Could Ialso get two cokes?	Could I also get two cokes?	7		food-ordering	dlg-744e7942-2e09-4d31-82a6-6d9a6310702e
+dev-join-76	dev	join	I think that canwork.	I think that can work.	16		restaurant-search	dlg-1428ba86-e767-4de9-bf98-6276e7f92ee8
+dev-join-77	dev	join	He just wanted Lorde's vocals to be in the chorus of certain songs andyou know I went to work and put together something real good.	He just wanted Lorde's vocals to be in the chorus of certain songs and you know I went to work and put together something real good.	70		music	dlg-b9346684-2467-4a38-a25f-9edfd227e76d
+dev-join-78	dev	join	The transmission is not shiftingcorrectly.	The transmission is not shifting correctly.	32		woz-dialogs	dlg-bd6d2195-0af9-4bfe-a23d-e19bf42a4f37
+dev-join-79	dev	join	Pool with hot tub andpool.	Pool with hot tub and pool.	21		hotels	dlg-38843ae6-1468-4fe9-bd96-6575109d5022
+dev-join-80	dev	join	Andyeah, I want to be right in Times Square.	And yeah, I want to be right in Times Square.	3		hotels	dlg-4c3a6ade-afb4-4b4f-b60e-a1167c695bc5
+dev-join-81	dev	join	I'd like to buya movie tonight.	I'd like to buy a movie tonight.	15		movies	dlg-1b5d16ce-87b5-4242-bc19-64f8a6e38d2e
+dev-join-82	dev	join	Hi, Iam looking to get some dessert to night.	Hi, I am looking to get some dessert to night.	5		restaurant-search	dlg-9ca9e218-5e37-4aed-a4d2-d41356c83ab8
+dev-join-83	dev	join	How about something similar, anotherparty song along those lines as well?	How about something similar, another party song along those lines as well?	36		music	dlg-647f6f7c-e59d-4f38-a043-c663ff39ee9a
+dev-join-84	dev	join	You could pick us up at the corner of Harlem andIrving Park Road.	You could pick us up at the corner of Harlem and Irving Park Road.	48		woz-dialogs	dlg-1206397e-5936-41a7-89a1-7a09413f4a2a
+dev-join-85	dev	join	I'd like to place apickup order from Bella Luna, please.	I'd like to place a pickup order from Bella Luna, please.	19		woz-dialogs	dlg-029a475a-7753-45fc-bee7-f0c00f18ec5b
+dev-join-86	dev	join	Is it playinganywhere close to me?	Is it playing anywhere close to me?	13		movies	dlg-c301675a-a11e-4926-aa4f-09f85158204a
+dev-join-87	dev	join	TheGoogle ratings need to have four stars and up.	The Google ratings need to have four stars and up.	3		hotels	dlg-51b28868-cec5-4ffb-a3d8-e4ca5488bc2b
+dev-join-88	dev	join	Distancefrom my location.	Distance from my location.	8		movies	dlg-112c9989-b7c0-4979-8ce6-1c713f6c505f
+dev-join-89	dev	join	Well, Ithink I will go with the first one.	Well, I think I will go with the first one.	7		woz-dialogs	dlg-884d2ac8-b409-469f-b320-24e28d970a52
+dev-join-90	dev	join	I think theamount is fine.	I think the amount is fine.	11		woz-dialogs	dlg-86950bff-025b-478b-97e8-12b3f67566d0
+dev-join-91	dev	join	What theateris it at?	What theater is it at?	12		movies	dlg-46de538c-d16d-4c39-b1ad-c813c7a1107c
+dev-join-92	dev	join	Yeah, I was thinking about pizza maybe somewhere pocket friendly with some grilled and freeoptions in the moderate chorus range.	Yeah, I was thinking about pizza maybe somewhere pocket friendly with some grilled and free options in the moderate chorus range.	91		restaurant-search	dlg-bb32dc98-bc6b-40c6-a9c0-d5e6768b4f75
+dev-join-93	dev	join	I wouldalso like it to have a rating of three stars and up.	I would also like it to have a rating of three stars and up.	7		restaurant-search	dlg-6c191332-9570-4701-8e79-a692cd8c3343
+dev-join-94	dev	join	I would like it to bebarbecue.	I would like it to be barbecue.	21		restaurant-search	dlg-ce7d5f20-f5d6-49b6-aac9-bacb6db48f04
+dev-join-95	dev	join	Oh, That is prettygood.	Oh, That is pretty good.	18		movies	dlg-50865edd-c4e9-4d8a-a629-cbe95e22b43c
+dev-join-96	dev	join	So what are thepricing?	So what are the pricing?	15		hotels	dlg-1c75eacc-20aa-43b4-a50a-23db30100093
+dev-join-97	dev	join	Hey, how aboutGet Out?	Hey, how about Get Out?	14		movies	dlg-cd9b9c95-cc67-40aa-8822-5d6b89142473
+dev-join-98	dev	join	Can you sendme a link and make me a reservation?	Can you send me a link and make me a reservation?	12		hotels	dlg-4d92076f-929a-4db2-926f-5d032d0c19bc
+dev-join-99	dev	join	I think they'veonly played one game as the season has just began.	I think they've only played one game as the season has just began.	15		sports	dlg-f7a5a2f4-f693-4e46-ac07-d6711c87e317
+dev-join-100	dev	join	Hey, canyou help me find a sit down restaurant in San Francisco, California area?	Hey, can you help me find a sit down restaurant in San Francisco, California area?	8		woz-dialogs	dlg-6cfcfdab-3ab5-448b-b5d4-f4d90b795a64
+dev-join-101	dev	join	Bothwith ranch dressing.	Both with ranch dressing.	4		food-ordering	dlg-6a70d984-b274-45c6-8d0a-e33d8c9f8c5f
+dev-join-102	dev	join	I want something with a high RottenTomato and Hyatt right rating.	I want something with a high Rotten Tomato and Hyatt right rating.	35		movies	dlg-ff300b13-54f3-489f-8b1b-5c5dda9c5fee
+dev-join-103	dev	join	And it'sThe name is called the Iced Starbucks Blonde Caramel Cloud Macchiato.	And it's The name is called the Iced Starbucks Blonde Caramel Cloud Macchiato.	8		woz-dialogs	dlg-4cdbeee0-4758-483b-a103-d4a364997472
+dev-join-104	dev	join	Andthen, who is in first place in the National League East?	And then, who is in first place in the National League East?	3		sports	dlg-612dc624-171a-4716-933a-7db2316149a7
+dev-join-105	dev	join	I'dlike to watch The do over.	I'd like to watch The do over.	3		movies	dlg-c4353b5a-646a-4027-8b16-74655decdcb0
+dev-join-106	dev	join	Does ithave a balcony?	Does it have a balcony?	7		hotels	dlg-3f76836d-fb87-42e4-b989-a122aadce22a
+dev-join-107	dev	join	Looking for a room with two beds and also a hotel witha restaurant.	Looking for a room with two beds and also a hotel with a restaurant.	54		hotels	dlg-fbcabe79-b27a-45a0-87fe-1c6d26f1d101
+dev-join-108	dev	join	Wow, that's prettyinteresting.	Wow, that's pretty interesting.	18		sports	dlg-af8b7188-e152-4c53-8439-9689963ebe5e
+dev-join-109	dev	join	I'm lookingto carry out.	I'm looking to carry out.	11		woz-dialogs	dlg-7c65a4d0-4400-4230-84e6-62bf9168d145
+dev-join-110	dev	join	Let's see that movietrailer.	Let's see that movie trailer.	20		movies	dlg-f6e0ed54-7aff-4a8a-87f5-7133b460911b
+dev-join-111	dev	join	I am inWausau, Wisconsin.	I am in Wausau, Wisconsin.	7		woz-dialogs	dlg-7363bc5d-eeb9-4c02-bee9-0e40421e0969
+dev-join-112	dev	join	What did you say the score was intheir last game?	What did you say the score was in their last game?	33		sports	dlg-6cd23a69-747a-4a0d-95ad-25b8db775e1d
+dev-join-113	dev	join	What is the theaterclosest to me?	What is the theater closest to me?	19		movies	dlg-239d654a-8a95-4a3b-848e-0302d55e666b
+dev-join-114	dev	join	Let's order a table atMarcel's.	Let's order a table at Marcel's.	22		woz-dialogs	dlg-6d88392e-8b53-4849-a254-6d168b10ec41
+dev-join-115	dev	join	I was wondering, ifyou could play me some music by Lenny Kravitz, maybe something off his first album Let Love Rule.	I was wondering, if you could play me some music by Lenny Kravitz, maybe something off his first album Let Love Rule.	19		music	dlg-fd907036-ba2e-40fe-8af6-e972b5c691ce
+dev-join-116	dev	join	I'm thinking that'llbe all.	I'm thinking that'll be all.	20		restaurant-search	dlg-5e0af3fc-f2ea-4ffb-ac85-e657577c0e03
+dev-join-117	dev	join	Those are the two amenitiesI need.	Those are the two amenities I need.	27		hotels	dlg-063a8fbb-e725-4402-8dff-58cddf1a48f5
+dev-join-118	dev	join	I'd alsolike for the hotel to offer free breakfast.	I'd also like for the hotel to offer free breakfast.	8		hotels	dlg-fa183850-1b56-44c7-ae0f-af3004386156
+dev-join-119	dev	join	Where's Michael Jordan place on the all time scoring leader listfor the Bulls?	Where's Michael Jordan place on the all time scoring leader list for the Bulls?	64		sports	dlg-d293ee57-3c26-4cab-b5b7-b611fc3a52c8
+dev-join-120	dev	join	I think Ilike this artist best.	I think I like this artist best.	9		music	dlg-095f35ec-efab-4bae-bf7c-3766f21b3cb7
+dev-join-121	dev	join	I need a roomwith two twin-size beds.	I need a room with two twin-size beds.	13		hotels	dlg-59645412-1a9d-44b1-bdf5-eb4d19d6bf14
+dev-join-122	dev	join	What placeare the Washington Nationals in?	What place are the Washington Nationals in?	10		sports	dlg-fcb9ccb0-6e89-4613-aea7-b21fd6f57731
+dev-join-123	dev	join	I wanted to see A Madea FamilyFuneral.	I wanted to see A Madea Family Funeral.	30		woz-dialogs	dlg-45e8009e-ebc1-49d8-9742-126d45193d27
+dev-join-124	dev	join	I'mlooking for a restaurant inside the Arden Fair mall.	I'm looking for a restaurant inside the Arden Fair mall.	3		woz-dialogs	dlg-2354951e-cb6d-4bce-a822-2072406c8963
+dev-join-125	dev	join	I'll payif I have to.	I'll pay if I have to.	8		hotels	dlg-5f67024c-b7f7-486f-b949-23cf48c1f3d8
+dev-join-126	dev	join	Can I get that onHulu Plus?	Can I get that on Hulu Plus?	17		movies	dlg-5c5e7433-7f65-4120-9a06-3fbb03c0ee4e
+dev-join-127	dev	join	Price not toobad.	Price not too bad.	13		flights	dlg-2972b13f-40bf-427b-90e0-5dbdbccd0b35
+dev-join-128	dev	join	I have one more preference and I'm looking for business classtickets.	I have one more preference and I'm looking for business class tickets.	61		flights	dlg-44c69769-fa03-4eaf-817b-66c296537fa6
+dev-join-129	dev	join	Can you help me infinding a vegetarian restaurant at Providence, Rhode Island?	Can you help me in finding a vegetarian restaurant at Providence, Rhode Island?	18		restaurant-search	dlg-adba07f6-cef8-4436-a38c-4ae7d015372a
+dev-join-130	dev	join	Thatsounds like a very fair price.	That sounds like a very fair price.	4		movies	dlg-6f673b53-3c68-4c31-a02f-f98b01679d6e
+dev-join-131	dev	join	Howabout in-room coffee and a flat screen TV?	How about in-room coffee and a flat screen TV?	3		hotels	dlg-b5592dc5-d17c-49ee-bae0-634f70dc7dd0
+dev-join-132	dev	join	I think that'sefficient actually.	I think that's efficient actually.	14		movies	dlg-f8967b93-99d1-4cf6-b006-870427b64005
+dev-join-133	dev	join	I was lookingto place an order.	I was looking to place an order.	13		food-ordering	dlg-c15a2b03-424e-4005-a8d7-88a6288e5e31
+dev-join-134	dev	join	Yes, I needtwo.	Yes, I need two.	11		movies	dlg-7a50c3ec-a993-4a1b-ba79-7770c5d671bb
+dev-join-135	dev	join	I'm looking to travel starting tomorrow and forthroughout the week.	I'm looking to travel starting tomorrow and for throughout the week.	47		flights	dlg-6ee60c8b-6ec3-40a0-8c6e-dfba105286eb
+dev-join-136	dev	join	There are five people of my party if it's possible can we get ashared pool ride, please?	There are five people of my party if it's possible can we get a shared pool ride, please?	63		woz-dialogs	dlg-1b968616-8ad4-4433-9568-65a3a35b7241
+dev-join-137	dev	join	Isthere are restaurants nearby?	Is there are restaurants nearby?	2		hotels	dlg-38da5598-ae83-4f9c-8185-78b0a32cc900
+dev-join-138	dev	join	Okay, can I hear all the songs byhim?	Okay, can I hear all the songs by him?	33		music	dlg-7c44a302-96a1-42fb-b8bc-500a647e754a
+dev-join-139	dev	join	What'sthe price on that?	What's the price on that?	6		hotels	dlg-7156a527-81ff-44ed-9c8d-2c080aff97ad
+dev-join-140	dev	join	I like to see BlackPanther, please.	I like to see Black Panther, please.	19		movies	dlg-35d4c1b4-3c59-4b7d-967d-cfe5afd50cc6
+dev-join-141	dev	join	Like, Did theywin their last game?	Like, Did they win their last game?	14		sports	dlg-7d050a4c-1549-469e-afcc-976cfa6e8abb
+dev-join-142	dev	join	Hi, Howare the Toronto FC doing?	Hi, How are the Toronto FC doing?	7		sports	dlg-ee53e48c-6ddb-4f76-985a-64c69ddf4190
+dev-join-143	dev	join	One I would like just oliveand bacon.	One I would like just olive and bacon.	27		woz-dialogs	dlg-5c74a0b7-bff2-4841-a200-a665717806d3
+dev-join-144	dev	join	I'min a mood to see a drama.	I'm in a mood to see a drama.	3		movies	dlg-fbd78d2f-276b-413a-ac20-23d1a1df9bd7
+dev-join-145	dev	join	Yes, can I have one Wasabi Porkbowl and an Aloha Poke bowl?	Yes, can I have one Wasabi Pork bowl and an Aloha Poke bowl?	31		food-ordering	dlg-5ad6d774-f97d-42bf-aa92-e4222cbd33c4
+dev-join-146	dev	join	I washoping for next Friday.	I was hoping for next Friday.	5		woz-dialogs	dlg-0aab8ad5-d0f3-4ef7-9043-b6b69d99307f
+dev-join-147	dev	join	NBC TV flat-screenTV?	NBC TV flat-screen TV?	18		hotels	dlg-1b4bc5eb-1ff3-495f-a875-18a880f9d385
+dev-join-148	dev	join	Hi, I need help looking for lunch inmy area.	Hi, I need help looking for lunch in my area.	36		woz-dialogs	dlg-362a9814-0ada-4a43-b74d-a7338c242526
+dev-join-149	dev	join	I need help findinga movie in a theater.	I need help finding a movie in a theater.	19		movies	dlg-22337c09-5803-410b-b0d5-f557cfd0566a
+dev-join-150	dev	join	Whatplace are the Clippers in?	What place are the Clippers in?	4		sports	dlg-fd6f0e73-6a81-4bd1-84bc-1e5b5f125836
+dev-join-151	dev	join	Hi, I'm trying to book around-trip flight from Seattle to Salt Lake.	Hi, I'm trying to book a round-trip flight from Seattle to Salt Lake.	24		flights	dlg-0d7f72cb-c11b-4b21-9fad-e878d6f8a78e
+dev-join-152	dev	join	And I don't want to get home toolate.	And I don't want to get home too late.	32		movies	dlg-7fb5069e-fdc9-42f9-9e79-58150f260841
+dev-join-153	dev	join	I'm in themood.	I'm in the mood.	10		restaurant-search	dlg-e4132ce7-29da-4124-9d69-759d99b8b27e
+dev-join-154	dev	join	Three medium Pepperoni pizzas with thickcrust.	Three medium Pepperoni pizzas with thick crust.	40		woz-dialogs	dlg-8e8f72ba-d424-48ff-b583-ce45653bd622
+dev-join-155	dev	join	I've got two differentorders.	I've got two different orders.	22		food-ordering	dlg-71324b93-bf9b-423e-ad64-e1bab52c060c
+dev-join-156	dev	join	Well, thank you somuch, Google.	Well, thank you so much, Google.	18		restaurant-search	dlg-37fc8087-1ed4-4eeb-9f70-d980d049bcfb
+dev-join-157	dev	join	The pricelimit is right.	The price limit is right.	9		hotels	dlg-3f74e5dd-f82b-4466-89e3-9fb0ecab2dfd
+dev-join-158	dev	join	I mean that's nota bad song.	I mean that's not a bad song.	17		music	dlg-1a820e49-d014-41d3-be1a-80896fa379d4
+dev-join-159	dev	join	I'm lookingfor a hotel room.	I'm looking for a hotel room.	11		hotels	dlg-5cba68e0-4c32-486b-84d2-1c9c94f8d540
+dev-keep-be-0	dev	keep-be	I would be flying from LA to Boston.	I would be flying from LA to Boston.			flights	dlg-caff49b9-3139-4db7-af24-a22f7a945375
+dev-keep-be-1	dev	keep-be	I would like for it to be an expensive and offered table service.	I would like for it to be an expensive and offered table service.			restaurant-search	dlg-85b5b2a0-2244-44e6-869c-40e65e63a3a0
+dev-keep-be-2	dev	keep-be	And that'd be it.	And that'd be it.			food-ordering	dlg-16d19580-7d82-4a6c-9579-b9296d98ef2b
+dev-keep-be-3	dev	keep-be	I will be staying alone with no guests.	I will be staying alone with no guests.			hotels	dlg-515ff8b1-d2e0-49c8-85d7-3e0ec1dbd64d
+dev-keep-be-4	dev	keep-be	Well, I want the place to be clean, cheap and outdoor dining.	Well, I want the place to be clean, cheap and outdoor dining.			woz-dialogs	dlg-072db17c-c584-4272-8ad8-da0fa9e58177
+dev-keep-be-5	dev	keep-be	I need it to be kid-friendly and we were planning to eat at outdoors.	I need it to be kid-friendly and we were planning to eat at outdoors.			restaurant-search	dlg-6705b3d0-f28f-48ab-992b-10ffe53557c6
+dev-keep-be-6	dev	keep-be	In-Bar room, would be great.	In-Bar room, would be great.			hotels	dlg-5d04d17a-bec4-420f-a839-de7a4ba85659
+dev-keep-be-7	dev	keep-be	Location I would like to be in the downtown area.	Location I would like to be in the downtown area.			restaurant-search	dlg-4b050b97-ede4-4f05-9edb-54c9915f0f56
+dev-keep-be-8	dev	keep-be	I would like it to be a sit-down restaurant.	I would like it to be a sit-down restaurant.			restaurant-search	dlg-a08ef0be-f123-4b56-aa37-c12f883a3172
+dev-keep-be-9	dev	keep-be	And that'll be everything.	And that'll be everything.			hotels	dlg-68f0579d-1756-42c6-8b65-1efc0f246567
+dev-keep-be-10	dev	keep-be	And there should be two beds.	And there should be two beds.			hotels	dlg-97a01a3a-2793-4fcc-ac1f-b4462a9bcb14
+dev-keep-be-11	dev	keep-be	Three stars would be okay.	Three stars would be okay.			hotels	dlg-3150305a-23c4-461b-a7fb-b5a07c149625
+dev-keep-be-12	dev	keep-be	I want it to be near public transit like a train station.	I want it to be near public transit like a train station.			hotels	dlg-204c7a3e-6100-4b3e-ad63-f94c1a560797
+dev-keep-be-13	dev	keep-be	It will be great if I can keep it under a thousand for each leg.	It will be great if I can keep it under a thousand for each leg.			flights	dlg-a2b8739d-262d-48b1-8fc7-4f4f1bb3cfe0
+dev-keep-be-14	dev	keep-be	I would like it to be a drama movie, That is not mainstream.	I would like it to be a drama movie, That is not mainstream.			movies	dlg-9ca09a67-ca8a-4b4d-b2ef-1278d5ac1ad7
+dev-keep-be-15	dev	keep-be	I would like it to be outdoors.	I would like it to be outdoors.			woz-dialogs	dlg-5bd95620-ab20-4561-8bf5-903d96b98050
+dev-keep-be-16	dev	keep-be	It's going to be six people, please.	It's going to be six people, please.			woz-dialogs	dlg-7d4a3777-0103-4772-9271-d6702b9ab00e
+dev-keep-be-17	dev	keep-be	So, what airline will I be flying on, then?	So, what airline will I be flying on, then?			restaurant-search	dlg-3d64b451-b9b5-4d34-a6b7-0e3f1a03b8a0
+dev-keep-be-18	dev	keep-be	It will be good.	It will be good.			music	dlg-57136ab9-7167-45b2-b6a2-4fde9c151e31
+dev-keep-be-19	dev	keep-be	Nonstop would be good.	Nonstop would be good.			flights	dlg-036864cd-fc93-42c5-88b4-c2aa121a871f
+dev-keep-be-20	dev	keep-be	Now, I'm wondering what is the weather going to be like this Sunday?	Now, I'm wondering what is the weather going to be like this Sunday?			restaurant-search	dlg-711dd259-a33d-49fe-a1cc-e1901c69c91a
+dev-keep-be-21	dev	keep-be	It should be a morning flight.	It should be a morning flight.			flights	dlg-584ff644-f3c3-40b9-8d3d-91b715f357a9
+dev-keep-be-22	dev	keep-be	I will be back in one week.	I will be back in one week.			flights	dlg-5c8e22ed-6b6d-499b-a6e6-7e3395b5c686
+dev-keep-be-23	dev	keep-be	Relaxed atmosphere and must be clean.	Relaxed atmosphere and must be clean.			woz-dialogs	dlg-53171537-6e8d-43db-afe5-7ca741777f50
+dev-keep-be-24	dev	keep-be	I want one to be Meat Lovers, one to be chicken barbecue and two supreme.	I want one to be Meat Lovers, one to be chicken barbecue and two supreme.			woz-dialogs	dlg-1c1109cd-b02c-4175-aace-3f88cedb8233
+dev-keep-be-25	dev	keep-be	Can I be picked up from AMC, Santa Anita?	Can I be picked up from AMC, Santa Anita?			woz-dialogs	dlg-4ac48ff4-d70a-48fa-addb-1eb7f43b1301
+dev-keep-be-26	dev	keep-be	Will they be able to seat us all at one table?	Will they be able to seat us all at one table?			woz-dialogs	dlg-d8c449bb-715c-47f5-a76b-c8899e656c33
+dev-keep-be-27	dev	keep-be	And I need to be able to check one bag.	And I need to be able to check one bag.			flights	dlg-f1915fc4-6072-4b00-9e53-7c6ea3335b7e
+dev-keep-be-28	dev	keep-be	That hotel should be nearby the city.	That hotel should be nearby the city.			hotels	dlg-f491681f-59d9-46e3-bb9c-69fbecdf7a83
+dev-keep-be-29	dev	keep-be	They'll be one more guest.	They'll be one more guest.			hotels	dlg-0137b311-511a-4eca-8d74-6e71443c56e2
+dev-keep-be-30	dev	keep-be	The preferences I have for a restaurant would be that the restaurant has outdoor seating, and possibly some vegetarian dishes.	The preferences I have for a restaurant would be that the restaurant has outdoor seating, and possibly some vegetarian dishes.			restaurant-search	dlg-0e107f1d-6935-4ea9-9bc0-633d542790d9
+dev-keep-be-31	dev	keep-be	It will be a round-trip.	It will be a round-trip.			flights	dlg-1170e4e3-e430-4534-b442-f0ad78d53164
+dev-keep-be-32	dev	keep-be	How much will it be after taxes?	How much will it be after taxes?			flights	dlg-3f2491bc-8d1a-4c46-a867-a727f19c7216
+dev-keep-be-33	dev	keep-be	Yes, I'd like it to be very close to the beach.	Yes, I'd like it to be very close to the beach.			hotels	dlg-3b2f7121-6486-447d-9c93-5f12a162e092
+dev-keep-be-34	dev	keep-be	I want it to be a four-star hotel rating.	I want it to be a four-star hotel rating.			hotels	dlg-5af35f4b-e56c-4ff4-a574-ecca988b8755
+dev-keep-be-35	dev	keep-be	Can you tell me who they will be playing next Sunday?	Can you tell me who they will be playing next Sunday?			sports	dlg-c01e3764-b173-4ad4-9e9e-db495b11971b
+dev-keep-be-36	dev	keep-be	Yes, I will be taking my car, so I would like to know the parking cost.	Yes, I will be taking my car, so I would like to know the parking cost.			hotels	dlg-2b70043d-abf0-4a42-89e2-959dfd2b241a
+dev-keep-be-37	dev	keep-be	Customer reviews about that hotels, it must be good and nice.	Customer reviews about that hotels, it must be good and nice.			hotels	dlg-f491681f-59d9-46e3-bb9c-69fbecdf7a83
+dev-keep-be-38	dev	keep-be	Hello, I'm looking to book a flight ticket and I would like to travel from San Francisco to New York and I want it to be a round trip.	Hello, I'm looking to book a flight ticket and I would like to travel from San Francisco to New York and I want it to be a round trip.			flights	dlg-7d7150d3-0b1a-4e8b-8d62-27902f362ffe
+dev-keep-be-39	dev	keep-be	The floor should not be dirty.	The floor should not be dirty.			woz-dialogs	dlg-b2a604cd-66df-44d5-beb7-c37b9bee60ce
+dev-keep-be-40	dev	keep-be	That should be up for me.	That should be up for me.			food-ordering	dlg-370990ab-8934-4b44-87dc-92d709a2134b
+dev-keep-be-41	dev	keep-be	Okay, anything else and it would be helpful if they have valet parking.	Okay, anything else and it would be helpful if they have valet parking.			hotels	dlg-515ff8b1-d2e0-49c8-85d7-3e0ec1dbd64d
+dev-keep-be-42	dev	keep-be	Yeah, I wanted to see how much it would be to get a ride share to a theater.	Yeah, I wanted to see how much it would be to get a ride share to a theater.			woz-dialogs	dlg-8d0b7094-d3ec-4bf1-b475-522c1ffa8c8b
+dev-keep-be-43	dev	keep-be	And how many will be in your party?	And how many will be in your party?			woz-dialogs	dlg-9fa48f45-8bb0-4c41-9434-68cea22a04de
+dev-keep-be-44	dev	keep-be	That'd be good in the morning.	That'd be good in the morning.			hotels	dlg-b746b88f-68e1-4d57-9177-e1059aba00a9
+dev-keep-be-45	dev	keep-be	If it's close to restaurants, I'd I'd be happy to book the hotel there.	If it's close to restaurants, I'd I'd be happy to book the hotel there.			hotels	dlg-5f67024c-b7f7-486f-b949-23cf48c1f3d8
+dev-keep-be-46	dev	keep-be	I want there to be two queen beds and a balcony with a view of the ocean.	I want there to be two queen beds and a balcony with a view of the ocean.			hotels	dlg-5af35f4b-e56c-4ff4-a574-ecca988b8755
+dev-keep-be-47	dev	keep-be	I do, if there is a bar in the hotel that would be great as well.	I do, if there is a bar in the hotel that would be great as well.			hotels	dlg-4d80cc81-dcfc-4c28-8c0c-4d549d614e04
+dev-keep-be-48	dev	keep-be	It will be a one-way flight.	It will be a one-way flight.			flights	dlg-312d5655-1e6d-4f55-beb0-12cbd932d6e4
+dev-keep-be-49	dev	keep-be	Dogs should be allowed.	Dogs should be allowed.			woz-dialogs	dlg-83e8c505-fe4a-4bc4-a251-a086424be8c6
+dev-keep-be-50	dev	keep-be	Upscale Resort, it should be rated High.	Upscale Resort, it should be rated High.			hotels	dlg-c44b7425-fc10-4dfb-a7ed-ffd8ddc3da6b
+dev-keep-be-51	dev	keep-be	It should be for about four star.	It should be for about four star.			hotels	dlg-3b93aa74-2eab-43de-b478-3659a884fdcc
+dev-keep-be-52	dev	keep-be	That would be great if you can get that schedule for me.	That would be great if you can get that schedule for me.			woz-dialogs	dlg-4e51bbcc-fa47-4fa4-842b-75098787e202
+dev-keep-be-53	dev	keep-be	I'd have be ready to place that right now, please.	I'd have be ready to place that right now, please.			woz-dialogs	dlg-a21acb08-99bd-4e6f-a386-f30785fe6a0a
+dev-keep-be-54	dev	keep-be	The coach class would be just fine.	The coach class would be just fine.			flights	dlg-14652af0-35e9-4468-bd72-063313b3e8fc
+dev-keep-if-0	dev	keep-if	Hi, I was wondering if you could help me to find a movie to watch at home tonight.	Hi, I was wondering if you could help me to find a movie to watch at home tonight.			movies	dlg-72aed22f-a83a-4e06-9617-f312456d65b8
+dev-keep-if-1	dev	keep-if	Yes, I would prefer if I can get a small refrigerator and microwave in my room.	Yes, I would prefer if I can get a small refrigerator and microwave in my room.			hotels	dlg-b449d3a8-7b28-4a08-8b60-243039a51029
+dev-keep-if-2	dev	keep-if	And also check if they offer enchiladas on their menu.	And also check if they offer enchiladas on their menu.			woz-dialogs	dlg-1c093a04-d58c-46bd-a68f-aa66f9140a4b
+dev-keep-if-3	dev	keep-if	I just need if it if it's I have four people but if it's possible to get a shared ride, I I'd like that.	I just need if it if it's I have four people but if it's possible to get a shared ride, I I'd like that.			woz-dialogs	dlg-1ee752f6-2596-470f-a49b-75d1bc1f686c
+dev-keep-if-4	dev	keep-if	Hey, I like music, so I'm wondering if you could find something kind of David.	Hey, I like music, so I'm wondering if you could find something kind of David.			music	dlg-72a3e798-8fdb-4cdb-9681-5e7ec702d5a6
+dev-keep-if-5	dev	keep-if	I've been having some car trouble, and I wanted to see if I could get it fixed at Intelligent Auto Imports.	I've been having some car trouble, and I wanted to see if I could get it fixed at Intelligent Auto Imports.			woz-dialogs	dlg-1a3ca297-ae7f-42a0-ad44-d9182b6052bd
+dev-keep-if-6	dev	keep-if	I would like to have a breakfast if it's free.	I would like to have a breakfast if it's free.			hotels	dlg-3f76836d-fb87-42e4-b989-a122aadce22a
+dev-keep-if-7	dev	keep-if	I just want the cheapest flights, so if there's layovers or whatever, that's fine.	I just want the cheapest flights, so if there's layovers or whatever, that's fine.			flights	dlg-fb4e402a-4a35-4b29-ad87-7e3b94d09ad0
+dev-keep-if-8	dev	keep-if	m, if at all possible.	m, if at all possible.			flights	dlg-6b71498f-d25f-4856-a495-49c3bb25ea58
+dev-keep-if-9	dev	keep-if	And I was also wondering if another restaurant with daily specials.	And I was also wondering if another restaurant with daily specials.			woz-dialogs	dlg-c9d52884-67e8-4d76-ae3f-6fe210ceee25
+dev-keep-if-10	dev	keep-if	I have to hear it a little more before I really decide if was you know.	I have to hear it a little more before I really decide if was you know.			music	dlg-57136ab9-7167-45b2-b6a2-4fde9c151e31
+dev-keep-if-11	dev	keep-if	Can you tell me if either team has made some recent trades?	Can you tell me if either team has made some recent trades?			sports	dlg-d5ec7bb4-8c7b-40bf-84e3-06c2561ac485
+dev-keep-if-12	dev	keep-if	I was wondering if the Boston Red Sox play today?	I was wondering if the Boston Red Sox play today?			sports	dlg-d4e29201-6f47-4b74-a0c8-3050be0905ef
+dev-keep-if-13	dev	keep-if	Yeah, free breakfast would be good, but it's a little optional though, if you can't find it.	Yeah, free breakfast would be good, but it's a little optional though, if you can't find it.			hotels	dlg-64c335f8-56bd-49b0-9619-9fd91d4532aa
+dev-keep-if-14	dev	keep-if	I definitely prefer a nonstop if you could get me one on both legs.	I definitely prefer a nonstop if you could get me one on both legs.			flights	dlg-28c40e2b-f74a-4ab2-ac16-5414d1a7f451
+dev-keep-if-15	dev	keep-if	I'd like to leave in the morning, if possible.	I'd like to leave in the morning, if possible.			flights	dlg-e39ee300-241b-472b-9762-d4321ae60f83
+dev-keep-if-16	dev	keep-if	I was wondering if you can tell me a little about the Tampa Bay Race.	I was wondering if you can tell me a little about the Tampa Bay Race.			sports	dlg-eda6212d-baf5-44bf-8bb5-d9e60dc8c039
+dev-keep-if-17	dev	keep-if	I would like to find out more if you know any information on the location of the ski area in these hotels.	I would like to find out more if you know any information on the location of the ski area in these hotels.			hotels	dlg-1b6a6330-cb9d-4292-8dcc-24db29936e32
+dev-keep-if-18	dev	keep-if	I was wondering if you could help me order a pizza from Bella Luna.	I was wondering if you could help me order a pizza from Bella Luna.			woz-dialogs	dlg-899b9b64-35c6-4057-9542-ebf0a999a4f2
+dev-keep-if-19	dev	keep-if	Highly rated over cost so if there's a highly rated pizza do the expense find joint that's.	Highly rated over cost so if there's a highly rated pizza do the expense find joint that's.			restaurant-search	dlg-78b5c6ef-5b1e-4479-97a1-c40b1e36e3c3
+dev-keep-if-20	dev	keep-if	Well, as far as restaurants in the area, I'm also wondering if there's a restaurant that's actually at the hotel.	Well, as far as restaurants in the area, I'm also wondering if there's a restaurant that's actually at the hotel.			hotels	dlg-44e90b8f-64f2-47dd-a422-7a6fa4d10e8e
+dev-keep-if-21	dev	keep-if	Yeah, I wanted to see if you can get me a ticket for a movie today.	Yeah, I wanted to see if you can get me a ticket for a movie today.			woz-dialogs	dlg-b155c5ba-d851-453d-86ec-772dd916facc
+dev-keep-if-22	dev	keep-if	I think I'll check out that one then, if they have one of that Lasagna and different stuff like that different pastas?	I think I'll check out that one then, if they have one of that Lasagna and different stuff like that different pastas?			restaurant-search	dlg-f02b3441-e61a-4974-bd2b-6ae32f922ed1
+dev-keep-if-23	dev	keep-if	Hi, I was wondering if you could play me some music.	Hi, I was wondering if you could play me some music.			music	dlg-693b5df6-3a93-48ee-a369-975fa434d49d
+dev-keep-if-24	dev	keep-if	Yeah, I would love to have a known sale for you if it's possible.	Yeah, I would love to have a known sale for you if it's possible.			flights	dlg-f7098efb-00a7-4191-98f3-30607bc2bd58
+dev-keep-if-25	dev	keep-if	And tomorrow its okay, so let me just look at the preferences see if I can find a movie that's better and more appropriate.	And tomorrow its okay, so let me just look at the preferences see if I can find a movie that's better and more appropriate.			movies	dlg-9dcaf1a7-9501-445e-b429-9dcea8b76c9d
+dev-keep-if-26	dev	keep-if	Then, you can't find anything that's nonstop at all, even if I change the time?	Then, you can't find anything that's nonstop at all, even if I change the time?			flights	dlg-89999ec0-4b3a-4140-b8ba-61d637a75f67
+dev-keep-if-27	dev	keep-if	Hi, I was wondering if you know a place where the Colombus Crew SC team is in?	Hi, I was wondering if you know a place where the Colombus Crew SC team is in?			sports	dlg-b8af7978-8737-4262-9861-02511e2773c5
+dev-keep-if-28	dev	keep-if	And if you see a SoundCloud link to his page, you better click on that because we made a deluxe version and I actually remastered it.	And if you see a SoundCloud link to his page, you better click on that because we made a deluxe version and I actually remastered it.			music	dlg-b9346684-2467-4a38-a25f-9edfd227e76d
+dev-keep-if-29	dev	keep-if	Can you tell me if the room has a balcony or Terrace?	Can you tell me if the room has a balcony or Terrace?			hotels	dlg-9f406dde-d067-4dc3-abf8-f1837d56a5fb
+dev-keep-if-30	dev	keep-if	I'd like to know if it's close to a downtown?	I'd like to know if it's close to a downtown?			hotels	dlg-e802ebde-0527-4bf3-9621-831699674377
+dev-keep-if-31	dev	keep-if	I was wondering if you could arrange an Uber to pick me up at the Detroit Metropolitan Airport.	I was wondering if you could arrange an Uber to pick me up at the Detroit Metropolitan Airport.			woz-dialogs	dlg-945d494a-2ca5-4631-8d99-d434cf79e183
+dev-keep-if-32	dev	keep-if	But I'm wondering, who are they playing next Sunday if they play?	But I'm wondering, who are they playing next Sunday if they play?			sports	dlg-d650c5cc-802a-41ef-8d68-d3f4a4a3608d
+dev-keep-if-33	dev	keep-if	I prefer a room with two beds and a refrigerator and I'm also looking to see if free breakfast is available.	I prefer a room with two beds and a refrigerator and I'm also looking to see if free breakfast is available.			hotels	dlg-b5b5ba61-e959-4564-94eb-e4b081a0fb0a
+dev-keep-if-34	dev	keep-if	I'd like to return in the evening if that narrows it down.	I'd like to return in the evening if that narrows it down.			flights	dlg-14652af0-35e9-4468-bd72-063313b3e8fc
+dev-clean-0	dev	clean	I'd like to look at different show times, please.	I'd like to look at different show times, please.			woz-dialogs	dlg-bc0579dd-492c-41d2-84ed-44c09e7328fc
+dev-clean-1	dev	clean	Can we try something more modern, please?	Can we try something more modern, please?			music	dlg-c7d737cc-b8cb-436e-ba3a-7461c525c31e
+dev-clean-2	dev	clean	Yeah, just go for the next closest today.	Yeah, just go for the next closest today.			woz-dialogs	dlg-89b3b187-dd49-40b7-b3f9-7b330200f0ea
+dev-clean-3	dev	clean	How long is the drive from Santa Rosa, California?	How long is the drive from Santa Rosa, California?			restaurant-search	dlg-b2977066-b63d-402c-8398-e39e8e522ac5
+dev-clean-4	dev	clean	At the new Pizza Rio Bella Luna.	At the new Pizza Rio Bella Luna.			woz-dialogs	dlg-3f411bb0-8365-4a38-9382-d97fa69dea8b
+dev-clean-5	dev	clean	So, I want to leave today.	So, I want to leave today.			flights	dlg-14652af0-35e9-4468-bd72-063313b3e8fc
+dev-clean-6	dev	clean	Okay, that one sounds good.	Okay, that one sounds good.			movies	dlg-12ef71da-5f17-4001-8783-25037bf7f5cd
+dev-clean-7	dev	clean	It's going to be close to my location in St.	It's going to be close to my location in St.			woz-dialogs	dlg-e919d860-e9d1-4f9b-8e73-d13bbe17e5cf
+dev-clean-8	dev	clean	Could you tell me what was their score of their last game?	Could you tell me what was their score of their last game?			sports	dlg-5824037e-9d1a-467e-9bb4-c7a2620fbab1
+dev-clean-9	dev	clean	I'm interested in Italian food.	I'm interested in Italian food.			restaurant-search	dlg-114fee10-bdb6-41b3-addf-8dc9e0d9e02f
+dev-clean-10	dev	clean	Do they play tonight?	Do they play tonight?			sports	dlg-cdc01765-41c6-4c93-ac4d-0bf96111f6eb
+dev-clean-11	dev	clean	Hi, I need to order coffee from Starbucks.	Hi, I need to order coffee from Starbucks.			woz-dialogs	dlg-de7836fd-df91-4a92-9b33-3ee70ebde975
+dev-clean-12	dev	clean	Hi, I was looking to order some Mexican food for take out.	Hi, I was looking to order some Mexican food for take out.			food-ordering	dlg-f03ed8b9-319f-4072-b0ea-dfa6877160f2
+dev-clean-13	dev	clean	And can you tell me if I can make reservations?	And can you tell me if I can make reservations?			restaurant-search	dlg-3efaa15f-898b-4175-9b82-49fcc2b7f44c
+dev-clean-14	dev	clean	Hi, I need help in finding a hotel in San Francisco, California.	Hi, I need help in finding a hotel in San Francisco, California.			hotels	dlg-3150305a-23c4-461b-a7fb-b5a07c149625
+dev-clean-15	dev	clean	And who have they acquired?	And who have they acquired?			sports	dlg-fbab06f9-acfa-4f85-b2c5-779674d325eb
+dev-clean-16	dev	clean	I think I'm going to see that, then.	I think I'm going to see that, then.			movies	dlg-15808d68-06a0-4be1-afed-b499e6f7befa
+dev-clean-17	dev	clean	I'm planning a dinner at Mother Restaurant in Sacramento, California.	I'm planning a dinner at Mother Restaurant in Sacramento, California.			restaurant-search	dlg-1986614c-7a8a-43c9-a9ae-cf93117c6b05
+dev-clean-18	dev	clean	I would like help finding two movie to go to see in the theater.	I would like help finding two movie to go to see in the theater.			movies	dlg-6a1a576a-12c1-4591-a9ac-bf6f5c9a1045
+dev-clean-19	dev	clean	I would like to know how is Crystal Palace doing?	I would like to know how is Crystal Palace doing?			sports	dlg-36a72acb-34ba-4043-a65b-07e1cfe72010
+dev-clean-20	dev	clean	Are they serving a meal onboard?	Are they serving a meal onboard?			flights	dlg-3f2491bc-8d1a-4c46-a867-a727f19c7216
+dev-clean-21	dev	clean	That sounds like it fits everything that I'm looking for.	That sounds like it fits everything that I'm looking for.			hotels	dlg-5371a89d-cc13-46ce-9f61-76e23cc627a3
+dev-clean-22	dev	clean	Fantasy, Oh, Tucson, Arizona.	Fantasy, Oh, Tucson, Arizona.			movies	dlg-95a549e4-2993-4e12-911c-8c34ffaba88e
+dev-clean-23	dev	clean	I also want a casual atmosphere.	I also want a casual atmosphere.			restaurant-search	dlg-fb50b538-8b41-4764-9603-84afb531c878
+dev-clean-24	dev	clean	Find a movie theater close to my location.	Find a movie theater close to my location.			movies	dlg-fbd78d2f-276b-413a-ac20-23d1a1df9bd7
+dev-clean-25	dev	clean	I'd like to order pizzas from Bella Luna's pizzeria, please.	I'd like to order pizzas from Bella Luna's pizzeria, please.			woz-dialogs	dlg-5abf34c5-a2a2-4cd0-bc81-0cbbdea29ae2
+dev-clean-26	dev	clean	I want to hear something else by Janis Joplin.	I want to hear something else by Janis Joplin.			music	dlg-4c29453d-36c6-4d5f-9a3b-4fb7633f768d
+dev-clean-27	dev	clean	Can you tell me more about Sweet Action Ice Cream?	Can you tell me more about Sweet Action Ice Cream?			restaurant-search	dlg-8129dd35-87b4-4399-bfec-60d7384cccfd
+dev-clean-28	dev	clean	If that's the case then I'll book the hotel.	If that's the case then I'll book the hotel.			hotels	dlg-9d789c97-faf3-4f1c-80a0-cc7dcd04d936
+dev-clean-29	dev	clean	Can you tell me the closest theater to that is?	Can you tell me the closest theater to that is?			movies	dlg-fe49560f-36b2-4383-acc8-435b7ec5d32e
+dev-clean-30	dev	clean	And that can be one that has a full bar and that's ready to foodstuffs and up.	And that can be one that has a full bar and that's ready to foodstuffs and up.			restaurant-search	dlg-85f7abff-d3d7-4d85-b028-af297602a130
+dev-clean-31	dev	clean	be either on the menu or featured heavily.	be either on the menu or featured heavily.			woz-dialogs	dlg-da5a036c-d447-4693-8f26-e88ffd58963b
+dev-clean-32	dev	clean	I'd like it to have a king-size bed and a restaurant.	I'd like it to have a king-size bed and a restaurant.			hotels	dlg-d309407d-4620-4045-a27e-ad139e0dd59f
+dev-clean-33	dev	clean	Can say one more time?	Can say one more time?			woz-dialogs	dlg-b014c8fc-e3e1-4dd6-b300-b96d849da3d8
+dev-clean-34	dev	clean	Yes, can you tell me about the New York Red Bulls?	Yes, can you tell me about the New York Red Bulls?			sports	dlg-61934581-462d-47ed-a72c-6b7d8ddd069f
+dev-clean-35	dev	clean	I'd like to order some burritos for take-out.	I'd like to order some burritos for take-out.			food-ordering	dlg-10be1bdd-6b4f-4b0f-94f3-10ec3a3b6f89
+dev-clean-36	dev	clean	Can you find out?	Can you find out?			restaurant-search	dlg-31577305-c063-4fa8-9864-9689696c6bf6
+dev-clean-37	dev	clean	What place is Manchester City in?	What place is Manchester City in?			sports	dlg-9ba4cc41-60e0-45f1-ab4f-107d0bb01598
+dev-clean-38	dev	clean	Will they play next Sunday?	Will they play next Sunday?			sports	dlg-5824037e-9d1a-467e-9bb4-c7a2620fbab1
+dev-clean-39	dev	clean	Split, can you give me a synopsis of it?	Split, can you give me a synopsis of it?			movies	dlg-363238ba-8e7d-4280-8f5e-e6c78be2dd03
+dev-clean-40	dev	clean	I'm going to have one guest.	I'm going to have one guest.			hotels	dlg-c82aee26-e4b2-4a9f-a16a-ea9f63170424
+dev-clean-41	dev	clean	What about candy bars?	What about candy bars?			woz-dialogs	dlg-c36d1251-51b8-4d9e-a6ad-c10448d709a1
+dev-clean-42	dev	clean	Preferably, something that's a little more upscale, more formal.	Preferably, something that's a little more upscale, more formal.			restaurant-search	dlg-4523484d-9ae4-4d28-a558-01bdb5c439bc
+dev-clean-43	dev	clean	Could you get me a ticket for that one?	Could you get me a ticket for that one?			movies	dlg-2d61d45b-de0e-4ea8-a3de-7365dcb1a503
+dev-clean-44	dev	clean	For right now, please.	For right now, please.			woz-dialogs	dlg-e2f0a906-dfb5-4683-87e1-f409bd390267
+dev-clean-45	dev	clean	Hotel should have pool with hot tub and fitness center.	Hotel should have pool with hot tub and fitness center.			hotels	dlg-a657e1f1-6e0f-40d5-8a53-c6e39ea08be7
+dev-clean-46	dev	clean	I would like to watch an action adventure movie.	I would like to watch an action adventure movie.			movies	dlg-1ad61c0b-62f0-4c7a-a14d-2a17926e4366
+dev-clean-47	dev	clean	I think that's perfect.	I think that's perfect.			restaurant-search	dlg-4c0cda28-2705-42b6-b05b-0a892ef6ee39
+dev-clean-48	dev	clean	I'd like to order some chicken Thai curry with brown rice and mixed vegetables.	I'd like to order some chicken Thai curry with brown rice and mixed vegetables.			food-ordering	dlg-a698447e-6331-498f-87e5-fe0dbe9a7b5c
+dev-clean-49	dev	clean	Only nonstop as early as possible.	Only nonstop as early as possible.			flights	dlg-9b80f12b-8262-474d-860d-05ee50d55856
+dev-clean-50	dev	clean	Okay and what's the win-loss record overall?	Okay and what's the win-loss record overall?			sports	dlg-c379ae7b-9811-4143-8f0e-4405de84088b
+dev-clean-51	dev	clean	Just see what they have.	Just see what they have.			woz-dialogs	dlg-68d2a834-46eb-46d1-977a-5e531dcf5115
+dev-clean-52	dev	clean	I want the first casual restaurant.	I want the first casual restaurant.			woz-dialogs	dlg-83e8c505-fe4a-4bc4-a251-a086424be8c6
+dev-clean-53	dev	clean	You know, the first one just make it a four cheese pizza and then the second pizza I want an Alfredo sauce pizza.	You know, the first one just make it a four cheese pizza and then the second pizza I want an Alfredo sauce pizza.			woz-dialogs	dlg-86950bff-025b-478b-97e8-12b3f67566d0
+dev-clean-54	dev	clean	And hotel should have a restaurant with full bar on hotel grounds.	And hotel should have a restaurant with full bar on hotel grounds.			hotels	dlg-991b7b3a-7fb3-43b9-af8c-ecec54c082da
+dev-clean-55	dev	clean	How much would the tickets to the showing be?	How much would the tickets to the showing be?			movies	dlg-652418a1-4c4c-4ecb-9bde-bdaea874e81a
+dev-clean-56	dev	clean	Yeah, I wanted to go to the next available showing, just whatever is next today.	Yeah, I wanted to go to the next available showing, just whatever is next today.			woz-dialogs	dlg-45e8009e-ebc1-49d8-9742-126d45193d27
+dev-clean-57	dev	clean	And I'd like a shared or a pool ride.	And I'd like a shared or a pool ride.			woz-dialogs	dlg-8313c609-bf71-4087-8718-27216fbfb2ad
+dev-clean-58	dev	clean	Hi, Can you help me find a hotel in Santa Fe, New Mexico?	Hi, Can you help me find a hotel in Santa Fe, New Mexico?			hotels	dlg-d614bd24-9c01-4e27-adaf-8b33ef831bb2
+dev-clean-59	dev	clean	How far is it from my location?	How far is it from my location?			movies	dlg-f4cc5df8-8bc3-437a-bfd8-407a74f0fd84
+dev-clean-60	dev	clean	That was the last question.	That was the last question.			sports	dlg-8347bc58-35db-4718-8c6f-9c50693a74c6
+dev-clean-61	dev	clean	Tomorrow evening or tomorrow night.	Tomorrow evening or tomorrow night.			movies	dlg-ba0dad23-e715-4899-9344-d6de846304c4
+dev-clean-62	dev	clean	I prefer the first restaurant with the patio.	I prefer the first restaurant with the patio.			restaurant-search	dlg-339ed487-e832-4d8e-80ca-876996aef27d
+dev-clean-63	dev	clean	I am planing dinner in Sausalito, California tonight.	I am planing dinner in Sausalito, California tonight.			restaurant-search	dlg-4227e2b3-f329-4b58-8238-3a7eb704b691
+dev-clean-64	dev	clean	I prefer restaurants with at least a three-star rating.	I prefer restaurants with at least a three-star rating.			restaurant-search	dlg-898c3fb4-bdad-4678-9d59-cf2b69a77888
+dev-clean-65	dev	clean	And if they serve alcohol.	And if they serve alcohol.			woz-dialogs	dlg-68d2a834-46eb-46d1-977a-5e531dcf5115
+dev-clean-66	dev	clean	I would like to order Kung Pao chicken.	I would like to order Kung Pao chicken.			food-ordering	dlg-8be88c68-190a-4d28-8efa-1a529db307ca
+dev-clean-67	dev	clean	Thank you, I'm going to have an exercise room as well.	Thank you, I'm going to have an exercise room as well.			hotels	dlg-4f81d09a-6d1b-4d49-a7d3-8ec7d515189c
+dev-clean-68	dev	clean	the Staten Island Mall in New York.	the Staten Island Mall in New York.			woz-dialogs	dlg-70bbb98c-4717-4004-9b73-b951cf231243
+dev-clean-69	dev	clean	would be good, too.	would be good, too.			woz-dialogs	dlg-e4caea82-6099-40d0-96fd-648b6f3af46f
+dev-clean-70	dev	clean	Can you play me the Immigrant Song by Led Zeppelin?	Can you play me the Immigrant Song by Led Zeppelin?			music	dlg-89678836-d29f-46ad-9731-0600bb7e20d1
+dev-clean-71	dev	clean	What's their French food like?	What's their French food like?			restaurant-search	dlg-23fddf3a-f7c4-4e8b-bfaa-eca0d2636c0a
+dev-clean-72	dev	clean	I would like something that is not expensive.	I would like something that is not expensive.			hotels	dlg-81f24a53-51e9-4c39-93c7-563609638356
+dev-clean-73	dev	clean	Love buying new headphones.	Love buying new headphones.			food-ordering	dlg-f9390154-6afb-4e5b-9fbd-6f10ea35b783
+dev-clean-74	dev	clean	A fitness center and what about breakfast?	A fitness center and what about breakfast?			hotels	dlg-a97646ee-d64d-4e1e-a58a-d8b6565ab137
+dev-clean-75	dev	clean	No, you know what?	No, you know what?			restaurant-search	dlg-02f08b19-cb6c-4c33-af54-7889bd01e8b1
+dev-clean-76	dev	clean	How about some Big Star?	How about some Big Star?			music	dlg-e8723cec-57ea-4a4a-96f2-cf9e38f80147
+dev-clean-77	dev	clean	If it's available, It's better for me.	If it's available, It's better for me.			hotels	dlg-716db0b8-665a-47e0-b346-8137e0a43ad4
+dev-clean-78	dev	clean	The Rotten Tomato rating.	The Rotten Tomato rating.			movies	dlg-6520b667-1253-4de7-8d5b-4744e8297ef7
+dev-clean-79	dev	clean	So, I think I'm going to go to Zocalo's.	So, I think I'm going to go to Zocalo's.			restaurant-search	dlg-31577305-c063-4fa8-9864-9689696c6bf6
+dev-clean-80	dev	clean	Yes, I would classify it as that.	Yes, I would classify it as that.			woz-dialogs	dlg-ed04ac22-7b5d-4de6-b6e9-a6a2290fd3ba
+dev-clean-81	dev	clean	Okay and how many home runs does Chris Davis have this year?	Okay and how many home runs does Chris Davis have this year?			sports	dlg-c379ae7b-9811-4143-8f0e-4405de84088b
+dev-clean-82	dev	clean	And the other two, I would just like onion, extra cheese, mushroom, bell pepper on the other two.	And the other two, I would just like onion, extra cheese, mushroom, bell pepper on the other two.			woz-dialogs	dlg-775ceea0-ccc2-4e26-a43d-3efc48487773
+dev-clean-83	dev	clean	Does the restaurant have any churros?	Does the restaurant have any churros?			restaurant-search	dlg-4ef8d6e8-07e5-4308-b0a9-b5c18da9cbf7
+dev-clean-84	dev	clean	No, I thinlk that's all we needed.	No, I thinlk that's all we needed.			woz-dialogs	dlg-aa9bcd3f-e037-4307-be6f-4172c72eecf4
+dev-clean-85	dev	clean	Great, I'm looking for Italian food.	Great, I'm looking for Italian food.			restaurant-search	dlg-8f5d1719-62b7-4e35-9dff-cc0ac605f7f7
+dev-clean-86	dev	clean	Stuff and clothes, the Space Needle.	Stuff and clothes, the Space Needle.			restaurant-search	dlg-5e0af3fc-f2ea-4ffb-ac85-e657577c0e03
+dev-clean-87	dev	clean	What is the estimation the duration of the trip?	What is the estimation the duration of the trip?			woz-dialogs	dlg-2b7b9f2f-e562-44ad-9327-1737b3936479
+dev-clean-88	dev	clean	Who is the Union playing next Sunday?	Who is the Union playing next Sunday?			sports	dlg-07f1deb4-ff8c-49a2-9ddd-5fe067a8185d
+dev-clean-89	dev	clean	Yeah, I need hotel prices.	Yeah, I need hotel prices.			hotels	dlg-6e08ca94-2f8c-49cd-a865-f173b8b56e84
+dev-clean-90	dev	clean	You've answered all of my questions.	You've answered all of my questions.			sports	dlg-9f28ab45-3af7-4c3d-bf32-29021084bdf5
+dev-clean-91	dev	clean	Well, I'm sorry, I do have a headset plugged in.	Well, I'm sorry, I do have a headset plugged in.			food-ordering	dlg-7efec01d-ed8f-4f51-94b8-bdbd7b3cfcf0
+dev-clean-92	dev	clean	if they're open, then.	if they're open, then.			woz-dialogs	dlg-3420550c-953b-48b1-b421-9bcbca0e9b59
+dev-clean-93	dev	clean	Yes, I wasted to order pizzas from Bella Luna.	Yes, I wasted to order pizzas from Bella Luna.			woz-dialogs	dlg-18cb7c1c-db42-484a-9462-02c8f50945a4
+dev-clean-94	dev	clean	Awesome, at least they won that one.	Awesome, at least they won that one.			sports	dlg-e14bba98-34f8-4b32-ad19-759e4d210f2b
+dev-clean-95	dev	clean	I'd also like for the hotel to have free continental breakfast.	I'd also like for the hotel to have free continental breakfast.			hotels	dlg-d6528fba-d96c-418d-8482-3ce9f82d5fc9
+dev-clean-96	dev	clean	I wanted to place a coffee order at Starbucks.	I wanted to place a coffee order at Starbucks.			woz-dialogs	dlg-a57795e7-f8da-4705-9df1-10a65d5d7573
+dev-clean-97	dev	clean	I like the new stuff a little better.	I like the new stuff a little better.			music	dlg-73845b61-10ac-43ed-8839-914941ba1916
+dev-clean-98	dev	clean	Lastly, could you show me something in which Paul Simon sings in a duet with somebody else?	Lastly, could you show me something in which Paul Simon sings in a duet with somebody else?			music	dlg-a7a4e165-dbb8-401e-b56f-7de0c7e96512
+dev-clean-99	dev	clean	Yeah, I'm I'm looking for a Thai restaurant in Santa Cruz, California, please.	Yeah, I'm I'm looking for a Thai restaurant in Santa Cruz, California, please.			restaurant-search	dlg-28a27d54-913c-4aaf-8c22-d3a5c06725df
+dev-clean-100	dev	clean	Some kind of fast food.	Some kind of fast food.			restaurant-search	dlg-4a745e1f-45e3-44bb-9b9b-ec08b9516af3
+dev-clean-101	dev	clean	Nothing fast food and no buffets.	Nothing fast food and no buffets.			woz-dialogs	dlg-992478e7-bc87-4a5d-a141-7be72bf9264d
+dev-clean-102	dev	clean	Like I'd said before, I wanted chicken nachos.	Like I'd said before, I wanted chicken nachos.			food-ordering	dlg-b4686d97-9c5d-4369-a33c-1af4596bd38d
+dev-clean-103	dev	clean	Great and who is their striker?	Great and who is their striker?			sports	dlg-273acced-cd93-4787-a328-95545e10cf6a
+dev-clean-104	dev	clean	It's all I got.	It's all I got.			sports	dlg-fe3faf9f-9b6f-4ffc-b7fe-52fba24c66c7
+dev-clean-105	dev	clean	Baskin-Robbins will be great.	Baskin-Robbins will be great.			restaurant-search	dlg-b6e77aaa-aa96-4602-9992-88390c58be10
+dev-clean-106	dev	clean	Yeah, thank you for your help.	Yeah, thank you for your help.			movies	dlg-cf678c9f-63bd-4691-84d7-e5d70bf2241d
+dev-clean-107	dev	clean	I'm going to take it.	I'm going to take it.			flights	dlg-cd984a38-7067-4f99-b831-707e79c89113
+dev-clean-108	dev	clean	What is their win and loss record?	What is their win and loss record?			sports	dlg-21363e95-49c7-4ca6-a7f3-48cca4dd0592
+dev-clean-109	dev	clean	I'm looking for help to rent a movie to watch at home.	I'm looking for help to rent a movie to watch at home.			movies	dlg-ef061074-8a50-4b87-960f-03a504fcfc4c
+dev-clean-110	dev	clean	Which one might have a balcony or a view?	Which one might have a balcony or a view?			hotels	dlg-adc20bde-0223-4b63-8677-6f7932912bc5
+dev-clean-111	dev	clean	I want to order a coffee.	I want to order a coffee.			woz-dialogs	dlg-dad48e1d-444e-426d-bafc-0fb0bcef3df6
+dev-clean-112	dev	clean	Hello, can you play Composure August Burns Red?	Hello, can you play Composure August Burns Red?			music	dlg-ed7858af-576e-4045-9492-f0af2428d9be
+dev-clean-113	dev	clean	I would like to order food for takeout for one person.	I would like to order food for takeout for one person.			food-ordering	dlg-f6b88eb4-663a-41af-bc03-e15eb51cf247
+dev-clean-114	dev	clean	I would like to find a movie to grow I would like you to go Cena theater.	I would like to find a movie to grow I would like you to go Cena theater.			movies	dlg-a8883a3e-a124-4086-ae02-749a55589589
+dev-clean-115	dev	clean	Hi, I'm looking for a restaurant in Washington, D.	Hi, I'm looking for a restaurant in Washington, D.			restaurant-search	dlg-b30a88a5-e5fb-4dc5-84e0-c7ab312ecbf7
+dev-clean-116	dev	clean	That is so much.	That is so much.			flights	dlg-3de507e5-3923-438d-ab0d-fff624f08fc0
+dev-clean-117	dev	clean	I would like to see in Rotten Tomatoes.	I would like to see in Rotten Tomatoes.			movies	dlg-b432a95f-f879-4da2-97cf-ae33a6de8b60
+dev-clean-118	dev	clean	So, you do not have a trailer or you are looking.	So, you do not have a trailer or you are looking.			movies	dlg-ef061074-8a50-4b87-960f-03a504fcfc4c
+dev-clean-119	dev	clean	Oh, I really like that song We Belong.	Oh, I really like that song We Belong.			music	dlg-49dc9300-8e6e-40ab-ba83-0a9f4818daa9
+dev-clean-120	dev	clean	Hi, I would like to find a place to eat lunch in Sacramento, California.	Hi, I would like to find a place to eat lunch in Sacramento, California.			woz-dialogs	dlg-ad7e879f-b1de-4d45-895f-bb641bf2a99a
+dev-clean-121	dev	clean	I guess that's everything.	I guess that's everything.			music	dlg-bd2addde-bfbd-4e02-9acb-a6f14c8718e2
+dev-clean-122	dev	clean	Okay great, and how long will the trip last?	Okay great, and how long will the trip last?			woz-dialogs	dlg-eb2878ed-9d6d-4e10-adbd-30fd4c57c37c
+dev-clean-123	dev	clean	I'm in Tracy, California right now.	I'm in Tracy, California right now.			restaurant-search	dlg-bd56d759-0881-4f4b-afef-6271a5ec7c46
+dev-clean-124	dev	clean	Then, can I order a a two chocolate chip cookies?	Then, can I order a a two chocolate chip cookies?			woz-dialogs	dlg-671687d5-958b-4cb8-b80a-5b3da1ec465d
+dev-clean-125	dev	clean	Hi, I would like to place an order for three medium pizzas.	Hi, I would like to place an order for three medium pizzas.			woz-dialogs	dlg-26d92e7a-05b2-4936-b9f3-b476f1d1f4b7
+dev-clean-126	dev	clean	What would the estimated duration of the trip be?	What would the estimated duration of the trip be?			woz-dialogs	dlg-2bbf6052-5b59-4325-9bc9-a01beeccf91c
+dev-clean-127	dev	clean	I was hoping you could help me place that order.	I was hoping you could help me place that order.			woz-dialogs	dlg-0093d9ca-b42d-4b3c-9a89-c872000915f6
+dev-clean-128	dev	clean	I would like help in finding a movie to go watch in the theater.	I would like help in finding a movie to go watch in the theater.			movies	dlg-69dccd8a-7223-4622-992a-d9fb09dfdd63
+dev-clean-129	dev	clean	Okay, and what's the total number of goals each team has scored?	Okay, and what's the total number of goals each team has scored?			sports	dlg-b802bada-f7ec-42c0-baf4-959cb9a82d5b
+dev-clean-130	dev	clean	That's okay, I guess that's it.	That's okay, I guess that's it.			movies	dlg-ceaf1aa3-3417-495f-8848-d9bcf935d45d
+dev-clean-131	dev	clean	That sounds like it's pretty good and it fits the criteria that I'm pretty much looking for, so yeah.	That sounds like it's pretty good and it fits the criteria that I'm pretty much looking for, so yeah.			restaurant-search	dlg-694209c0-fcdf-4239-aee1-27605c531620
+dev-clean-132	dev	clean	I need to be picked up at Madison Square Garden.	I need to be picked up at Madison Square Garden.			woz-dialogs	dlg-c9771f6e-46e4-4da7-ad53-97f68f6813d4
+dev-clean-133	dev	clean	How Swansea City is doing in the English Premier League?	How Swansea City is doing in the English Premier League?			sports	dlg-12a9d977-c15d-45f9-959f-4a73c8b37911
+dev-clean-134	dev	clean	Let's book that and get going.	Let's book that and get going.			flights	dlg-e11de364-0a20-46dc-9ee7-fcf9aa4ca5b8
+dev-clean-135	dev	clean	Are the Cleveland Indians currently playing their game?	Are the Cleveland Indians currently playing their game?			sports	dlg-f521e02c-e9a9-456f-8705-afffe51b805c
+dev-clean-136	dev	clean	Hi, I need some help finding a movie to rent to watch at home.	Hi, I need some help finding a movie to rent to watch at home.			movies	dlg-c28388bc-470e-4679-a156-993800f01d4a
+dev-clean-137	dev	clean	Ah, somebody that sounds kind of like Lenny Kravitz, but it is a new artist.	Ah, somebody that sounds kind of like Lenny Kravitz, but it is a new artist.			music	dlg-fd907036-ba2e-40fe-8af6-e972b5c691ce
+dev-clean-138	dev	clean	Please provide me the return details.	Please provide me the return details.			flights	dlg-1aa6ea8c-2de9-4bbd-840d-ba1a5994614d
+dev-clean-139	dev	clean	That sounds like the easiest one.	That sounds like the easiest one.			hotels	dlg-2c3a443c-00ce-4574-ab38-b249b43e3ff3
+dev-clean-140	dev	clean	How much is the flight?	How much is the flight?			flights	dlg-40f1cf1c-b6e4-4971-8ef4-f4d92660d58b
+dev-clean-141	dev	clean	Who is their manager currently?	Who is their manager currently?			sports	dlg-533fa155-5f1e-4c42-8e19-b9f67b1be0ed
+dev-clean-142	dev	clean	I'm in need of an Uber XL to pick me up immediately, please.	I'm in need of an Uber XL to pick me up immediately, please.			woz-dialogs	dlg-e53d3337-323f-4dd2-9dda-4fe30c48dc61
+dev-clean-143	dev	clean	Okay, I'm going to the second hotel I have there.	Okay, I'm going to the second hotel I have there.			hotels	dlg-baddeaa3-ce81-4bd9-a446-b4cc851345ad
+dev-clean-144	dev	clean	I really like that song and it's very traditional.	I really like that song and it's very traditional.			music	dlg-223f8028-81b8-40a3-baec-fa4dee2187d6
+dev-clean-145	dev	clean	No, she's not bad at all.	No, she's not bad at all.			movies	dlg-faa24708-9c64-414a-a1ae-3ce328462299
+dev-clean-146	dev	clean	Yeah, I'm planing a special dinner out today at Cafe Beaujolais in Mendocino, California.	Yeah, I'm planing a special dinner out today at Cafe Beaujolais in Mendocino, California.			restaurant-search	dlg-91fccb85-a0fc-41b3-b57c-b15b78a1e6ff
+dev-clean-147	dev	clean	Can you do another song by him but maybe a different album?	Can you do another song by him but maybe a different album?			music	dlg-f32fae04-18f6-4240-9914-e2198b0f4aba
+dev-clean-148	dev	clean	I would like to order three pizzas from Bella Luna.	I would like to order three pizzas from Bella Luna.			woz-dialogs	dlg-76db6f85-d350-4fda-8a4c-e5fc087d704d
+dev-clean-149	dev	clean	Could you tell me how the Milwaukee Bucks are currently doing?	Could you tell me how the Milwaukee Bucks are currently doing?			sports	dlg-67958145-10b1-4895-badd-094e359e8e29
+dev-clean-150	dev	clean	One ticket, please, adult.	One ticket, please, adult.			movies	dlg-35d4c1b4-3c59-4b7d-967d-cfe5afd50cc6
+dev-clean-151	dev	clean	I want to book a round-trip flight.	I want to book a round-trip flight.			flights	dlg-287a2c04-04a1-45cb-920a-e57541db980c
+dev-clean-152	dev	clean	How about The Hangover?	How about The Hangover?			movies	dlg-55cf74f1-0c68-4b75-8942-e51e28079c98
+dev-clean-153	dev	clean	It's okay, no problem.	It's okay, no problem.			movies	dlg-1913bc16-d087-4d07-a20f-2c21374af92c
+dev-clean-154	dev	clean	So, they're in the West Conference.	So, they're in the West Conference.			sports	dlg-2db491d5-349c-4bf1-ada0-050afa9834ca
+dev-clean-155	dev	clean	I hope that I will.	I hope that I will.			flights	dlg-8e245c08-7961-4128-81cb-2518cdd5511d
+dev-clean-156	dev	clean	I'm looking for a hotel in Chico, California.	I'm looking for a hotel in Chico, California.			hotels	dlg-5f67024c-b7f7-486f-b949-23cf48c1f3d8
+dev-clean-157	dev	clean	Any that has a mix of foods and everything like the American continent of Mexico.	Any that has a mix of foods and everything like the American continent of Mexico.			restaurant-search	dlg-fde7d990-f9a0-4744-996e-8d148a0a53a3
+dev-clean-158	dev	clean	I'm glad you can find this song.	I'm glad you can find this song.			music	dlg-0bfcdbe7-a3ba-4bd7-bb94-4fe475a1781a
+dev-clean-159	dev	clean	I'll choose a layover, then.	I'll choose a layover, then.			flights	dlg-43e580e5-f8e5-4670-92a1-b6a89b2c5fd0
+dev-clean-160	dev	clean	Tell me more about that because Baywatch is a comedy.	Tell me more about that because Baywatch is a comedy.			movies	dlg-b39f5e30-bc79-4360-9e19-d9b25d6581da
+dev-clean-161	dev	clean	I want to eat some salad.	I want to eat some salad.			woz-dialogs	dlg-f42f60ea-81ef-4e4c-860d-03e5697410b3
+dev-clean-162	dev	clean	Give me more info on Taco Guadalajara.	Give me more info on Taco Guadalajara.			restaurant-search	dlg-a3e422ec-9d74-47f3-85f7-36e5ab312c30
+dev-clean-163	dev	clean	Now I'm wondering, who's the current head coach for the Magic?	Now I'm wondering, who's the current head coach for the Magic?			sports	dlg-feba312c-6eb1-403e-a2fe-c55f877f5505
+dev-clean-164	dev	clean	Is there any restaurant near the hotel?	Is there any restaurant near the hotel?			hotels	dlg-f84eb74b-7b3b-43d0-824f-1af3f8aea20a
+dev-clean-165	dev	clean	Something with sit down.	Something with sit down.			restaurant-search	dlg-488c43bc-465e-4c1e-9595-0085ca3dd943
+dev-clean-166	dev	clean	I'd like to know what place is the Sporting Kansas City in, right now?	I'd like to know what place is the Sporting Kansas City in, right now?			sports	dlg-d93aec7b-227a-4975-b09b-a60873ceb6ca
+dev-clean-167	dev	clean	I would like some help finding a movie to rent to watch at home.	I would like some help finding a movie to rent to watch at home.			movies	dlg-faa24708-9c64-414a-a1ae-3ce328462299
+dev-clean-168	dev	clean	Ark Relo Can you give me more information about Ark Relo?	Ark Relo Can you give me more information about Ark Relo?			woz-dialogs	dlg-68d2a834-46eb-46d1-977a-5e531dcf5115
+dev-clean-169	dev	clean	Yep, I like that one.	Yep, I like that one.			music	dlg-dbb62b90-69d4-4c39-af19-136ef0897d68
+dev-clean-170	dev	clean	Where is it playing and at what time?	Where is it playing and at what time?			movies	dlg-c08f76e6-fa58-4bb2-80e1-de4e3f4b95da
+dev-clean-171	dev	clean	I'm looking to book a trip in a city in Europe.	I'm looking to book a trip in a city in Europe.			flights	dlg-b432b67a-b9ea-4f45-ac1f-2551268e5d81
+dev-clean-172	dev	clean	And who is in last place in the American League East?	And who is in last place in the American League East?			sports	dlg-d552d079-3283-4b6a-9831-b37f9d781764
+dev-clean-173	dev	clean	Is it possible to get blonde coffee with that?	Is it possible to get blonde coffee with that?			woz-dialogs	dlg-cf05d554-59e8-4641-8968-81ee59c66b6d
+dev-clean-174	dev	clean	Okay, and how did they do in the game prior to that?	Okay, and how did they do in the game prior to that?			sports	dlg-df37139b-bb0f-4946-839a-fd0613a32873
+dev-clean-175	dev	clean	It looks like somebody just filming their backyard.	It looks like somebody just filming their backyard.			movies	dlg-ceaf1aa3-3417-495f-8848-d9bcf935d45d
+dev-clean-176	dev	clean	No in-room amenities are not necessary because we're going to be out on the town and seeing the games.	No in-room amenities are not necessary because we're going to be out on the town and seeing the games.			hotels	dlg-8448641b-9abc-4718-a6de-4f184ff6a476
+dev-clean-177	dev	clean	Hi, Today I need help gathering information about the New York Mets.	Hi, Today I need help gathering information about the New York Mets.			sports	dlg-de475a06-4ad6-4b3b-8550-501ee7373476
+dev-clean-178	dev	clean	Hi, I think we're done here.	Hi, I think we're done here.			music	dlg-cf99617d-dbfb-4c19-91eb-9142ac097b50
+dev-clean-179	dev	clean	I'm looking for a thriller.	I'm looking for a thriller.			movies	dlg-c0da6d9c-41f2-4d72-909d-9a6baf777abe
+dev-clean-180	dev	clean	Which conference is the Atlanta Hawks in, a team that plays in the National Basketball Association?	Which conference is the Atlanta Hawks in, a team that plays in the National Basketball Association?			sports	dlg-fe2adf8c-3930-42ad-8876-9abee4eb635d
+dev-clean-181	dev	clean	What's the price on?	What's the price on?			hotels	dlg-3adc3d12-d6e6-440d-ae38-60b0a6d44860
+dev-clean-182	dev	clean	Could you tell me more about second one?	Could you tell me more about second one?			restaurant-search	dlg-0a19846f-75cd-4c1e-9cd7-0b94206a367a
+dev-clean-183	dev	clean	Okay and what are the ticket prices?	Okay and what are the ticket prices?			movies	dlg-703d6d69-9a82-4f9e-8eea-60fdbe3d295f
+dev-clean-184	dev	clean	Can I hear something from their album American Idiot?	Can I hear something from their album American Idiot?			music	dlg-9557b3e6-1c6c-4813-8e26-540803e1a06c
+dev-clean-185	dev	clean	I'd like it to be open for lunch.	I'd like it to be open for lunch.			restaurant-search	dlg-6c191332-9570-4701-8e79-a692cd8c3343
+dev-clean-186	dev	clean	How long was that game?	How long was that game?			sports	dlg-8dc5d17f-8784-429d-9222-a3f719afd653
+dev-clean-187	dev	clean	I would like something to offer vegetarian option.	I would like something to offer vegetarian option.			woz-dialogs	dlg-a663dab9-0ed6-45db-b75b-c156adef3686
+dev-clean-188	dev	clean	I'd like help finding a flight from Houston to Paris.	I'd like help finding a flight from Houston to Paris.			flights	dlg-a4e4573d-c45b-4b2a-81d1-5b457fbf440e
+dev-clean-189	dev	clean	I am in a mood to see a comedy that's based on a true story.	I am in a mood to see a comedy that's based on a true story.			movies	dlg-5e09f69f-3b91-4690-8055-4c48ba32932b
+dev-clean-190	dev	clean	I want to go to see a movie tonight.	I want to go to see a movie tonight.			movies	dlg-83ef13d4-89ee-4919-847a-ddfeef7adb6d
+dev-clean-191	dev	clean	The options do I have given should fit that criteria.	The options do I have given should fit that criteria.			hotels	dlg-13323c3c-0c15-4cfe-91d1-a94d13795858
+dev-clean-192	dev	clean	Hi, I was wanting to listen to something by Dying Fetus.	Hi, I was wanting to listen to something by Dying Fetus.			music	dlg-a43d404c-428a-4997-9bf5-df2deb5d8309
+dev-clean-193	dev	clean	Have a good night, see you next time.	Have a good night, see you next time.			sports	dlg-ad486c0b-df4d-4ae6-beda-a72ccc774fa6
+dev-clean-194	dev	clean	Both of them thick-crust, please.	Both of them thick-crust, please.			woz-dialogs	dlg-65706816-0003-4abc-a6c4-9f8e5a2d8e96
+dev-clean-195	dev	clean	I need to know, what place currently are Burnley in soccer team in England?	I need to know, what place currently are Burnley in soccer team in England?			sports	dlg-74f903bd-65f3-49cb-bcde-548caa89de91
+dev-clean-196	dev	clean	Tell me about a restaurant in hotel.	Tell me about a restaurant in hotel.			hotels	dlg-bcf778e9-cbd8-4d18-bbb2-ba48b5f5ef12
+dev-clean-197	dev	clean	I need the one that has four star rating.	I need the one that has four star rating.			hotels	dlg-598f942d-e7ec-4c5b-84e6-e16e03bab8f4
+dev-clean-198	dev	clean	I'll go to that movie.	I'll go to that movie.			movies	dlg-56afc0cd-dcac-4099-ad0d-ced8377ae812
+dev-clean-199	dev	clean	Can you tell me more about that one, please?	Can you tell me more about that one, please?			restaurant-search	dlg-81639d29-1be4-4ad8-be00-4ddcc0277cf3
+dev-clean-200	dev	clean	I want to book the hotel from Sunday i.	I want to book the hotel from Sunday i.			hotels	dlg-063a8fbb-e725-4402-8dff-58cddf1a48f5
+dev-clean-201	dev	clean	I'm flying out of Seattle.	I'm flying out of Seattle.			flights	dlg-efc261c9-722f-4892-8b77-1077e6dd6002
+dev-clean-202	dev	clean	I'd like to arrive tomorrow evening, Friday.	I'd like to arrive tomorrow evening, Friday.			hotels	dlg-5aa1cf5c-121b-435d-9234-277161743eac
+dev-clean-203	dev	clean	I need to make an appointment at Intelligent Auto Imports to get my car looked at.	I need to make an appointment at Intelligent Auto Imports to get my car looked at.			woz-dialogs	dlg-4bcc250d-2220-4ad8-863d-c00dca3a4ad1
+dev-clean-204	dev	clean	Can you tell me the layover time?	Can you tell me the layover time?			flights	dlg-5c8e22ed-6b6d-499b-a6e6-7e3395b5c686
+dev-clean-205	dev	clean	Okay, I can make that work.	Okay, I can make that work.			flights	dlg-929a3d39-b778-4c93-93c9-976a28b9f3ec
+dev-clean-206	dev	clean	Yeah, I'm looking for a flight to San Diego.	Yeah, I'm looking for a flight to San Diego.			flights	dlg-37d8dfc5-97f0-42d2-9962-3b605c37c301
+dev-clean-207	dev	clean	Can you book it for six people?	Can you book it for six people?			woz-dialogs	dlg-a451a7b9-0779-444c-b1ff-538eb5f15888
+dev-clean-208	dev	clean	I'd like to add two ice teas to that.	I'd like to add two ice teas to that.			food-ordering	dlg-c8e29c6d-eaf1-4129-8898-1759d2ca1af1
+dev-clean-209	dev	clean	Yes, I'm planning a dinner out at Cafe Beaujolais in Mendocino, California.	Yes, I'm planning a dinner out at Cafe Beaujolais in Mendocino, California.			restaurant-search	dlg-d17b6289-84d9-46d7-af92-fedaf3ac6891
+dev-clean-210	dev	clean	I think all of all all three of them, make sure that they're extra cheese.	I think all of all all three of them, make sure that they're extra cheese.			woz-dialogs	dlg-e0356409-f75f-4033-8161-ab6a4e0f1258
+dev-clean-211	dev	clean	Just going to be a pickup a pickup order.	Just going to be a pickup a pickup order.			woz-dialogs	dlg-9a67b190-b41a-422f-9997-5f84cf631b01
+dev-clean-212	dev	clean	I want I want indoor.	I want I want indoor.			woz-dialogs	dlg-0e905a32-2361-48df-8247-5b2f84f2be2b
+dev-clean-213	dev	clean	Is there any hotel available?	Is there any hotel available?			hotels	dlg-2f0ce11a-ec8a-49b5-af57-52f29f5aeb82
+dev-clean-214	dev	clean	I'm fine with either or.	I'm fine with either or.			flights	dlg-fb7d0826-6fd9-421c-8860-3b00dc276c44
+dev-clean-215	dev	clean	Oh, What theater is it at?	Oh, What theater is it at?			movies	dlg-3b523328-854e-4944-952a-0b6b74b04596
+dev-clean-216	dev	clean	And I'd like to have drinks and snacks on board.	And I'd like to have drinks and snacks on board.			flights	dlg-7f1534e7-7e4b-4e69-ab2b-7baa27aa1b9f
+dev-clean-217	dev	clean	I'm actually really looking forward to it.	I'm actually really looking forward to it.			hotels	dlg-5b094005-c266-4cfc-862a-91f1207ad055
+dev-clean-218	dev	clean	That's quite a lot.	That's quite a lot.			hotels	dlg-e675a445-9ff0-4b0d-a167-a1ba2d069e32
+dev-clean-219	dev	clean	Right now I'm in Pasadena, California near the Rose Bowl.	Right now I'm in Pasadena, California near the Rose Bowl.			movies	dlg-4b6a54ac-eade-4ed5-a517-8cbcdbf9e262
+dev-clean-220	dev	clean	Can you play another song by Rapsody, please?	Can you play another song by Rapsody, please?			music	dlg-8ff8ff83-81fd-4627-a3ac-deb611ae728b
+dev-clean-221	dev	clean	Yeah, do they have a pool and a hot tub?	Yeah, do they have a pool and a hot tub?			hotels	dlg-3c822157-b367-496b-8bc9-d40c5e2277cc
+dev-clean-222	dev	clean	Hi, I need to find a hotel for New Orleans, Louisiana for two people.	Hi, I need to find a hotel for New Orleans, Louisiana for two people.			hotels	dlg-197dc205-54bc-4611-9c60-3e0fbd5bb106
+dev-clean-223	dev	clean	You've done such a tremendous help.	You've done such a tremendous help.			sports	dlg-476800cc-ba1d-4712-9333-7630a9001ba7
+dev-clean-224	dev	clean	I would like help in finding a flight.	I would like help in finding a flight.			flights	dlg-e0e46813-b2b9-4d84-8343-2b991dcdd2cb
+dev-clean-225	dev	clean	Hello, I need a help in finding a movie to watch tonight at home.	Hello, I need a help in finding a movie to watch tonight at home.			movies	dlg-66e4f9d7-6a08-4192-9102-aa61ae67508a
+dev-clean-226	dev	clean	I would like it to be economy class.	I would like it to be economy class.			flights	dlg-16b85f0a-6274-438a-9f47-1c9884a83687
+dev-clean-227	dev	clean	Sure, that would work.	Sure, that would work.			woz-dialogs	dlg-92f9a20c-d723-47a8-b044-8a5ac595802a
+dev-clean-228	dev	clean	What's the time and price?	What's the time and price?			flights	dlg-4449c5a5-7640-463d-b29b-95da79672a2b
+dev-clean-229	dev	clean	Yeah, okay, fix the appointment.	Yeah, okay, fix the appointment.			woz-dialogs	dlg-39134b95-eb6e-4bde-9094-1a712602138f
+dev-clean-230	dev	clean	I would like to see what they have.	I would like to see what they have.			woz-dialogs	dlg-68d2a834-46eb-46d1-977a-5e531dcf5115
+dev-clean-231	dev	clean	would really work out well for me.	would really work out well for me.			woz-dialogs	dlg-1a3ca297-ae7f-42a0-ad44-d9182b6052bd
+dev-clean-232	dev	clean	Could you please list the top two above four-star rating?	Could you please list the top two above four-star rating?			restaurant-search	dlg-7887fa5f-a46d-4547-a6ba-a812b8e280ec
+dev-clean-233	dev	clean	Yeah, I'd like to ask about the Philadelphia Phillies and who did they play last?	Yeah, I'd like to ask about the Philadelphia Phillies and who did they play last?			sports	dlg-dd39dadf-edfa-4da7-b437-70770a7540ce
+dev-clean-234	dev	clean	Hi, I'm looking for information about the New York Redbulls.	Hi, I'm looking for information about the New York Redbulls.			sports	dlg-e5d7e85a-558b-48f8-a365-fac5784f677a
+dev-clean-235	dev	clean	You know, I'd like a new release, may be a drama.	You know, I'd like a new release, may be a drama.			movies	dlg-25d20e1c-d5e9-402f-9505-22a1d05fa8c7
+dev-clean-236	dev	clean	What does Xfinity have to offer for movies?	What does Xfinity have to offer for movies?			movies	dlg-c5d9ddbb-9bee-4a99-9f45-32cc4327fcf6
+dev-clean-237	dev	clean	Okay, how about the last one?	Okay, how about the last one?			movies	dlg-fb9e8221-8353-4564-b082-ae5d89ccd037
+dev-clean-238	dev	clean	Let's do business-class.	Let's do business-class.			flights	dlg-7574f696-138b-4c1b-a18d-70d109702113
+dev-clean-239	dev	clean	And can I eat outside or not?	And can I eat outside or not?			restaurant-search	dlg-dde2f9e7-0918-41de-bd55-94e243db9a5f
+dev-clean-240	dev	clean	Hi, I'm trying to find a movie theater in Dallas, Texas that is playing The Favourite.	Hi, I'm trying to find a movie theater in Dallas, Texas that is playing The Favourite.			woz-dialogs	dlg-0afc80f0-507c-4700-bb6e-705eae98a45d
+dev-clean-241	dev	clean	Louis, Missouri next Friday to the following Monday.	Louis, Missouri next Friday to the following Monday.			hotels	dlg-ffd8ea7f-fc65-41a9-8341-e7e500250048
+dev-clean-242	dev	clean	The director was Denzel Washington for the particular movie I'm looking for had Spike Lee in it.	The director was Denzel Washington for the particular movie I'm looking for had Spike Lee in it.			movies	dlg-d1883285-8a01-4e74-9f99-b51ddf5ce1ec
+dev-clean-243	dev	clean	Yeah, I did make a appointment ton get my car fixed.	Yeah, I did make a appointment ton get my car fixed.			woz-dialogs	dlg-1c1cc11b-8715-4b5b-8d2c-50385ed92280
+dev-clean-244	dev	clean	Why don't you make a reservation at KO Steak House?	Why don't you make a reservation at KO Steak House?			woz-dialogs	dlg-d8c449bb-715c-47f5-a76b-c8899e656c33
+dev-clean-245	dev	clean	Okay, let me know that what you find.	Okay, let me know that what you find.			hotels	dlg-10663349-5e4c-4301-8099-39c78f3d7b28
+dev-clean-246	dev	clean	For some reason winter in Rhode Island.	For some reason winter in Rhode Island.			restaurant-search	dlg-6705b3d0-f28f-48ab-992b-10ffe53557c6
+dev-clean-247	dev	clean	Can you play something of Paris Motley?	Can you play something of Paris Motley?			music	dlg-d53b9ac0-c2b2-43f5-a8a9-e489d8114563
+dev-clean-248	dev	clean	Can you find me hotels that meet those specifications?	Can you find me hotels that meet those specifications?			hotels	dlg-0280c9a0-babe-4b2a-b2f4-79164c576582
+dev-clean-249	dev	clean	Is there anything with one stop cheaper?	Is there anything with one stop cheaper?			flights	dlg-9d0855f7-eae8-404f-97cf-634a6f6de60f
+dev-clean-250	dev	clean	I want to order four pizzas from Bella Luna.	I want to order four pizzas from Bella Luna.			woz-dialogs	dlg-1c1109cd-b02c-4175-aace-3f88cedb8233
+dev-clean-251	dev	clean	How are you on Friday?	How are you on Friday?			woz-dialogs	dlg-65690b0d-68c4-457b-b39f-3f6df7236b9a
+dev-clean-252	dev	clean	At New York City.	At New York City.			flights	dlg-d2fd5482-dc29-4fb7-b7e4-7ae68de695f1
+dev-clean-253	dev	clean	My computer sound system is not working the greatest but I'll give it a shot.	My computer sound system is not working the greatest but I'll give it a shot.			hotels	dlg-3f74e5dd-f82b-4466-89e3-9fb0ecab2dfd
+dev-clean-254	dev	clean	I need to find a hotel in Nashville, Tennessee.	I need to find a hotel in Nashville, Tennessee.			hotels	dlg-0e800cc1-f0c6-438d-b258-e8510326301b
+dev-clean-255	dev	clean	I'm thinking about some kind of action adventure maybe.	I'm thinking about some kind of action adventure maybe.			movies	dlg-76133d0a-0932-43f1-9a3a-40e19f3f5edd
+dev-clean-256	dev	clean	Find a sandwich shop in Santa Cruz.	Find a sandwich shop in Santa Cruz.			restaurant-search	dlg-d95bbe04-39ea-4a21-893e-c8e27af4dcd9
+dev-clean-257	dev	clean	Tell me about the room pricing.	Tell me about the room pricing.			hotels	dlg-bcf778e9-cbd8-4d18-bbb2-ba48b5f5ef12
+dev-clean-258	dev	clean	On Broadway in Edmond, Oklahoma.	On Broadway in Edmond, Oklahoma.			woz-dialogs	dlg-d96aca7e-0c28-4b4c-a607-3ee8e9008ba9
+dev-clean-259	dev	clean	Add two hot coffees.	Add two hot coffees.			food-ordering	dlg-a67747d1-1406-4984-a7db-79604f15eaab
+dev-clean-260	dev	clean	No, I'll actually just want something which is cheap.	No, I'll actually just want something which is cheap.			restaurant-search	dlg-fc52556e-99a7-46eb-8b13-5b8dce035e36
+dev-clean-261	dev	clean	And also, can you tell the phone number?	And also, can you tell the phone number?			hotels	dlg-2f0ce11a-ec8a-49b5-af57-52f29f5aeb82
+dev-clean-262	dev	clean	Thank you very much for helping me.	Thank you very much for helping me.			flights	dlg-11a17546-0622-48be-b3d2-c318f1c7cb39
+dev-clean-263	dev	clean	What about my return trip?	What about my return trip?			flights	dlg-7574f696-138b-4c1b-a18d-70d109702113
+dev-clean-264	dev	clean	Just wonder I remember something about that, now.	Just wonder I remember something about that, now.			movies	dlg-d1f1c1fa-d415-4286-a595-ca2dad4f2e8b
+dev-clean-265	dev	clean	Between Arsenal and Manchester City, which team has the most well-known players?	Between Arsenal and Manchester City, which team has the most well-known players?			sports	dlg-ae5f171d-9e81-48e0-a37b-bca1cc4d3879
+dev-clean-266	dev	clean	Is that available on iTunes?	Is that available on iTunes?			movies	dlg-0eae20e4-a16d-4880-8202-46a8b35b4363
+dev-clean-267	dev	clean	I'm wondering how many games back from first place the St.	I'm wondering how many games back from first place the St.			sports	dlg-3bbefc03-5ca8-46cd-8ffc-7cf96aa0e514
+dev-clean-268	dev	clean	Wait, can you answer me one more question?	Wait, can you answer me one more question?			sports	dlg-3fd6f1ce-ba44-42ab-bf09-af41dd9fda53
+dev-clean-269	dev	clean	Yeah, that's close enough.	Yeah, that's close enough.			woz-dialogs	dlg-1a3ca297-ae7f-42a0-ad44-d9182b6052bd
+dev-clean-270	dev	clean	Oh, Well, Can you pick out a good one for me?	Oh, Well, Can you pick out a good one for me?			restaurant-search	dlg-4df0367a-dfb4-4b82-92d0-2b5cdfe73ee2
+dev-clean-271	dev	clean	Andy can you give me some recommendations about the rooms I can get the desserts.	Andy can you give me some recommendations about the rooms I can get the desserts.			hotels	dlg-baddeaa3-ce81-4bd9-a446-b4cc851345ad
+dev-clean-272	dev	clean	And how about coming home?	And how about coming home?			flights	dlg-6494c5c9-bd12-4ab3-a0ba-676c4fa69483
+dev-clean-273	dev	clean	Four stars and above.	Four stars and above.			hotels	dlg-32ebf405-56bb-417c-960c-327de2db7b51
+dev-clean-274	dev	clean	Could you tell me what time both of them are open until tonight?	Could you tell me what time both of them are open until tonight?			woz-dialogs	dlg-234ed693-b119-4d79-8bec-f8cef867277d
+dev-clean-275	dev	clean	I would like to fly with United Airlines.	I would like to fly with United Airlines.			flights	dlg-0078b72c-401a-4a11-a62c-0bc3297d3266
+dev-clean-276	dev	clean	So What's the highest rating on Rotten Tomatoes?	So What's the highest rating on Rotten Tomatoes?			movies	dlg-a3e74b79-91e0-4c0b-9d37-2c3cce135eb7
+dev-clean-277	dev	clean	Can you tell me who directed the movie, please?	Can you tell me who directed the movie, please?			woz-dialogs	dlg-3a1434a7-077c-44aa-a965-a38587fd6173
+dev-clean-278	dev	clean	How is the record of the LA Clippers?	How is the record of the LA Clippers?			sports	dlg-45e1209e-1a6f-4f8f-b51d-5c8b17b906cd
+dev-clean-279	dev	clean	Okay, Is that the only option you found?	Okay, Is that the only option you found?			hotels	dlg-d614bd24-9c01-4e27-adaf-8b33ef831bb2

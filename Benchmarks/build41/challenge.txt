@@ -1,0 +1,86 @@
+context|Could you [sent|send] the receipt to the front office before noon?
+context|I [herd|heard] wheels on the gravel while I was washing up.
+context|She put [me|my] headphones in the drawer under the maps.
+context|Save the blue stool [four|for] the person running the sound board.
+context|The new nurse [us|is] waiting near the x-ray machine.
+context|I need to check [of|if] the deposit cleared overnight.
+context|Do you know [of|if] the night bus goes past the mill?
+context|My jacket is hanging [be|by] the cracked mirror.
+context|I can go [hope|home] after the substitute gets here.
+context|We'll go [wish|with] the cheaper fabric for the lining.
+context|The parcel should come [in|on] Thursday before the library shuts.
+context|It's hard to believe [tour|your] kitten opened the cupboard.
+context|I'm leaving right [not|now] to beat the traffic on the bridge.
+context|Could we [meat|meet] at the fountain once the show ends?
+context|Someone needs to [sing|sign] the form that came with the delivery.
+context|He sent the photo to his [ant|aunt] after the recital.
+context|It looks [life|like] the latch has come loose again.
+context|I think you gave [my|me] the wrong lunch bag.
+context|There's a pile [if|of] damp towels under the rack.
+context|I want to [fine|find] the missing badge before tomorrow.
+context|Would you [here|hear] that alarm from the basement?
+context|It was louder [then|than] the last one we bought.
+context|Can you move those boots [form|from] the mat to the hall?
+context|I'll [right|write] the new combination inside the notebook.
+context|They left a [pear|pair] of glasses on the dashboard.
+context|She put her foot on the [break|brake] before the lights changed.
+context|Can we [reed|read] the directions on the back before we start?
+context|Should I [bye|buy] a spare tube on the way to practice?
+context|He tipped a spoonful of [flower|flour] into the gravy.
+context|They left [there|their] umbrellas in the red cabinet.
+context|Would you like [sum|some] bread to go with the soup?
+context|They asked us to [sale|sell] cookies at the school concert.
+context|Do we have enough [thyme|time] to stop for milk?
+context|I tried to [pour|pore] over the instructions before she got home.
+context|He took the [reins|rains] into account when choosing the route.
+context|I'm going to [loose|lose] my ticket if I put it in that pocket.
+context|Please take a [peek|peak] off the route so the younger kids can finish.
+context|The hardware store has a [hole|whole] aisle of curtain hooks.
+context|Can someone [sent|send] a copy to both drivers?
+context|We should [meat|meet] the guide before anyone starts hiking.
+mixed|The [whele|wheel] on the red [wagn|wagon] rattles when I pull it.
+mixed|I [fogrot|forgot] to put the [sweatr|sweater] in the dryer.
+mixed|Could you [dropp|drop] the [ticktes|tickets] off at the booth?
+mixed|The [bateries|batteries] for the [lantren|lantern] are behind the radio.
+mixed|I will [sent|send] the [adrees|address] when I get back to my desk.
+mixed|Can you [meat|meet] me after [pratcice|practice] behind the rink?
+mixed|They moved the [coffe|coffee] cart to the [corenr|corner] near the lifts.
+mixed|I [lefft|left] the [reciept|receipt] on top of the bread box.
+mixed|Will you [grabthe|grab the] red [toewl|towel] before you leave?
+mixed|Please [putthe|put the] extra keys in my [pokcet|pocket].
+mixed|The [tehcnician|technician] said the clocks were [workign|working] again.
+mixed|He [herd|heard] the [wirless|wireless] doorbell from his office.
+mixed|I [realyl|really] need [anohter|another] hour to finish folding these.
+mixed|The [freezr|freezer] is much [quiter|quieter] since the repair.
+mixed|Could you [lok|look] in the [frigde|fridge] for the green jar?
+mixed|I [spilledthe|spilled the] rice while packing my [lunhc|lunch].
+keep|The herd stopped near the broken gate before dusk.
+keep|I sent one note to the driver and two to the office.
+keep|Save the ticket if the driver lets you off early.
+keep|He bought a bag of beans for the long weekend.
+keep|We put a fresh leek on the scale before paying.
+keep|I won't move the hose until the grass dries out.
+keep|The sign above the curtain was printed backwards.
+keep|They can sing the second verse without the sheet music.
+keep|I do wish the bus would come before the rain.
+keep|I hope the bus gets us home before it snows.
+keep|The orange ant crawled over my walking boot.
+keep|The right boot is still under the reading lamp.
+keep|I'll read the book by the lamp beside the boots.
+keep|We're going on a tour of four old train stations.
+keep|I gave the meter a fine coat of silver paint.
+keep|A bright flower fell into the bowl of flour.
+keep|She tied the reins so the pony could rest.
+keep|We can pour the lemonade when the guests arrive.
+keep|I heard the tern before I could see it.
+keep|Someone put two spare bolts in the paper bag.
+keep|The seats were too close to the old radiator.
+keep|The spring is loose at the bottom of the gate.
+keep|She likes to peek through the curtains after sunset.
+keep|I'll keep the boom mic on until the bell rings.
+keep|I marked the right time on the calendar this morning.
+keep|The pear in the basket came from our tree.
+keep|Please leave their raincoats over there by the stairs.
+keep|They flew by the peak before they crossed the bay.
+keep|I set my watch by the clock over the stairs.
+keep|My cousin wrote a play about a band of ghosts.

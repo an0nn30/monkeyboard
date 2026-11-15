@@ -1,0 +1,3154 @@
+[
+  {
+    "id": "final-sms0695",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 695,
+    "kind": "public-clean",
+    "typed": "Will purchase d stuff today and mail to you. Do you have a po box number?",
+    "expected": "Will purchase d stuff today and mail to you. Do you have a po box number?"
+  },
+  {
+    "id": "final-sms2751",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2751,
+    "kind": "public-clean",
+    "typed": "You said not now. No problem. When you can. Let me know.",
+    "expected": "You said not now. No problem. When you can. Let me know."
+  },
+  {
+    "id": "final-sms4718",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4718,
+    "kind": "public-short",
+    "typed": "Hey. What happened? U switch off ur cell d whole day. This isnt good. Now if u do care, give em a call tomorrow.",
+    "expected": "Hey. What happened? U switch off ur cell d whole day. This isnt good. Now if u do care, give me a call tomorrow."
+  },
+  {
+    "id": "final-a038",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-slang",
+    "typed": "ngl that purple rug kinda works here",
+    "expected": "ngl that purple rug kinda works here"
+  },
+  {
+    "id": "final-sms5364",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5364,
+    "kind": "public-multi",
+    "typed": "Yep fet with thhe program. You're slackig.",
+    "expected": "Yep get with the program. You're slacking."
+  },
+  {
+    "id": "final-sms0455",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 455,
+    "kind": "public-word",
+    "typed": "Ok i will tell her to stay out. Yeah its been tough but we are opyimistic things will improve this month.",
+    "expected": "Ok i will tell her to stay out. Yeah its been tough but we are optimistic things will improve this month."
+  },
+  {
+    "id": "final-sms2507",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2507,
+    "kind": "public-multi",
+    "typed": "Congrats kano..whhr s teh treat mag?",
+    "expected": "Congrats kano..whr s the treat maga?"
+  },
+  {
+    "id": "final-sms4454",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4454,
+    "kind": "public-word",
+    "typed": "I've tlod you everything will stop. Just dont let her get dehydrated.",
+    "expected": "I've told you everything will stop. Just dont let her get dehydrated."
+  },
+  {
+    "id": "final-sms2108",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2108,
+    "kind": "public-clean",
+    "typed": "Thank you. I like you as well...",
+    "expected": "Thank you. I like you as well..."
+  },
+  {
+    "id": "final-sms2056",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2056,
+    "kind": "public-word",
+    "typed": "Y so laate but i need to go n get da laptop...",
+    "expected": "Y so late but i need to go n get da laptop..."
+  },
+  {
+    "id": "final-sms5143",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5143,
+    "kind": "public-real-word",
+    "typed": "Yeah I imagine he would be really gentle. Unlike the other docs who treat their patients life turkeys.",
+    "expected": "Yeah I imagine he would be really gentle. Unlike the other docs who treat their patients like turkeys."
+  },
+  {
+    "id": "final-sms1884",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1884,
+    "kind": "public-apostrophe",
+    "typed": "Sorry, I cant help you on this.",
+    "expected": "Sorry, I can't help you on this."
+  },
+  {
+    "id": "final-sms3520",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3520,
+    "kind": "public-multi",
+    "typed": "Are yyou willign to go for paps class.",
+    "expected": "Are you willing to go for apps class."
+  },
+  {
+    "id": "final-sms2532",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2532,
+    "kind": "public-word",
+    "typed": "So the sun is anit sleep medicine.",
+    "expected": "So the sun is anti sleep medicine."
+  },
+  {
+    "id": "final-sms4324",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4324,
+    "kind": "public-clean",
+    "typed": "Sorry . I will be able to get to you. See you in the morning.",
+    "expected": "Sorry . I will be able to get to you. See you in the morning."
+  },
+  {
+    "id": "final-sms0491",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 491,
+    "kind": "public-real-word",
+    "typed": "I think i've fixed it can you sent a test message?",
+    "expected": "I think i've fixed it can you send a test message?"
+  },
+  {
+    "id": "final-sms0309",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 309,
+    "kind": "public-clean",
+    "typed": "Lol yes. Our friendship is hanging on a thread cause u won't buy stuff.",
+    "expected": "Lol yes. Our friendship is hanging on a thread cause u won't buy stuff."
+  },
+  {
+    "id": "final-sms1313",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1313,
+    "kind": "public-multi",
+    "typed": "U r too much close to my heart. If u go awaay i wilk be shattered. Plz stay wtih me.",
+    "expected": "U r too much close to my heart. If u go away i will be shattered. Plz stay with me."
+  },
+  {
+    "id": "final-sms2121",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2121,
+    "kind": "public-clean",
+    "typed": "I hope you know I'm still mad at you.",
+    "expected": "I hope you know I'm still mad at you."
+  },
+  {
+    "id": "final-a044",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-real",
+    "typed": "Get the meat from the cooler before we meet them.",
+    "expected": "Get the meat from the cooler before we meet them."
+  },
+  {
+    "id": "final-sms4965",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4965,
+    "kind": "public-word",
+    "typed": "I want to see your pretty pyssy...",
+    "expected": "I want to see your pretty pussy..."
+  },
+  {
+    "id": "final-sms2420",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2420,
+    "kind": "public-clean",
+    "typed": "Madam,regret disturbance.might receive a reference check from DLF Premarica.kindly be informed.Rgds,Rakhesh,Kerala.",
+    "expected": "Madam,regret disturbance.might receive a reference check from DLF Premarica.kindly be informed.Rgds,Rakhesh,Kerala."
+  },
+  {
+    "id": "final-sms3265",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3265,
+    "kind": "public-short",
+    "typed": "So u gonna gt deus ex?",
+    "expected": "So u gonna get deus ex?"
+  },
+  {
+    "id": "final-sms5439",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5439,
+    "kind": "public-word",
+    "typed": "Mode men or have you letf.",
+    "expected": "Mode men or have you left."
+  },
+  {
+    "id": "final-sms1833",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1833,
+    "kind": "public-real-word",
+    "typed": "Hello- thanx for taking that call. I got a job! Starts in monday!",
+    "expected": "Hello- thanx for taking that call. I got a job! Starts on monday!"
+  },
+  {
+    "id": "final-sms2848",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2848,
+    "kind": "public-join",
+    "typed": "Wat time u finish urlect today?",
+    "expected": "Wat time u finish ur lect today?"
+  },
+  {
+    "id": "final-sms4450",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4450,
+    "kind": "public-multi",
+    "typed": "I esnt them. Do yuo lie?",
+    "expected": "I sent them. Do you like?"
+  },
+  {
+    "id": "final-a039",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-slang",
+    "typed": "idk where ur second slipper went",
+    "expected": "idk where ur second slipper went"
+  },
+  {
+    "id": "final-sms2490",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2490,
+    "kind": "public-clean",
+    "typed": "Aiyah e rain like quite big leh. If drizzling i can at least run home.",
+    "expected": "Aiyah e rain like quite big leh. If drizzling i can at least run home."
+  },
+  {
+    "id": "final-sms4974",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4974,
+    "kind": "public-multi",
+    "typed": "I'm fine. Hope yu are good. Do taek xare.",
+    "expected": "I'm fine. Hope you are good. Do take care."
+  },
+  {
+    "id": "final-sms2967",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2967,
+    "kind": "public-short",
+    "typed": "Not yet had..ay sapna aunty manege y'day hogidhe..chinnu full weak and swalpa black agidhane..",
+    "expected": "Not yet had..ya sapna aunty manege y'day hogidhe..chinnu full weak and swalpa black agidhane.."
+  },
+  {
+    "id": "final-sms4164",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4164,
+    "kind": "public-join",
+    "typed": "How's it going? Got any exciting karaoke type activities planned? I'mdebating whether to play football this eve. Feeling lazy though.",
+    "expected": "How's it going? Got any exciting karaoke type activities planned? I'm debating whether to play football this eve. Feeling lazy though."
+  },
+  {
+    "id": "final-sms1412",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1412,
+    "kind": "public-multi",
+    "typed": "Pls speaak to thatt customer maachan.",
+    "expected": "Pls speak to that customer machan."
+  },
+  {
+    "id": "final-sms4819",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4819,
+    "kind": "public-multi",
+    "typed": "Me to. Mark is taking forever to pick up my prescription nd the pain is ccoming back.",
+    "expected": "Me too. Mark is taking forever to pick up my prescription and the pain is coming back."
+  },
+  {
+    "id": "final-sms1026",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1026,
+    "kind": "public-short",
+    "typed": "Hasn't that been thee pattern recently crap weekends?",
+    "expected": "Hasn't that been the pattern recently crap weekends?"
+  },
+  {
+    "id": "final-sms0222",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 222,
+    "kind": "public-multi",
+    "typed": "Ok no rpob. Take ur tim.",
+    "expected": "Ok no prob. Take ur time."
+  },
+  {
+    "id": "final-sms1085",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1085,
+    "kind": "public-word",
+    "typed": "Wat makes some people dearer is not just de happiness dat u frel when u meet them but de pain u feel when u miss dem!!!",
+    "expected": "Wat makes some people dearer is not just de happiness dat u feel when u meet them but de pain u feel when u miss dem!!!"
+  },
+  {
+    "id": "final-sms5315",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5315,
+    "kind": "public-multi",
+    "typed": "Here got ur favorite oyster... N got my favorite sashimi... Ok laar i dun sya already... Wait ur stomach start rumbling...",
+    "expected": "Here got ur favorite oyster... N got my favorite sashimi... Ok lar i dun say already... Wait ur stomach start rumbling..."
+  },
+  {
+    "id": "final-sms5213",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5213,
+    "kind": "public-clean",
+    "typed": "Dai i downloaded but there is only exe file which i can only run that exe after installing.",
+    "expected": "Dai i downloaded but there is only exe file which i can only run that exe after installing."
+  },
+  {
+    "id": "final-sms0603",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 603,
+    "kind": "public-apostrophe",
+    "typed": "If u sending her home first its ok lor. I'm not ready yet.",
+    "expected": "If u sending her home first it's ok lor. I'm not ready yet."
+  },
+  {
+    "id": "final-sms0004",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4,
+    "kind": "public-multi",
+    "typed": "U dun say so early or... U c aalready thhen say...",
+    "expected": "U dun say so early hor... U c already then say..."
+  },
+  {
+    "id": "final-sms0174",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 174,
+    "kind": "public-join",
+    "typed": "What time youcoming down later?",
+    "expected": "What time you coming down later?"
+  },
+  {
+    "id": "final-sms0120",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 120,
+    "kind": "public-apostrophe",
+    "typed": "Hmm...my uncle just informed me that hes paying the school directly. So pls buy food.",
+    "expected": "Hmm...my uncle just informed me that he's paying the school directly. So pls buy food."
+  },
+  {
+    "id": "final-a027",
+    "split": "final",
+    "source": "authored",
+    "kind": "boundary",
+    "typed": "I left my pass port in the gray suitcase.",
+    "expected": "I left my passport in the gray suitcase."
+  },
+  {
+    "id": "final-sms1955",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1955,
+    "kind": "public-multi",
+    "typed": "Then just eat a shit ad wait foor ur monkey face bitch.......... U asshole..................",
+    "expected": "Then just eat a shit and wait for ur monkey face bitch.......... U asshole.................."
+  },
+  {
+    "id": "final-sms1440",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1440,
+    "kind": "public-multi",
+    "typed": "Arms fine, how's Cardiff abd umi?",
+    "expected": "Arms fine, how's Cardiff and uni?"
+  },
+  {
+    "id": "final-sms4927",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4927,
+    "kind": "public-word",
+    "typed": "Ok... Let u noe hen i leave my house.",
+    "expected": "Ok... Let u noe when i leave my house."
+  },
+  {
+    "id": "final-sms4657",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4657,
+    "kind": "public-multi",
+    "typed": "Our Prasanth ettans mother passed awya last nighht. Just pray for her and family.",
+    "expected": "Our Prasanth ettans mother passed away last night. Just pray for her and family."
+  },
+  {
+    "id": "final-sms4662",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4662,
+    "kind": "public-multi",
+    "typed": "You call him an tell nwo infront of them. Call him now.",
+    "expected": "You call him and tell now infront of them. Call him now."
+  },
+  {
+    "id": "final-a018",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "There was a trail if sugar across the counter.",
+    "expected": "There was a trail of sugar across the counter."
+  },
+  {
+    "id": "final-sms4594",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4594,
+    "kind": "public-clean",
+    "typed": "Right it wasnt you who phoned it was someone with a number like yours!",
+    "expected": "Right it wasnt you who phoned it was someone with a number like yours!"
+  },
+  {
+    "id": "final-sms0872",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 872,
+    "kind": "public-clean",
+    "typed": "Well am officially in a philosophical hole, so if u wanna call am at home ready to be saved!",
+    "expected": "Well am officially in a philosophical hole, so if u wanna call am at home ready to be saved!"
+  },
+  {
+    "id": "final-sms0216",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 216,
+    "kind": "public-word",
+    "typed": "Sounds grrat! Are you home now?",
+    "expected": "Sounds great! Are you home now?"
+  },
+  {
+    "id": "final-sms0308",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 308,
+    "kind": "public-clean",
+    "typed": "Jos ask if u wana meet up?",
+    "expected": "Jos ask if u wana meet up?"
+  },
+  {
+    "id": "final-a025",
+    "split": "final",
+    "source": "authored",
+    "kind": "boundary",
+    "typed": "My neighborsent the photo of your missing cat.",
+    "expected": "My neighbor sent the photo of your missing cat."
+  },
+  {
+    "id": "final-sms3204",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3204,
+    "kind": "public-clean",
+    "typed": "Okay lor... Wah... like that def they wont let us go... Haha... What did they say in the terms and conditions?",
+    "expected": "Okay lor... Wah... like that def they wont let us go... Haha... What did they say in the terms and conditions?"
+  },
+  {
+    "id": "final-sms1562",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1562,
+    "kind": "public-multi",
+    "typed": "Just got some gas money, ayn chance youu and the gang wnt to go on a grand nature adventure?",
+    "expected": "Just got some gas money, any chance you and the gang want to go on a grand nature adventure?"
+  },
+  {
+    "id": "final-sms0706",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 706,
+    "kind": "public-apostrophe",
+    "typed": "True dear..i sat to pray evening and felt so.so i smsd you in some time...",
+    "expected": "True dear..i sat to pray evening and felt so.so i sms'd you in some time..."
+  },
+  {
+    "id": "final-sms5483",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5483,
+    "kind": "public-apostrophe",
+    "typed": "Have you seen whos back at Holby?!",
+    "expected": "Have you seen who's back at Holby?!"
+  },
+  {
+    "id": "final-sms5104",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5104,
+    "kind": "public-multi",
+    "typed": "Nope thats dine. I might havw a nsp tho!",
+    "expected": "Nope thats fine. I might have a nap tho!"
+  },
+  {
+    "id": "final-sms0796",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 796,
+    "kind": "public-clean",
+    "typed": "There generally isn't one. It's an uncountable noun - u in the dictionary. pieces of research?",
+    "expected": "There generally isn't one. It's an uncountable noun - u in the dictionary. pieces of research?"
+  },
+  {
+    "id": "final-sms3115",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3115,
+    "kind": "public-clean",
+    "typed": "Wat time liao, where still got.",
+    "expected": "Wat time liao, where still got."
+  },
+  {
+    "id": "final-sms1548",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1548,
+    "kind": "public-join",
+    "typed": "Shant disturbu anymore... Jia you...",
+    "expected": "Shant disturb u anymore... Jia you..."
+  },
+  {
+    "id": "final-sms3876",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3876,
+    "kind": "public-multi",
+    "typed": "No. Did you multimeida message tehm or e-mal?",
+    "expected": "No. Did you multimedia message them or e-mail?"
+  },
+  {
+    "id": "final-sms3641",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3641,
+    "kind": "public-clean",
+    "typed": "Wat's da model num of ur phone?",
+    "expected": "Wat's da model num of ur phone?"
+  },
+  {
+    "id": "final-sms3990",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3990,
+    "kind": "public-short",
+    "typed": "Hello. Sort of out in town already. That . So dont rush home, I am eating nachos. Will let yoou know eta.",
+    "expected": "Hello. Sort of out in town already. That . So dont rush home, I am eating nachos. Will let you know eta."
+  },
+  {
+    "id": "final-a019",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "I found the receipt be the glove box.",
+    "expected": "I found the receipt by the glove box."
+  },
+  {
+    "id": "final-a014",
+    "split": "final",
+    "source": "authored",
+    "kind": "short",
+    "typed": "The mug is om the stack of old menus.",
+    "expected": "The mug is on the stack of old menus."
+  },
+  {
+    "id": "final-sms2965",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2965,
+    "kind": "public-clean",
+    "typed": "You dont know you jabo me abi.",
+    "expected": "You dont know you jabo me abi."
+  },
+  {
+    "id": "final-a031",
+    "split": "final",
+    "source": "authored",
+    "kind": "punctuation",
+    "typed": "The windows open but the dogs sleeping.",
+    "expected": "The window's open but the dog's sleeping."
+  },
+  {
+    "id": "final-sms1538",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1538,
+    "kind": "public-multi",
+    "typed": "How's it fel? Mr. Your not my real Valentine just my yo Valentine evne tho u hardly play!!",
+    "expected": "How's it feel? Mr. Your not my real Valentine just my yo Valentine even tho u hardly play!!"
+  },
+  {
+    "id": "final-sms0727",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 727,
+    "kind": "public-clean",
+    "typed": "Got it! It looks scrumptious... daddy wants to eat you all night long!",
+    "expected": "Got it! It looks scrumptious... daddy wants to eat you all night long!"
+  },
+  {
+    "id": "final-a049",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-case",
+    "typed": "Can you leave the eBay box on the stoop?",
+    "expected": "Can you leave the eBay box on the stoop?"
+  },
+  {
+    "id": "final-a032",
+    "split": "final",
+    "source": "authored",
+    "kind": "punctuation",
+    "typed": "Well take the footpath once the puddles dry.",
+    "expected": "We'll take the footpath once the puddles dry."
+  },
+  {
+    "id": "final-sms1993",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1993,
+    "kind": "public-short",
+    "typed": "No other Valentines huh? The proof is on your fb page. Ugh I'm do glad I really DIDN'T watch your rupaul show you TOOL!",
+    "expected": "No other Valentines huh? The proof is on your fb page. Ugh I'm so glad I really DIDN'T watch your rupaul show you TOOL!"
+  },
+  {
+    "id": "final-sms0176",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 176,
+    "kind": "public-apostrophe",
+    "typed": "Well, im gonna finish my bath now. Have a good...fine night.",
+    "expected": "Well, i'm gonna finish my bath now. Have a good...fine night."
+  },
+  {
+    "id": "final-a052",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-punctuation",
+    "typed": "Wait... is it the green or the gray tab?",
+    "expected": "Wait... is it the green or the gray tab?"
+  },
+  {
+    "id": "final-a002",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "She brough teh tray in form the balcony.",
+    "expected": "She brought the tray in from the balcony."
+  },
+  {
+    "id": "final-a013",
+    "split": "final",
+    "source": "authored",
+    "kind": "short",
+    "typed": "I put a coin ni each empty cup.",
+    "expected": "I put a coin in each empty cup."
+  },
+  {
+    "id": "final-sms1259",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1259,
+    "kind": "public-real-word",
+    "typed": "Am also doing on cbe only. But have to pay.",
+    "expected": "Am also doing in cbe only. But have to pay."
+  },
+  {
+    "id": "final-a045",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-real",
+    "typed": "The choir will sing while we sign the poster.",
+    "expected": "The choir will sing while we sign the poster."
+  },
+  {
+    "id": "final-sms4834",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4834,
+    "kind": "public-word",
+    "typed": "Rats. Hey did u wver vote for the next themes?",
+    "expected": "Rats. Hey did u ever vote for the next themes?"
+  },
+  {
+    "id": "final-sms1286",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1286,
+    "kind": "public-join",
+    "typed": "But if she.sdrinkin i'm ok.",
+    "expected": "But if she.s drinkin i'm ok."
+  },
+  {
+    "id": "final-sms3256",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3256,
+    "kind": "public-multi",
+    "typed": "I can make lasagna gor yuo... vodka...",
+    "expected": "I can make lasagna for you... vodka..."
+  },
+  {
+    "id": "final-sms4385",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4385,
+    "kind": "public-word",
+    "typed": "No ned lar i go engin? Cos my sis at arts today...",
+    "expected": "No need lar i go engin? Cos my sis at arts today..."
+  },
+  {
+    "id": "final-sms3217",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3217,
+    "kind": "public-join",
+    "typed": "I want snow. It's just freezing andwindy.",
+    "expected": "I want snow. It's just freezing and windy."
+  },
+  {
+    "id": "final-sms4723",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4723,
+    "kind": "public-short",
+    "typed": "Yup. Anything lor, ig u dun wan it's ok...",
+    "expected": "Yup. Anything lor, if u dun wan it's ok..."
+  },
+  {
+    "id": "final-a051",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-punctuation",
+    "typed": "You wrote \"mint\" twice on my list!",
+    "expected": "You wrote \"mint\" twice on my list!"
+  },
+  {
+    "id": "final-sms5177",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5177,
+    "kind": "public-clean",
+    "typed": "Water logging in desert. Geoenvironmental implications.",
+    "expected": "Water logging in desert. Geoenvironmental implications."
+  },
+  {
+    "id": "final-sms4845",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4845,
+    "kind": "public-join",
+    "typed": "I need detailsabout that online job.",
+    "expected": "I need details about that online job."
+  },
+  {
+    "id": "final-a035",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-name",
+    "typed": "Ask Ren if Anouk still has the headlamp.",
+    "expected": "Ask Ren if Anouk still has the headlamp."
+  },
+  {
+    "id": "final-sms3807",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3807,
+    "kind": "public-word",
+    "typed": "Dude while were makin those weirdy brownies my sister mmade awesome cookies. I took pics.",
+    "expected": "Dude while were makin those weirdy brownies my sister made awesome cookies. I took pics."
+  },
+  {
+    "id": "final-sms4183",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4183,
+    "kind": "public-join",
+    "typed": "Ok da, i already planned. I wil pickyou.",
+    "expected": "Ok da, i already planned. I wil pick you."
+  },
+  {
+    "id": "final-sms3843",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3843,
+    "kind": "public-clean",
+    "typed": "Howz pain.it will come down today.do as i said ystrday.ice and medicine.",
+    "expected": "Howz pain.it will come down today.do as i said ystrday.ice and medicine."
+  },
+  {
+    "id": "final-sms2979",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2979,
+    "kind": "public-clean",
+    "typed": "Ok omw now, you at castor?",
+    "expected": "Ok omw now, you at castor?"
+  },
+  {
+    "id": "final-sms3817",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3817,
+    "kind": "public-word",
+    "typed": "Not yet chikku..k, then wat abt tht guy did he stoppd irritating or msging to u..",
+    "expected": "Not yet chikku..k, then wat abt tht guy did he stopped irritating or msging to u.."
+  },
+  {
+    "id": "final-sms2845",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2845,
+    "kind": "public-real-word",
+    "typed": "Tunji, how's the queen? how are you doing. This us just wishing you a great day. Abiola.",
+    "expected": "Tunji, how's the queen? how are you doing. This is just wishing you a great day. Abiola."
+  },
+  {
+    "id": "final-sms1914",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1914,
+    "kind": "public-clean",
+    "typed": "For real tho this sucks. I can't even cook my whole electricity is out. And I'm hungry.",
+    "expected": "For real tho this sucks. I can't even cook my whole electricity is out. And I'm hungry."
+  },
+  {
+    "id": "final-sms3368",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3368,
+    "kind": "public-multi",
+    "typed": "I am waiting fr our call sir.",
+    "expected": "I am waiting for your call sir."
+  },
+  {
+    "id": "final-a003",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "Woudl you mind cheking teh hinges before dinner?",
+    "expected": "Would you mind checking the hinges before dinner?"
+  },
+  {
+    "id": "final-sms2157",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2157,
+    "kind": "public-short",
+    "typed": "What year. And howw many miles.",
+    "expected": "What year. And how many miles."
+  },
+  {
+    "id": "final-sms3819",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3819,
+    "kind": "public-real-word",
+    "typed": "This us my number by vivek..",
+    "expected": "This is my number by vivek.."
+  },
+  {
+    "id": "final-sms5201",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5201,
+    "kind": "public-clean",
+    "typed": "She.s fine. I have had difficulties with her phone. It works with mine. Can you pls send her another friend request.",
+    "expected": "She.s fine. I have had difficulties with her phone. It works with mine. Can you pls send her another friend request."
+  },
+  {
+    "id": "final-sms3079",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3079,
+    "kind": "public-real-word",
+    "typed": "There us no sense in my foot and penis.",
+    "expected": "There is no sense in my foot and penis."
+  },
+  {
+    "id": "final-sms2715",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2715,
+    "kind": "public-clean",
+    "typed": "Nope i'm not drivin... I neva develop da photos lei...",
+    "expected": "Nope i'm not drivin... I neva develop da photos lei..."
+  },
+  {
+    "id": "final-sms4291",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4291,
+    "kind": "public-clean",
+    "typed": "Okay, good, no problem, and thanx!",
+    "expected": "Okay, good, no problem, and thanx!"
+  },
+  {
+    "id": "final-sms4196",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4196,
+    "kind": "public-clean",
+    "typed": "Can not use foreign stamps in this country.",
+    "expected": "Can not use foreign stamps in this country."
+  },
+  {
+    "id": "final-a024",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "He herd the front door close from upstairs.",
+    "expected": "He heard the front door close from upstairs."
+  },
+  {
+    "id": "final-sms2918",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2918,
+    "kind": "public-real-word",
+    "typed": "What time should I tell me friend to be around?",
+    "expected": "What time should I tell my friend to be around?"
+  },
+  {
+    "id": "final-sms0086",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 86,
+    "kind": "public-short",
+    "typed": "I call tou later, don't have network. If urgnt, sms me.",
+    "expected": "I call you later, don't have network. If urgnt, sms me."
+  },
+  {
+    "id": "final-sms1257",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1257,
+    "kind": "public-multi",
+    "typed": "Just wait till end of march when el nin gtes hiself. Oh.",
+    "expected": "Just wait till end of march when el nino gets himself. Oh."
+  },
+  {
+    "id": "final-sms2826",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2826,
+    "kind": "public-short",
+    "typed": "No need to buy lunch for me.. I eat maggi mwe..",
+    "expected": "No need to buy lunch for me.. I eat maggi mee.."
+  },
+  {
+    "id": "final-sms3245",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3245,
+    "kind": "public-clean",
+    "typed": "Pls accept me for one day. Or am begging you change the number.",
+    "expected": "Pls accept me for one day. Or am begging you change the number."
+  },
+  {
+    "id": "final-sms4310",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4310,
+    "kind": "public-multi",
+    "typed": "Ha ha - had popped doown to the loo whwn you hello-ed me. Hello!",
+    "expected": "Ha ha - had popped down to the loo when you hello-ed me. Hello!"
+  },
+  {
+    "id": "final-sms2433",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2433,
+    "kind": "public-clean",
+    "typed": "That's good. Lets thank God. Please complete the drug. Have lots of water. And have a beautiful day.",
+    "expected": "That's good. Lets thank God. Please complete the drug. Have lots of water. And have a beautiful day."
+  },
+  {
+    "id": "final-sms5396",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5396,
+    "kind": "public-word",
+    "typed": "All done, all handed in. Don't know if megaa shop in asda counts as celebration but thats what i'm doing!",
+    "expected": "All done, all handed in. Don't know if mega shop in asda counts as celebration but thats what i'm doing!"
+  },
+  {
+    "id": "final-sms2487",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2487,
+    "kind": "public-clean",
+    "typed": "Lol that's different. I don't go trying to find every real life photo you ever took.",
+    "expected": "Lol that's different. I don't go trying to find every real life photo you ever took."
+  },
+  {
+    "id": "final-sms4877",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4877,
+    "kind": "public-clean",
+    "typed": "I know dat feelin had it with Pete! Wuld get with em , nuther place nuther time mayb?",
+    "expected": "I know dat feelin had it with Pete! Wuld get with em , nuther place nuther time mayb?"
+  },
+  {
+    "id": "final-a037",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-name",
+    "typed": "Rafi named the vacuum Bloop last night.",
+    "expected": "Rafi named the vacuum Bloop last night."
+  },
+  {
+    "id": "final-sms2195",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2195,
+    "kind": "public-multi",
+    "typed": "I called but no oen pick up e phone. I ask both of them alreaady they said ok.",
+    "expected": "I called but no one pick up e phone. I ask both of them already they said ok."
+  },
+  {
+    "id": "final-sms3107",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3107,
+    "kind": "public-short",
+    "typed": "Or remind me iin a few hrs.",
+    "expected": "Or remind me in a few hrs."
+  },
+  {
+    "id": "final-sms1714",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1714,
+    "kind": "public-real-word",
+    "typed": "o turns out i had stereo love in mi phone under the unknown album.",
+    "expected": "o turns out i had stereo love on mi phone under the unknown album."
+  },
+  {
+    "id": "final-sms2539",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2539,
+    "kind": "public-join",
+    "typed": "That's y we haf to combine n c howlor...",
+    "expected": "That's y we haf to combine n c how lor..."
+  },
+  {
+    "id": "final-sms5014",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5014,
+    "kind": "public-word",
+    "typed": "U attend ur drriving lesson how many times a wk n which day?",
+    "expected": "U attend ur driving lesson how many times a wk n which day?"
+  },
+  {
+    "id": "final-sms1919",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1919,
+    "kind": "public-short",
+    "typed": "We not leaving yet. Ok lor then wee go elsewhere n eat. U thk...",
+    "expected": "We not leaving yet. Ok lor then we go elsewhere n eat. U thk..."
+  },
+  {
+    "id": "final-sms4262",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4262,
+    "kind": "public-real-word",
+    "typed": "Are you plans with tour family set in stone ?",
+    "expected": "Are you plans with your family set in stone ?"
+  },
+  {
+    "id": "final-sms1021",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1021,
+    "kind": "public-short",
+    "typed": "Don know..wait i will check iit.",
+    "expected": "Don know..wait i will check it."
+  },
+  {
+    "id": "final-sms1118",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1118,
+    "kind": "public-clean",
+    "typed": "Hey... What time is your driving on fri? We go for evaluation on fri?",
+    "expected": "Hey... What time is your driving on fri? We go for evaluation on fri?"
+  },
+  {
+    "id": "final-sms2427",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2427,
+    "kind": "public-clean",
+    "typed": "Hey!!! I almost forgot ... Happy B-day babe ! I love ya!!",
+    "expected": "Hey!!! I almost forgot ... Happy B-day babe ! I love ya!!"
+  },
+  {
+    "id": "final-sms2422",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2422,
+    "kind": "public-clean",
+    "typed": "Oic... Then better quickly go bathe n settle down...",
+    "expected": "Oic... Then better quickly go bathe n settle down..."
+  },
+  {
+    "id": "final-a048",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-real",
+    "typed": "We were almost out of flour when Jo called.",
+    "expected": "We were almost out of flour when Jo called."
+  },
+  {
+    "id": "final-sms3805",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3805,
+    "kind": "public-clean",
+    "typed": "Yup song bro. No creative. Neva test quality. He said check review online.",
+    "expected": "Yup song bro. No creative. Neva test quality. He said check review online."
+  },
+  {
+    "id": "final-sms1809",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1809,
+    "kind": "public-clean",
+    "typed": "Do have a nice day today. I love you so dearly.",
+    "expected": "Do have a nice day today. I love you so dearly."
+  },
+  {
+    "id": "final-sms4425",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4425,
+    "kind": "public-multi",
+    "typed": "alrigght. Thanks for the advice. Enjoy your night our. I'ma try to ger some sleep...",
+    "expected": "alright. Thanks for the advice. Enjoy your night out. I'ma try to get some sleep..."
+  },
+  {
+    "id": "final-sms2277",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2277,
+    "kind": "public-word",
+    "typed": "Is that on the tlely? No its Brdget Jones!",
+    "expected": "Is that on the telly? No its Brdget Jones!"
+  },
+  {
+    "id": "final-sms2737",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2737,
+    "kind": "public-clean",
+    "typed": "I meant middle left or right?",
+    "expected": "I meant middle left or right?"
+  },
+  {
+    "id": "final-sms0047",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 47,
+    "kind": "public-clean",
+    "typed": "Didn't you get hep b immunisation in nigeria.",
+    "expected": "Didn't you get hep b immunisation in nigeria."
+  },
+  {
+    "id": "final-sms3961",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3961,
+    "kind": "public-real-word",
+    "typed": "Have a nice day me dear.",
+    "expected": "Have a nice day my dear."
+  },
+  {
+    "id": "final-sms5248",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5248,
+    "kind": "public-multi",
+    "typed": "Thank yu princess! I want to see oyur nice juicy booty...",
+    "expected": "Thank you princess! I want to see your nice juicy booty..."
+  },
+  {
+    "id": "final-sms1032",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1032,
+    "kind": "public-clean",
+    "typed": "Can not use foreign stamps in this country. Good lecture .",
+    "expected": "Can not use foreign stamps in this country. Good lecture ."
+  },
+  {
+    "id": "final-sms1017",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1017,
+    "kind": "public-multi",
+    "typed": "Dear,regret i cuddnt pick call.drove down frm ctla now at cochin home.left mobile in car..enre style ishtamayoo?happy bakrid!",
+    "expected": "Dear,regret i cudnt pick call.drove down frm ctla now at cochin home.left mobile in car..ente style ishtamayoo?happy bakrid!"
+  },
+  {
+    "id": "final-sms2082",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2082,
+    "kind": "public-real-word",
+    "typed": "Where us it. Is there any opening for mca.",
+    "expected": "Where is it. Is there any opening for mca."
+  },
+  {
+    "id": "final-sms1936",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1936,
+    "kind": "public-clean",
+    "typed": "Hope you are having a great day.",
+    "expected": "Hope you are having a great day."
+  },
+  {
+    "id": "final-a010",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "Wehre did the tin of materess patches end pu?",
+    "expected": "Where did the tin of mattress patches end up?"
+  },
+  {
+    "id": "final-sms0444",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 444,
+    "kind": "public-multi",
+    "typed": "Oic... I saw him too ut i tot he ddin c me... I found a group liao...",
+    "expected": "Oic... I saw him too but i tot he din c me... I found a group liao..."
+  },
+  {
+    "id": "final-sms4429",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4429,
+    "kind": "public-short",
+    "typed": "So what idd the bank say about the money?",
+    "expected": "So what did the bank say about the money?"
+  },
+  {
+    "id": "final-sms0650",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 650,
+    "kind": "public-word",
+    "typed": "No prob. I will send to your eail.",
+    "expected": "No prob. I will send to your email."
+  },
+  {
+    "id": "final-sms0259",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 259,
+    "kind": "public-multi",
+    "typed": "Where arre you lover ? I ned yoou ...",
+    "expected": "Where are you lover ? I need you ..."
+  },
+  {
+    "id": "final-sms3930",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3930,
+    "kind": "public-multi",
+    "typed": "Babe ? I lost you ... Will tou tru rebooting ?",
+    "expected": "Babe ? I lost you ... Will you try rebooting ?"
+  },
+  {
+    "id": "final-sms0522",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 522,
+    "kind": "public-clean",
+    "typed": "But that's on ebay it might be less elsewhere.",
+    "expected": "But that's on ebay it might be less elsewhere."
+  },
+  {
+    "id": "final-sms2132",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2132,
+    "kind": "public-clean",
+    "typed": "Later i guess. I needa do mcat study too.",
+    "expected": "Later i guess. I needa do mcat study too."
+  },
+  {
+    "id": "final-sms1952",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1952,
+    "kind": "public-join",
+    "typed": "Ohic. I thought you meant mary jane.",
+    "expected": "Oh ic. I thought you meant mary jane."
+  },
+  {
+    "id": "final-sms4893",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4893,
+    "kind": "public-clean",
+    "typed": "Its worse if if uses half way then stops. Its better for him to complete it.",
+    "expected": "Its worse if if uses half way then stops. Its better for him to complete it."
+  },
+  {
+    "id": "final-sms2890",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2890,
+    "kind": "public-join",
+    "typed": "I take it we didn't have the phone callon Friday. Can we assume wewon't have it this year now?",
+    "expected": "I take it we didn't have the phone callon Friday. Can we assume we won't have it this year now?"
+  },
+  {
+    "id": "final-sms3797",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3797,
+    "kind": "public-clean",
+    "typed": "Also remember the beads don't come off. Ever.",
+    "expected": "Also remember the beads don't come off. Ever."
+  },
+  {
+    "id": "final-a006",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "Did we odrer the extra pilows four the guest bed?",
+    "expected": "Did we order the extra pillows for the guest bed?"
+  },
+  {
+    "id": "final-sms3566",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3566,
+    "kind": "public-real-word",
+    "typed": "Do you always celebrate NY's wish your family ?",
+    "expected": "Do you always celebrate NY's with your family ?"
+  },
+  {
+    "id": "final-sms3120",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3120,
+    "kind": "public-multi",
+    "typed": "R u sayinng i sshould re order the slippers cos i had to pay for returning it.",
+    "expected": "R u saying i should re order the slippers cos i had to pay for returning it."
+  },
+  {
+    "id": "final-sms3515",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3515,
+    "kind": "public-real-word",
+    "typed": "Staff if placement training in Amrita college.",
+    "expected": "Staff of placement training in Amrita college."
+  },
+  {
+    "id": "final-sms1824",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1824,
+    "kind": "public-clean",
+    "typed": "If you're thinking of lifting me one then no.",
+    "expected": "If you're thinking of lifting me one then no."
+  },
+  {
+    "id": "final-sms4586",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4586,
+    "kind": "public-join",
+    "typed": "Noooooooo please. Last thing I need is stress. For once in your life befair.",
+    "expected": "Noooooooo please. Last thing I need is stress. For once in your life be fair."
+  },
+  {
+    "id": "final-sms2683",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2683,
+    "kind": "public-word",
+    "typed": "I'm on da bus oging home...",
+    "expected": "I'm on da bus going home..."
+  },
+  {
+    "id": "final-sms0740",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 740,
+    "kind": "public-clean",
+    "typed": "Wish i were with you now!",
+    "expected": "Wish i were with you now!"
+  },
+  {
+    "id": "final-sms3432",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3432,
+    "kind": "public-word",
+    "typed": "You've alwaus been the brainy one.",
+    "expected": "You've always been the brainy one."
+  },
+  {
+    "id": "final-sms4872",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4872,
+    "kind": "public-join",
+    "typed": "Dip's cell dead. So i m coming with him. U better respondelse we shall come back.",
+    "expected": "Dip's cell dead. So i m coming with him. U better respond else we shall come back."
+  },
+  {
+    "id": "final-sms2168",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2168,
+    "kind": "public-word",
+    "typed": "Thank you. And by the way, I jut lost.",
+    "expected": "Thank you. And by the way, I just lost."
+  },
+  {
+    "id": "final-sms2320",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2320,
+    "kind": "public-multi",
+    "typed": "On thhe wsy to offuce da..",
+    "expected": "On the way to office da.."
+  },
+  {
+    "id": "final-sms2139",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2139,
+    "kind": "public-word",
+    "typed": "Then why you came to gostel.",
+    "expected": "Then why you came to hostel."
+  },
+  {
+    "id": "final-sms3695",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3695,
+    "kind": "public-clean",
+    "typed": "I was about to do it when i texted. I finished a long time ago and showered and er'ything!",
+    "expected": "I was about to do it when i texted. I finished a long time ago and showered and er'ything!"
+  },
+  {
+    "id": "final-sms3673",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3673,
+    "kind": "public-join",
+    "typed": "Yup. Thk of u oso boringwat.",
+    "expected": "Yup. Thk of u oso boring wat."
+  },
+  {
+    "id": "final-sms0007",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 7,
+    "kind": "public-word",
+    "typed": "Even my brother is not like to speak withh me. They treat me like aids patent.",
+    "expected": "Even my brother is not like to speak with me. They treat me like aids patent."
+  },
+  {
+    "id": "final-sms1078",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1078,
+    "kind": "public-clean",
+    "typed": "Where can download clear movies. Dvd copies.",
+    "expected": "Where can download clear movies. Dvd copies."
+  },
+  {
+    "id": "final-sms0997",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 997,
+    "kind": "public-join",
+    "typed": "Change again... It's e one nextto escalator...",
+    "expected": "Change again... It's e one next to escalator..."
+  },
+  {
+    "id": "final-a029",
+    "split": "final",
+    "source": "authored",
+    "kind": "punctuation",
+    "typed": "I havent seen the delivery van all afternoon.",
+    "expected": "I haven't seen the delivery van all afternoon."
+  },
+  {
+    "id": "final-sms3720",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3720,
+    "kind": "public-clean",
+    "typed": "Cool. Do you like swimming? I have a pool and jacuzzi at my house.",
+    "expected": "Cool. Do you like swimming? I have a pool and jacuzzi at my house."
+  },
+  {
+    "id": "final-sms2801",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2801,
+    "kind": "public-clean",
+    "typed": "I've told him that i've returned it. That should i re order it.",
+    "expected": "I've told him that i've returned it. That should i re order it."
+  },
+  {
+    "id": "final-a022",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "I want to lend the spare room to my ant next month.",
+    "expected": "I want to lend the spare room to my aunt next month."
+  },
+  {
+    "id": "final-sms5316",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5316,
+    "kind": "public-clean",
+    "typed": "My sister going to earn more than me da.",
+    "expected": "My sister going to earn more than me da."
+  },
+  {
+    "id": "final-sms2216",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2216,
+    "kind": "public-join",
+    "typed": "Ok then i'll let him noe latern ask him call u tmr...",
+    "expected": "Ok then i'll let him noe later n ask him call u tmr..."
+  },
+  {
+    "id": "final-a017",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "Let me know of your workshop ends early.",
+    "expected": "Let me know if your workshop ends early."
+  },
+  {
+    "id": "final-sms3379",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3379,
+    "kind": "public-clean",
+    "typed": "Yup. Wun believe wat? U really neva c e msg i sent shuhui?",
+    "expected": "Yup. Wun believe wat? U really neva c e msg i sent shuhui?"
+  },
+  {
+    "id": "final-sms3374",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3374,
+    "kind": "public-real-word",
+    "typed": "And not electricity just went out fml.",
+    "expected": "And now electricity just went out fml."
+  },
+  {
+    "id": "final-sms4052",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4052,
+    "kind": "public-clean",
+    "typed": "Ok ok take care. I can understand.",
+    "expected": "Ok ok take care. I can understand."
+  },
+  {
+    "id": "final-a001",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "I thnik your walelt fell behidn the radiator.",
+    "expected": "I think your wallet fell behind the radiator."
+  },
+  {
+    "id": "final-sms0065",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 65,
+    "kind": "public-multi",
+    "typed": "Ok lar i doubble check wif da hair dresser allready he said wun cut v short. He said will cut until i look nice.",
+    "expected": "Ok lar i double check wif da hair dresser already he said wun cut v short. He said will cut until i look nice."
+  },
+  {
+    "id": "final-sms3963",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3963,
+    "kind": "public-clean",
+    "typed": "Your dad is back in ph?",
+    "expected": "Your dad is back in ph?"
+  },
+  {
+    "id": "final-a020",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "The whole choir us waiting at the side entrance.",
+    "expected": "The whole choir is waiting at the side entrance."
+  },
+  {
+    "id": "final-sms3608",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3608,
+    "kind": "public-short",
+    "typed": "That means you got an A inn epi, she.s fine. She.s here now.",
+    "expected": "That means you got an A in epi, she.s fine. She.s here now."
+  },
+  {
+    "id": "final-sms5207",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5207,
+    "kind": "public-multi",
+    "typed": "How come she cam get it? Should b quite diff to guesd rite...",
+    "expected": "How come she can get it? Should b quite diff to guess rite..."
+  },
+  {
+    "id": "final-sms0625",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 625,
+    "kind": "public-multi",
+    "typed": "soryr, no, have got few things to do. may be in pub lster.",
+    "expected": "sorry, no, have got few things to do. may be in pub later."
+  },
+  {
+    "id": "final-sms0149",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 149,
+    "kind": "public-word",
+    "typed": "Ummma.will call after check in.our life will begin from qatar so pls pray very hardd.",
+    "expected": "Ummma.will call after check in.our life will begin from qatar so pls pray very hard."
+  },
+  {
+    "id": "final-sms1879",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1879,
+    "kind": "public-multi",
+    "typed": "This pen thing is beyond a jke. Wont a Biro do? Don't do a masters as can't do this evre again!",
+    "expected": "This pen thing is beyond a joke. Wont a Biro do? Don't do a masters as can't do this ever again!"
+  },
+  {
+    "id": "final-a005",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "Dara foudn my glasses nest ot the laundry basket.",
+    "expected": "Dara found my glasses next to the laundry basket."
+  },
+  {
+    "id": "final-sms1224",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1224,
+    "kind": "public-join",
+    "typed": "Teach meapps da. When you come to college.",
+    "expected": "Teach me apps da. When you come to college."
+  },
+  {
+    "id": "final-sms3136",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3136,
+    "kind": "public-short",
+    "typed": "Ok going to sleep. Hope i cn meet her.",
+    "expected": "Ok going to sleep. Hope i can meet her."
+  },
+  {
+    "id": "final-sms0270",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 270,
+    "kind": "public-word",
+    "typed": "The evo. I jut had to download flash. Jealous?",
+    "expected": "The evo. I just had to download flash. Jealous?"
+  },
+  {
+    "id": "final-a034",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-name",
+    "typed": "Maeve made focaccia with Za'atar on top.",
+    "expected": "Maeve made focaccia with Za'atar on top."
+  },
+  {
+    "id": "final-a009",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "Bring a cuople of lemnos fi you pass the market.",
+    "expected": "Bring a couple of lemons if you pass the market."
+  },
+  {
+    "id": "final-sms4271",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4271,
+    "kind": "public-multi",
+    "typed": "Beauty sleep can help ur pimmples toi.",
+    "expected": "Beauty sleep can help ur pimples too."
+  },
+  {
+    "id": "final-a040",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-slang",
+    "typed": "yep lemme finish this bowl and I'll head over",
+    "expected": "yep lemme finish this bowl and I'll head over"
+  },
+  {
+    "id": "final-sms1829",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1829,
+    "kind": "public-multi",
+    "typed": "Hey gorfeous man. My work mobile nymber is. Have a food one babe. Squishy Mwahs.",
+    "expected": "Hey gorgeous man. My work mobile number is. Have a good one babe. Squishy Mwahs."
+  },
+  {
+    "id": "final-sms3744",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3744,
+    "kind": "public-real-word",
+    "typed": "Hey i'm bored... So i'm thinking if u... So wat r u doing?",
+    "expected": "Hey i'm bored... So i'm thinking of u... So wat r u doing?"
+  },
+  {
+    "id": "final-sms3628",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3628,
+    "kind": "public-real-word",
+    "typed": "Yeah right! I'll bring me tape measure fri!",
+    "expected": "Yeah right! I'll bring my tape measure fri!"
+  },
+  {
+    "id": "final-sms3050",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3050,
+    "kind": "public-multi",
+    "typed": "Die... Now i hav e toot fringge agaain...",
+    "expected": "Die... Now i have e toot fringe again..."
+  },
+  {
+    "id": "final-sms2725",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2725,
+    "kind": "public-clean",
+    "typed": "Tunde, how are you doing. This is just wishing you a great day. Abiola.",
+    "expected": "Tunde, how are you doing. This is just wishing you a great day. Abiola."
+  },
+  {
+    "id": "final-a046",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-real",
+    "typed": "Sit by me if the dog wants to be near us.",
+    "expected": "Sit by me if the dog wants to be near us."
+  },
+  {
+    "id": "final-sms4633",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4633,
+    "kind": "public-multi",
+    "typed": "Got hella gas momey, want to go on a grand nature adventure ith galleo in a little bit?",
+    "expected": "Got hella gas money, want to go on a grand nature adventure with galileo in a little bit?"
+  },
+  {
+    "id": "final-sms2521",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2521,
+    "kind": "public-multi",
+    "typed": "Ok. I only ask abt e mmovie. U wan ktvv oso?",
+    "expected": "Ok. I only ask abt e movie. U wan ktv oso?"
+  },
+  {
+    "id": "final-sms3987",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3987,
+    "kind": "public-clean",
+    "typed": "Whatever, juliana. Do whatever you want.",
+    "expected": "Whatever, juliana. Do whatever you want."
+  },
+  {
+    "id": "final-sms3262",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3262,
+    "kind": "public-multi",
+    "typed": "I'm alwayss lokoing for an excuse to be in thr city.",
+    "expected": "I'm always looking for an excuse to be in the city."
+  },
+  {
+    "id": "final-a050",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-punctuation",
+    "typed": "Who's bringing the rolls, and who's bringing jam?",
+    "expected": "Who's bringing the rolls, and who's bringing jam?"
+  },
+  {
+    "id": "final-sms5273",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5273,
+    "kind": "public-clean",
+    "typed": "Did u fix the teeth?if not do it asap.ok take care.",
+    "expected": "Did u fix the teeth?if not do it asap.ok take care."
+  },
+  {
+    "id": "final-sms3174",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3174,
+    "kind": "public-short",
+    "typed": "Do u still have plumbers tape and a wrench ew could borrow?",
+    "expected": "Do u still have plumbers tape and a wrench we could borrow?"
+  },
+  {
+    "id": "final-sms4111",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4111,
+    "kind": "public-clean",
+    "typed": "I want to lick your pussy now...",
+    "expected": "I want to lick your pussy now..."
+  },
+  {
+    "id": "final-sms3322",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3322,
+    "kind": "public-multi",
+    "typed": "Eh sorry leh... I din c ur msg. Not ssd already lar. Me wathcing tv now. U still in office?",
+    "expected": "Eh sorry leh... I din c ur msg. Not sad already lar. Me watching tv now. U still in office?"
+  },
+  {
+    "id": "final-sms4096",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4096,
+    "kind": "public-word",
+    "typed": "how are you? I mss you!",
+    "expected": "how are you? I miss you!"
+  },
+  {
+    "id": "final-sms1489",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1489,
+    "kind": "public-clean",
+    "typed": "I told your number to gautham..",
+    "expected": "I told your number to gautham.."
+  },
+  {
+    "id": "final-sms2836",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2836,
+    "kind": "public-word",
+    "typed": "U sock still can go shopping?",
+    "expected": "U sick still can go shopping?"
+  },
+  {
+    "id": "final-sms2001",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2001,
+    "kind": "public-apostrophe",
+    "typed": "LMAO wheres your fish memory when I need it?",
+    "expected": "LMAO where's your fish memory when I need it?"
+  },
+  {
+    "id": "final-a042",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-slang",
+    "typed": "oof the porch light just went out again",
+    "expected": "oof the porch light just went out again"
+  },
+  {
+    "id": "final-sms5169",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5169,
+    "kind": "public-word",
+    "typed": "Y she dun believe leh? I tot i told her it's true alreasy. I thk she muz c us tog then she believe.",
+    "expected": "Y she dun believe leh? I tot i told her it's true already. I thk she muz c us tog then she believe."
+  },
+  {
+    "id": "final-sms1549",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1549,
+    "kind": "public-word",
+    "typed": "Bishan lar nearrr... No need buy so early cos if buy now i gotta park my car...",
+    "expected": "Bishan lar nearer... No need buy so early cos if buy now i gotta park my car..."
+  },
+  {
+    "id": "final-sms1807",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1807,
+    "kind": "public-word",
+    "typed": "God bless.get good sleepp my dear...i will pray!",
+    "expected": "God bless.get good sleep my dear...i will pray!"
+  },
+  {
+    "id": "final-sms1651",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1651,
+    "kind": "public-clean",
+    "typed": "ITS A LAPTOP TAKE IT WITH YOU.",
+    "expected": "ITS A LAPTOP TAKE IT WITH YOU."
+  },
+  {
+    "id": "final-a033",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-name",
+    "typed": "Zuri thinks Bo should name the kitten Fig.",
+    "expected": "Zuri thinks Bo should name the kitten Fig."
+  },
+  {
+    "id": "final-sms0150",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 150,
+    "kind": "public-word",
+    "typed": "K..i deleted my contact tthat why?",
+    "expected": "K..i deleted my contact that why?"
+  },
+  {
+    "id": "final-sms3413",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3413,
+    "kind": "public-word",
+    "typed": "Only once then after ill obbey all yours.",
+    "expected": "Only once then after ill obey all yours."
+  },
+  {
+    "id": "final-sms3333",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3333,
+    "kind": "public-word",
+    "typed": "How much it will cst approx . Per month.",
+    "expected": "How much it will cost approx . Per month."
+  },
+  {
+    "id": "final-sms1846",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1846,
+    "kind": "public-multi",
+    "typed": "Da is good good playyer.wy he is unsold.",
+    "expected": "Da is good good player.why he is unsold."
+  },
+  {
+    "id": "final-sms5238",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5238,
+    "kind": "public-real-word",
+    "typed": "Am on the uworld site. Am i buying the qbank only or am i buying it wish the self assessment also?",
+    "expected": "Am on the uworld site. Am i buying the qbank only or am i buying it with the self assessment also?"
+  },
+  {
+    "id": "final-sms2663",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2663,
+    "kind": "public-clean",
+    "typed": "Do you know when dad will be back?",
+    "expected": "Do you know when dad will be back?"
+  },
+  {
+    "id": "final-sms1777",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1777,
+    "kind": "public-multi",
+    "typed": "Did u aee what I posted on yourr Facebook?",
+    "expected": "Did u see what I posted on your Facebook?"
+  },
+  {
+    "id": "final-sms2415",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2415,
+    "kind": "public-real-word",
+    "typed": "Lol please do. Actually send a pic of yourself right not. I wanna see. Pose with a comb and hair dryer or something.",
+    "expected": "Lol please do. Actually send a pic of yourself right now. I wanna see. Pose with a comb and hair dryer or something."
+  },
+  {
+    "id": "final-sms4431",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4431,
+    "kind": "public-multi",
+    "typed": "Hey yhey r ont watching movie tonight so i'll prob b home eary...",
+    "expected": "Hey they r not watching movie tonight so i'll prob b home early..."
+  },
+  {
+    "id": "final-sms0441",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 441,
+    "kind": "public-short",
+    "typed": "But i have to. I like to have love nad arrange.",
+    "expected": "But i have to. I like to have love and arrange."
+  },
+  {
+    "id": "final-sms3025",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3025,
+    "kind": "public-multi",
+    "typed": "You are a very very bery very bad girl. Or ady.",
+    "expected": "You are a very very very very bad girl. Or lady."
+  },
+  {
+    "id": "final-sms2142",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2142,
+    "kind": "public-join",
+    "typed": "Afterthe drug she will be able to eat.",
+    "expected": "After the drug she will be able to eat."
+  },
+  {
+    "id": "final-sms5397",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5397,
+    "kind": "public-clean",
+    "typed": "I dont know exactly could you ask chechi.",
+    "expected": "I dont know exactly could you ask chechi."
+  },
+  {
+    "id": "final-sms0447",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 447,
+    "kind": "public-clean",
+    "typed": "Sorry, my battery died, I can come by but I'm only getting a gram for now, where's your place?",
+    "expected": "Sorry, my battery died, I can come by but I'm only getting a gram for now, where's your place?"
+  },
+  {
+    "id": "final-a021",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "Please sing the card before you seal it.",
+    "expected": "Please sign the card before you seal it."
+  },
+  {
+    "id": "final-sms5421",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5421,
+    "kind": "public-word",
+    "typed": "So how are you really. What are you up to. How's the maters. And so on.",
+    "expected": "So how are you really. What are you up to. How's the masters. And so on."
+  },
+  {
+    "id": "final-sms1387",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1387,
+    "kind": "public-join",
+    "typed": "That's ok. I popped in toask bout something and she said you'd been in. Are you around tonght wen this girl comes?",
+    "expected": "That's ok. I popped in to ask bout something and she said you'd been in. Are you around tonght wen this girl comes?"
+  },
+  {
+    "id": "final-sms5457",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5457,
+    "kind": "public-clean",
+    "typed": "Im just wondering what your doing right now?",
+    "expected": "Im just wondering what your doing right now?"
+  },
+  {
+    "id": "final-a036",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-name",
+    "typed": "Bea and Fen are biking down from Red Hook.",
+    "expected": "Bea and Fen are biking down from Red Hook."
+  },
+  {
+    "id": "final-sms1825",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1825,
+    "kind": "public-multi",
+    "typed": "Same as u... Dun wan... Y u dun lkie me alread ah... Wat u doing mow? Still eating?",
+    "expected": "Same as u... Dun wan... Y u dun like me already ah... Wat u doing now? Still eating?"
+  },
+  {
+    "id": "final-sms2489",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2489,
+    "kind": "public-clean",
+    "typed": "K ill drink.pa then what doing. I need srs model pls send it to my mail id pa.",
+    "expected": "K ill drink.pa then what doing. I need srs model pls send it to my mail id pa."
+  },
+  {
+    "id": "final-sms3449",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3449,
+    "kind": "public-clean",
+    "typed": "Sitting ard nothing to do lor. U leh busy w work?",
+    "expected": "Sitting ard nothing to do lor. U leh busy w work?"
+  },
+  {
+    "id": "final-sms5060",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5060,
+    "kind": "public-multi",
+    "typed": "Geeeee ... Your nternet is reallly bad today, eh ?",
+    "expected": "Geeeee ... Your internet is really bad today, eh ?"
+  },
+  {
+    "id": "final-sms1013",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1013,
+    "kind": "public-clean",
+    "typed": "I just got home babe, are you still awake ?",
+    "expected": "I just got home babe, are you still awake ?"
+  },
+  {
+    "id": "final-sms2711",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2711,
+    "kind": "public-short",
+    "typed": "Sorry de i went yo shop.",
+    "expected": "Sorry de i went to shop."
+  },
+  {
+    "id": "final-sms2332",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2332,
+    "kind": "public-clean",
+    "typed": "Long beach lor. Expected... U having dinner now?",
+    "expected": "Long beach lor. Expected... U having dinner now?"
+  },
+  {
+    "id": "final-a047",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-real",
+    "typed": "I heard the herd coming down the lane.",
+    "expected": "I heard the herd coming down the lane."
+  },
+  {
+    "id": "final-sms3558",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3558,
+    "kind": "public-join",
+    "typed": "Ok lor. I'm in townnow lei.",
+    "expected": "Ok lor. I'm in town now lei."
+  },
+  {
+    "id": "final-a004",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "I pakced the pie inthe tin with the lopsdied lid.",
+    "expected": "I packed the pie in the tin with the lopsided lid."
+  },
+  {
+    "id": "final-sms0414",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 414,
+    "kind": "public-multi",
+    "typed": "Okies... I'll go yan jiu too... We can sskip ard oso, go cine den go mrt one, blaj blah blha...",
+    "expected": "Okies... I'll go yan jiu too... We can skip ard oso, go cine den go mrt one, blah blah blah..."
+  },
+  {
+    "id": "final-sms4608",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4608,
+    "kind": "public-join",
+    "typed": "Oh... Haha... Den we shld had went today too... Gee, nvmla... Kaiez, i dun mind goin jazz oso... Scared hiphop open cant catch up...",
+    "expected": "Oh... Haha... Den we shld had went today too... Gee, nvm la... Kaiez, i dun mind goin jazz oso... Scared hiphop open cant catch up..."
+  },
+  {
+    "id": "final-sms4369",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4369,
+    "kind": "public-short",
+    "typed": "I like dis sweater fr mango but bo more my size already so irritating.",
+    "expected": "I like dis sweater fr mango but no more my size already so irritating."
+  },
+  {
+    "id": "final-sms0844",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 844,
+    "kind": "public-multi",
+    "typed": "Our Prashanthettan's mohter passed away last night. praay for her and family.",
+    "expected": "Our Prashanthettan's mother passed away last night. pray for her and family."
+  },
+  {
+    "id": "final-sms1480",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1480,
+    "kind": "public-short",
+    "typed": "I think its far more than that byt find out. Check google maps for a place from your dorm.",
+    "expected": "I think its far more than that but find out. Check google maps for a place from your dorm."
+  },
+  {
+    "id": "final-sms1156",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1156,
+    "kind": "public-real-word",
+    "typed": "Did u find a sitter four kaitlyn? I was sick and slept all day yesterday.",
+    "expected": "Did u find a sitter for kaitlyn? I was sick and slept all day yesterday."
+  },
+  {
+    "id": "final-sms3055",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3055,
+    "kind": "public-word",
+    "typed": "Pls sed me the correct name da.",
+    "expected": "Pls send me the correct name da."
+  },
+  {
+    "id": "final-sms0508",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 508,
+    "kind": "public-real-word",
+    "typed": "Maybe westshore or hyde park village, the place near me house?",
+    "expected": "Maybe westshore or hyde park village, the place near my house?"
+  },
+  {
+    "id": "final-sms3366",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3366,
+    "kind": "public-clean",
+    "typed": "Yo my trip got postponed, you still stocked up?",
+    "expected": "Yo my trip got postponed, you still stocked up?"
+  },
+  {
+    "id": "final-sms0450",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 450,
+    "kind": "public-multi",
+    "typed": "LOL ... Have ou nade plans for new years?",
+    "expected": "LOL ... Have you made plans for new years?"
+  },
+  {
+    "id": "final-sms1306",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1306,
+    "kind": "public-multi",
+    "typed": "Your righr! I'll make the appointment right no.",
+    "expected": "Your right! I'll make the appointment right now."
+  },
+  {
+    "id": "final-a008",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "The black pot is hevaier thna it lokos.",
+    "expected": "The black pot is heavier than it looks."
+  },
+  {
+    "id": "final-sms5279",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5279,
+    "kind": "public-word",
+    "typed": "Dunno leh cant remember mayb lor. So wat time r we meering tmr?",
+    "expected": "Dunno leh cant remember mayb lor. So wat time r we meeting tmr?"
+  },
+  {
+    "id": "final-a016",
+    "split": "final",
+    "source": "authored",
+    "kind": "short",
+    "typed": "Scoot ov so Lina can reach the window.",
+    "expected": "Scoot up so Lina can reach the window."
+  },
+  {
+    "id": "final-sms0772",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 772,
+    "kind": "public-real-word",
+    "typed": "Not getting anywhere wish this damn job hunting over here!",
+    "expected": "Not getting anywhere with this damn job hunting over here!"
+  },
+  {
+    "id": "final-sms4407",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4407,
+    "kind": "public-clean",
+    "typed": "Dun need to use dial up juz open da browser n surf...",
+    "expected": "Dun need to use dial up juz open da browser n surf..."
+  },
+  {
+    "id": "final-sms4632",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4632,
+    "kind": "public-short",
+    "typed": "Everybody hda fun this evening. Miss you.",
+    "expected": "Everybody had fun this evening. Miss you."
+  },
+  {
+    "id": "final-sms2649",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2649,
+    "kind": "public-word",
+    "typed": "It,,s a tat massage....tie-pos argh ok! Lool!",
+    "expected": "It,,s a taxt massage....tie-pos argh ok! Lool!"
+  },
+  {
+    "id": "final-sms2457",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2457,
+    "kind": "public-clean",
+    "typed": "Abeg, make profit. But its a start. Are you using it to get sponsors for the next event?",
+    "expected": "Abeg, make profit. But its a start. Are you using it to get sponsors for the next event?"
+  },
+  {
+    "id": "final-sms2105",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2105,
+    "kind": "public-multi",
+    "typed": "Its a sitte to simualte the test. It just gives you veyr tough questions to test your readiness.",
+    "expected": "Its a site to simulate the test. It just gives you very tough questions to test your readiness."
+  },
+  {
+    "id": "final-sms0525",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 525,
+    "kind": "public-real-word",
+    "typed": "That's very rude, you in campus?",
+    "expected": "That's very rude, you on campus?"
+  },
+  {
+    "id": "final-a012",
+    "split": "final",
+    "source": "authored",
+    "kind": "short",
+    "typed": "Meet me st the gate with the tiny brass owl.",
+    "expected": "Meet me at the gate with the tiny brass owl."
+  },
+  {
+    "id": "final-a030",
+    "split": "final",
+    "source": "authored",
+    "kind": "punctuation",
+    "typed": "Thats not where Milos scooter usually goes.",
+    "expected": "That's not where Milo's scooter usually goes."
+  },
+  {
+    "id": "final-sms4033",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4033,
+    "kind": "public-word",
+    "typed": "Sorry vikjy, i'm Watching olave mandara movie kano in trishul theatre wit my frnds..",
+    "expected": "Sorry vikky, i'm Watching olave mandara movie kano in trishul theatre wit my frnds.."
+  },
+  {
+    "id": "final-sms3939",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3939,
+    "kind": "public-clean",
+    "typed": "Yeah, in fact he just asked if we needed anything like an hour ago. When and how much?",
+    "expected": "Yeah, in fact he just asked if we needed anything like an hour ago. When and how much?"
+  },
+  {
+    "id": "final-sms0342",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 342,
+    "kind": "public-clean",
+    "typed": "Ok that's great thanx a lot.",
+    "expected": "Ok that's great thanx a lot."
+  },
+  {
+    "id": "final-a043",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-real",
+    "typed": "Aunt June said an ant was crawling on her pie.",
+    "expected": "Aunt June said an ant was crawling on her pie."
+  },
+  {
+    "id": "final-sms1758",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1758,
+    "kind": "public-join",
+    "typed": "Lmao ok I wontbe needing u to do my hair anymore.",
+    "expected": "Lmao ok I wont be needing u to do my hair anymore."
+  },
+  {
+    "id": "final-sms1490",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1490,
+    "kind": "public-clean",
+    "typed": "Tell them no need to investigate about me anywhere.",
+    "expected": "Tell them no need to investigate about me anywhere."
+  },
+  {
+    "id": "final-sms1832",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1832,
+    "kind": "public-clean",
+    "typed": "That's the way you should stay oh.",
+    "expected": "That's the way you should stay oh."
+  },
+  {
+    "id": "final-sms5386",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5386,
+    "kind": "public-multi",
+    "typed": "Good day to You too.Pray for me.Remove the teeth as ist painful maintainng other stuff.",
+    "expected": "Good day to You too.Pray for me.Remove the teeth as its painful maintaining other stuff."
+  },
+  {
+    "id": "final-sms5323",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5323,
+    "kind": "public-clean",
+    "typed": "But we havent got da topic yet rite?",
+    "expected": "But we havent got da topic yet rite?"
+  },
+  {
+    "id": "final-sms3813",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3813,
+    "kind": "public-word",
+    "typed": "Excellent! Wish we were togethet right now!",
+    "expected": "Excellent! Wish we were together right now!"
+  },
+  {
+    "id": "final-sms5477",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5477,
+    "kind": "public-short",
+    "typed": "Where's mummy's boy ? Is he being good or bbad ? Is he being positive or negative ? Why is mummy being made to wait? Hmmmm?",
+    "expected": "Where's mummy's boy ? Is he being good or bad ? Is he being positive or negative ? Why is mummy being made to wait? Hmmmm?"
+  },
+  {
+    "id": "final-sms4721",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4721,
+    "kind": "public-real-word",
+    "typed": "Aiyo... Her lesson so early... I'm still sleepin, haha... Okie, u go hope liao den confirm w me lor...",
+    "expected": "Aiyo... Her lesson so early... I'm still sleepin, haha... Okie, u go home liao den confirm w me lor..."
+  },
+  {
+    "id": "final-sms2962",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2962,
+    "kind": "public-short",
+    "typed": "Sir send tto group mail check it.",
+    "expected": "Sir send to group mail check it."
+  },
+  {
+    "id": "final-sms2031",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2031,
+    "kind": "public-clean",
+    "typed": "Thanx but my birthday is over already.",
+    "expected": "Thanx but my birthday is over already."
+  },
+  {
+    "id": "final-sms3889",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3889,
+    "kind": "public-multi",
+    "typed": "Cab is available.htey pick up and drop at ddoor steps.",
+    "expected": "Cab is available.they pick up and drop at door steps."
+  },
+  {
+    "id": "final-sms0367",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 367,
+    "kind": "public-clean",
+    "typed": "Well i know Z will take care of me. So no worries.",
+    "expected": "Well i know Z will take care of me. So no worries."
+  },
+  {
+    "id": "final-a007",
+    "split": "final",
+    "source": "authored",
+    "kind": "multi",
+    "typed": "My headphnes are ud onthe shelf above the towels.",
+    "expected": "My headphones are up on the shelf above the towels."
+  },
+  {
+    "id": "final-sms1535",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1535,
+    "kind": "public-clean",
+    "typed": "Horrible bf... I now v hungry...",
+    "expected": "Horrible bf... I now v hungry..."
+  },
+  {
+    "id": "final-sms0184",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 184,
+    "kind": "public-real-word",
+    "typed": "ok. I am a gentleman and will treat you wish dignity and respect.",
+    "expected": "ok. I am a gentleman and will treat you with dignity and respect."
+  },
+  {
+    "id": "final-sms0404",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 404,
+    "kind": "public-short",
+    "typed": "The hair cream has npt been shipped.",
+    "expected": "The hair cream has not been shipped."
+  },
+  {
+    "id": "final-sms4315",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4315,
+    "kind": "public-short",
+    "typed": "I wasn't well babe, i have swollen glands at my throat ... What did you ebd up doing ?",
+    "expected": "I wasn't well babe, i have swollen glands at my throat ... What did you end up doing ?"
+  },
+  {
+    "id": "final-sms2158",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2158,
+    "kind": "public-clean",
+    "typed": "Hey cutie. How goes it? Here in WALES its kinda ok. There is like hills and shit but i still avent killed myself.",
+    "expected": "Hey cutie. How goes it? Here in WALES its kinda ok. There is like hills and shit but i still avent killed myself."
+  },
+  {
+    "id": "final-sms4574",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4574,
+    "kind": "public-clean",
+    "typed": "Omg how did u know what I ate?",
+    "expected": "Omg how did u know what I ate?"
+  },
+  {
+    "id": "final-sms5479",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5479,
+    "kind": "public-multi",
+    "typed": "Yes princess! I waant to please yuo every niht. Your wish is my command...",
+    "expected": "Yes princess! I want to please you every night. Your wish is my command..."
+  },
+  {
+    "id": "final-sms4626",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4626,
+    "kind": "public-multi",
+    "typed": "Jus fiinsh blowin my hair. U finish dinner already?",
+    "expected": "Jus finish blowing my hair. U finish dinner already?"
+  },
+  {
+    "id": "final-sms2454",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2454,
+    "kind": "public-multi",
+    "typed": "Okay. I've seen it. So i should pik it on fridat?",
+    "expected": "Okay. I've seen it. So i should pick it on friday?"
+  },
+  {
+    "id": "final-sms4258",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4258,
+    "kind": "public-real-word",
+    "typed": "Aah! A cuddle would be lush! I'd need lots of tea and soup before any kind if fumbling!",
+    "expected": "Aah! A cuddle would be lush! I'd need lots of tea and soup before any kind of fumbling!"
+  },
+  {
+    "id": "final-sms5214",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5214,
+    "kind": "public-short",
+    "typed": "It iis only yesterday true true.",
+    "expected": "It is only yesterday true true."
+  },
+  {
+    "id": "final-sms3617",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3617,
+    "kind": "public-join",
+    "typed": "I enjoy watching and playingfootball and basketball. Anything outdoors. And you?",
+    "expected": "I enjoy watching and playing football and basketball. Anything outdoors. And you?"
+  },
+  {
+    "id": "final-sms4975",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4975,
+    "kind": "public-clean",
+    "typed": "Oops I was in the shower when u called. Hey a parking garage collapsed at university hospital. See I'm not crazy. Stuff like that DOES happen.",
+    "expected": "Oops I was in the shower when u called. Hey a parking garage collapsed at university hospital. See I'm not crazy. Stuff like that DOES happen."
+  },
+  {
+    "id": "final-sms4570",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4570,
+    "kind": "public-multi",
+    "typed": "hiya hows it going in sunny africa? hope u r svin a good time. give that big old silver back a big kias from me.",
+    "expected": "hiya hows it going in sunny africa? hope u r avin a good time. give that big old silver back a big kiss from me."
+  },
+  {
+    "id": "final-sms2016",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2016,
+    "kind": "public-clean",
+    "typed": "Ambrith..madurai..met u in arun dha marrge..remembr?",
+    "expected": "Ambrith..madurai..met u in arun dha marrge..remembr?"
+  },
+  {
+    "id": "final-sms4595",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4595,
+    "kind": "public-word",
+    "typed": "It's ok i wun b angry. Msg u aft i come home tonightt.",
+    "expected": "It's ok i wun b angry. Msg u aft i come home tonight."
+  },
+  {
+    "id": "final-sms1419",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1419,
+    "kind": "public-clean",
+    "typed": "No wonder... Cos i dun rem seeing a silver car... But i thk i saw a black one...",
+    "expected": "No wonder... Cos i dun rem seeing a silver car... But i thk i saw a black one..."
+  },
+  {
+    "id": "final-sms2638",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2638,
+    "kind": "public-clean",
+    "typed": "Thank god they are in bed!",
+    "expected": "Thank god they are in bed!"
+  },
+  {
+    "id": "final-sms1093",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1093,
+    "kind": "public-short",
+    "typed": "Please ds call me any mistake from my side sorry da. Pls da goto doctor.",
+    "expected": "Please da call me any mistake from my side sorry da. Pls da goto doctor."
+  },
+  {
+    "id": "final-sms3022",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3022,
+    "kind": "public-clean",
+    "typed": "I thank you so much for all you do with selflessness. I love you plenty.",
+    "expected": "I thank you so much for all you do with selflessness. I love you plenty."
+  },
+  {
+    "id": "final-sms0082",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 82,
+    "kind": "public-multi",
+    "typed": "K. Did you clal me jyst nwo ah?",
+    "expected": "K. Did you call me just now ah?"
+  },
+  {
+    "id": "final-sms1581",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1581,
+    "kind": "public-clean",
+    "typed": "Why is that, princess? I bet the brothas are all chasing you!",
+    "expected": "Why is that, princess? I bet the brothas are all chasing you!"
+  },
+  {
+    "id": "final-a026",
+    "split": "final",
+    "source": "authored",
+    "kind": "boundary",
+    "typed": "Can you emailme the picture of the shelf?",
+    "expected": "Can you email me the picture of the shelf?"
+  },
+  {
+    "id": "final-a028",
+    "split": "final",
+    "source": "authored",
+    "kind": "boundary",
+    "typed": "Your tooth brush is still in the blue cup.",
+    "expected": "Your toothbrush is still in the blue cup."
+  },
+  {
+    "id": "final-sms0112",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 112,
+    "kind": "public-multi",
+    "typed": "What is the pllural of he noub research?",
+    "expected": "What is the plural of the noun research?"
+  },
+  {
+    "id": "final-sms1426",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1426,
+    "kind": "public-clean",
+    "typed": "Yes.. now only saw your message..",
+    "expected": "Yes.. now only saw your message.."
+  },
+  {
+    "id": "final-sms3655",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3655,
+    "kind": "public-clean",
+    "typed": "It has issues right now. Ill fix for her by tomorrow.",
+    "expected": "It has issues right now. Ill fix for her by tomorrow."
+  },
+  {
+    "id": "final-sms3859",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3859,
+    "kind": "public-word",
+    "typed": "No! But we found a diff farm shop to buy some cheese. On way bacck now, can i call in?",
+    "expected": "No! But we found a diff farm shop to buy some cheese. On way back now, can i call in?"
+  },
+  {
+    "id": "final-sms1473",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1473,
+    "kind": "public-multi",
+    "typed": "Oh. U must have taken your REAL Valentine ou shopping firts.",
+    "expected": "Oh. U must have taken your REAL Valentine out shopping first."
+  },
+  {
+    "id": "final-sms1239",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1239,
+    "kind": "public-word",
+    "typed": "Is ur paper in e mornn or aft tmr?",
+    "expected": "Is ur paper in e morn or aft tmr?"
+  },
+  {
+    "id": "final-sms3199",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3199,
+    "kind": "public-join",
+    "typed": "So its to bepoking man everyday that they teach you in canada abi! How are you. Just saying hi.",
+    "expected": "So its to be poking man everyday that they teach you in canada abi! How are you. Just saying hi."
+  },
+  {
+    "id": "final-sms3216",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3216,
+    "kind": "public-real-word",
+    "typed": "Babe, have you got enough money to pick up bread and milk ? And I'll give you it back when you get hope ?",
+    "expected": "Babe, have you got enough money to pick up bread and milk ? And I'll give you it back when you get home ?"
+  },
+  {
+    "id": "final-sms0677",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 677,
+    "kind": "public-word",
+    "typed": "I dont knw pa, i juts drink milk..",
+    "expected": "I dont knw pa, i just drink milk.."
+  },
+  {
+    "id": "final-sms1906",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1906,
+    "kind": "public-clean",
+    "typed": "Wah... Okie okie... Muz make use of e unlimited... Haha...",
+    "expected": "Wah... Okie okie... Muz make use of e unlimited... Haha..."
+  },
+  {
+    "id": "final-sms4601",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4601,
+    "kind": "public-short",
+    "typed": "Have you laid your airtel line too rest?",
+    "expected": "Have you laid your airtel line to rest?"
+  },
+  {
+    "id": "final-sms2228",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2228,
+    "kind": "public-clean",
+    "typed": "If you have belive me. Come to my home.",
+    "expected": "If you have belive me. Come to my home."
+  },
+  {
+    "id": "final-sms1821",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1821,
+    "kind": "public-real-word",
+    "typed": "Dunno dat's wat he told my. Ok lor...",
+    "expected": "Dunno dat's wat he told me. Ok lor..."
+  },
+  {
+    "id": "final-sms1019",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1019,
+    "kind": "public-clean",
+    "typed": "Shall i send that exe to your mail id.",
+    "expected": "Shall i send that exe to your mail id."
+  },
+  {
+    "id": "final-sms5021",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5021,
+    "kind": "public-clean",
+    "typed": "Great! How is the office today?",
+    "expected": "Great! How is the office today?"
+  },
+  {
+    "id": "final-a015",
+    "split": "final",
+    "source": "authored",
+    "kind": "short",
+    "typed": "Can we go bt train for the last bit?",
+    "expected": "Can we go by train for the last bit?"
+  },
+  {
+    "id": "final-sms3871",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3871,
+    "kind": "public-clean",
+    "typed": "No let me do the math. Your not good at it.",
+    "expected": "No let me do the math. Your not good at it."
+  },
+  {
+    "id": "final-sms4436",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4436,
+    "kind": "public-clean",
+    "typed": "Sounds great! Im going to sleep now. Have a good night!",
+    "expected": "Sounds great! Im going to sleep now. Have a good night!"
+  },
+  {
+    "id": "final-sms2354",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2354,
+    "kind": "public-clean",
+    "typed": "Thats cool. How was your day?",
+    "expected": "Thats cool. How was your day?"
+  },
+  {
+    "id": "final-a023",
+    "split": "final",
+    "source": "authored",
+    "kind": "real-word",
+    "typed": "We should meat near the ticket booth at noon.",
+    "expected": "We should meet near the ticket booth at noon."
+  },
+  {
+    "id": "final-sms2097",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2097,
+    "kind": "public-clean",
+    "typed": "Probably, want to pick up more?",
+    "expected": "Probably, want to pick up more?"
+  },
+  {
+    "id": "final-sms0218",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 218,
+    "kind": "public-clean",
+    "typed": "Tired. I haven't slept well the past few nights.",
+    "expected": "Tired. I haven't slept well the past few nights."
+  },
+  {
+    "id": "final-sms4852",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4852,
+    "kind": "public-multi",
+    "typed": "Maybe you should find somthing eles to do instead???",
+    "expected": "Maybe you should find something else to do instead???"
+  },
+  {
+    "id": "final-sms4555",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4555,
+    "kind": "public-multi",
+    "typed": "Sun ah... Thk mayyb acn if dun have anythin on... Thk have to book e lesson... E pilates is at orchard mrt u noe hr...",
+    "expected": "Sun ah... Thk mayb can if dun have anythin on... Thk have to book e lesson... E pilates is at orchard mrt u noe hor..."
+  },
+  {
+    "id": "final-sms3051",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 3051,
+    "kind": "public-clean",
+    "typed": "Lol they don't know about my awesome phone. I could click delete right now if I want.",
+    "expected": "Lol they don't know about my awesome phone. I could click delete right now if I want."
+  },
+  {
+    "id": "final-sms0811",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 811,
+    "kind": "public-apostrophe",
+    "typed": "Ugh I dont wanna get out of bed. It's so warm.",
+    "expected": "Ugh I don't wanna get out of bed. It's so warm."
+  },
+  {
+    "id": "final-sms4519",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4519,
+    "kind": "public-short",
+    "typed": "Men always needs a beautiful, intelligent, caring, loving, adjustable, cooperative wife. But thr law allows only one wife....",
+    "expected": "Men always needs a beautiful, intelligent, caring, loving, adjustable, cooperative wife. But the law allows only one wife...."
+  },
+  {
+    "id": "final-sms1711",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1711,
+    "kind": "public-clean",
+    "typed": "U meet other fren dun wan meet me ah... Muz b a guy rite...",
+    "expected": "U meet other fren dun wan meet me ah... Muz b a guy rite..."
+  },
+  {
+    "id": "final-a011",
+    "split": "final",
+    "source": "authored",
+    "kind": "short",
+    "typed": "I have ot change the batteries in both lights.",
+    "expected": "I have to change the batteries in both lights."
+  },
+  {
+    "id": "final-sms0962",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 962,
+    "kind": "public-multi",
+    "typed": "U ure u can't take ayn sick tume?",
+    "expected": "U sure u can't take any sick time?"
+  },
+  {
+    "id": "final-sms1571",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1571,
+    "kind": "public-multi",
+    "typed": "I dont have that much miage in clas.",
+    "expected": "I dont have that much image in class."
+  },
+  {
+    "id": "final-a041",
+    "split": "final",
+    "source": "authored",
+    "kind": "clean-slang",
+    "typed": "Those lil carrots are for the soup.",
+    "expected": "Those lil carrots are for the soup."
+  },
+  {
+    "id": "final-sms1340",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 1340,
+    "kind": "public-word",
+    "typed": "Aight sorry I take ten years to showe. What's the plan?",
+    "expected": "Aight sorry I take ten years to shower. What's the plan?"
+  },
+  {
+    "id": "final-sms5427",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 5427,
+    "kind": "public-clean",
+    "typed": "U horrible gal... U knew dat i was going out wif him yest n u still come n ask me...",
+    "expected": "U horrible gal... U knew dat i was going out wif him yest n u still come n ask me..."
+  },
+  {
+    "id": "final-sms2769",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2769,
+    "kind": "public-multi",
+    "typed": "Wow v v imoressed. Have ffuns shopping!",
+    "expected": "Wow v v impressed. Have funs shopping!"
+  },
+  {
+    "id": "final-sms4690",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 4690,
+    "kind": "public-real-word",
+    "typed": "Hmmm.but you should give it in one day..",
+    "expected": "Hmmm.but you should give it on one day.."
+  },
+  {
+    "id": "final-sms2536",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 2536,
+    "kind": "public-real-word",
+    "typed": "Ok enjoy . R u there in hope.",
+    "expected": "Ok enjoy . R u there in home."
+  },
+  {
+    "id": "final-sms0648",
+    "split": "final",
+    "source": "uci-sms",
+    "source_line": 648,
+    "kind": "public-word",
+    "typed": "Do you mind if I ask what happened? You don have to say if it is uncomfortable.",
+    "expected": "Do you mind if I ask what happened? You dont have to say if it is uncomfortable."
+  }
+]

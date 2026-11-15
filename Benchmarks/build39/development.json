@@ -1,0 +1,478 @@
+{
+  "22": {
+    "clean": {
+      "clean_exact": 10757,
+      "collateral_words": 7,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 1,
+      "damaged_slots": 1469,
+      "fixed_slots": 1303,
+      "noisy_exact": 574,
+      "wrong_replacement_slots": 22
+    },
+    "review": {
+      "clean_exact": 63,
+      "collateral_words": 278,
+      "damaged_slots": 396,
+      "fixed_slots": 170,
+      "noisy_exact": 49,
+      "wrong_replacement_slots": 78
+    }
+  },
+  "23": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 545,
+      "damaged_slots": 204918,
+      "fixed_slots": 190789,
+      "noisy_exact": 85907,
+      "wrong_replacement_slots": 1559
+    },
+    "clean": {
+      "clean_exact": 10759,
+      "collateral_words": 5,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 3,
+      "damaged_slots": 1469,
+      "fixed_slots": 1357,
+      "noisy_exact": 620,
+      "wrong_replacement_slots": 16
+    },
+    "review": {
+      "clean_exact": 87,
+      "collateral_words": 132,
+      "damaged_slots": 396,
+      "fixed_slots": 209,
+      "noisy_exact": 66,
+      "wrong_replacement_slots": 16
+    }
+  },
+  "24": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 28,
+      "damaged_slots": 204918,
+      "fixed_slots": 189571,
+      "noisy_exact": 85599,
+      "wrong_replacement_slots": 1569
+    },
+    "clean": {
+      "clean_exact": 10759,
+      "collateral_words": 5,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1350,
+      "noisy_exact": 621,
+      "wrong_replacement_slots": 13
+    },
+    "review": {
+      "clean_exact": 104,
+      "collateral_words": 50,
+      "damaged_slots": 396,
+      "fixed_slots": 205,
+      "noisy_exact": 81,
+      "wrong_replacement_slots": 13
+    }
+  },
+  "25": {
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1350,
+      "noisy_exact": 621,
+      "wrong_replacement_slots": 14
+    },
+    "review": {
+      "clean_exact": 104,
+      "collateral_words": 51,
+      "damaged_slots": 396,
+      "fixed_slots": 206,
+      "noisy_exact": 82,
+      "wrong_replacement_slots": 13
+    }
+  },
+  "26": {
+    "clean": {
+      "clean_exact": 10758,
+      "collateral_words": 6,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1356,
+      "noisy_exact": 624,
+      "wrong_replacement_slots": 16
+    },
+    "review": {
+      "clean_exact": 104,
+      "collateral_words": 56,
+      "damaged_slots": 396,
+      "fixed_slots": 211,
+      "noisy_exact": 86,
+      "wrong_replacement_slots": 17
+    }
+  },
+  "27": {
+    "review": {
+      "clean_exact": 106,
+      "collateral_words": 54,
+      "damaged_slots": 396,
+      "fixed_slots": 211,
+      "noisy_exact": 86,
+      "wrong_replacement_slots": 17
+    }
+  },
+  "28": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 34,
+      "damaged_slots": 204918,
+      "fixed_slots": 193607,
+      "noisy_exact": 88140,
+      "wrong_replacement_slots": 1460
+    },
+    "clean": {
+      "clean_exact": 10758,
+      "collateral_words": 6,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 1,
+      "damaged_slots": 1469,
+      "fixed_slots": 1385,
+      "noisy_exact": 648,
+      "wrong_replacement_slots": 17
+    },
+    "review": {
+      "clean_exact": 105,
+      "collateral_words": 56,
+      "damaged_slots": 396,
+      "fixed_slots": 214,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "29": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 29,
+      "damaged_slots": 204918,
+      "fixed_slots": 193529,
+      "noisy_exact": 88081,
+      "wrong_replacement_slots": 1469
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 1,
+      "damaged_slots": 1469,
+      "fixed_slots": 1385,
+      "noisy_exact": 648,
+      "wrong_replacement_slots": 17
+    },
+    "review": {
+      "clean_exact": 103,
+      "collateral_words": 58,
+      "damaged_slots": 396,
+      "fixed_slots": 214,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "30": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 32,
+      "damaged_slots": 204918,
+      "fixed_slots": 195123,
+      "noisy_exact": 88901,
+      "wrong_replacement_slots": 1431
+    },
+    "clean": {
+      "clean_exact": 10763,
+      "collateral_words": 1,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1397,
+      "noisy_exact": 652,
+      "wrong_replacement_slots": 20
+    },
+    "review": {
+      "clean_exact": 100,
+      "collateral_words": 71,
+      "damaged_slots": 396,
+      "fixed_slots": 214,
+      "noisy_exact": 86,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "31": {
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "review": {
+      "clean_exact": 101,
+      "collateral_words": 65,
+      "damaged_slots": 396,
+      "fixed_slots": 212,
+      "noisy_exact": 86,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "32": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 28,
+      "damaged_slots": 204918,
+      "fixed_slots": 194662,
+      "noisy_exact": 88678,
+      "wrong_replacement_slots": 1463
+    },
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "review": {
+      "clean_exact": 101,
+      "collateral_words": 65,
+      "damaged_slots": 396,
+      "fixed_slots": 217,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "33": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 24,
+      "damaged_slots": 204918,
+      "fixed_slots": 194749,
+      "noisy_exact": 88741,
+      "wrong_replacement_slots": 1496
+    },
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1391,
+      "noisy_exact": 649,
+      "wrong_replacement_slots": 21
+    },
+    "review": {
+      "clean_exact": 101,
+      "collateral_words": 66,
+      "damaged_slots": 396,
+      "fixed_slots": 220,
+      "noisy_exact": 90,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "34": {
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1391,
+      "noisy_exact": 649,
+      "wrong_replacement_slots": 21
+    },
+    "review": {
+      "clean_exact": 100,
+      "collateral_words": 67,
+      "damaged_slots": 396,
+      "fixed_slots": 220,
+      "noisy_exact": 90,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "35": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 24,
+      "damaged_slots": 204918,
+      "fixed_slots": 191784,
+      "noisy_exact": 86312,
+      "wrong_replacement_slots": 1489
+    },
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1357,
+      "noisy_exact": 618,
+      "wrong_replacement_slots": 21
+    },
+    "review": {
+      "clean_exact": 101,
+      "collateral_words": 65,
+      "damaged_slots": 396,
+      "fixed_slots": 220,
+      "noisy_exact": 90,
+      "wrong_replacement_slots": 18
+    }
+  },
+  "36": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 24,
+      "damaged_slots": 204918,
+      "fixed_slots": 191850,
+      "noisy_exact": 86369,
+      "wrong_replacement_slots": 1479
+    },
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1357,
+      "noisy_exact": 618,
+      "wrong_replacement_slots": 21
+    },
+    "review": {
+      "clean_exact": 101,
+      "collateral_words": 65,
+      "damaged_slots": 396,
+      "fixed_slots": 219,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 19
+    }
+  },
+  "37": {
+    "review": {
+      "clean_exact": 100,
+      "collateral_words": 67,
+      "damaged_slots": 396,
+      "fixed_slots": 219,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 19
+    }
+  },
+  "38": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 24,
+      "damaged_slots": 204918,
+      "fixed_slots": 194719,
+      "noisy_exact": 88706,
+      "wrong_replacement_slots": 1483
+    },
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "review": {
+      "clean_exact": 100,
+      "collateral_words": 67,
+      "damaged_slots": 396,
+      "fixed_slots": 219,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 19
+    }
+  },
+  "39": {
+    "all": {
+      "clean_exact": 0,
+      "collateral_words": 24,
+      "damaged_slots": 204918,
+      "fixed_slots": 194705,
+      "noisy_exact": 88697,
+      "wrong_replacement_slots": 1484
+    },
+    "clean": {
+      "clean_exact": 10764,
+      "collateral_words": 0,
+      "damaged_slots": 0,
+      "fixed_slots": 0,
+      "noisy_exact": 0,
+      "wrong_replacement_slots": 0
+    },
+    "dev": {
+      "clean_exact": 0,
+      "collateral_words": 0,
+      "damaged_slots": 1469,
+      "fixed_slots": 1391,
+      "noisy_exact": 649,
+      "wrong_replacement_slots": 21
+    },
+    "review": {
+      "clean_exact": 100,
+      "collateral_words": 67,
+      "damaged_slots": 396,
+      "fixed_slots": 219,
+      "noisy_exact": 89,
+      "wrong_replacement_slots": 19
+    }
+  }
+}

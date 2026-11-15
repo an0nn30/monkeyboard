@@ -1,0 +1,28 @@
+{
+  "app_version": "52",
+  "build51_vs_52_changed_outputs": {
+    "desktop": 0,
+    "fresh": 0,
+    "public": 0
+  },
+  "clean_cases_preserved": 10764,
+  "complete_replay_sha256": "d01beecff88d1b53f53753d53eda553aca439a96c620dbfdd693c36579f78d7f",
+  "deduplicated_clean_cases": 10764,
+  "device_name": "iPhone Duo simulator",
+  "fixture_hashes_checked": true,
+  "installed_keyboard_ui_tests": [
+    "testContextRepairsEarlierRealWordWithoutLosingTheFollowingWordOnUndo",
+    "testContrastUsesContextForHerdAndPreservesAnIntentionalHerd",
+    "testLaterContextKeepsAnAlreadyCorrectedSpelling",
+    "testRejoiningWordPreservesIndependentCorrection"
+  ],
+  "keyboard_version": "52",
+  "paired_stats_independently_checked": true,
+  "physical_deployment": false,
+  "physical_latency_tested": false,
+  "replay_jobs": 3,
+  "rust_tests": 19,
+  "scorer_tests": 9,
+  "signed_installed_extension_sha256": "9b947e980c89de6482076fd49a6db9be3d587c18c1276435e3eed658d26ad094",
+  "simulator": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B"
+}

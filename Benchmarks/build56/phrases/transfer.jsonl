@@ -1,0 +1,6 @@
+{"held": 53, "dim": 6, "threshold": 0.6249999999999999, "recovered": 39, "damaged": 2, "other": 1, "original_wrongs": 91}
+{"held": 53, "dim": 14, "threshold": 0.5999999999999999, "recovered": 40, "damaged": 4, "other": 1, "original_wrongs": 91}
+{"held": 54, "dim": 6, "threshold": 0.575, "recovered": 44, "damaged": 1, "other": 1, "original_wrongs": 77}
+{"held": 54, "dim": 14, "threshold": 0.575, "recovered": 42, "damaged": 1, "other": 1, "original_wrongs": 77}
+{"held": 55, "dim": 6, "threshold": 0.4999999999999999, "recovered": 45, "damaged": 6, "other": 1, "original_wrongs": 81}
+{"held": 55, "dim": 14, "threshold": 0.5249999999999999, "recovered": 43, "damaged": 5, "other": 1, "original_wrongs": 81}

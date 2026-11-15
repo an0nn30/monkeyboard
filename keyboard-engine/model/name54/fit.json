@@ -1,0 +1,16 @@
+{
+  "strong_originals": 1239,
+  "known_names": 1851,
+  "capitalized_training_tokens": 39616,
+  "lowercase_training_tokens": 598675,
+  "threshold": 0.66,
+  "priors": [
+    0.2603009422825385,
+    0.6865403100807388,
+    0.9733162572757905,
+    0.9709220365168261
+  ],
+  "calibration_title_matches": 5711,
+  "calibration_lowercase_matches": 99,
+  "propername_source_sha256": "626d634b40b1ad9257d0e4f16e155ea87d258dd458e9ccf94fb84bb1b63e585a"
+}

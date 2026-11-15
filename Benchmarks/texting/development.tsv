@@ -1,0 +1,82 @@
+# Project-authored development set. Next-word targets are plausible alternatives, not exhaustive.
+fix	Im	I'm
+fix	Sorry im	I'm
+fix	On second thought Im	I'm
+fix	Ive	I've
+fix	Looks like ive	I've
+fix	i'm	I'm
+fix	Sounds like i	I
+fix	I think youll	you'll
+fix	He said hedve	he'd've
+fix	We werent	weren't
+fix	They shouldve	should've
+fix	We couldve	could've
+fix	She wouldve	would've
+fix	You mustve	must've
+fix	Oh I didnt	didn't
+fix	My phone isnt	isn't
+fix	We’re goign	going
+fix	Just parkign	parking
+fix	Leaving in a minite	minute
+fix	I'm nearly tehre	there
+fix	That's awesoem	awesome
+fix	What tiem	time
+fix	Can you grab grocreies	groceries
+fix	Have you seen my walelt	wallet
+fix	I'm gettign	getting
+fix	I'll call you tomrrow	tomorrow
+keep	Send me an IM	IM
+keep	I feel ill	ill
+keep	Check my ID	ID
+keep	We were	were
+keep	It hurt its	its
+keep	She did well	well
+keep	He works on a shell	shell
+keep	I dug a shed	shed
+keep	After lunch I’ll	I’ll
+keep	Text me rn	rn
+keep	I'm almost there lol	lol
+keep	Just say idk	idk
+keep	Okay brb	brb
+keep	Running late btw	btw
+keep	omw	omw
+keep	Haha nah	nah
+keep	The group chat said yall	yall
+keep	Ask McKay	McKay
+keep	Send it to @im	im
+keep	Visit example.ive	ive
+keep	The variable is user_im	im
+keep	Type in /youll	youll
+keep	Follow #werent	werent
+next	Be there in five	minutes|seconds
+next	I'm on my	way|phone|break
+next	Give me a	call|minute|second
+next	Sorry I'm running	late|behind
+next	Did you get	home|it|there
+next	How was your	day|trip|weekend
+next	Are you still	coming|there|up
+next	I'll pick you	up
+next	Can you call	me|back
+next	Text me when	you|you're
+next	Want to grab	dinner|lunch|coffee
+next	I'll let you	know
+next	I am pulling	up|in|out
+next	See you after	work|school|lunch
+next	I left it at	home|work|school
+next	What time do	you|we
+next	Do we need	anything|to|more
+next	I'll be home	soon|late|tonight
+next	That works for	me|us
+next	Thanks for the	heads|help|ride
+next	Drive	safe|safely|carefully
+next	Be right	there|back
+next	Sounds like a	plan|good|great
+next	Let me check	my|the|with
+next	What do you	need|think|want
+next	I'll meet you	at|there|outside
+next	Are we still	on|going|meeting
+next	Will you be	home|there|around
+next	Have you seen	my|the|it
+next	Do you mind	if|helping|grabbing
+next	Have a great	day|time|weekend
+next	Don't forget to	bring|call|text

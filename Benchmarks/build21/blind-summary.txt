@@ -1,0 +1,29 @@
+build group cases recovered exact false_splits changed_intended
+blind20	be-by	66	0	0	0	0
+blind20	all	2499	895	1996	0	12
+blind20	if-of	126	80	79	0	1
+blind20	id-is	126	87	85	0	4
+blind20	od-of	126	113	113	0	1
+blind20	ti-to	96	90	90	0	0
+blind20	other-short	165	91	90	0	1
+blind20	long-typo	204	171	171	0	0
+blind20	join	480	263	262	0	1
+blind20	keep-be	165	0	164	0	1
+blind20	keep-if	105	0	105	0	0
+blind20	clean	840	0	837	0	3
+blind21	be-by	66	42	42	0	0
+blind21	all	2499	1100	2197	0	14
+blind21	if-of	126	108	107	0	1
+blind21	id-is	126	111	108	0	4
+blind21	od-of	126	121	120	0	1
+blind21	ti-to	96	93	93	0	0
+blind21	other-short	165	102	102	0	0
+blind21	long-typo	204	171	171	0	0
+blind21	join	480	352	351	0	1
+blind21	keep-be	165	0	165	0	0
+blind21	keep-if	105	0	102	0	3
+blind21	clean	840	0	836	0	4
+exact increases 210 decreases 9
+recovered increases 210 decreases 5
+false_splits increases 0 decreases 0
+changed_intended increases 4 decreases 2

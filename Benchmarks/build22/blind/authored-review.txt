@@ -1,0 +1,52 @@
+multi|Can yuo grab the grren tote fron under my desk?|Can you grab the green tote from under my desk?
+multi|My earbds are sititng beisde the fruit bowl.|My earbuds are sitting beside the fruit bowl.
+multi|We shloud leave befroe teh school buses arrive.|We should leave before the school buses arrive.
+multi|Put the spare towles onthe bench by the bakc door.|Put the spare towels on the bench by the back door.
+multi|The libary has my red chrager adn your adapter.|The library has my red charger and your adapter.
+multi|I moved teh pacakge upstairs so the dog woudl leave it alone.|I moved the package upstairs so the dog would leave it alone.
+multi|There's a reciept in my jakcet pokcet if you need it.|There's a receipt in my jacket pocket if you need it.
+multi|Both remtoes are in teh drwaer under the speaker.|Both remotes are in the drawer under the speaker.
+multi|I can brnig five mufifns of you're still hungry.|I can bring five muffins if you're still hungry.
+multi|Pleaze add a spnoon tothe bag with the noodles.|Please add a spoon to the bag with the noodles.
+short|Can we go ot the little pool after lunch?|Can we go to the little pool after lunch?
+short|Sam put a rag un the bottom shelf.|Sam put a rag on the bottom shelf.
+short|I can get my coat ni a minute.|I can get my coat in a minute.
+short|We should try the place bt the river next week.|We should try the place by the river next week.
+short|Your sock is ud on the lampshade again.|Your sock is up on the lampshade again.
+short|Do we need ot rinse the rice first?|Do we need to rinse the rice first?
+real-word|Cut a strip if tape for each jar.|Cut a strip of tape for each jar.
+real-word|I left the new key be the blue vase.|I left the new key by the blue vase.
+real-word|Can you fill out the from before your shift?|Can you fill out the form before your shift?
+real-word|I'll swing buy the new bakery on Tuesday.|I'll swing by the new bakery on Tuesday.
+real-word|Put the blender back where it us supposed to go.|Put the blender back where it is supposed to go.
+real-word|Let me know of the little blue light comes on.|Let me know if the little blue light comes on.
+real-word|Leave one seat four Dani near the aisle.|Leave one seat for Dani near the aisle.
+real-word|The drummer packed his hear in the van.|The drummer packed his gear in the van.
+boundary|Kira leftthe spare key in our mailbox.|Kira left the spare key in our mailbox.
+boundary|Do you remembersending the photo to Aunt May?|Do you remember sending the photo to Aunt May?
+boundary|Bring home the note book with the green dots.|Bring home the notebook with the green dots.
+boundary|I found my rain coat behind the surfboard.|I found my raincoat behind the surfboard.
+punctuation|I didnt hear the buzzer from the back room.|I didn't hear the buzzer from the back room.
+punctuation|Were heading out with the two folding stools.|We're heading out with the two folding stools.
+punctuation|That wasnt Zoes umbrella after all.|That wasn't Zoe's umbrella after all.
+punctuation|I cant tell if the timers running.|I can't tell if the timer's running.
+clean-name|Maren left her mug at Inez's place.
+clean-name|Jo, can you pick up a burrito for Xiang?
+clean-name|Tell Ayo the purple gate sticks.
+clean-name|Pip insists his robot is called Clonk.
+clean-name|Nori put the tamari next to the udon.
+clean-slang|lol that goose chased me all the way to the car
+clean-slang|brb gotta find the other mitten
+clean-slang|nah the tiny pan is mine
+clean-slang|Can u toss me my sunnies when u get here?
+clean-slang|That scarf is very extra and I love it.
+clean-real|I'll be by the coat rack when you're ready.
+clean-real|Save the strip if the roll is almost empty.
+clean-real|Tell me where you got the form from.
+clean-real|Four chairs will fit in your wagon.
+clean-real|You can buy the patch at the counter.
+clean-real|The bell rang while we were cutting up the leek.
+clean-case|Please keep the label exactly as it is, iFixit.
+clean-punctuation|It's the cat's turn, isn't it?
+clean-punctuation|Wait... did you actually mail the shoes?
+clean-punctuation|The sign said "pears" but I bought plums.

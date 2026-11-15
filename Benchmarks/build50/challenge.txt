@@ -1,0 +1,40 @@
+context|Can you [sent|send] the number for the company that replaced your fence?
+context|I thought I [herd|heard] somebody knocking on the side door.
+context|I need to [fine|find] a bolt that fits the new handle.
+context|A [pear|pair] of red wellies turned up behind the changing room.
+context|Ask Kim [of|if] the dog needs feeding before we go out.
+context|The other receptionist [us|is] taking a break till ten.
+context|She said [tour|your] apple cake won second prize at the fair.
+context|I'm ready right [not|now] if the lift is still on its way.
+context|Leave it [be|by] the till and I'll collect it after lunch.
+context|Can you put [me|my] cycling helmet on the back shelf?
+context|I can't remember [wear|where] we left the biscuit tin.
+context|Could we [meat|meet] halfway between the station and the park?
+context|Someone took the parcel [form|from] the wrong locker.
+context|I need to [right|write] down which tap is dripping.
+context|Do we have enough [flower|flour] to make another pizza base?
+context|We paid [four|for] the extra blanket before we left the room.
+context|I've never [scene|seen] that green van on our road before.
+context|It looks as if the new latch is [lose|loose] again.
+mixed|[MMy|My] brother says the [banan as|bananas] are in the bottom drawer.
+mixed|[Diid|Did] I leave my [suitcsae|suitcase] by the back gate?
+mixed|[THe|The] [vehicel|vehicle] in front of the garage is ours.
+mixed|[Hwo|How] did you get the [pictrue|picture] onto the noticeboard?
+mixed|Please put [teh|the] [but ton|button] in the little tin.
+mixed|I'm taking the [tra in|train] to the [concre t|concert] in Leeds.
+mixed|Could you [birng|bring] the [bl ue|blue] tape measure tomorrow?
+mixed|We lost the [pap er|paper] with your [adres s|address] on it.
+keep|There's a little do for the volunteers after the hall closes.
+keep|The dog by the blue door belongs to the man upstairs.
+keep|I gave the old kettle to the couple who moved in yesterday.
+keep|I wish the neighbour would keep the side gate closed.
+keep|Take a scarf if the wind picks up near the water.
+keep|There's a pear sliced up for you on the yellow plate.
+keep|The loose change belongs in the blue bowl on the shelf.
+keep|The flour and butter are both next to the sink.
+keep|The herd will need another bale before morning.
+keep|I sent the meter reading to the landlord on Friday.
+keep|Our fine china is still packed in two of the green boxes.
+keep|We can hear the doorbell from the back bedroom now.
+keep|All four wheels need air before you drive it home.
+keep|Have a look at the pattern on this flower before you go.

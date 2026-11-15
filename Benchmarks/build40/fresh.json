@@ -1,0 +1,1253 @@
+[
+  {
+    "id": "new-001-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The delivery guy said he would sent a photo of the gate.",
+    "expected": "The delivery guy said he would send a photo of the gate.",
+    "pair": 1
+  },
+  {
+    "id": "new-001-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The delivery guy said he would send a photo of the gate.",
+    "expected": "The delivery guy said he would send a photo of the gate.",
+    "pair": 1
+  },
+  {
+    "id": "new-002-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I swear I herd someone rattling the back door.",
+    "expected": "I swear I heard someone rattling the back door.",
+    "pair": 2
+  },
+  {
+    "id": "new-002-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I swear I heard someone rattling the back door.",
+    "expected": "I swear I heard someone rattling the back door.",
+    "pair": 2
+  },
+  {
+    "id": "new-003-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I left the charger be the basket of towels.",
+    "expected": "I left the charger by the basket of towels.",
+    "pair": 3
+  },
+  {
+    "id": "new-003-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I left the charger by the basket of towels.",
+    "expected": "I left the charger by the basket of towels.",
+    "pair": 3
+  },
+  {
+    "id": "new-004-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Let me know of the last train leaves before ten.",
+    "expected": "Let me know if the last train leaves before ten.",
+    "pair": 4
+  },
+  {
+    "id": "new-004-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Let me know if the last train leaves before ten.",
+    "expected": "Let me know if the last train leaves before ten.",
+    "pair": 4
+  },
+  {
+    "id": "new-005-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We could meat outside the little bakery after work.",
+    "expected": "We could meet outside the little bakery after work.",
+    "pair": 5
+  },
+  {
+    "id": "new-005-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We could meet outside the little bakery after work.",
+    "expected": "We could meet outside the little bakery after work.",
+    "pair": 5
+  },
+  {
+    "id": "new-006-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Could you sing the permission slip for the twins?",
+    "expected": "Could you sign the permission slip for the twins?",
+    "pair": 6
+  },
+  {
+    "id": "new-006-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Could you sign the permission slip for the twins?",
+    "expected": "Could you sign the permission slip for the twins?",
+    "pair": 6
+  },
+  {
+    "id": "new-007-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I'll bring me spare lantern in case the lights go out.",
+    "expected": "I'll bring my spare lantern in case the lights go out.",
+    "pair": 7
+  },
+  {
+    "id": "new-007-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I'll bring my spare lantern in case the lights go out.",
+    "expected": "I'll bring my spare lantern in case the lights go out.",
+    "pair": 7
+  },
+  {
+    "id": "new-008-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Is this the corner wish the broken crossing light?",
+    "expected": "Is this the corner with the broken crossing light?",
+    "pair": 8
+  },
+  {
+    "id": "new-008-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Is this the corner with the broken crossing light?",
+    "expected": "Is this the corner with the broken crossing light?",
+    "pair": 8
+  },
+  {
+    "id": "new-009-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The painters are coming in Wednesday after lunch.",
+    "expected": "The painters are coming on Wednesday after lunch.",
+    "pair": 9
+  },
+  {
+    "id": "new-009-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The painters are coming on Wednesday after lunch.",
+    "expected": "The painters are coming on Wednesday after lunch.",
+    "pair": 9
+  },
+  {
+    "id": "new-010-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "She gave my the booth closest to the window.",
+    "expected": "She gave me the booth closest to the window.",
+    "pair": 10
+  },
+  {
+    "id": "new-010-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "She gave me the booth closest to the window.",
+    "expected": "She gave me the booth closest to the window.",
+    "pair": 10
+  },
+  {
+    "id": "new-011-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I think the apartment us ready for the walkthrough.",
+    "expected": "I think the apartment is ready for the walkthrough.",
+    "pair": 11
+  },
+  {
+    "id": "new-011-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I think the apartment is ready for the walkthrough.",
+    "expected": "I think the apartment is ready for the walkthrough.",
+    "pair": 11
+  },
+  {
+    "id": "new-012-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Hang the keys in the hook behind the pantry door.",
+    "expected": "Hang the keys on the hook behind the pantry door.",
+    "pair": 12
+  },
+  {
+    "id": "new-012-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Hang the keys on the hook behind the pantry door.",
+    "expected": "Hang the keys on the hook behind the pantry door.",
+    "pair": 12
+  },
+  {
+    "id": "new-013-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Thanks four taking the recycling to the curb.",
+    "expected": "Thanks for taking the recycling to the curb.",
+    "pair": 13
+  },
+  {
+    "id": "new-013-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Thanks for taking the recycling to the curb.",
+    "expected": "Thanks for taking the recycling to the curb.",
+    "pair": 13
+  },
+  {
+    "id": "new-014-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I hope tour nephew likes the birthday puzzle.",
+    "expected": "I hope your nephew likes the birthday puzzle.",
+    "pair": 14
+  },
+  {
+    "id": "new-014-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I hope your nephew likes the birthday puzzle.",
+    "expected": "I hope your nephew likes the birthday puzzle.",
+    "pair": 14
+  },
+  {
+    "id": "new-015-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We can head hope as soon as the rain lets up.",
+    "expected": "We can head home as soon as the rain lets up.",
+    "pair": 15
+  },
+  {
+    "id": "new-015-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We can head home as soon as the rain lets up.",
+    "expected": "We can head home as soon as the rain lets up.",
+    "pair": 15
+  },
+  {
+    "id": "new-016-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Leave the envelope wish whoever closes the front desk.",
+    "expected": "Leave the envelope with whoever closes the front desk.",
+    "pair": 16
+  },
+  {
+    "id": "new-016-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Leave the envelope with whoever closes the front desk.",
+    "expected": "Leave the envelope with whoever closes the front desk.",
+    "pair": 16
+  },
+  {
+    "id": "new-017-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Come over right not so we can surprise him.",
+    "expected": "Come over right now so we can surprise him.",
+    "pair": 17
+  },
+  {
+    "id": "new-017-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Come over right now so we can surprise him.",
+    "expected": "Come over right now so we can surprise him.",
+    "pair": 17
+  },
+  {
+    "id": "new-018-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Grab a bag if ice before the game starts.",
+    "expected": "Grab a bag of ice before the game starts.",
+    "pair": 18
+  },
+  {
+    "id": "new-018-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Grab a bag of ice before the game starts.",
+    "expected": "Grab a bag of ice before the game starts.",
+    "pair": 18
+  },
+  {
+    "id": "new-019-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I really life the green curtains you picked.",
+    "expected": "I really like the green curtains you picked.",
+    "pair": 19
+  },
+  {
+    "id": "new-019-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I really like the green curtains you picked.",
+    "expected": "I really like the green curtains you picked.",
+    "pair": 19
+  },
+  {
+    "id": "new-020-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Please ask your ant whether she wants a lift.",
+    "expected": "Please ask your aunt whether she wants a lift.",
+    "pair": 20
+  },
+  {
+    "id": "new-020-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Please ask your aunt whether she wants a lift.",
+    "expected": "Please ask your aunt whether she wants a lift.",
+    "pair": 20
+  },
+  {
+    "id": "new-021-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I put the extra blankets on the trunk before breakfast.",
+    "expected": "I put the extra blankets in the trunk before breakfast.",
+    "pair": 21
+  },
+  {
+    "id": "new-021-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I put the extra blankets in the trunk before breakfast.",
+    "expected": "I put the extra blankets in the trunk before breakfast.",
+    "pair": 21
+  },
+  {
+    "id": "new-022-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I picked me seat right next to the drummer.",
+    "expected": "I picked my seat right next to the drummer.",
+    "pair": 22
+  },
+  {
+    "id": "new-022-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I picked my seat right next to the drummer.",
+    "expected": "I picked my seat right next to the drummer.",
+    "pair": 22
+  },
+  {
+    "id": "new-023-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The gate us locked until the lifeguard arrives.",
+    "expected": "The gate is locked until the lifeguard arrives.",
+    "pair": 23
+  },
+  {
+    "id": "new-023-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The gate is locked until the lifeguard arrives.",
+    "expected": "The gate is locked until the lifeguard arrives.",
+    "pair": 23
+  },
+  {
+    "id": "new-024-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We should check of both rooms have outlets.",
+    "expected": "We should check if both rooms have outlets.",
+    "pair": 24
+  },
+  {
+    "id": "new-024-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We should check if both rooms have outlets.",
+    "expected": "We should check if both rooms have outlets.",
+    "pair": 24
+  },
+  {
+    "id": "new-025-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The desk can sent somebody up with fresh towels.",
+    "expected": "The desk can send somebody up with fresh towels.",
+    "pair": 25
+  },
+  {
+    "id": "new-025-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The desk can send somebody up with fresh towels.",
+    "expected": "The desk can send somebody up with fresh towels.",
+    "pair": 25
+  },
+  {
+    "id": "new-026-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Wait four the last cyclist before crossing.",
+    "expected": "Wait for the last cyclist before crossing.",
+    "pair": 26
+  },
+  {
+    "id": "new-026-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Wait for the last cyclist before crossing.",
+    "expected": "Wait for the last cyclist before crossing.",
+    "pair": 26
+  },
+  {
+    "id": "new-027-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Ask tour sister to pack a spare helmet.",
+    "expected": "Ask your sister to pack a spare helmet.",
+    "pair": 27
+  },
+  {
+    "id": "new-027-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Ask your sister to pack a spare helmet.",
+    "expected": "Ask your sister to pack a spare helmet.",
+    "pair": 27
+  },
+  {
+    "id": "new-028-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Lina will meat the night crew at the loading dock.",
+    "expected": "Lina will meet the night crew at the loading dock.",
+    "pair": 28
+  },
+  {
+    "id": "new-028-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Lina will meet the night crew at the loading dock.",
+    "expected": "Lina will meet the night crew at the loading dock.",
+    "pair": 28
+  },
+  {
+    "id": "new-029-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Please mark the other box wish a blue sticker.",
+    "expected": "Please mark the other box with a blue sticker.",
+    "pair": 29
+  },
+  {
+    "id": "new-029-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Please mark the other box with a blue sticker.",
+    "expected": "Please mark the other box with a blue sticker.",
+    "pair": 29
+  },
+  {
+    "id": "new-030-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "It looks life somebody forgot their umbrella.",
+    "expected": "It looks like somebody forgot their umbrella.",
+    "pair": 30
+  },
+  {
+    "id": "new-030-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "It looks like somebody forgot their umbrella.",
+    "expected": "It looks like somebody forgot their umbrella.",
+    "pair": 30
+  },
+  {
+    "id": "new-031-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I plan to go hope after the last speech.",
+    "expected": "I plan to go home after the last speech.",
+    "pair": 31
+  },
+  {
+    "id": "new-031-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I plan to go home after the last speech.",
+    "expected": "I plan to go home after the last speech.",
+    "pair": 31
+  },
+  {
+    "id": "new-032-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The clerk asked me to sing my name under the total.",
+    "expected": "The clerk asked me to sign my name under the total.",
+    "pair": 32
+  },
+  {
+    "id": "new-032-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The clerk asked me to sign my name under the total.",
+    "expected": "The clerk asked me to sign my name under the total.",
+    "pair": 32
+  },
+  {
+    "id": "new-033-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Do you here the ice machine clicking again?",
+    "expected": "Do you hear the ice machine clicking again?",
+    "pair": 33
+  },
+  {
+    "id": "new-033-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Do you hear the ice machine clicking again?",
+    "expected": "Do you hear the ice machine clicking again?",
+    "pair": 33
+  },
+  {
+    "id": "new-034-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I need to fine the wrench before the store closes.",
+    "expected": "I need to find the wrench before the store closes.",
+    "pair": 34
+  },
+  {
+    "id": "new-034-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I need to find the wrench before the store closes.",
+    "expected": "I need to find the wrench before the store closes.",
+    "pair": 34
+  },
+  {
+    "id": "new-035-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Did you get the flowers form the corner shop?",
+    "expected": "Did you get the flowers from the corner shop?",
+    "pair": 35
+  },
+  {
+    "id": "new-035-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Did you get the flowers from the corner shop?",
+    "expected": "Did you get the flowers from the corner shop?",
+    "pair": 35
+  },
+  {
+    "id": "new-036-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "It's quieter here then it was last winter.",
+    "expected": "It's quieter here than it was last winter.",
+    "pair": 36
+  },
+  {
+    "id": "new-036-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "It's quieter here than it was last winter.",
+    "expected": "It's quieter here than it was last winter.",
+    "pair": 36
+  },
+  {
+    "id": "new-037-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We left the canoe by the late before supper.",
+    "expected": "We left the canoe by the lake before supper.",
+    "pair": 37
+  },
+  {
+    "id": "new-037-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We left the canoe by the lake before supper.",
+    "expected": "We left the canoe by the lake before supper.",
+    "pair": 37
+  },
+  {
+    "id": "new-038-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We should right down the number on the meter.",
+    "expected": "We should write down the number on the meter.",
+    "pair": 38
+  },
+  {
+    "id": "new-038-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We should write down the number on the meter.",
+    "expected": "We should write down the number on the meter.",
+    "pair": 38
+  },
+  {
+    "id": "new-039-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Can you grab a pear of mittens from the shelf?",
+    "expected": "Can you grab a pair of mittens from the shelf?",
+    "pair": 39
+  },
+  {
+    "id": "new-039-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Can you grab a pair of mittens from the shelf?",
+    "expected": "Can you grab a pair of mittens from the shelf?",
+    "pair": 39
+  },
+  {
+    "id": "new-040-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I pulled the break before the cart reached the curb.",
+    "expected": "I pulled the brake before the cart reached the curb.",
+    "pair": 40
+  },
+  {
+    "id": "new-040-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I pulled the brake before the cart reached the curb.",
+    "expected": "I pulled the brake before the cart reached the curb.",
+    "pair": 40
+  },
+  {
+    "id": "new-041-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Could you reed the last line of the label aloud?",
+    "expected": "Could you read the last line of the label aloud?",
+    "pair": 41
+  },
+  {
+    "id": "new-041-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Could you read the last line of the label aloud?",
+    "expected": "Could you read the last line of the label aloud?",
+    "pair": 41
+  },
+  {
+    "id": "new-042-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The spare badge is in the bottom draw beside my desk.",
+    "expected": "The spare badge is in the bottom drawer beside my desk.",
+    "pair": 42
+  },
+  {
+    "id": "new-042-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The spare badge is in the bottom drawer beside my desk.",
+    "expected": "The spare badge is in the bottom drawer beside my desk.",
+    "pair": 42
+  },
+  {
+    "id": "new-043-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Dad forgot to bye candles for the lemon cake.",
+    "expected": "Dad forgot to buy candles for the lemon cake.",
+    "pair": 43
+  },
+  {
+    "id": "new-043-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Dad forgot to buy candles for the lemon cake.",
+    "expected": "Dad forgot to buy candles for the lemon cake.",
+    "pair": 43
+  },
+  {
+    "id": "new-044-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "It was your tern to bring snacks for the bus.",
+    "expected": "It was your turn to bring snacks for the bus.",
+    "pair": 44
+  },
+  {
+    "id": "new-044-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "It was your turn to bring snacks for the bus.",
+    "expected": "It was your turn to bring snacks for the bus.",
+    "pair": 44
+  },
+  {
+    "id": "new-045-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I hope we get sum time to ourselves this weekend.",
+    "expected": "I hope we get some time to ourselves this weekend.",
+    "pair": 45
+  },
+  {
+    "id": "new-045-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I hope we get some time to ourselves this weekend.",
+    "expected": "I hope we get some time to ourselves this weekend.",
+    "pair": 45
+  },
+  {
+    "id": "new-046-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I need two cups of flower for the banana muffins.",
+    "expected": "I need two cups of flour for the banana muffins.",
+    "pair": 46
+  },
+  {
+    "id": "new-046-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I need two cups of flour for the banana muffins.",
+    "expected": "I need two cups of flour for the banana muffins.",
+    "pair": 46
+  },
+  {
+    "id": "new-047-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I think you left there tickets under the salad bowl.",
+    "expected": "I think you left their tickets under the salad bowl.",
+    "pair": 47
+  },
+  {
+    "id": "new-047-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I think you left their tickets under the salad bowl.",
+    "expected": "I think you left their tickets under the salad bowl.",
+    "pair": 47
+  },
+  {
+    "id": "new-048-typo",
+    "kind": "context-error",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Will the florist sale a single pink rose?",
+    "expected": "Will the florist sell a single pink rose?",
+    "pair": 48
+  },
+  {
+    "id": "new-048-clean",
+    "kind": "clean-counterpart",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Will the florist sell a single pink rose?",
+    "expected": "Will the florist sell a single pink rose?",
+    "pair": 48
+  },
+  {
+    "id": "new-049-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I sent a photo of the stripe on the kitten.",
+    "expected": "I sent a photo of the stripe on the kitten.",
+    "pair": 49
+  },
+  {
+    "id": "new-050-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The entire herd crossed just as we reached the bridge.",
+    "expected": "The entire herd crossed just as we reached the bridge.",
+    "pair": 50
+  },
+  {
+    "id": "new-051-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We heard the last song from the car park.",
+    "expected": "We heard the last song from the car park.",
+    "pair": 51
+  },
+  {
+    "id": "new-052-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The choir can sing my sister's favorite tune.",
+    "expected": "The choir can sing my sister's favorite tune.",
+    "pair": 52
+  },
+  {
+    "id": "new-053-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The sign outside the bakery came loose again.",
+    "expected": "The sign outside the bakery came loose again.",
+    "pair": 53
+  },
+  {
+    "id": "new-054-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The meat should thaw by the time we get back.",
+    "expected": "The meat should thaw by the time we get back.",
+    "pair": 54
+  },
+  {
+    "id": "new-055-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "An ant made it all the way inside my mug.",
+    "expected": "An ant made it all the way inside my mug.",
+    "pair": 55
+  },
+  {
+    "id": "new-056-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "My aunt keeps her tools in an old suitcase.",
+    "expected": "My aunt keeps her tools in an old suitcase.",
+    "pair": 56
+  },
+  {
+    "id": "new-057-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We hope the mattress fits in the freight elevator.",
+    "expected": "We hope the mattress fits in the freight elevator.",
+    "pair": 57
+  },
+  {
+    "id": "new-058-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "He told me to keep the music on for a bit.",
+    "expected": "He told me to keep the music on for a bit.",
+    "pair": 58
+  },
+  {
+    "id": "new-059-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "She called my name from the end of the platform.",
+    "expected": "She called my name from the end of the platform.",
+    "pair": 59
+  },
+  {
+    "id": "new-060-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I wish your parents could stay for the whole week.",
+    "expected": "I wish your parents could stay for the whole week.",
+    "pair": 60
+  },
+  {
+    "id": "new-061-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We need four screws to put the handle back on.",
+    "expected": "We need four screws to put the handle back on.",
+    "pair": 61
+  },
+  {
+    "id": "new-062-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Can you be the one who waits by the gate?",
+    "expected": "Can you be the one who waits by the gate?",
+    "pair": 62
+  },
+  {
+    "id": "new-063-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Here's to a life spent making things with friends.",
+    "expected": "Here's to a life spent making things with friends.",
+    "pair": 63
+  },
+  {
+    "id": "new-064-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The red bus took us around the bend by the lake.",
+    "expected": "The red bus took us around the bend by the lake.",
+    "pair": 64
+  },
+  {
+    "id": "new-065-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "They booked a tour with the woman from the museum.",
+    "expected": "They booked a tour with the woman from the museum.",
+    "pair": 65
+  },
+  {
+    "id": "new-066-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I do not think the garage is open right now.",
+    "expected": "I do not think the garage is open right now.",
+    "pair": 66
+  },
+  {
+    "id": "new-067-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Put it on the bench or in the basket if you like.",
+    "expected": "Put it on the bench or in the basket if you like.",
+    "pair": 67
+  },
+  {
+    "id": "new-068-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We can leave in May if the roof is finished.",
+    "expected": "We can leave in May if the roof is finished.",
+    "pair": 68
+  },
+  {
+    "id": "new-069-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We can leave on Monday if the roof is finished.",
+    "expected": "We can leave on Monday if the roof is finished.",
+    "pair": 69
+  },
+  {
+    "id": "new-070-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "My locker is by the stairs in the next building.",
+    "expected": "My locker is by the stairs in the next building.",
+    "pair": 70
+  },
+  {
+    "id": "new-071-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "There is a fine line between a joke and an insult.",
+    "expected": "There is a fine line between a joke and an insult.",
+    "pair": 71
+  },
+  {
+    "id": "new-072-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Meet me here near the blue bicycle rack.",
+    "expected": "Meet me here near the blue bicycle rack.",
+    "pair": 72
+  },
+  {
+    "id": "new-073-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Please take a break after the second set.",
+    "expected": "Please take a break after the second set.",
+    "pair": 73
+  },
+  {
+    "id": "new-074-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I packed a pear and a piece of cheese for lunch.",
+    "expected": "I packed a pear and a piece of cheese for lunch.",
+    "pair": 74
+  },
+  {
+    "id": "new-075-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I saw a tern dive into the water near the pier.",
+    "expected": "I saw a tern dive into the water near the pier.",
+    "pair": 75
+  },
+  {
+    "id": "new-076-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I used a flower from the garden to decorate the cake.",
+    "expected": "I used a flower from the garden to decorate the cake.",
+    "pair": 76
+  },
+  {
+    "id": "new-077-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I left their coats over there on the wooden chair.",
+    "expected": "I left their coats over there on the wooden chair.",
+    "pair": 77
+  },
+  {
+    "id": "new-078-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "She was right about the date on the invitation.",
+    "expected": "She was right about the date on the invitation.",
+    "pair": 78
+  },
+  {
+    "id": "new-079-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The brake held even on the steepest bit of driveway.",
+    "expected": "The brake held even on the steepest bit of driveway.",
+    "pair": 79
+  },
+  {
+    "id": "new-080-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "If it gets cold I'll put a second blanket on the bed.",
+    "expected": "If it gets cold I'll put a second blanket on the bed.",
+    "pair": 80
+  },
+  {
+    "id": "new-081-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I set my phone on the counter and went outside.",
+    "expected": "I set my phone on the counter and went outside.",
+    "pair": 81
+  },
+  {
+    "id": "new-082-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We had to sing the numbers as part of the game.",
+    "expected": "We had to sing the numbers as part of the game.",
+    "pair": 82
+  },
+  {
+    "id": "new-083-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The shop where I buy rice is having a sale.",
+    "expected": "The shop where I buy rice is having a sale.",
+    "pair": 83
+  },
+  {
+    "id": "new-084-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The mugs look like the ones we used on tour.",
+    "expected": "The mugs look like the ones we used on tour.",
+    "pair": 84
+  },
+  {
+    "id": "new-085-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I can send four letters before the post office closes.",
+    "expected": "I can send four letters before the post office closes.",
+    "pair": 85
+  },
+  {
+    "id": "new-086-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "The recipe says to stir the leek in with the beans.",
+    "expected": "The recipe says to stir the leek in with the beans.",
+    "pair": 86
+  },
+  {
+    "id": "new-087-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "There's a leak in the hose that feeds the greenhouse.",
+    "expected": "There's a leak in the hose that feeds the greenhouse.",
+    "pair": 87
+  },
+  {
+    "id": "new-088-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "My username is hope and my old account is gone.",
+    "expected": "My username is hope and my old account is gone.",
+    "pair": 88
+  },
+  {
+    "id": "new-089-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "Please type the word herd into the lookup box.",
+    "expected": "Please type the word herd into the lookup box.",
+    "pair": 89
+  },
+  {
+    "id": "new-090-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "We can meet after lunch or go home before the rain.",
+    "expected": "We can meet after lunch or go home before the rain.",
+    "pair": 90
+  },
+  {
+    "id": "new-091-literal",
+    "kind": "intentional-literal",
+    "source": "authored",
+    "split": "fresh",
+    "typed": "I think sent is the tense the worksheet calls for.",
+    "expected": "I think sent is the tense the worksheet calls for.",
+    "pair": 91
+  }
+]

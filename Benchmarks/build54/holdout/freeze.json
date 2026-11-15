@@ -1,0 +1,62 @@
+{
+  "authoring": "A separate authoring pass for build 54 with no access to baseline or candidate predictions.",
+  "desktop_sha256": "3923227845fa16c0314f9282ec14eed8d3b94042b728dc8efd1ddf72a2c70df4",
+  "edits_per_noisy_sentence": {
+    "1": 63,
+    "2": 75
+  },
+  "exclusion_normalized_key_counts": {
+    "build53_desktop-check": 2502,
+    "build53_development": 196,
+    "build53_holdout": 298,
+    "desktop_typed_and_reference": 170420,
+    "prior_fixtures": 64355,
+    "taskmaster_and_local_phrase_practice": 131184,
+    "tatoeba_cc0": 41515,
+    "uci_sms_ham": 4500
+  },
+  "fixture_sha256": "e71c52a280af2ec97c94fbc5fd6da8216cf9de56a49e569b20931a5ccb9be6ce",
+  "maximum_reference_word_sequence_similarity": {
+    "against_build53_holdout_references": 0.631579,
+    "within_new_references": 0.416667
+  },
+  "name_case_per_companion": {
+    "all_caps": 1,
+    "capitalized": 17,
+    "lowercase": 20
+  },
+  "noisy_edit_categories": {
+    "missing-space": 45,
+    "ordinary": 101,
+    "real-word": 67
+  },
+  "noisy_pair_kinds": {
+    "missing-space": 24,
+    "mixed": 41,
+    "ordinary": 33,
+    "real-word": 40
+  },
+  "normalized_form_overlaps": {
+    "build53_desktop-check": 0,
+    "build53_development": 0,
+    "build53_holdout": 0,
+    "desktop_typed_and_reference": 0,
+    "prior_fixtures": 0,
+    "taskmaster_and_local_phrase_practice": 0,
+    "tatoeba_cc0": 0,
+    "uci_sms_ham": 0
+  },
+  "pair_sources": {
+    "independently-authored": 138
+  },
+  "pairs_with_two_or_more_edits": 75,
+  "protected_occurrences_including_clean_and_noisy": {
+    "name": 76,
+    "slang": 58
+  },
+  "rows": 276,
+  "source_annotation_sha256": "9359d1d7f2e559afb2228e5de5dfa97c05fef168d376d1b5b4f2282e4871b724",
+  "taskmaster_sha256": "edc28ced48aeaa75702590ccde3de70a283370d152323749b16c75b8984ce655",
+  "uci_archive_sha256": "1587ea43e58e82b14ff1f5425c88e17f8496bfcdb67a583dbff9eefaf9963ce3",
+  "unique_references": 138
+}

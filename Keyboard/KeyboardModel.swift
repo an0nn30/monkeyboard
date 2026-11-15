@@ -67,8 +67,8 @@ struct KeyboardModel: Equatable {
             bottom += [digit(0), .delete]
             return [(1...3).map(digit), (4...6).map(digit), (7...9).map(digit), bottom]
         case .letters: lines = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
-        case .numbers: lines = ["1234567890", "-/:;()$&@", ".,?!'"]
-        case .symbols: lines = ["[]{}#%^*+=", "_\\|~<>€£¥", ".,?!'"]
+        case .numbers: lines = ["1234567890", "-/:;()$&@\"", ".,?!'"]
+        case .symbols: lines = ["[]{}#%^*+=", "_\\|~<>€£¥\"", ".,?!'"]
         }
         var rows = lines.map { line in
             line.map { character in

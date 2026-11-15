@@ -1,0 +1,2 @@
+context=12 candidates=8 first_ms=0.865917 warm_p50_ms=0.005 warm_p95_ms=0.005542
+context=128 candidates=8 first_ms=0.013875 warm_p50_ms=0.013083 warm_p95_ms=0.016875

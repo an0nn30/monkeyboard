@@ -1,0 +1,10 @@
+{
+  "sim": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+  "shards": 2,
+  "replay_sha256": "d361e1226df9041b566a0576f0b571b8d08d3099e522111e2a4b0d914cee61ea",
+  "fixture_sha256": "e55319af0a13f2a8e327cc6858e0e7167faf896154219c5cb2f145dca3713488",
+  "stderr": [
+    "2026-11-15 09:10:45.438 replay[46156:7093617] Successfully load keyboard extensions\n{\"median_message_ms\":2533.938875014428,\"p95_message_ms\":4289.346874982584,\"peak_process_rss_bytes\":641908736}\n",
+    "2026-11-15 09:10:45.438 replay[46157:7093619] Successfully load keyboard extensions\n{\"median_message_ms\":2184.9178333068267,\"p95_message_ms\":3750.7797083817422,\"peak_process_rss_bytes\":623919104}\n"
+  ]
+}

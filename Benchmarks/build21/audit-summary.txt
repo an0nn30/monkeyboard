@@ -1,0 +1,29 @@
+build group cases recovered exact false_splits changed_intended
+audit20	be-by	66	0	0	0	0
+audit20	all	2451	909	1908	3	76
+audit20	if-of	126	90	89	0	2
+audit20	id-is	126	65	62	0	4
+audit20	od-of	126	112	110	0	2
+audit20	ti-to	96	84	80	0	4
+audit20	other-short	165	109	102	1	8
+audit20	long-typo	204	175	171	1	4
+audit20	join	480	274	265	1	13
+audit20	keep-be	165	0	160	0	8
+audit20	keep-if	57	0	47	0	11
+audit20	clean	840	0	822	0	20
+audit21	be-by	66	13	13	0	0
+audit21	all	2451	1039	2036	3	76
+audit21	if-of	126	107	104	0	3
+audit21	id-is	126	91	87	0	4
+audit21	od-of	126	112	110	0	2
+audit21	ti-to	96	84	80	0	4
+audit21	other-short	165	110	103	1	8
+audit21	long-typo	204	175	171	1	4
+audit21	join	480	347	338	1	13
+audit21	keep-be	165	0	160	0	8
+audit21	keep-if	57	0	47	0	11
+audit21	clean	840	0	823	0	19
+exact increases 129 decreases 1
+recovered increases 130 decreases 0
+false_splits increases 0 decreases 0
+changed_intended increases 1 decreases 1

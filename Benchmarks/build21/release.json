@@ -1,0 +1,60 @@
+{
+  "status": "HOLD",
+  "targets": {
+    "recovery": 0.99,
+    "clean_preservation": 0.999,
+    "correct_when_changed": 0.995
+  },
+  "builds": {
+    "20": {
+      "counts": {
+        "cases": 2451,
+        "exact": 1908,
+        "false_splits": 3,
+        "with_false_split": 3,
+        "recovered": 909,
+        "changed_intended": 76,
+        "errors": 1389,
+        "clean": 1062,
+        "clean_exact": 1029,
+        "modified": 978,
+        "modified_exact": 879
+      },
+      "rates": {
+        "recovery": 0.6544276457883369,
+        "clean_preservation": 0.9689265536723164,
+        "correct_when_changed": 0.8987730061349694
+      },
+      "failed": [
+        "recovery",
+        "clean_preservation",
+        "correct_when_changed"
+      ]
+    },
+    "21": {
+      "counts": {
+        "cases": 2451,
+        "exact": 2036,
+        "false_splits": 3,
+        "with_false_split": 3,
+        "recovered": 1039,
+        "changed_intended": 76,
+        "errors": 1389,
+        "clean": 1062,
+        "clean_exact": 1030,
+        "modified": 1097,
+        "modified_exact": 1006
+      },
+      "rates": {
+        "recovery": 0.748020158387329,
+        "clean_preservation": 0.9698681732580038,
+        "correct_when_changed": 0.9170464904284412
+      },
+      "failed": [
+        "recovery",
+        "clean_preservation",
+        "correct_when_changed"
+      ]
+    }
+  }
+}

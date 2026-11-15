@@ -1,0 +1,935 @@
+id	split	kind	typed	expected	gap	slot
+be-by0	heldout	be-by	Did you check if I can get a table outside be the water?	Did you check if I can get a table outside by the water?		10
+be-by1	heldout	be-by	The one be union square, manhattan.	The one by union square, manhattan.		2
+be-by2	heldout	be-by	Middle of the theater, be an isle.	Middle of the theater, by an isle.		4
+be-by3	heldout	be-by	Or just not be the fireplace?	Or just not by the fireplace?		3
+be-by4	heldout	be-by	Nah I want to be be myself.	Nah I want to be by myself.		5
+be-by5	heldout	be-by	The place be my work would be nice, I could go on my lunch break.	The place by my work would be nice, I could go on my lunch break.		2
+be-by6	heldout	be-by	I'll be going be the Starbucks on Nicholasville road in Lexington Kentucky.	I'll be going by the Starbucks on Nicholasville road in Lexington Kentucky.		3
+be-by7	heldout	be-by	Well, I will get there be then.	Well, I will get there by then.		5
+be-by8	heldout	be-by	The one be my house please.	The one by my house please.		2
+be-by9	heldout	be-by	Yep, it's just me be myself.	Yep, it's just me by myself.		4
+be-by10	heldout	be-by	By the way, I need to have my car towed to the auto repair shop be Thursday because I cannot drive it there.	By the way, I need to have my car towed to the auto repair shop by Thursday because I cannot drive it there.		15
+be-by11	heldout	be-by	No, I will just play it be ear.	No, I will just play it by ear.		6
+be-by12	heldout	be-by	Yes I pass be that everyday that will be great.	Yes I pass by that everyday that will be great.		3
+od-of0	heldout	od-of	Yes, I would like to have gluten free crust on both od the pizzas.	Yes, I would like to have gluten free crust on both of the pizzas.		11
+od-of1	heldout	od-of	Ok please order from the Starbucks on the corner od Clark and Deming.	Ok please order from the Starbucks on the corner of Clark and Deming.		9
+od-of2	heldout	od-of	I want to make reservations for some type od Asian food tonight, any suggestions?	I want to make reservations for some type of Asian food tonight, any suggestions?		8
+od-of3	heldout	od-of	Preferably towards the back od the theatre.	Preferably towards the back of the theatre.		4
+od-of4	heldout	od-of	I'm thinking od Jalapenos and Pepperoni as the topping choices.	I'm thinking of Jalapenos and Pepperoni as the topping choices.		2
+od-of5	heldout	od-of	I'm in need od a favor?	I'm in need of a favor?		3
+od-of6	heldout	od-of	Oh and one od the New York I would like cheese in the crust.	Oh and one of the New York I would like cheese in the crust.		3
+od-of7	heldout	od-of	Just have them put ham on it instead od pork sausage.	Just have them put ham on it instead of pork sausage.		8
+od-of8	heldout	od-of	Do any od those times have preferred seating?	Do any of those times have preferred seating?		2
+od-of9	heldout	od-of	I was thinking the Starbucks off od Durham-Chapel Hill Blvd in Durham?	I was thinking the Starbucks off of Durham-Chapel Hill Blvd in Durham?		6
+od-of10	heldout	od-of	I want the Almond Milk, and if they are out od that I would like the Coconut Milk.	I want the Almond Milk, and if they are out of that I would like the Coconut Milk.		10
+od-of11	heldout	od-of	Yes, I would like seating at one od their teppan tables, please, with the chef.	Yes, I would like seating at one of their teppan tables, please, with the chef.		7
+od-of12	heldout	od-of	Yes in the middle od the back row.	Yes in the middle of the back row.		4
+od-of13	heldout	od-of	I'm eating with some co-workers, but I want most od the pizza to myself.	I'm eating with some co-workers, but I want most of the pizza to myself.		10
+od-of14	heldout	od-of	That's a bit outside od my budget!	That's a bit outside of my budget!		4
+od-of15	heldout	od-of	I'd like a small splash od half and half.	I'd like a small splash of half and half.		5
+od-of16	heldout	od-of	Great, can i get a summary od the reservation.	Great, can i get a summary of the reservation.		6
+od-of17	heldout	od-of	Yeah give me a small order od cheese sticks.	Yeah give me a small order of cheese sticks.		6
+od-of18	heldout	od-of	I'll add a pint od Butter Pecan.	I'll add a pint of Butter Pecan.		4
+od-of19	heldout	od-of	No actually it wont, I really need it taken care od today because I'm going out on a date.	No actually it wont, I really need it taken care of today because I'm going out on a date.		10
+od-of20	heldout	od-of	One od the back doors won't unlock.	One of the back doors won't unlock.		1
+od-of21	heldout	od-of	No, please give me a list od available theaters.	No, please give me a list of available theaters.		6
+od-of22	heldout	od-of	I want a Grande caramel frapuccino with an extra shot od espresso, and no whipped cream.	I want a Grande caramel frapuccino with an extra shot of espresso, and no whipped cream.		10
+od-of23	heldout	od-of	Sure throw on a two liter od Pepsi for me.	Sure throw on a two liter of Pepsi for me.		6
+od-of24	heldout	od-of	What kind od car is it and what does the driver look like?	What kind of car is it and what does the driver look like?		2
+od-of25	heldout	od-of	I need a pump and a half od vanilla syrup.	I need a pump and a half of vanilla syrup.		7
+od-of26	heldout	od-of	Can I get that with the garlic sauce instead od red?	Can I get that with the garlic sauce instead of red?		9
+od-of27	heldout	od-of	Cool, what kind od car should I look for?	Cool, what kind of car should I look for?		3
+od-of28	heldout	od-of	Is there an option to change the number od people later?	Is there an option to change the number of people later?		8
+od-of29	heldout	od-of	I need almond milk and a pump od mocha!	I need almond milk and a pump of mocha!		7
+od-of30	heldout	od-of	Thanks for taking care od that for me.	Thanks for taking care of that for me.		4
+od-of31	heldout	od-of	I was wondering if you could buy a couple od movie tickets for me?	I was wondering if you could buy a couple of movie tickets for me?		9
+od-of32	heldout	od-of	There will be six od us.	There will be six of us.		4
+od-of33	heldout	od-of	Yes could I get two orders od breadsticks?	Yes could I get two orders of breadsticks?		6
+od-of34	heldout	od-of	Thank you for all od your help.	Thank you for all of your help.		4
+od-of35	heldout	od-of	what about the expresso machine being out od order?	what about the expresso machine being out of order?		7
+od-of36	heldout	od-of	But instead od pepperoni can I sub it with green olives?	But instead of pepperoni can I sub it with green olives?		2
+od-of37	heldout	od-of	Please give me a recap od the appointment, i totally forgot what you said.	Please give me a recap of the appointment, i totally forgot what you said.		5
+od-of38	heldout	od-of	Yes, do you know if they do the private grills instead od having to sit with other families?	Yes, do you know if they do the private grills instead of having to sit with other families?		11
+od-of39	heldout	od-of	Can I get a confirmation od how much it's going to cost?	Can I get a confirmation of how much it's going to cost?		5
+od-of40	heldout	od-of	Well, I would like whole milk, and and an extra shot od espresso.	Well, I would like whole milk, and and an extra shot of espresso.		11
+od-of41	heldout	od-of	Yeah, a lot od places do that nowadays.	Yeah, a lot of places do that nowadays.		3
+od-of42	heldout	od-of	Hi Stephanie can you set up an appoint to take care od my car?	Hi Stephanie can you set up an appoint to take care of my car?		11
+od-of43	heldout	od-of	No it will just be the three od us.	No it will just be the three of us.		7
+od-of44	heldout	od-of	Hmm, have you tried anything od the food they serve?	Hmm, have you tried anything of the food they serve?		5
+od-of45	heldout	od-of	Thank you, do I need to show proof od purchase?	Thank you, do I need to show proof of purchase?		8
+od-of46	heldout	od-of	Is there a lot od noise in the outdoor seating area?	Is there a lot of noise in the outdoor seating area?		4
+od-of47	heldout	od-of	We could place our child on the inside od the booth.	We could place our child on the inside of the booth.		8
+od-of48	heldout	od-of	Do either od them offer outdoor seating?	Do either of them offer outdoor seating?		2
+od-of49	heldout	od-of	What is the cost od each of them?	What is the cost of each of them?		4
+od-of50	heldout	od-of	I need some type od coffee.	I need some type of coffee.		4
+od-of51	heldout	od-of	Yes, as you know, I'm a vegetarian, so please make a note in the reservation od that.	Yes, as you know, I'm a vegetarian, so please make a note in the reservation of that.		15
+od-of52	heldout	od-of	I need a total od two tickets.	I need a total of two tickets.		4
+od-of53	heldout	od-of	It's downtown off od K street.	It's downtown off of K street.		3
+od-of54	heldout	od-of	Could you get me the price od a large drink?	Could you get me the price of a large drink?		6
+od-of55	heldout	od-of	And can I get an extra shot od espresso?	And can I get an extra shot of espresso?		7
+od-of56	heldout	od-of	Correct, And if they're out od that?	Correct, And if they're out of that?		5
+od-of57	heldout	od-of	I am out od here in a few minutes, so home please.	I am out of here in a few minutes, so home please.		3
+od-of58	heldout	od-of	Im not positive feels like one od the back tires.	Im not positive feels like one of the back tires.		6
+od-of59	heldout	od-of	There is less od a chance of kids.	There is less of a chance of kids.		3
+od-of60	heldout	od-of	I want a specialty pizza with lots od meat.	I want a specialty pizza with lots of meat.		7
+od-of61	heldout	od-of	I need to find a restaurant in Las Vegas for up coming function with the client at the end od the month.	I need to find a restaurant in Las Vegas for up coming function with the client at the end of the month.		19
+od-of62	heldout	od-of	Meh, I don't like any od those.	Meh, I don't like any of those.		5
+od-of63	heldout	od-of	Do they have one near the back od the restaurant?	Do they have one near the back of the restaurant?		7
+od-of64	heldout	od-of	As close to the middle od the theater as possible.	As close to the middle of the theater as possible.		5
+od-of65	heldout	od-of	Is there a grace period od time if we are running late?	Is there a grace period of time if we are running late?		5
+od-of66	heldout	od-of	There is a lot od smoke coming out of the engine.	There is a lot of smoke coming out of the engine.		4
+od-of67	heldout	od-of	Onions instead od black olives, got it.	Onions instead of black olives, got it.		2
+od-of68	heldout	od-of	Can you let me know the cost od that one?	Can you let me know the cost of that one?		7
+od-of69	heldout	od-of	Is that available, or is that like a first come, first served kind od thing?	Is that available, or is that like a first come, first served kind of thing?		13
+od-of70	heldout	od-of	I would like a bottle od champagne chilled and waiting for us on the table immediately when we arrive.	I would like a bottle of champagne chilled and waiting for us on the table immediately when we arrive.		5
+od-of71	heldout	od-of	A lot od Mike's friends and family are coming in to surprise him.	A lot of Mike's friends and family are coming in to surprise him.		2
+od-of72	heldout	od-of	No, you took care od everything.	No, you took care of everything.		4
+od-of73	heldout	od-of	AI can you add one bottle od water and give a new subtotal?	AI can you add one bottle of water and give a new subtotal?		6
+od-of74	heldout	od-of	What kind od food are the last two?	What kind of food are the last two?		2
+od-of75	heldout	od-of	I'll think od something else.	I'll think of something else.		2
+od-of76	heldout	od-of	What kind od seating do they have?	What kind of seating do they have?		2
+od-of77	heldout	od-of	yeah, add an order od crazy bread and dipping sauce.	yeah, add an order of crazy bread and dipping sauce.		4
+od-of78	heldout	od-of	Okay, do it with ham instead od Canadian bacon.	Okay, do it with ham instead of Canadian bacon.		6
+od-of79	heldout	od-of	No,all od my needs have been met.	No,all of my needs have been met.		2
+od-of80	heldout	od-of	So far I just have a two liter od pepsi and mountain dew, large two topping pizza and brownies?	So far I just have a two liter of pepsi and mountain dew, large two topping pizza and brownies?		8
+od-of81	heldout	od-of	Please request one od the window tables instead.	Please request one of the window tables instead.		3
+od-of82	heldout	od-of	Oh yeah, can I get a shot od vanilla syrup in it?	Oh yeah, can I get a shot of vanilla syrup in it?		7
+od-of83	heldout	od-of	Can you get me tickets to a showing od Aquaman?	Can you get me tickets to a showing of Aquaman?		8
+od-of84	heldout	od-of	I need a lot od caffeine today.	I need a lot of caffeine today.		4
+od-of85	heldout	od-of	I am thinking now instead od Joe's Stone Crabs for dinner tonight.	I am thinking now instead of Joe's Stone Crabs for dinner tonight.		5
+od-of86	heldout	od-of	Just order coke for both od us.	Just order coke for both of us.		5
+od-of87	heldout	od-of	What is the name od the restaurant?	What is the name of the restaurant?		4
+od-of88	heldout	od-of	that would really work well since I will be out od town before my brother arrives.	that would really work well since I will be out of town before my brother arrives.		10
+od-of89	heldout	od-of	I still want the cream but add another pump od caramel syrup.	I still want the cream but add another pump of caramel syrup.		9
+od-of90	heldout	od-of	Wow, that's a lot od money, but I guess that's what I need.	Wow, that's a lot of money, but I guess that's what I need.		4
+od-of91	heldout	od-of	I'd actually like a extra pump od caramel as well.	I'd actually like a extra pump of caramel as well.		6
+od-of92	heldout	od-of	Ask them to put our company name in the front and put a welcome signage od the coming party.	Ask them to put our company name in the front and put a welcome signage of the coming party.		15
+od-of93	heldout	od-of	What kind od milk do they offer?	What kind of milk do they offer?		2
+od-of94	heldout	od-of	Can we sit in the middle od the theater, around rowE or so?	Can we sit in the middle of the theater, around rowE or so?		6
+od-of95	heldout	od-of	If they happen to be out od that pizza I will take a meat lovers pizza.	If they happen to be out of that pizza I will take a meat lovers pizza.		6
+od-of96	heldout	od-of	But one od my friends here is a vegetarian.	But one of my friends here is a vegetarian.		2
+od-of97	heldout	od-of	Also, can you ask them to make it with almond milk instead od the regular milk they use?	Also, can you ask them to make it with almond milk instead of the regular milk they use?		12
+od-of98	heldout	od-of	Can you tell me the cost od the oil change.	Can you tell me the cost of the oil change.		6
+od-of99	heldout	od-of	Oh, yes, one pump od espresso in that as well.	Oh, yes, one pump of espresso in that as well.		4
+od-of100	heldout	od-of	I want to get the Hawaiian Delite, but with Italian sausage instead od ham.	I want to get the Hawaiian Delite, but with Italian sausage instead of ham.		12
+od-of101	heldout	od-of	I'm not a huge fan od pooling, but how much would that save me?	I'm not a huge fan of pooling, but how much would that save me?		5
+od-of102	heldout	od-of	Yeah get a couple od marinara and garlics.	Yeah get a couple of marinara and garlics.		4
+od-of103	heldout	od-of	Ok, just text me a code or email a screenshot od that, and I should be good to go.	Ok, just text me a code or email a screenshot of that, and I should be good to go.		10
+od-of104	heldout	od-of	Wish I could get a ratio od how many people would of still kept their sanity.	Wish I could get a ratio of how many people would of still kept their sanity.		6
+od-of105	heldout	od-of	Do any od them have anything earlier?	Do any of them have anything earlier?		2
+od-of106	heldout	od-of	I want both od them to be extra large.	I want both of them to be extra large.		3
+od-of107	heldout	od-of	On top od the pulling, it is also squealing when it hit the brake.	On top of the pulling, it is also squealing when it hit the brake.		2
+od-of108	heldout	od-of	I can't move because I have lots od luggage.	I can't move because I have lots of luggage.		7
+od-of109	heldout	od-of	Yes thats the one, oh i was just thinking could you have them add a double shot od expresso to my drink as well?	Yes thats the one, oh i was just thinking could you have them add a double shot of expresso to my drink as well?		17
+od-of110	heldout	od-of	I'm kind od in the middle.	I'm kind of in the middle.		2
+od-of111	heldout	od-of	Do they have other type od diagnostics?	Do they have other type of diagnostics?		5
+od-of112	heldout	od-of	Yes, we need a Lyft, we've had a couple od cocktails, it's the two of us.	Yes, we need a Lyft, we've had a couple of cocktails, it's the two of us.		9
+od-of113	heldout	od-of	First od all, it is pulling to the left when I hit the brake.	First of all, it is pulling to the left when I hit the brake.		1
+od-of114	heldout	od-of	Huh, never heard od them.	Huh, never heard of them.		3
+od-of115	heldout	od-of	There are about four od us in total.	There are about four of us in total.		4
+od-of116	heldout	od-of	I don't want to go to that late od a movie.	I don't want to go to that late of a movie.		8
+od-of117	heldout	od-of	Please ask them to chill two bottles od a Sonoma County Pinot Noir - any Sonoma County Pinot will do.	Please ask them to chill two bottles of a Sonoma County Pinot Noir - any Sonoma County Pinot will do.		7
+od-of118	heldout	od-of	What is the star rating od both restaurants?	What is the star rating of both restaurants?		5
+od-of119	heldout	od-of	Just a sprinkle od oregano please.	Just a sprinkle of oregano please.		3
+od-of120	heldout	od-of	Just get something thin and without any od that crust flavoring that they sometimes add.	Just get something thin and without any of that crust flavoring that they sometimes add.		7
+od-of121	heldout	od-of	I would like to order the Louis Street Pizza instead od the pizza with pesto sauce, chicken, mozzarella cheese, and sliced tomatoes.	I would like to order the Louis Street Pizza instead of the pizza with pesto sauce, chicken, mozzarella cheese, and sliced tomatoes.		10
+od-of122	heldout	od-of	I want meat lovers for the deep dish but bacon instead od sausage and with green onions and mushrooms.	I want meat lovers for the deep dish but bacon instead of sausage and with green onions and mushrooms.		11
+od-of123	heldout	od-of	I haven't heard od Hickory falls, does it have a bar?	I haven't heard of Hickory falls, does it have a bar?		3
+od-of124	heldout	od-of	It is a sort od rattle only when I turn left.	It is a sort of rattle only when I turn left.		4
+od-of125	heldout	od-of	It seems like my car is shifting out od all wheel drive.	It seems like my car is shifting out of all wheel drive.		8
+od-of126	heldout	od-of	We are supposed to meet some friends out after this concert but all od us have been drinking and can't drive safely.	We are supposed to meet some friends out after this concert but all of us have been drinking and can't drive safely.		13
+od-of127	heldout	od-of	Please remind me od the types again?	Please remind me of the types again?		3
+od-of128	heldout	od-of	That sounds lovely, what type od menu will it have?	That sounds lovely, what type of menu will it have?		5
+od-of129	heldout	od-of	What type od car should I look out for?	What type of car should I look out for?		2
+od-of130	heldout	od-of	I want the Blond cappuccino with a pump od caramel syrup, please.	I want the Blond cappuccino with a pump of caramel syrup, please.		8
+od-of131	heldout	od-of	None od those are good for us.	None of those are good for us.		1
+od-of132	heldout	od-of	Enjoy the rest od your day!	Enjoy the rest of your day!		3
+od-of133	heldout	od-of	Good I will take a order od Caesar wings also.	Good I will take a order of Caesar wings also.		6
+od-of134	heldout	od-of	It'll be a sort od friendly meeting.	It'll be a sort of friendly meeting.		4
+od-of135	heldout	od-of	You know what, make it a tall one, instead od a short one!	You know what, make it a tall one, instead of a short one!		9
+od-of136	heldout	od-of	thank you for all od your help, have a great night!	thank you for all of your help, have a great night!		4
+od-of137	heldout	od-of	You should try a small od what I am having, they really are good.	You should try a small of what I am having, they really are good.		5
+od-of138	heldout	od-of	Yes i sure do, I don't have many od them for that reason, they are so good.	Yes i sure do, I don't have many of them for that reason, they are so good.		8
+od-of139	heldout	od-of	What kind od car should I look for?	What kind of car should I look for?		2
+od-of140	heldout	od-of	I need a venti, I have a very busy day ahead od me.	I need a venti, I have a very busy day ahead of me.		11
+od-of141	heldout	od-of	Yes, in the center od Bangkok, near the hotel I usually stay at.	Yes, in the center of Bangkok, near the hotel I usually stay at.		4
+od-of142	heldout	od-of	What sizes are availble and what flavors od milk are there?	What sizes are availble and what flavors of milk are there?		7
+od-of143	heldout	od-of	Yes, I would like the keto crust instead od the original crust for that pizza.	Yes, I would like the keto crust instead of the original crust for that pizza.		8
+od-of144	heldout	od-of	The one just off the freeway, I forgot the name od the street.	The one just off the freeway, I forgot the name of the street.		10
+od-of145	heldout	od-of	Can I also get one od those brownies because they sound good.	Can I also get one of those brownies because they sound good.		5
+od-of146	heldout	od-of	No, that's kind od early.	No, that's kind of early.		3
+od-of147	heldout	od-of	What types od specialty pizza do they have?	What types of specialty pizza do they have?		2
+od-of148	heldout	od-of	It is backfiring all od the sudden.	It is backfiring all of the sudden.		4
+od-of149	heldout	od-of	Add a Cheese Ring and a Ring od Fire.	Add a Cheese Ring and a Ring of Fire.		7
+ti-to0	heldout	ti-to	Hi, I am calling ti order a pizza.	Hi, I am calling to order a pizza.		4
+ti-to1	heldout	ti-to	Haley, I need ti meet Allison for dinner in Boston tomorrow.	Haley, I need to meet Allison for dinner in Boston tomorrow.		3
+ti-to2	heldout	ti-to	I would prefer ti sit inside so we don't get rained out.	I would prefer to sit inside so we don't get rained out.		3
+ti-to3	heldout	ti-to	We would like ti celebrate with a cocktail.	We would like to celebrate with a cocktail.		3
+ti-to4	heldout	ti-to	I think the breaks are bad, I have ti push hard or pump them.	I think the breaks are bad, I have to push hard or pump them.		8
+ti-to5	heldout	ti-to	I want ti make a reservation for Five Guys.	I want to make a reservation for Five Guys.		2
+ti-to6	heldout	ti-to	Are they able ti complete the oil change the same day?	Are they able to complete the oil change the same day?		3
+ti-to7	heldout	ti-to	I don't want ti do dishes.	I don't want to do dishes.		3
+ti-to8	heldout	ti-to	Okay how long will it take ti be here.	Okay how long will it take to be here.		6
+ti-to9	heldout	ti-to	That's a hassle when you get so used ti them coming on automatically.	That's a hassle when you get so used to them coming on automatically.		8
+ti-to10	heldout	ti-to	Thats ti long from now.	Thats to long from now.		1
+ti-to11	heldout	ti-to	Id like ti have the reclining chairs if available?	Id like to have the reclining chairs if available?		2
+ti-to12	heldout	ti-to	Would they be able ti add it if I paid extra?	Would they be able to add it if I paid extra?		4
+ti-to13	heldout	ti-to	Hello, I need ti bring my car in for some work.	Hello, I need to bring my car in for some work.		3
+ti-to14	heldout	ti-to	I would like ti sit the furthest to the back.	I would like to sit the furthest to the back.		3
+ti-to15	heldout	ti-to	Actually it is going ti take me about an hour to reach Intelligent Auto Solutions, is there any other appointment today?	Actually it is going to take me about an hour to reach Intelligent Auto Solutions, is there any other appointment today?		4
+ti-to16	heldout	ti-to	I want ti order a coffee from Starbucks.	I want to order a coffee from Starbucks.		2
+ti-to17	heldout	ti-to	Yes, I want ti be picked up now.	Yes, I want to be picked up now.		3
+ti-to18	heldout	ti-to	I'll be seeing it while I am on a trip ti Vancouver.	I'll be seeing it while I am on a trip to Vancouver.		10
+ti-to19	heldout	ti-to	I'd like you ti pick it up a little bit closer to the office.	I'd like you to pick it up a little bit closer to the office.		3
+ti-to20	heldout	ti-to	Hello I would like ti order a two topping pizza.	Hello I would like to order a two topping pizza.		4
+ti-to21	heldout	ti-to	Ok, well I would like ti book a uberxl then.	Ok, well I would like to book a uberxl then.		5
+ti-to22	heldout	ti-to	I just want ti share a ride and save a little money.	I just want to share a ride and save a little money.		3
+ti-to23	heldout	ti-to	I never would've been able ti set this up so fast.	I never would've been able to set this up so fast.		5
+ti-to24	heldout	ti-to	I would like ti order the Black and White Mocha, please.	I would like to order the Black and White Mocha, please.		3
+ti-to25	heldout	ti-to	Ya know, all the talk about the pizza has made me so hungry, I really can't wait ti eat it.	Ya know, all the talk about the pizza has made me so hungry, I really can't wait to eat it.		17
+ti-to26	heldout	ti-to	I am wanting ti see a movie tonight in Wentzville.	I am wanting to see a movie tonight in Wentzville.		3
+ti-to27	heldout	ti-to	Let's just stick ti traditional pizza sauce.	Let's just stick to traditional pizza sauce.		3
+ti-to28	heldout	ti-to	Hey, would you be able ti get me a reservation at a seafood restaurant near me for tonight please?	Hey, would you be able to get me a reservation at a seafood restaurant near me for tonight please?		5
+ti-to29	heldout	ti-to	I want ti go home.	I want to go home.		2
+ti-to30	heldout	ti-to	I'm out at Palermo's in Oak Lawn and want ti head back up north to meet my friend at Starbucks.	I'm out at Palermo's in Oak Lawn and want to head back up north to meet my friend at Starbucks.		9
+ti-to31	heldout	ti-to	Let's book the tables closest ti each other.	Let's book the tables closest to each other.		5
+ti-to32	heldout	ti-to	I am at the RDU airport in North Carolina and I'm trying ti go the the Marriott City Center.	I am at the RDU airport in North Carolina and I'm trying to go the the Marriott City Center.		12
+ti-to33	heldout	ti-to	Do you have any recommendations for a good movie ti watch tonight?	Do you have any recommendations for a good movie to watch tonight?		9
+ti-to34	heldout	ti-to	No, I'll wait ti see what the mechanic says first.	No, I'll wait to see what the mechanic says first.		3
+ti-to35	heldout	ti-to	I need ti picked up at the Target store at Irving Park and Sutton road to Honda dealership in Elgin.	I need to picked up at the Target store at Irving Park and Sutton road to Honda dealership in Elgin.		2
+ti-to36	heldout	ti-to	Hey, it's me, I'm heading back ti the office.	Hey, it's me, I'm heading back to the office.		6
+ti-to37	heldout	ti-to	I would like ti order the Starbucks Blonde Vanilla Latte.	I would like to order the Starbucks Blonde Vanilla Latte.		3
+ti-to38	heldout	ti-to	Let me know when the order is in and have them send the confirmation ti my email so I can make sure it was done right.	Let me know when the order is in and have them send the confirmation to my email so I can make sure it was done right.		14
+ti-to39	heldout	ti-to	Hi, I need ti order a pizza for pick up.	Hi, I need to order a pizza for pick up.		3
+ti-to40	heldout	ti-to	Hey, I am thinking I would like ti order a pizza from Papa Johns near my house!	Hey, I am thinking I would like to order a pizza from Papa Johns near my house!		7
+ti-to41	heldout	ti-to	Okay great, will you pick them up and bring them ti the break room?	Okay great, will you pick them up and bring them to the break room?		10
+ti-to42	heldout	ti-to	Do I need ti sign any forms?	Do I need to sign any forms?		3
+ti-to43	heldout	ti-to	Correct, fill in the application ti request two days towing prior of service.	Correct, fill in the application to request two days towing prior of service.		5
+ti-to44	heldout	ti-to	I'm excited ti see it!	I'm excited to see it!		2
+ti-to45	heldout	ti-to	I'd like ti get two--no three pizzas.	I'd like to get two--no three pizzas.		2
+ti-to46	heldout	ti-to	Yes, Diane is allergic ti shellfish.	Yes, Diane is allergic to shellfish.		4
+ti-to47	heldout	ti-to	sir, we want ti veg food and drink dinner.	sir, we want to veg food and drink dinner.		3
+ti-to48	heldout	ti-to	Hi, Jenna, I'm looking ti make a reservation for this weekend at a restaurant in town.	Hi, Jenna, I'm looking to make a reservation for this weekend at a restaurant in town.		4
+ti-to49	heldout	ti-to	No, I'm open ti any actors.	No, I'm open to any actors.		3
+ti-to50	heldout	ti-to	Somewhere near the middle, I don't want ti sit too close or too far.	Somewhere near the middle, I don't want to sit too close or too far.		7
+ti-to51	heldout	ti-to	Well, we will just have ti have this looked at.	Well, we will just have to have this looked at.		5
+ti-to52	heldout	ti-to	Oh, no, I wanted ti get it in there this evening, or tomorrow morning at the latest.	Oh, no, I wanted to get it in there this evening, or tomorrow morning at the latest.		4
+ti-to53	heldout	ti-to	I need ti make an appointment for my car at an auto repair shop called Intelligent Auto Solutions.	I need to make an appointment for my car at an auto repair shop called Intelligent Auto Solutions.		2
+ti-to54	heldout	ti-to	No, I don't think so, just a receipt sent ti my phone please.	No, I don't think so, just a receipt sent to my phone please.		9
+ti-to55	heldout	ti-to	I'd like ti get dinner somewhere slightly upscale.	I'd like to get dinner somewhere slightly upscale.		2
+ti-to56	heldout	ti-to	Thank you, and they're located on the strip next ti the Flamingo, right?	Thank you, and they're located on the strip next to the Flamingo, right?		9
+ti-to57	heldout	ti-to	Dine in, I want ti reserve a sit their.	Dine in, I want to reserve a sit their.		4
+ti-to58	heldout	ti-to	Hi, I'm trying ti figure out where I want to go for dinner tonight.	Hi, I'm trying to figure out where I want to go for dinner tonight.		3
+ti-to59	heldout	ti-to	I had an appointment in Paducah and am on my way ti the mall now.	I had an appointment in Paducah and am on my way to the mall now.		11
+ti-to60	heldout	ti-to	I forgot ti ask, what are the prices?	I forgot to ask, what are the prices?		2
+ti-to61	heldout	ti-to	I need ti find a restaurant for dinner.	I need to find a restaurant for dinner.		2
+ti-to62	heldout	ti-to	Hello, I need ti make an auto appointment.	Hello, I need to make an auto appointment.		3
+ti-to63	heldout	ti-to	My car has issues, can you arrange ti get it into the shop?	My car has issues, can you arrange to get it into the shop?		7
+ti-to64	heldout	ti-to	Hi, I'd like ti have a pizza delivered.	Hi, I'd like to have a pizza delivered.		3
+ti-to65	heldout	ti-to	I would like ti go with Magiano's.	I would like to go with Magiano's.		3
+ti-to66	heldout	ti-to	I need ti go to the mall for work.	I need to go to the mall for work.		2
+ti-to67	heldout	ti-to	I want ti buy another special again.	I want to buy another special again.		2
+ti-to68	heldout	ti-to	I'd like ti do pepperoni and olives.	I'd like to do pepperoni and olives.		2
+ti-to69	heldout	ti-to	Ok, switch ti red onions then.	Ok, switch to red onions then.		2
+ti-to70	heldout	ti-to	Hi, I would like ti order some coffee.	Hi, I would like to order some coffee.		4
+ti-to71	heldout	ti-to	I think I want ti get some movie tickets to go see Dumbo or Pet Cemetary.	I think I want to get some movie tickets to go see Dumbo or Pet Cemetary.		4
+ti-to72	heldout	ti-to	I want tickets ti What Men Want.	I want tickets to What Men Want.		3
+ti-to73	heldout	ti-to	Im running late and won't have time ti make dinner tonight.	Im running late and won't have time to make dinner tonight.		7
+ti-to74	heldout	ti-to	I'd like you ti place a pizza order to pickup?	I'd like you to place a pizza order to pickup?		3
+ti-to75	heldout	ti-to	I'd like ti go to Cerritos mall please.	I'd like to go to Cerritos mall please.		2
+ti-to76	heldout	ti-to	I'd like ti place an order for Starbucks.	I'd like to place an order for Starbucks.		2
+ti-to77	heldout	ti-to	Hi, I want ti see The Mule, what times do you have available tonight?	Hi, I want to see The Mule, what times do you have available tonight?		3
+ti-to78	heldout	ti-to	Yes, I actually would like ti go to the AMC Fashion Valley theater.	Yes, I actually would like to go to the AMC Fashion Valley theater.		5
+ti-to79	heldout	ti-to	I want ti see it at the AMC Garden State.	I want to see it at the AMC Garden State.		2
+ti-to80	heldout	ti-to	I want ti take my mom out for sushi tonight.	I want to take my mom out for sushi tonight.		2
+ti-to81	heldout	ti-to	Hmmm, actually forget it, let me go ti a Chinese place instead.	Hmmm, actually forget it, let me go to a Chinese place instead.		7
+ti-to82	heldout	ti-to	I went ti a pizza place after a show once but I forget the name.	I went to a pizza place after a show once but I forget the name.		2
+ti-to83	heldout	ti-to	Late evening, since I'll still have ti drive up there.	Late evening, since I'll still have to drive up there.		6
+ti-to84	heldout	ti-to	I need ti book a reservation at either Giggles or Chuckles.	I need to book a reservation at either Giggles or Chuckles.		2
+ti-to85	heldout	ti-to	Hi, I'd like ti get a ride!	Hi, I'd like to get a ride!		3
+ti-to86	heldout	ti-to	I want two tickets ti Captain Marvel.	I want two tickets to Captain Marvel.		4
+ti-to87	heldout	ti-to	Hi, I'd like ti order some coffee from Starbucks.	Hi, I'd like to order some coffee from Starbucks.		3
+ti-to88	heldout	ti-to	Assistant, can you send ti my email, the routing directions from my home to the theater.	Assistant, can you send to my email, the routing directions from my home to the theater.		4
+ti-to89	heldout	ti-to	Hey, I'd like ti buy tickets to go see the Lego Movie.	Hey, I'd like to buy tickets to go see the Lego Movie.		3
+ti-to90	heldout	ti-to	Hey, I need a ride ti the airport.	Hey, I need a ride to the airport.		5
+ti-to91	heldout	ti-to	Hey assistant, I'd like ti order a drink from Starbucks.	Hey assistant, I'd like to order a drink from Starbucks.		4
+ti-to92	heldout	ti-to	Can you senda confirmation ti my email on file?	Can you senda confirmation to my email on file?		4
+ti-to93	heldout	ti-to	I need ti go to the AMC theatre in Barrington.	I need to go to the AMC theatre in Barrington.		2
+ti-to94	heldout	ti-to	I would like ti get an uber for myself and two others.	I would like to get an uber for myself and two others.		3
+ti-to95	heldout	ti-to	Nope, and worse there's some side ti side jolting whenever I turn too.	Nope, and worse there's some side to side jolting whenever I turn too.		6
+ti-to96	heldout	ti-to	If I buy my tickets online do I have ti pay fees?	If I buy my tickets online do I have to pay fees?		9
+ti-to97	heldout	ti-to	I want ti bring it in ASAP, today if possible.	I want to bring it in ASAP, today if possible.		2
+ti-to98	heldout	ti-to	I want ti buy tickets to Cold Pursuit.	I want to buy tickets to Cold Pursuit.		2
+ti-to99	heldout	ti-to	Hello, I need ti make a car appointment please.	Hello, I need to make a car appointment please.		3
+ti-to100	heldout	ti-to	Will you please order me a ride from Meadowood Mall ti Aces Ballpark.	Will you please order me a ride from Meadowood Mall to Aces Ballpark.		10
+ti-to101	heldout	ti-to	Let's add that ti the pizzas.	Let's add that to the pizzas.		3
+ti-to102	heldout	ti-to	I want ti get some tickets to the movie US.	I want to get some tickets to the movie US.		2
+ti-to103	heldout	ti-to	Hello, I'd like ti have you book an appointment at Intelligent Auto Solutions.	Hello, I'd like to have you book an appointment at Intelligent Auto Solutions.		3
+ti-to104	heldout	ti-to	Yes, I like ti use Intelligent Auto Solutions on the west side.	Yes, I like to use Intelligent Auto Solutions on the west side.		3
+ti-to105	heldout	ti-to	Hi Cheryl, I would like ti order my favorite pizza.	Hi Cheryl, I would like to order my favorite pizza.		5
+ti-to106	heldout	ti-to	I want ti be away from the kitchen, if possible.	I want to be away from the kitchen, if possible.		2
+ti-to107	heldout	ti-to	I would like the second pizza ti have black olives and bacon.	I would like the second pizza to have black olives and bacon.		6
+ti-to108	heldout	ti-to	Well just ti give you a heads up be very careful over there.	Well just to give you a heads up be very careful over there.		2
+ti-to109	heldout	ti-to	Hello, yes I need ti have my turck seviced.	Hello, yes I need to have my turck seviced.		4
+ti-to110	heldout	ti-to	I want ti get a sixteen inch pizza.	I want to get a sixteen inch pizza.		2
+ti-to111	heldout	ti-to	I need ti get this taken care of.	I need to get this taken care of.		2
+ti-to112	heldout	ti-to	And we want ti see it in IMAX.	And we want to see it in IMAX.		3
+ti-to113	heldout	ti-to	I would like ti pay with cash when I arrive.	I would like to pay with cash when I arrive.		3
+ti-to114	heldout	ti-to	Are you able ti book some for me?	Are you able to book some for me?		3
+ti-to115	heldout	ti-to	Well sounds good ti me then.	Well sounds good to me then.		3
+ti-to116	heldout	ti-to	I need ti stretch my legs anyway.	I need to stretch my legs anyway.		2
+ti-to117	heldout	ti-to	No, ask them ti add an extra espresso shot.	No, ask them to add an extra espresso shot.		3
+ti-to118	heldout	ti-to	It's okay, I won't take her out ti dinner anymore.	It's okay, I won't take her out to dinner anymore.		7
+ti-to119	heldout	ti-to	I would like you ti order me a pizza from Ramos.	I would like you to order me a pizza from Ramos.		4
+ti-to120	heldout	ti-to	Yes, can you ask them ti substitute extra peppers for the mushrooms?	Yes, can you ask them to substitute extra peppers for the mushrooms?		5
+ti-to121	heldout	ti-to	I want ti order a pizza from Isabell's Pizzeria for pickup.	I want to order a pizza from Isabell's Pizzeria for pickup.		2
+ti-to122	heldout	ti-to	I need ti be picked up at the Hartsfield-Jackson Atlanta International Airport.	I need to be picked up at the Hartsfield-Jackson Atlanta International Airport.		2
+ti-to123	heldout	ti-to	Use my Visa ti pay.	Use my Visa to pay.		3
+ti-to124	heldout	ti-to	I'm not sure, trying ti decide between Adriatico's and Murphy's in Columbus, Ohio.	I'm not sure, trying to decide between Adriatico's and Murphy's in Columbus, Ohio.		4
+ti-to125	heldout	ti-to	I need ti be picked up as soon as possible.	I need to be picked up as soon as possible.		2
+ti-to126	heldout	ti-to	I'm going from the SF MOMA ti SFO.	I'm going from the SF MOMA to SFO.		6
+ti-to127	heldout	ti-to	Hey, I'm looking for a movie ti watch.	Hey, I'm looking for a movie to watch.		6
+ti-to128	heldout	ti-to	Hello, can I place an order ti go please?	Hello, can I place an order to go please?		6
+ti-to129	heldout	ti-to	The smoke is thick, I don't want ti wait.	The smoke is thick, I don't want to wait.		7
+keep-be0	heldout	keep-be	When will my order be ready?	When will my order be ready?		
+keep-be1	heldout	keep-be	It is going to be in a normal theater.	It is going to be in a normal theater.		
+keep-be2	heldout	keep-be	I'll be the one dropping it off.	I'll be the one dropping it off.		
+keep-be3	heldout	keep-be	So i wont be hungry.	So i wont be hungry.		
+keep-be4	heldout	keep-be	Ok, well if we can't get close to the fireplace I would just rather be inside.	Ok, well if we can't get close to the fireplace I would just rather be inside.		
+keep-be5	heldout	keep-be	I can be ready now, so as soon as possible.	I can be ready now, so as soon as possible.		
+keep-be6	heldout	keep-be	I can't be home too late.	I can't be home too late.		
+keep-be7	heldout	keep-be	Please be make it on my preferred time.	Please be make it on my preferred time.		
+keep-be8	heldout	keep-be	Well they are Texas boys so we were thinking either family-style which would be a bit too casual.	Well they are Texas boys so we were thinking either family-style which would be a bit too casual.		
+keep-be9	heldout	keep-be	Yes that would be fine.	Yes that would be fine.		
+keep-be10	heldout	keep-be	Will there be an inspection fee?	Will there be an inspection fee?		
+keep-be11	heldout	keep-be	My husband and I will be there this Wednesday.	My husband and I will be there this Wednesday.		
+keep-be12	heldout	keep-be	It's just me so UberX will be fine.	It's just me so UberX will be fine.		
+keep-be13	heldout	keep-be	Your receipt will be sent to your mobile device via text message.	Your receipt will be sent to your mobile device via text message.		
+keep-be14	heldout	keep-be	Yeah, that will be fine.	Yeah, that will be fine.		
+keep-be15	heldout	keep-be	The nearest Applebee will be good.	The nearest Applebee will be good.		
+keep-be16	heldout	keep-be	No that should be it.	No that should be it.		
+keep-be17	heldout	keep-be	Yeah that would be fine with me.	Yeah that would be fine with me.		
+keep-be18	heldout	keep-be	No actually I want to try something different, and I'll just be leaving the office.	No actually I want to try something different, and I'll just be leaving the office.		
+keep-be19	heldout	keep-be	That would be all for tonight.	That would be all for tonight.		
+keep-be20	heldout	keep-be	In York, Pa would be fine.	In York, Pa would be fine.		
+keep-be21	heldout	keep-be	The Dominos on Telegraph would be great, thanks.	The Dominos on Telegraph would be great, thanks.		
+keep-be22	heldout	keep-be	I need to be picked up from Joe's Bar in Streamwood on Main Street.	I need to be picked up from Joe's Bar in Streamwood on Main Street.		
+keep-be23	heldout	keep-be	Coconut milk will be great thanks.	Coconut milk will be great thanks.		
+keep-be24	heldout	keep-be	Would it also be possible to put honey and lessen the sugar.	Would it also be possible to put honey and lessen the sugar.		
+keep-be25	heldout	keep-be	That's fine, I assumed it would be something like that.	That's fine, I assumed it would be something like that.		
+keep-be26	heldout	keep-be	It will be a interesting.	It will be a interesting.		
+keep-be27	heldout	keep-be	when is it going to be ready?	when is it going to be ready?		
+keep-be28	heldout	keep-be	Yeah, I'm going to be here at the office a little later than usual.	Yeah, I'm going to be here at the office a little later than usual.		
+keep-be29	heldout	keep-be	Perfect, we won't be far from there.	Perfect, we won't be far from there.		
+keep-be30	heldout	keep-be	I will be back soon to get a ticket bye for now.	I will be back soon to get a ticket bye for now.		
+keep-be31	heldout	keep-be	No, that should be it with my coffee.	No, that should be it with my coffee.		
+keep-be32	heldout	keep-be	I need to be picked up at the IHOP on West Irlo Bronson Memorial Highway in Kissimmee, Florida, and I want to be taken to Walt Disney World.	I need to be picked up at the IHOP on West Irlo Bronson Memorial Highway in Kissimmee, Florida, and I want to be taken to Walt Disney World.		
+keep-be33	heldout	keep-be	I think that will be all for me.	I think that will be all for me.		
+keep-be34	heldout	keep-be	I'll be at the office soon.	I'll be at the office soon.		
+keep-be35	heldout	keep-be	When will this be ready?	When will this be ready?		
+keep-be36	heldout	keep-be	It needs to be a place that specializes in foreign cars.	It needs to be a place that specializes in foreign cars.		
+keep-be37	heldout	keep-be	Nope, that should be it.	Nope, that should be it.		
+keep-be38	heldout	keep-be	Ok so there's a chance we might be inside?	Ok so there's a chance we might be inside?		
+keep-be39	heldout	keep-be	Okay, half and half will be fine.	Okay, half and half will be fine.		
+keep-be40	heldout	keep-be	Did they say when it would be ready?	Did they say when it would be ready?		
+keep-be41	heldout	keep-be	A large will be fine.	A large will be fine.		
+keep-be42	heldout	keep-be	Yes that will be perfect.	Yes that will be perfect.		
+keep-be43	heldout	keep-be	No, thanks, I just wanted to be sure we could stay there for at least a few hours!	No, thanks, I just wanted to be sure we could stay there for at least a few hours!		
+keep-be44	heldout	keep-be	Yes, a booth would be great.	Yes, a booth would be great.		
+keep-be45	heldout	keep-be	No that should be all thank you.	No that should be all thank you.		
+keep-be46	heldout	keep-be	Around noon would be nice.	Around noon would be nice.		
+keep-be47	heldout	keep-be	This will be placed on my company account correct?	This will be placed on my company account correct?		
+keep-be48	heldout	keep-be	No no no, this needs to be fixed like tomorrow.	No no no, this needs to be fixed like tomorrow.		
+keep-be49	heldout	keep-be	I will be having dinner before i reach the theatre.	I will be having dinner before i reach the theatre.		
+keep-be50	heldout	keep-be	I will be in the Boca Raton, Florida area.	I will be in the Boca Raton, Florida area.		
+keep-be51	heldout	keep-be	When will the order be ready?	When will the order be ready?		
+keep-be52	heldout	keep-be	My brakes are squealing and need to be replaced.	My brakes are squealing and need to be replaced.		
+keep-be53	heldout	keep-be	It will be for two people.	It will be for two people.		
+keep-be54	heldout	keep-be	We should be there at that time.	We should be there at that time.		
+keep-be55	heldout	keep-be	I would be coming from my home in Dallas and dropping it off in Lewisville.	I would be coming from my home in Dallas and dropping it off in Lewisville.		
+keep-be56	heldout	keep-be	I want it to be a grande.	I want it to be a grande.		
+keep-be57	heldout	keep-be	You know what, that would be fine, thank you.	You know what, that would be fine, thank you.		
+keep-be58	heldout	keep-be	Yes, that would be great.	Yes, that would be great.		
+keep-be59	heldout	keep-be	I will be waiting outside for the driver.	I will be waiting outside for the driver.		
+keep-be60	heldout	keep-be	I will need you to check the weather and let me know how warm it will be at around that time.	I will need you to check the weather and let me know how warm it will be at around that time.		
+keep-be61	heldout	keep-be	I need car to be serviced.	I need car to be serviced.		
+keep-be62	heldout	keep-be	Yes, mexican food would be nice.	Yes, mexican food would be nice.		
+keep-be63	heldout	keep-be	If I get the wrong order, I will be moody all day.	If I get the wrong order, I will be moody all day.		
+keep-be64	heldout	keep-be	It's a beautiful car but the driver-side tail light is out and what's really worrisome is it seems to be leaking oil.	It's a beautiful car but the driver-side tail light is out and what's really worrisome is it seems to be leaking oil.		
+keep-be65	heldout	keep-be	Yes that will be it.	Yes that will be it.		
+keep-be66	heldout	keep-be	No, we will be in Knoxville.	No, we will be in Knoxville.		
+keep-be67	heldout	keep-be	I will be picking it up.	I will be picking it up.		
+keep-be68	heldout	keep-be	so maybe that location would be an idea location.	so maybe that location would be an idea location.		
+keep-be69	heldout	keep-be	I need to have you get online and help me schedule an appointment for my car to be checked out.	I need to have you get online and help me schedule an appointment for my car to be checked out.		
+keep-be70	heldout	keep-be	Deep dish would be great.	Deep dish would be great.		
+keep-be71	heldout	keep-be	It always seems to be leaking oil from the bottom when I park my car.	It always seems to be leaking oil from the bottom when I park my car.		
+keep-be72	heldout	keep-be	It must be a three star restaurant.	It must be a three star restaurant.		
+keep-be73	heldout	keep-be	That should be fine because I cannot drive my car to their shop.	That should be fine because I cannot drive my car to their shop.		
+keep-be74	heldout	keep-be	We also are going to need outdoor seating as he can be vocal and I don't want to disturb other diners.	We also are going to need outdoor seating as he can be vocal and I don't want to disturb other diners.		
+keep-be75	heldout	keep-be	A Large would be good.	A Large would be good.		
+keep-be76	heldout	keep-be	So the earliest night time showing would be great.	So the earliest night time showing would be great.		
+keep-be77	heldout	keep-be	Yes sir,i would like to request that be are seated at a table and chair setup versus the booth setup.	Yes sir,i would like to request that be are seated at a table and chair setup versus the booth setup.		
+keep-be78	heldout	keep-be	Yes, I believe the Shiloh, Illinois location would be the closest one to my appoinment.	Yes, I believe the Shiloh, Illinois location would be the closest one to my appoinment.		
+keep-be79	heldout	keep-be	Yes, that would be great because I can bring it in before work!	Yes, that would be great because I can bring it in before work!		
+keep-be80	heldout	keep-be	Well I need to be picked up at my house.	Well I need to be picked up at my house.		
+keep-be81	heldout	keep-be	No, just tickets will be fine.	No, just tickets will be fine.		
+keep-be82	heldout	keep-be	I am at Nashville's Grand Ole Opry and I will be going to Holiday Inn Nashville-Vanderbilt.	I am at Nashville's Grand Ole Opry and I will be going to Holiday Inn Nashville-Vanderbilt.		
+keep-be83	heldout	keep-be	There must be another good Italian place available?	There must be another good Italian place available?		
+keep-be84	heldout	keep-be	The steering wheel will sometimes lock up and be hard to turn.	The steering wheel will sometimes lock up and be hard to turn.		
+keep-be85	heldout	keep-be	How long will it be until they would arrive?	How long will it be until they would arrive?		
+keep-be86	heldout	keep-be	I would like to be adventurous today.	I would like to be adventurous today.		
+keep-be87	heldout	keep-be	No, what comes with it should be enough.	No, what comes with it should be enough.		
+keep-be88	heldout	keep-be	Yes, either will be fine.	Yes, either will be fine.		
+keep-be89	heldout	keep-be	No, that would be fine.	No, that would be fine.		
+keep-be90	heldout	keep-be	I will pay them in cash for the other half since we will be splitting the fare.	I will pay them in cash for the other half since we will be splitting the fare.		
+keep-be91	heldout	keep-be	I just want it to be there ready for me.	I just want it to be there ready for me.		
+keep-be92	heldout	keep-be	When will those be ready?	When will those be ready?		
+keep-be93	heldout	keep-be	The first one will be pepperoni with extra cheese.	The first one will be pepperoni with extra cheese.		
+keep-be94	heldout	keep-be	when will it be ready?	when will it be ready?		
+keep-be95	heldout	keep-be	Hi, will you be able to request me a Lyft?	Hi, will you be able to request me a Lyft?		
+keep-be96	heldout	keep-be	I think that will be all I need.	I think that will be all I need.		
+keep-be97	heldout	keep-be	No, I think that will be it.	No, I think that will be it.		
+keep-be98	heldout	keep-be	We should be covered with what we have.	We should be covered with what we have.		
+keep-be99	heldout	keep-be	That would be great thanks, can you reserve the seats and proceed to the checkout.	That would be great thanks, can you reserve the seats and proceed to the checkout.		
+keep-be100	heldout	keep-be	ok great, when will they be ready for pickup?	ok great, when will they be ready for pickup?		
+keep-be101	heldout	keep-be	And will that be carryout or delivery?	And will that be carryout or delivery?		
+keep-be102	heldout	keep-be	No, that should be enough.	No, that should be enough.		
+keep-be103	heldout	keep-be	That is right and I will be adding to the tip so make sure they get there on time becase it is really important.	That is right and I will be adding to the tip so make sure they get there on time becase it is really important.		
+keep-be104	heldout	keep-be	Okay, then a regular Lyft would be great, can you tell me the expected drive time.	Okay, then a regular Lyft would be great, can you tell me the expected drive time.		
+keep-be105	heldout	keep-be	Would you be able to book us then?	Would you be able to book us then?		
+keep-be106	heldout	keep-be	A booth would be great.	A booth would be great.		
+keep-be107	heldout	keep-be	I want to be done today or this evening is at all possible?	I want to be done today or this evening is at all possible?		
+keep-be108	heldout	keep-be	Should be the only one there.	Should be the only one there.		
+keep-be109	heldout	keep-be	No, that would be all.	No, that would be all.		
+keep-be110	heldout	keep-be	No that should be good, can you get that booked.	No that should be good, can you get that booked.		
+keep-be111	heldout	keep-be	Yes, let the driver know I will be wearing a San Diego Padres hat.	Yes, let the driver know I will be wearing a San Diego Padres hat.		
+keep-be112	heldout	keep-be	That's a little early but that will be fine, did they have a booth available?	That's a little early but that will be fine, did they have a booth available?		
+keep-be113	heldout	keep-be	Yes, I'll be near Overland Park.	Yes, I'll be near Overland Park.		
+keep-be114	heldout	keep-be	It will be from Pioneer Square, Portland to the PDX Airport.	It will be from Pioneer Square, Portland to the PDX Airport.		
+keep-be115	heldout	keep-be	No, thank you, this will be all.	No, thank you, this will be all.		
+keep-be116	heldout	keep-be	Okay, that will be fine.	Okay, that will be fine.		
+keep-be117	heldout	keep-be	Yeah, sure, lets do Sal's Pizza, it'll be great!	Yeah, sure, lets do Sal's Pizza, it'll be great!		
+keep-be118	heldout	keep-be	This Friday, anytime would be great.	This Friday, anytime would be great.		
+keep-be119	heldout	keep-be	I want to be sure that I get picked up on time, and get to the airport as quickly as possible.	I want to be sure that I get picked up on time, and get to the airport as quickly as possible.		
+keep-be120	heldout	keep-be	No I think that'll be all for now.	No I think that'll be all for now.		
+keep-be121	heldout	keep-be	Thanks again I'll be ready.	Thanks again I'll be ready.		
+keep-be122	heldout	keep-be	Regular sugar would be fine.	Regular sugar would be fine.		
+keep-be123	heldout	keep-be	I don't want to be kept waiting for long.	I don't want to be kept waiting for long.		
+keep-be124	heldout	keep-be	Will I be able to get a receipt when I pick it up?	Will I be able to get a receipt when I pick it up?		
+keep-be125	heldout	keep-be	That will be all Sally.	That will be all Sally.		
+keep-be126	heldout	keep-be	Well, I am no mechanic but it sounds like the brakes may be going out.	Well, I am no mechanic but it sounds like the brakes may be going out.		
+keep-be127	heldout	keep-be	It has to be Monday because it's a client meeting.	It has to be Monday because it's a client meeting.		
+keep-be128	heldout	keep-be	Delivery can be so slow.	Delivery can be so slow.		
+keep-be129	heldout	keep-be	The second one will be just extra cheese.	The second one will be just extra cheese.		
+keep-be130	heldout	keep-be	Good, when will it be ready.	Good, when will it be ready.		
+keep-be131	heldout	keep-be	No that will be all Alfred.	No that will be all Alfred.		
+keep-be132	heldout	keep-be	So, that means it would most likely be over about nine thirty?	So, that means it would most likely be over about nine thirty?		
+keep-be133	heldout	keep-be	When will it be here?	When will it be here?		
+keep-be134	heldout	keep-be	Oh that'd be great, so I know what to expect.	Oh that'd be great, so I know what to expect.		
+keep-be135	heldout	keep-be	As far in the back as you can manage, and as centered as possible would be great.	As far in the back as you can manage, and as centered as possible would be great.		
+keep-be136	heldout	keep-be	I'll be sure to do that.	I'll be sure to do that.		
+keep-be137	heldout	keep-be	It will be a group of three.	It will be a group of three.		
+keep-be138	heldout	keep-be	When will Bleeding Steel be available?	When will Bleeding Steel be available?		
+keep-be139	heldout	keep-be	Awesome, how long will the order be ready.	Awesome, how long will the order be ready.		
+keep-by0	heldout	keep-by	Actually, I'll leave the family here at Wendy's and just go by myself.	Actually, I'll leave the family here at Wendy's and just go by myself.		
+keep-by1	heldout	keep-by	I plan on staying over at a hotel close by however I will book these accommodations.	I plan on staying over at a hotel close by however I will book these accommodations.		
+keep-by2	heldout	keep-by	Can we have a table by the window in a non-smoking section?	Can we have a table by the window in a non-smoking section?		
+keep-by3	heldout	keep-by	Can you search by pizza place?	Can you search by pizza place?		
+keep-by4	heldout	keep-by	I need the movie to be over by nine.	I need the movie to be over by nine.		
+keep-by5	heldout	keep-by	Well I need it done by tomorrow so I'll take the earliest slot.	Well I need it done by tomorrow so I'll take the earliest slot.		
+keep-by6	heldout	keep-by	How about sitting by a windoW ?	How about sitting by a windoW ?		
+keep-by7	heldout	keep-by	They are specialty pizzas, so you can just select them by name.	They are specialty pizzas, so you can just select them by name.		
+keep-by8	heldout	keep-by	I'm actually offput by the whole thing.	I'm actually offput by the whole thing.		
+keep-by9	heldout	keep-by	I'd like a table by the water.	I'd like a table by the water.		
+keep-by10	heldout	keep-by	can he see me today by any chance?	can he see me today by any chance?		
+join0	heldout	join	It is for a girlfriends birthdayparty.	It is for a girlfriends birthday party.	32	
+join1	heldout	join	I'll wait on theline.	I'll wait on the line.	16	
+join2	heldout	join	What times are there for the eveninghours?	What times are there for the evening hours?	36	
+join3	heldout	join	Onone I want black olives, mozzarella balls, and spinach.	On one I want black olives, mozzarella balls, and spinach.	2	
+join4	heldout	join	HiI would like to get a ride.	Hi I would like to get a ride.	2	
+join5	heldout	join	I'd like an iced coffeeplease.	I'd like an iced coffee please.	23	
+join6	heldout	join	I'dlike to have a black and white mocha venti.	I'd like to have a black and white mocha venti.	3	
+join7	heldout	join	Hey, can you arrange foran Uber to come get me?	Hey, can you arrange for an Uber to come get me?	24	
+join8	heldout	join	I amlooking for a sushi restaurant.	I am looking for a sushi restaurant.	4	
+join9	heldout	join	Let's go withthat one.	Let's go with that one.	13	
+join10	heldout	join	Let's get a large cheesepizza as well.	Let's get a large cheese pizza as well.	24	
+join11	heldout	join	What other optionsare there?	What other options are there?	18	
+join12	heldout	join	I would like one Iced CaramelLatte with soy milk.	I would like one Iced Caramel Latte with soy milk.	29	
+join13	heldout	join	what will an ubercost?	what will an uber cost?	17	
+join14	heldout	join	ok, put the italianon the other half please.	ok, put the italian on the other half please.	19	
+join15	heldout	join	You have a nicenight.	You have a nice night.	15	
+join16	heldout	join	Well iguess I'll take the next cheapest one then.	Well i guess I'll take the next cheapest one then.	6	
+join17	heldout	join	I think I'm going togo with the Iced Caffe Mocha.	I think I'm going to go with the Iced Caffe Mocha.	20	
+join18	heldout	join	I needto get a taxi.	I need to get a taxi.	6	
+join19	heldout	join	Please charge thecard they have on file.	Please charge the card they have on file.	17	
+join20	heldout	join	He'll never see thatcoming.	He'll never see that coming.	20	
+join21	heldout	join	Like it's not getting eitherfuel, or fire somewhere.	Like it's not getting either fuel, or fire somewhere.	28	
+join22	heldout	join	Anyway, make sure the appointmentis schedule early tomorrow morning.	Anyway, make sure the appointment is schedule early tomorrow morning.	33	
+join23	heldout	join	I want Java Chip FrappuccinoBlended Coffee.	I want Java Chip Frappuccino Blended Coffee.	28	
+join24	heldout	join	Can you please order an triple icedespresso in a grande sized cup?	Can you please order an triple iced espresso in a grande sized cup?	35	
+join25	heldout	join	why does the size jump from large, to tripleextra-large?	why does the size jump from large, to triple extra-large?	44	
+join26	heldout	join	Hey, Ineed you to order me a pizza from Pizza Hut.	Hey, I need you to order me a pizza from Pizza Hut.	6	
+join27	heldout	join	I'msorry, can i add bacon to the pizza?	I'm sorry, can i add bacon to the pizza?	3	
+join28	heldout	join	Good you may place the order andstandby for delivery instructions.	Good you may place the order and standby for delivery instructions.	32	
+join29	heldout	join	I would like to order a drink fromStarbucks that's in the Manhattan Mall in NYC.	I would like to order a drink from Starbucks that's in the Manhattan Mall in NYC.	34	
+join30	heldout	join	It's a littlecold tonight, do both restaurants have indoor seating?	It's a little cold tonight, do both restaurants have indoor seating?	13	
+join31	heldout	join	Have themcharge my account with them.	Have them charge my account with them.	9	
+join32	heldout	join	Theone located at the Queens Shopping Center.	The one located at the Queens Shopping Center.	3	
+join33	heldout	join	Iwould like evening tickets.	I would like evening tickets.	1	
+join34	heldout	join	Isthere room near it to put my walker, where no one will trip over it?	Is there room near it to put my walker, where no one will trip over it?	2	
+join35	heldout	join	I recommend Chineseand Spanish.	I recommend Chinese and Spanish.	19	
+join36	heldout	join	My cars air conditionerisn't blowing cold air.	My cars air conditioner isn't blowing cold air.	23	
+join37	heldout	join	What about liveseafood cooked freshly?	What about live seafood cooked freshly?	15	
+join38	heldout	join	Contact IntelligentAuto Service and see when they can get me in.	Contact Intelligent Auto Service and see when they can get me in.	19	
+join39	heldout	join	I'll pick it upthen.	I'll pick it up then.	15	
+join40	heldout	join	Okay great, I'll waitfor the info.	Okay great, I'll wait for the info.	21	
+join41	heldout	join	I want to eatat Los Comales.	I want to eat at Los Comales.	13	
+join42	heldout	join	I'm lookingfor good Italian food.	I'm looking for good Italian food.	11	
+join43	heldout	join	I was hopingit's playing in Omaha.	I was hoping it's playing in Omaha.	12	
+join44	heldout	join	Ok that's finehow long is it gonna take to get here?	Ok that's fine how long is it gonna take to get here?	14	
+join45	heldout	join	Actually then, I don't want to seeit in IMAX at all.	Actually then, I don't want to see it in IMAX at all.	34	
+join46	heldout	join	Is there any coconutmilk in that?	Is there any coconut milk in that?	20	
+join47	heldout	join	Im driving andcant go online right now.	Im driving and cant go online right now.	14	
+join48	heldout	join	Thebrakes are having issues.	The brakes are having issues.	3	
+join49	heldout	join	Would we be able to reschedule to next Mondayinstead?	Would we be able to reschedule to next Monday instead?	45	
+join50	heldout	join	OK, do they have any vegan items on themenu?	OK, do they have any vegan items on the menu?	39	
+join51	heldout	join	I need togo from my home to the airport.	I need to go from my home to the airport.	9	
+join52	heldout	join	The motor won't shutoff.	The motor won't shut off.	20	
+join53	heldout	join	Hi, I am interested in settingan appointment to get my car looked at.	Hi, I am interested in setting an appointment to get my car looked at.	30	
+join54	heldout	join	I would like sausageand pepperoni on it.	I would like sausage and pepperoni on it.	20	
+join55	heldout	join	Doesn't that have John Candy init?	Doesn't that have John Candy in it?	31	
+join56	heldout	join	Oh, I'd really likeindoor candelight dinner.	Oh, I'd really like indoor candelight dinner.	19	
+join57	heldout	join	Yeahit's just me this time.	Yeah it's just me this time.	4	
+join58	heldout	join	Andhow long will it be?	And how long will it be?	3	
+join59	heldout	join	How about a uberx?	How about a uber x?	16	
+join60	heldout	join	I needyour help with something.	I need your help with something.	6	
+join61	heldout	join	I want to see the movieat the Regency Village Theatre, in Westwood, Los Angeles.	I want to see the movie at the Regency Village Theatre, in Westwood, Los Angeles.	23	
+join62	heldout	join	Hello, can you pleaseorder me an Uber X from Baptist Medical hospital to downtown Oklahoma City?	Hello, can you please order me an Uber X from Baptist Medical hospital to downtown Oklahoma City?	21	
+join63	heldout	join	I would liketo order something from Starbucks to have on the way home, can you put in an order for me?	I would like to order something from Starbucks to have on the way home, can you put in an order for me?	12	
+join64	heldout	join	No, that's allthere is.	No, that's all there is.	14	
+join65	heldout	join	Would youplease order me a coffee from Starbucks?	Would you please order me a coffee from Starbucks?	9	
+join66	heldout	join	Can You ableto book flight tickets?	Can You able to book flight tickets?	12	
+join67	heldout	join	Thanks again havea nice day.	Thanks again have a nice day.	17	
+join68	heldout	join	I've been dying tosee this show!	I've been dying to see this show!	18	
+join69	heldout	join	I've never been tothat one.	I've never been to that one.	18	
+join70	heldout	join	I will takethe UberX.	I will take the UberX.	11	
+join71	heldout	join	The St George HealthCare Center, Dukes Street, Saint George, SC.	The St George Health Care Center, Dukes Street, Saint George, SC.	20	
+join72	heldout	join	I'd liketo order a pizza from Pagliacci.	I'd like to order a pizza from Pagliacci.	8	
+join73	heldout	join	Andthey will be sent to me in a text message.	And they will be sent to me in a text message.	3	
+join74	heldout	join	I need two tickets to CaptainMarvel for my friend and I, for tonight.	I need two tickets to Captain Marvel for my friend and I, for tonight.	29	
+join75	heldout	join	Can you order three large size Supremepizzas?	Can you order three large size Supreme pizzas?	38	
+join76	heldout	join	Not like I have achoice.	Not like I have a choice.	17	
+join77	heldout	join	Yes I have seen that a million times butit is a good one.	Yes I have seen that a million times but it is a good one.	40	
+join78	heldout	join	Place the orderfor pick up please.	Place the order for pick up please.	15	
+join79	heldout	join	I'd like to have the fanciestride though, it is a long trip.	I'd like to have the fanciest ride though, it is a long trip.	29	
+join80	heldout	join	I have a meetingthen.	I have a meeting then.	16	
+join81	heldout	join	No, I would really prefer thevanilla flavor with soy.	No, I would really prefer the vanilla flavor with soy.	29	
+join82	heldout	join	Ok, could I please have a large deep dishwith artichoke and ricotta?	Ok, could I please have a large deep dish with artichoke and ricotta?	41	
+join83	heldout	join	I'd like tohave you pick me up a Starbucks coffee.	I'd like to have you pick me up a Starbucks coffee.	11	
+join84	heldout	join	I will, thankyou so much!	I will, thank you so much!	13	
+join85	heldout	join	THANK YOU SO MUCH I HAVETO GO NOW.	THANK YOU SO MUCH I HAVE TO GO NOW.	24	
+join86	heldout	join	it is freakingme out.	it is freaking me out.	14	
+join87	heldout	join	Ok, thank you, when shouldI get the receipt?	Ok, thank you, when should I get the receipt?	26	
+join88	heldout	join	I am having my oil changed, but alsotrying to get a rattle looked at.	I am having my oil changed, but also trying to get a rattle looked at.	36	
+join89	heldout	join	Don't getany cream or sugar or anything.	Don't get any cream or sugar or anything.	9	
+join90	heldout	join	They are usuallyhappy with pizza hut.	They are usually happy with pizza hut.	16	
+join91	heldout	join	Use my rewards numberto pay for it.	Use my rewards number to pay for it.	21	
+join92	heldout	join	No, I want to go right tothe game.	No, I want to go right to the game.	25	
+join93	heldout	join	What if just my wife andI go?	What if just my wife and I go?	24	
+join94	heldout	join	Weare grabbing dinner too so if the movie is later that'll be better.	We are grabbing dinner too so if the movie is later that'll be better.	2	
+join95	heldout	join	Thanks, be sure to get yourself somethingtoo!	Thanks, be sure to get yourself something too!	41	
+join96	heldout	join	I'm in Seattle so anytime AMC willwork out fine.	I'm in Seattle so anytime AMC will work out fine.	34	
+join97	heldout	join	There seemsto be a leak from the turbo.	There seems to be a leak from the turbo.	11	
+join98	heldout	join	I need a large pizza with artichokes, italian sausage, basiland provolone.	I need a large pizza with artichokes, italian sausage, basil and provolone.	60	
+join99	heldout	join	I'dlike to book at Applebee's.	I'd like to book at Applebee's.	3	
+join100	heldout	join	I would like to order a largebacon, chicken, ranch pizza.	I would like to order a large bacon, chicken, ranch pizza.	29	
+join101	heldout	join	Hey Google, can you book a Lyft ride forme?	Hey Google, can you book a Lyft ride for me?	40	
+join102	heldout	join	No, how longis the movie?	No, how long is the movie?	12	
+join103	heldout	join	Ask anyone in the office how tofind out.	Ask anyone in the office how to find out.	31	
+join104	heldout	join	Ihave to prepare an important presentation and cant leave the office can you buy a coffee for me?	I have to prepare an important presentation and cant leave the office can you buy a coffee for me?	1	
+join105	heldout	join	Hi, I'd like alatte please.	Hi, I'd like a latte please.	14	
+join106	heldout	join	My IBS has been better so I think I'd like the realmilk this time.	My IBS has been better so I think I'd like the real milk this time.	51	
+join107	heldout	join	Please call itfor me.	Please call it for me.	14	
+join108	heldout	join	Hello, are there any available tickets to see Captain Marveltonight?	Hello, are there any available tickets to see Captain Marvel tonight?	60	
+join109	heldout	join	ok are the otherpackages?	ok are the other packages?	16	
+join110	heldout	join	The Starbucks up on West MainStreet in Waterbury, across from CVS.	The Starbucks up on West Main Street in Waterbury, across from CVS.	29	
+join111	heldout	join	No thanks, canyou look up the showtimes for the movie Hellboy?	No thanks, can you look up the showtimes for the movie Hellboy?	14	
+join112	heldout	join	I want to see itin Paramus, New Jersey.	I want to see it in Paramus, New Jersey.	16	
+join113	heldout	join	I want one to be a MeatZZa, the next one to bePacific Veggie and the last one a cheese pizza.	I want one to be a MeatZZa, the next one to be Pacific Veggie and the last one a cheese pizza.	46	
+join114	heldout	join	No thank you, that wouldbe all.	No thank you, that would be all.	24	
+join115	heldout	join	Make sure they know without cheese because there areallergies.	Make sure they know without cheese because there are allergies.	52	
+join116	heldout	join	Iwould prefer Martina if possible.	I would prefer Martina if possible.	1	
+join117	heldout	join	Hi, I'd like to place a pickuporder for Starbucks.	Hi, I'd like to place a pickup order for Starbucks.	30	
+join118	heldout	join	The last one i tried I wasnt fondof.	The last one i tried I wasnt fond of.	33	
+join119	heldout	join	Give me regularin both.	Give me regular in both.	15	
+join120	heldout	join	Yes, as close tothe middle as possible.	Yes, as close to the middle as possible.	16	
+join121	heldout	join	I just don't know how Iwould ever make it without you.	I just don't know how I would ever make it without you.	23	
+join122	heldout	join	Can youcheck if their outdoor patio is heated?	Can you check if their outdoor patio is heated?	7	
+join123	heldout	join	Same date, time and number ofpeople, okay?	Same date, time and number of people, okay?	29	
+join124	heldout	join	I'm reallyin the mood for Chinese food tonight.	I'm really in the mood for Chinese food tonight.	10	
+join125	heldout	join	How about a different restaurantthen?	How about a different restaurant then?	32	
+join126	heldout	join	Okay, let mesee if it has that logo.	Okay, let me see if it has that logo.	12	
+join127	heldout	join	Go aheadand our seats.	Go ahead and our seats.	8	
+join128	heldout	join	Well my brakes aren't working welland I need them looked at.	Well my brakes aren't working well and I need them looked at.	34	
+join129	heldout	join	What aboutfor Uber X?	What about for Uber X?	10	
+join130	heldout	join	I'm athome drunk and need to drive to the bar.	I'm at home drunk and need to drive to the bar.	6	
+join131	heldout	join	Can I getthe confirmation?	Can I get the confirmation?	9	
+join132	heldout	join	Can you find anappointment for this morning?	Can you find an appointment for this morning?	15	
+join133	heldout	join	Just let me know how long it'sgoing to take.	Just let me know how long it's going to take.	30	
+join134	heldout	join	I wantto order one caramel macchiato.	I want to order one caramel macchiato.	6	
+join135	heldout	join	There is is now, itjust showed up.	There is is now, it just showed up.	19	
+join136	heldout	join	Well, I havean appointment in Shiloh, IL.	Well, I have an appointment in Shiloh, IL.	12	
+join137	heldout	join	Hey, canyou order a pizza from Sal's Pizza place for me?	Hey, can you order a pizza from Sal's Pizza place for me?	8	
+join138	heldout	join	Samepizza but without the artichokes will do just fine.	Same pizza but without the artichokes will do just fine.	4	
+join139	heldout	join	Hi Dan, can you pleaseorder some pizzas from Happy's Pizza?	Hi Dan, can you please order some pizzas from Happy's Pizza?	22	
+join140	heldout	join	I'd like akid's high chair.	I'd like a kid's high chair.	10	
+join141	heldout	join	Maybe I will also get a sandwich for night timesnack.	Maybe I will also get a sandwich for night time snack.	47	
+join142	heldout	join	I need you to book an appointment for my car to go tothe mechanic.	I need you to book an appointment for my car to go to the mechanic.	53	
+join143	heldout	join	When is the soonestscreening for Aquaman?	When is the soonest screening for Aquaman?	19	
+join144	heldout	join	Hi, I wouldlike to book two movie tickets.	Hi, I would like to book two movie tickets.	11	
+join145	heldout	join	Please add a small cheese pizza for myson.	Please add a small cheese pizza for my son.	38	
+join146	heldout	join	Ijust got into a bad accident on the freeway.	I just got into a bad accident on the freeway.	1	
+join147	heldout	join	Hi, can I get a lyft carplease?	Hi, can I get a lyft car please?	24	
+join148	heldout	join	Ok, so she is free also at thattime.	Ok, so she is free also at that time.	31	
+join149	heldout	join	So, can you giveme the appointment time once more?	So, can you give me the appointment time once more?	16	
+join150	heldout	join	Hi Stella, can you book me an appointment at the auto repair shopIntelligent Auto Solutions?	Hi Stella, can you book me an appointment at the auto repair shop Intelligent Auto Solutions?	65	
+join151	heldout	join	You know me wellenough Emma!	You know me well enough Emma!	16	
+join152	heldout	join	Yes, I will take thatride please.	Yes, I will take that ride please.	21	
+join153	heldout	join	Yes, I don'thave time to grab anything else before that meeting.	Yes, I don't have time to grab anything else before that meeting.	12	
+join154	heldout	join	Oh, that is too faraway.	Oh, that is too far away.	19	
+join155	heldout	join	For Delta departuresif that helps.	For Delta departures if that helps.	20	
+join156	heldout	join	I was thinking wholemilk.	I was thinking whole milk.	20	
+join157	heldout	join	Okay great, I think I am going togo with the UberX.	Okay great, I think I am going to go with the UberX.	33	
+join158	heldout	join	I'd like aBlack and White Mocha.	I'd like a Black and White Mocha.	10	
+join159	heldout	join	Yes, youknow me so well.	Yes, you know me so well.	8	
+join160	heldout	join	I'mlooking for a restaurant to choose for dinner tonight, somewhere with good steak.	I'm looking for a restaurant to choose for dinner tonight, somewhere with good steak.	3	
+join161	heldout	join	Sure, how abouta Mango Dragonfruit Lemonade Starbucks Refresher.	Sure, how about a Mango Dragonfruit Lemonade Starbucks Refresher.	15	
+join162	heldout	join	Does the storehave whipped cream?	Does the store have whipped cream?	14	
+join163	heldout	join	I would like to pick itup in Nashville location.	I would like to pick it up in Nashville location.	23	
+join164	heldout	join	Yes, please schedulethe appointment.	Yes, please schedule the appointment.	20	
+join165	heldout	join	I wanna buytickets for Ralph Breaks the Internet.	I wanna buy tickets for Ralph Breaks the Internet.	11	
+join166	heldout	join	Can you makeme a reservation at Black and Blue in Pittsford?	Can you make me a reservation at Black and Blue in Pittsford?	12	
+join167	heldout	join	I thinkI would like to go ahead and book a table at Murphy's.	I think I would like to go ahead and book a table at Murphy's.	7	
+join168	heldout	join	Thatone is even better!	That one is even better!	4	
+join169	heldout	join	and what is the base pickup fee for uberx?	and what is the base pickup fee for uber x?	40	
+join170	heldout	join	OK, I just want one pizza, you know justto try them out.	OK, I just want one pizza, you know just to try them out.	40	
+join171	heldout	join	Thedifferential locks won't engage.	The differential locks won't engage.	3	
+join172	heldout	join	Can I please switchout the sausage for bacon?	Can I please switch out the sausage for bacon?	19	
+join173	heldout	join	I'd prefer the restauranthave an outdoor area and possibly live Indian music.	I'd prefer the restaurant have an outdoor area and possibly live Indian music.	25	
+join174	heldout	join	Oh, thenhow about US?	Oh, then how about US?	8	
+join175	heldout	join	Wonderful, you arethe best.	Wonderful, you are the best.	18	
+join176	heldout	join	I'dlike a table at the Big Buck Brewery in Gaylord, Michigan.	I'd like a table at the Big Buck Brewery in Gaylord, Michigan.	3	
+join177	heldout	join	Assistant, Ineed to order a pizza.	Assistant, I need to order a pizza.	12	
+join178	heldout	join	If you can access my contacts, theexact line to the mechanic is there.	If you can access my contacts, the exact line to the mechanic is there.	34	
+join179	heldout	join	Hmm, well I wantthat crust.	Hmm, well I want that crust.	16	
+join180	heldout	join	Amazing, Does itsay how long it should take and pricing?	Amazing, Does it say how long it should take and pricing?	16	
+join181	heldout	join	Almondmilk is fine then.	Almond milk is fine then.	6	
+join182	heldout	join	I want a Cold Brew with CascaraCold Foam.	I want a Cold Brew with Cascara Cold Foam.	31	
+join183	heldout	join	Howabout Intelligent Auto Solutions?	How about Intelligent Auto Solutions?	3	
+join184	heldout	join	No, just get me thecoffee.	No, just get me the coffee.	19	
+join185	heldout	join	You knowme, I'm not in a wheelchair, I just sometimes need some extra help.	You know me, I'm not in a wheelchair, I just sometimes need some extra help.	8	
+join186	heldout	join	I think there is one rightnear the hotel.	I think there is one right near the hotel.	26	
+join187	heldout	join	No, Ibelieve that will do it.	No, I believe that will do it.	5	
+join188	heldout	join	I'd like to order aStarbucks coffee drink please.	I'd like to order a Starbucks coffee drink please.	19	
+join189	heldout	join	The checkengine light came on and I need to see why.	The check engine light came on and I need to see why.	9	
+join190	heldout	join	What optionsdo I have again?	What options do I have again?	12	
+join191	heldout	join	Do they both haveocean views?	Do they both have ocean views?	17	
+join192	heldout	join	I'm drivingaround doing errands and my car is acting up.	I'm driving around doing errands and my car is acting up.	11	
+join193	heldout	join	Anyway I'd likea Venti Latte.	Anyway I'd like a Venti Latte.	15	
+join194	heldout	join	Do you have tomake reservations?	Do you have to make reservations?	14	
+join195	heldout	join	can youmake a reservation for two to see green book?	can you make a reservation for two to see green book?	7	
+join196	heldout	join	I think I'm allset.	I think I'm all set.	15	
+join197	heldout	join	How long does it take tomake a cappunccino?	How long does it take to make a cappunccino?	24	
+join198	heldout	join	San Mateo isa bit far.	San Mateo is a bit far.	12	
+join199	heldout	join	This just wasn'tmeant to be.	This just wasn't meant to be.	16	
+join200	heldout	join	A friend wasjust telling me about the Iced Latte Macchiato.	A friend was just telling me about the Iced Latte Macchiato.	12	
+join201	heldout	join	Well, it's a fancyevening!	Well, it's a fancy evening!	18	
+join202	heldout	join	It's slow to accelerate and stops veryabruptly.	It's slow to accelerate and stops very abruptly.	38	
+join203	heldout	join	I need a Lyftride as soon as possible.	I need a Lyft ride as soon as possible.	13	
+join204	heldout	join	I needa large hand tossed pizza with pork sausage, onion and cheese please.	I need a large hand tossed pizza with pork sausage, onion and cheese please.	6	
+join205	heldout	join	Whatcrusts can I order for this special?	What crusts can I order for this special?	4	
+join206	heldout	join	Please keepme updated on it.	Please keep me updated on it.	11	
+join207	heldout	join	Do you needsome more info?	Do you need some more info?	11	
+join208	heldout	join	Theon on M Street.	The on on M Street.	3	
+join209	heldout	join	We are gonnawait it out at and want nobu.	We are gonna wait it out at and want nobu.	12	
+join210	heldout	join	No I will just stick with theone pizza.	No I will just stick with the one pizza.	29	
+join211	heldout	join	Yes, make it areservation for two.	Yes, make it a reservation for two.	14	
+join212	heldout	join	Ijust want a pizza.	I just want a pizza.	1	
+join213	heldout	join	Ineed to place a starbucks order.	I need to place a starbucks order.	1	
+join214	heldout	join	Hi I'dlike to buy a single ticket for Dumbo tonight.	Hi I'd like to buy a single ticket for Dumbo tonight.	6	
+join215	heldout	join	Ok that's fine go aheadand book that time please.	Ok that's fine go ahead and book that time please.	23	
+join216	heldout	join	I need to have an appointment set for my car atIntelligent Auto Solutions today please.	I need to have an appointment set for my car at Intelligent Auto Solutions today please.	47	
+join217	heldout	join	Are the ticketsrefundable if we need to change plans?	Are the tickets refundable if we need to change plans?	15	
+join218	heldout	join	Throw onsome red bell peppers too.	Throw on some red bell peppers too.	8	
+join219	heldout	join	Yes, I will dothat.	Yes, I will do that.	14	
+join220	heldout	join	Hello, my nameis Sammy Hunt and I'm calling to order a pizza in the Harrisburg, Pa.	Hello, my name is Sammy Hunt and I'm calling to order a pizza in the Harrisburg, Pa.	14	
+join221	heldout	join	Are there any openings for eithertonight?	Are there any openings for either tonight?	33	
+join222	heldout	join	Like I stated I will not go inreverse.	Like I stated I will not go in reverse.	30	
+join223	heldout	join	A chai latte with no water and soymilk.	A chai latte with no water and soy milk.	34	
+join224	heldout	join	I'd like to watch a mystery ordrama.	I'd like to watch a mystery or drama.	30	
+join225	heldout	join	That would be great, thankyou.	That would be great, thank you.	26	
+join226	heldout	join	Whatelse do they have available?	What else do they have available?	4	
+join227	heldout	join	Thankyou for updating me.	Thank you for updating me.	5	
+join228	heldout	join	yeah just the one coffee for me please, unless you also wantedone?	yeah just the one coffee for me please, unless you also wanted one?	62	
+join229	heldout	join	No we are just going to snackin the theater.	No we are just going to snack in the theater.	29	
+join230	heldout	join	They said they canlook at it right away for you.	They said they can look at it right away for you.	18	
+join231	heldout	join	What isthe price difference for the two?	What is the price difference for the two?	7	
+join232	heldout	join	Cinemark, so CinemarkXD at Downey.	Cinemark, so Cinemark XD at Downey.	21	
+join233	heldout	join	Yes, they have a specialtypizza that I enjoy.	Yes, they have a specialty pizza that I enjoy.	26	
+join234	heldout	join	Ifso, I'd like to sit there.	If so, I'd like to sit there.	2	
+join235	heldout	join	Backcountry Pizzaand Tap House on Arapahoe Ave.	Backcountry Pizza and Tap House on Arapahoe Ave.	17	
+join236	heldout	join	Canyou also put in that I need new tires, i think.	Can you also put in that I need new tires, i think.	3	
+join237	heldout	join	Tony's DiNapoli in midtown Manhattan.	Tony's Di Napoli in midtown Manhattan.	9	
+join238	heldout	join	No, please exchange it for ahot chocolate.	No, please exchange it for a hot chocolate.	28	
+join239	heldout	join	Davie, Florida is what Iwant.	Davie, Florida is what I want.	24	
+join240	heldout	join	will thereceipt pop up in the app on my phone?	will the receipt pop up in the app on my phone?	8	
+join241	heldout	join	Can you tellme more about Ripped?	Can you tell me more about Ripped?	12	
+join242	heldout	join	Yeah, for one, letsdo Hawaiian style.	Yeah, for one, lets do Hawaiian style.	19	
+join243	heldout	join	Hi, Ineed to book a table at a restaurant.	Hi, I need to book a table at a restaurant.	5	
+join244	heldout	join	I'll have to gowith that.	I'll have to go with that.	15	
+join245	heldout	join	It feelsfunny, very shaky when I drive it.	It feels funny, very shaky when I drive it.	8	
+join246	heldout	join	Yes, thank youso much, bye-bye.	Yes, thank you so much, bye-bye.	14	
+join247	heldout	join	I want both pizzas to have bacon and pepperonitoppings.	I want both pizzas to have bacon and pepperoni toppings.	46	
+join248	heldout	join	OK we can dothat.	OK we can do that.	12	
+join249	heldout	join	We have tickets to a movie tonight so we wouldn't wantto miss them.	We have tickets to a movie tonight so we wouldn't want to miss them.	54	
+join250	heldout	join	evenif I have to wait until the next day?	even if I have to wait until the next day?	4	
+join251	heldout	join	I've been hearing somenoises from them.	I've been hearing some noises from them.	22	
+join252	heldout	join	I would like to order a Pizza from LaRosa'sPizzeria.	I would like to order a Pizza from LaRosa's Pizzeria.	43	
+join253	heldout	join	That's the movie theaterat Jones Valley.	That's the movie theater at Jones Valley.	24	
+join254	heldout	join	No, weneed a place that is available soon after our show is over.	No, we need a place that is available soon after our show is over.	6	
+join255	heldout	join	I'm looking for a nice placeto take the girlfriend out to dinner to.	I'm looking for a nice place to take the girlfriend out to dinner to.	28	
+join256	heldout	join	Dang, is there any cheaper thanthat?	Dang, is there any cheaper than that?	31	
+join257	heldout	join	I just needan oil change.	I just need an oil change.	11	
+join258	heldout	join	Hello, can youorder me a ride on Uber please?	Hello, can you order me a ride on Uber please?	14	
+join259	heldout	join	I would also like a general check up forthe car.	I would also like a general check up for the car.	40	
+join260	heldout	join	There is justme and my wife.	There is just me and my wife.	13	
+join261	heldout	join	I'd like to go ahead and bookthose now.	I'd like to go ahead and book those now.	29	
+join262	heldout	join	THe check engine light ison and the car is shaking when I drive it.	THe check engine light is on and the car is shaking when I drive it.	25	
+join263	heldout	join	No, Im getting aride there.	No, Im getting a ride there.	16	
+join264	heldout	join	I am looking for some Mexicanfood tonight.	I am looking for some Mexican food tonight.	29	
+join265	heldout	join	Thanks, arethere any drink specials?	Thanks, are there any drink specials?	11	
+join266	heldout	join	That's ok, letsbook it then.	That's ok, lets book it then.	15	
+join267	heldout	join	Myname is Brandy JOnes.	My name is Brandy JOnes.	2	
+join268	heldout	join	Do youhave any specials on pizzas tonight?	Do you have any specials on pizzas tonight?	6	
+join269	heldout	join	Hey I really wan to go to themovies this weekend.	Hey I really wan to go to the movies this weekend.	29	
+join270	heldout	join	What are their operatingtimes?	What are their operating times?	24	
+join271	heldout	join	I have a business trip planned for this week so I need to head to theCovington airport pronto.	I have a business trip planned for this week so I need to head to the Covington airport pronto.	69	
+join272	heldout	join	No, that will doit.	No, that will do it.	16	
+join273	heldout	join	That sounds too good to passup.	That sounds too good to pass up.	28	
+join274	heldout	join	Anythingsimilar you'd recommend with almond milk?	Anything similar you'd recommend with almond milk?	8	
+join275	heldout	join	what other times maythey have?	what other times may they have?	20	
+join276	heldout	join	Can you please book it forme?	Can you please book it for me?	26	
+join277	heldout	join	Is theUber on the way?	Is the Uber on the way?	6	
+join278	heldout	join	The sooner the better becauseI'm pretty concerned about the sound.	The sooner the better because I'm pretty concerned about the sound.	29	
+join279	heldout	join	How doI receive the tickets?	How do I receive the tickets?	6	
+join280	heldout	join	I guess we'll cancel the movie andjust do something else instead.	I guess we'll cancel the movie and just do something else instead.	34	
+join281	heldout	join	Ithink that will work!	I think that will work!	1	
+join282	heldout	join	Yes, everythingis the same.	Yes, everything is the same.	15	
+join283	heldout	join	Yes, the MayaCinemas in Fresno.	Yes, the Maya Cinemas in Fresno.	13	
+join284	heldout	join	Hey John I need you book me anappointment for my car.	Hey John I need you book me an appointment for my car.	30	
+join285	heldout	join	Can you please order mea pizza from Pizza Hut tonight?	Can you please order me a pizza from Pizza Hut tonight?	23	
+join286	heldout	join	Thankyou so much, Lia.	Thank you so much, Lia.	5	
+join287	heldout	join	Thank again, it definitelymakes tonight a little easier.	Thank again, it definitely makes tonight a little easier.	26	
+join288	heldout	join	Maybe thesecond one as combination then.	Maybe the second one as combination then.	9	
+join289	heldout	join	That is the car poolone right?	That is the car pool one right?	20	
+join290	heldout	join	What is thelatest time Giggles has?	What is the latest time Giggles has?	11	
+join291	heldout	join	I'm in a hurry, I'lljust get the Uber X, then.	I'm in a hurry, I'll just get the Uber X, then.	20	
+join292	heldout	join	It would be to get dropped offat the Renaissance Atlanta Midtown Hotel.	It would be to get dropped off at the Renaissance Atlanta Midtown Hotel.	30	
+join293	heldout	join	Hi Pete, canyou please order me a coffee?	Hi Pete, can you please order me a coffee?	12	
+join294	heldout	join	My nameis Christy Smith.	My name is Christy Smith.	7	
+join295	heldout	join	No, let's not bookthe reservation.	No, let's not book the reservation.	18	
+join296	heldout	join	No thatwill be it.	No that will be it.	7	
+join297	heldout	join	Nojust the one pizza.	No just the one pizza.	2	
+join298	heldout	join	Could you please order me a coffeedrink from Starbucks.	Could you please order me a coffee drink from Starbucks.	34	
+join299	heldout	join	Hey I'm reallyfeeling like pizza, can you order one for me please?	Hey I'm really feeling like pizza, can you order one for me please?	14	
+join300	heldout	join	I will bookwith Uber please.	I will book with Uber please.	11	
+join301	heldout	join	I'll see how it goes tonightand keep that in mind for the future.	I'll see how it goes tonight and keep that in mind for the future.	28	
+join302	heldout	join	I'll go with just theBlack.	I'll go with just the Black.	21	
+join303	heldout	join	I have myluggage with me, so I could use the extra space anyways.	I have my luggage with me, so I could use the extra space anyways.	9	
+join304	heldout	join	I'mwilling to splurge for this.	I'm willing to splurge for this.	3	
+join305	heldout	join	Can you findme a good restaurant?	Can you find me a good restaurant?	12	
+join306	heldout	join	The thin crustsounds fine.	The thin crust sounds fine.	14	
+join307	heldout	join	No, I amdone ordering food for tonight.	No, I am done ordering food for tonight.	8	
+join308	heldout	join	Could I get some chocolatesyrup and whipped cream please?	Could I get some chocolate syrup and whipped cream please?	26	
+join309	heldout	join	Can youadd a Coke and Pepsi to that order as well.	Can you add a Coke and Pepsi to that order as well.	7	
+join310	heldout	join	Can you find me a differentsushi restaurant?	Can you find me a different sushi restaurant?	27	
+join311	heldout	join	How does Uber Xwork?	How does Uber X work?	15	
+join312	heldout	join	Doyou have an ETA?	Do you have an ETA?	2	
+join313	heldout	join	Also addan oil change to the service request.	Also add an oil change to the service request.	8	
+join314	heldout	join	Peet's on Telegraph inBerkeley, California.	Peet's on Telegraph in Berkeley, California.	22	
+join315	heldout	join	I needa thin crust please.	I need a thin crust please.	6	
+join316	heldout	join	Hey, can you get mesome movie tickets for tonight?	Hey, can you get me some movie tickets for tonight?	19	
+join317	heldout	join	SinceI'm driving can you do me a favor and book an appointment for me today?	Since I'm driving can you do me a favor and book an appointment for me today?	5	
+join318	heldout	join	I want the secondrow from the back.	I want the second row from the back.	17	
+join319	heldout	join	They are on myway home anyway.	They are on my way home anyway.	14	
+join320	heldout	join	Hey Sally I need acar to pick me up.	Hey Sally I need a car to pick me up.	18	
+join321	heldout	join	Hmm, I think I'd prefer EstrellitaPoblana.	Hmm, I think I'd prefer Estrellita Poblana.	34	
+join322	heldout	join	have youbeen there before?	have you been there before?	8	
+join323	heldout	join	HeyAssistant can you order a pizza from Domino's for today's meeting?	Hey Assistant can you order a pizza from Domino's for today's meeting?	3	
+join324	heldout	join	Do you have fresh seafood onthe menu?	Do you have fresh seafood on the menu?	28	
+join325	heldout	join	Ok, then Ill take thetwo tickets.	Ok, then Ill take the two tickets.	21	
+join326	heldout	join	How many cheeses can Ihave?	How many cheeses can I have?	22	
+join327	heldout	join	Ok that'sperfect and my driver?	Ok that's perfect and my driver?	9	
+join328	heldout	join	Pete, I need aGolden caffe latte.	Pete, I need a Golden caffe latte.	14	
+join329	heldout	join	Yes, I would like whippedcream on top.	Yes, I would like whipped cream on top.	25	
+join330	heldout	join	Mmm, that does sound good, but I'drather have something from their bakery.	Mmm, that does sound good, but I'd rather have something from their bakery.	34	
+join331	heldout	join	no, that's toolate, how about The Antique Rose?	no, that's too late, how about The Antique Rose?	14	
+join332	heldout	join	The valvoline off mainstreet.	The valvoline off main street.	22	
+join333	heldout	join	Yeah that's finewith me.	Yeah that's fine with me.	16	
+join334	heldout	join	No I didn't, she actually just tapped itand nothing happen to the vehicle.	No I didn't, she actually just tapped it and nothing happen to the vehicle.	40	
+join335	heldout	join	Goahead and make the emergency appointment.	Go ahead and make the emergency appointment.	2	
+join336	heldout	join	The earlierin the morning, the better chance I can get it back the same day.	The earlier in the morning, the better chance I can get it back the same day.	11	
+join337	heldout	join	No, so can you call Intelligent Auto Solutions for me and book anappointment as soon as possible?	No, so can you call Intelligent Auto Solutions for me and book an appointment as soon as possible?	65	
+join338	heldout	join	Hi, Ineed some pizzas?	Hi, I need some pizzas?	5	
+join339	heldout	join	What arethe reviews like?	What are the reviews like?	8	
+join340	heldout	join	What isthe price for Uber Select?	What is the price for Uber Select?	7	
+join341	heldout	join	Yeah, ordera chocolate croissant and a large iced caramel macchiato at the Peet's in Monterey.	Yeah, order a chocolate croissant and a large iced caramel macchiato at the Peet's in Monterey.	11	
+join342	heldout	join	I don't want toreserve anything today.	I don't want to reserve anything today.	15	
+join343	heldout	join	What's themost popular or recommended?	What's the most popular or recommended?	10	
+join344	heldout	join	Yes, I needto have them replace the brake fluid.	Yes, I need to have them replace the brake fluid.	11	
+join345	heldout	join	Need to impressthese people.	Need to impress these people.	15	
+join346	heldout	join	I want to order a drinkfrom Starbucks.	I want to order a drink from Starbucks.	23	
+join347	heldout	join	Can you please order some pizzasfor tonight's meeting?	Can you please order some pizzas for tonight's meeting?	32	
+join348	heldout	join	yep, youhave it right, how much is that going to be?	yep, you have it right, how much is that going to be?	8	
+join349	heldout	join	How much willmy total be?	How much will my total be?	13	
+join350	heldout	join	They just keepgetter more expensive, that's not a problem.	They just keep getter more expensive, that's not a problem.	14	
+join351	heldout	join	Wecan make that work.	We can make that work.	2	
+join352	heldout	join	Do they make a Supreme pizzaat Dominos?	Do they make a Supreme pizza at Dominos?	28	
+join353	heldout	join	Sowhat is the total bill?	So what is the total bill?	2	
+join354	heldout	join	Thank youso much, where do i park the car?	Thank you so much, where do i park the car?	9	
+join355	heldout	join	That sounds like thatwould work for us.	That sounds like that would work for us.	21	
+join356	heldout	join	Is there anything good playingclose to me?	Is there anything good playing close to me?	30	
+join357	heldout	join	i'm not sure other thanthat.	i'm not sure other than that.	23	
+join358	heldout	join	Iwill order a pepperoni and ham pizza, instead.	I will order a pepperoni and ham pizza, instead.	1	
+join359	heldout	join	I would prefer something that has big windows with anice view.	I would prefer something that has big windows with a nice view.	52	
+clean0	heldout	clean	I want a large Hawaiian.	I want a large Hawaiian.		
+clean1	heldout	clean	Just get us something with pepperoni for sure.	Just get us something with pepperoni for sure.		
+clean2	heldout	clean	Thank you so much assistant.	Thank you so much assistant.		
+clean3	heldout	clean	Okay, next best is soy milk.	Okay, next best is soy milk.		
+clean4	heldout	clean	That's not too bad what about the actual ride?	That's not too bad what about the actual ride?		
+clean5	heldout	clean	I don't mind paying a little extra if it means I can make my reservation.	I don't mind paying a little extra if it means I can make my reservation.		
+clean6	heldout	clean	I can have someone take it to the restaurant.	I can have someone take it to the restaurant.		
+clean7	heldout	clean	I'll just skip buying movie tickets today.	I'll just skip buying movie tickets today.		
+clean8	heldout	clean	Not in the moment, I will get back to you if anything comes up.	Not in the moment, I will get back to you if anything comes up.		
+clean9	heldout	clean	also can you add a salad on that order?	also can you add a salad on that order?		
+clean10	heldout	clean	Intelligent Auto Solutions is my favorite place for services.	Intelligent Auto Solutions is my favorite place for services.		
+clean11	heldout	clean	I'll just take a Honda then, I don't care about the model so long as it's a big car.	I'll just take a Honda then, I don't care about the model so long as it's a big car.		
+clean12	heldout	clean	Please charge the credit card listed on my app.	Please charge the credit card listed on my app.		
+clean13	heldout	clean	Just about finish our dinner this amazing new restaurant, and see a movie.	Just about finish our dinner this amazing new restaurant, and see a movie.		
+clean14	heldout	clean	I would love a venti iced coffee.	I would love a venti iced coffee.		
+clean15	heldout	clean	Also preferably the morning tomorrow would work best, but like I said this is pretty urgent.	Also preferably the morning tomorrow would work best, but like I said this is pretty urgent.		
+clean16	heldout	clean	I'll just get a large cheese.	I'll just get a large cheese.		
+clean17	heldout	clean	Ask them if the time available first then we work from there.	Ask them if the time available first then we work from there.		
+clean18	heldout	clean	Can you get me an order from Starbucks set to pick up on my way home?	Can you get me an order from Starbucks set to pick up on my way home?		
+clean19	heldout	clean	I will still just get the meat lovers pizza.	I will still just get the meat lovers pizza.		
+clean20	heldout	clean	I would like to order a pizza from pizza hut.	I would like to order a pizza from pizza hut.		
+clean21	heldout	clean	I'm debating between an iced coffee or a iced cappuccino with cold foam.	I'm debating between an iced coffee or a iced cappuccino with cold foam.		
+clean22	heldout	clean	Then I guess we will have to the the Uber Black.	Then I guess we will have to the the Uber Black.		
+clean23	heldout	clean	Hi, I would like a coffee from Starbucks.	Hi, I would like a coffee from Starbucks.		
+clean24	heldout	clean	Yes, it's for our anniversary, so let's take an Uber Lux.	Yes, it's for our anniversary, so let's take an Uber Lux.		
+clean25	heldout	clean	I'll have cream with the cold brew.	I'll have cream with the cold brew.		
+clean26	heldout	clean	Please set appointment at Intelligent Auto Solutions.	Please set appointment at Intelligent Auto Solutions.		
+clean27	heldout	clean	Please give them a call and make the reservation.	Please give them a call and make the reservation.		
+clean28	heldout	clean	Is there sugar free caramel?	Is there sugar free caramel?		
+clean29	heldout	clean	They can wait, you know what I'd like?	They can wait, you know what I'd like?		
+clean30	heldout	clean	How much is it going to cost?	How much is it going to cost?		
+clean31	heldout	clean	I want to make sure they understand that I want an estimate before any work is done.	I want to make sure they understand that I want an estimate before any work is done.		
+clean32	heldout	clean	No, this is what I would prefer.	No, this is what I would prefer.		
+clean33	heldout	clean	One half is pineapple and ham, blech, and the other is mushroom, black olives, onions, and double-cheese for my anemic vegetarian niece.	One half is pineapple and ham, blech, and the other is mushroom, black olives, onions, and double-cheese for my anemic vegetarian niece.		
+clean34	heldout	clean	We'll skip the movie tonight.	We'll skip the movie tonight.		
+clean35	heldout	clean	What theaters are playing captain marvel tonight in Tampa, FL?	What theaters are playing captain marvel tonight in Tampa, FL?		
+clean36	heldout	clean	Yes, I want to get it in with Intelligent Auto Solutions.	Yes, I want to get it in with Intelligent Auto Solutions.		
+clean37	heldout	clean	Yes please when you are done booking send me the info please.	Yes please when you are done booking send me the info please.		
+clean38	heldout	clean	Okay, I'd like pepperoni and sausage.	Okay, I'd like pepperoni and sausage.		
+clean39	heldout	clean	lets do garlic, onion, and spinach.	lets do garlic, onion, and spinach.		
+clean40	heldout	clean	Order an iced peppermint mocha latte please.	Order an iced peppermint mocha latte please.		
+clean41	heldout	clean	We want to see Dumbo.	We want to see Dumbo.		
+clean42	heldout	clean	I would like just one, please.	I would like just one, please.		
+clean43	heldout	clean	We don't use this one much.	We don't use this one much.		
+clean44	heldout	clean	No that's all I needed.	No that's all I needed.		
+clean45	heldout	clean	I want them delivered to the Alvyn Sherman Library.	I want them delivered to the Alvyn Sherman Library.		
+clean46	heldout	clean	I would like a salad as well.	I would like a salad as well.		
+clean47	heldout	clean	They have great food and an amazing beer selection.	They have great food and an amazing beer selection.		
+clean48	heldout	clean	Yeah, I want mushrooms on it too.	Yeah, I want mushrooms on it too.		
+clean49	heldout	clean	No, you know what, that should be fine.	No, you know what, that should be fine.		
+clean50	heldout	clean	Hey, I need a nice, high class restaurant in Buffalo.	Hey, I need a nice, high class restaurant in Buffalo.		
+clean51	heldout	clean	To the Hampton Inn near Charlotte's airport.	To the Hampton Inn near Charlotte's airport.		
+clean52	heldout	clean	No, that's a little late.	No, that's a little late.		
+clean53	heldout	clean	I would prefer the Monte De Rey Restuarant.	I would prefer the Monte De Rey Restuarant.		
+clean54	heldout	clean	well, maybe I would prefer something I could stream.	well, maybe I would prefer something I could stream.		
+clean55	heldout	clean	Yes, I want to add whip cream on top.	Yes, I want to add whip cream on top.		
+clean56	heldout	clean	I would like an iced pumpkin spiced latte.	I would like an iced pumpkin spiced latte.		
+clean57	heldout	clean	How about a Caramel Frappe?	How about a Caramel Frappe?		
+clean58	heldout	clean	I am looking for a nice high end surf and turf type resturant.	I am looking for a nice high end surf and turf type resturant.		
+clean59	heldout	clean	one for me and one for my girlfriend I'm visiting.	one for me and one for my girlfriend I'm visiting.		
+clean60	heldout	clean	ok i would like on the first half italian sausage and green peppers.	ok i would like on the first half italian sausage and green peppers.		
+clean61	heldout	clean	Just make sure the reviews are good, okay?	Just make sure the reviews are good, okay?		
+clean62	heldout	clean	What available times are there?	What available times are there?		
+clean63	heldout	clean	I like what I hear and would like to book this restaurant.	I like what I hear and would like to book this restaurant.		
+clean64	heldout	clean	Can you request parmesian and peppers on the side for the pizza?	Can you request parmesian and peppers on the side for the pizza?		
+clean65	heldout	clean	What Indian restaurants are nearby?	What Indian restaurants are nearby?		
+clean66	heldout	clean	I'd like to get just a regular Uber please.	I'd like to get just a regular Uber please.		
+clean67	heldout	clean	The first one is pepperonie and double cheese, nothing else.	The first one is pepperonie and double cheese, nothing else.		
+clean68	heldout	clean	Alright thank you I would like to confirm the appointment.	Alright thank you I would like to confirm the appointment.		
+clean69	heldout	clean	Make sure you write just a little whip.	Make sure you write just a little whip.		
+clean70	heldout	clean	Hi, can I please order a BBQ chicken specialty pizza?	Hi, can I please order a BBQ chicken specialty pizza?		
+clean71	heldout	clean	Hi, can you help me with the dinner reservation?	Hi, can you help me with the dinner reservation?		
+clean72	heldout	clean	And I'll take a Violet Drink.	And I'll take a Violet Drink.		
+clean73	heldout	clean	What is my new total?	What is my new total?		
+clean74	heldout	clean	And add Buffalo sauce, please.	And add Buffalo sauce, please.		
+clean75	heldout	clean	So half with sausage, ham, and pepperoni, and half with cheese.	So half with sausage, ham, and pepperoni, and half with cheese.		
+clean76	heldout	clean	Actually, not too nice, she asked for casual.	Actually, not too nice, she asked for casual.		
+clean77	heldout	clean	Could you get me an Iced Latte Macchiato?	Could you get me an Iced Latte Macchiato?		
+clean78	heldout	clean	Yes, also the left tail light is out.	Yes, also the left tail light is out.		
+clean79	heldout	clean	Just a small thin crust cheese pizza.	Just a small thin crust cheese pizza.		
+clean80	heldout	clean	What is the difference between a normal pizza oven and theirs?	What is the difference between a normal pizza oven and theirs?		
+clean81	heldout	clean	Yes, for tonight, what times are available?	Yes, for tonight, what times are available?		
+clean82	heldout	clean	I'm having brunch with friends.	I'm having brunch with friends.		
+clean83	heldout	clean	How far is that theatre?	How far is that theatre?		
+clean84	heldout	clean	Please book an appointment for me at Intelligent Auto Solutions.	Please book an appointment for me at Intelligent Auto Solutions.		
+clean85	heldout	clean	Hi Stacy, can you recommend a local pizza restaurant for my family and order us a pizza tonight?	Hi Stacy, can you recommend a local pizza restaurant for my family and order us a pizza tonight?		
+clean86	heldout	clean	I BOUGHT MY CAR FROM YOUR DEALERSHIP.	I BOUGHT MY CAR FROM YOUR DEALERSHIP.		
+clean87	heldout	clean	I think I want reservations for tonight.	I think I want reservations for tonight.		
+clean88	heldout	clean	I would like Soy milk.	I would like Soy milk.		
+clean89	heldout	clean	Do you have any recommendations?	Do you have any recommendations?		
+clean90	heldout	clean	I'm thinking the Lowes in Cherry Hill.	I'm thinking the Lowes in Cherry Hill.		
+clean91	heldout	clean	What Blockbusters are coming to Netflix now?	What Blockbusters are coming to Netflix now?		
+clean92	heldout	clean	Can I order a Pizza please?	Can I order a Pizza please?		
+clean93	heldout	clean	What's the address for this AMC?	What's the address for this AMC?		
+clean94	heldout	clean	Let's try Gregory's at the Eureka Resort.	Let's try Gregory's at the Eureka Resort.		
+clean95	heldout	clean	From my current location to someplace with casual dining that's waterfront.	From my current location to someplace with casual dining that's waterfront.		
+clean96	heldout	clean	No, that's it, thank you.	No, that's it, thank you.		
+clean97	heldout	clean	The Starbucks on Bear Valley in Victorville.	The Starbucks on Bear Valley in Victorville.		
+clean98	heldout	clean	Does the Melting Pot have any available seating for those times?	Does the Melting Pot have any available seating for those times?		
+clean99	heldout	clean	Which one is cheaper than?	Which one is cheaper than?		
+clean100	heldout	clean	Can you please set an appointment to get the van looked at?	Can you please set an appointment to get the van looked at?		
+clean101	heldout	clean	Any weekday next week is fine.	Any weekday next week is fine.		
+clean102	heldout	clean	Ok can you check for Dolby?	Ok can you check for Dolby?		
+clean103	heldout	clean	And can I specify the crust?	And can I specify the crust?		
+clean104	heldout	clean	Could you tell me what my order is?	Could you tell me what my order is?		
+clean105	heldout	clean	Yes please, no whipped cream.	Yes please, no whipped cream.		
+clean106	heldout	clean	Since my family's beach trip last weekend.	Since my family's beach trip last weekend.		
+clean107	heldout	clean	I'm available for the rest of the day so as soon as possible.	I'm available for the rest of the day so as soon as possible.		
+clean108	heldout	clean	Yes, I need an oil change.	Yes, I need an oil change.		
+clean109	heldout	clean	I want the same cinema please.	I want the same cinema please.		
+clean110	heldout	clean	I'd like the meat lover's pizza.	I'd like the meat lover's pizza.		
+clean111	heldout	clean	I received the text message.	I received the text message.		
+clean112	heldout	clean	How much will that be?	How much will that be?		
+clean113	heldout	clean	Great, can you put that on my American Express card?	Great, can you put that on my American Express card?		
+clean114	heldout	clean	What is the address and phone number?	What is the address and phone number?		
+clean115	heldout	clean	Yes, What is the cheapest fare there?	Yes, What is the cheapest fare there?		
+clean116	heldout	clean	Ok, thanks a lot of the help.	Ok, thanks a lot of the help.		
+clean117	heldout	clean	Is there anything available in the area?	Is there anything available in the area?		
+clean118	heldout	clean	That works, I will for sure do that.	That works, I will for sure do that.		
+clean119	heldout	clean	How much is a ticket?	How much is a ticket?		
+clean120	heldout	clean	Great, I want to make a reservation at Sky Sushi.	Great, I want to make a reservation at Sky Sushi.		
+clean121	heldout	clean	Yeah, let's do either the Uber Black or Uber Select.	Yeah, let's do either the Uber Black or Uber Select.		
+clean122	heldout	clean	Could you please order me a drink from Starbucks?	Could you please order me a drink from Starbucks?		
+clean123	heldout	clean	Im not to sure where I will be going yet.	Im not to sure where I will be going yet.		
+clean124	heldout	clean	I'll use my credit card.	I'll use my credit card.		
+clean125	heldout	clean	The one closest to work.	The one closest to work.		
+clean126	heldout	clean	Just wondering, do you have any specials today.	Just wondering, do you have any specials today.		
+clean127	heldout	clean	I want pepperoni and sausage.	I want pepperoni and sausage.		
+clean128	heldout	clean	do you know of any buffets with a bit of a more formal atmosphere?	do you know of any buffets with a bit of a more formal atmosphere?		
+clean129	heldout	clean	Yes, can you see what times the movie Shazam!	Yes, can you see what times the movie Shazam!		

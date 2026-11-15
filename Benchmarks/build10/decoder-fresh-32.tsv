@@ -1,0 +1,71 @@
+kind	context	expected	build6	candidate
+fix	The bus driver waved as I hurried over because I really needed a ried	ride	ried	ried
+fix	The library had my favorite author so I settled down for a good ried	read	ried	ried
+fix	The pizza was covered with cheese and I only wanted one more slixe	slice	slixe	slixe
+fix	The projector stopped working during my talk so I went back to the previous slixe	slide	slixe	slixe
+fix	My mother called about our family dinner and asked if I could call my dsd	dad	dsd	dad
+fix	My son fell asleep in his room and I gently tucked him into his bedd	bed	bedd	bedd
+fix	The storm flooded the sidewalks so I brought my rubber boats	boots	boats	boats
+keep	The harbor was filling up with sailors so I went outside to see the boats	boats	boats	boats
+fix	The coffee shop near the station has a special on my favorite latye	latte	latye	late
+fix	The clock in my office stopped again and I think it made me latye	late	latye	late
+fix	The movie at the theater is about to start and I want a good sear	seat	sear	sear
+keep	The chef has the pan smoking hot because he wants a good sear	sear	sear	sear
+fix	The bakery had fresh bread this morning so I bought a whole loaf of bred	bread	bred	bred
+fix	The mechanic said that the engine was fine but we needed a new tired	tire	tired	tired
+fix	The restaurant finally opened after the renovation and we booked a tabke	table	tabke	table
+fix	The train pulled away before I could buy the tickey	ticket	tickey	ticket
+fix	My sister found a wallet outside and asked if it was minw	mine	minw	minw
+fix	I left my glasses at the offcie	office	offcie	office
+fix	We missed the last ferry so we're staying overnigth	overnight	overnight	overnight
+fix	Can someone bring the spare chargwr	charger	charger	charger
+fix	Everyone is meeting outside the ststion	station	station	station
+fix	Do you still have my blue jackrt	jacket	jacket	jacket
+fix	They're playing our favorite sohg	song	sohg	song
+fix	I can come over right after breajfast	breakfast	breakfast	breakfast
+fix	Please save us a parking spoy	spot	spoy	spot
+fix	My camera battery died just before the pictuer	picture	picture	picture
+fix	The oven beeped and I checked the tiemr	timer	tiemr	tiemr
+fix	I forgot my umbrella at the librsry	library	library	library
+fix	The soup needs a pinch of saly	salt	saly	saly
+fix	Let me know when your flight labds	lands	labds	labds
+keep	Ask the new neighbor about her cat Miso	Miso	Miso	Miso
+keep	Sent the details to NASA	NASA	NASA	NASA
+keep	That new band sounds dope	dope	dope	dope
+keep	Is the event still on btw	btw	btw	btw
+keep	I'm feeling a little tired	tired	tired	tired
+keep	Her bike has two flat tires	tires	tires	tires
+keep	I love the sound of rain	rain	rain	rain
+keep	Can someone check the mail	mail	mail	mail
+keep	She knows how to sear	sear	sear	sear
+keep	He's reading about the history of lead	lead	lead	lead
+keep	The label says crème	crème	crème	crème
+keep	Please feel free to bring your own mug	mug	mug	mug
+keep	My usual order is an iced latte	latte	latte	latte
+keep	Check with Noelle	Noelle	Noelle	Noelle
+keep	This meeting could be an email	email	email	email
+keep	I'll text when I get home safely	safely	safely	safely
+keep	That's the link for dev.bred	bred	bred	bred
+keep	Look for @latye	latye	latye	latye
+keep	The login field is user_tabke	tabke	tabke	tabke
+keep	My roommate says yep	yep	yep	yep
+fix	I packed my swimsuit this morning because we wanted to spend all day at the beack	beach	beack	beack
+fix	I packed a picnic for the park because we wanted to eat lunch on the beack	bench	beack	back
+fix	There was fresh snow on the mountain and my brother wanted to try the new slops	slopes	slops	slops
+keep	The sink was full of muddy water and he carried out the slops	slops	slops	slops
+fix	The photographer checked the lens before asking me to stand beside the camerw	camera	camera	camera
+fix	The mechanic checked the wheels before asking me to stand beside the cartt	cart	cartt	cartt
+fix	The surfers grabbed their boards and we all made our way over to the beack	beach	beack	back
+fix	The park had one empty seat and we all made our way over to the beack	bench	beack	back
+fix	The pizza was still hot when I asked her if I could have another slixe	slice	slixe	slixe
+fix	The slideshow moved too quickly so I asked her if I could have another slixe	slide	slixe	slixe
+fix	My library card was in my pocket when I went back upstairs to find the boog	book	boog	book
+fix	My left foot was getting wet when I went back upstairs to find the boog	boot	boog	book
+next	I can drop the kids off on my	way	I|the|you	way|phone|car
+next	The leftover pizza is still in the	fridge|oven|kitchen|box	I|the|you	end|area|same
+next	Ping me as soon as you're ready to	go|leave|start	I|the|you	get|go|eat
+next	Looks like we're running a little	late|behind	I|the|you	late|bit|early
+next	I have a few errands to	run|do	I|the|you	get|me|drive
+next	Could you pick me up from the	station|airport|office|store|gym	I|the|you	one|office|store
+next	The library texted to say my book is ready for	pickup|collection	I|the|you	the|a|it
+next	I'll send you the address when I get	home|there|back	I|the|you	there|in|back

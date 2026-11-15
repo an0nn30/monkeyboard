@@ -382,6 +382,21 @@ final class KeyboardTypingTests: XCTestCase {
         }
     }
 
+    func testSentenceModelDistinguishesASeatFromFlowers() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("a wooden bench. we bought a bench of tulips.", in: app)
+        let finished = NSPredicate { _, _ in
+            (draft.value as? String)?.lowercased() == "a wooden bench. we bought a bunch of tulips."
+        }
+        let repaired = XCTNSPredicateExpectation(predicate:finished, object:nil)
+        XCTAssertEqual(XCTWaiter.wait(for:[repaired],timeout:12), .completed,
+                       "The same spelling should survive the seating context and change in the flower context; got \(draft.value ?? "")")
+    }
+
     func testLeakByTheSinkAndLeekInSoup() {
         let app = XCUIApplication()
         app.launch()
@@ -400,6 +415,122 @@ final class KeyboardTypingTests: XCTestCase {
         app.buttons["key-."].tap()
         typePhrase(" there is a leek in the soup ", in: app)
         XCTAssertEqual((draft.value as? String)?.lowercased(), "there is a leek under the sink today. there is a leek in the soup ")
+    }
+
+    func testDictionarySpaceAndIntentionalWholeWord() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("the little doglaughed ", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "the little dog laughed ")
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "the little doglaughed")
+        typePhrase(" today. we tried papermaking.", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "the little doglaughed today. we tried papermaking.")
+    }
+
+    func testMeetingPlaceResolvesMissingSpaceAndUndo() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("we metin ", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "we metin ")
+        typePhrase("phoenix.", in: app)
+        let fixed = NSPredicate(format: "value ==[c] %@", "we met in phoenix.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: fixed, object: draft)],
+                                      timeout: 6), .completed)
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "we metin phoenix.")
+    }
+
+    func testShortWordReplacementsPreserveDeliberateBe() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("out od milk. it must be ready be noon.", in: app)
+        let fixed = NSPredicate(format: "value ==[c] %@", "out of milk. it must be ready by noon.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: fixed, object: draft)],
+                                      timeout: 6), .completed)
+    }
+
+    func testParentheticalByWaitsForBothWords() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("sorry, be the ", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "sorry, be the ")
+        typePhrase("way.", in: app)
+        let fixed = NSPredicate(format: "value ==[c] %@", "sorry, by the way.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: fixed, object: draft)],
+                                      timeout: 6), .completed)
+    }
+
+    func testDeletingLowercaseSelectionKeepsReplacementLowercase() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        // Deliberately start with a lowercase word. The new insertion point is
+        // a sentence start, but replacing this selected spelling should stay lowercase.
+        if app.buttons["key-Shift"].exists && letter("q", in: app).label == "Q" {
+            app.buttons["key-Shift"].tap()
+        }
+        typePhrase("red fox", in: app)
+        XCTAssertEqual(draft.value as? String, "red fox")
+        let origin = draft.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
+        origin.withOffset(CGVector(dx: 18, dy: 20)).doubleTap()
+        app.buttons["key-Delete"].tap()
+        XCTAssertFalse((draft.value as? String)?.contains("red") ?? true)
+        letter("b", in: app).tap()
+        XCTAssertTrue((draft.value as? String)?.hasPrefix("b") == true)
+    }
+
+    func testStraightDoubleQuoteOn123Page() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        app.buttons["key-123"].tap()
+        let quote = app.buttons["key-\""]
+        XCTAssertTrue(quote.exists)
+        quote.tap()
+        XCTAssertEqual(draft.value as? String, "\"")
+    }
+
+    func testTrainedContextPreservesTenseAndMeaning() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("it was directed be a woman. if it had a bar. cheese in all three.", in: app)
+        let expected = "it was directed by a woman. if it had a bar. cheese in all three."
+        let fixed = NSPredicate(format: "value ==[c] %@", expected)
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: fixed, object: draft)], timeout: 6), .completed)
+    }
+
+    func testLearnedShortWordsInTheTypingField() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("the statement if work. my coworker id getting ready.", in: app)
+        let fixed = NSPredicate(format: "value ==[c] %@", "the statement of work. my coworker is getting ready.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: fixed, object: draft)],
+                                      timeout: 6), .completed)
+        typePhrase(" bring my id badge if you can.", in: app)
+        XCTAssertTrue((draft.value as? String)?.hasSuffix("my id badge if you can.") == true)
     }
 
     func testLandlordCopulaAfterNounAndUndo() {
@@ -549,6 +680,83 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual((draft.value as? String)?.lowercased(), "teh keybaord teh ")
     }
 
+    func testLowercaseNameIsNotReplacedByAnotherName() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        if letter("n", in: app).label == "N" { app.buttons["key-Shift"].firstMatch.tap() }
+        typePhrase("navid still has the tin.", in: app)
+        XCTAssertEqual(draft.value as? String, "navid still has the tin.")
+    }
+
+    func testRejoinsMistypedSpaceWithoutRewritingNearbyName() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("call senthil about the mir ror.", in: app)
+        let expected = NSPredicate(format: "value ==[c] %@", "call senthil about the mirror.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: expected, object: draft)],
+                                      timeout: 5), .completed, "Final text: \(draft.value ?? "<empty>")")
+    }
+
+    func testLaterContextKeepsAnAlreadyCorrectedSpelling() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("diid ", in: app)
+        if letter("i", in: app).label != "I" { app.buttons["key-Shift"].firstMatch.tap() }
+        typePhrase("i leave my lugagge next to the ticket machine.", in: app)
+        let expected = NSPredicate(format: "value ==[c] %@", "did i leave my luggage next to the ticket machine.")
+        let result = XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: expected, object: draft)], timeout: 5)
+        XCTAssertEqual(result, .completed, "Final text: \(draft.value ?? "<empty>")")
+    }
+
+    func testRejoiningWordPreservesIndependentCorrection() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("add zucchini too the sho pping list.", in: app)
+        let expected = NSPredicate(format: "value ==[c] %@", "add zucchini to the shopping list.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: expected, object: draft)],
+                                      timeout: 5), .completed)
+    }
+
+    func testContrastUsesContextForHerdAndPreservesAnIntentionalHerd() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("he herd the front door close. the herd moved on.", in: app)
+        let correct = NSPredicate(format: "value ==[c] %@", "he heard the front door close. the herd moved on.")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: correct, object: draft)],
+                                      timeout: 5), .completed)
+    }
+
+    func testContextRepairsEarlierRealWordWithoutLosingTheFollowingWordOnUndo() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("can you fine ", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you fine ")
+        typePhrase("anything ", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you find anything ")
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you fine anything ")
+        typePhrase("today.", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you fine anything today.")
+    }
+
     func testCorrectionsUsePreviouslyCorrectedWord() throws {
         let app = XCUIApplication()
         app.launch()
@@ -564,6 +772,27 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual((draft.value as? String)?.lowercased(), "to figure out ")
         app.buttons["key-Delete"].tap()
         XCTAssertEqual((draft.value as? String)?.lowercased(), "to figure ut")
+    }
+
+    func testDroppedApostrophesAtSpaceAndAfterSentenceReview() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        if letter("i", in: app).label == "i" { app.buttons["key-Shift"].tap() }
+        typePhrase("id ", in: app)
+        XCTAssertEqual(draft.value as? String, "I'd ")
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual(draft.value as? String, "Id")
+        typePhrase(" ", in: app)
+        XCTAssertEqual(draft.value as? String, "Id ")
+        typePhrase("said theyd go if itd help.", in: app)
+        let expected = "Id said they'd go if it'd help."
+        let finished = NSPredicate { _, _ in draft.value as? String == expected }
+        let seen = XCTNSPredicateExpectation(predicate: finished, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [seen], timeout: 8), .completed)
+        XCTAssertEqual(draft.value as? String, expected)
     }
 
     func testTextingContractionAndUndo() throws {

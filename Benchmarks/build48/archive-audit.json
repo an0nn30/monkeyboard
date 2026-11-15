@@ -1,0 +1,32 @@
+{
+  "archive_vs_rerun_changed_sentences": {
+    "39": 0,
+    "40": 44
+  },
+  "historical_slots": {
+    "39": {
+      "archived_gains": 18,
+      "archived_gains_correct_now": 0,
+      "archived_losses": 42,
+      "archived_losses_correct_now": 42
+    },
+    "40": {
+      "archived_gains": 18,
+      "archived_gains_correct_now": 18,
+      "archived_losses": 42,
+      "archived_losses_correct_now": 42
+    },
+    "44": {
+      "archived_gains": 18,
+      "archived_gains_correct_now": 18,
+      "archived_losses": 42,
+      "archived_losses_correct_now": 42
+    },
+    "48": {
+      "archived_gains": 18,
+      "archived_gains_correct_now": 18,
+      "archived_losses": 42,
+      "archived_losses_correct_now": 42
+    }
+  }
+}

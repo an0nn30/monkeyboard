@@ -1,0 +1,15 @@
+{
+  "base_checkpoint": "b002932028730dab33b0e1733d7f60e0d7a4b64c2044ec36b15c750cfc667cac",
+  "adapted_checkpoint": "abfd833ce06a8b3e33eaed64cceab078ba336baf0250d415165c3ab81905e49c",
+  "old_replay": "004346c07ad047a45f54ce9aba690a1076ba479a6c709fba6d9aa7588f8ef7c5",
+  "candidate_replay": "c96346539ed08b9b1d0eb32a9a830fc6ad0165fd02c890053d75d1ef767a88a4",
+  "new_training_text": "edc28ced48aeaa75702590ccde3de70a283370d152323749b16c75b8984ce655",
+  "training_source_pairs": "3923227845fa16c0314f9282ec14eed8d3b94042b728dc8efd1ddf72a2c70df4",
+  "keyboard-engine/model/context21/boundary.txt": "0ae791e04bef41408e2d4d27ccbe3728319aacdcf8059cd28a47ab3cd4a40689",
+  "keyboard-engine/model/context21/counts.bin": "f503ec23933b85959d996131a4defd4586502cf528142d5a5ea3a84de84580b7",
+  "keyboard-engine/model/context21/short-vectors.bin": "01e8ddd3b38557e0822cb4f3dc1c1c1d90e10570061c4f67812eec4a55baa2bb",
+  "keyboard-engine/model/context21/short-vocab.txt": "455ebc2d3d246681354a285bcc49392928a0a46735113abfd5364e45c4ca60c2",
+  "keyboard-engine/model/context21/vocab.txt": "559855b2105ddbb86f14bb6156dbf9497fd306a323250cbb800082fa52409aa8",
+  "Benchmarks/build21/audit-blind.tsv": "1973e7bf516a8ceb923af53ede3250cd8ecf0b86a245ab8e56be18ff0f974a63",
+  "keyboard-engine/model/decoder21/MonkeyDecoder.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "2fefcb5104878a08211991b59e906b05ad9bc294ce5774c33abacd4523c0953c"
+}

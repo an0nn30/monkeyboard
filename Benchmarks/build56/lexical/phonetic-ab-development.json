@@ -1,0 +1,107 @@
+{
+  "scope": "Native macOS finisher with raw and previously displayed build 54 words, released primary fixture only; toggle phonetic peer index and permit exact single-phoneme alternatives at three spelling edits.",
+  "scores": {
+    "base": {
+      "correct_words": 2454,
+      "collateral": 5,
+      "noisy": 138,
+      "noisy_exact": 117,
+      "all": 213,
+      "all_fixed": 193,
+      "missing-space": 45,
+      "missing-space_fixed": 45,
+      "clean": 138,
+      "clean_exact": 136,
+      "ordinary": 101,
+      "ordinary_fixed": 100,
+      "real-word": 67,
+      "real-word_fixed": 48
+    },
+    "new": {
+      "correct_words": 2454,
+      "collateral": 5,
+      "noisy": 138,
+      "noisy_exact": 120,
+      "all": 213,
+      "all_fixed": 196,
+      "missing-space": 45,
+      "missing-space_fixed": 45,
+      "clean": 138,
+      "clean_exact": 136,
+      "ordinary": 101,
+      "ordinary_fixed": 100,
+      "real-word": 67,
+      "real-word_fixed": 51
+    }
+  },
+  "fixture_sha256": "520d9741d5dee5c39daf200be81ef0c043388d80b2aaf3d5177a4ba98c9f0d2d",
+  "source_sha256": {
+    "Contextual55.swift": "79cb23087ae819303768b56dbd3eed650c77690999cd4f6b72646df5491b3487",
+    "Lexical55.swift": "c9e78a98053e24e20db809c4407515d4821c68f7e3334d997567d032dc7374ed",
+    "SentenceFinisher.swift": "dd1f0aa2f581b3e80455e5342b014b465ea30503ec5734325751a10e88463c9b",
+    "SentenceSurface.swift": "86dec2c2cfd91ba08aff70962dcbf909281e306dbf0f17c44bd16a9aadfae196"
+  },
+  "resource_sha256": {
+    "base": "e248cebacc5405a6e426eb8c83560a733b81082cb256c702266f33eb84eae5a7",
+    "new": "38d367e5c9f21f15d0a183f291d14f6572fab74c7317f6926bcdbe506d9b9a71"
+  },
+  "changed": [
+    {
+      "id": "new55-0013-n",
+      "typed": "You need an oven mist for that skilelt, it's hot.",
+      "expected": "You need an oven mitt for that skillet, it's hot.",
+      "base": "You need an oven mist for that skillet, it's hot.",
+      "expanded": "You need an oven just for that skillet, it's hot."
+    },
+    {
+      "id": "new55-0034-n",
+      "typed": "imo you should veto for whoever you want.",
+      "expected": "imo you should vote for whoever you want.",
+      "base": "imo you should veto for whoever you want.",
+      "expanded": "imo you should vote for whoever you want."
+    },
+    {
+      "id": "new55-0030-n",
+      "typed": "Did you feat the cat her kibbel already?",
+      "expected": "Did you feed the cat her kibble already?",
+      "base": "Did you eat the cat her kibble already?",
+      "expanded": "Did you feed the cat her kibble already?"
+    },
+    {
+      "id": "new55-0043-n",
+      "typed": "pls take your muddy shoes off at the deer.",
+      "expected": "pls take your muddy shoes off at the door.",
+      "base": "pls take your muddy shoes off at the deer.",
+      "expanded": "pls take your muddy shoes off at the door."
+    }
+  ],
+  "additional_two_slip_trial": {
+    "scores": {
+      "correct_words": 2454,
+      "collateral": 5,
+      "noisy": 138,
+      "noisy_exact": 121,
+      "all": 213,
+      "all_fixed": 198,
+      "missing-space": 45,
+      "missing-space_fixed": 45,
+      "clean": 138,
+      "clean_exact": 136,
+      "ordinary": 101,
+      "ordinary_fixed": 101,
+      "real-word": 67,
+      "real-word_fixed": 52
+    },
+    "lexical_source_sha256": "d359c2e81b4f810170f6f5e3b0cdd0e360468790b13109f590c5223da06db5c1",
+    "lock_variant_sha256": "a2e4c1bdc0aa2aebfc1bb90fe7ff87afcd39bf58c2468f27e280e42250868bc3",
+    "changed": [
+      {
+        "id": "new55-0015-n",
+        "typed": "I found the kid that fistt your big green saucepan.",
+        "expected": "I found the lid that fits your big green saucepan.",
+        "before": "I found the kid that fist your big green saucepan.",
+        "after": "I found the lid that fits your big green saucepan."
+      }
+    ]
+  }
+}

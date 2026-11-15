@@ -1,0 +1,56 @@
+{
+  "sms_zip_sha256": "1587ea43e58e82b14ff1f5425c88e17f8496bfcdb67a583dbff9eefaf9963ce3",
+  "excluded_normalized_keys": 826031,
+  "public_eligible_after_exclusions": {
+    "review": 592,
+    "final": 685
+  },
+  "suites": {
+    "review": {
+      "cases": 356,
+      "sha256": "151fe1bbc815d1a904b9cff2d6b805441e340b30dd6c1a1153fba17161cbd72c",
+      "kinds": {
+        "boundary": 4,
+        "clean-case": 1,
+        "clean-name": 5,
+        "clean-punctuation": 3,
+        "clean-real": 6,
+        "clean-slang": 5,
+        "multi": 10,
+        "public-apostrophe": 8,
+        "public-clean": 100,
+        "public-join": 24,
+        "public-multi": 68,
+        "public-real-word": 30,
+        "public-short": 30,
+        "public-word": 44,
+        "punctuation": 4,
+        "real-word": 8,
+        "short": 6
+      }
+    },
+    "final": {
+      "cases": 356,
+      "sha256": "de60db0872dda2698e281c7700a7c59423b7840ee6d7b313b8987ea430178797",
+      "kinds": {
+        "boundary": 4,
+        "clean-case": 1,
+        "clean-name": 5,
+        "clean-punctuation": 3,
+        "clean-real": 6,
+        "clean-slang": 5,
+        "multi": 10,
+        "public-apostrophe": 8,
+        "public-clean": 100,
+        "public-join": 24,
+        "public-multi": 68,
+        "public-real-word": 30,
+        "public-short": 30,
+        "public-word": 44,
+        "punctuation": 4,
+        "real-word": 8,
+        "short": 6
+      }
+    }
+  }
+}

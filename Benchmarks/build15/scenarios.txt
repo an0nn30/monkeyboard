@@ -1,0 +1,50 @@
+# Each family supplies three independently written message frames and eight plausible substitutions.
+# The generator marks one word per message and reserves whole families for evaluation.
+I left the {} on your porch|Did the {} make it into your suitcase|Could you take a picture of the {} before you pack it
+charger blanket sweater flashlight notebook bracelet adapter passport
+There's still some {} in the fridge|I put the {} on the middle shelf|Could you bring the {} to the potluck
+hummus yogurt pudding pasta cheese chicken broccoli salad
+Did your {} get moved again|I'll call you after my {} ends|They sent a reminder about the {} this afternoon
+appointment meeting interview rehearsal practice lesson workshop shift
+We're meeting at the {} before we head over|I think the {} closes at six tonight|Could you swing by the {} on the way home
+library bakery pharmacy clinic office garage studio market
+Can you forward the {} when you find it|I haven't received the {} yet|Someone accidentally deleted the {} from the shared folder
+receipt invoice itinerary schedule document recording spreadsheet invitation
+The {} stopped working during lunch|Do you know where the spare {} is|I'll bring the {} back after the weekend
+printer router speaker monitor keyboard camera kettle blender
+I put the {} next to the sink|Can you rinse the {} while I chop onions|Would you move the {} off the counter
+colander skillet bottle saucepan mug spatula spoon pitcher
+My {} is coming by after work|I promised my {} a ride tomorrow|I'm waiting for my {} to text me back
+neighbor brother sister cousin aunt roommate partner friend
+The {} got delayed again|I think we missed the last {} downtown|We can catch the {} right outside the station
+shuttle train bus ferry tram subway coach trolley
+Can you check the {} in the garage|There should be a spare {} in the toolbox|I just found the {} under the workbench
+wrench hammer drill battery cable screwdriver bracket level
+I think we need another {} for the trip|Don't forget your {} when you leave the house|My {} is somewhere in the back seat
+jacket towel suitcase backpack pillow raincoat umbrella hat
+They forgot the {} in our takeout order|I can bring some {} if you're still hungry|Would you pick up some {} on the way over
+noodles dumplings rice salsa bread falafel shrimp tofu
+Did you find the {} in the yard|The kids left the {} by the fence|I can throw the {} in the trunk after practice
+frisbee baseball volleyball football skateboard scooter helmet racket
+I should finish the {} before dinner|She needs help with the {} this weekend|We're nearly done with the {} already
+laundry painting cleaning packing shopping sorting baking filing
+How was the {} last night|Do we need tickets for the {} tomorrow|I sent you the details for the {} on Friday
+concert recital tournament fundraiser parade screening festival exhibition
+It sounds like the {} is loose again|We need someone to check the {} upstairs|The repair shop still has the replacement {}
+hinge handle pipe latch switch valve fitting sensor
+I left the {} in the laundry room|Could you grab the {} from the closet|I folded the {} while the coffee was brewing
+sheets towels napkins blankets shirts pajamas pillowcases jeans
+I really liked the {} you sent me|Have you listened to that {} yet|Could you send the {} to the rest of the group
+podcast playlist song album recording clip interview episode
+Please send the {} when you're ready|I'm still waiting on the {} from the front desk|Would you double check the {} before we leave
+address code number update confirmation email message link
+Is there enough {} for breakfast|I think we're nearly out of {} again|Could you put the {} back in the pantry
+granola oatmeal cereal honey jam coffee tea flour
+The {} is acting weird on my phone|Can you walk me through the {} after work|I can't get the {} to load at home
+calendar website dashboard app widget spreadsheet map camera
+I accidentally left my {} at the gym|Could you check the lost and found for my {}|They found a {} by the lockers
+watch wallet jacket bottle scarf hoodie towel ring
+I'll meet you near the {} after lunch|We should take a photo by the {} before we go|I can see the {} from the bus stop
+bridge fountain playground pier museum statue entrance tower
+Could you bring the {} to the picnic|I might have left the {} in the trunk|There should be a {} behind the folding chairs
+cooler umbrella lantern basket table blanket speaker thermos

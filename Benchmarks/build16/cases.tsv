@@ -1,0 +1,841 @@
+split	origin	task	difficulty	kind	left	typed	gold	right
+holdout	user_pairs	next	mixed	paired_next	Matt is upset		about	the results
+holdout	user_pairs	next	mixed	paired_next	I'll try to shovel the		driveway	today
+holdout	user_pairs	keep	mixed	paired_keep	I'm trying to learn to	brew	brew	beer
+holdout	user_pairs	keep	mixed	paired_keep	Grace just	moved	moved	to Pittsburgh
+holdout	user_pairs	next	mixed	paired_next	I ran into		Victor	at the DMV
+holdout	user_pairs	fix	mixed	paired_fix	What time is your	interveiw	interview	
+holdout	user_pairs	next	mixed	paired_next	Aaron just moved		to	Cincinnati
+holdout	user_pairs	keep	mixed	paired_keep	We're having salad first thing	tomorrow	tomorrow	
+holdout	user_pairs	fix	mixed	paired_fix	Do you want to submit the	applicaiton	application	
+holdout	user_pairs	next	mixed	paired_next	We're moving to		Morocco	
+holdout	user_pairs	next	mixed	paired_next	I already asked Marcus		to	recycle the boxes
+holdout	user_pairs	fix	mixed	paired_fix	I	allready	already	asked Thaddeus to call the plumber
+holdout	user_pairs	next	mixed	paired_next	We're driving		to	Miami
+holdout	user_pairs	fix	mixed	paired_fix	My aunt makes the best	ibryani	biryani	
+holdout	user_pairs	fix	mixed	paired_fix	The meeting got moved to	Wedensday	Wednesday	
+holdout	user_pairs	keep	mixed	paired_keep	My roommate makes	the	the	best croissants
+holdout	user_pairs	keep	mixed	paired_keep	I'm kind	of	of	frustrated about the wedding
+holdout	user_pairs	next	mixed	paired_next	Chloe taught me how to		bake	bread
+holdout	user_pairs	keep	mixed	paired_keep	We had biryani this	morning	morning	
+holdout	user_pairs	keep	mixed	paired_keep	Our flight	leaves	leaves	at pm before lunch
+holdout	user_pairs	next	mixed	paired_next	Who is going to		buy	charcoal
+holdout	user_pairs	next	mixed	paired_next	Are you stressed about		the	election
+holdout	user_pairs	keep	mixed	paired_keep	Lauren is handling the	inventory	inventory	list
+holdout	user_pairs	next	mixed	paired_next	I have a chiropractor appointment		tonight	
+holdout	user_pairs	keep	mixed	paired_keep	The forecast	says	says	thunderstorms this afternoon
+holdout	user_pairs	next	mixed	paired_next	Ximena is pumped about		the	trip
+holdout	user_pairs	keep	mixed	paired_keep	They didn't	have	have	any spinach
+holdout	user_pairs	keep	mixed	paired_keep	Can you take a	day	day	off
+holdout	user_pairs	fix	mixed	paired_fix	I need to update the proposal on	Sitturdie	Saturday	
+holdout	user_pairs	keep	mixed	paired_keep	Victor is confused about the	audition	audition	
+holdout	user_pairs	fix	mixed	paired_fix		josica	Jessica	taught me how to ride a motorcycle
+holdout	user_pairs	fix	mixed	paired_fix	Flights to	Mississipip	Mississippi	are so expensive
+holdout	user_pairs	fix	mixed	paired_fix	Sophia has a sinus infection and stayed	hone	home	
+holdout	user_pairs	next	mixed	paired_next	I'm craving fried		rice	before the party
+holdout	user_pairs	next	mixed	paired_next	Omar just got		a	PhD in metallurgy
+holdout	user_pairs	fix	mixed	paired_fix	Isaac just	move	moved	to Tampa
+holdout	user_pairs	keep	mixed	paired_keep	When is your	birthday	birthday	
+holdout	user_pairs	keep	mixed	paired_keep	Let's book the hotel	by	by	Friday
+holdout	user_pairs	next	mixed	paired_next	Priya is learning to		whittle	
+holdout	user_pairs	fix	mixed	paired_fix	Our flight leaves	aat	at	four on Wednesday
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving	ztir	stir	fry before the party
+holdout	user_pairs	next	mixed	paired_next	The grocery store closes at ten thirty		tonight	
+holdout	user_pairs	keep	mixed	paired_keep	Could you please	catch	catch	the early train
+holdout	user_pairs	fix	mixed	paired_fix		FDo	Do	you want a milkshake
+holdout	user_pairs	fix	mixed	paired_fix	Tyler just moved to New	ESrleens	Orleans	
+holdout	user_pairs	next	mixed	paired_next	Can you load		the	dishwasher after dinner
+holdout	user_pairs	fix	mixed	paired_fix	We're moving to Auckland in	Augus	August	
+holdout	user_pairs	next	mixed	paired_next	I ran into		Omar	at the aquarium
+holdout	user_pairs	keep	mixed	paired_keep	I finally	have	have	time to take the medicine
+holdout	user_pairs	keep	mixed	paired_keep	Tyler is studying nursing	in	in	college
+holdout	user_pairs	fix	mixed	paired_fix	Is the bakery open on	uSndays	Sundays	
+holdout	user_pairs	fix	mixed	paired_fix	I	rna	ran	into Olivia at the pharmacy
+holdout	user_pairs	keep	mixed	paired_keep	My throat has	been	been	hurting all day
+holdout	user_pairs	keep	mixed	paired_keep	Can you print	the	the	proposal for me
+holdout	user_pairs	next	mixed	paired_next	I'll be at		the	museum until eight
+holdout	user_pairs	fix	mixed	paired_fix	I'll have the press	repease	release	ready by noon
+holdout	user_pairs	fix	mixed	paired_fix	The clam chowder here is	incredibel	incredible	
+holdout	user_pairs	next	mixed	paired_next	My dad lives in		Stockholm	
+holdout	user_pairs	keep	mixed	paired_keep	Remind me to	save	save	some money on Saturday
+holdout	user_pairs	keep	mixed	paired_keep	I have	a	a	therapy appointment by Friday
+holdout	user_pairs	next	mixed	paired_next	I'm craving burgers on		Sunday	
+holdout	user_pairs	fix	mixed	paired_fix		Amnada	Amanda	wants to become a welder
+holdout	user_pairs	fix	mixed	paired_fix	I always wanted to be	wcteacher	a teacher	
+holdout	user_pairs	keep	mixed	paired_keep	My uncle is an	accountant	accountant	
+holdout	user_pairs	next	mixed	paired_next	We're having chili sometime this		week	
+holdout	user_pairs	next	mixed	paired_next	Wesley taught me		how	to play chess
+holdout	user_pairs	next	mixed	paired_next	Please schedule the meeting before		you	leave
+holdout	user_pairs	keep	mixed	paired_keep	Isaac is learning to do	calligraphy	calligraphy	
+holdout	user_pairs	keep	mixed	paired_keep	We're driving to San Francisco later	today	today	
+holdout	user_pairs	fix	mixed	paired_fix	Somebody stole my	laptolp	laptop	this morning
+holdout	user_pairs	keep	mixed	paired_keep	My mom	makes	makes	the best pot roast
+holdout	user_pairs	fix	mixed	paired_fix	Can you	srnd	send	a birthday card later
+holdout	user_pairs	fix	mixed	paired_fix	I already asked Amanda to clean the	garadge	garage	
+holdout	user_pairs	next	mixed	paired_next	Want to go to		the	parking lot tonight
+holdout	user_pairs	fix	mixed	paired_fix	My stepmom is a	pastrie	pastry	chef
+holdout	user_pairs	next	mixed	paired_next	I'm so frustrated		about	the election
+holdout	user_pairs	next	mixed	paired_next	That conference		was	really good
+holdout	user_pairs	next	mixed	paired_next	I'm kind		of	happy about the tournament
+holdout	user_pairs	next	mixed	paired_next	Let's meet at the		train	station at nine
+holdout	user_pairs	keep	mixed	paired_keep	Nicole is studying sociology	in	in	college
+holdout	user_pairs	next	mixed	paired_next	Can you buy		charcoal	later today
+holdout	user_pairs	keep	mixed	paired_keep	Can you drink more water by	Friday	Friday	
+holdout	user_pairs	fix	mixed	paired_fix		Jamnal	Jamal	just moved to Denver
+holdout	user_pairs	keep	mixed	paired_keep	Megan is	learning	learning	to use chopsticks
+holdout	user_pairs	fix	mixed	paired_fix		SHould	Should	I clean the bathroom
+holdout	user_pairs	next	mixed	paired_next	Ximena are handling the		audit	findings
+holdout	user_pairs	next	mixed	paired_next	I forgot to bring a jacket		last	weekend
+holdout	user_pairs	fix	mixed	paired_fix	Can you teach me to make	sowrdw	sourdough	
+holdout	user_pairs	keep	mixed	paired_keep	I'll have the timeline ready by	Wednesday	Wednesday	
+holdout	user_pairs	keep	mixed	paired_keep	Let's finish	the	the	book by Friday
+holdout	user_pairs	keep	mixed	paired_keep	Do you want	to	to	update the software later
+holdout	user_pairs	keep	mixed	paired_keep	Are you worried about the piano	recital	recital	
+holdout	user_pairs	next	mixed	paired_next	Did Yusuf		approve	the receipts
+holdout	user_pairs	fix	mixed	paired_fix	Tyler is a plumber	inMassachussetts	in Massachusetts	
+holdout	user_pairs	next	mixed	paired_next	Emily thought the hike		was	a little confusing
+holdout	user_pairs	next	mixed	paired_next	I ran into Ingrid at the		pharmacy	
+holdout	user_pairs	next	mixed	paired_next	Everyone says the dinner is kind of		weird	
+holdout	user_pairs	fix	mixed	paired_fix	Let's	rinnw	renew	the lease sometime this week
+holdout	user_pairs	next	mixed	paired_next	We should probably		mop	the kitchen floor tomorrow
+holdout	user_pairs	next	mixed	paired_next	My fianc		said	the documentary was overrated
+holdout	user_pairs	next	mixed	paired_next	Everyone is happy		about	the concert
+holdout	user_pairs	keep	mixed	paired_keep	I'm craving	spring	spring	rolls in the morning
+holdout	user_pairs	keep	mixed	paired_keep	My manager	knows	knows	how to play the drums
+holdout	user_pairs	fix	mixed	paired_fix		JMy	My	grandpa makes the best quesadillas
+holdout	user_pairs	fix	mixed	paired_fix	I ran into Megan at the	communitty	community	center
+holdout	user_pairs	fix	mixed	paired_fix	Rachel is handling the job	descripshun	description	
+holdout	user_pairs	fix	mixed	paired_fix	Aaron just moved to	Iatly	Italy	
+holdout	user_pairs	next	mixed	paired_next	Did Matt approve the		forecast	
+holdout	user_pairs	next	mixed	paired_next	Don't forget to thank him properly on		Wednesday	
+holdout	user_pairs	next	mixed	paired_next	I'd rather not		flip	the mattress soon
+holdout	user_pairs	keep	mixed	paired_keep	Honestly the movie was	surprisingly	surprisingly	good
+holdout	user_pairs	next	mixed	paired_next	I ran		into	David at the gym
+holdout	user_pairs	next	mixed	paired_next	My boyfriend		makes	the best gumbo
+holdout	user_pairs	next	mixed	paired_next	We're having Indian food		tonight	
+holdout	user_pairs	keep	mixed	paired_keep	My landlord	wants	wants	me to dispute the charge
+holdout	user_pairs	next	mixed	paired_next	Mei is worried about the		road	test
+holdout	user_pairs	next	mixed	paired_next	What's the weather like		in	Milwaukee
+holdout	user_pairs	fix	mixed	paired_fix	Maya is a court reporter in	Melbounre	Melbourne	
+holdout	user_pairs	keep	mixed	paired_keep	Tyler taught me how	to	to	throw pottery
+holdout	user_pairs	keep	mixed	paired_keep	Don't forget to schedule a physical	today	today	
+holdout	user_pairs	fix	mixed	paired_fix	My best friend makes the	bset	best	clam chowder
+holdout	user_pairs	next	mixed	paired_next	Let's unclog		the	drain first thing tomorrow
+holdout	user_pairs	keep	mixed	paired_keep	His wife works	as	as	a geologist
+holdout	user_pairs	fix	mixed	paired_fix	I ran into Jessica at the	lawndrmat	laundromat	
+holdout	user_pairs	keep	mixed	paired_keep	I already asked Aaron	to	to	make a reservation
+holdout	user_pairs	keep	mixed	paired_keep	Siobhan has	a	a	migraine and stayed home
+holdout	user_pairs	next	mixed	paired_next	I forgot to		pack	the lunches on Wednesday
+holdout	user_pairs	keep	mixed	paired_keep	My grandma	said	said	the dinner was disappointing
+holdout	user_pairs	keep	mixed	paired_keep	Did Noah	approve	approve	the contract
+holdout	user_pairs	keep	mixed	paired_keep	My stepmom is a	social	social	worker
+holdout	user_pairs	fix	mixed	paired_fix	My stepdad makes the best	carb	crab	cakes
+holdout	user_pairs	fix	mixed	paired_fix	Why didn't you feed the cat	yestereday	yesterday	
+holdout	user_pairs	fix	mixed	paired_fix	The	dehumidfier	dehumidifier	stopped working yesterday
+holdout	user_pairs	next	mixed	paired_next	Can you clean		the	gutters
+holdout	user_pairs	keep	mixed	paired_keep	The screwdriver	is	is	in the taxi
+holdout	user_pairs	fix	mixed	paired_fix	My boss	iss	is	a financial advisor
+holdout	user_pairs	fix	mixed	paired_fix	I keep	fergeting	forgetting	to get a haircut
+holdout	user_pairs	keep	mixed	paired_keep	I left	my	my	boarding pass at school
+holdout	user_pairs	next	mixed	paired_next	I left my wallet at		the	restaurant
+holdout	user_pairs	fix	mixed	paired_fix		Emiyl	Emily	just moved to Edinburgh
+holdout	user_pairs	keep	mixed	paired_keep	We should get	sliders	sliders	soon
+holdout	user_pairs	keep	mixed	paired_keep	Congrats on your	retirement	retirement	
+holdout	user_pairs	fix	mixed	paired_fix		my	My	dad knows how to play the ukulele
+holdout	user_pairs	fix	mixed	paired_fix	I'd rather not send the invoice	tomororw	tomorrow	
+holdout	user_pairs	fix	mixed	paired_fix	I ran	inyo	into	Chris at the farmers market
+holdout	user_pairs	next	mixed	paired_next	The food in		Louisville	was amazing
+holdout	user_pairs	next	mixed	paired_next	I already asked Natalie to shovel the		driveway	
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving salad after	ljunch	lunch	
+holdout	user_pairs	fix	mixed	paired_fix		Dvaid	David	offered to defrost the chicken
+holdout	user_pairs	fix	mixed	paired_fix	My wife knows how to play	chse	chess	
+holdout	user_pairs	keep	mixed	paired_keep	The expense report is	due	due	Friday
+holdout	user_pairs	fix	mixed	paired_fix	We should get cookies on	Thursdaei	Thursday	
+holdout	user_pairs	keep	mixed	paired_keep	I'm flying	to	to	Denver next week
+holdout	user_pairs	keep	mixed	paired_keep	Rachel is handling the	report	report	
+holdout	user_pairs	keep	mixed	paired_keep	Did Gabriel approve	the	the	user survey
+holdout	user_pairs	fix	mixed	paired_fix	I thought the	tripp	trip	was a total mess
+holdout	user_pairs	next	mixed	paired_next	Let's fill		up	the gas tank
+holdout	user_pairs	keep	mixed	paired_keep	Raj is pumped	about	about	the flight
+holdout	user_pairs	keep	mixed	paired_keep	Fatima is a dentist	in	in	Tampa
+holdout	user_pairs	fix	mixed	paired_fix	I already asked	jaskn	Jason	to file the taxes
+holdout	user_pairs	next	mixed	paired_next	My grandma is going to		water	the plants
+holdout	user_pairs	keep	mixed	paired_keep	I'd rather not hang the pictures	after	after	work
+holdout	user_pairs	fix	mixed	paired_fix	I'd rather not update	thbe	the	resume tonight
+holdout	user_pairs	next	mixed	paired_next	Zoe is learning to		surf	
+holdout	user_pairs	next	mixed	paired_next	Make sure you		get	some sleep on Thursday
+holdout	user_pairs	keep	mixed	paired_keep	Should I replace the	batteries	batteries	next week
+holdout	user_pairs	next	mixed	paired_next	Can you hand me the		hammer	
+holdout	user_pairs	keep	mixed	paired_keep	I made	sushi	sushi	for lunch
+holdout	user_pairs	fix	mixed	paired_fix		Axhley	Ashley	is handling the draft
+holdout	user_pairs	fix	mixed	paired_fix		Yor	You're	going to read the instructions on Tuesday
+holdout	user_pairs	next	mixed	paired_next	The forecast		says	sleet on Thursday
+holdout	user_pairs	next	mixed	paired_next	Amanda doesn't want		to	organize the closet
+holdout	user_pairs	keep	mixed	paired_keep	Tessa is learning	to	to	throw pottery
+holdout	user_pairs	next	mixed	paired_next	I'll try to do the		dishes	on Saturday
+holdout	user_pairs	keep	mixed	paired_keep	Want to go	to	to	the school on Saturday
+holdout	user_pairs	fix	mixed	paired_fix	Did Leah	aprove	approve	the design mockups
+holdout	user_pairs	fix	mixed	paired_fix	Who is going to	uipdate	update	the spreadsheet tomorrow
+holdout	user_pairs	fix	mixed	paired_fix		grace	Grace	offered to buy charcoal
+holdout	user_pairs	next	mixed	paired_next	Everyone is thrilled		about	the graduation
+holdout	user_pairs	next	mixed	paired_next	Victor taught me how		to	make sourdough
+holdout	user_pairs	keep	mixed	paired_keep	She has a master's	in	in	chemistry
+holdout	user_pairs	keep	mixed	paired_keep	Tyler are	handling	handling	the quarterly numbers
+holdout	user_pairs	next	mixed	paired_next	Want to go to		the	museum tonight
+holdout	user_pairs	fix	mixed	paired_fix	Chris is training	two	to	be a data scientist
+holdout	user_pairs	keep	mixed	paired_keep	My son said the symphony	was	was	surprisingly good
+holdout	user_pairs	fix	mixed	paired_fix	Did Jamal approve the grant	applakashun	application	
+holdout	user_pairs	keep	mixed	paired_keep	How was your class	on	on	Wednesday
+holdout	user_pairs	keep	mixed	paired_keep	My mom is allergic	to	to	peanuts
+holdout	user_pairs	fix	mixed	paired_fix	I left my	calculatkrnat	calculator at	work
+holdout	user_pairs	fix	mixed	paired_fix	I keep	forgeting	forgetting	to change the oil
+holdout	user_pairs	next	mixed	paired_next	The TV		remote	is on the table
+holdout	user_pairs	keep	mixed	paired_keep	We should get croissants after	lunch	lunch	
+holdout	user_pairs	next	mixed	paired_next	Let's go over		the	onboarding checklist together
+holdout	user_pairs	next	mixed	paired_next	My girlfriend knows how to build		furniture	
+holdout	user_pairs	keep	mixed	paired_keep	Should I unclog	the	the	drain on Saturday
+holdout	user_pairs	fix	mixed	paired_fix	Isaac is	reallly	really	into finance
+holdout	user_pairs	keep	mixed	paired_keep	I'll try to finish	the	the	book on Monday
+holdout	user_pairs	keep	mixed	paired_keep	Leah just moved to	Madrid	Madrid	
+holdout	user_pairs	next	mixed	paired_next	I forgot to cancel		the	subscription last week
+holdout	user_pairs	fix	mixed	paired_fix	Want to go to the hospital	tuis	this	afternoon
+holdout	user_pairs	next	mixed	paired_next	Let's meet at		the	airport at pm
+holdout	user_pairs	next	mixed	paired_next	I forgot to call the vet this		morning	
+holdout	user_pairs	fix	mixed	paired_fix	I keep forgetting to buy more	coffe	coffee	
+holdout	user_pairs	fix	mixed	paired_fix	The first aid kit should be at	skool	school	
+holdout	user_pairs	next	mixed	paired_next	My neighbor works as		a	neurosurgeon
+holdout	user_pairs	next	mixed	paired_next	Chloe is studying psychology in		college	
+holdout	user_pairs	keep	mixed	paired_keep	The library closes	at	at	nine tonight
+holdout	user_pairs	next	mixed	paired_next	We're having		shawarma	in the morning
+holdout	user_pairs	keep	mixed	paired_keep	My neighbor lives in	Sacramento	Sacramento	
+holdout	user_pairs	keep	mixed	paired_keep	Emily taught me how to	surf	surf	
+holdout	user_pairs	keep	mixed	paired_keep	I'll be at the bookstore until	pm	pm	
+holdout	user_pairs	next	mixed	paired_next	I'm so hopeful about		the	road test
+holdout	user_pairs	keep	mixed	paired_keep	Why didn't you go grocery	shopping	shopping	on Friday
+holdout	user_pairs	keep	mixed	paired_keep	My uncle	knows	knows	how to whittle
+holdout	user_pairs	next	mixed	paired_next	I'm really excited about the product		launch	
+holdout	user_pairs	keep	mixed	paired_keep	My grandma lives	in	in	Dublin
+holdout	user_pairs	next	mixed	paired_next	Is the hummus		on	sale
+holdout	user_pairs	keep	mixed	paired_keep	We should probably send the invitations on	Thursday	Thursday	
+holdout	user_pairs	fix	mixed	paired_fix	Emily offered to	uppdate	update	the spreadsheet by Friday
+holdout	user_pairs	next	mixed	paired_next	I'm so nervous		about	the party
+holdout	user_pairs	next	mixed	paired_next	Can you finish		the	report after dinner
+holdout	user_pairs	next	mixed	paired_next	Make sure you		fix	the fence this afternoon
+holdout	user_pairs	next	mixed	paired_next	I left my phone		in	my other bag
+holdout	user_pairs	next	mixed	paired_next	Check in is		at	eight
+holdout	user_pairs	next	mixed	paired_next	I'd rather not recycle the boxes		tomorrow	
+holdout	user_pairs	fix	mixed	paired_fix	I need to update the grant	applicaiton	application	later
+holdout	user_pairs	fix	mixed	paired_fix	I just got	bck	back	from Italy
+holdout	user_pairs	next	mixed	paired_next	Why didn't you shovel		the	driveway
+holdout	user_pairs	keep	mixed	paired_keep	Josh taught me how to	cook	cook	Thai food
+holdout	user_pairs	next	mixed	paired_next	The pharmacy opens		at	two tomorrow
+holdout	user_pairs	next	mixed	paired_next	Let's grab an espresso		on	Wednesday
+holdout	user_pairs	fix	mixed	paired_fix		Mh	My	boss is allergic to tree nuts
+holdout	user_pairs	fix	mixed	paired_fix		Its	It's	your turn to sharpen the knives
+holdout	user_pairs	keep	mixed	paired_keep	Ashley is	handling	handling	the inventory list
+holdout	user_pairs	fix	mixed	paired_fix	I already asked	Rachepl	Rachel	to dispute the charge
+holdout	user_pairs	next	mixed	paired_next	Can you finish the		homework	this evening
+holdout	user_pairs	fix	mixed	paired_fix	I'll	trfy	try	to return the package today
+holdout	user_pairs	keep	mixed	paired_keep	Don't forget to renew the registration later	today	today	
+holdout	user_pairs	fix	mixed	paired_fix	I already asked Ashley	too	to	email the teacher
+holdout	user_pairs	next	mixed	paired_next	Mei is upset		about	the tournament
+holdout	user_pairs	fix	mixed	paired_fix		Sophai	Sophia	taught me how to drive stick
+holdout	user_pairs	keep	mixed	paired_keep	I need	to	to	update the press release
+holdout	user_pairs	fix	mixed	paired_fix		mikw	Mike	is curious about the election
+holdout	user_pairs	next	mixed	paired_next	Do you want to do the		laundry	
+holdout	user_pairs	keep	mixed	paired_keep	Everyone says the lecture	is	is	hilarious
+holdout	user_pairs	keep	mixed	paired_keep	I'm craving falafel	next	next	week
+holdout	user_pairs	keep	mixed	paired_keep	Brian doesn't want to refill	the	the	prescription soon
+holdout	user_pairs	keep	mixed	paired_keep	I ran into Tessa	at	at	the farmers market
+holdout	user_pairs	keep	mixed	paired_keep	I finally	have	have	time to clean the aquarium
+holdout	user_pairs	fix	mixed	paired_fix	Who is going to winterize the sprinklers	tomarrow	tomorrow	
+holdout	user_pairs	keep	mixed	paired_keep	He teaches anthropology at the	university	university	
+holdout	user_pairs	next	mixed	paired_next	I'm really upset about the		date	
+holdout	user_pairs	fix	mixed	paired_fix	I ran	imto	into	Noah at the community center
+holdout	user_pairs	next	mixed	paired_next	Kevin needs to call the vet		on	Tuesday
+holdout	user_pairs	keep	mixed	paired_keep	We're moving to	Peru	Peru	
+holdout	user_pairs	fix	mixed	paired_fix	I'm kind of worried about the	palyoffs	playoffs	
+holdout	user_pairs	next	mixed	paired_next	The can opener should be in		the	kitchen
+holdout	user_pairs	keep	mixed	paired_keep	We should probably	clean	clean	the bathroom on Monday
+holdout	user_pairs	next	mixed	paired_next	I ran		into	Noah at the zoo
+holdout	user_pairs	fix	mixed	paired_fix		Nixole	Nicole	thought the documentary was incredible
+holdout	user_pairs	fix	mixed	paired_fix	The TV remote is in the	kichen	kitchen	
+holdout	user_pairs	fix	mixed	paired_fix	The dog chewed up my	sbhoe	shoe	
+holdout	user_pairs	keep	mixed	paired_keep	Can you schedule the	meeting	meeting	later today
+holdout	user_pairs	fix	mixed	paired_fix	The pizza	placecloses	place closes	at eight tonight
+holdout	user_pairs	keep	mixed	paired_keep	Josh taught me	how	how	to dance salsa
+holdout	user_pairs	fix	mixed	paired_fix	Emily needs to reply	tto	to	the email tomorrow
+holdout	user_pairs	next	mixed	paired_next	Brian is handling		the	vendor quote
+holdout	user_pairs	keep	mixed	paired_keep	I need to buy more	peanut	peanut	butter
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving	dumplingds	dumplings	on Monday
+holdout	user_pairs	keep	mixed	paired_keep	I heard about	the	the	book deal congrats
+holdout	user_pairs	keep	mixed	paired_keep	Can you join the	call	call	on Thursday
+holdout	user_pairs	next	mixed	paired_next	We had jambalaya		last	week
+holdout	user_pairs	fix	mixed	paired_fix		ldet's	Let's	load the dishwasher this evening
+holdout	user_pairs	keep	mixed	paired_keep	I left my scarf on the	bus	bus	
+holdout	user_pairs	fix	mixed	paired_fix	I left my sunglasses at	woork	work	
+holdout	user_pairs	next	mixed	paired_next	Lauren is		learning	to drive stick
+holdout	user_pairs	fix	mixed	paired_fix	I'm kind of stressed about	trhe	the	results
+holdout	user_pairs	fix	mixed	paired_fix	My best friend lives in	Anxhorage	Anchorage	
+holdout	user_pairs	fix	mixed	paired_fix	Liam thought the wedding was better	thwn	than	expected
+holdout	user_pairs	fix	mixed	paired_fix		Wsr'e	We're	moving to Rome
+holdout	user_pairs	keep	mixed	paired_keep	Why didn't you eat	more	more	vegetables on Friday
+holdout	user_pairs	keep	mixed	paired_keep	My stepdad makes the	best	best	clam chowder
+holdout	user_pairs	keep	mixed	paired_keep	Thaddeus is	handling	handling	the proposal
+holdout	user_pairs	keep	mixed	paired_keep	I'm craving	clam	clam	chowder this afternoon
+holdout	user_pairs	next	mixed	paired_next	My boss knows how		to	play the harmonica
+holdout	user_pairs	next	mixed	paired_next	The hardware store		was	packed last night
+holdout	user_pairs	keep	mixed	paired_keep	We should	probably	probably	review the contract on Monday
+holdout	user_pairs	keep	mixed	paired_keep	I took	a	a	class on art history
+holdout	user_pairs	keep	mixed	paired_keep	I'm thinking about majoring in	finance	finance	
+holdout	user_pairs	next	mixed	paired_next	Should I RSVP to		the	wedding after lunch
+holdout	user_pairs	fix	mixed	paired_fix	My neighbor	knowa	knows	how to read music
+holdout	user_pairs	next	mixed	paired_next	My stepdad		lives	in Pittsburgh
+holdout	user_pairs	next	mixed	paired_next	Are you worried		about	the deadline
+holdout	user_pairs	keep	mixed	paired_keep	I ran into Diego at the	church	church	
+holdout	user_pairs	keep	mixed	paired_keep	That museum tour was worth	every	every	penny
+holdout	user_pairs	next	mixed	paired_next	I ran into Andre		at	the hardware store
+holdout	user_pairs	fix	mixed	paired_fix	We're	haivng	having	gumbo on Wednesday
+holdout	user_pairs	next	mixed	paired_next	Yusuf has a		stomach	bug and stayed home
+holdout	user_pairs	keep	mixed	paired_keep	I'd rather not check the mailbox on	Sunday	Sunday	
+holdout	user_pairs	keep	mixed	paired_keep	Everyone says the game is	worth	worth	every penny
+holdout	user_pairs	fix	mixed	paired_fix	Mike just moved to	Lonodn	London	
+holdout	user_pairs	fix	mixed	paired_fix		EVeeyone	Everyone	says the lecture is absolutely beautiful
+holdout	user_pairs	keep	mixed	paired_keep	Let's meet at the park at	eight	eight	
+holdout	user_pairs	next	mixed	paired_next	Omar is		frustrated	about the move
+holdout	user_pairs	keep	mixed	paired_keep	Ximena is scared about	the	the	custody hearing
+holdout	user_pairs	keep	mixed	paired_keep	The flight	was	was	a waste of time
+holdout	user_pairs	next	mixed	paired_next	Where did you put		my	umbrella
+holdout	user_pairs	next	mixed	paired_next	Who is going		to	water the plants today
+holdout	user_pairs	next	mixed	paired_next	Can you get the		car	inspected on Saturday
+holdout	user_pairs	keep	mixed	paired_keep	Rachel is upset about	the	the	biopsy results
+holdout	user_pairs	next	mixed	paired_next	My daughter is a		translator	
+holdout	user_pairs	keep	mixed	paired_keep	Please send me	the	the	forecast by tomorrow
+holdout	user_pairs	keep	mixed	paired_keep	Don't forget to send the invoice	after	after	dinner
+holdout	user_pairs	next	mixed	paired_next	Can you take a look at		the	dehumidifier
+holdout	user_pairs	next	mixed	paired_next	I grew up		near	Vienna
+holdout	user_pairs	fix	mixed	paired_fix	I already asked Mei to	cleam	clean	the oven
+holdout	user_pairs	fix	mixed	paired_fix	Remind me to scrub the bathtub on	Tuesdayy	Tuesday	
+holdout	user_pairs	fix	mixed	paired_fix		hanna	Hannah	is overwhelmed about the recital
+holdout	user_pairs	keep	mixed	paired_keep	The art gallery closes at ten thirty	tonight	tonight	
+holdout	user_pairs	next	mixed	paired_next	Remind me to rake		the	leaves on Wednesday
+holdout	user_pairs	fix	mixed	paired_fix	Jamal has pink eye	adn	and	stayed home
+holdout	user_pairs	keep	mixed	paired_keep	Should I load	the	the	dishwasher before lunch
+holdout	user_pairs	keep	mixed	paired_keep	I'm craving waffles later	today	today	
+holdout	user_pairs	keep	mixed	paired_keep	The store	was	was	out of soy sauce
+holdout	user_pairs	next	mixed	paired_next	I ran into		Brian	at the theater
+holdout	user_pairs	next	mixed	paired_next	I think we should		change	the sheets tonight
+holdout	user_pairs	keep	mixed	paired_keep	Have you seen	my	my	notebook
+holdout	user_pairs	keep	mixed	paired_keep	My neighbor	lives	lives	in San Diego
+holdout	user_pairs	fix	mixed	paired_fix	Siobhan are handling	th	the	audit findings
+holdout	user_pairs	next	mixed	paired_next	My manager said the		party	was amazing
+holdout	user_pairs	fix	mixed	paired_fix	My uncle is a	fierfighter	firefighter	
+holdout	user_pairs	next	mixed	paired_next	Why didn't		you	thank him properly on Wednesday
+holdout	user_pairs	next	mixed	paired_next	Can you get the tires		rotated	tonight
+holdout	user_pairs	keep	mixed	paired_keep	I left my watch in my	other	other	bag
+holdout	user_pairs	keep	mixed	paired_keep	Ximena is learning to	change	change	a tire
+holdout	user_pairs	fix	mixed	paired_fix	Aaron is	handlng	handling	the vendor quote
+holdout	user_pairs	fix	mixed	paired_fix	Why didn't you	returnnthe	return the	library books yesterday
+holdout	user_pairs	fix	mixed	paired_fix	I already asked Ashley to file	thew	the	taxes
+holdout	user_pairs	keep	mixed	paired_keep	I already asked Tessa to renew the	registration	registration	
+holdout	user_pairs	fix	mixed	paired_fix	I'd rather not plan the vacation	lter	later	today
+holdout	user_pairs	next	mixed	paired_next	My boss lives		in	Boise
+holdout	user_pairs	fix	mixed	paired_fix	I already asked	Meruks	Marcus	to wash the windows
+holdout	user_pairs	keep	mixed	paired_keep	The move	is	is	this weekend
+holdout	user_pairs	fix	mixed	paired_fix	My uncle makes the best	shewermw	shawarma	
+holdout	user_pairs	next	mixed	paired_next	My sister said the		workshop	was incredible
+holdout	user_pairs	keep	mixed	paired_keep	My sister	knows	knows	how to do a handstand
+holdout	user_pairs	next	mixed	paired_next	My boyfriend is		allergic	to sesame
+holdout	user_pairs	fix	mixed	paired_fix	I'll be at	thecourthouze	the courthouse	until eight
+holdout	user_pairs	keep	mixed	paired_keep	The house closing is this	evening	evening	
+holdout	user_pairs	fix	mixed	paired_fix	Kendra needs to trim the hedges	aftdr	after	lunch
+holdout	user_pairs	keep	mixed	paired_keep	The baby shower	is	is	tonight
+holdout	user_pairs	fix	mixed	paired_fix	Don't forget to make a	grocrey	grocery	list
+holdout	user_pairs	fix	mixed	paired_fix	We	shouldnprobably	should probably	iron the shirts on Tuesday
+holdout	user_pairs	keep	mixed	paired_keep	The bakery opens at	six	six	thirty tomorrow
+holdout	user_pairs	fix	mixed	paired_fix	I'm	cravung	craving	cookies on Thursday
+holdout	user_pairs	next	mixed	paired_next	Can you join the call next		month	
+holdout	user_pairs	keep	mixed	paired_keep	We should get noodles before	the	the	party
+holdout	user_pairs	next	mixed	paired_next	Why didn't you pack a		lunch	
+holdout	user_pairs	fix	mixed	paired_fix	I think we	shuld	should	get the car inspected
+holdout	user_pairs	keep	mixed	paired_keep	How was your hike last	weekend	weekend	
+holdout	user_pairs	keep	mixed	paired_keep	Siobhan wants to become	a	a	speech pathologist
+holdout	user_pairs	next	mixed	paired_next	Beatrice just moved to		Krak	w
+holdout	user_pairs	keep	mixed	paired_keep	Kevin is an	archaeologist	archaeologist	in New Orleans
+holdout	user_pairs	keep	mixed	paired_keep	Beatrice is upset about	the	the	product launch
+holdout	user_pairs	fix	mixed	paired_fix	Siobhan is really into veterinary	medoicine	medicine	
+holdout	user_pairs	next	mixed	paired_next	Make sure you		mop	the kitchen floor today
+holdout	user_pairs	next	mixed	paired_next	I'll try to reset the		router	this afternoon
+holdout	user_pairs	fix	mixed	paired_fix	Liam is handling the training	manuao	manual	
+holdout	user_pairs	fix	mixed	paired_fix	My	sistr	sister	makes the best empanadas
+holdout	user_pairs	keep	mixed	paired_keep	My daughter is getting a degree	in	in	psychology
+holdout	user_pairs	keep	mixed	paired_keep	My grandpa	works	works	as a chef
+holdout	user_pairs	next	mixed	paired_next	Are you going to the		audition	
+holdout	user_pairs	keep	mixed	paired_keep	I'd rather not trim the hedges on	Monday	Monday	
+holdout	user_pairs	next	mixed	paired_next	I'm really frustrated about the		road	test
+holdout	user_pairs	fix	mixed	paired_fix		i	I	thought the sequel was so boring
+holdout	user_pairs	next	mixed	paired_next	Diego is an anesthesiologist		in	Savannah
+holdout	user_pairs	keep	mixed	paired_keep	Matt thought the podcast	was	was	kind of weird
+holdout	user_pairs	keep	mixed	paired_keep	Could you please clean the bathroom	after	after	lunch
+holdout	user_pairs	keep	mixed	paired_keep	Kofi offered to pick up	the	the	prescription
+holdout	user_pairs	keep	mixed	paired_keep	Rachel is frustrated about	the	the	graduation
+holdout	user_pairs	fix	mixed	paired_fix		Were	We're	having shrimp scampi sometime this week
+holdout	user_pairs	next	mixed	paired_next	I'm feeling pretty excited		today	
+holdout	user_pairs	keep	mixed	paired_keep	The presentation is	on	on	Thursday
+holdout	user_pairs	next	mixed	paired_next	Want to go to		the	office on Monday
+holdout	user_pairs	keep	mixed	paired_keep	My landlord knows how to	skateboard	skateboard	
+holdout	user_pairs	next	mixed	paired_next	Fatima just		got	a PhD in accounting
+holdout	user_pairs	next	mixed	paired_next	My sister makes the		best	fried rice
+holdout	user_pairs	next	mixed	paired_next	I'll be at the aquarium until		five	
+holdout	user_pairs	keep	mixed	paired_keep	The opera	was	was	kind of depressing
+holdout	user_pairs	next	mixed	paired_next	Are you overwhelmed about		the	deadline
+holdout	user_pairs	keep	mixed	paired_keep	My cousin	makes	makes	the best meatloaf
+holdout	user_pairs	next	mixed	paired_next	Make sure you take		the	medicine on Monday
+holdout	user_pairs	fix	mixed	paired_fix	Tyler just got a PhD in	musicolgoy	musicology	
+holdout	user_pairs	fix	mixed	paired_fix	Did you	remeber	remember	to sell the old bike
+holdout	user_pairs	fix	mixed	paired_fix	Do we still have the	phonecharger	phone charger	
+holdout	user_pairs	next	mixed	paired_next	My grandpa		makes	the best meatloaf
+holdout	user_pairs	next	mixed	paired_next	Chloe offered to buy		charcoal	on Wednesday
+holdout	user_pairs	keep	mixed	paired_keep	I need to update the receipts after	dinner	dinner	
+holdout	user_pairs	keep	mixed	paired_keep	I'm craving fried	rice	rice	
+holdout	user_pairs	keep	mixed	paired_keep	I have a therapy appointment sometime	this	this	week
+holdout	user_pairs	next	mixed	paired_next	I already asked Jessica to		walk	the dog
+holdout	user_pairs	next	mixed	paired_next	My brother wants me to plan		the	vacation
+holdout	user_pairs	fix	mixed	paired_fix	Thaddeus needs to order the cake later	todat	today	
+holdout	user_pairs	fix	mixed	paired_fix	You seem	hopefultoady	hopeful today	
+holdout	user_pairs	fix	mixed	paired_fix		LLets	Let's	go to bed earlier soon
+holdout	user_pairs	next	mixed	paired_next	Can you reschedule the		appointment	
+holdout	user_pairs	keep	mixed	paired_keep	I was supposed to scrub	the	the	bathtub
+holdout	user_pairs	keep	mixed	paired_keep	Aaron is learning to play	guitar	guitar	
+holdout	user_pairs	next	mixed	paired_next	That episode was		absolutely	beautiful
+holdout	user_pairs	keep	mixed	paired_keep	I thought the documentary	was	was	so boring
+holdout	user_pairs	keep	mixed	paired_keep	I thought the	flight	flight	was way too long
+holdout	user_pairs	keep	mixed	paired_keep	Somebody stole my inhaler	on	on	Monday
+holdout	user_pairs	keep	mixed	paired_keep	Want to go to the	restaurant	restaurant	on Wednesday
+holdout	user_pairs	keep	mixed	paired_keep	My husband is an	audiologist	audiologist	
+holdout	user_pairs	next	mixed	paired_next	My wife said the workshop		was	overrated
+holdout	user_pairs	keep	mixed	paired_keep	Should I call the insurance	company	company	this afternoon
+holdout	user_pairs	fix	mixed	paired_fix	I'm about to return	th	the	package
+holdout	user_pairs	keep	mixed	paired_keep	Do you	want	want	to iron the shirts tonight
+holdout	user_pairs	keep	mixed	paired_keep	I'm kind	of	of	disappointed about the concert
+holdout	user_pairs	keep	mixed	paired_keep	Did Brian approve the	proposal	proposal	
+holdout	user_pairs	keep	mixed	paired_keep	Lauren taught	me	me	how to cook Thai food
+holdout	user_pairs	fix	mixed	paired_fix	Why didn't you refill the prescription	lsat	last	week
+holdout	user_pairs	next	mixed	paired_next	Please send me the budget		by	Tuesday
+holdout	user_pairs	keep	mixed	paired_keep	I'll try to defrost the	freezer	freezer	tomorrow
+holdout	user_pairs	keep	mixed	paired_keep	The election	got	got	pushed back
+holdout	user_pairs	keep	mixed	paired_keep	I'm so hopeful	about	about	the audition
+holdout	user_pairs	fix	mixed	paired_fix	I ran into Wesley at	teh	the	courthouse
+holdout	user_pairs	next	mixed	paired_next	Ashley is learning to		whittle	
+holdout	user_pairs	next	mixed	paired_next	Amanda is training to be		an	epidemiologist
+holdout	user_pairs	next	mixed	paired_next	I ran into Jamal at		the	ice rink
+holdout	user_pairs	keep	mixed	paired_keep	Ryan is handling the	schedule	schedule	
+holdout	user_pairs	next	mixed	paired_next	Don't forget to rent		a	car
+holdout	user_pairs	next	mixed	paired_next	The shrimp scampi here is		incredible	
+holdout	user_pairs	keep	mixed	paired_keep	Mike is thrilled about	the	the	wedding
+holdout	user_pairs	next	mixed	paired_next	We're driving		to	Chicago on Monday
+holdout	user_pairs	keep	mixed	paired_keep	My manager lives in	Cleveland	Cleveland	
+holdout	user_pairs	next	mixed	paired_next	How much cat litter		do	we need
+holdout	user_pairs	next	mixed	paired_next	Could you please ask for a raise		tomorrow	
+holdout	user_pairs	keep	mixed	paired_keep	My stepmom knows	how	how	to whittle
+holdout	user_pairs	fix	mixed	paired_fix	Emily offered	ti	to	hem the pants today
+holdout	user_pairs	next	mixed	paired_next	I left		my	camera at work
+holdout	user_pairs	fix	mixed	paired_fix	We should	probbly	probably	clean the gutters later
+holdout	user_pairs	keep	mixed	paired_keep	Good luck on your	interview	interview	later
+holdout	user_pairs	next	mixed	paired_next	Isaac is training to be an		interior	designer
+holdout	user_pairs	next	mixed	paired_next	Siobhan offered		to	cancel the subscription after dinner
+holdout	user_pairs	next	mixed	paired_next	My son makes		the	best nachos
+holdout	user_pairs	next	mixed	paired_next	Lauren is scared about the		election	
+holdout	user_pairs	next	mixed	paired_next	I'm craving soup		tomorrow	
+holdout	user_pairs	next	mixed	paired_next	I hope		it	doesn't snow on Saturday
+holdout	user_pairs	fix	mixed	paired_fix	Liam just	ogt	got	a PhD in psychology
+holdout	user_pairs	fix	mixed	paired_fix	I'll try to make the	bhed	bed	next month
+holdout	user_pairs	keep	mixed	paired_keep	Did you enjoy your	presentation	presentation	
+holdout	user_pairs	next	mixed	paired_next	My son wants		me	to defrost the freezer
+holdout	user_pairs	keep	mixed	paired_keep	Grab some avocados on	your	your	way home
+holdout	user_pairs	next	mixed	paired_next	I forgot to check the		weather	earlier today
+holdout	user_pairs	keep	mixed	paired_keep	I think	we	we	should defrost the chicken tonight
+holdout	user_pairs	next	mixed	paired_next	Emily is a plumber in		Stockholm	
+holdout	user_pairs	next	mixed	paired_next	I ran into		Beatrice	at the hospital
+holdout	user_pairs	keep	mixed	paired_keep	Let's defrost the freezer	in	in	the morning
+holdout	user_pairs	next	mixed	paired_next	I'll try to organize the closet before		lunch	
+holdout	user_pairs	next	mixed	paired_next	Remind me to call the		pharmacy	after dinner
+holdout	user_pairs	next	mixed	paired_next	The budget is due end of		day	
+holdout	user_pairs	next	mixed	paired_next	My cousin said the		show	was amazing
+holdout	user_pairs	next	mixed	paired_next	Rachel is		learning	to skateboard
+holdout	user_pairs	keep	mixed	paired_keep	Could you please take a	nap	nap	on Monday
+holdout	user_pairs	fix	mixed	paired_fix	The dryer stopped working last	weejend	weekend	
+holdout	user_pairs	next	mixed	paired_next	Honestly the ballet was better than		expected	
+holdout	user_pairs	next	mixed	paired_next	The test is first		thing	tomorrow
+holdout	user_pairs	next	mixed	paired_next	My stepmom makes		the	best pierogies
+holdout	user_pairs	keep	mixed	paired_keep	Can you wrap the	presents	presents	after dinner
+holdout	user_pairs	next	mixed	paired_next	Don't forget to take		a	nap this weekend
+holdout	user_pairs	fix	mixed	paired_fix	Somebody stole my gloves a few	dayxs	days	ago
+holdout	user_pairs	keep	mixed	paired_keep	I need to update the	estimate	estimate	on Wednesday
+holdout	user_pairs	next	mixed	paired_next	Kevin is studying political science		in	college
+holdout	user_pairs	keep	mixed	paired_keep	Could you	please	please	pay the rent tomorrow
+holdout	user_pairs	next	mixed	paired_next	Can you thank him properly		after	dinner
+holdout	user_pairs	next	mixed	paired_next	My daughter lives		in	Istanbul
+holdout	user_pairs	next	mixed	paired_next	Yusuf is handling		the	onboarding checklist
+holdout	user_pairs	keep	mixed	paired_keep	I left my	retainer	retainer	in the laundry room
+holdout	user_pairs	next	mixed	paired_next	Can someone		help	me order the cake
+holdout	user_pairs	next	mixed	paired_next	Don't forget		to	book the hotel tonight
+holdout	user_pairs	next	mixed	paired_next	My sister is getting		a	degree in economics
+holdout	user_pairs	next	mixed	paired_next	My landlord wants me to scrub		the	bathtub
+holdout	user_pairs	keep	mixed	paired_keep	My stepdad works as	an	an	archaeologist
+holdout	user_pairs	next	mixed	paired_next	Can you order		takeout	on Tuesday
+holdout	user_pairs	fix	mixed	paired_fix		Hte	The	forecast says sunshine on Thursday
+holdout	user_pairs	fix	mixed	paired_fix	My grandpa said the exhibit	wae	was	really good
+holdout	user_pairs	fix	mixed	paired_fix	Why didn't you load the	dishwaser	dishwasher	
+holdout	user_pairs	keep	mixed	paired_keep	How was	your	your	date
+holdout	user_pairs	next	mixed	paired_next	I'm on		my	way to the park
+holdout	user_pairs	next	mixed	paired_next	My boss said the		podcast	was absolutely beautiful
+holdout	user_pairs	keep	mixed	paired_keep	I'm kind of sad about the	reunion	reunion	
+holdout	user_pairs	fix	mixed	paired_fix	I ran into Grace at	te	the	bar
+holdout	user_pairs	keep	mixed	paired_keep	Jason needs to	get	get	some sleep this weekend
+holdout	user_pairs	fix	mixed	paired_fix	Are	youdisappointed	you disappointed	about the audition
+holdout	user_pairs	fix	mixed	paired_fix	Why didn't you	pic	pick	up a pizza
+holdout	user_pairs	next	mixed	paired_next	I'm craving lasagna		tonight	
+holdout	user_pairs	fix	mixed	paired_fix		cn	Can	you sell the old bike on Saturday
+holdout	user_pairs	next	mixed	paired_next	We had		falafel	last weekend
+holdout	user_pairs	keep	mixed	paired_keep	Everyone is scared about the	surgery	surgery	
+holdout	user_pairs	fix	mixed	paired_fix	Aaron	thougth	thought	the show was really good
+holdout	user_pairs	fix	mixed	paired_fix	We should probably load the	dishwashru	dishwasher	after work
+holdout	user_pairs	fix	mixed	paired_fix	Rachel wants to	becone	become	a welder
+holdout	user_pairs	next	mixed	paired_next	Somebody stole my camera		last	weekend
+holdout	user_pairs	keep	mixed	paired_keep	The job offer	is	is	by Friday
+holdout	user_pairs	next	mixed	paired_next	Did you remember to		call	the electrician
+holdout	user_pairs	next	mixed	paired_next	Carlos offered to call the electrician		soon	
+holdout	user_pairs	fix	mixed	paired_fix	Did	Meegan	Megan	approve the budget
+holdout	user_pairs	fix	mixed	paired_fix	Sophia is curious about the baby	shoewr	shower	
+holdout	user_pairs	keep	mixed	paired_keep	My landlord lives	in	in	Bangkok
+holdout	user_pairs	next	mixed	paired_next	My fianc wants me		to	call the bank
+holdout	user_pairs	fix	mixed	paired_fix	Liam just moved to	Phillidelphia	Philadelphia	
+holdout	user_pairs	next	mixed	paired_next	We should get cookies		first	thing tomorrow
+holdout	user_pairs	fix	mixed	paired_fix	We're so happy about	yournengagement	your engagement	
+holdout	user_pairs	next	mixed	paired_next	I ran into Ximena at the		front	entrance
+holdout	user_pairs	fix	mixed	paired_fix		Hanah	Hannah	are handling the slides
+holdout	user_pairs	fix	mixed	paired_fix	I think I	let	left	my calculator at school
+holdout	user_pairs	next	mixed	paired_next	We should probably send		the	invitations on Tuesday
+holdout	user_pairs	next	mixed	paired_next	I have a dentist		appointment	after lunch
+holdout	user_pairs	fix	mixed	paired_fix	Everyone	ie	is	stressed about the presentation
+holdout	user_pairs	next	mixed	paired_next	Can you call an		old	friend after work
+holdout	user_pairs	fix	mixed	paired_fix	The	restaurannt	restaurant	was packed last week
+holdout	user_pairs	next	mixed	paired_next	Everyone says		the	musical is way too long
+holdout	user_pairs	next	mixed	paired_next	I just got back from		Tucson	
+holdout	user_pairs	next	mixed	paired_next	Should I finish the		puzzle	soon
+holdout	user_pairs	next	mixed	paired_next	Have you ever been to		Tucson	
+holdout	user_pairs	fix	mixed	paired_fix	Natalie is thrilled	abt	about	the product launch
+holdout	user_pairs	fix	mixed	paired_fix		Me	Mei	just moved to Mississippi
+holdout	user_pairs	fix	mixed	paired_fix		Wat	Want	to go to the bakery on Thursday
+holdout	user_pairs	next	mixed	paired_next	They didn't		have	any rice
+holdout	user_pairs	next	mixed	paired_next	I'll try to pick up		the	kids
+holdout	user_pairs	next	mixed	paired_next	I ran into		Ximena	at the community center
+holdout	user_pairs	next	mixed	paired_next	Please send me the press		release	by noon
+holdout	user_pairs	fix	mixed	paired_fix	Somebody stole my	lapotp	laptop	
+holdout	user_pairs	fix	mixed	paired_fix	Why	disn't	didn't	you book the hotel this morning
+holdout	user_pairs	fix	mixed	paired_fix	I ran into	Saerah	Sarah	at the pizza place
+holdout	user_pairs	fix	mixed	paired_fix	Could you please review the	contracy	contract	later
+holdout	user_pairs	fix	mixed	paired_fix		make	Make	sure you cancel the subscription today
+holdout	user_pairs	fix	mixed	paired_fix	Good luck on your audition this	weeekend	weekend	
+holdout	user_pairs	fix	mixed	paired_fix	Is there any	stirfey	stir fry	left
+holdout	user_pairs	fix	mixed	paired_fix	Elena are handling the	ntotes	notes	
+holdout	user_pairs	next	mixed	paired_next	Maya is		training	to be a lawyer
+holdout	user_pairs	next	mixed	paired_next	Should I clean the bathroom		today	
+holdout	user_pairs	next	mixed	paired_next	I ran into Jessica at		the	zoo
+holdout	user_pairs	fix	mixed	paired_fix	Should I tune the	guiatr	guitar	later today
+holdout	user_pairs	next	mixed	paired_next	I'm craving waffles		next	month
+holdout	user_pairs	fix	mixed	paired_fix		Th	The	spare key should be at the airport
+holdout	user_pairs	fix	mixed	paired_fix	Somebody stole my reading glasses on	Wedesday	Wednesday	
+holdout	user_pairs	next	mixed	paired_next	The documentary was way too		long	
+holdout	user_pairs	fix	mixed	paired_fix	Chloe are handling	tye	the	meeting minutes
+holdout	user_pairs	next	mixed	paired_next	I'd rather not		bake	some cookies tomorrow
+holdout	user_pairs	next	mixed	paired_next	Amanda is a		software	developer in Orlando
+holdout	user_pairs	next	mixed	paired_next	Could you		please	see a doctor next month
+holdout	user_pairs	fix	mixed	paired_fix	Dmitri just got a PhD in	musicoloogy	musicology	
+holdout	user_pairs	next	mixed	paired_next	I ran into Tyler at		the	theater
+holdout	user_pairs	next	mixed	paired_next	I'd rather not book a		massage	
+holdout	user_pairs	next	mixed	paired_next	I'm flying to		Kyoto	next week
+holdout	user_pairs	fix	mixed	paired_fix	The bowling alley was packed	laset	last	night
+holdout	user_pairs	fix	mixed	paired_fix		Dont	Don't	forget to research the neighborhood by Friday
+holdout	user_pairs	next	mixed	paired_next	Did Jasmine approve the		receipts	
+holdout	user_pairs	fix	mixed	paired_fix	I made enchiladas for	luch	lunch	
+holdout	user_pairs	fix	mixed	paired_fix		Shoudl	Should	I plan the vacation this evening
+holdout	user_pairs	fix	mixed	paired_fix	I'm kind of	upmped	pumped	about the audition
+holdout	user_pairs	next	mixed	paired_next	Can you wrap the		presents	on Monday
+holdout	user_pairs	next	mixed	paired_next	Let's watch the new episode sometime		this	week
+holdout	user_pairs	next	mixed	paired_next	Do you want		to	visit grandma tonight
+holdout	user_pairs	fix	mixed	paired_fix	Are you upset about the	playofs	playoffs	
+holdout	user_pairs	next	mixed	paired_next	Could you please clean the oven next		week	
+holdout	user_pairs	next	mixed	paired_next	Remind me to leave a little		early	later
+holdout	user_pairs	next	mixed	paired_next	Grace is		really	into pharmacology
+holdout	user_pairs	next	mixed	paired_next	I keep forgetting to eat more		vegetables	
+holdout	user_pairs	fix	mixed	paired_fix		Everyne	Everyone	is relieved about the recital
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving sliders	thos	this	evening
+holdout	user_pairs	fix	mixed	paired_fix	Matt needs to iron the	shirtts	shirts	before lunch
+holdout	user_pairs	fix	mixed	paired_fix	Did you feed	th	the	cat
+holdout	user_pairs	fix	mixed	paired_fix	Make sure you make dinner on	Sunady	Sunday	
+holdout	user_pairs	next	mixed	paired_next	Tyler offered to call		the	vet
+holdout	user_pairs	fix	mixed	paired_fix	Did Josh approve the	prjoect	project	plan
+holdout	user_pairs	fix	mixed	paired_fix	We should probably drink more	watee	water	tomorrow
+holdout	user_pairs	next	mixed	paired_next	Nicole is relieved about the		court	date
+holdout	user_pairs	next	mixed	paired_next	What's the weather		like	in Vancouver
+holdout	user_pairs	next	mixed	paired_next	My uncle		makes	the best quesadillas
+holdout	user_pairs	next	mixed	paired_next	Why didn't you file the taxes		yesterday	
+holdout	user_pairs	fix	mixed	paired_fix	Who is	gojng	going	to rent a car later
+holdout	user_pairs	next	mixed	paired_next	Should I drop		off	the kids on Tuesday
+holdout	user_pairs	next	mixed	paired_next	Let's grab a		glass	of wine on Saturday
+holdout	user_pairs	next	mixed	paired_next	Let's fill up the gas tank		today	
+holdout	user_pairs	fix	mixed	paired_fix		Didd	Did	Beatrice approve the spreadsheet
+holdout	user_pairs	next	mixed	paired_next	We should		probably	return the package on Tuesday
+holdout	user_pairs	next	mixed	paired_next	Everyone says the episode		is	a total mess
+holdout	user_pairs	next	mixed	paired_next	Brian thought the conference was		kind	of weird
+holdout	user_pairs	next	mixed	paired_next	I thought the trip		was	hilarious
+holdout	user_pairs	next	mixed	paired_next	Everyone is curious about		the	reunion
+holdout	user_pairs	fix	mixed	paired_fix	I ran	imnto	into	Sarah at the coffee shop
+holdout	user_pairs	next	mixed	paired_next	Do you		want	to book the flights
+holdout	user_pairs	fix	mixed	paired_fix		Siobbhan	Siobhan	just got a PhD in criminology
+holdout	user_pairs	fix	mixed	paired_fix		Im	I'm	craving noodles on Wednesday
+holdout	user_pairs	fix	mixed	paired_fix		Ill	I'll	be at the gym until six thirty
+holdout	user_pairs	next	mixed	paired_next	The art		gallery	was packed on Friday
+holdout	user_pairs	next	mixed	paired_next	Honestly the museum		tour	was incredible
+holdout	user_pairs	next	mixed	paired_next	Dmitri wants to become a		cartographer	
+holdout	user_pairs	fix	mixed	paired_fix	Liam is	leqrning	learning	to do a handstand
+holdout	user_pairs	fix	mixed	paired_fix	Remind me to check the mailbox on	Mondaie	Monday	
+holdout	user_pairs	fix	mixed	paired_fix	My best friend makes the best	jambaalya	jambalaya	
+holdout	user_pairs	next	mixed	paired_next	Let's call customer service		tomorrow	
+holdout	user_pairs	next	mixed	paired_next	Jamal are handling the		receipts	
+holdout	user_pairs	fix	mixed	paired_fix	Ingrid is curious about the	fisrt	first	day
+holdout	user_pairs	fix	mixed	paired_fix		I'lo	I'll	try to finish the book this weekend
+holdout	user_pairs	fix	mixed	paired_fix		evergyone	Everyone	says the conference is surprisingly good
+holdout	user_pairs	fix	mixed	paired_fix	The post	offcie	office	closes at pm tonight
+holdout	user_pairs	next	mixed	paired_next	Are you nervous		about	the product launch
+holdout	user_pairs	next	mixed	paired_next	I ran		into	Ximena at the playground
+holdout	user_pairs	next	mixed	paired_next	Why didn't you cancel the subscription last		weekend	
+holdout	user_pairs	fix	mixed	paired_fix	I'm not really in the mood for	steek	steak	
+holdout	user_pairs	fix	mixed	paired_fix	Josh offered to renew the	registratiion	registration	on Saturday
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving	nudlews	noodles	on Sunday
+holdout	user_pairs	fix	mixed	paired_fix	Jason offered	tl	to	wrap the presents on Tuesday
+holdout	user_pairs	fix	mixed	paired_fix	We spent a	wsek	week	in Amsterdam
+holdout	user_pairs	fix	mixed	paired_fix	My sister works as a	journailst	journalist	
+holdout	user_pairs	fix	mixed	paired_fix	My sister is a	chhoreographer	choreographer	
+holdout	user_pairs	fix	mixed	paired_fix	Could you	pleasse	please	load the dishwasher next month
+holdout	user_pairs	fix	mixed	paired_fix	Josh	thougth	thought	the conference was terrible
+holdout	user_pairs	fix	mixed	paired_fix	David taught me how	tosail	to sail	
+holdout	user_pairs	fix	mixed	paired_fix	Luis doesn't want to call a taxi	tonignt	tonight	
+holdout	user_pairs	fix	mixed	paired_fix	I was supposed to order	takeowt	takeout	
+holdout	user_pairs	fix	mixed	paired_fix	Should I drink	mre	more	water
+holdout	user_pairs	fix	mixed	paired_fix		Mynbest	My best	friend said the ballet was disappointing
+holdout	user_pairs	fix	mixed	paired_fix	I ran into Mike at the	parkign	parking	lot
+holdout	user_pairs	fix	mixed	paired_fix	Maya is going to	callp	call	the insurance company
+holdout	user_pairs	fix	mixed	paired_fix	My	wief	wife	lives in Melbourne
+holdout	user_pairs	fix	mixed	paired_fix	I keep forgetting to	ritte	write	the speech
+holdout	user_pairs	fix	mixed	paired_fix		Di	Did	I leave my gloves in the taxi
+holdout	user_pairs	fix	mixed	paired_fix	My mom knows how to	ppay	play	chess
+holdout	user_pairs	fix	mixed	paired_fix		Hte	The	food court opens at eight tomorrow
+holdout	user_pairs	fix	mixed	paired_fix		Dd	Did	you remember the batteries
+holdout	user_pairs	fix	mixed	paired_fix	My elbow has been	hurtingt	hurting	for a month
+holdout	user_pairs	fix	mixed	paired_fix	Don't	ferget	forget	to call the bank
+holdout	user_pairs	fix	mixed	paired_fix		I'l	I'll	be at the playground until four
+holdout	user_pairs	fix	mixed	paired_fix	We're	drivin	driving	to Savannah this weekend
+holdout	user_pairs	fix	mixed	paired_fix	We should	probabpy	probably	bake some cookies later today
+holdout	user_pairs	fix	mixed	paired_fix	Let's meet at the food	kowsrt	court	at two
+holdout	user_pairs	fix	mixed	paired_fix	Who is watching the kitten this	weakend	weekend	
+holdout	user_pairs	fix	mixed	paired_fix	My	dawghter	daughter	lives in Italy
+holdout	user_pairs	fix	mixed	paired_fix	Marcus is hopeful about the	biopse	biopsy	results
+holdout	user_pairs	fix	mixed	paired_fix		od	I'd	rather not call the bank on Monday
+holdout	user_pairs	fix	mixed	paired_fix	Can you see a	doctr	doctor	on Saturday
+holdout	user_pairs	fix	mixed	paired_fix	Why didn't you go	greserrid	grocery	shopping earlier today
+holdout	user_pairs	fix	mixed	paired_fix	Our flight leaves	ag	at	pm on Tuesday
+holdout	user_pairs	fix	mixed	paired_fix	The	reffigerator	refrigerator	stopped working
+holdout	user_pairs	fix	mixed	paired_fix	I'll try to bake some cookies before	lnuch	lunch	
+holdout	user_pairs	fix	mixed	paired_fix	Carlos is going to practice the	speechtomorrow	speech tomorrow	
+holdout	user_pairs	fix	mixed	paired_fix	Should I return the rental car this	aftrenoon	afternoon	
+holdout	user_pairs	fix	mixed	paired_fix	Andre is excited about	th	the	move
+holdout	user_pairs	fix	mixed	paired_fix	Let's meet at the front entrance at	nihe	nine	
+holdout	user_pairs	fix	mixed	paired_fix	Can you refill the bird feeder	vy	by	Friday
+holdout	user_pairs	fix	mixed	paired_fix	I'd rather not cancel the reservation	onvSunday	on Sunday	
+holdout	user_pairs	fix	mixed	paired_fix	Don't forget to walk the dog after	diner	dinner	
+holdout	user_pairs	fix	mixed	paired_fix	Let's wrap the	prusents	presents	on Tuesday
+holdout	user_pairs	fix	mixed	paired_fix	Let's trim the	hedgws	hedges	on Saturday
+holdout	user_pairs	fix	mixed	paired_fix		teh	The	exam is by Friday
+holdout	user_pairs	fix	mixed	paired_fix	We're having	Chinnese	Chinese	food this afternoon
+holdout	user_pairs	fix	mixed	paired_fix	Make sure you call the pharmacy this	evenning	evening	
+holdout	user_pairs	fix	mixed	paired_fix	Sarah is handling	htw	the	draft
+holdout	user_pairs	fix	mixed	paired_fix	Victor are handling	themeeting	the meeting	minutes
+holdout	user_pairs	fix	mixed	paired_fix	Good	luckion	luck on	your first day after dinner
+holdout	user_pairs	fix	mixed	paired_fix	My stepdad is getting a	degrere	degree	in criminology
+holdout	user_pairs	fix	mixed	paired_fix		Wqant	Want	to go to the laundromat after work
+holdout	user_pairs	fix	mixed	paired_fix	Yusuf is studying biology in	celleg	college	
+holdout	user_pairs	fix	mixed	paired_fix		I'l	I'll	try to cover the pool after work
+holdout	user_pairs	fix	mixed	paired_fix	The freezer was	openall	open all	night
+holdout	user_pairs	fix	mixed	paired_fix	We spent a week in	Edinborough	Edinburgh	
+holdout	user_pairs	fix	mixed	paired_fix	Luis is really into	oeanography	oceanography	
+holdout	user_pairs	fix	mixed	paired_fix	I really need to see a	dotcor	doctor	
+holdout	user_pairs	fix	mixed	paired_fix	Ryan is studying paleontology in	cololege	college	
+holdout	user_pairs	fix	mixed	paired_fix	I'd rather not send the invoice next	mknth	month	
+holdout	user_pairs	fix	mixed	paired_fix		Teh	The	season finale was pretty decent
+holdout	user_pairs	fix	mixed	paired_fix	Josh is handling the job	desripshun	description	
+holdout	user_pairs	fix	mixed	paired_fix	Remind me to	caol	call	grandpa on Saturday
+holdout	user_pairs	fix	mixed	paired_fix		my	My	aunt makes the best sliders
+holdout	user_pairs	fix	mixed	paired_fix	My wife said the comedy special was	dissapointing	disappointing	
+holdout	user_pairs	fix	mixed	paired_fix	My aunt	mekes	makes	the best barbecue
+holdout	user_pairs	fix	mixed	paired_fix		what	What	time is your staycation
+holdout	user_pairs	fix	mixed	paired_fix	It's your turn to move the	coudh	couch	
+holdout	user_pairs	fix	mixed	paired_fix		Luuis	Luis	just moved to Paris
+holdout	user_pairs	fix	mixed	paired_fix	Priya thought the opera was	terible	terrible	
+holdout	user_pairs	fix	mixed	paired_fix		my	My	sister is getting a degree in psychology
+holdout	user_pairs	fix	mixed	paired_fix	Did I leave my calculator	st	at	your place
+holdout	user_pairs	fix	mixed	paired_fix	I ran into	asmineat	Jasmine at	the aquarium
+holdout	user_pairs	fix	mixed	paired_fix		diebo	Diego	just moved to Morocco
+holdout	user_pairs	fix	mixed	paired_fix	I ran into	Nokoel	Nicole	at the bank
+holdout	user_pairs	fix	mixed	paired_fix	Is it too late to	shedule	schedule	a physical
+holdout	user_pairs	fix	mixed	paired_fix	The	fodo	food	in Texas was amazing
+holdout	user_pairs	fix	mixed	paired_fix	Did Andre	aprove	approve	the onboarding checklist
+holdout	user_pairs	fix	mixed	paired_fix	My	uncxle	uncle	makes the best chili
+holdout	user_pairs	fix	mixed	paired_fix	It's so	dak	dark	outside right now
+holdout	user_pairs	fix	mixed	paired_fix	Did	yuo	you	remember to prepare for the interview
+holdout	user_pairs	fix	mixed	paired_fix		gold	Good	luck on your tryouts this afternoon
+holdout	user_pairs	fix	mixed	paired_fix		I'l	I'll	try to renew the gym membership
+holdout	user_pairs	fix	mixed	paired_fix	Sarah has the flu and	styed	stayed	home
+holdout	user_pairs	fix	mixed	paired_fix	My best	freind	friend	lives in Krak w
+holdout	user_pairs	fix	mixed	paired_fix	My wife makes the best	tacod	tacos	
+holdout	user_pairs	fix	mixed	paired_fix	Rachel is	handoing	handling	the project plan
+holdout	user_pairs	fix	mixed	paired_fix	Should I hang the	piteres	pictures	on Wednesday
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving	gubmo	gumbo	on Monday
+holdout	user_pairs	fix	mixed	paired_fix	Fatima has a fever and	steyed	stayed	home
+holdout	user_pairs	fix	mixed	paired_fix	Let's book a	moza	massage	next week
+holdout	user_pairs	fix	mixed	paired_fix	Chloe is an architect in	Hawii	Hawaii	
+holdout	user_pairs	fix	mixed	paired_fix		Pruya	Priya	thought the episode was so boring
+holdout	user_pairs	fix	mixed	paired_fix	My	stepjom	stepmom	is a welder
+holdout	user_pairs	fix	mixed	paired_fix	I'm	thinkig	thinking	about majoring in pharmacology
+holdout	user_pairs	fix	mixed	paired_fix	Chris is really into	thermodynmics	thermodynamics	
+holdout	user_pairs	fix	mixed	paired_fix	My coworker makes the	beest	best	cookies
+holdout	user_pairs	fix	mixed	paired_fix	Are you worried	aboot	about	the baby shower
+holdout	user_pairs	fix	mixed	paired_fix	I'll have	htecontract	the contract	ready by Tuesday
+holdout	user_pairs	fix	mixed	paired_fix	Carlos is	hadling	handling	the proposal
+holdout	user_pairs	fix	mixed	paired_fix	The client wants the audit findings by	Thrusday	Thursday	
+holdout	user_pairs	fix	mixed	paired_fix	Jessica is really into	microbiolovgy	microbiology	
+holdout	user_pairs	fix	mixed	paired_fix	Mei is nervous about	hte	the	date
+holdout	user_pairs	fix	mixed	paired_fix	Priya is learning to make	suxhi	sushi	
+holdout	user_pairs	fix	mixed	paired_fix	Priya is	learninh	learning	to build furniture
+holdout	user_pairs	fix	mixed	paired_fix	Did Beatrice	apporve	approve	the contract
+holdout	user_pairs	fix	mixed	paired_fix	Amanda thought the comedy special	wqs	was	really good
+holdout	user_pairs	fix	mixed	paired_fix	I keep forgetting to trim the	hdeges	hedges	
+holdout	user_pairs	fix	mixed	paired_fix	Ximena just	movwd	moved	to Greece
+holdout	user_pairs	fix	mixed	paired_fix	My son	livrs	lives	in Tokyo
+holdout	user_pairs	fix	mixed	paired_fix	We	shouldprovably	should probably	book the flights tomorrow
+holdout	user_pairs	fix	mixed	paired_fix	Let's meet	awt	at	the pharmacy at noon
+holdout	user_pairs	fix	mixed	paired_fix	We	shoupd	should	probably hem the pants tomorrow
+holdout	user_pairs	fix	mixed	paired_fix	I was	suppoosed	supposed	to make dinner earlier today
+holdout	user_pairs	fix	mixed	paired_fix	I	rna	ran	into Carlos at the bookstore
+holdout	user_pairs	fix	mixed	paired_fix	I'm	abowt	about	to fix the leaky faucet
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving shawarma on	Tudsday	Tuesday	
+holdout	user_pairs	fix	mixed	paired_fix	The	mal	mall	opens at six thirty tomorrow
+holdout	user_pairs	fix	mixed	paired_fix	We	shoulld	should	get fish tacos after work
+holdout	user_pairs	fix	mixed	paired_fix	I forgot to clean the	ghutters	gutters	this morning
+holdout	user_pairs	fix	mixed	paired_fix	My boss said the movie was	amzaing	amazing	
+holdout	user_pairs	fix	mixed	paired_fix	Let's cut back on sugar after	wprk	work	
+holdout	user_pairs	fix	mixed	paired_fix	Please send me	th	the	budget by Friday
+holdout	user_pairs	fix	mixed	paired_fix	We're driving to Milwaukee this	afernun	afternoon	
+holdout	user_pairs	fix	mixed	paired_fix	I ran into	Kendrra	Kendra	at the bank
+holdout	user_pairs	fix	mixed	paired_fix	Are you anxious about the	xeadline	deadline	
+holdout	user_pairs	fix	mixed	paired_fix	How was your	weeken	weekend	
+holdout	user_pairs	fix	mixed	paired_fix	They didn't have any	bvread	bread	
+holdout	user_pairs	fix	mixed	paired_fix	We're	drivving	driving	to Salt Lake City after work
+holdout	user_pairs	fix	mixed	paired_fix		Pls	Please	get the tires rotated before you leave
+holdout	user_pairs	fix	mixed	paired_fix	We're moving to	Connetticut	Connecticut	after graduation
+holdout	user_pairs	fix	mixed	paired_fix		the	The	playoffs is on Tuesday
+holdout	user_pairs	fix	mixed	paired_fix	Let's meet at the	odfice	office	at eight
+holdout	user_pairs	fix	mixed	paired_fix	I'm	gtaking	taking	Friday off this week
+holdout	user_pairs	fix	mixed	paired_fix		i	I	need to clean the garage after dinner
+holdout	user_pairs	fix	mixed	paired_fix		I'pl	I'll	try to set the table
+holdout	user_pairs	fix	mixed	paired_fix		mei	Mei	is hopeful about the biopsy results
+holdout	user_pairs	fix	mixed	paired_fix		priha	Priya	just moved to Buenos Aires
+holdout	user_pairs	fix	mixed	paired_fix	The press release is due	ehnd	end	of day
+holdout	user_pairs	fix	mixed	paired_fix		We'te	We're	moving to Tampa this summer
+holdout	user_pairs	fix	mixed	paired_fix	Make sure you send the	invoiceon	invoice on	Wednesday
+holdout	user_pairs	fix	mixed	paired_fix	Chris are handling	theenotes	the notes	
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving mac and cheese after	dinnet	dinner	
+holdout	user_pairs	fix	mixed	paired_fix	Chloe has a stomach bug and	srtayed	stayed	home
+holdout	user_pairs	fix	mixed	paired_fix	We should get	croisants	croissants	today
+holdout	user_pairs	fix	mixed	paired_fix	I have a dermatologist appointment next	moonth	month	
+holdout	user_pairs	fix	mixed	paired_fix	I'd	raher	rather	not deposit the check
+holdout	user_pairs	fix	mixed	paired_fix	I already asked	Calros	Carlos	to sign the paperwork
+holdout	user_pairs	fix	mixed	paired_fix	My mom makes	th	the	best sliders
+holdout	user_pairs	fix	mixed	paired_fix	They didn't have any peanut	buttee	butter	
+holdout	user_pairs	fix	mixed	paired_fix		Eena	Elena	is an archaeologist in Portugal
+holdout	user_pairs	fix	mixed	paired_fix	Jessica is	realy	really	into chemistry
+holdout	user_pairs	fix	mixed	paired_fix	Siobhan taught me	hkw	how	to cook Thai food
+holdout	user_pairs	fix	mixed	paired_fix	I keep forgetting to unclog the	ddrain	drain	
+holdout	user_pairs	fix	mixed	paired_fix	When is the product	launcg	launch	
+holdout	user_pairs	fix	mixed	paired_fix	Did Sarah	approev	approve	the user survey
+holdout	user_pairs	fix	mixed	paired_fix	I think I'm coming down with	pinj	pink	eye
+holdout	user_pairs	fix	mixed	paired_fix	Brian taught me how	two	to	brew beer
+holdout	user_pairs	fix	mixed	paired_fix	Did	Beatrrice	Beatrice	approve the meeting minutes
+holdout	user_pairs	fix	mixed	paired_fix	I	ned	need	to update the notes
+holdout	user_pairs	fix	mixed	paired_fix	We should	probaqbly	probably	order takeout tonight
+holdout	user_pairs	fix	mixed	paired_fix		Havce	Have	you ever been to Vienna
+holdout	user_pairs	fix	mixed	paired_fix	We should	prboably	probably	prepare for the interview
+holdout	user_pairs	fix	mixed	paired_fix	We're driving to San Diego this	evvening	evening	
+holdout	user_pairs	fix	mixed	paired_fix	Jason thought the	documnetary	documentary	was really moving
+holdout	user_pairs	fix	mixed	paired_fix	My	grabdpa	grandpa	knows how to surf
+holdout	user_pairs	fix	mixed	paired_fix	Emily is learning to speak	Spaish	Spanish	
+holdout	user_pairs	fix	mixed	paired_fix		ki	I	ran into Lauren at the laundromat
+holdout	user_pairs	fix	mixed	paired_fix	Kevin	wwants	wants	to become a stenographer
+holdout	user_pairs	fix	mixed	paired_fix	Noah	jusft	just	moved to Tokyo
+holdout	user_pairs	fix	mixed	paired_fix	How was your	meeitng	meeting	this morning
+holdout	user_pairs	fix	mixed	paired_fix	Our flight	leavesat	leaves at	noon this weekend
+holdout	user_pairs	fix	mixed	paired_fix	Did I	leazve	leave	my sunglasses at the airport
+holdout	user_pairs	fix	mixed	paired_fix	Our flight leaves at six thirty	tomarrow	tomorrow	
+holdout	user_pairs	fix	mixed	paired_fix	Let's	grsab	grab	some snacks on Thursday
+holdout	user_pairs	fix	mixed	paired_fix		we	We	should probably practice the speech
+holdout	user_pairs	fix	mixed	paired_fix	I ran into Grace at	thevstadium	the stadium	
+holdout	user_pairs	fix	mixed	paired_fix	Let's update the software on	Mondaei	Monday	
+holdout	user_pairs	fix	mixed	paired_fix	Should I organize the closet	byy	by	Friday
+holdout	user_pairs	fix	mixed	paired_fix	My wife needs to	all	call	the pharmacy
+holdout	user_pairs	fix	mixed	paired_fix	I have a cardiologist	appointmen	appointment	next week
+holdout	user_pairs	fix	mixed	paired_fix		I'l	I'll	have the draft ready by Friday
+holdout	user_pairs	fix	mixed	paired_fix		Tesssa	Tessa	needs to get some sleep before lunch
+holdout	user_pairs	fix	mixed	paired_fix		Dko	Do	you think it will snow this afternoon
+holdout	user_pairs	fix	mixed	paired_fix		imvrealoy	I'm really	hopeful about the trip
+holdout	user_pairs	fix	mixed	paired_fix	My neighbor makes the best	dimpings	dumplings	
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving spaghetti on	Wednesdsy	Wednesday	
+holdout	user_pairs	fix	mixed	paired_fix	Lauren offered to order	akeout	takeout	
+holdout	user_pairs	fix	mixed	paired_fix	Tyler is upset about the court	dste	date	
+holdout	user_pairs	fix	mixed	paired_fix	We're having stir fry by	Driday	Friday	
+holdout	user_pairs	fix	mixed	paired_fix		Shoudl	Should	I do the dishes next week
+holdout	user_pairs	fix	mixed	paired_fix	Let's grab	sparklin	sparkling	water later
+holdout	user_pairs	fix	mixed	paired_fix	Don't	forgef	forget	to do the laundry before lunch
+holdout	user_pairs	fix	mixed	paired_fix	Beatrice thought the	exhibir	exhibit	was so boring
+holdout	user_pairs	fix	mixed	paired_fix	My husband wants me to dispute the	chrge	charge	
+holdout	user_pairs	fix	mixed	paired_fix	Let's clean the garage on	Tuseday	Tuesday	
+holdout	user_pairs	fix	mixed	paired_fix	I'll try	two	to	reset the router before lunch
+holdout	user_pairs	fix	mixed	paired_fix	I'm craving	stirfry	stir fry	next month
+holdout	user_pairs	fix	mixed	paired_fix	I'd rather not take the medicine on	Wednesdat	Wednesday	
+holdout	user_pairs	fix	mixed	paired_fix	Don't forget	tl	to	write the speech
+holdout	user_pairs	fix	mixed	paired_fix	The can opener should be in	fthe	the	taxi
+holdout	user_pairs	fix	mixed	paired_fix	My	cousinwants	cousin wants	me to preheat the oven
+holdout	user_pairs	fix	mixed	paired_fix	My aunt	wrks	works	as a beekeeper
+holdout	user_pairs	fix	mixed	paired_fix	Isaac is handling the	use	user	survey
+holdout	user_pairs	fix	mixed	paired_fix	Good luck on your audition on	Mondah	Monday	
+holdout	user_pairs	fix	mixed	paired_fix		We'rehaving	We're having	gumbo tonight
+holdout	user_pairs	fix	mixed	paired_fix	I already asked Jamal to call	teh	the	landlord
+holdout	user_pairs	fix	mixed	paired_fix	Omar is handling the	spredsheet	spreadsheet	
+holdout	user_pairs	fix	mixed	paired_fix	Amanda is hopeful about the	elrction	election	
+holdout	user_pairs	fix	mixed	paired_fix		Im	I'm	craving Chinese food on Wednesday
+holdout	user_pairs	fix	mixed	paired_fix	My stepmom said the dinner was	absolutly	absolutely	beautiful
+holdout	user_pairs	fix	mixed	paired_fix	I need to update the	inventroy	inventory	list soon
+holdout	user_pairs	fix	mixed	paired_fix	I ran	imnto	into	Tessa at the bookstore
+holdout	user_pairs	fix	mixed	paired_fix	Tyler wants to become a	thirapist	therapist	
+holdout	user_pairs	fix	mixed	paired_fix		Ryam	Ryan	is learning to speak French
+holdout	user_pairs	fix	mixed	paired_fix	I just got back from	Amstesrdam	Amsterdam	
+holdout	user_pairs	fix	mixed	paired_fix		we	We	should probably replace the batteries this evening
+holdout	user_pairs	fix	mixed	paired_fix	I'm so stressed about the	fligth	flight	
+holdout	user_pairs	fix	mixed	paired_fix	I keep forgetting to prepare	fod	for	the interview
+holdout	user_pairs	fix	mixed	paired_fix	My neighbor is a	glassblpwer	glassblower	
+holdout	user_pairs	fix	mixed	paired_fix		skophia	Sophia	is studying sociology in college
+holdout	user_pairs	fix	mixed	paired_fix	How was your commute a few	dayys	days	ago
+holdout	user_pairs	fix	mixed	paired_fix		Hte	The	flight is this weekend
+holdout	user_pairs	fix	mixed	paired_fix	We're driving to	Louisvjlle	Louisville	after work
+holdout	user_pairs	fix	mixed	paired_fix	Why	didnt	didn't	you make a grocery list

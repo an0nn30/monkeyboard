@@ -1,0 +1,112 @@
+{
+  "build21": {
+    "multi_target_sentence": {
+      "damaged": 166595,
+      "exact": 20992,
+      "recovered": 102591,
+      "sentences": 61651
+    },
+    "other_length": {
+      "damaged": 151301,
+      "recovered": 97668,
+      "wrong_replacement": 4558
+    },
+    "reserved/multi_target_sentence": {
+      "damaged": 25194,
+      "exact": 3077,
+      "recovered": 15356,
+      "sentences": 9324
+    },
+    "reserved/other_length": {
+      "damaged": 22932,
+      "recovered": 14557,
+      "wrong_replacement": 717
+    },
+    "reserved/target_2_to_3": {
+      "damaged": 8122,
+      "recovered": 5015,
+      "wrong_replacement": 315
+    },
+    "target_2_to_3": {
+      "damaged": 53617,
+      "recovered": 33125,
+      "wrong_replacement": 2101
+    },
+    "training/multi_target_sentence": {
+      "damaged": 141401,
+      "exact": 17915,
+      "recovered": 87235,
+      "sentences": 52327
+    },
+    "training/other_length": {
+      "damaged": 128369,
+      "recovered": 83111,
+      "wrong_replacement": 3841
+    },
+    "training/target_2_to_3": {
+      "damaged": 45495,
+      "recovered": 28110,
+      "wrong_replacement": 1786
+    },
+    "whole_file": {
+      "exact_all_words": 49640,
+      "exact_excluding_terminal_punctuation_only": 49638,
+      "terminal_punctuation_only_miss": 557
+    }
+  },
+  "candidate": {
+    "multi_target_sentence": {
+      "damaged": 166595,
+      "exact": 51999,
+      "recovered": 157842,
+      "sentences": 61651
+    },
+    "other_length": {
+      "damaged": 151301,
+      "recovered": 144418,
+      "wrong_replacement": 942
+    },
+    "reserved/multi_target_sentence": {
+      "damaged": 25194,
+      "exact": 7650,
+      "recovered": 23555,
+      "sentences": 9324
+    },
+    "reserved/other_length": {
+      "damaged": 22932,
+      "recovered": 21581,
+      "wrong_replacement": 253
+    },
+    "reserved/target_2_to_3": {
+      "damaged": 8122,
+      "recovered": 7555,
+      "wrong_replacement": 116
+    },
+    "target_2_to_3": {
+      "damaged": 53617,
+      "recovered": 50287,
+      "wrong_replacement": 542
+    },
+    "training/multi_target_sentence": {
+      "damaged": 141401,
+      "exact": 44349,
+      "recovered": 134287,
+      "sentences": 52327
+    },
+    "training/other_length": {
+      "damaged": 128369,
+      "recovered": 122837,
+      "wrong_replacement": 689
+    },
+    "training/target_2_to_3": {
+      "damaged": 45495,
+      "recovered": 42732,
+      "wrong_replacement": 426
+    },
+    "whole_file": {
+      "exact_all_words": 92773,
+      "exact_excluding_terminal_punctuation_only": 92748,
+      "terminal_punctuation_only_miss": 4051
+    }
+  }
+}

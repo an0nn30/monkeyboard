@@ -1,0 +1,140 @@
+{
+  "39": {
+    "rows": 100000,
+    "exact": 88697,
+    "fixed_slots": 194705,
+    "damaged_slots": 204918,
+    "collateral_words": 24,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1484
+  },
+  "40": {
+    "rows": 100000,
+    "exact": 88708,
+    "fixed_slots": 194723,
+    "damaged_slots": 204918,
+    "collateral_words": 24,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1485
+  },
+  "41": {
+    "rows": 100000,
+    "exact": 89078,
+    "fixed_slots": 195269,
+    "damaged_slots": 204918,
+    "collateral_words": 25,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1314,
+    "six_original_catches_retained": 6
+  },
+  "42": {
+    "rows": 100000,
+    "exact": 89108,
+    "fixed_slots": 195314,
+    "damaged_slots": 204918,
+    "collateral_words": 24,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1313,
+    "six_original_catches_retained": 6
+  },
+  "43": {
+    "rows": 100000,
+    "exact": 89040,
+    "fixed_slots": 195203,
+    "damaged_slots": 204918,
+    "collateral_words": 20,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1295,
+    "six_original_catches_retained": 6
+  },
+  "44": {
+    "rows": 100000,
+    "exact": 89213,
+    "fixed_slots": 195451,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1296,
+    "six_original_catches_retained": 6
+  },
+  "45": {
+    "rows": 100000,
+    "exact": 89217,
+    "fixed_slots": 195460,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1296,
+    "six_original_catches_retained": 6
+  },
+  "46": {
+    "rows": 100000,
+    "exact": 89198,
+    "fixed_slots": 195428,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1297,
+    "six_original_catches_retained": 6
+  },
+  "47": {
+    "rows": 100000,
+    "exact": 89216,
+    "fixed_slots": 195455,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1296,
+    "six_original_catches_retained": 5
+  },
+  "48": {
+    "rows": 100000,
+    "exact": 89216,
+    "fixed_slots": 195455,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1296,
+    "six_original_catches_retained": 6
+  },
+  "49": {
+    "rows": 100000,
+    "exact": 89237,
+    "fixed_slots": 195496,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1297,
+    "six_original_catches_retained": 6
+  },
+  "50": {
+    "rows": 100000,
+    "exact": 89237,
+    "fixed_slots": 195496,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1297,
+    "six_original_catches_retained": 6
+  },
+  "51": {
+    "rows": 100000,
+    "exact": 89244,
+    "fixed_slots": 195508,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1298,
+    "six_original_catches_retained": 6
+  },
+  "52": {
+    "rows": 100000,
+    "exact": 89244,
+    "fixed_slots": 195508,
+    "damaged_slots": 204918,
+    "collateral_words": 23,
+    "intended_words": 451446,
+    "wrong_replacement_slots": 1298,
+    "six_original_catches_retained": 6
+  }
+}

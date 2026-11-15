@@ -1,0 +1,68 @@
+{
+  "sources": {
+    "all_desktop_noisy_and_correct_forms": {
+      "normalized_messages": 170698,
+      "overlap": {
+        "review": 0,
+        "final": 0
+      }
+    },
+    "whole_tatoeba_cc0": {
+      "normalized_messages": 41495,
+      "overlap": {
+        "review": 0,
+        "final": 0
+      }
+    },
+    "whole_taskmaster_build21_training": {
+      "normalized_messages": 130931,
+      "overlap": {
+        "review": 0,
+        "final": 0
+      }
+    },
+    "neural_ranker_52000_taskmaster_negatives": {
+      "normalized_messages": 52000,
+      "overlap": {
+        "review": 0,
+        "final": 0
+      }
+    },
+    "casual_sms_training": {
+      "normalized_messages": 3892,
+      "overlap": {
+        "review": 0,
+        "final": 0
+      }
+    },
+    "real_word_sms_candidates_before_additional_training_exclusions": {
+      "normalized_messages": 3223,
+      "overlap": {
+        "review": 0,
+        "final": 0
+      }
+    }
+  },
+  "desktop_sha256": "3923227845fa16c0314f9282ec14eed8d3b94042b728dc8efd1ddf72a2c70df4",
+  "taskmaster_train_sha256": "edc28ced48aeaa75702590ccde3de70a283370d152323749b16c75b8984ce655",
+  "casual_sms_asset_sha256": "f5f776d58a0018731e9f0b07bfcae38550c0a47284476b4e43f97d0eac7c5827",
+  "eligible_sms_message_count": 1277,
+  "suites_normalized_forms": {
+    "review": 592,
+    "final": 592
+  },
+  "distinct_desktop_gold_by_partition": {
+    "training": 60146,
+    "reserved": 10709
+  },
+  "desktop_pair_counts": {
+    "training": 84816,
+    "reserved": 15184
+  },
+  "desktop_gold_train_reserved_overlap": 0,
+  "reserved_gold_matching_prior_normalized_fixture_fields": 10709,
+  "reserved_gold_without_prior_normalized_fixture_field_match": 0,
+  "reserved_gold_in_tatoeba_source": 0,
+  "reserved_gold_in_taskmaster_train_source": 0,
+  "shared_uci_collection_for_training_and_fixtures": true
+}

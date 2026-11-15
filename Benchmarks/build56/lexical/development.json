@@ -1,0 +1,169 @@
+{
+  "53": {
+    "correct": {
+      "positions": 2361,
+      "baseline_correct": 2349,
+      "guarded": 13,
+      "overlay_correct": 2349,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "ordinary": {
+      "positions": 129,
+      "in_candidates": 128,
+      "baseline_correct": 96,
+      "guarded": 3,
+      "overlay_correct": 118,
+      "old_repairs_blocked_by_guard": 1,
+      "new_changes_to_correct_input": 0
+    },
+    "real-word": {
+      "positions": 62,
+      "in_candidates": 61,
+      "baseline_correct": 3,
+      "guarded": 1,
+      "overlay_correct": 3,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "missing-space": {
+      "positions": 53,
+      "in_candidates": 52,
+      "baseline_correct": 39,
+      "guarded": 1,
+      "overlay_correct": 46,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "name": {
+      "positions": 78,
+      "baseline_correct": 69,
+      "guarded": 70,
+      "overlay_correct": 78,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "slang": {
+      "positions": 118,
+      "baseline_correct": 116,
+      "guarded": 89,
+      "overlay_correct": 118,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    }
+  },
+  "54": {
+    "correct": {
+      "positions": 2406,
+      "baseline_correct": 2402,
+      "guarded": 10,
+      "overlay_correct": 2402,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "ordinary": {
+      "positions": 101,
+      "in_candidates": 101,
+      "baseline_correct": 82,
+      "guarded": 0,
+      "overlay_correct": 98,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "real-word": {
+      "positions": 67,
+      "in_candidates": 67,
+      "baseline_correct": 5,
+      "guarded": 0,
+      "overlay_correct": 5,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "missing-space": {
+      "positions": 45,
+      "in_candidates": 45,
+      "baseline_correct": 34,
+      "guarded": 0,
+      "overlay_correct": 45,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "name": {
+      "positions": 76,
+      "baseline_correct": 68,
+      "guarded": 70,
+      "overlay_correct": 76,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "slang": {
+      "positions": 58,
+      "baseline_correct": 52,
+      "guarded": 48,
+      "overlay_correct": 58,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    }
+  },
+  "55": {
+    "name": {
+      "positions": 76,
+      "baseline_correct": 68,
+      "guarded": 72,
+      "overlay_correct": 76,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "correct": {
+      "positions": 2272,
+      "baseline_correct": 2261,
+      "guarded": 13,
+      "overlay_correct": 2261,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "valid-word": {
+      "positions": 48,
+      "baseline_correct": 48,
+      "guarded": 3,
+      "overlay_correct": 48,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "missing-space": {
+      "positions": 45,
+      "in_candidates": 45,
+      "baseline_correct": 44,
+      "guarded": 0,
+      "overlay_correct": 45,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "ordinary": {
+      "positions": 101,
+      "in_candidates": 101,
+      "baseline_correct": 96,
+      "guarded": 0,
+      "overlay_correct": 99,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "real-word": {
+      "positions": 67,
+      "in_candidates": 67,
+      "baseline_correct": 48,
+      "guarded": 0,
+      "overlay_correct": 48,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    },
+    "slang": {
+      "positions": 58,
+      "baseline_correct": 58,
+      "guarded": 48,
+      "overlay_correct": 58,
+      "old_repairs_blocked_by_guard": 0,
+      "new_changes_to_correct_input": 0
+    }
+  }
+}

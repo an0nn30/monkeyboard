@@ -1,0 +1,201 @@
+# Independent domain examples for phrase counts. Each row is a short everyday expression.
+check your inbox
+check your email
+check your spam folder
+check your messages
+check my calendar
+check the weather
+check the forecast
+check the schedule
+check the address
+check the time
+make an appointment
+book an appointment
+reschedule my appointment
+missed my appointment
+set an alarm
+set a timer
+set a reminder
+set the table
+take a seat
+take a shower
+take a look
+take a picture
+take a photo
+take a break
+take a walk
+take the train
+take the bus
+catch the bus
+missed the bus
+ride the bus
+get some rest
+get some sleep
+get some milk
+get well soon
+get back to you
+getting back to you
+drop by later
+drop you off
+drop her off
+drop him off
+drop them off
+drop us off
+dropped it off
+pick us up
+picked them up
+pick something up
+pick it up
+pick him up
+picking me up
+waiting for you
+waiting for the bus
+waiting for the train
+waiting for the results
+waiting in line
+stuck in traffic
+rush hour traffic
+running behind schedule
+running out of time
+right on time
+on time for once
+time to leave
+it's getting late
+what time is dinner
+what time does it start
+how much is it
+how much longer
+how long until
+how long does it take
+do you have time
+do you have any idea
+can you make it
+let me check
+let me see
+let me call you
+let me get back to you
+please give me directions
+send the address
+send a link
+send a picture
+send a photo
+send a message
+send me the address
+send me the link
+send me the details
+send me your location
+text me when you arrive
+call when you arrive
+give me a ring
+give you a call
+give you a lift
+give me a ride
+give me some time
+keep me posted
+keep in touch
+keep an eye on it
+tell me more
+see you soon
+see you there
+talk soon
+see you in a bit
+on the way home
+on my way back
+back at work
+home from work
+after school
+after practice
+after the game
+before the meeting
+at the last minute
+last night
+last week
+last month
+next weekend
+next week
+tomorrow morning
+tomorrow night
+later tonight
+later this evening
+this time tomorrow
+early in the morning
+by the end of the day
+end of the week
+next couple of days
+in the parking lot
+in the back seat
+in the front seat
+in the glove compartment
+in the lost and found
+in the freezer
+in the kitchen drawer
+kitchen sink
+garage door
+front desk
+front porch
+back door
+front entrance
+side entrance
+parking garage
+bus station
+train station
+phone number
+phone charger
+charging cable
+flight number
+tracking information
+order number
+confirmation number
+coffee break
+coffee shop
+work from home
+work on it
+hang out
+hang on
+try again
+try it out
+try this app
+try this one
+figure it out
+find out why
+came up with
+put it back
+put on your shoes
+put the kettle on
+turn it off
+turn it on
+turn the light off
+turn the lights on
+plug in the charger
+charge your phone
+charge the battery
+change the battery
+walk the dog
+feed the cat
+wash the dishes
+fold the laundry
+pay the bill
+split the cost
+lock the door
+forgot my keys
+grab my wallet
+bring an umbrella
+buy some groceries
+run some errands
+get a refund
+schedule a pickup
+read the instructions
+sorry about that
+thanks for letting me know
+that sounds good
+works for me
+glad to hear it
+would love to
+be able to
+can't wait to see you
+looking forward to it
+no worries
+of course
+have a good night
+enjoy the rest of your day
+happy to help

@@ -1,0 +1,660 @@
+[
+  {
+    "id": "f001",
+    "typed": "Can you sent the new floor plan to the electrician tonight?",
+    "expected": "Can you send the new floor plan to the electrician tonight?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c001",
+    "typed": "Can you send the new floor plan to the electrician tonight?",
+    "expected": "Can you send the new floor plan to the electrician tonight?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f002",
+    "typed": "We herd the kettle whistle from the backyard.",
+    "expected": "We heard the kettle whistle from the backyard.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c002",
+    "typed": "We heard the kettle whistle from the backyard.",
+    "expected": "We heard the kettle whistle from the backyard.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f003",
+    "typed": "Could you check of our gate opens from the alley?",
+    "expected": "Could you check if our gate opens from the alley?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c003",
+    "typed": "Could you check if our gate opens from the alley?",
+    "expected": "Could you check if our gate opens from the alley?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f004",
+    "typed": "The box us still waiting beside the old elevator.",
+    "expected": "The box is still waiting beside the old elevator.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c004",
+    "typed": "The box is still waiting beside the old elevator.",
+    "expected": "The box is still waiting beside the old elevator.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f005",
+    "typed": "Let's go hope before the last ferry leaves.",
+    "expected": "Let's go home before the last ferry leaves.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c005",
+    "typed": "Let's go home before the last ferry leaves.",
+    "expected": "Let's go home before the last ferry leaves.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f006",
+    "typed": "Put the heavy pots be the wooden bench.",
+    "expected": "Put the heavy pots by the wooden bench.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c006",
+    "typed": "Put the heavy pots by the wooden bench.",
+    "expected": "Put the heavy pots by the wooden bench.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f007",
+    "typed": "I can leave right not if the parking lot is clear.",
+    "expected": "I can leave right now if the parking lot is clear.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c007",
+    "typed": "I can leave right now if the parking lot is clear.",
+    "expected": "I can leave right now if the parking lot is clear.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f008",
+    "typed": "I think tour sketch belongs in the hallway.",
+    "expected": "I think your sketch belongs in the hallway.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c008",
+    "typed": "I think your sketch belongs in the hallway.",
+    "expected": "I think your sketch belongs in the hallway.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f009",
+    "typed": "The spare key fell form the shelf beside the sink.",
+    "expected": "The spare key fell from the shelf beside the sink.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c009",
+    "typed": "The spare key fell from the shelf beside the sink.",
+    "expected": "The spare key fell from the shelf beside the sink.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f010",
+    "typed": "She put me scarf over the back of the chair.",
+    "expected": "She put my scarf over the back of the chair.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c010",
+    "typed": "She put my scarf over the back of the chair.",
+    "expected": "She put my scarf over the back of the chair.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f011",
+    "typed": "Did they fine the book under the folding table?",
+    "expected": "Did they find the book under the folding table?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c011",
+    "typed": "Did they find the book under the folding table?",
+    "expected": "Did they find the book under the folding table?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f012",
+    "typed": "I only asked four a little mustard on mine.",
+    "expected": "I only asked for a little mustard on mine.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c012",
+    "typed": "I only asked for a little mustard on mine.",
+    "expected": "I only asked for a little mustard on mine.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f013",
+    "typed": "Would you witch the red and blue labels?",
+    "expected": "Would you switch the red and blue labels?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c013",
+    "typed": "Would you switch the red and blue labels?",
+    "expected": "Would you switch the red and blue labels?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f014",
+    "typed": "Could we meat behind the cinema after lunch?",
+    "expected": "Could we meet behind the cinema after lunch?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c014",
+    "typed": "Could we meet behind the cinema after lunch?",
+    "expected": "Could we meet behind the cinema after lunch?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f015",
+    "typed": "I need a pear of plain socks for the trip.",
+    "expected": "I need a pair of plain socks for the trip.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c015",
+    "typed": "I need a pair of plain socks for the trip.",
+    "expected": "I need a pair of plain socks for the trip.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f016",
+    "typed": "Please right the locker number inside the lid.",
+    "expected": "Please write the locker number inside the lid.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c016",
+    "typed": "Please write the locker number inside the lid.",
+    "expected": "Please write the locker number inside the lid.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f017",
+    "typed": "The band wants to reed the notes before dinner.",
+    "expected": "The band wants to read the notes before dinner.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c017",
+    "typed": "The band wants to read the notes before dinner.",
+    "expected": "The band wants to read the notes before dinner.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f018",
+    "typed": "There was a leek in the pipe behind the dryer.",
+    "expected": "There was a leak in the pipe behind the dryer.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c018",
+    "typed": "There was a leak in the pipe behind the dryer.",
+    "expected": "There was a leak in the pipe behind the dryer.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f019",
+    "typed": "Someone left there lunch on the radiator.",
+    "expected": "Someone left their lunch on the radiator.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c019",
+    "typed": "Someone left their lunch on the radiator.",
+    "expected": "Someone left their lunch on the radiator.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f020",
+    "typed": "Don't loose the receipt for the new hinges.",
+    "expected": "Don't lose the receipt for the new hinges.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c020",
+    "typed": "Don't lose the receipt for the new hinges.",
+    "expected": "Don't lose the receipt for the new hinges.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f021",
+    "typed": "The break pedal felt stiff when we pulled away.",
+    "expected": "The brake pedal felt stiff when we pulled away.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c021",
+    "typed": "The brake pedal felt stiff when we pulled away.",
+    "expected": "The brake pedal felt stiff when we pulled away.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f022",
+    "typed": "Please weight until the paint on the rail is dry.",
+    "expected": "Please wait until the paint on the rail is dry.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c022",
+    "typed": "Please wait until the paint on the rail is dry.",
+    "expected": "Please wait until the paint on the rail is dry.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f023",
+    "typed": "We ran out of flower halfway through the bread recipe.",
+    "expected": "We ran out of flour halfway through the bread recipe.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c023",
+    "typed": "We ran out of flour halfway through the bread recipe.",
+    "expected": "We ran out of flour halfway through the bread recipe.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f024",
+    "typed": "I have to by a new latch for this gate.",
+    "expected": "I have to buy a new latch for this gate.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c024",
+    "typed": "I have to buy a new latch for this gate.",
+    "expected": "I have to buy a new latch for this gate.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f025",
+    "typed": "The dogs wagged they're tails when the bell rang.",
+    "expected": "The dogs wagged their tails when the bell rang.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c025",
+    "typed": "The dogs wagged their tails when the bell rang.",
+    "expected": "The dogs wagged their tails when the bell rang.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f026",
+    "typed": "I know wear she parked the rental van.",
+    "expected": "I know where she parked the rental van.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c026",
+    "typed": "I know where she parked the rental van.",
+    "expected": "I know where she parked the rental van.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f027",
+    "typed": "She took a deep breadth before lifting the lid.",
+    "expected": "She took a deep breath before lifting the lid.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c027",
+    "typed": "She took a deep breath before lifting the lid.",
+    "expected": "She took a deep breath before lifting the lid.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f028",
+    "typed": "Do we have thyme for another lap around the lake?",
+    "expected": "Do we have time for another lap around the lake?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "c028",
+    "typed": "Do we have time for another lap around the lake?",
+    "expected": "Do we have time for another lap around the lake?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f029",
+    "typed": "Diid I leave my jackte on the ferry?",
+    "expected": "Did I leave my jacket on the ferry?",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c029",
+    "typed": "Did I leave my jacket on the ferry?",
+    "expected": "Did I leave my jacket on the ferry?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f030",
+    "typed": "THe packgae was waiting behind the planter.",
+    "expected": "The package was waiting behind the planter.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c030",
+    "typed": "The package was waiting behind the planter.",
+    "expected": "The package was waiting behind the planter.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f031",
+    "typed": "MMy brother needs a clean towle for the gym.",
+    "expected": "My brother needs a clean towel for the gym.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c031",
+    "typed": "My brother needs a clean towel for the gym.",
+    "expected": "My brother needs a clean towel for the gym.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f032",
+    "typed": "Can you bring teh spare chager to the picnic?",
+    "expected": "Can you bring the spare charger to the picnic?",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c032",
+    "typed": "Can you bring the spare charger to the picnic?",
+    "expected": "Can you bring the spare charger to the picnic?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f033",
+    "typed": "We left the tick ets for the mvoie in your car.",
+    "expected": "We left the tickets for the movie in your car.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c033",
+    "typed": "We left the tickets for the movie in your car.",
+    "expected": "We left the tickets for the movie in your car.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f034",
+    "typed": "They moved hte meeting tpo the lunch room.",
+    "expected": "They moved the meeting to the lunch room.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c034",
+    "typed": "They moved the meeting to the lunch room.",
+    "expected": "They moved the meeting to the lunch room.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f035",
+    "typed": "I'll leave my lib rary books by the dor.",
+    "expected": "I'll leave my library books by the door.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c035",
+    "typed": "I'll leave my library books by the door.",
+    "expected": "I'll leave my library books by the door.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f036",
+    "typed": "Please pick up the kidsat the staiton before six.",
+    "expected": "Please pick up the kids at the station before six.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c036",
+    "typed": "Please pick up the kids at the station before six.",
+    "expected": "Please pick up the kids at the station before six.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f037",
+    "typed": "The reicpe says to let the buter soften first.",
+    "expected": "The recipe says to let the butter soften first.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c037",
+    "typed": "The recipe says to let the butter soften first.",
+    "expected": "The recipe says to let the butter soften first.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f038",
+    "typed": "I put yoyr glasses besdie the coffee tin.",
+    "expected": "I put your glasses beside the coffee tin.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "c038",
+    "typed": "I put your glasses beside the coffee tin.",
+    "expected": "I put your glasses beside the coffee tin.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "f039",
+    "typed": "The herd stopped near the fence when the truck went past.",
+    "expected": "The herd stopped near the fence when the truck went past.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f040",
+    "typed": "I sent the floor plan to the contractor on Tuesday.",
+    "expected": "I sent the floor plan to the contractor on Tuesday.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f041",
+    "typed": "The shelf gave way when we added the last heavy box.",
+    "expected": "The shelf gave way when we added the last heavy box.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f042",
+    "typed": "I do wish the rain would stop before the ferry leaves.",
+    "expected": "I do wish the rain would stop before the ferry leaves.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f043",
+    "typed": "Keep the old badge if the new one feels too stiff.",
+    "expected": "Keep the old badge if the new one feels too stiff.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f044",
+    "typed": "The reins are hanging on a peg behind the tack room.",
+    "expected": "The reins are hanging on a peg behind the tack room.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f045",
+    "typed": "Our vacation starts the day after the science fair.",
+    "expected": "Our vacation starts the day after the science fair.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f046",
+    "typed": "Please leave the leek on the board until the stock boils.",
+    "expected": "Please leave the leek on the board until the stock boils.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f047",
+    "typed": "She picked a pear that smelled sweet near the stem.",
+    "expected": "She picked a pear that smelled sweet near the stem.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f048",
+    "typed": "Write the word thyme next to the rosemary on the sign.",
+    "expected": "Write the word thyme next to the rosemary on the sign.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f049",
+    "typed": "The florist found a white flower that matched the paint.",
+    "expected": "The florist found a white flower that matched the paint.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f050",
+    "typed": "I'm still in fine shape for a walk along the pier.",
+    "expected": "I'm still in fine shape for a walk along the pier.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f051",
+    "typed": "He took a break after the last trip up the stairs.",
+    "expected": "He took a break after the last trip up the stairs.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f052",
+    "typed": "We're moving the desk by the window next month.",
+    "expected": "We're moving the desk by the window next month.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f053",
+    "typed": "They sent us a photo of the missing lunchbox yesterday.",
+    "expected": "They sent us a photo of the missing lunchbox yesterday.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f054",
+    "typed": "It's a loose fit until the second screw is tight.",
+    "expected": "It's a loose fit until the second screw is tight.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f055",
+    "typed": "I'll wait here while you check the bread in the oven.",
+    "expected": "I'll wait here while you check the bread in the oven.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "f056",
+    "typed": "She noted the hole in the lining before mending it.",
+    "expected": "She noted the hole in the lining before mending it.",
+    "split": "fresh",
+    "kind": "keep"
+  }
+]

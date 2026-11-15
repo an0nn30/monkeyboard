@@ -1,0 +1,30 @@
+{
+  "all": {
+    "errors": 213,
+    "52": 100,
+    "54": 121,
+    "recovered": 21,
+    "lost": 0
+  },
+  "ordinary": {
+    "errors": 101,
+    "52": 73,
+    "54": 82,
+    "recovered": 9,
+    "lost": 0
+  },
+  "real-word": {
+    "errors": 67,
+    "52": 5,
+    "54": 5,
+    "recovered": 0,
+    "lost": 0
+  },
+  "missing-space": {
+    "errors": 45,
+    "52": 22,
+    "54": 34,
+    "recovered": 12,
+    "lost": 0
+  }
+}

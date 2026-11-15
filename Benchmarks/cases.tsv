@@ -1,0 +1,85 @@
+# v1 fixed, project-authored regression fixture. kind | before cursor (ends at typed word) | expected.
+fix	Can you send teh	the
+fix	I will definately	definitely
+fix	We should meet tomorow	tomorrow
+fix	I left my keybaord	keyboard
+fix	I was thinkong	thinking
+fix	They were alraedy	already
+fix	Will you be therr	there
+fix	I'll see you agian	again
+fix	Let's talk abotu	about
+fix	It felt wierd	weird
+fix	I can probablt	probably
+fix	He hasn't replued	replied
+fix	She is comming	coming
+fix	It's a beautfiul	beautiful
+fix	I need a cofffee	coffee
+fix	Please tell thme	them
+fix	You shoudl	should
+fix	She woudl	would
+fix	All of thier	their
+fix	I dont	don't
+fix	Thnaks	Thanks
+fix	This is perfetc	perfect
+fix	He lives near the libary	library
+fix	I will recieve	receive
+fix	Do you remmeber	remember
+fix	The delivery is runnign	running
+fix	They had a differnet	different
+fix	That's a confsuing	confusing
+fix	I am actaully	actually
+fix	We got spmething	something
+keep	I feel well	well
+keep	Meet me by the well	well
+keep	I read it on Reddit	Reddit
+keep	Talk to Dustin	Dustin
+keep	Sent by Siobhan	Siobhan
+keep	I write SwiftUI	SwiftUI
+keep	I loved the café	café
+keep	That's naïve	naïve
+keep	This is kinda	kinda
+keep	I said yep	yep
+keep	Send the link pls	pls
+keep	I will message ASAP	ASAP
+keep	Try user_id	id
+keep	Open example.teh	teh
+keep	Write to me@teh	teh
+keep	The path is /teh	teh
+keep	The tag is #teh	teh
+keep	I need their	their
+keep	I want dessert	dessert
+keep	The color is teal	teal
+keep	Sitting still	still
+keep	Here’s what I’ll	I’ll
+keep	My favorite app is MonkeyBoard	MonkeyBoard
+keep	I signed it Zella	Zella
+keep	Saw 🌿 today	today
+keep	Her username is al3x	x
+keep	Take a different route	route
+keep	It happened once	once
+keep	That's sick	sick
+keep	I use git	git
+next	I'm already on my	way
+next	I'll see you	later
+next	Thank you so	much
+next	Let me	know
+next	Do you want	to
+next	I just got	home
+next	I don't	know
+next	Can you pick	up
+next	I'm running	late
+next	Talk to you	soon
+next	See you in	the
+next	Are you still	there
+next	We should grab	coffee
+next	What do you	think
+next	I have no	idea
+next	That sounds	good
+next	I'll be right	back
+next	Have a good	night
+next	Please call me	back
+next	Looking forward	to
+next	My keys are in	the
+next	Send me the	address
+next	I left my	wallet
+next	Tell me	why

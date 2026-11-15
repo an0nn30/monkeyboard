@@ -1,0 +1,22 @@
+{
+  "seed": 41201,
+  "train_sentences": 130931,
+  "validation_sentences": 6000,
+  "device": "mps",
+  "modified_parameters": 3153920,
+  "baseline": {
+    "nll": 4.475515650994508,
+    "top1": 0.23091354621333945,
+    "tokens": 26118
+  },
+  "training": {
+    "nll": 4.004511422256036,
+    "top1": 0.2581829570471901,
+    "tokens": 542805
+  },
+  "candidate": {
+    "nll": 3.6906652491457277,
+    "top1": 0.2824871735967532,
+    "tokens": 26118
+  }
+}

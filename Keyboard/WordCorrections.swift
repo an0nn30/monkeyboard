@@ -16,12 +16,16 @@ final class WordCorrections {
     // one-edit word first (e.g. “wired” for “wierd”).
     private let commonTypos = ["teh": "the", "wierd": "weird", "thier": "their",
                                "recieve": "receive", "becuase": "because", "definately": "definitely",
-                               "dont": "don't", "adress": "address"]
+                               "adress": "address"]
 
     struct Choices {
         var automatic: String?
         var suggestions: [String] = []
         var reviewAlternatives: [String] = []
+        // Only a verified subject + verb frame can reopen a dictionary split.
+        var reviewsProtectedBoundary = false
+        var reviewsShortWord = false
+        var missingLetterOnly = false
     }
 
     // Build the lexical candidate pool before consulting sentence models.
@@ -141,7 +145,315 @@ final class WordCorrections {
         return best.0
     }
 
+    // A lower-case function word fused to a capitalized place/date is different
+    // from an ordinary camelCase identifier. Require an attested phrase.
+    private static func capitalBoundary(_ word: String) -> String? {
+        guard let cut = word.firstIndex(where: \.isUppercase), cut != word.startIndex else { return nil }
+        let a = String(word[..<cut]), b = String(word[cut...]), lower = b.lowercased()
+        guard b.count >= 3, b.dropFirst().allSatisfy(\.isLowercase),
+              ["in","on","by","to","from","until","after","before","since","next","last","every","this","already"].contains(a)
+        else { return nil }
+        let calendar = weekdays + weekdays.map { $0 + "s" } + months + ["May","June","July"]
+        guard calendar.contains(b) || (["in","to","from"].contains(a) && mb_pair_support_v1(a, lower) >= 8) else { return nil }
+        return a + " " + b
+    }
+
+    // Compete against letter substitutions only when a unique exact boundary
+    // has two independent pieces of evidence (or a very strong internal pair).
+    private static let boundaryFunctions: Set<String> = ["the","a","an","my","your","this","that","is",
+        "are","was","were","can","could","will","would","should","have","has","to","for","in","on",
+        "at","of","with","and","or","you","we","they","he","she","it","i","be","do","did","from"]
+    private static func attestedFunctionBoundary(_ word: String, prior: String) -> String? {
+        guard (4...28).contains(word.count), word.allSatisfy({ $0.isASCII && $0.isLowercase }),
+              mb_frequency_v1(word) == 0, mb_whole_compound_v1(word) == 0 else { return nil }
+        var best: String?
+        for i in word.indices.dropFirst() {
+            let a = String(word[..<i]), b = String(word[i...])
+            guard boundaryFunctions.contains(a) || boundaryFunctions.contains(b),
+                  mb_frequency_v1(a) > 0, mb_frequency_v1(b) > 0 else { continue }
+            let inside = mb_pair_support_v1(a,b), left = mb_pair_support_v1(prior,a)
+            guard (inside >= 5 && left >= 3) || inside >= 60 else { continue }
+            if best != nil { return nil }
+            best = a + " " + b
+        }
+        return best
+    }
+
+    // Only waive the historical dictionary veto for an unattested whole spelling
+    // with a subject, a verb and a preposition. Rust excludes observed whole words.
+    // The following word must independently fit the preposition before any edit.
+    private static func predicateBoundary(_ word: String, prior: String) -> String? {
+        guard word.hasSuffix("in"), word.count >= 5, word == word.lowercased(),
+              ["i","we","they","you","he","she"].contains(prior) else { return nil }
+        var buffer = [CChar](repeating: 0, count: 96)
+        guard mb_boundary_v1(prior, word, &buffer, buffer.count) == 1 else { return nil }
+        let verb = String(word.dropLast(2)), split = verb + " in"
+        guard String(cString: buffer) == split, mb_pair_support_v1(prior, verb) >= 4,
+              mb_pair_support_v1(verb, "in") >= 8 else { return nil }
+        return split
+    }
+
     func choices(for word: String, before: String, includeCompletions: Bool) -> Choices {
+        var result = rawChoices(for: word, before: before, includeCompletions: includeCompletions)
+        // Prevent only an exact internal space insertion. Normal spelling,
+        // apostrophes, and explicit user shortcuts still use their own policy.
+        let lower = word.lowercased()
+        func splitsLiteral(_ text: String) -> Bool {
+            text.contains(" ") && text.lowercased().replacingOccurrences(of: " ", with: "") == lower
+        }
+        let splits = result.automatic.map(splitsLiteral) == true || result.reviewAlternatives.contains(where: splitsLiteral)
+            || result.suggestions.contains(where: splitsLiteral)
+        if splits, shortcuts[word] == nil, !lower.utf8.contains(0), mb_whole_compound_v1(lower) == 1 {
+            if result.automatic.map(splitsLiteral) == true { result.automatic = nil }
+            if !result.reviewsProtectedBoundary { result.reviewAlternatives.removeAll(where: splitsLiteral) }
+            result.suggestions.removeAll(where: splitsLiteral)
+        }
+        if !includeCompletions, shortcuts[word] == nil, before.hasSuffix(word) {
+            let left = String(before.dropLast(word.count).suffix(200))
+            if let automatic = result.automatic, Self.keepsLiteral(left, word, "", automatic) {
+                result.automatic = nil
+            }
+        }
+        return result
+    }
+
+    /// The residual channel models mistyped letters and spaces, not a choice
+    /// between two valid words. Only the explicit context models make that choice.
+    func isRecognizedSpelling(_ word: String) -> Bool {
+        let range = NSRange(word.startIndex..., in: word)
+        return checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: language).location == NSNotFound
+    }
+
+    private static func keepsLiteral(_ left: String, _ word: String, _ right: String, _ proposal: String) -> Bool {
+        word != proposal && ((word.lowercased() != proposal.lowercased() && mb_original_name54_v1(word) == 1) ||
+                             mb_keep_literal53_v1(left, word, right, proposal) == 1)
+    }
+
+    private static let literalPrompts: [String] = ["type the literal", "identifier is", "code is", "password is", "type exactly", "word is spelled", "spelled exactly", "i wrote", "label says", "saved it as", "username is", "literal word", "please type", "please spell", "i typed", "word is", "literal is", "the word", "the spelling", "the syllable", "the abbreviation", "the variable"]
+    private static func isLiteralContext(_ context: String) -> Bool {
+        literalPrompts.contains { context == $0 || context.hasSuffix(" " + $0) }
+    }
+
+    private static func uniqueJoin(original: [String], proposed: [String]) -> Int? {
+        var match: Int?
+        for i in proposed.indices where proposed[i].lowercased() ==
+            (original[i] + original[i + 1]).lowercased() {
+            if match != nil { return nil }
+            match = i
+        }
+        return match
+    }
+
+    private func ordinaryLowercaseCorrection(_ surface: String, from typed: String) -> Bool {
+        let lower = surface.lowercased()
+        guard let first = surface.first, first.isUppercase,
+              surface.dropFirst().allSatisfy({ !$0.isUppercase }),
+              mb_midword_lowercase_v1(lower) == 1 else { return false }
+        return Self.distance(typed.lowercased(), lower) <= 2
+    }
+
+    func allowsLearnedEdits(in raw: String, leading: String) -> Bool {
+        let combined = (leading + raw).lowercased()
+        if Self.literalPrompts.contains(where: { combined.contains($0 + " ") }) { return false }
+        let tokens = raw.split(whereSeparator: { !$0.isLetter && $0 != "'" && $0 != "’" })
+        return !tokens.contains { knownWords.contains($0.lowercased()) || shortcuts[String($0)] != nil }
+    }
+
+    // Only the controller can nominate text for lookback: this is an owned
+    // span, never a sentence copied from an unrelated field or a pasted draft.
+    func learnedSentence(raw: String, leading: String, rendered: String, word: String, baseline: Choices) -> String? {
+        guard !raw.isEmpty, raw.utf8.count <= 180, raw.allSatisfy({ $0.isLetter || $0.isNumber || " '’-,;:".contains($0) }),
+              !raw.utf8.contains(0), !leading.utf8.contains(0),
+              raw.split(separator: " ").count <= 12 else { return nil }
+        guard allowsLearnedEdits(in: raw, leading: leading) else { return nil }
+        let originals = raw.split(whereSeparator: { !$0.isLetter && $0 != "'" && $0 != "’" })
+        // A scheduled ambiguity review owns the current spelling until a
+        // following word arrives. Other edits in the same span can still commit.
+        let waitsForRight = baseline.automatic == nil && baseline.reviewAlternatives.contains(word.lowercased())
+        var buf = [CChar](repeating: 0, count: 384)
+        if mb_pipeline22_v1(raw, &buf, buf.count) == 1 {
+            var proposal = String(cString: buf)
+            // A bounded typing span can start after a comma. Casing predictions
+            // for that local start must respect the actual sentence boundary.
+            if let firstRaw = raw.split(separator: " ").first,
+               let firstProposed = proposal.split(separator: " ").first,
+               let ch = firstProposed.first, ch.isASCII, ch.isUppercase,
+               firstRaw.first?.isLowercase == true,
+               !leading.trimmingCharacters(in: .whitespaces).isEmpty,
+               leading.trimmingCharacters(in: .whitespaces).last.map({ !".!?".contains($0) }) == true,
+               (firstRaw.lowercased() == firstProposed.lowercased() ||
+                ordinaryLowercaseCorrection(String(firstProposed), from: String(firstRaw))) {
+                proposal = ch.lowercased() + proposal.dropFirst()
+            }
+            if let first = originals.first, let ch=first.first, ch.isUppercase, first.count < 5,
+               let proposedFirst = proposal.split(separator: " ").first,
+               proposedFirst.lowercased() != first.lowercased() && proposedFirst.count < first.count &&
+               !raw.lowercased().hasPrefix(proposedFirst.lowercased()) &&
+               mb_supported_opening_v1(raw, String(proposedFirst)) == 0 &&
+               !(first.count == proposedFirst.count + 1 && first.dropFirst().first?.isUppercase == true &&
+                 first.dropFirst().lowercased() == proposedFirst.lowercased()) {
+                return nil
+            }
+            let originalWords = raw.components(separatedBy: " ")
+            let displayedWords = rendered.components(separatedBy: " ")
+            var proposedWords = proposal.components(separatedBy: " ")
+            if originalWords.count == proposedWords.count && originalWords.count == displayedWords.count {
+                let opening = originalWords[0]
+                let repairedOpening = opening.count > 1 && opening.first?.isUppercase == true &&
+                    opening.dropFirst().first?.isUppercase == true &&
+                    opening.lowercased() != proposedWords[0].lowercased()
+                for i in originalWords.indices {
+                    let literal = originalWords[i], guess = proposedWords[i]
+                    guard literal != guess || displayedWords[i] != literal else { continue }
+                    let left = leading + proposedWords[..<i].joined(separator: " ")
+                    let right = proposedWords[(i + 1)...].joined(separator: " ")
+                    // A corrected opening is not evidence that a later valid
+                    // word was mistyped. Keep an attested informal phrase unless
+                    // both sides support the proposed change.
+                    if Self.keepsLiteral(left, literal, right, guess) ||
+                        (guess == literal && Self.keepsLiteral(left, literal, right, displayedWords[i])) {
+                        proposedWords[i] = literal
+                    } else if i > 0 && guess == literal && displayedWords[i] != literal &&
+                        originalWords[0] != proposedWords[0] &&
+                        (3...24).contains(literal.utf8.count) && literal.allSatisfy({ $0.isASCII && $0.isLowercase }) &&
+                        displayedWords[i].allSatisfy({ $0.isASCII && $0.isLowercase }) &&
+                        mb_frequency_v1(literal) == 0 && mb_spelling22_known_v1(literal) == 0 &&
+                        (mb_frequency_v1(displayedWords[i]) > 0 || mb_spelling22_known_v1(displayedWords[i]) == 1 ||
+                         checker.rangeOfMisspelledWord(in: displayedWords[i], range: NSRange(displayedWords[i].startIndex..., in: displayedWords[i]),
+                                                       startingAt: 0, wrap: false, language: language).location == NSNotFound) &&
+                        Self.distance(literal, displayedWords[i]) <= 2 {
+                        // A sentence revision may simply abstain about another
+                        // token. Abstention must not undo a committed spelling
+                        // repair while changing the opening. Undo resets the run.
+                        proposedWords[i] = displayedWords[i]
+                    } else if i > 0 && repairedOpening && literal.allSatisfy(\.isLetter) && guess.allSatisfy(\.isLetter) &&
+                        literal.lowercased() != guess.lowercased() &&
+                        mb_casual_keep_v1(left, literal, guess) == 1 &&
+                        mb_context_agrees_v1(left, literal.lowercased(), right, guess.lowercased()) == 0 {
+                        proposedWords[i] = literal
+                    } else if guess.compare(literal, options: .diacriticInsensitive) == .orderedSame {
+                        proposedWords[i] = literal
+                    } else if mb_literal_supported_v1(left, literal, right, guess) == 1 || mb_uncorroborated_v1(left, literal, right, guess) == 1 {
+                        proposedWords[i] = literal
+                    }
+                }
+                proposal = proposedWords.joined(separator: " ")
+            }
+            // Joining two fragments must not undo an independent earlier
+            // correction (e.g. correcting a preposition before the joined word).
+            // Carry it over only on a single, exact join with unambiguous offsets.
+            if displayedWords.count == originalWords.count && proposedWords.count + 1 == originalWords.count,
+               let join = Self.uniqueJoin(original: originalWords, proposed: proposedWords) {
+                for index in proposedWords.indices where index != join {
+                    let i = index < join ? index : index + 1
+                    let literal = originalWords[i], guess = proposedWords[index]
+                    let prior = leading + proposedWords[..<index].joined(separator: " ")
+                    let after = proposedWords[(index + 1)...].joined(separator: " ")
+                    if guess.lowercased() != literal.lowercased() {
+                        if Self.keepsLiteral(prior, literal, after, guess) || mb_literal_supported_v1(prior, literal, after, guess) == 1 ||
+                            mb_uncorroborated_v1(prior, literal, after, guess) == 1 {
+                            proposedWords[index] = literal
+                        }
+                    } else if guess == literal, displayedWords[i] != literal {
+                        let earlier = displayedWords[i]
+                        // Recheck against the resolved neighbors. A guess made
+                        // next to a partial word can cease to fit after the join.
+                        let supported = !Self.keepsLiteral(prior, literal, after, earlier) && mb_literal_supported_v1(prior, literal, after, earlier) == 0 &&
+                            mb_uncorroborated_v1(prior, literal, after, earlier) == 0
+                        if supported || earlier.lowercased() == literal.lowercased() { proposedWords[index] = earlier }
+                    }
+                }
+                proposal = proposedWords.joined(separator: " ")
+            }
+            // Recheck a boundary proposal against each original token at the
+            // boundary. Preserve other word repairs when the boundary is vetoed.
+            if originalWords.count + 1 == proposedWords.count,
+               let at = Self.uniqueJoin(original: proposedWords, proposed: originalWords) {
+                let left = leading + proposedWords[..<at].joined(separator: " ")
+                let right = proposedWords.dropFirst(at + 2).joined(separator: " ")
+                let split = proposedWords[at...(at + 1)].joined(separator: " ")
+                if Self.keepsLiteral(left, originalWords[at], right, split) {
+                    proposedWords.replaceSubrange(at...(at + 1), with: [originalWords[at]])
+                    proposal = proposedWords.joined(separator: " ")
+                }
+            } else if originalWords.count == proposedWords.count + 1,
+                      let at = Self.uniqueJoin(original: originalWords, proposed: proposedWords) {
+                let left = leading + proposedWords[..<at].joined(separator: " ")
+                let right = proposedWords.dropFirst(at + 1).joined(separator: " ")
+                if Self.keepsLiteral(left, originalWords[at], right, proposedWords[at]) ||
+                    Self.keepsLiteral(left, originalWords[at + 1], right, proposedWords[at]) {
+                    proposedWords.replaceSubrange(at...at, with: originalWords[at...(at + 1)])
+                    proposal = proposedWords.joined(separator: " ")
+                }
+            }
+            if waitsForRight && proposal.split(separator: " ").last != rendered.split(separator: " ").last {
+                return nil
+            }
+            // Keep the existing delayed review when this new model has no edit
+            // at the active word (e.g. a valid spelling awaiting a right word).
+            if proposal != rendered { return proposal }
+            // If earlier words already match the model, still check this boundary.
+        }
+        guard !word.isEmpty, rendered.hasSuffix(word), raw.hasSuffix(word),
+              word.allSatisfy({ $0.isASCII && ($0.isLetter || $0 == "'") }) else { return nil }
+        let left = String((leading + raw.dropLast(word.count)).suffix(160))
+        let r = NSRange(word.startIndex..., in: word)
+        let accepted = checker.rangeOfMisspelledWord(in: word, range: r, startingAt: 0, wrap: false, language: language).location == NSNotFound
+        var committed = word
+        if let guess = baseline.automatic {
+            // Do not introduce an accent as the only change to an otherwise
+            // correct spelling (for example, an English loanword).
+            let accentOnly = guess != word && guess.compare(word, options: .diacriticInsensitive) == .orderedSame
+            if !accentOnly && !Self.keepsLiteral(left, word, "", guess) && mb_literal_supported_v1(left, word, "", guess) == 0 && mb_casual_keep_v1(left, word, guess) == 0 { committed = guess }
+        } else if !waitsForRight && !accepted && word.count >= 2 && (mb_spelling22_v1(left, word, "", &buf, buf.count) == 1
+                    || mb_textspell30_v1(left, word, "", &buf, buf.count) == 1) {
+            let candidate = String(cString: buf)
+            if !Self.keepsLiteral(left, word, "", candidate) && mb_casual_keep_v1(left, word, candidate) == 0 { committed = candidate }
+        }
+
+        // Review a word once its immediate right context arrives. Align on
+        // original word boundaries so a split, undo or earlier choice cannot
+        // move this replacement onto someone else's word.
+        let typed = raw.components(separatedBy: " ")
+        var shown = rendered.components(separatedBy: " ")
+        var revised = false
+        if typed.count == shown.count, typed.count >= 2 {
+            for i in max(0, typed.count - 3)..<(typed.count - 1) {
+                let w = typed[i]
+                guard (2...24).contains(w.utf8.count), w.allSatisfy({ $0.isASCII && $0.isLetter }) else { continue }
+                let prior = String((leading + shown[..<i].joined(separator: " ")).suffix(160))
+                let after = shown[(i + 1)...].joined(separator: " ")
+                if shown[i] != w {
+                    if Self.keepsLiteral(prior, w, after, shown[i]) || mb_literal_supported_v1(prior, w, after, shown[i]) == 1 {
+                        shown[i] = w
+                        revised = true
+                    }
+                    continue
+                }
+                let realEdit = w.count <= 7 && mb_real25_v1(prior, w, after, &buf, buf.count) == 1
+                let spellingEdit = !realEdit && mb_spelling22_known_v1(w) == 0
+                    && checker.rangeOfMisspelledWord(in: w, range: NSRange(w.startIndex..., in: w), startingAt: 0,
+                                                     wrap: false, language: language).location != NSNotFound
+                    && (mb_spelling22_v1(prior, w, after, &buf, buf.count) == 1 || mb_textspell30_v1(prior, w, after, &buf, buf.count) == 1)
+                if realEdit || spellingEdit {
+                    let guess = String(cString: buf)
+                    if Self.keepsLiteral(prior, w, after, guess) || mb_literal_supported_v1(prior, w, after, guess) == 1 { continue }
+                    if mb_casual_keep_v1(prior, w, guess) == 1 &&
+                        !(realEdit && mb_context_agrees_v1(prior, w, after, guess) == 1) { continue }
+                    shown[i] = guess
+                    revised = true
+                }
+            }
+        }
+        if revised {
+            shown[shown.count - 1] = committed
+            return shown.joined(separator: " ")
+        }
+        if committed == baseline.automatic || (committed == word && baseline.automatic == nil) { return nil }
+        return String(rendered.dropLast(word.count)) + committed
+    }
+
+    private func rawChoices(for word: String, before: String, includeCompletions: Bool) -> Choices {
         guard (1...40).contains(word.count), before.hasSuffix(word) else { return Choices() }
         let original = word.lowercased()
         let normalized = original.replacingOccurrences(of: "’", with: "'")
@@ -162,10 +474,39 @@ final class WordCorrections {
             let leadingText = String(leading.suffix(160))
             // Keep a literal spelling after an explicit code or spelling prompt.
             let literalContext = leadingText.lowercased().trimmingCharacters(in: .whitespaces)
-            if ["code is", "password is", "type exactly", "word is spelled", "spelled exactly", "i wrote", "label says", "saved it as", "username is", "literal word"].contains(where: {
-                literalContext == $0 || literalContext.hasSuffix(" " + $0)
-            }) { return choices }
+            if Self.isLiteralContext(literalContext) { return choices }
             let prior = literalContext.split(whereSeparator: { !$0.isLetter && $0 != "'" }).last.map(String.init) ?? ""
+            // Only read a left neighbour in the same phrase. Punctuation, quoted
+            // spellings, and identifier fragments cannot authorize these edits.
+            let adjacent = leading.last == " " && leading.dropLast()
+                .last.map { $0.isLetter } == true
+            if let restored = SentenceSurface.contraction(word, left: leadingText, right: "") {
+                return Choices(automatic: restored, suggestions: [restored])
+            }
+            if usesSentenceContext, (adjacent || leading.isEmpty), let spaced = Self.capitalBoundary(word) {
+                return Choices(automatic: spaced, suggestions: [spaced])
+            }
+            if usesSentenceContext, adjacent, word == normalized {
+                if preparesTransformerReviews, missed == range, let split = Self.predicateBoundary(word, prior: prior) {
+                    return Choices(reviewAlternatives: includeCompletions ? [] : [split], reviewsProtectedBoundary: true)
+                }
+                if word.hasSuffix("a"), (3...14).contains(word.count),
+                   missed == range || word == "asa" {
+                    let first = String(word.dropLast())
+                    if mb_pair_support_v1(prior, first) >= 4, mb_pair_support_v1(first, "a") >= 16,
+                       mb_whole_compound_v1(word) == 0 {
+                        // "Asa" is a name; only the lowercase occupational frame
+                        // can override a valid spelling, and only after a noun.
+                        if word == "asa" {
+                            if preparesTransformerReviews, ["works","worked","working","hired","serves","served"].contains(prior) {
+                                return Choices(reviewAlternatives: includeCompletions ? [] : ["as a"])
+                            }
+                        } else {
+                            return Choices(automatic: first + " a", suggestions: [first + " a"])
+                        }
+                    }
+                }
+            }
             if usesSentenceContext, missed == range, let repaired = Self.calendarRepair(word, prior: prior) {
                 return Choices(automatic: repaired, suggestions: [repaired])
             }
@@ -185,17 +526,37 @@ final class WordCorrections {
                 }
                 return choices
             }
+            // UTF-16 spellcheck ranges can cover just one side of an apostrophe.
+            // Only split an unrecognized ordinary token. Preserve the original
+            // casing and apostrophe; the fitted model proposes the boundary index.
+            let contractionMiss = normalized.contains("'") && missed.location != NSNotFound &&
+                NSIntersectionRange(missed, range).length > 0
+            if usesSentenceContext, missed == range || contractionMiss,
+               word == normalized || leading.isEmpty || normalized.first == "i" && word.first == "I",
+               (4...30).contains(normalized.count), !includeCompletions, !prior.utf8.contains(0) {
+                var buffer = [CChar](repeating: 0, count: 96)
+                let left = adjacent ? prior : "^"
+                if mb_trained_split_v1(left, normalized, &buffer, buffer.count) == 1 {
+                    let length = String(cString: buffer).prefix(while: { $0 != " " }).count
+                    let cut = word.index(word.startIndex, offsetBy: length)
+                    func displayPart(_ s: Substring) -> String {
+                        let lower = s.lowercased()
+                        return lower == "i" || lower.hasPrefix("i'") || lower.hasPrefix("i’") ? "I" + s.dropFirst() : String(s)
+                    }
+                    let form = displayPart(word[..<cut]) + " " + displayPart(word[cut...])
+                    return Choices(automatic: form, suggestions: [form])
+                }
+            }
+            if usesSentenceContext, missed == range, word == normalized || leading.isEmpty,
+               let split = Self.attestedFunctionBoundary(normalized, prior: prior.isEmpty ? "^" : prior) {
+                let form = Self.splitDisplay(split, typed: word)
+                return Choices(automatic: form, suggestions: [form])
+            }
             let (strong, rankedWords) = ranked(normalized, after: leadingText)
             let previous = leading.last(where: { !$0.isWhitespace })
             let sentenceStart = previous == nil || previous.map { ".!?".contains($0) } == true || leading.last?.isNewline == true
             let mayCommit = word.first?.isLowercase == true || sentenceStart
             if preparesTransformerReviews, usesSentenceContext, mayCommit {
-                // "us" is ordinarily intentional. Only open a review for an
-                // unambiguous clause-initial subject with attested predicate use.
-                if word == "us", Self.canReviewCopula(leadingText) {
-                    if !includeCompletions { choices.reviewAlternatives = ["us", "is"] }
-                    return choices
-                }
                 if normalized == "lets", sentenceStart {
                     let form = word.first?.isUppercase == true ? "Let's" : "let's"
                     choices.suggestions = [form]
@@ -215,14 +576,6 @@ final class WordCorrections {
                 choices.reviewAlternatives = ["leek", "leak"]
                 return choices
             }
-            // The system dictionary accepts "gos". Only review its verb inflection
-            // in a singular subject slot, with ordinary casing and lexicon checks above.
-            if preparesTransformerReviews, usesSentenceContext, word == "gos",
-               Self.hasSingularSubject(leadingText) {
-                choices.suggestions = ["goes"]
-                if !includeCompletions { choices.reviewAlternatives = ["goes", "got", "go", "gas", "god"] }
-                return choices
-            }
             // Canonical first-person forms can be capitalized even mid-sentence.
             if strong, let first = rankedWords.first,
                first == "I" || first.hasPrefix("I'") {
@@ -232,6 +585,27 @@ final class WordCorrections {
                     choices.suggestions.append(canonical)
                 }
                 return choices
+            }
+            if usesSentenceContext, preparesTransformerReviews, mayCommit, ordinaryCase,
+               (2...3).contains(normalized.count), normalized.allSatisfy(\.isLetter),
+               (leading.last?.isWhitespace ?? true), !leadingText.utf8.contains(0) {
+                // iOS can recognize a genuine word absent from our corpus.
+                // Permit only a contextual, missing-letter review in that case;
+                // never turn an unseen, accepted word into a different spelling by substitution.
+                if missed != range, mb_short_unseen_v1(normalized) == 1 {
+                    var alternatives = [CChar](repeating: 0, count: 96)
+                    return Choices(reviewsShortWord: !includeCompletions && mb_short_pool_v1(normalized, &alternatives, alternatives.count) == 1,
+                                   missingLetterOnly: true)
+                }
+                var buffer = [CChar](repeating: 0, count: 32)
+                let status = mb_short_word_v1(leadingText, normalized, "", &buffer, buffer.count)
+                if status == 1 {
+                    let fixed = Self.splitDisplay(String(cString: buffer), typed: word)
+                    return Choices(automatic: fixed, suggestions: [fixed])
+                }
+                if status == 2, !includeCompletions {
+                    return Choices(reviewsShortWord: true)
+                }
             }
             // A repeatedly observed repair can include a missing space or a
             // word outside the decoder vocabulary. Don't override accepted words,
@@ -268,7 +642,7 @@ final class WordCorrections {
                 // Keep explicit contractions/attested repairs ahead of these.
                 if usesSentenceContext, missed == range, mayCommit, !contraction,
                    normalized.count >= 4, normalized.allSatisfy({ $0.isLetter }),
-                   !strong, !knownWords.contains(normalized) {
+                   !strong {
                     var splits = Set<String>()
                     for (index, guess) in guesses.prefix(4).enumerated() {
                         let candidate = guess.lowercased()
@@ -388,27 +762,6 @@ final class WordCorrections {
     private static func splitDisplay(_ candidate: String, typed: String) -> String {
         let form = candidate.split(separator: " ").map { $0 == "i" ? "I" : String($0) }.joined(separator: " ")
         return typed.first?.isUppercase == true ? form.prefix(1).uppercased() + form.dropFirst() : form
-    }
-
-    private static func canReviewCopula(_ leading: String) -> Bool {
-        let clause = leading.components(separatedBy: CharacterSet(charactersIn: ".!?;:\n")).last ?? ""
-        let words = clause.lowercased().split(whereSeparator: { $0.isWhitespace }).map(String.init)
-        guard let subject = words.last, subject.allSatisfy({ $0.isASCII && $0.isLetter }) else { return false }
-        if words.count == 1 { return ["she", "he", "it", "this", "that"].contains(subject) }
-        guard words.count == 2, ["my","your","her","his","our","their","the","a","an"].contains(words[0]),
-              !subject.hasSuffix("s"), mb_pair_support_v1(subject, "is") >= 2,
-              mb_pair_support_v1(subject, "us") == 0 else { return false }
-        return true
-    }
-
-    private static func hasSingularSubject(_ leading: String) -> Bool {
-        let clause = leading.lowercased().components(separatedBy: CharacterSet(charactersIn: ".!?,;:\n")).last ?? ""
-        let tokens = clause.split(whereSeparator: { $0.isWhitespace })
-        guard let subject = tokens.last else { return false }
-        if ["he", "she", "it", "this", "that"].contains(subject) { return true }
-        let determiners: Set<Substring> = ["a", "an", "the", "my", "your", "his", "her", "our", "their", "this", "that"]
-        return tokens.count >= 2 && determiners.contains(tokens[tokens.count - 2])
-            && subject.allSatisfy(\.isLetter) && !subject.hasSuffix("s")
     }
 
     private func sentenceWinner(_ candidates: [Candidate], typed: String, baseline: String?) -> String? {

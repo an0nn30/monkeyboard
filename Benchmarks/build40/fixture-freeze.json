@@ -1,0 +1,11 @@
+{
+  "fresh_sha256": "3ed1bf84aa6e5f03b47cfb92f322809ef3ee51d8a47f553192b02016934201c8",
+  "training_misses_sha256": "131ed19bd7b2d67050164c7d91a70a22837a57c9a46ec3ed0e0620c65d7aef54",
+  "normalized_strings_checked": 390016,
+  "novel_reference_messages": 91,
+  "counts": {
+    "clean-counterpart": 48,
+    "context-error": 48,
+    "intentional-literal": 43
+  }
+}

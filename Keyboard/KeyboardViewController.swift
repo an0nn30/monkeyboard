@@ -1,4 +1,5 @@
 import UIKit
+import MonkeyBoardEngine
 
 final class KeyboardViewController: UIInputViewController {
     private let board = KeyboardView()
@@ -33,6 +34,23 @@ final class KeyboardViewController: UIInputViewController {
     private var nextWordTask: Operation?
     private var lastCorrection: WordEdit?
     private var keptSpelling: String?
+    private struct OwnedRun {
+        let document: UUID
+        let anchor: String
+        var raw = ""
+        var rendered = ""
+    }
+    private var run: OwnedRun?
+    private struct SentenceInput {
+        let id = UUID(), document: UUID, anchor: String
+        var raw = "", rendered = ""
+        var ended = false
+    }
+    private var sentenceInput: SentenceInput?
+    private var sentenceTask: Task<Void, Never>?
+    private let sentenceFinisher = SentenceFinisher()
+    private var sentenceResources = Bundle.main.resourceURL
+
     private var autoCorrect = true
     private var returnAfterSymbol = true
     private var openedSymbolsFromLetters = false
@@ -150,6 +168,8 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        abandonSentence()
+        run = nil
         board.resetTouches()
         discardReview()
         nextWordTask?.cancel()
@@ -259,6 +279,8 @@ final class KeyboardViewController: UIInputViewController {
             }
             return
         }
+        let snapshot = beginSentenceKey(key)
+        defer { if let snapshot { finishSentenceKey(snapshot) } }
         validateReview()
         nextWordTask?.cancel()
         if key != .shift { lastShift = nil }
@@ -277,8 +299,9 @@ final class KeyboardViewController: UIInputViewController {
             openedSymbolsFromLetters = model.layer == .letters
             model.layer = openedSymbolsFromLetters ? .numbers : .letters
         case .symbols: model.layer = model.layer == .numbers ? .symbols : .numbers
-        case .globe: advanceToNextInputMode()
+        case .globe: run = nil; advanceToNextInputMode()
         case .delete:
+            run = nil
             discardReview()
             let replacementShift = selectedWordShift()
             // Collapsing this selection is part of Delete. Keep its spelling case
@@ -292,6 +315,7 @@ final class KeyboardViewController: UIInputViewController {
                 if pendingReview?.suffix.contains(where: { ".!?\n".contains($0) }) == true { discardReview() }
                 deferredReview?.suffix += value
                 pendingReview?.suffix += value
+                recordKey(value)
                 textDocumentProxy.insertText(value)
                 keptSpelling = nil
             }
@@ -354,6 +378,99 @@ final class KeyboardViewController: UIInputViewController {
                              showsSplitToggle: !allowsOneHanded && board.bounds.width >= KeyboardView.minimumSplitWidth)
     }
 
+    private func abandonSentence() {
+        sentenceTask?.cancel()
+        sentenceTask = nil
+        sentenceInput = nil
+    }
+
+    private struct KeySnapshot {
+        var input: SentenceInput
+        let leading: String, character: String
+    }
+
+    private func beginSentenceKey(_ key: Key) -> KeySnapshot? {
+        let c: String
+        switch key {
+        case let .type(x): c = x
+        case .space, .rightSpace: c = " "
+        case .enter: c = "\n"
+        case .shift, .layer, .symbols: return nil
+        default: abandonSentence(); return nil
+        }
+        let proxy = textDocumentProxy
+        guard usesTransformer, autoCorrect, allowsWordSuggestions,
+              (proxy.documentContextAfterInput ?? "").isEmpty,
+              let before = proxy.documentContextBeforeInput ?? (proxy.hasText ? nil : ""),
+              c.count == 1 else { abandonSentence(); return nil }
+        let boundary = c.first!.isWhitespace
+        if let old = sentenceInput,
+           old.document != proxy.documentIdentifier || !before.hasSuffix(old.anchor + old.rendered) ||
+           old.raw.utf8.count >= 240 {
+            abandonSentence()
+        }
+        guard let input = sentenceInput ?? (!boundary && c.first!.isLetter &&
+                (before.isEmpty || before.last!.isWhitespace || ".!?".contains(before.last!))
+                ? SentenceInput(document:proxy.documentIdentifier,anchor:String(before.suffix(24))) : nil)
+        else { return nil }
+        // A later word can change the result; never apply an old prediction over it.
+        if !(input.ended && boundary) { sentenceTask?.cancel() }
+        return KeySnapshot(input:input,leading:String(before.dropLast(input.rendered.count)),character:c)
+    }
+
+    private func finishSentenceKey(_ snapshot: KeySnapshot) {
+        let proxy = textDocumentProxy
+        var input = snapshot.input
+        guard proxy.documentIdentifier == input.document, let after = proxy.documentContextBeforeInput,
+              after.hasPrefix(snapshot.leading) else { abandonSentence(); return }
+        input.raw += snapshot.character
+        input.rendered = String(after.dropFirst(snapshot.leading.count))
+        if ".!?\n".contains(snapshot.character) { input.ended = true }
+        else if !snapshot.character.first!.isWhitespace { input.ended = false }
+        sentenceInput = input
+        if snapshot.character.first!.isWhitespace || input.ended {
+            // Keep a pending punctuation review when the next key is just a space.
+            if snapshot.input.ended && sentenceTask != nil { return }
+            queueSentence(input)
+        }
+    }
+
+    private func queueSentence(_ input: SentenceInput) {
+        let raw = String(input.raw.drop(while: { $0.isWhitespace })).trimmingCharacters(in:.whitespacesAndNewlines)
+        let displayed = input.rendered.trimmingCharacters(in:.whitespacesAndNewlines)
+        guard let url = sentenceResources, raw.contains(where: { $0.isWhitespace }),
+              !displayed.isEmpty, corrections.allowsLearnedEdits(in: raw, leading: input.anchor) else { return }
+        let finisher = sentenceFinisher
+        sentenceTask = Task { [weak self] in
+            if !input.ended {
+                do { try await Task.sleep(nanoseconds: 500_000_000) } catch { return }
+            }
+            guard !Task.isCancelled else { return }
+            let next = await finisher.review(raw:raw, displayed:displayed, resources:url, leading:input.anchor)
+            guard !Task.isCancelled, next != displayed, let self,
+                  var current = self.sentenceInput, current.id == input.id,
+                  current.rendered.hasPrefix(displayed), self.autoCorrect, self.usesTransformer,
+                  self.allowsWordSuggestions else { return }
+            let tail = String(current.rendered.dropFirst(displayed.count))
+            let proxy = self.textDocumentProxy
+            guard tail.allSatisfy({$0.isWhitespace}), proxy.documentIdentifier == current.document,
+                  (proxy.documentContextAfterInput ?? "").isEmpty,
+                  proxy.documentContextBeforeInput?.hasSuffix(current.anchor + current.rendered) == true else {return}
+            let prefix = zip(displayed,next).prefix(while: { $0==$1 }).count
+            let old = String(displayed.dropFirst(prefix))+tail
+            let new = String(next.dropFirst(prefix))+tail
+            self.discardReview()
+            self.run = nil
+            for _ in old {proxy.deleteBackward()}
+            proxy.insertText(new)
+            self.lastCorrection = WordEdit(document:current.document,original:old,replacement:new,delimiter:"",
+                                          leading:String((current.anchor+displayed.prefix(prefix)).suffix(32)),following:"")
+            current.rendered = next+tail
+            self.sentenceInput = current
+            self.scheduleSuggestions()
+        }
+    }
+
     private func prefix() -> String {
         guard let before = textDocumentProxy.documentContextBeforeInput else { return "" }
         return String(before.reversed().prefix { $0.isLetter || $0 == "'" || $0 == "’" }.reversed())
@@ -379,17 +496,161 @@ final class KeyboardViewController: UIInputViewController {
         return next.isLetter || next.isNumber || "_'’@".contains(next)
     }
 
+    private func recordKey(_ value: String) {
+        let proxy = textDocumentProxy
+        guard usesTransformer, autoCorrect, allowsWordSuggestions,
+              (proxy.documentContextAfterInput ?? "").isEmpty,
+              // Some UIKit fields return nil, rather than "", until their first
+              // character. Only claim that boundary if the host confirms it is empty.
+              let before = proxy.documentContextBeforeInput ?? (proxy.hasText ? nil : ""),
+              value.count == 1, value.first.map({ $0.isLetter || $0.isNumber || "'’-".contains($0) }) == true else {
+            run = nil
+            return
+        }
+        if let old = run, old.document != proxy.documentIdentifier || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
+        if run == nil {
+            guard before.isEmpty || before.last.map({ $0.isWhitespace || ".!?".contains($0) }) == true else { return }
+            run = OwnedRun(document: proxy.documentIdentifier, anchor: String(before.suffix(32)))
+        }
+        run?.raw += value
+        run?.rendered += value
+        if (run?.raw.utf8.count ?? 0) > 180 { run = nil }
+    }
+
+    private func rememberBoundary(_ word: String, committed: String, delimiter: String) {
+        guard [" ", ",", ";", ":"].contains(delimiter), !word.isEmpty, let old = run, old.rendered.hasSuffix(word) else { run = nil; return }
+        run?.rendered = String(old.rendered.dropLast(word.count)) + committed + delimiter
+        run?.raw += delimiter
+        if old.raw.split(separator: " ").count >= 12 { run = nil }
+    }
+
+    // Keep the caller's document/ownership checks around every suffix edit. These
+    // helpers only see keystrokes entered by this keyboard in the current field.
+    private struct SentenceProposal { let text: String; let rawAfterJoin: String? }
+
+    private func proposedSentence(_ span: OwnedRun, word: String, baseline: WordCorrections.Choices) -> SentenceProposal? {
+        let prediction = predictedSentence(span, word: word, baseline: baseline)
+        guard corrections.allowsLearnedEdits(in: span.raw, leading: span.anchor) else { return prediction }
+        let current = prediction?.text ?? span.rendered
+        let text = SentenceSurface.restoringContractions(in: span.raw, proposed: current, leading: span.anchor)
+        guard text != current else { return prediction }
+        // The ordinary commit path handles an active-word-only correction and undo.
+        if prediction == nil, span.rendered.hasSuffix(word) {
+            let last = baseline.automatic ?? word
+            let ordinary = String(span.rendered.dropLast(word.count)) + last
+            if text == ordinary { return nil }
+            if text.hasSuffix(" " + word), last != word {
+                return SentenceProposal(text: String(text.dropLast(word.count)) + last, rawAfterJoin: nil)
+            }
+        }
+        return SentenceProposal(text: text, rawAfterJoin: prediction?.rawAfterJoin)
+    }
+
+    private func predictedSentence(_ span: OwnedRun, word: String, baseline: WordCorrections.Choices) -> SentenceProposal? {
+        let fallback = corrections.learnedSentence(raw: span.raw, leading: span.anchor, rendered: span.rendered,
+                                                   word: word, baseline: baseline)
+        let standard = fallback.map { SentenceProposal(text: $0, rawAfterJoin: nil) }
+        guard corrections.allowsLearnedEdits(in: span.raw, leading: span.anchor), !word.isEmpty,
+              span.raw.hasSuffix(word), span.rendered.hasSuffix(word) else { return standard }
+        let raw = span.raw.components(separatedBy: " ")
+        let displayed = span.rendered.components(separatedBy: " ")
+        guard raw.last == word, displayed.last == word else { return standard }
+        if raw.count >= 2, displayed.count == raw.count {
+            let i = raw.count - 2, a = raw[i], b = word
+            let left = span.anchor + raw[..<i].joined(separator: " ")
+            let joined = a + b
+            if mb_rejoin53_v1(a, b) == 1,
+               mb_keep_literal53_v1(left, a, b, joined) == 0,
+               mb_keep_literal53_v1(left + " " + a, b, "", joined) == 0 {
+                // Retain independent corrections before the two fragments. Rebase
+                // only the consumed boundary so a later review can't recreate it.
+                let text = (Array(displayed[..<i]) + [joined]).joined(separator: " ")
+                let rebased = (Array(raw[..<i]) + [joined]).joined(separator: " ")
+                return SentenceProposal(text: text, rawAfterJoin: rebased)
+            }
+        }
+
+        // Prefer an existing model's repair. The residual ranker gets the
+        // uncorrected tokens with up to two following words, including the
+        // current token at punctuation; never align across an earlier split.
+        var target = (fallback ?? span.rendered).components(separatedBy: " ")
+        guard raw.count == target.count, displayed.count == raw.count else { return standard }
+        var changed = false
+        for i in max(0, raw.count - 3)..<raw.count {
+            let literal = raw[i]
+            guard (2...26).contains(literal.utf8.count), literal.allSatisfy({ $0.isASCII && ($0.isLetter || $0 == "'") }) else { continue }
+            let left = span.anchor + target[..<i].joined(separator: " ")
+            let right = target[(i + 1)...].joined(separator: " ")
+            var out = [CChar](repeating: 0, count: 100)
+            let contextual = mb_context53_v1(left, literal, right, &out, out.count) == 1
+            if !contextual {
+                guard mb_residual53_v1(left, literal, right, &out, out.count) == 1,
+                      !corrections.isRecognizedSpelling(literal) else { continue }
+            }
+            let guess = String(cString: out)
+            guard mb_residual_name54_v1(literal, guess) == 0 else { continue }
+            guard guess != literal, !guess.isEmpty, mb_keep_literal53_v1(left, literal, right, guess) == 0,
+                  mb_literal_supported_v1(left, literal, right, guess) == 0 else { continue }
+            let priorChoice = (i == raw.count - 1 && fallback == nil ? baseline.automatic : nil) ?? target[i]
+            if priorChoice != literal || displayed[i] != literal {
+                // A spelling heuristic can discard half a welded token, e.g. a
+                // complete word plus its neighbor. Restore both only if their
+                // letters exactly reconstruct the raw input and one of those
+                // two words is the complete, previously committed guess.
+                let parts = guess.lowercased().split(separator: " ")
+                let prior = priorChoice != literal ? priorChoice : displayed[i]
+                guard parts.count == 2, parts.joined() == literal.lowercased(),
+                      parts.contains(Substring(prior.lowercased())) else { continue }
+            }
+            target[i] = guess
+            changed = true
+        }
+        if changed {
+            // The fallback nil path previously applied the active word's ordinary
+            // automatic correction at commit; don't lose it to an earlier repair.
+            if fallback == nil, let automatic = baseline.automatic, target.last == word {
+                target[target.count - 1] = automatic
+            }
+            return SentenceProposal(text: target.joined(separator: " "), rawAfterJoin: nil)
+        }
+        return standard
+    }
+
     private func insertDelimiter(_ delimiter: String) {
         let proxy = textDocumentProxy
         let word = prefix()
         defer { keptSpelling = nil }
         guard autoCorrect, allowsWordSuggestions, !insideWord, word != keptSpelling,
               let before = proxy.documentContextBeforeInput else {
+            run = nil
             discardReview()
             proxy.insertText(delimiter)
             return
         }
         let choices = corrections.choices(for: word, before: before, includeCompletions: false)
+        if let old = run, !word.isEmpty, old.document == proxy.documentIdentifier,
+           before.hasSuffix(old.anchor + old.rendered), (proxy.documentContextAfterInput ?? "").isEmpty,
+           let proposal = proposedSentence(old, word: word, baseline: choices) {
+            let next = proposal.text
+            // Only rewrite the changed suffix. The common prefix stays in place
+            // so the host's formatting and undo history survive.
+            let common = zip(old.rendered, next).prefix(while: { $0 == $1 }).count
+            let prior = String(old.rendered.dropFirst(common)), replacement = String(next.dropFirst(common))
+            discardReview()
+            if !prior.isEmpty || !replacement.isEmpty {
+                let earlierWordChanged = common < max(0, old.rendered.count - word.count)
+                lastCorrection = WordEdit(document: old.document, original: prior + (earlierWordChanged ? delimiter : ""), replacement: replacement,
+                                          delimiter: delimiter, leading: String((old.anchor + old.rendered.prefix(common)).suffix(32)), following: "")
+            }
+            for _ in prior { proxy.deleteBackward() }
+            proxy.insertText(replacement + delimiter)
+            if [" ", ",", ";", ":"].contains(delimiter) && old.raw.split(separator: " ").count < 12 {
+                run?.rendered = next + delimiter
+                run?.raw = (proposal.rawAfterJoin ?? old.raw) + delimiter
+            } else { run = nil }
+            return
+        }
+        if let old = run, old.document != proxy.documentIdentifier || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
         let committed = choices.automatic ?? word
         let leading = before.dropLast(word.count)
         let anchor = String(leading.suffix(32))
@@ -413,16 +674,21 @@ final class KeyboardViewController: UIInputViewController {
             proxy.insertText(committed + delimiter)
         } else { proxy.insertText(delimiter) }
 
+        rememberBoundary(word, committed: committed, delimiter: delimiter)
         guard usesTransformer else { return }
         let extending = pendingReview != nil
-        if delimiter == " ", !choices.reviewAlternatives.isEmpty, (proxy.documentContextAfterInput ?? "").isEmpty {
+        if delimiter == " ", (!choices.reviewAlternatives.isEmpty || choices.reviewsShortWord), (proxy.documentContextAfterInput ?? "").isEmpty {
             let review = SentenceDecoder.Review(typed: word, leading: String(leading.suffix(4096)),
-                                                alternatives: choices.reviewAlternatives)
+                                                alternatives: choices.reviewAlternatives, shortWord: choices.reviewsShortWord, missingLetterOnly: choices.missingLetterOnly)
             let entry = PendingReview(document: proxy.documentIdentifier, request: review,
                                       anchor: anchor, committed: committed, suffix: delimiter)
             if extending { deferredReview = entry } else { pendingReview = entry }
         }
-        if extending, !word.isEmpty { requestRevision() }
+        if extending, !word.isEmpty {
+            // At a sentence end both the older and the newer candidate have
+            // received their final right-hand context.
+            requestRevision()
+        }
     }
 
     private func finishReview() {
@@ -431,7 +697,7 @@ final class KeyboardViewController: UIInputViewController {
         pendingReview = deferredReview
         deferredReview = nil
         validateReview()
-        if let pending = pendingReview, pending.suffix.last?.isWhitespace == true,
+        if let pending = pendingReview, pending.suffix.last.map({ $0.isWhitespace || ".!?".contains($0) }) == true,
            !pending.suffix.trimmingCharacters(in: .whitespaces).isEmpty {
             requestRevision()
         }
@@ -470,8 +736,12 @@ final class KeyboardViewController: UIInputViewController {
             self.validateReview()
             guard let current = self.pendingReview, current.id == pending.id,
                   current.suffix.hasPrefix(pending.suffix) else { return }
-            guard let replacement else {
-                if count >= pending.request.followingWordLimit { self.finishReview() }
+            guard let replacement,
+                  mb_literal_supported_v1(pending.request.leading, pending.request.typed, right, replacement) == 0,
+                  (pending.request.typed.lowercased() == replacement.lowercased() || mb_original_name54_v1(pending.request.typed) == 0),
+                  mb_keep_literal53_v1(pending.request.leading, pending.request.typed, right, replacement) == 0,
+                  replacement.compare(pending.request.typed, options: .diacriticInsensitive) != .orderedSame else {
+                if count >= pending.request.followingWordLimit || pending.suffix.last.map({ ".!?".contains($0) }) == true { self.finishReview() }
                 return
             }
             self.discardReview()
@@ -480,6 +750,12 @@ final class KeyboardViewController: UIInputViewController {
             let newTail = replacement + current.suffix
             for _ in oldTail { proxy.deleteBackward() }
             proxy.insertText(newTail)
+            if let full = self.sentenceInput, full.document == current.document, full.rendered.hasSuffix(oldTail) {
+                self.sentenceInput?.rendered = String(full.rendered.dropLast(oldTail.count)) + newTail
+            }
+            if let old = self.run, old.document == current.document, old.rendered.hasSuffix(oldTail) {
+                self.run?.rendered = String(old.rendered.dropLast(oldTail.count)) + newTail
+            } else { self.run = nil }
             // Restore the old spelling AND everything typed since then on Undo.
             self.lastCorrection = WordEdit(document: current.document, original: oldTail, replacement: newTail,
                                            delimiter: "", leading: current.anchor, following: "")
@@ -497,7 +773,7 @@ final class KeyboardViewController: UIInputViewController {
               String((proxy.documentContextAfterInput ?? "").prefix(20)) == edit.following else { return false }
         for _ in inserted { proxy.deleteBackward() }
         proxy.insertText(edit.original)
-        keptSpelling = edit.original
+        keptSpelling = prefix()
         return true
     }
 
@@ -549,6 +825,8 @@ final class KeyboardViewController: UIInputViewController {
               candidateContext == String((proxy.documentContextBeforeInput ?? "").suffix(160)), !insideWord,
               prefix() == candidatePrefix, (proxy.selectedText ?? "").isEmpty,
               proxy.documentContextAfterInput?.first?.isLetter != true else { refreshSuggestions(); return }
+        abandonSentence()
+        run = nil
         discardReview()
         lastCorrection = nil
         keptSpelling = nil

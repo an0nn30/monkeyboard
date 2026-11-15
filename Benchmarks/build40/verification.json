@@ -1,0 +1,27 @@
+{
+  "physical_device": {
+    "bundle_id": "dev.dustin.monkeyboard",
+    "installed_build_after_deployment": "39"
+  },
+  "simulator": {
+    "bundle_version": "40",
+    "extension_version": "40",
+    "installed_xctest_extension_sha256": "f53c6856af6c6807d82431dac10cd144a2a8e3191f6e92772240a584082d0647",
+    "xctests_passed": [
+      "testContextRepairsEarlierRealWordWithoutLosingTheFollowingWordOnUndo",
+      "testContrastUsesContextForHerdAndPreservesAnIntentionalHerd",
+      "testTrainedContextPreservesTenseAndMeaning"
+    ]
+  },
+  "freeze_verified": true,
+  "fresh_comparison_reproduced_by_independent_rebuild": true,
+  "rust_tests_passed": 17,
+  "scorer_tests_passed": 9,
+  "full_corpus": {
+    "paired_ids_verified": 100000,
+    "changed_output_rows": 63,
+    "newly_damaged_originally_correct_slots": 0,
+    "restored_originally_correct_slots": 0,
+    "same_wrong_slot_different_form": 0
+  }
+}

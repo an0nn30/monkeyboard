@@ -1,0 +1,9 @@
+{
+  "count_sentences": 104409,
+  "fit_sentences": 26522,
+  "vocabulary": 9282,
+  "ngrams": 103341,
+  "positive": 189083,
+  "negative": 94139,
+  "loss": 0.12704296074094687
+}

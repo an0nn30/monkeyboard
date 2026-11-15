@@ -1,0 +1,10 @@
+{
+  "sim": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+  "shards": 2,
+  "replay_sha256": "f8e2e9d87fa8bb603a6333189deed859166f74e9dbc1c3b5db4f4fead18cba46",
+  "fixture_sha256": "3cb07835742d97735f0659a7a24e42649e8cde73e33660251458f78186acdc8f",
+  "stderr": [
+    "2026-11-15 09:11:23.296 replay[46536:7096399] Successfully load keyboard extensions\n",
+    "2026-11-15 09:11:23.296 replay[46537:7096402] Successfully load keyboard extensions\n"
+  ]
+}

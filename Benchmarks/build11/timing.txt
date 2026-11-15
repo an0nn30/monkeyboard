@@ -1,0 +1,2 @@
+words 14 first_ms 1.294792 warm_p95_ms 0.000959 checksum 1503
+words 121 first_ms 0.15625 warm_p95_ms 0.006125 checksum 0

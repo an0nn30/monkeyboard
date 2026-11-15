@@ -1,0 +1,564 @@
+{
+  "typos": [
+    {
+      "id": "fresh:f002",
+      "index": 2,
+      "typed": "fine",
+      "target": "find",
+      "actual": "fine"
+    },
+    {
+      "id": "fresh:f005",
+      "index": 2,
+      "typed": "tour",
+      "target": "your",
+      "actual": "tour"
+    },
+    {
+      "id": "fresh:f006",
+      "index": 3,
+      "typed": "of",
+      "target": "if",
+      "actual": "of"
+    },
+    {
+      "id": "fresh:f007",
+      "index": 3,
+      "typed": "us",
+      "target": "is",
+      "actual": "us"
+    },
+    {
+      "id": "fresh:f008",
+      "index": 4,
+      "typed": "be",
+      "target": "by",
+      "actual": "be"
+    },
+    {
+      "id": "fresh:f011",
+      "index": 5,
+      "typed": "form",
+      "target": "from",
+      "actual": "form"
+    },
+    {
+      "id": "fresh:f012",
+      "index": 2,
+      "typed": "me",
+      "target": "my",
+      "actual": "me"
+    },
+    {
+      "id": "fresh:f013",
+      "index": 2,
+      "typed": "meat",
+      "target": "meet",
+      "actual": "meat"
+    },
+    {
+      "id": "fresh:f014",
+      "index": 2,
+      "typed": "flower",
+      "target": "flour",
+      "actual": "flower"
+    },
+    {
+      "id": "fresh:f016",
+      "index": 3,
+      "typed": "wear",
+      "target": "where",
+      "actual": "wear"
+    },
+    {
+      "id": "fresh:f018",
+      "index": 3,
+      "typed": "reed",
+      "target": "read",
+      "actual": "reed"
+    },
+    {
+      "id": "fresh:f020",
+      "index": 2,
+      "typed": "pedla",
+      "target": "pedal",
+      "actual": "pedla"
+    },
+    {
+      "id": "fresh:f021",
+      "index": 0,
+      "typed": "MMy",
+      "target": "My",
+      "actual": "MMy"
+    },
+    {
+      "id": "fresh:f022",
+      "index": 0,
+      "typed": "e",
+      "target": "The",
+      "actual": "e"
+    },
+    {
+      "id": "fresh:f025",
+      "index": 3,
+      "typed": "in",
+      "target": "train",
+      "actual": "in"
+    },
+    {
+      "id": "fresh:f027",
+      "index": 3,
+      "typed": "ter",
+      "target": "sister",
+      "actual": "ter"
+    },
+    {
+      "id": "fresh:f027",
+      "index": 6,
+      "typed": "atre",
+      "target": "theatre",
+      "actual": "atre"
+    },
+    {
+      "id": "fresh:f028",
+      "index": 2,
+      "typed": "ror",
+      "target": "mirror",
+      "actual": "ror"
+    },
+    {
+      "id": "fresh:f028",
+      "index": 8,
+      "typed": "k",
+      "target": "desk",
+      "actual": "k"
+    },
+    {
+      "id": "fresh:f029",
+      "index": 3,
+      "typed": "ming",
+      "target": "swimming",
+      "actual": "ming"
+    },
+    {
+      "id": "fresh:f029",
+      "index": 8,
+      "typed": "t",
+      "target": "seat",
+      "actual": "t"
+    },
+    {
+      "id": "fresh:f030",
+      "index": 2,
+      "typed": "ink",
+      "target": "drink",
+      "actual": "ink"
+    },
+    {
+      "id": "fresh:f030",
+      "index": 6,
+      "typed": "le",
+      "target": "table",
+      "actual": "le"
+    },
+    {
+      "id": "public:sms-4784-t",
+      "index": 5,
+      "typed": "form",
+      "target": "from",
+      "actual": "form"
+    },
+    {
+      "id": "public:sms-2810-t",
+      "index": 8,
+      "typed": "me",
+      "target": "my",
+      "actual": "me"
+    },
+    {
+      "id": "public:sms-920-t",
+      "index": 15,
+      "typed": "as",
+      "target": "at",
+      "actual": "as"
+    },
+    {
+      "id": "public:sms-2052-t",
+      "index": 4,
+      "typed": "on",
+      "target": "in",
+      "actual": "on"
+    },
+    {
+      "id": "public:sms-1416-t",
+      "index": 9,
+      "typed": "us",
+      "target": "is",
+      "actual": "us"
+    },
+    {
+      "id": "public:sms-3516-t",
+      "index": 13,
+      "typed": "my",
+      "target": "me",
+      "actual": "my"
+    },
+    {
+      "id": "public:sms-1665-t",
+      "index": 4,
+      "typed": "life",
+      "target": "like",
+      "actual": "life"
+    },
+    {
+      "id": "public:sms-541-t",
+      "index": 6,
+      "typed": "tou",
+      "target": "you",
+      "actual": "tou"
+    },
+    {
+      "id": "public:sms-541-t",
+      "index": 7,
+      "typed": "tarted",
+      "target": "started",
+      "actual": "tarted"
+    },
+    {
+      "id": "public:sms-90-t",
+      "index": 5,
+      "typed": "wenn",
+      "target": "wen",
+      "actual": "went"
+    },
+    {
+      "id": "public:sms-742-t",
+      "index": 4,
+      "typed": "thre",
+      "target": "there",
+      "actual": "the"
+    },
+    {
+      "id": "public:sms-3318-t",
+      "index": 4,
+      "typed": "sade",
+      "target": "safe",
+      "actual": "sade"
+    },
+    {
+      "id": "public:sms-4023-t",
+      "index": 1,
+      "typed": "hae",
+      "target": "have",
+      "actual": "had"
+    },
+    {
+      "id": "public:sms-4023-t",
+      "index": 5,
+      "typed": "maclearn",
+      "target": "macleran",
+      "actual": "maclearn"
+    },
+    {
+      "id": "public:sms-597-t",
+      "index": 2,
+      "typed": "gret",
+      "target": "great",
+      "actual": "gret"
+    },
+    {
+      "id": "public:sms-1101-t",
+      "index": 13,
+      "typed": "re",
+      "target": "are",
+      "actual": "re"
+    },
+    {
+      "id": "public:sms-1101-t",
+      "index": 15,
+      "typed": "wwrking",
+      "target": "wrking",
+      "actual": "working"
+    },
+    {
+      "id": "public:sms-5546-t",
+      "index": 4,
+      "typed": "urslef",
+      "target": "urself",
+      "actual": "urslef"
+    },
+    {
+      "id": "public:sms-4079-t",
+      "index": 1,
+      "typed": "satgya",
+      "target": "sathya",
+      "actual": "stagy"
+    },
+    {
+      "id": "public:sms-4614-t",
+      "index": 8,
+      "typed": "work",
+      "target": "works",
+      "actual": "work"
+    },
+    {
+      "id": "public:sms-4614-t",
+      "index": 9,
+      "typed": "hat",
+      "target": "what",
+      "actual": "hat"
+    },
+    {
+      "id": "public:sms-485-t",
+      "index": 7,
+      "typed": "tastw",
+      "target": "taste",
+      "actual": "take"
+    },
+    {
+      "id": "public:sms-4162-t",
+      "index": 10,
+      "typed": "abut",
+      "target": "about",
+      "actual": "abut"
+    },
+    {
+      "id": "public:sms-3745-t",
+      "index": 10,
+      "typed": "ove",
+      "target": "over",
+      "actual": "ove"
+    },
+    {
+      "id": "public:sms-2083-t",
+      "index": 6,
+      "typed": "sid",
+      "target": "side",
+      "actual": "sid"
+    },
+    {
+      "id": "public:sms-2571-t",
+      "index": 4,
+      "typed": null,
+      "target": "achieve",
+      "actual": null
+    },
+    {
+      "id": "public:sms-2571-t",
+      "index": 5,
+      "typed": "achievekorli",
+      "target": "korli",
+      "actual": "achievekorli"
+    },
+    {
+      "id": "public:sms-4354-t",
+      "index": 6,
+      "typed": null,
+      "target": "u",
+      "actual": null
+    },
+    {
+      "id": "public:sms-4553-t",
+      "index": 7,
+      "typed": null,
+      "target": "surrender",
+      "actual": null
+    },
+    {
+      "id": "public:sms-4553-t",
+      "index": 8,
+      "typed": "surrenderall",
+      "target": "all",
+      "actual": "surrenderall"
+    },
+    {
+      "id": "public:sms-4792-t",
+      "index": 4,
+      "typed": null,
+      "target": "heavily",
+      "actual": null
+    },
+    {
+      "id": "public:sms-4792-t",
+      "index": 5,
+      "typed": "heavilycos",
+      "target": "cos",
+      "actual": "heavilycos"
+    },
+    {
+      "id": "public:sms-1353-t",
+      "index": 3,
+      "typed": null,
+      "target": "class",
+      "actual": null
+    },
+    {
+      "id": "public:sms-1353-t",
+      "index": 4,
+      "typed": "classtmrw",
+      "target": "tmrw",
+      "actual": "classtmrw"
+    },
+    {
+      "id": "public:sms-3315-t",
+      "index": 14,
+      "typed": null,
+      "target": "best",
+      "actual": null
+    },
+    {
+      "id": "public:sms-3315-t",
+      "index": 15,
+      "typed": "bestchoice",
+      "target": "choice",
+      "actual": "bestchoice"
+    },
+    {
+      "id": "public:sms-2738-t",
+      "index": 6,
+      "typed": null,
+      "target": "my",
+      "actual": null
+    },
+    {
+      "id": "public:sms-2738-t",
+      "index": 7,
+      "typed": "mysofa",
+      "target": "sofa",
+      "actual": "mysofa"
+    },
+    {
+      "id": "public:sms-3965-t",
+      "index": 5,
+      "typed": null,
+      "target": "she",
+      "actual": null
+    },
+    {
+      "id": "public:sms-3965-t",
+      "index": 6,
+      "typed": "shesay",
+      "target": "say",
+      "actual": "shesay"
+    },
+    {
+      "id": "public:sms-4823-t",
+      "index": 7,
+      "typed": "aboutyou",
+      "target": "you",
+      "actual": null
+    },
+    {
+      "id": "public:sms-1619-t",
+      "index": 1,
+      "typed": "Didu",
+      "target": "u",
+      "actual": null
+    },
+    {
+      "id": "public:sms-5066-t",
+      "index": 3,
+      "typed": null,
+      "target": "Like",
+      "actual": null
+    },
+    {
+      "id": "public:sms-5066-t",
+      "index": 4,
+      "typed": "Likedun",
+      "target": "dun",
+      "actual": "Likedun"
+    },
+    {
+      "id": "public:sms-2202-t",
+      "index": 2,
+      "typed": null,
+      "target": "But",
+      "actual": null
+    },
+    {
+      "id": "public:sms-2202-t",
+      "index": 3,
+      "typed": "Buti'm",
+      "target": "i'm",
+      "actual": "Buti'm"
+    }
+  ],
+  "clean": [
+    {
+      "id": "public:sms-4784-c",
+      "expected": "Call me, i am senthil from hsbc.",
+      "actual": "Call me, i am menthol from hsbc."
+    },
+    {
+      "id": "public:sms-1416-c",
+      "expected": "So wats ur opinion abt him and how abt is character?",
+      "actual": "So wats ur opinion at him and how abt is character?"
+    },
+    {
+      "id": "public:sms-3968-c",
+      "expected": "I was just callin to say hi. Take care bruv!",
+      "actual": "I was just calling to say hi. Take care bruv!"
+    },
+    {
+      "id": "public:sms-90-c",
+      "expected": "Ela kano.,il download, come wen ur free..",
+      "actual": "La kano.,il download, come wen ur free.."
+    },
+    {
+      "id": "public:sms-1101-c",
+      "expected": "Been up to ne thing interesting. Did you have a good birthday? When are u wrking nxt? I started uni today.",
+      "actual": "Been up to ne thing interesting. Did you have a good birthday? When are u working nxt? I started uni today."
+    },
+    {
+      "id": "public:sms-4079-c",
+      "expected": "Hey sathya till now we dint meet not even a single time then how can i saw the situation sathya.",
+      "actual": "Hey sashay till now we dint meet not even a single time then how can i saw the situation sashay."
+    },
+    {
+      "id": "public:sms-485-c",
+      "expected": "Thank you baby! I cant wait to taste the real thing...",
+      "actual": "Thank you baby! I can't wait to taste the real thing..."
+    },
+    {
+      "id": "public:sms-4162-c",
+      "expected": "i felt so...not any conveying reason.. Ese he... What about me?",
+      "actual": "i felt so...not any conveying reason.. See he... What about me?"
+    },
+    {
+      "id": "public:sms-1458-c",
+      "expected": "U sleeping now.. Or you going to take? Haha.. I got spys wat.. Me online checking n replying mails lor..",
+      "actual": "U sleeping now.. Or you going to take? Haha.. I got says wat.. Me online checking n replying mails lor.."
+    },
+    {
+      "id": "public:sms-1042-c",
+      "expected": "Today am going to college so am not able to atten the class.",
+      "actual": "Today am going to college so am not able to at ten the class."
+    },
+    {
+      "id": "public:sms-2083-c",
+      "expected": "I'm aight. Wat's happening on your side.",
+      "actual": "I'm aight. What's happening on your side."
+    },
+    {
+      "id": "public:sms-4553-c",
+      "expected": "Great. Have a safe trip. Dont panic surrender all.",
+      "actual": "Great. Have a safe trip. Don't panic surrender all."
+    },
+    {
+      "id": "public:sms-3315-c",
+      "expected": "Huh... Hyde park not in mel ah, opps, got confused... Anyway, if tt's e best choice den we juz have to take it...",
+      "actual": "Huh... Hyde park not in mel ah, opps, got confused... Anyway, if it's e best choice den we juz have to take it..."
+    },
+    {
+      "id": "public:sms-4823-c",
+      "expected": "Im good! I have been thinking about you...",
+      "actual": "I'm good! I have been thinking about you..."
+    },
+    {
+      "id": "public:sms-1619-c",
+      "expected": "Did u download the fring app?",
+      "actual": "Did u download the bring app?"
+    }
+  ]
+}

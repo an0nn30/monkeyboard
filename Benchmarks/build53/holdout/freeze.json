@@ -1,0 +1,40 @@
+{
+  "authoring": "Independent one-pass evaluation authoring before viewing any candidate or baseline output.",
+  "desktop_sha256": "3923227845fa16c0314f9282ec14eed8d3b94042b728dc8efd1ddf72a2c70df4",
+  "exclusion_normalized_key_counts": {
+    "desktop_typed_and_reference": 170420,
+    "prior_fixtures": 64355,
+    "taskmaster_and_local_phrase_practice": 131184,
+    "tatoeba_cc0": 41515
+  },
+  "fixture_sha256": "e55319af0a13f2a8e327cc6858e0e7167faf896154219c5cb2f145dca3713488",
+  "noisy_pair_kinds": {
+    "missing-space": 23,
+    "mixed": 54,
+    "ordinary": 44,
+    "real-word": 28
+  },
+  "normalized_form_overlaps": {
+    "desktop_typed_and_reference": 0,
+    "prior_fixtures": 0,
+    "taskmaster_and_local_phrase_practice": 0,
+    "tatoeba_cc0": 0
+  },
+  "pair_sources": {
+    "independently-authored": 127,
+    "uci-sms-ham": 22
+  },
+  "pairs_with_two_or_more_edits": 95,
+  "protected_occurrences_including_clean_and_noisy": {
+    "name": 78,
+    "slang": 118
+  },
+  "rows": 298,
+  "source_annotation_sha256": {
+    "authored.txt": "c238d72827427fb02c19e745c03bbb14309d302af0a956f541e2bd4e7a61c72c",
+    "sms.txt": "d2d908685de7495822fee83e57232444b90d431d5c28104e9b137da2c274fa6a"
+  },
+  "taskmaster_sha256": "edc28ced48aeaa75702590ccde3de70a283370d152323749b16c75b8984ce655",
+  "uci_archive_sha256": "1587ea43e58e82b14ff1f5425c88e17f8496bfcdb67a583dbff9eefaf9963ce3",
+  "unique_references": 149
+}

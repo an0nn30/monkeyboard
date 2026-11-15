@@ -1,0 +1,102 @@
+{
+  "53": {
+    "ordinary": {
+      "events": 129,
+      "in_candidates": 128,
+      "top1": 119,
+      "lexical_repairs": 106,
+      "wrong_proposals": 5,
+      "baseline_repairs": 96,
+      "overlay_repairs": 118,
+      "regressed_repairs": 1,
+      "blocked_by_literal_guard": 3
+    },
+    "correct": {
+      "events": 2361,
+      "new_changes": 0,
+      "literal_guard": 11
+    },
+    "real-word": {
+      "events": 62,
+      "in_candidates": 61,
+      "top1": 20,
+      "lexical_repairs": 0,
+      "wrong_proposals": 0,
+      "baseline_repairs": 3,
+      "overlay_repairs": 3,
+      "regressed_repairs": 0,
+      "blocked_by_literal_guard": 0
+    },
+    "missing-space": {
+      "events": 53,
+      "in_candidates": 52,
+      "top1": 52,
+      "lexical_repairs": 45,
+      "wrong_proposals": 1,
+      "baseline_repairs": 39,
+      "overlay_repairs": 46,
+      "regressed_repairs": 0,
+      "blocked_by_literal_guard": 1
+    },
+    "name": {
+      "events": 78,
+      "new_changes": 0,
+      "literal_guard": 66
+    },
+    "slang": {
+      "events": 118,
+      "new_changes": 0,
+      "literal_guard": 88
+    }
+  },
+  "54": {
+    "ordinary": {
+      "events": 101,
+      "in_candidates": 101,
+      "top1": 98,
+      "lexical_repairs": 96,
+      "wrong_proposals": 2,
+      "baseline_repairs": 82,
+      "overlay_repairs": 98,
+      "regressed_repairs": 1,
+      "blocked_by_literal_guard": 0
+    },
+    "correct": {
+      "events": 2406,
+      "new_changes": 0,
+      "literal_guard": 8
+    },
+    "real-word": {
+      "events": 67,
+      "in_candidates": 67,
+      "top1": 28,
+      "lexical_repairs": 0,
+      "wrong_proposals": 0,
+      "baseline_repairs": 5,
+      "overlay_repairs": 5,
+      "regressed_repairs": 0,
+      "blocked_by_literal_guard": 0
+    },
+    "missing-space": {
+      "events": 45,
+      "in_candidates": 45,
+      "top1": 45,
+      "lexical_repairs": 43,
+      "wrong_proposals": 0,
+      "baseline_repairs": 34,
+      "overlay_repairs": 45,
+      "regressed_repairs": 0,
+      "blocked_by_literal_guard": 0
+    },
+    "name": {
+      "events": 76,
+      "new_changes": 0,
+      "literal_guard": 64
+    },
+    "slang": {
+      "events": 58,
+      "new_changes": 0,
+      "literal_guard": 48
+    }
+  }
+}

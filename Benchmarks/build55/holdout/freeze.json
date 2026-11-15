@@ -1,0 +1,72 @@
+{
+  "authoring": "Independent authorship before viewing outputs of any model.",
+  "cohort": "primary",
+  "desktop_sha256": "3923227845fa16c0314f9282ec14eed8d3b94042b728dc8efd1ddf72a2c70df4",
+  "edits_per_noisy_sentence": {
+    "1": 63,
+    "2": 75
+  },
+  "exclusion_normalized_key_counts": {
+    "build53_desktop_check": 2502,
+    "build53_development": 196,
+    "build53_holdout": 298,
+    "build54_holdout": 276,
+    "desktop_typed_and_reference": 170420,
+    "prior_fixtures": 64355,
+    "taskmaster_and_local_phrase_practice": 131184,
+    "tatoeba_cc0": 41515,
+    "uci_sms_ham": 4500
+  },
+  "fixture_sha256": "520d9741d5dee5c39daf200be81ef0c043388d80b2aaf3d5177a4ba98c9f0d2d",
+  "maximum_reference_word_sequence_similarity": {
+    "build53_holdout": 0.470588,
+    "build54_holdout": 0.5,
+    "within_cohort": 0.421053
+  },
+  "noisy_edit_categories": {
+    "missing-space": 45,
+    "ordinary": 101,
+    "real-word": 67
+  },
+  "noisy_pair_kinds": {
+    "missing-space": 23,
+    "mixed": 52,
+    "ordinary": 26,
+    "real-word": 37
+  },
+  "normalized_form_overlaps": {
+    "build53_desktop_check": 0,
+    "build53_development": 0,
+    "build53_holdout": 0,
+    "build54_holdout": 0,
+    "desktop_typed_and_reference": 0,
+    "prior_fixtures": 0,
+    "taskmaster_and_local_phrase_practice": 0,
+    "tatoeba_cc0": 0,
+    "uci_sms_ham": 0
+  },
+  "originally_correct_word_positions": 2454,
+  "pair_sources": {
+    "independently-authored": 138
+  },
+  "pairs_with_two_or_more_edits": 75,
+  "protected_occurrences_including_clean_and_noisy": {
+    "name": 76,
+    "slang": 58,
+    "valid-word": 48
+  },
+  "real_word_families_also_in_prior_holdouts": {
+    "build53_holdout": 4,
+    "build54_holdout": 5
+  },
+  "rows": 276,
+  "scorer_sha256": "d0ff193037837cd2674fbc43773f03554ae3f250c50b159f818f96310a04fd34",
+  "source_annotation_sha256": "94c08ac23848b183009bbdcc13c6a5baca958fb426cdbc0179665679febdb285",
+  "source_audit_sha256": "613275f12066b5c37bd32cebf793e03943e8dacc46c1a0dfb76b1f6aeca63e77",
+  "taskmaster_sha256": "edc28ced48aeaa75702590ccde3de70a283370d152323749b16c75b8984ce655",
+  "total_labelled_events": 213,
+  "uci_archive_sha256": "1587ea43e58e82b14ff1f5425c88e17f8496bfcdb67a583dbff9eefaf9963ce3",
+  "unique_references": 138,
+  "unique_unordered_real_word_families": 67,
+  "word_alignment_sha256": "627442f8c8b8a562892d5b72b6926ed841b6b136de7b65dd7a84f7be0cda6c92"
+}

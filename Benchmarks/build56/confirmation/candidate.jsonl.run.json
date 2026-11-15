@@ -1,0 +1,12 @@
+{
+  "sim": "5B57DE6C-7FDE-4319-863A-F74D3FC4476B",
+  "shards": 4,
+  "replay_sha256": "d361e1226df9041b566a0576f0b571b8d08d3099e522111e2a4b0d914cee61ea",
+  "fixture_sha256": "3cb07835742d97735f0659a7a24e42649e8cde73e33660251458f78186acdc8f",
+  "stderr": [
+    "2026-11-15 09:11:29.596 replay[46707:7097480] Successfully load keyboard extensions\n{\"median_message_ms\":2762.1766250231303,\"p95_message_ms\":4100.492166704498,\"peak_process_rss_bytes\":641073152}\n",
+    "2026-11-15 09:11:29.603 replay[46709:7097482] Successfully load keyboard extensions\n{\"median_message_ms\":2196.3990833610296,\"p95_message_ms\":3692.7953750127926,\"peak_process_rss_bytes\":633110528}\n",
+    "2026-11-15 09:11:29.594 replay[46706:7097475] Successfully load keyboard extensions\n{\"median_message_ms\":2507.1484583313577,\"p95_message_ms\":4505.757583363447,\"peak_process_rss_bytes\":635568128}\n",
+    "2026-11-15 09:11:29.615 replay[46710:7097488] Successfully load keyboard extensions\n{\"median_message_ms\":2324.309500050731,\"p95_message_ms\":4023.1789583340287,\"peak_process_rss_bytes\":636125184}\n"
+  ]
+}

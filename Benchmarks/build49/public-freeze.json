@@ -1,0 +1,8 @@
+{
+  "rows": 200,
+  "unique_references": 100,
+  "source": "UCI SMS Spam Collection (ham only)",
+  "selection": "Prior public challenge eligibility; exclude previous cases and repeated references",
+  "source_sha256": "1587ea43e58e82b14ff1f5425c88e17f8496bfcdb67a583dbff9eefaf9963ce3",
+  "sha256": "bc84a505b72b584aae30de4d61088721492f7fc42b35ec0935f551d36b5a2b92"
+}

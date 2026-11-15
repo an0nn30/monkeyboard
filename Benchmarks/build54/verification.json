@@ -1,0 +1,40 @@
+{
+  "old_69_missed_word_positions_recovered": 24,
+  "old_15_changed_clean_messages_restored": 4,
+  "retained_historical_six": 6,
+  "fresh_messages": 138,
+  "replay_rows": 276,
+  "protected": {
+    "name": {
+      "intended_tokens": 76,
+      "kept_52": 68,
+      "kept_54": 68,
+      "newly_harmed": 0,
+      "restored": 0
+    },
+    "slang": {
+      "intended_tokens": 58,
+      "kept_52": 52,
+      "kept_54": 52,
+      "newly_harmed": 0,
+      "restored": 0
+    }
+  },
+  "previous_53_test_now_development": {
+    "name": {
+      "intended_tokens": 78,
+      "kept_52": 71,
+      "kept_54": 71,
+      "newly_harmed": 0,
+      "restored": 0
+    },
+    "slang": {
+      "intended_tokens": 118,
+      "kept_52": 111,
+      "kept_54": 116,
+      "newly_harmed": 0,
+      "restored": 5
+    }
+  },
+  "verified_files": 130
+}

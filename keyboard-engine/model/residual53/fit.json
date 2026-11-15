@@ -1,0 +1,98 @@
+{
+  "combined_reserved": {
+    "changed_clean": 8,
+    "correct": 11895,
+    "proposals": 11965,
+    "wrong": 70
+  },
+  "considered_examples": {
+    "cal": 21909,
+    "fit": 95476,
+    "test": 21768
+  },
+  "edit_prior": {
+    "drop": 10,
+    "join": 10,
+    "key": 18,
+    "other": 12,
+    "repeat": 3,
+    "swap": 5
+  },
+  "examples_with_candidates": {
+    "cal": 12883,
+    "fit": 56382,
+    "test": 13008
+  },
+  "missing_space": {
+    "calibration": {
+      "changed_clean": 1,
+      "correct": 2654,
+      "proposals": 2658,
+      "wrong": 4
+    },
+    "reserved": {
+      "changed_clean": 0,
+      "correct": 2659,
+      "proposals": 2664,
+      "wrong": 5
+    },
+    "thresholds": [
+      5.5,
+      1.0
+    ]
+  },
+  "sole_split": {
+    "calibration": {
+      "changed_clean": 1,
+      "correct": 2551,
+      "proposals": 2557,
+      "wrong": 6
+    },
+    "reserved": {
+      "changed_clean": 0,
+      "correct": 2554,
+      "proposals": 2558,
+      "wrong": 4
+    },
+    "thresholds": [
+      1.0,
+      2.5
+    ]
+  },
+  "spelling": {
+    "calibration": {
+      "changed_clean": 3,
+      "correct": 8683,
+      "proposals": 8744,
+      "wrong": 61
+    },
+    "reserved": {
+      "changed_clean": 7,
+      "correct": 8798,
+      "proposals": 8857,
+      "wrong": 59
+    },
+    "thresholds": [
+      4.0,
+      1.5
+    ]
+  },
+  "transposition": {
+    "calibration": {
+      "changed_clean": 0,
+      "correct": 1645,
+      "proposals": 1650,
+      "wrong": 5
+    },
+    "reserved": {
+      "changed_clean": 3,
+      "correct": 1681,
+      "proposals": 1690,
+      "wrong": 9
+    },
+    "thresholds": [
+      1.0,
+      1.0
+    ]
+  }
+}

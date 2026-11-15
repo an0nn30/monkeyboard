@@ -2,7 +2,9 @@
 
 A native English QWERTY tap keyboard for iPhone, with flat keycaps, Apple system type, and a borderless character preview. Press a letter to see its preview immediately, slide to correct it, and lift to insert it. The layout uses the keyboard width supplied by iOS as the available space changes.
 
-Build 16 recognizes missing spaces and some words with two mistyped letters. Its next-word suggestions combine the on-device transformer with phrases learned from everyday typing examples. [Typing and prediction results](Benchmarks/build15/README.md) · [Paired training data](Benchmarks/build16/README.md).
+Build 57 restores omitted apostrophes as you type. After punctuation or a pause at a word boundary, an on-device English model reviews the sentence and scores nearby spellings in context. Press Backspace immediately after a correction to undo it. See the [contraction tests](Benchmarks/build57/README.md) and [full-sentence benchmark](Benchmarks/build56/README.md) for results.
+
+Some historical benchmarks use a separately supplied `typo_sentences.md` file in S:/C: format. To reproduce those runs, provide your own copy to the corresponding preparation script. The app builds with the model files included here.
 
 ## Run on your iPhone Duo
 
@@ -37,4 +39,6 @@ rustup target add aarch64-apple-ios aarch64-apple-ios-sim
 
 An Intel simulator needs `x86_64-apple-ios`. Xcode builds the Rust library automatically; no model download or Full Access is needed on the phone. The build phase looks for Cargo in `$HOME/.cargo/bin` or PATH. Run `cargo test --manifest-path keyboard-engine/Cargo.toml` for the native engine checks.
 
-See the [build 18 full-sentence simulator comparison](Benchmarks/build18/README.md) for the latest autocorrect results. Read the [build 11 correction benchmark](Benchmarks/build11/README.md), the [build 10 sentence and touch benchmark](Benchmarks/build10/README.md), the [build 8 side-by-side benchmark](Benchmarks/build8/README.md) for results and reproduction steps and the [model notes](keyboard-engine/MODEL.md) for training data and limitations.
+Build 21 is a simulator research candidate and does not pass its release accuracy gates. See the [training and blind simulator results](Benchmarks/build21/README.md).
+
+See the [build 20 simulator comparison](Benchmarks/build20/README.md) for learned short-word corrections, missing spaces, and preservation of intentional spellings. The previous [build 19 comparison](Benchmarks/build19/README.md) covers missing spaces. Read the [build 11 correction benchmark](Benchmarks/build11/README.md), the [build 10 sentence and touch benchmark](Benchmarks/build10/README.md), the [build 8 side-by-side benchmark](Benchmarks/build8/README.md) for results and reproduction steps and the [model notes](keyboard-engine/MODEL.md) for training data and limitations.

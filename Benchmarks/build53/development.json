@@ -1,0 +1,1494 @@
+[
+  {
+    "id": "fresh:f001",
+    "typed": "Can you sent the photo of the cracked hinge to the caretaker?",
+    "expected": "Can you send the photo of the cracked hinge to the caretaker?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c001",
+    "typed": "Can you send the photo of the cracked hinge to the caretaker?",
+    "expected": "Can you send the photo of the cracked hinge to the caretaker?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f002",
+    "typed": "We should fine the spare opener before the guests arrive.",
+    "expected": "We should find the spare opener before the guests arrive.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c002",
+    "typed": "We should find the spare opener before the guests arrive.",
+    "expected": "We should find the spare opener before the guests arrive.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f003",
+    "typed": "I put a pear of safety glasses on the workbench.",
+    "expected": "I put a pair of safety glasses on the workbench.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c003",
+    "typed": "I put a pair of safety glasses on the workbench.",
+    "expected": "I put a pair of safety glasses on the workbench.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f004",
+    "typed": "I herd the parcel hit the front step during lunch.",
+    "expected": "I heard the parcel hit the front step during lunch.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c004",
+    "typed": "I heard the parcel hit the front step during lunch.",
+    "expected": "I heard the parcel hit the front step during lunch.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f005",
+    "typed": "Is that tour paper bag on the back of the chair?",
+    "expected": "Is that your paper bag on the back of the chair?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c005",
+    "typed": "Is that your paper bag on the back of the chair?",
+    "expected": "Is that your paper bag on the back of the chair?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f006",
+    "typed": "Could you check of the greenhouse door is properly closed?",
+    "expected": "Could you check if the greenhouse door is properly closed?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c006",
+    "typed": "Could you check if the greenhouse door is properly closed?",
+    "expected": "Could you check if the greenhouse door is properly closed?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f007",
+    "typed": "The last driver us waiting outside the service entrance.",
+    "expected": "The last driver is waiting outside the service entrance.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c007",
+    "typed": "The last driver is waiting outside the service entrance.",
+    "expected": "The last driver is waiting outside the service entrance.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f008",
+    "typed": "Put the plastic tray be the bucket once it's dry.",
+    "expected": "Put the plastic tray by the bucket once it's dry.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c008",
+    "typed": "Put the plastic tray by the bucket once it's dry.",
+    "expected": "Put the plastic tray by the bucket once it's dry.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f009",
+    "typed": "I was hoping to go hope after the meter reading.",
+    "expected": "I was hoping to go home after the meter reading.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c009",
+    "typed": "I was hoping to go home after the meter reading.",
+    "expected": "I was hoping to go home after the meter reading.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f010",
+    "typed": "We could leave right not if your bag is ready.",
+    "expected": "We could leave right now if your bag is ready.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c010",
+    "typed": "We could leave right now if your bag is ready.",
+    "expected": "We could leave right now if your bag is ready.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f011",
+    "typed": "She took the last orange form the basket in the lobby.",
+    "expected": "She took the last orange from the basket in the lobby.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c011",
+    "typed": "She took the last orange from the basket in the lobby.",
+    "expected": "She took the last orange from the basket in the lobby.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f012",
+    "typed": "I've got me badge clipped to the wrong coat.",
+    "expected": "I've got my badge clipped to the wrong coat.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c012",
+    "typed": "I've got my badge clipped to the wrong coat.",
+    "expected": "I've got my badge clipped to the wrong coat.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f013",
+    "typed": "Can we meat where the two cycle paths join?",
+    "expected": "Can we meet where the two cycle paths join?",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c013",
+    "typed": "Can we meet where the two cycle paths join?",
+    "expected": "Can we meet where the two cycle paths join?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f014",
+    "typed": "There's enough flower in the small tin for one more loaf.",
+    "expected": "There's enough flour in the small tin for one more loaf.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c014",
+    "typed": "There's enough flour in the small tin for one more loaf.",
+    "expected": "There's enough flour in the small tin for one more loaf.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f015",
+    "typed": "I want to right a note for the family next door.",
+    "expected": "I want to write a note for the family next door.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c015",
+    "typed": "I want to write a note for the family next door.",
+    "expected": "I want to write a note for the family next door.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f016",
+    "typed": "I can't recall wear we bought those brass curtain rings.",
+    "expected": "I can't recall where we bought those brass curtain rings.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c016",
+    "typed": "I can't recall where we bought those brass curtain rings.",
+    "expected": "I can't recall where we bought those brass curtain rings.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f017",
+    "typed": "We'll wait four the next delivery before moving the shelves.",
+    "expected": "We'll wait for the next delivery before moving the shelves.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c017",
+    "typed": "We'll wait for the next delivery before moving the shelves.",
+    "expected": "We'll wait for the next delivery before moving the shelves.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f018",
+    "typed": "It helps to reed both sides of the parking permit.",
+    "expected": "It helps to read both sides of the parking permit.",
+    "split": "fresh",
+    "kind": "context"
+  },
+  {
+    "id": "fresh:c018",
+    "typed": "It helps to read both sides of the parking permit.",
+    "expected": "It helps to read both sides of the parking permit.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f019",
+    "typed": "Diid you put the lugagge in the hall by the lift?",
+    "expected": "Did you put the luggage in the hall by the lift?",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c019",
+    "typed": "Did you put the luggage in the hall by the lift?",
+    "expected": "Did you put the luggage in the hall by the lift?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f020",
+    "typed": "THe back pedla on the bike squeaks in the rain.",
+    "expected": "The back pedal on the bike squeaks in the rain.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c020",
+    "typed": "The back pedal on the bike squeaks in the rain.",
+    "expected": "The back pedal on the bike squeaks in the rain.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f021",
+    "typed": "MMy brother left the trowle next to the rosemary pot.",
+    "expected": "My brother left the trowel next to the rosemary pot.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c021",
+    "typed": "My brother left the trowel next to the rosemary pot.",
+    "expected": "My brother left the trowel next to the rosemary pot.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f022",
+    "typed": "Th e cupbaord over the radio is where we keep the cards.",
+    "expected": "The cupboard over the radio is where we keep the cards.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c022",
+    "typed": "The cupboard over the radio is where we keep the cards.",
+    "expected": "The cupboard over the radio is where we keep the cards.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f023",
+    "typed": "Please grab teh clean towle from the airing cupboard.",
+    "expected": "Please grab the clean towel from the airing cupboard.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c023",
+    "typed": "Please grab the clean towel from the airing cupboard.",
+    "expected": "Please grab the clean towel from the airing cupboard.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f024",
+    "typed": "I put the receip t in a little pockte near the zip.",
+    "expected": "I put the receipt in a little pocket near the zip.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c024",
+    "typed": "I put the receipt in a little pocket near the zip.",
+    "expected": "I put the receipt in a little pocket near the zip.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f025",
+    "typed": "Does the last tra in still stop at the smal l station?",
+    "expected": "Does the last train still stop at the small station?",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c025",
+    "typed": "Does the last train still stop at the small station?",
+    "expected": "Does the last train still stop at the small station?",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f026",
+    "typed": "We can birng a bag of sugra when we come for tea.",
+    "expected": "We can bring a bag of sugar when we come for tea.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c026",
+    "typed": "We can bring a bag of sugar when we come for tea.",
+    "expected": "We can bring a bag of sugar when we come for tea.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f027",
+    "typed": "I'm taking my sis ter to the the atre on Thursday.",
+    "expected": "I'm taking my sister to the theatre on Thursday.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c027",
+    "typed": "I'm taking my sister to the theatre on Thursday.",
+    "expected": "I'm taking my sister to the theatre on Thursday.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f028",
+    "typed": "The broken mir ror was tucked behind the old des k.",
+    "expected": "The broken mirror was tucked behind the old desk.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c028",
+    "typed": "The broken mirror was tucked behind the old desk.",
+    "expected": "The broken mirror was tucked behind the old desk.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f029",
+    "typed": "I think my swim ming goggles are under the sea t.",
+    "expected": "I think my swimming goggles are under the seat.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c029",
+    "typed": "I think my swimming goggles are under the seat.",
+    "expected": "I think my swimming goggles are under the seat.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f030",
+    "typed": "Put the dr ink on the low tab le near the window.",
+    "expected": "Put the drink on the low table near the window.",
+    "split": "fresh",
+    "kind": "mixed"
+  },
+  {
+    "id": "fresh:c030",
+    "typed": "Put the drink on the low table near the window.",
+    "expected": "Put the drink on the low table near the window.",
+    "split": "fresh",
+    "kind": "clean-counterpart"
+  },
+  {
+    "id": "fresh:f031",
+    "typed": "We're going to a do for the retiring coach after the match.",
+    "expected": "We're going to a do for the retiring coach after the match.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f032",
+    "typed": "The dog on that card looks just like the one we used to have.",
+    "expected": "The dog on that card looks just like the one we used to have.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f033",
+    "typed": "I do wish someone would turn down the music near the entrance.",
+    "expected": "I do wish someone would turn down the music near the entrance.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f034",
+    "typed": "Leave the blinds up if the plants still need more sun.",
+    "expected": "Leave the blinds up if the plants still need more sun.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f035",
+    "typed": "She gave me a paper map when the phone battery died.",
+    "expected": "She gave me a paper map when the phone battery died.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f036",
+    "typed": "The herd stood quietly in the patch of grass behind the shop.",
+    "expected": "The herd stood quietly in the patch of grass behind the shop.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f037",
+    "typed": "Put a pear and a wedge of cheese in each lunchbox.",
+    "expected": "Put a pear and a wedge of cheese in each lunchbox.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f038",
+    "typed": "There's a fine scratch on the back of the new silver frame.",
+    "expected": "There's a fine scratch on the back of the new silver frame.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f039",
+    "typed": "The ride from here is shorter if we avoid the bridge.",
+    "expected": "The ride from here is shorter if we avoid the bridge.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f040",
+    "typed": "The loose bolt rolls around whenever we open the toolbox.",
+    "expected": "The loose bolt rolls around whenever we open the toolbox.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f041",
+    "typed": "I sent the parcel by ordinary post on the way to work.",
+    "expected": "I sent the parcel by ordinary post on the way to work.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f042",
+    "typed": "The flower on the label is a different shade of yellow.",
+    "expected": "The flower on the label is a different shade of yellow.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f043",
+    "typed": "We have enough thyme left for the stew this evening.",
+    "expected": "We have enough thyme left for the stew this evening.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f044",
+    "typed": "All four bags have the same little blue tag on them.",
+    "expected": "All four bags have the same little blue tag on them.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f045",
+    "typed": "You can take a break while I put up the washing line.",
+    "expected": "You can take a break while I put up the washing line.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "fresh:f046",
+    "typed": "Our luggage is in the little room beyond the stairs.",
+    "expected": "Our luggage is in the little room beyond the stairs.",
+    "split": "fresh",
+    "kind": "keep"
+  },
+  {
+    "id": "public:sms-3577-t",
+    "kind": "public-real-word",
+    "typed": "And do you have any one that can teach my how to ship cars.",
+    "expected": "And do you have any one that can teach me how to ship cars.",
+    "split": "public",
+    "source_id": "3577"
+  },
+  {
+    "id": "public:sms-3577-c",
+    "kind": "clean",
+    "typed": "And do you have any one that can teach me how to ship cars.",
+    "expected": "And do you have any one that can teach me how to ship cars.",
+    "split": "public",
+    "source_id": "3577"
+  },
+  {
+    "id": "public:sms-4784-t",
+    "kind": "public-real-word",
+    "typed": "Call me, i am senthil form hsbc.",
+    "expected": "Call me, i am senthil from hsbc.",
+    "split": "public",
+    "source_id": "4784"
+  },
+  {
+    "id": "public:sms-4784-c",
+    "kind": "clean",
+    "typed": "Call me, i am senthil from hsbc.",
+    "expected": "Call me, i am senthil from hsbc.",
+    "split": "public",
+    "source_id": "4784"
+  },
+  {
+    "id": "public:sms-5564-t",
+    "kind": "public-real-word",
+    "typed": "Get my out of this dump heap. My mom decided to come to lowes. BORING.",
+    "expected": "Get me out of this dump heap. My mom decided to come to lowes. BORING.",
+    "split": "public",
+    "source_id": "5564"
+  },
+  {
+    "id": "public:sms-5564-c",
+    "kind": "clean",
+    "typed": "Get me out of this dump heap. My mom decided to come to lowes. BORING.",
+    "expected": "Get me out of this dump heap. My mom decided to come to lowes. BORING.",
+    "split": "public",
+    "source_id": "5564"
+  },
+  {
+    "id": "public:sms-4989-t",
+    "kind": "public-real-word",
+    "typed": "No rushing. I'm not working. I'm in school so of we rush we go hungry.",
+    "expected": "No rushing. I'm not working. I'm in school so if we rush we go hungry.",
+    "split": "public",
+    "source_id": "4989"
+  },
+  {
+    "id": "public:sms-4989-c",
+    "kind": "clean",
+    "typed": "No rushing. I'm not working. I'm in school so if we rush we go hungry.",
+    "expected": "No rushing. I'm not working. I'm in school so if we rush we go hungry.",
+    "split": "public",
+    "source_id": "4989"
+  },
+  {
+    "id": "public:sms-1546-t",
+    "kind": "public-real-word",
+    "typed": "After completed degree. There us no use in joining finance.",
+    "expected": "After completed degree. There is no use in joining finance.",
+    "split": "public",
+    "source_id": "1546"
+  },
+  {
+    "id": "public:sms-1546-c",
+    "kind": "clean",
+    "typed": "After completed degree. There is no use in joining finance.",
+    "expected": "After completed degree. There is no use in joining finance.",
+    "split": "public",
+    "source_id": "1546"
+  },
+  {
+    "id": "public:sms-5012-t",
+    "kind": "public-real-word",
+    "typed": "By the way, 'rencontre' is to meat again. Mountains dont....",
+    "expected": "By the way, 'rencontre' is to meet again. Mountains dont....",
+    "split": "public",
+    "source_id": "5012"
+  },
+  {
+    "id": "public:sms-5012-c",
+    "kind": "clean",
+    "typed": "By the way, 'rencontre' is to meet again. Mountains dont....",
+    "expected": "By the way, 'rencontre' is to meet again. Mountains dont....",
+    "split": "public",
+    "source_id": "5012"
+  },
+  {
+    "id": "public:sms-1679-t",
+    "kind": "public-real-word",
+    "typed": "Lol where do u come up wish these ideas?",
+    "expected": "Lol where do u come up with these ideas?",
+    "split": "public",
+    "source_id": "1679"
+  },
+  {
+    "id": "public:sms-1679-c",
+    "kind": "clean",
+    "typed": "Lol where do u come up with these ideas?",
+    "expected": "Lol where do u come up with these ideas?",
+    "split": "public",
+    "source_id": "1679"
+  },
+  {
+    "id": "public:sms-2810-t",
+    "kind": "public-real-word",
+    "typed": "Yes princess! I want to catch you with me big strong hands...",
+    "expected": "Yes princess! I want to catch you with my big strong hands...",
+    "split": "public",
+    "source_id": "2810"
+  },
+  {
+    "id": "public:sms-2810-c",
+    "kind": "clean",
+    "typed": "Yes princess! I want to catch you with my big strong hands...",
+    "expected": "Yes princess! I want to catch you with my big strong hands...",
+    "split": "public",
+    "source_id": "2810"
+  },
+  {
+    "id": "public:sms-920-t",
+    "kind": "public-real-word",
+    "typed": "Hey you gave them your photo when you registered for driving ah? Tmr wanna meet as yck?",
+    "expected": "Hey you gave them your photo when you registered for driving ah? Tmr wanna meet at yck?",
+    "split": "public",
+    "source_id": "920"
+  },
+  {
+    "id": "public:sms-920-c",
+    "kind": "clean",
+    "typed": "Hey you gave them your photo when you registered for driving ah? Tmr wanna meet at yck?",
+    "expected": "Hey you gave them your photo when you registered for driving ah? Tmr wanna meet at yck?",
+    "split": "public",
+    "source_id": "920"
+  },
+  {
+    "id": "public:sms-2052-t",
+    "kind": "public-real-word",
+    "typed": "Hi where you. You on home or calicut?",
+    "expected": "Hi where you. You in home or calicut?",
+    "split": "public",
+    "source_id": "2052"
+  },
+  {
+    "id": "public:sms-2052-c",
+    "kind": "clean",
+    "typed": "Hi where you. You in home or calicut?",
+    "expected": "Hi where you. You in home or calicut?",
+    "split": "public",
+    "source_id": "2052"
+  },
+  {
+    "id": "public:sms-1416-t",
+    "kind": "public-real-word",
+    "typed": "So wats ur opinion abt him and how abt us character?",
+    "expected": "So wats ur opinion abt him and how abt is character?",
+    "split": "public",
+    "source_id": "1416"
+  },
+  {
+    "id": "public:sms-1416-c",
+    "kind": "clean",
+    "typed": "So wats ur opinion abt him and how abt is character?",
+    "expected": "So wats ur opinion abt him and how abt is character?",
+    "split": "public",
+    "source_id": "1416"
+  },
+  {
+    "id": "public:sms-5041-t",
+    "kind": "public-real-word",
+    "typed": "Pls clarify back if an open return ticket that i have can be preponed four me to go back to kerala.",
+    "expected": "Pls clarify back if an open return ticket that i have can be preponed for me to go back to kerala.",
+    "split": "public",
+    "source_id": "5041"
+  },
+  {
+    "id": "public:sms-5041-c",
+    "kind": "clean",
+    "typed": "Pls clarify back if an open return ticket that i have can be preponed for me to go back to kerala.",
+    "expected": "Pls clarify back if an open return ticket that i have can be preponed for me to go back to kerala.",
+    "split": "public",
+    "source_id": "5041"
+  },
+  {
+    "id": "public:sms-1128-t",
+    "kind": "public-real-word",
+    "typed": "Not tonight mate. Catching up on some sleep. This is me new number by the way.",
+    "expected": "Not tonight mate. Catching up on some sleep. This is my new number by the way.",
+    "split": "public",
+    "source_id": "1128"
+  },
+  {
+    "id": "public:sms-1128-c",
+    "kind": "clean",
+    "typed": "Not tonight mate. Catching up on some sleep. This is my new number by the way.",
+    "expected": "Not tonight mate. Catching up on some sleep. This is my new number by the way.",
+    "split": "public",
+    "source_id": "1128"
+  },
+  {
+    "id": "public:sms-3516-t",
+    "kind": "public-real-word",
+    "typed": "I always chat with you. In fact i need money can you raise my?",
+    "expected": "I always chat with you. In fact i need money can you raise me?",
+    "split": "public",
+    "source_id": "3516"
+  },
+  {
+    "id": "public:sms-3516-c",
+    "kind": "clean",
+    "typed": "I always chat with you. In fact i need money can you raise me?",
+    "expected": "I always chat with you. In fact i need money can you raise me?",
+    "split": "public",
+    "source_id": "3516"
+  },
+  {
+    "id": "public:sms-1665-t",
+    "kind": "public-real-word",
+    "typed": "S but mostly not life that.",
+    "expected": "S but mostly not like that.",
+    "split": "public",
+    "source_id": "1665"
+  },
+  {
+    "id": "public:sms-1665-c",
+    "kind": "clean",
+    "typed": "S but mostly not like that.",
+    "expected": "S but mostly not like that.",
+    "split": "public",
+    "source_id": "1665"
+  },
+  {
+    "id": "public:sms-541-t",
+    "kind": "public-multi",
+    "typed": "I am in tirupur da, once tou tarted from officce call me.",
+    "expected": "I am in tirupur da, once you started from office call me.",
+    "split": "public",
+    "source_id": "541"
+  },
+  {
+    "id": "public:sms-541-c",
+    "kind": "clean",
+    "typed": "I am in tirupur da, once you started from office call me.",
+    "expected": "I am in tirupur da, once you started from office call me.",
+    "split": "public",
+    "source_id": "541"
+  },
+  {
+    "id": "public:sms-3968-t",
+    "kind": "public-multi",
+    "typed": "I wsa just callin to aay hi. Take ccare bruv!",
+    "expected": "I was just callin to say hi. Take care bruv!",
+    "split": "public",
+    "source_id": "3968"
+  },
+  {
+    "id": "public:sms-3968-c",
+    "kind": "clean",
+    "typed": "I was just callin to say hi. Take care bruv!",
+    "expected": "I was just callin to say hi. Take care bruv!",
+    "split": "public",
+    "source_id": "3968"
+  },
+  {
+    "id": "public:sms-90-t",
+    "kind": "public-multi",
+    "typed": "Ela kano.,il downlload, come wenn ur free..",
+    "expected": "Ela kano.,il download, come wen ur free..",
+    "split": "public",
+    "source_id": "90"
+  },
+  {
+    "id": "public:sms-90-c",
+    "kind": "clean",
+    "typed": "Ela kano.,il download, come wen ur free..",
+    "expected": "Ela kano.,il download, come wen ur free..",
+    "split": "public",
+    "source_id": "90"
+  },
+  {
+    "id": "public:sms-1435-t",
+    "kind": "public-multi",
+    "typed": "You intrepid duo you! Have a great time annd see you voth soon.",
+    "expected": "You intrepid duo you! Have a great time and see you both soon.",
+    "split": "public",
+    "source_id": "1435"
+  },
+  {
+    "id": "public:sms-1435-c",
+    "kind": "clean",
+    "typed": "You intrepid duo you! Have a great time and see you both soon.",
+    "expected": "You intrepid duo you! Have a great time and see you both soon.",
+    "split": "public",
+    "source_id": "1435"
+  },
+  {
+    "id": "public:sms-742-t",
+    "kind": "public-multi",
+    "typed": "Yes i iwll be thre. Glad yo made it.",
+    "expected": "Yes i will be there. Glad you made it.",
+    "split": "public",
+    "source_id": "742"
+  },
+  {
+    "id": "public:sms-742-c",
+    "kind": "clean",
+    "typed": "Yes i will be there. Glad you made it.",
+    "expected": "Yes i will be there. Glad you made it.",
+    "split": "public",
+    "source_id": "742"
+  },
+  {
+    "id": "public:sms-3318-t",
+    "kind": "public-multi",
+    "typed": "I know girls always sade adn selfish know i got it pa. Thank you. good night.",
+    "expected": "I know girls always safe and selfish know i got it pa. Thank you. good night.",
+    "split": "public",
+    "source_id": "3318"
+  },
+  {
+    "id": "public:sms-3318-c",
+    "kind": "clean",
+    "typed": "I know girls always safe and selfish know i got it pa. Thank you. good night.",
+    "expected": "I know girls always safe and selfish know i got it pa. Thank you. good night.",
+    "split": "public",
+    "source_id": "3318"
+  },
+  {
+    "id": "public:sms-4023-t",
+    "kind": "public-multi",
+    "typed": "We hae to pick rayan maclearn thete.",
+    "expected": "We have to pick rayan macleran there.",
+    "split": "public",
+    "source_id": "4023"
+  },
+  {
+    "id": "public:sms-4023-c",
+    "kind": "clean",
+    "typed": "We have to pick rayan macleran there.",
+    "expected": "We have to pick rayan macleran there.",
+    "split": "public",
+    "source_id": "4023"
+  },
+  {
+    "id": "public:sms-597-t",
+    "kind": "public-multi",
+    "typed": "I am gret! How aree yyou?",
+    "expected": "I am great! How are you?",
+    "split": "public",
+    "source_id": "597"
+  },
+  {
+    "id": "public:sms-597-c",
+    "kind": "clean",
+    "typed": "I am great! How are you?",
+    "expected": "I am great! How are you?",
+    "split": "public",
+    "source_id": "597"
+  },
+  {
+    "id": "public:sms-3233-t",
+    "kind": "public-multi",
+    "typed": "No plm i iwll coe da. On the wayy.",
+    "expected": "No plm i will come da. On the way.",
+    "split": "public",
+    "source_id": "3233"
+  },
+  {
+    "id": "public:sms-3233-c",
+    "kind": "clean",
+    "typed": "No plm i will come da. On the way.",
+    "expected": "No plm i will come da. On the way.",
+    "split": "public",
+    "source_id": "3233"
+  },
+  {
+    "id": "public:sms-1101-t",
+    "kind": "public-multi",
+    "typed": "Been up to ne thing interetsing. Did you have a good birthday? When re u wwrking nxt? I started uni today.",
+    "expected": "Been up to ne thing interesting. Did you have a good birthday? When are u wrking nxt? I started uni today.",
+    "split": "public",
+    "source_id": "1101"
+  },
+  {
+    "id": "public:sms-1101-c",
+    "kind": "clean",
+    "typed": "Been up to ne thing interesting. Did you have a good birthday? When are u wrking nxt? I started uni today.",
+    "expected": "Been up to ne thing interesting. Did you have a good birthday? When are u wrking nxt? I started uni today.",
+    "split": "public",
+    "source_id": "1101"
+  },
+  {
+    "id": "public:sms-5546-t",
+    "kind": "public-multi",
+    "typed": "U stilll havent got urslef a jackket ah?",
+    "expected": "U still havent got urself a jacket ah?",
+    "split": "public",
+    "source_id": "5546"
+  },
+  {
+    "id": "public:sms-5546-c",
+    "kind": "clean",
+    "typed": "U still havent got urself a jacket ah?",
+    "expected": "U still havent got urself a jacket ah?",
+    "split": "public",
+    "source_id": "5546"
+  },
+  {
+    "id": "public:sms-4079-t",
+    "kind": "public-multi",
+    "typed": "Hey satgya till now we dint meet not even a single time then how can i aaw the situation sathya.",
+    "expected": "Hey sathya till now we dint meet not even a single time then how can i saw the situation sathya.",
+    "split": "public",
+    "source_id": "4079"
+  },
+  {
+    "id": "public:sms-4079-c",
+    "kind": "clean",
+    "typed": "Hey sathya till now we dint meet not even a single time then how can i saw the situation sathya.",
+    "expected": "Hey sathya till now we dint meet not even a single time then how can i saw the situation sathya.",
+    "split": "public",
+    "source_id": "4079"
+  },
+  {
+    "id": "public:sms-4614-t",
+    "kind": "public-multi",
+    "typed": "Sorry da. I gone mad so many pending work hat to do.",
+    "expected": "Sorry da. I gone mad so many pending works what to do.",
+    "split": "public",
+    "source_id": "4614"
+  },
+  {
+    "id": "public:sms-4614-c",
+    "kind": "clean",
+    "typed": "Sorry da. I gone mad so many pending works what to do.",
+    "expected": "Sorry da. I gone mad so many pending works what to do.",
+    "split": "public",
+    "source_id": "4614"
+  },
+  {
+    "id": "public:sms-3346-t",
+    "kind": "public-multi",
+    "typed": "Oh great. I.ll distrub hhim more so rhat we can talk.",
+    "expected": "Oh great. I.ll disturb him more so that we can talk.",
+    "split": "public",
+    "source_id": "3346"
+  },
+  {
+    "id": "public:sms-3346-c",
+    "kind": "clean",
+    "typed": "Oh great. I.ll disturb him more so that we can talk.",
+    "expected": "Oh great. I.ll disturb him more so that we can talk.",
+    "split": "public",
+    "source_id": "3346"
+  },
+  {
+    "id": "public:sms-485-t",
+    "kind": "public-multi",
+    "typed": "Thank you baby! I cant qait to tastw the real thing...",
+    "expected": "Thank you baby! I cant wait to taste the real thing...",
+    "split": "public",
+    "source_id": "485"
+  },
+  {
+    "id": "public:sms-485-c",
+    "kind": "clean",
+    "typed": "Thank you baby! I cant wait to taste the real thing...",
+    "expected": "Thank you baby! I cant wait to taste the real thing...",
+    "split": "public",
+    "source_id": "485"
+  },
+  {
+    "id": "public:sms-690-t",
+    "kind": "public-word",
+    "typed": "Thanks loev. But am i doing torch or bold.",
+    "expected": "Thanks love. But am i doing torch or bold.",
+    "split": "public",
+    "source_id": "690"
+  },
+  {
+    "id": "public:sms-690-c",
+    "kind": "clean",
+    "typed": "Thanks love. But am i doing torch or bold.",
+    "expected": "Thanks love. But am i doing torch or bold.",
+    "split": "public",
+    "source_id": "690"
+  },
+  {
+    "id": "public:sms-3533-t",
+    "kind": "public-word",
+    "typed": "Prepare to be pounded every nught...",
+    "expected": "Prepare to be pounded every night...",
+    "split": "public",
+    "source_id": "3533"
+  },
+  {
+    "id": "public:sms-3533-c",
+    "kind": "clean",
+    "typed": "Prepare to be pounded every night...",
+    "expected": "Prepare to be pounded every night...",
+    "split": "public",
+    "source_id": "3533"
+  },
+  {
+    "id": "public:sms-1406-t",
+    "kind": "public-word",
+    "typed": "Actually getting resdy to leave the house.",
+    "expected": "Actually getting ready to leave the house.",
+    "split": "public",
+    "source_id": "1406"
+  },
+  {
+    "id": "public:sms-1406-c",
+    "kind": "clean",
+    "typed": "Actually getting ready to leave the house.",
+    "expected": "Actually getting ready to leave the house.",
+    "split": "public",
+    "source_id": "1406"
+  },
+  {
+    "id": "public:sms-3446-t",
+    "kind": "public-word",
+    "typed": "Yes but I don't care cause I jnow its there!",
+    "expected": "Yes but I don't care cause I know its there!",
+    "split": "public",
+    "source_id": "3446"
+  },
+  {
+    "id": "public:sms-3446-c",
+    "kind": "clean",
+    "typed": "Yes but I don't care cause I know its there!",
+    "expected": "Yes but I don't care cause I know its there!",
+    "split": "public",
+    "source_id": "3446"
+  },
+  {
+    "id": "public:sms-4162-t",
+    "kind": "public-word",
+    "typed": "i felt so...not any conveying reason.. Ese he... What abut me?",
+    "expected": "i felt so...not any conveying reason.. Ese he... What about me?",
+    "split": "public",
+    "source_id": "4162"
+  },
+  {
+    "id": "public:sms-4162-c",
+    "kind": "clean",
+    "typed": "i felt so...not any conveying reason.. Ese he... What about me?",
+    "expected": "i felt so...not any conveying reason.. Ese he... What about me?",
+    "split": "public",
+    "source_id": "4162"
+  },
+  {
+    "id": "public:sms-4970-t",
+    "kind": "public-word",
+    "typed": "Future is not what we planned for tomorrow.....! it is the result of waht we do today...! Do the best in present... enjoy the future.",
+    "expected": "Future is not what we planned for tomorrow.....! it is the result of what we do today...! Do the best in present... enjoy the future.",
+    "split": "public",
+    "source_id": "4970"
+  },
+  {
+    "id": "public:sms-4970-c",
+    "kind": "clean",
+    "typed": "Future is not what we planned for tomorrow.....! it is the result of what we do today...! Do the best in present... enjoy the future.",
+    "expected": "Future is not what we planned for tomorrow.....! it is the result of what we do today...! Do the best in present... enjoy the future.",
+    "split": "public",
+    "source_id": "4970"
+  },
+  {
+    "id": "public:sms-3171-t",
+    "kind": "public-word",
+    "typed": "Haven't seen my faceboook, huh? Lol!",
+    "expected": "Haven't seen my facebook, huh? Lol!",
+    "split": "public",
+    "source_id": "3171"
+  },
+  {
+    "id": "public:sms-3171-c",
+    "kind": "clean",
+    "typed": "Haven't seen my facebook, huh? Lol!",
+    "expected": "Haven't seen my facebook, huh? Lol!",
+    "split": "public",
+    "source_id": "3171"
+  },
+  {
+    "id": "public:sms-1458-t",
+    "kind": "public-word",
+    "typed": "U sleeping now.. Or you going to take? Haha.. I got spys wat.. Me online checkibg n replying mails lor..",
+    "expected": "U sleeping now.. Or you going to take? Haha.. I got spys wat.. Me online checking n replying mails lor..",
+    "split": "public",
+    "source_id": "1458"
+  },
+  {
+    "id": "public:sms-1458-c",
+    "kind": "clean",
+    "typed": "U sleeping now.. Or you going to take? Haha.. I got spys wat.. Me online checking n replying mails lor..",
+    "expected": "U sleeping now.. Or you going to take? Haha.. I got spys wat.. Me online checking n replying mails lor..",
+    "split": "public",
+    "source_id": "1458"
+  },
+  {
+    "id": "public:sms-2229-t",
+    "kind": "public-word",
+    "typed": "Oh k.k..where did you take tesst?",
+    "expected": "Oh k.k..where did you take test?",
+    "split": "public",
+    "source_id": "2229"
+  },
+  {
+    "id": "public:sms-2229-c",
+    "kind": "clean",
+    "typed": "Oh k.k..where did you take test?",
+    "expected": "Oh k.k..where did you take test?",
+    "split": "public",
+    "source_id": "2229"
+  },
+  {
+    "id": "public:sms-601-t",
+    "kind": "public-word",
+    "typed": "I'm gonig out to buy mum's present ar.",
+    "expected": "I'm going out to buy mum's present ar.",
+    "split": "public",
+    "source_id": "601"
+  },
+  {
+    "id": "public:sms-601-c",
+    "kind": "clean",
+    "typed": "I'm going out to buy mum's present ar.",
+    "expected": "I'm going out to buy mum's present ar.",
+    "split": "public",
+    "source_id": "601"
+  },
+  {
+    "id": "public:sms-1042-t",
+    "kind": "public-word",
+    "typed": "Today am going to college so am not ablee to atten the class.",
+    "expected": "Today am going to college so am not able to atten the class.",
+    "split": "public",
+    "source_id": "1042"
+  },
+  {
+    "id": "public:sms-1042-c",
+    "kind": "clean",
+    "typed": "Today am going to college so am not able to atten the class.",
+    "expected": "Today am going to college so am not able to atten the class.",
+    "split": "public",
+    "source_id": "1042"
+  },
+  {
+    "id": "public:sms-1355-t",
+    "kind": "public-word",
+    "typed": "Goodnight, sleep well da please take vare pa. Please.",
+    "expected": "Goodnight, sleep well da please take care pa. Please.",
+    "split": "public",
+    "source_id": "1355"
+  },
+  {
+    "id": "public:sms-1355-c",
+    "kind": "clean",
+    "typed": "Goodnight, sleep well da please take care pa. Please.",
+    "expected": "Goodnight, sleep well da please take care pa. Please.",
+    "split": "public",
+    "source_id": "1355"
+  },
+  {
+    "id": "public:sms-3745-t",
+    "kind": "public-word",
+    "typed": "Nah, Wednesday. When should I bring the mini cheetos bag ove?",
+    "expected": "Nah, Wednesday. When should I bring the mini cheetos bag over?",
+    "split": "public",
+    "source_id": "3745"
+  },
+  {
+    "id": "public:sms-3745-c",
+    "kind": "clean",
+    "typed": "Nah, Wednesday. When should I bring the mini cheetos bag over?",
+    "expected": "Nah, Wednesday. When should I bring the mini cheetos bag over?",
+    "split": "public",
+    "source_id": "3745"
+  },
+  {
+    "id": "public:sms-2083-t",
+    "kind": "public-word",
+    "typed": "I'm aight. Wat's happening on your sid.",
+    "expected": "I'm aight. Wat's happening on your side.",
+    "split": "public",
+    "source_id": "2083"
+  },
+  {
+    "id": "public:sms-2083-c",
+    "kind": "clean",
+    "typed": "I'm aight. Wat's happening on your side.",
+    "expected": "I'm aight. Wat's happening on your side.",
+    "split": "public",
+    "source_id": "2083"
+  },
+  {
+    "id": "public:sms-1911-t",
+    "kind": "public-word",
+    "typed": "Then u goinh ikea str aft dat?",
+    "expected": "Then u going ikea str aft dat?",
+    "split": "public",
+    "source_id": "1911"
+  },
+  {
+    "id": "public:sms-1911-c",
+    "kind": "clean",
+    "typed": "Then u going ikea str aft dat?",
+    "expected": "Then u going ikea str aft dat?",
+    "split": "public",
+    "source_id": "1911"
+  },
+  {
+    "id": "public:sms-2571-t",
+    "kind": "public-join",
+    "typed": "Ultimately tor motive tui achievekorli.",
+    "expected": "Ultimately tor motive tui achieve korli.",
+    "split": "public",
+    "source_id": "2571"
+  },
+  {
+    "id": "public:sms-2571-c",
+    "kind": "clean",
+    "typed": "Ultimately tor motive tui achieve korli.",
+    "expected": "Ultimately tor motive tui achieve korli.",
+    "split": "public",
+    "source_id": "2571"
+  },
+  {
+    "id": "public:sms-4354-t",
+    "kind": "public-join",
+    "typed": "Hows the pain dear?y r usmiling?",
+    "expected": "Hows the pain dear?y r u smiling?",
+    "split": "public",
+    "source_id": "4354"
+  },
+  {
+    "id": "public:sms-4354-c",
+    "kind": "clean",
+    "typed": "Hows the pain dear?y r u smiling?",
+    "expected": "Hows the pain dear?y r u smiling?",
+    "split": "public",
+    "source_id": "4354"
+  },
+  {
+    "id": "public:sms-4553-t",
+    "kind": "public-join",
+    "typed": "Great. Have a safe trip. Dont panic surrenderall.",
+    "expected": "Great. Have a safe trip. Dont panic surrender all.",
+    "split": "public",
+    "source_id": "4553"
+  },
+  {
+    "id": "public:sms-4553-c",
+    "kind": "clean",
+    "typed": "Great. Have a safe trip. Dont panic surrender all.",
+    "expected": "Great. Have a safe trip. Dont panic surrender all.",
+    "split": "public",
+    "source_id": "4553"
+  },
+  {
+    "id": "public:sms-4792-t",
+    "kind": "public-join",
+    "typed": "Yup. Izzit still raining heavilycos i'm in e mrt i can't c outside.",
+    "expected": "Yup. Izzit still raining heavily cos i'm in e mrt i can't c outside.",
+    "split": "public",
+    "source_id": "4792"
+  },
+  {
+    "id": "public:sms-4792-c",
+    "kind": "clean",
+    "typed": "Yup. Izzit still raining heavily cos i'm in e mrt i can't c outside.",
+    "expected": "Yup. Izzit still raining heavily cos i'm in e mrt i can't c outside.",
+    "split": "public",
+    "source_id": "4792"
+  },
+  {
+    "id": "public:sms-1353-t",
+    "kind": "public-join",
+    "typed": "Yo theres no classtmrw right?",
+    "expected": "Yo theres no class tmrw right?",
+    "split": "public",
+    "source_id": "1353"
+  },
+  {
+    "id": "public:sms-1353-c",
+    "kind": "clean",
+    "typed": "Yo theres no class tmrw right?",
+    "expected": "Yo theres no class tmrw right?",
+    "split": "public",
+    "source_id": "1353"
+  },
+  {
+    "id": "public:sms-3315-t",
+    "kind": "public-join",
+    "typed": "Huh... Hyde park not in mel ah, opps, got confused... Anyway, if tt's e bestchoice den we juz have to take it...",
+    "expected": "Huh... Hyde park not in mel ah, opps, got confused... Anyway, if tt's e best choice den we juz have to take it...",
+    "split": "public",
+    "source_id": "3315"
+  },
+  {
+    "id": "public:sms-3315-c",
+    "kind": "clean",
+    "typed": "Huh... Hyde park not in mel ah, opps, got confused... Anyway, if tt's e best choice den we juz have to take it...",
+    "expected": "Huh... Hyde park not in mel ah, opps, got confused... Anyway, if tt's e best choice den we juz have to take it...",
+    "split": "public",
+    "source_id": "3315"
+  },
+  {
+    "id": "public:sms-2738-t",
+    "kind": "public-join",
+    "typed": "Really? I crashed out cuddled on mysofa.",
+    "expected": "Really? I crashed out cuddled on my sofa.",
+    "split": "public",
+    "source_id": "2738"
+  },
+  {
+    "id": "public:sms-2738-c",
+    "kind": "clean",
+    "typed": "Really? I crashed out cuddled on my sofa.",
+    "expected": "Really? I crashed out cuddled on my sofa.",
+    "split": "public",
+    "source_id": "2738"
+  },
+  {
+    "id": "public:sms-3965-t",
+    "kind": "public-join",
+    "typed": "If you ask her or shesay any please message.",
+    "expected": "If you ask her or she say any please message.",
+    "split": "public",
+    "source_id": "3965"
+  },
+  {
+    "id": "public:sms-3965-c",
+    "kind": "clean",
+    "typed": "If you ask her or she say any please message.",
+    "expected": "If you ask her or she say any please message.",
+    "split": "public",
+    "source_id": "3965"
+  },
+  {
+    "id": "public:sms-4823-t",
+    "kind": "public-join",
+    "typed": "Im good! I have been thinking aboutyou...",
+    "expected": "Im good! I have been thinking about you...",
+    "split": "public",
+    "source_id": "4823"
+  },
+  {
+    "id": "public:sms-4823-c",
+    "kind": "clean",
+    "typed": "Im good! I have been thinking about you...",
+    "expected": "Im good! I have been thinking about you...",
+    "split": "public",
+    "source_id": "4823"
+  },
+  {
+    "id": "public:sms-1530-t",
+    "kind": "public-join",
+    "typed": "Heywhat happen de. Are you alright.",
+    "expected": "Hey what happen de. Are you alright.",
+    "split": "public",
+    "source_id": "1530"
+  },
+  {
+    "id": "public:sms-1530-c",
+    "kind": "clean",
+    "typed": "Hey what happen de. Are you alright.",
+    "expected": "Hey what happen de. Are you alright.",
+    "split": "public",
+    "source_id": "1530"
+  },
+  {
+    "id": "public:sms-3960-t",
+    "kind": "public-join",
+    "typed": "So i could kiss andfeel you next to me...",
+    "expected": "So i could kiss and feel you next to me...",
+    "split": "public",
+    "source_id": "3960"
+  },
+  {
+    "id": "public:sms-3960-c",
+    "kind": "clean",
+    "typed": "So i could kiss and feel you next to me...",
+    "expected": "So i could kiss and feel you next to me...",
+    "split": "public",
+    "source_id": "3960"
+  },
+  {
+    "id": "public:sms-1619-t",
+    "kind": "public-join",
+    "typed": "Didu download the fring app?",
+    "expected": "Did u download the fring app?",
+    "split": "public",
+    "source_id": "1619"
+  },
+  {
+    "id": "public:sms-1619-c",
+    "kind": "clean",
+    "typed": "Did u download the fring app?",
+    "expected": "Did u download the fring app?",
+    "split": "public",
+    "source_id": "1619"
+  },
+  {
+    "id": "public:sms-5066-t",
+    "kind": "public-join",
+    "typed": "I dunno lei... Likedun haf...",
+    "expected": "I dunno lei... Like dun haf...",
+    "split": "public",
+    "source_id": "5066"
+  },
+  {
+    "id": "public:sms-5066-c",
+    "kind": "clean",
+    "typed": "I dunno lei... Like dun haf...",
+    "expected": "I dunno lei... Like dun haf...",
+    "split": "public",
+    "source_id": "5066"
+  },
+  {
+    "id": "public:sms-2202-t",
+    "kind": "public-join",
+    "typed": "Haha... can... Buti'm having dinner with my cousin...",
+    "expected": "Haha... can... But i'm having dinner with my cousin...",
+    "split": "public",
+    "source_id": "2202"
+  },
+  {
+    "id": "public:sms-2202-c",
+    "kind": "clean",
+    "typed": "Haha... can... But i'm having dinner with my cousin...",
+    "expected": "Haha... can... But i'm having dinner with my cousin...",
+    "split": "public",
+    "source_id": "2202"
+  },
+  {
+    "id": "public:sms-1283-t",
+    "kind": "public-join",
+    "typed": "Am I theonly one who doesn't stalk profiles?",
+    "expected": "Am I the only one who doesn't stalk profiles?",
+    "split": "public",
+    "source_id": "1283"
+  },
+  {
+    "id": "public:sms-1283-c",
+    "kind": "clean",
+    "typed": "Am I the only one who doesn't stalk profiles?",
+    "expected": "Am I the only one who doesn't stalk profiles?",
+    "split": "public",
+    "source_id": "1283"
+  }
+]

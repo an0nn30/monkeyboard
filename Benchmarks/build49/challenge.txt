@@ -1,0 +1,48 @@
+context|Can you [sent|send] the last page separately so I can print it?
+context|I [herd|heard] your timer go off while you were outside.
+context|There's a [pear|pair] of black boots in the box marked donations.
+context|I need to [fine|find] the name of the driver who dropped it off.
+context|Would you mind checking [of|if] my gloves are in your trunk?
+context|The volunteer [us|is] bringing three bottles of water to practice.
+context|They say [tour|your] jumper is in the lost property basket.
+context|The chairs go [be|by] the hatch after the guests have left.
+context|I can take a look right [not|now] if you send me a photo.
+context|Could you get [me|my] keys off the hook while I tie my shoes?
+context|The bakery sold us a second tray [four|for] half the price.
+context|I need to [right|write] the gate code on a sticky note.
+context|Penny took the rabbit [form|from] the cage to clean its water bowl.
+context|We ran out of [flower|flour] before we could finish the pastry.
+context|Take a [break|brake] light bulb from the box of spare parts.
+context|That's [wear|where] the old post office used to be.
+context|Please [reed|read] the expiry date before you open the seal.
+context|Can we [meat|meet] by the clock once the last class is over?
+context|It was [their|there] on the bench when I walked past this morning.
+context|I hope we don't [loose|lose] that little screwdriver at the campsite.
+mixed|[Diid|Did] I leave the spare [bel t|belt] by the washing machine?
+mixed|[THe|The] washing line needs a new [poll ey|pulley] on the far end.
+mixed|[MMy|My] brother found the missing [reciept|receipt] behind the sofa.
+mixed|[Hwo|How] much [buttre|butter] do you need for the icing?
+mixed|[THe|The] second [dra wer|drawer] is stuck again.
+mixed|Can you pick up [teh|the] [loundry|laundry] after rehearsal?
+mixed|My [brohter|brother] says the [eng ine|engine] is making a strange sound.
+mixed|I'll put the [blan ket|blanket] in the back of the [trcuk|truck].
+mixed|I need [yoyr|your] help with [thsi|this] set of shelves.
+mixed|[Diid|Did] we pack the [camrea|camera] in the red bag?
+mixed|I bought [tw o|two] packs of [pen cils|pencils] for the class.
+mixed|Let's leave [ear ly|early] to get the [win dow|window] seat.
+keep|The do at the sports club finishes in time for the last bus.
+keep|I do wish the bottle had a cap that was easier to open.
+keep|Let me know if the silver ring shows up under the seats.
+keep|I gave the driver a spare ticket for the evening show.
+keep|The road signs point toward the harbour from here.
+keep|She drew a pear with a bite missing for the art class.
+keep|Take a break when the third batch goes into the kiln.
+keep|The herd stayed near the barn until the rain stopped.
+keep|I've had that loose hinge on my list since Easter.
+keep|The delivery is fine as long as someone's home to sign.
+keep|We grow thyme in the long planter under the kitchen window.
+keep|The whiskers are made from a flower stem and a scrap of wool.
+keep|She sent both invoices before the post office closed.
+keep|Have a look at the little inn on the hill if there's time.
+keep|Our bus leaves from the stop by the bookshop tomorrow.
+keep|I can hear the fan from here even with the door closed.
