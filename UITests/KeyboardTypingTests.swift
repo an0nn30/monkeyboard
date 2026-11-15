@@ -424,11 +424,23 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual((draft.value as? String)?.lowercased(), "she already paid for the tickets. i put a leek in the soup.")
     }
 
+    private func tapComma(in app: XCUIApplication) {
+        let comma = app.buttons["key-,"].firstMatch
+        if !comma.exists { app.buttons["key-123"].tap() }
+        comma.tap()
+    }
+
     private func typePhrase(_ text: String, in app: XCUIApplication) {
         let splitSpace = app.buttons["key-Space-left"]
         let space = splitSpace.exists ? splitSpace : app.buttons["key-Space"]
         for ch in text {
-            if ch == " " { space.tap() } else { letter(String(ch), in: app).tap() }
+            switch ch {
+            case " ": space.tap()
+            case ",":
+                tapComma(in: app)
+                if app.buttons["key-ABC"].exists { app.buttons["key-ABC"].tap() }
+            default: letter(String(ch), in: app).tap()
+            }
         }
     }
 
@@ -720,10 +732,11 @@ final class KeyboardTypingTests: XCTestCase {
         space.tap()
         XCTAssertEqual((draft.value as? String)?.lowercased(), "teh ")
         typeWord("keybaord")
-        app.buttons["key-,"].tap()
+        tapComma(in: app)
         XCTAssertEqual((draft.value as? String)?.lowercased(), "teh keyboard,")
         app.buttons["key-Delete"].tap()
         XCTAssertEqual((draft.value as? String)?.lowercased(), "teh keybaord")
+        if app.buttons["key-ABC"].exists { app.buttons["key-ABC"].tap() }
         space.tap()
         typeWord("teh")
         app.buttons["suggestion-0"].tap()
@@ -863,7 +876,7 @@ final class KeyboardTypingTests: XCTestCase {
         space.tap()
         XCTAssertEqual(draft.value as? String, initial + "m ")
         for ch in "ive" { letter(String(ch), in: app).tap() }
-        app.buttons["key-,"].tap()
+        typePhrase(",", in: app)
         XCTAssertEqual(draft.value as? String, initial + "m I've,")
     }
 
@@ -893,7 +906,7 @@ final class KeyboardTypingTests: XCTestCase {
         let toggle = app.buttons["toggle-split-layout"]
         if toggle.exists { toggle.tap() }
         typeWord("differnet")
-        app.buttons["key-,"].tap()
+        typePhrase(",", in: app)
         expect("agian different,")
         space()
         typeWord("thank")
@@ -1074,7 +1087,7 @@ final class KeyboardTypingTests: XCTestCase {
 
     func testSplitLayoutOnWideKeyboard() throws {
         let originalOrientation = XCUIDevice.shared.orientation
-        XCUIDevice.shared.orientation = .landscapeLeft
+        XCUIDevice.shared.orientation = .portrait
         defer {
             if originalOrientation != .unknown { XCUIDevice.shared.orientation = originalOrientation }
         }
@@ -1092,8 +1105,8 @@ final class KeyboardTypingTests: XCTestCase {
         enableSplit()
         enableForTest("return-after-symbol", inSettingsOf: app)
         enableForTest("glide-typing", inSettingsOf: app)
-        let back = app.buttons["BackButton"]
-        if back.exists { back.tap() } else { app.navigationBars.buttons.element(boundBy: 0).tap() }
+        XCUIDevice.shared.orientation = .landscapeLeft
+        app.launch()
         let draft = app.textViews["draft"]
         draft.tap()
         selectMonkeyBoard(in: app)
@@ -1110,6 +1123,10 @@ final class KeyboardTypingTests: XCTestCase {
         }
         let t = letter("t")
         let y = letter("y")
+        XCTAssertFalse(app.buttons["key-,"].exists)
+        let leftNeighbor = try XCTUnwrap(["Emoji", "Next keyboard", "123"]
+            .map { app.buttons["key-" + $0] }.first { $0.exists })
+        XCTAssertEqual(leftSpace.frame.minX, leftNeighbor.frame.maxX + 4, accuracy: 1)
         XCTAssertGreaterThan(y.frame.minX - t.frame.maxX, 50)
         XCTAssertGreaterThan(rightSpace.frame.minX - leftSpace.frame.maxX, 50)
         t.press(forDuration: 0.12, thenDragTo: letter("o"))
@@ -1117,7 +1134,8 @@ final class KeyboardTypingTests: XCTestCase {
         app.buttons["key-Delete"].tap()
         let firstLetter = letter("f").label
         letter("f").tap()
-        leftSpace.tap()
+        leftNeighbor.coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 0.5))
+            .withOffset(CGVector(dx: 12, dy: 0)).tap()
         letter("j").tap()
         rightSpace.tap()
         app.buttons["key-123"].tap()
@@ -1142,6 +1160,8 @@ final class KeyboardTypingTests: XCTestCase {
         capture.lifetime = .keepAlways
         add(capture)
 
+        app.buttons["key-123"].tap()
+        XCTAssertEqual(app.buttons.matching(identifier: "key-,").count, 1)
         app.buttons["key-,"].tap()
         app.buttons["key-."].tap()
         XCTAssertEqual(draft.value as? String, firstLetter + " j 10[=,.")
@@ -1159,6 +1179,7 @@ final class KeyboardTypingTests: XCTestCase {
         settings.tap()
         XCTAssertEqual(split.value as? String, "0")
         enableSplit()
+        let back = app.buttons["BackButton"]
         if back.exists { back.tap() } else { app.navigationBars.buttons.element(boundBy: 0).tap() }
         draft.tap()
         XCTAssertTrue(rightSpace.waitForExistence(timeout: 3))

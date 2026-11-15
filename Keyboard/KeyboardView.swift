@@ -463,11 +463,23 @@ final class KeyboardView: UIView {
                 place(row.indices, from: available.minX + indent, width: available.width - 2 * indent)
             }
             if let right = keys[i].firstIndex(of: .rightSpace) {
+                let leftBar = row[right - 1]
+                // Keep the shortcut control for the join animation. In split mode
+                // its comma keycap and the gap beside it belong to the left spacebar.
+                let shortcutIndex = right - 2
+                let shortcut = row[shortcutIndex]
+                let absorbsComma = split && keys[i][shortcutIndex] == .type(",")
+                shortcut.alpha = absorbsComma ? 0 : 1
+                shortcut.isUserInteractionEnabled = !absorbsComma
+                shortcut.isAccessibilityElement = !absorbsComma
+                if absorbsComma {
+                    leftBar.frame = leftBar.frame.union(keycapFrame(of: shortcut))
+                }
                 let cap = row[right]
                 if !split {
                     // Both bars share a destination, with the right bar folding into its half.
-                    let space = row[right - 1].frame
-                    (cap as? KeyButton)?.faceInsets = (row[right - 1] as? KeyButton)?.faceInsets ?? .zero
+                    let space = leftBar.frame
+                    (cap as? KeyButton)?.faceInsets = (leftBar as? KeyButton)?.faceInsets ?? .zero
                     cap.frame = CGRect(x: space.midX, y: space.minY, width: space.width / 2, height: space.height)
                 }
                 cap.alpha = split ? 1 : 0
