@@ -97,6 +97,7 @@ final class KeyboardView: UIView {
     private var displayedModel: KeyboardModel?
     private var displayedReturnTitle: String?
     private var displayedAccent: UIColor?
+    private var displayedFont = KeyboardFont.system
     private var held: [ObjectIdentifier: KeyButton] = [:]
     private var previews: [ObjectIdentifier: KeyPreview] = [:]
     private var lingering: [KeyPreview] = []
@@ -138,7 +139,6 @@ final class KeyboardView: UIView {
         optionsButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
         for index in 0..<3 {
             let button = UIButton(type: .system)
-            button.titleLabel?.font = .systemFont(ofSize: 15)
             button.titleLabel?.lineBreakMode = .byTruncatingTail
             button.setTitleColor(Self.ink, for: .normal)
             button.accessibilityIdentifier = "suggestion-\(index)"
@@ -197,8 +197,15 @@ final class KeyboardView: UIView {
         }
     }
 
-    func update(_ model: KeyboardModel, returnTitle: String?, accentColor: UIColor? = nil, animateLayout: Bool = false) {
-        guard displayedModel != model || displayedReturnTitle != returnTitle || displayedAccent != accentColor else { return }
+    func update(_ model: KeyboardModel, returnTitle: String?, accentColor: UIColor? = nil,
+                font: KeyboardFont = .system, animateLayout: Bool = false) {
+        guard displayedModel != model || displayedReturnTitle != returnTitle ||
+              displayedAccent != accentColor || displayedFont != font else { return }
+        if displayedModel == nil || displayedFont != font {
+            let suggestionFont = font.font(ofSize: 15)
+            for button in suggestions { button.titleLabel?.font = suggestionFont }
+        }
+        displayedFont = font
         displayedAccent = accentColor
         let accent = accentColor ?? defaultAccent
         let keypad = model.layer == .keypad
@@ -246,6 +253,9 @@ final class KeyboardView: UIView {
             }
         }
         keys = next
+        let characterFont = font.font(ofSize: keypad ? 25 : 23)
+        let actionFont = keypad ? characterFont : font.font(ofSize: 16)
+        lazy var legendFont = font.font(ofSize: 9, weight: .semibold)
         for (i, row) in next.enumerated() {
             for (j, key) in row.enumerated() {
                 let button = rows[i][j]
@@ -254,9 +264,9 @@ final class KeyboardView: UIView {
                 var symbol: String?
                 var label: String
                 var color = actionFill
-                var size: CGFloat = 16
+                var keyFont = actionFont
                 switch key {
-                case let .type(text): title = text; label = text; color = Self.keyFill; size = 23
+                case let .type(text): title = text; label = text; color = Self.keyFill; keyFont = characterFont
                 case .shift:
                     symbol = model.shift == .locked ? "capslock.fill" : (model.shift == .upper ? "shift.fill" : "shift")
                     label = model.shift == .locked ? "Caps Lock" : "Shift"
@@ -277,11 +287,10 @@ final class KeyboardView: UIView {
                     let legend = i < 3 ? legends[i * 3 + j] : ""
                     let digit = title?.first?.isWholeNumber == true
                     color = digit ? Self.keyFill : .clear
-                    size = 25
                     if let title, !legend.isEmpty {
-                        let caption = NSMutableAttributedString(string: title, attributes: [.font: UIFont.systemFont(ofSize: size)])
+                        let caption = NSMutableAttributedString(string: title, attributes: [.font: characterFont])
                         caption.append(NSAttributedString(string: "\n" + legend, attributes: [
-                            .font: UIFont.systemFont(ofSize: 9, weight: .semibold), .kern: 1.3
+                            .font: legendFont, .kern: 1.3
                         ]))
                         button.titleLabel?.numberOfLines = 2
                         button.titleLabel?.textAlignment = .center
@@ -291,7 +300,7 @@ final class KeyboardView: UIView {
                     }
                 }
                 button.setImage(symbol.flatMap { UIImage(systemName: $0) }, for: .normal)
-                button.titleLabel?.font = .systemFont(ofSize: size)
+                button.titleLabel?.font = keyFont
                 if let cap = button as? KeyButton { cap.setFaceColor(color, radius: keypad ? 9 : 5) }
                 else { button.backgroundColor = color }
                 button.accessibilityLabel = label
@@ -542,7 +551,7 @@ final class KeyboardView: UIView {
         let preview = previews[id] ?? KeyPreview()
         if preview.superview == nil { addSubview(preview); previews[id] = preview }
         bringSubviewToFront(preview)
-        preview.show(char, above: visibleFrame(of: target), in: self)
+        preview.show(char, above: visibleFrame(of: target), in: self, font: displayedFont)
     }
 
     fileprivate func finish(_ source: KeyButton, at point: CGPoint) {

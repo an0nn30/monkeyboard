@@ -27,7 +27,7 @@ final class KeyPreview: UIView {
         shape.fillColor = KeyboardView.keyFill.resolvedColor(with: traitCollection).cgColor
     }
 
-    func show(_ character: String, above key: CGRect, in container: UIView) {
+    func show(_ character: String, above key: CGRect, in container: UIView, font: KeyboardFont) {
         let size = min(62, max(42, key.height * 1.24), container.bounds.height - key.height)
         let x = min(max(2, key.midX - size / 2), container.bounds.width - size - 2)
         let y = max(0, key.minY - size - 4)
@@ -46,6 +46,6 @@ final class KeyPreview: UIView {
         CATransaction.commit()
         label.frame = CGRect(x: 0, y: 0, width: size, height: size)
         label.text = character
-        label.font = .systemFont(ofSize: size * 0.65)
+        label.font = font.font(ofSize: size * 0.65)
     }
 }

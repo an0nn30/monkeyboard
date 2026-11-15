@@ -4,6 +4,7 @@ import UIKit
 /// Preferences in the local keychain access group shared by the app and keyboard.
 enum KeyboardSetting: String {
     case accentTint = "accent-tint-srgb"
+    case font = "keyboard-font"
     case firmness = "keypress-firmness"
     case split = "split-wide-layout"
     case oneHanded = "one-handed-layout"

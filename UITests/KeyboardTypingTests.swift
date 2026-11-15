@@ -20,6 +20,56 @@ final class KeyboardTypingTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    func testAppearanceFontUpdatesPreviewAndLiveKey() throws {
+        let app = XCUIApplication()
+        let picker = app.buttons["keyboard-font-picker"]
+        func openAppearance() {
+            app.buttons["keyboard-settings"].tap()
+            app.buttons["appearance-settings"].tap()
+            XCTAssertTrue(picker.waitForExistence(timeout: 5))
+        }
+        func choose(_ name: String) {
+            picker.tap()
+            app.buttons[name].tap()
+            XCTAssertEqual(picker.value as? String, name)
+        }
+        func keyFace() throws -> Data {
+            app.launch()
+            app.textViews["draft"].tap()
+            selectMonkeyBoard(in: app)
+            let image = try XCTUnwrap(letter("w", in: app).screenshot().image.cgImage)
+            let center = CGRect(x: image.width / 4, y: image.height / 4,
+                                width: image.width / 2, height: image.height / 2)
+            let glyph = try XCTUnwrap(image.cropping(to: center))
+            return try XCTUnwrap(UIImage(cgImage: glyph).pngData())
+        }
+
+        app.launch()
+        openAppearance()
+        let original = try XCTUnwrap(picker.value as? String)
+        XCTAssertFalse(original.isEmpty)
+        addTeardownBlock {
+            app.launch()
+            openAppearance()
+            choose(original)
+        }
+        choose("System")
+        let system = try keyFace()
+        app.buttons["hide-keyboard"].tap()
+        openAppearance()
+        let preview = app.cells.containing(.staticText, identifier: "Light").firstMatch
+        let systemPreview = preview.screenshot().pngRepresentation
+        for font in ["Monospaced", "Rounded", "Serif"] {
+            choose(font)
+            XCTAssertNotEqual(systemPreview, preview.screenshot().pngRepresentation, "\(font) preview should redraw.")
+        }
+        let serif = try keyFace()
+        XCTAssertNotEqual(system, serif, "The selected font should change the visible letter.")
+        app.buttons["hide-keyboard"].tap()
+        openAppearance()
+        XCTAssertEqual(picker.value as? String, "Serif")
+    }
+
     func testNumericFieldsUseKeypadAndRestoreTextKeyboard() throws {
         let host = XCUIApplication()
         host.launch()

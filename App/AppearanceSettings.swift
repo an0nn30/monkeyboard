@@ -4,6 +4,8 @@ import SwiftUI
 
 struct AppearanceSettings: View {
     @State private var tint = KeyboardTint.stored()
+    @State private var keyboardFont = KeyboardFont.stored
+    @State private var fontSaveFailed = false
     @State private var photo: PhotosPickerItem?
     @State private var screenshot: ScreenshotPixels?
     @State private var loading = false
@@ -32,10 +34,25 @@ struct AppearanceSettings: View {
                 }
             }
             Section {
+                Picker("Keyboard font", selection: Binding(
+                    get: { keyboardFont },
+                    set: { choice in
+                        fontSaveFailed = !choice.save()
+                        if !fontSaveFailed { keyboardFont = choice }
+                    }
+                )) {
+                    ForEach(KeyboardFont.allCases, id: \.self) { choice in
+                        Text(choice.title).tag(choice)
+                    }
+                }
+                .pickerStyle(.menu)
+                .accessibilityIdentifier("keyboard-font-picker")
+                .accessibilityValue(keyboardFont.title)
+                if fontSaveFailed { Text("Couldn’t save the font. Try again.").foregroundStyle(.red) }
                 ForEach([UIUserInterfaceStyle.light, .dark], id: \.rawValue) { style in
                     VStack(alignment: .leading, spacing: 6) {
                         Text(style == .dark ? "Dark" : "Light").font(.subheadline.weight(.medium))
-                        SplitKeyboardPreview(tint: tint, style: style)
+                        SplitKeyboardPreview(tint: tint, font: keyboardFont, style: style)
                             .aspectRatio(669.0 / 289, contentMode: .fit)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .accessibilityHidden(true)
@@ -210,6 +227,7 @@ private struct TintSampler: View {
 
 private struct SplitKeyboardPreview: UIViewRepresentable {
     let tint: KeyboardTint?
+    let font: KeyboardFont
     let style: UIUserInterfaceStyle
 
     final class Canvas: UIView {
@@ -244,6 +262,6 @@ private struct SplitKeyboardPreview: UIViewRepresentable {
         model.shift = .upper
         view.overrideUserInterfaceStyle = style
         view.backgroundColor = style == .dark ? UIColor(white: 0.16, alpha: 1) : UIColor(white: 0.88, alpha: 1)
-        view.board.update(model, returnTitle: nil, accentColor: tint?.keyColor)
+        view.board.update(model, returnTitle: nil, accentColor: tint?.keyColor, font: font)
     }
 }

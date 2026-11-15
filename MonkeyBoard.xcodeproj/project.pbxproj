@@ -10,6 +10,8 @@
 		BA7100000000000000000001 /* AppearanceSettings.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000011 /* AppearanceSettings.swift */; };
 		BA7100000000000000000002 /* KeyboardTint.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000012 /* KeyboardTint.swift */; };
 		BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000012 /* KeyboardTint.swift */; };
+		BA7100000000000000000007 /* KeyboardFont.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000013 /* KeyboardFont.swift */; };
+		BA7100000000000000000008 /* KeyboardFont.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000013 /* KeyboardFont.swift */; };
 		BA7100000000000000000004 /* KeyboardView.swift in App */ = {isa = PBXBuildFile; fileRef = 3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */; };
 		BA7100000000000000000005 /* KeyboardModel.swift in App */ = {isa = PBXBuildFile; fileRef = 400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */; };
 		BA7100000000000000000006 /* KeyPreview.swift in App */ = {isa = PBXBuildFile; fileRef = 7F49F9E39446E10A4A749FA9 /* KeyPreview.swift */; };
@@ -75,6 +77,7 @@
 /* Begin PBXFileReference section */
 		BA7100000000000000000011 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		BA7100000000000000000012 /* KeyboardTint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardTint.swift; sourceTree = "<group>"; };
+		BA7100000000000000000013 /* KeyboardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardFont.swift; sourceTree = "<group>"; };
 		BB1100000000000000000002 /* WordNet-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "keyboard-engine/model/semantics/WordNet-LICENSE.txt"; sourceTree = SOURCE_ROOT; };
 		A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeypressFeedback.swift; sourceTree = "<group>"; };
 		A554C0908A6B40B6A8000004 /* SharedSettings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharedSettings.entitlements; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 				BB1100000000000000000002 /* WordNet-LICENSE.txt */,
 				A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */,
 				BA7100000000000000000012 /* KeyboardTint.swift */,
+				BA7100000000000000000013 /* KeyboardFont.swift */,
 				B065A3306758C6882394ED94 /* Keyboard */,
 				AB620C0894166BAB7FD0E274 /* UITests */,
 				2E88FBA07979B66A55D39FBC /* Configuration */,
@@ -306,6 +310,7 @@
 				F428ADC15523D29965D8A1C2 /* KeyPreview.swift in Sources */,
 				A554C0908A6B40B6A8000002 /* KeypressFeedback.swift in Keyboard */,
 				BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */,
+				BA7100000000000000000008 /* KeyboardFont.swift in Keyboard */,
 				D1521AC249C9C58D98FFF5B0 /* KeyboardModel.swift in Sources */,
 				A554C0908A6B40B6A8000006 /* WordCorrections.swift in Sources */,
 				F70BB204E083FA42C1D64BBF /* KeyboardView.swift in Sources */,
@@ -329,6 +334,7 @@
 				A554C0908A6B40B6A8000001 /* KeypressFeedback.swift in App */,
 				BA7100000000000000000001 /* AppearanceSettings.swift in App */,
 				BA7100000000000000000002 /* KeyboardTint.swift in App */,
+				BA7100000000000000000007 /* KeyboardFont.swift in App */,
 				BA7100000000000000000004 /* KeyboardView.swift in App */,
 				BA7100000000000000000005 /* KeyboardModel.swift in App */,
 				BA7100000000000000000006 /* KeyPreview.swift in App */,
