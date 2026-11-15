@@ -64,7 +64,7 @@ final class KeyboardViewController: UIInputViewController {
             board.topAnchor.constraint(equalTo: view.topAnchor),
             board.bottomAnchor.constraint(equalTo: safe.bottomAnchor)
         ])
-        let height = view.heightAnchor.constraint(equalToConstant: 250)
+        let height = view.heightAnchor.constraint(equalToConstant: 250 + board.extraHeightBelowKeys)
         height.priority = UILayoutPriority(999)
         height.isActive = true
         self.height = height
@@ -160,7 +160,7 @@ final class KeyboardViewController: UIInputViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         let compact = traitCollection.verticalSizeClass == .compact
-        height?.constant = (compact ? 193 : 250) + view.safeAreaInsets.bottom
+        height?.constant = (compact ? 193 : 250) + board.extraHeightBelowKeys + view.safeAreaInsets.bottom
         if model.needsGlobe != needsInputModeSwitchKey {
             model.needsGlobe = needsInputModeSwitchKey
             updateKeys()
@@ -194,6 +194,7 @@ final class KeyboardViewController: UIInputViewController {
             openedSymbolsFromLetters = false
             model.keyboardType = kind
             model.layer = .initial(for: kind)
+            view.setNeedsLayout()
             model.shift = .lower
             lastShift = nil
             applyAutoCase()

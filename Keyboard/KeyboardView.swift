@@ -1,5 +1,9 @@
 import UIKit
 
+private extension Key {
+    var isSpace: Bool { self == .space || self == .rightSpace }
+}
+
 /// A control keeps tracking its original finger as it slides across neighboring caps.
 private final class KeyButton: UIButton {
     var key = Key.space
@@ -7,7 +11,7 @@ private final class KeyButton: UIButton {
     var acceptsCurrentTouch = false
 
     private let face = UIView()
-    var faceInset = CGSize.zero
+    var faceInsets = UIEdgeInsets.zero
 
     func setFaceColor(_ color: UIColor, radius: CGFloat = 5) {
         if face.superview == nil {
@@ -25,7 +29,8 @@ private final class KeyButton: UIButton {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        face.frame = bounds.insetBy(dx: faceInset.width, dy: faceInset.height)
+        face.frame = bounds.inset(by: faceInsets)
+        if key.isSpace { titleLabel?.center.y = face.frame.midY }
     }
 
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -77,6 +82,13 @@ final class KeyboardView: UIView {
     private let expandButton = UIButton(type: .system)
     private let keypadGlobe = UIButton(type: .custom)
     static let minimumSplitWidth: CGFloat = 560
+    private static let bottomMargin: CGFloat = 5
+    private static let spaceHitDepth: CGFloat = 16
+    // The system owns the area outside the input view. Reserve the extra room
+    // inside it so the host can deliver low taps without resizing the painted keys.
+    var extraHeightBelowKeys: CGFloat {
+        displayedModel?.layer == .keypad ? 0 : Self.spaceHitDepth - Self.bottomMargin
+    }
     private var suggestions: [UIButton] = []
     private var rows: [[UIButton]] = []
     private var keys: [[Key]] = []
@@ -311,30 +323,31 @@ final class KeyboardView: UIView {
         guard !rows.isEmpty else { return }
         let inset: CGFloat = 4
         let hand = displayedModel?.oneHanded ?? .fullWidth
-        let typingArea = hand.typingArea(in: bounds)
+        let typingArea = hand.typingArea(in: bounds.inset(by: UIEdgeInsets(
+            top: 0, left: 0, bottom: extraHeightBelowKeys, right: 0)))
         let keypad = displayedModel?.layer == .keypad
         let available = typingArea.insetBy(dx: inset, dy: 0)
         let gap: CGFloat = typingArea.width < 360 ? 3 : 4
-        let rowGap: CGFloat = bounds.height < 220 ? 5 : 7
+        let rowGap: CGFloat = typingArea.height < 220 ? 5 : 7
         // This strip also provides headroom for top-row previews inside the extension.
-        let top: CGFloat = keypad ? 0 : min(61, max(46, bounds.height * 0.23))
+        let top: CGFloat = keypad ? 0 : min(61, max(46, typingArea.height * 0.23))
         toolbar.frame = CGRect(x: available.minX, y: 0, width: available.width, height: top)
         if hand != .fullWidth {
             let gutterX = hand == .left ? typingArea.maxX : bounds.minX
             let gutterWidth = bounds.width - typingArea.width
             let targetWidth = min(52, gutterWidth)
             expandButton.frame = CGRect(x: gutterX + (gutterWidth - targetWidth) / 2,
-                                        y: top + (bounds.height - top - 52) / 2,
+                                        y: top + (typingArea.height - top - 52) / 2,
                                         width: targetWidth, height: 52)
         }
         if keypad {
             layoutKeypad(in: typingArea)
             return
         }
-        let height = max(1, (bounds.height - top - 5 - 3 * rowGap) / 4)
+        let height = max(1, (typingArea.height - top - Self.bottomMargin - 3 * rowGap) / 4)
         let split = displayedModel?.isSplit == true
         func weight(_ key: Key) -> CGFloat {
-            split && (key == .space || key == .rightSpace) ? key.weight / 2 : key.weight
+            split && key.isSpace ? key.weight / 2 : key.weight
         }
         for (i, row) in rows.enumerated() {
             let y = top + CGFloat(i) * (height + rowGap)
@@ -349,10 +362,14 @@ final class KeyboardView: UIView {
                     // Extend the actual control frame as well as local hit testing:
                     // the remotely hosted keyboard uses control regions to deliver touches.
                     if let cap = row[j] as? KeyButton, case .type = cap.key {
-                        cap.faceInset = CGSize(width: gap / 2, height: rowGap / 2)
+                        cap.faceInsets = UIEdgeInsets(top: rowGap / 2, left: gap / 2, bottom: rowGap / 2, right: gap / 2)
                         cap.frame = face.insetBy(dx: -gap / 2, dy: -rowGap / 2)
+                    } else if let cap = row[j] as? KeyButton, cap.key.isSpace {
+                        let depth = min(Self.spaceHitDepth, max(0, bounds.maxY - face.maxY))
+                        cap.faceInsets = UIEdgeInsets(top: 0, left: 0, bottom: depth, right: 0)
+                        cap.frame = CGRect(x: face.minX, y: face.minY, width: face.width, height: face.height + depth)
                     } else {
-                        (row[j] as? KeyButton)?.faceInset = .zero
+                        (row[j] as? KeyButton)?.faceInsets = .zero
                         row[j].frame = face
                     }
                     x += capWidth + gap
@@ -374,6 +391,7 @@ final class KeyboardView: UIView {
                 if !split {
                     // Both bars share a destination, with the right bar folding into its half.
                     let space = row[right - 1].frame
+                    (cap as? KeyButton)?.faceInsets = (row[right - 1] as? KeyButton)?.faceInsets ?? .zero
                     cap.frame = CGRect(x: space.midX, y: space.minY, width: space.width / 2, height: space.height)
                 }
                 cap.alpha = split ? 1 : 0
@@ -413,23 +431,30 @@ final class KeyboardView: UIView {
                 let column = c + 3 - row.count
                 button.frame = CGRect(x: grid.minX + CGFloat(column) * cellWidth,
                                       y: grid.minY + CGFloat(r) * cellHeight, width: cellWidth, height: cellHeight)
-                (button as? KeyButton)?.faceInset = CGSize(width: 3, height: 3)
+                (button as? KeyButton)?.faceInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
             }
         }
         keypadGlobe.frame = CGRect(x: grid.minX, y: grid.maxY - footer, width: 44, height: footer)
     }
 
-    func keycapFrame(of button: UIButton, presented: Bool = false) -> CGRect {
-        let frame = presented && CACurrentMediaTime() < motionEndsAt
+    private func controlFrame(of button: UIButton, presented: Bool) -> CGRect {
+        presented && CACurrentMediaTime() < motionEndsAt
             ? button.layer.presentation()?.frame ?? button.frame : button.frame
-        let inset = (button as? KeyButton)?.faceInset ?? .zero
-        return frame.insetBy(dx: inset.width, dy: inset.height)
+    }
+
+    func keycapFrame(of button: UIButton, presented: Bool = false) -> CGRect {
+        controlFrame(of: button, presented: presented).inset(by: (button as? KeyButton)?.faceInsets ?? .zero)
     }
     private func visibleFrame(of button: UIButton) -> CGRect { keycapFrame(of: button, presented: true) }
 
-    // One ownership rule for both touch-down and lift-off, even while the
-    // layout moves. A visible cap wins; only the narrow space between caps
-    // is negotiable. Never grow Delete, the globe, or another action key.
+    private func hitFrame(of button: UIButton) -> CGRect {
+        if let cap = button as? KeyButton, cap.key.isSpace {
+            return controlFrame(of: cap, presented: true)
+        }
+        return visibleFrame(of: button)
+    }
+
+    // Use the same target at touch-down and lift-off, including during layout animations.
     private func nearestCap(at point: CGPoint) -> UIButton? {
         guard bounds.contains(point), point.y >= toolbar.frame.maxY else { return nil }
         var nearest: UIButton?
@@ -440,7 +465,7 @@ final class KeyboardView: UIView {
                     if cap.frame.contains(point) { return cap }
                     continue
                 }
-                let r = visibleFrame(of: cap)
+                let r = hitFrame(of: cap)
                 if r.contains(point) { return cap }
                 guard let key = cap as? KeyButton, case .type = key.key else { continue }
                 let dx = max(r.minX - point.x, point.x - r.maxX, 0)
@@ -467,7 +492,7 @@ final class KeyboardView: UIView {
             guard let key = nearestCap(at: point) as? KeyButton, case .type = key.key else { return nil }
             return key
         }
-        let frame = displayedModel?.layer == .keypad ? source.frame : visibleFrame(of: source)
+        let frame = displayedModel?.layer == .keypad ? source.frame : hitFrame(of: source)
         return frame.insetBy(dx: -3, dy: -3).contains(point) ? source : nil
     }
 

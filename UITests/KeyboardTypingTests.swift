@@ -204,6 +204,43 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual(slider.value as? String, "28%")
     }
 
+    func testTapBelowSpacebarInsertsSpace() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        let origin = app.coordinate(withNormalizedOffset: .zero)
+        var expected = draft.value as? String ?? ""
+        func checkLowTaps() {
+            let spacebars = app.buttons.matching(NSPredicate(format: "label == 'Space'")).allElementsBoundByIndex
+            XCTAssertFalse(spacebars.isEmpty)
+            // Return shares the painted bottom edge with Space.
+            let bottomRow = app.buttons["key-Return"].frame
+            for space in spacebars {
+                letter("a", in: app).tap()
+                expected += "a "
+                origin.withOffset(CGVector(dx: space.frame.midX, dy: bottomRow.maxY + 10)).tap()
+                XCTAssertEqual((draft.value as? String)?.lowercased(), expected.lowercased())
+            }
+            origin.withOffset(CGVector(dx: bottomRow.midX, dy: bottomRow.maxY + 10)).tap()
+            XCTAssertEqual((draft.value as? String)?.lowercased(), expected.lowercased())
+        }
+        let toggle = app.buttons["toggle-split-layout"]
+        if toggle.exists {
+            checkLowTaps()
+            toggle.tap()
+            defer { toggle.tap() }
+            checkLowTaps()
+        } else {
+            for layout in ["Left Hand", "Right Hand", "Full Width"] {
+                app.buttons["keyboard-options"].tap()
+                app.buttons[layout].tap()
+                checkLowTaps()
+            }
+        }
+    }
+
     func testTapInLetterGapInsertsNearestLetter() {
         let app = XCUIApplication()
         app.launch()
