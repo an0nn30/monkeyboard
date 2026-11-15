@@ -39,6 +39,7 @@ final class KeyboardViewController: UIInputViewController {
     private lazy var feedback = KeypressPlayer(view: board)
     private var strength = KeypressFeedback.initial
     private var lastShift: TimeInterval?
+    private var lastSelectedWordShift: KeyboardModel.Shift?
     private var height: NSLayoutConstraint?
     private var candidateDocument: UUID?
     private var candidateContext = ""
@@ -178,7 +179,7 @@ final class KeyboardViewController: UIInputViewController {
         super.selectionDidChange(textInput)
         contextGeneration += 1
         validateReview()
-        scheduleSuggestions()
+        refreshContext()
     }
 
     private func refreshContext() {
@@ -197,15 +198,41 @@ final class KeyboardViewController: UIInputViewController {
             view.setNeedsLayout()
             model.shift = .lower
             lastShift = nil
+            lastSelectedWordShift = nil
             applyAutoCase()
+        }
+        // Hosts can report a selection through either input delegate callback.
+        // Only change Shift on a transition so the user can still toggle it by hand.
+        let selectionShift = selectedWordShift()
+        if selectionShift != lastSelectedWordShift {
+            lastSelectedWordShift = selectionShift
+            lastShift = nil
+            applyAutoCase(replacing: selectionShift)
         }
         model.needsGlobe = needsInputModeSwitchKey
         updateKeys()
         scheduleSuggestions()
     }
 
-    private func applyAutoCase() {
+    private func selectedWordShift() -> KeyboardModel.Shift? {
+        let proxy = textDocumentProxy
+        guard let text = proxy.selectedText else { return nil }
+        let word = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !word.contains(where: \.isWhitespace),
+              let first = word.first(where: { $0.isUppercase || $0.isLowercase }) else { return nil }
+        switch proxy.autocapitalizationType ?? .none {
+        case .sentences, .words: return first.isUppercase ? .upper : .lower
+        case .allCharacters: return .upper
+        default: return .lower
+        }
+    }
+
+    private func applyAutoCase(replacing selectionShift: KeyboardModel.Shift? = nil) {
         guard model.shift != .locked else { return }
+        if let selectionShift {
+            model.shift = selectionShift
+            return
+        }
         let before = textDocumentProxy.documentContextBeforeInput ?? ""
         let upper: Bool
         switch textDocumentProxy.autocapitalizationType ?? .none {
@@ -251,8 +278,12 @@ final class KeyboardViewController: UIInputViewController {
         case .globe: advanceToNextInputMode()
         case .delete:
             discardReview()
+            let replacementShift = selectedWordShift()
+            // Collapsing this selection is part of Delete. Keep its spelling case
+            // for the next letter even if the new caret is at the start of a sentence.
+            lastSelectedWordShift = nil
             if !undoCorrection() { textDocumentProxy.deleteBackward(); keptSpelling = nil }
-            applyAutoCase()
+            applyAutoCase(replacing: replacementShift)
         case let .type(value):
             if [".", ",", "!", "?", ";", ":"].contains(value) { insertDelimiter(value) }
             else {

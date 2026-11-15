@@ -204,6 +204,46 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual(slider.value as? String, "28%")
     }
 
+    func testDoubleTappingAWordUsesItsCaseForReplacement() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        if letter("r", in: app).label == "r" { app.buttons["key-Shift"].tap() }
+        typePhrase("red fox. ", in: app)
+        XCTAssertEqual(draft.value as? String, "Red fox. ")
+        XCTAssertEqual(letter("c", in: app).label, "C")
+
+        let start = draft.coordinate(withNormalizedOffset: .zero)
+        let secondWord = start.withOffset(CGVector(dx: 52, dy: 20))
+        secondWord.doubleTap()
+        XCTAssertEqual(letter("c", in: app).label, "c")
+        typePhrase("cat", in: app)
+        XCTAssertEqual(draft.value as? String, "Red cat. ")
+
+        secondWord.doubleTap()
+        app.buttons["key-Shift"].tap()
+        typePhrase("sam", in: app)
+        XCTAssertEqual(draft.value as? String, "Red Sam. ")
+        secondWord.doubleTap()
+        XCTAssertEqual(letter("b", in: app).label, "B")
+
+        let firstWord = start.withOffset(CGVector(dx: 18, dy: 20))
+        firstWord.doubleTap()
+        XCTAssertEqual(letter("b", in: app).label, "B")
+        app.buttons["key-Shift"].tap()
+        typePhrase("red", in: app)
+        XCTAssertEqual(draft.value as? String, "red Sam. ")
+        firstWord.doubleTap()
+        app.buttons["key-Delete"].tap()
+        // UIKit can remove the adjoining space when deleting a selected word.
+        let remainder = try XCTUnwrap(draft.value as? String)
+        XCTAssertEqual(remainder.trimmingCharacters(in: .whitespaces), "Sam.")
+        typePhrase("big", in: app)
+        XCTAssertEqual(draft.value as? String, "big" + remainder)
+    }
+
     func testTapBelowSpacebarInsertsSpace() {
         let app = XCUIApplication()
         app.launch()
