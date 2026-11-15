@@ -61,6 +61,10 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual(whole.value as? String, "098")
         key("Delete").press(forDuration: 0.85)
         XCTAssertEqual(whole.value as? String ?? "", "")
+        let hide = safari.buttons["hide-keyboard"]
+        XCTAssertGreaterThanOrEqual(hide.frame.minY, key("0").frame.maxY)
+        hide.tap()
+        XCTAssertTrue(key("0").waitForNonExistence(timeout: 3))
         safari.textFields["Name"].tap()
         XCTAssertTrue(letter("a", in: safari).waitForExistence(timeout: 3))
         key("123").tap()
@@ -652,16 +656,24 @@ final class KeyboardTypingTests: XCTestCase {
         let q = letter("q", in: app), p = letter("p", in: app)
         let left = q.frame.minX, right = p.frame.maxX
         let height = q.frame.height
+        let hide = app.buttons["hide-keyboard"]
+        func checkHidePosition() {
+            let layerKey = app.buttons["key-123"].frame
+            XCTAssertEqual(hide.frame.minX, layerKey.minX, accuracy: 2)
+            XCTAssertGreaterThanOrEqual(hide.frame.minY, layerKey.maxY - 1)
+        }
+        checkHidePosition()
         choose("Left Hand")
         XCTAssertEqual(q.frame.minX, left, accuracy: 2)
         XCTAssertLessThan(p.frame.maxX, right - 40)
         XCTAssertEqual(q.frame.height, height, accuracy: 1)
-        XCTAssertLessThanOrEqual(app.buttons["hide-keyboard"].frame.maxX, p.frame.maxX + 3)
+        checkHidePosition()
         q.press(forDuration: 0.15, thenDragTo: p)
         XCTAssertEqual((draft.value as? String)?.lowercased(), "p")
         capture("Left-handed cover keyboard")
 
         choose("Right Hand")
+        checkHidePosition()
         XCTAssertEqual(p.frame.maxX, right, accuracy: 2)
         XCTAssertGreaterThan(q.frame.minX, left + 40)
         XCTAssertGreaterThanOrEqual(menu.frame.minX, q.frame.minX - 3)
@@ -769,5 +781,11 @@ final class KeyboardTypingTests: XCTestCase {
         if back.exists { back.tap() } else { app.navigationBars.buttons.element(boundBy: 0).tap() }
         draft.tap()
         XCTAssertTrue(rightSpace.waitForExistence(timeout: 3))
+        let hide = app.buttons["hide-keyboard"]
+        let layer = app.buttons["key-123"]
+        XCTAssertEqual(hide.frame.minX, layer.frame.minX, accuracy: 2)
+        XCTAssertGreaterThanOrEqual(hide.frame.minY, layer.frame.maxY - 1)
+        hide.tap()
+        XCTAssertTrue(rightSpace.waitForNonExistence(timeout: 3))
     }
 }

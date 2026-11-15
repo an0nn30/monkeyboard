@@ -15,8 +15,8 @@ Build 16 recognizes missing spaces and some words with two mistyped letters. Its
 ## Try it
 
 - With the Duo closed, tap **•••** above the keys and choose **Left Hand** or **Right Hand**. The keys and suggestions slide toward that thumb. Tap the arrow in the empty space (or choose **Full Width** in the menu) to expand again. Your choice is remembered separately from the open layout.
-- On wide layouts, the keyboard splits into two thumb-sized groups with a spacebar on each side. The layout button beside Hide Keyboard slides the keys between split and joined positions. Reduce Motion makes the switch immediate. You can also set **Keyboard Settings → Split on wide screens**.
-- Tap the keyboard with a down arrow at the far right of the suggestion strip to dismiss it. Tap the text field to type again. Hold the globe to choose another enabled keyboard, including Emoji.
+- On wide layouts, the keyboard splits into two thumb-sized groups with a spacebar on each side. The layout button at the right of the suggestion strip slides the keys between split and joined positions. Reduce Motion makes the switch immediate. You can also set **Keyboard Settings → Split on wide screens**.
+- Tap the down chevron beneath the bottom-left keys to dismiss the keyboard. Tap the text field to type again. Hold the globe to choose another enabled keyboard, including Emoji.
 - Tap Shift for one uppercase letter or double-tap it for Caps Lock. Hold Delete to repeat. Use **123**, then **#+=**, for numbers and symbols.
 - In MonkeyBoard, open the gear for **Keyboard Settings**. Move **Firmness** from 0% (off) to 100%, then tap **Try a keypress**. The upper range uses a heavy impact. Tap **••• → Keypress Feedback** on the keyboard for presets. The setting is stored locally on the device. Soft is the default.
 - Letters, suggestions, function keys and the character preview adapt to light and dark appearance. The keyboard uses the tinted background that iOS supplies around the keys.

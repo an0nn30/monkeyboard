@@ -160,12 +160,12 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        let compact = traitCollection.verticalSizeClass == .compact
-        height?.constant = (compact ? 193 : 250) + board.extraHeightBelowKeys + view.safeAreaInsets.bottom
         if model.needsGlobe != needsInputModeSwitchKey {
             model.needsGlobe = needsInputModeSwitchKey
             updateKeys()
         }
+        let compact = traitCollection.verticalSizeClass == .compact
+        height?.constant = (compact ? 193 : 250) + board.extraHeightBelowKeys + view.safeAreaInsets.bottom
     }
 
     override func textDidChange(_ textInput: UITextInput?) {

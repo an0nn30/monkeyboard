@@ -79,15 +79,17 @@ final class KeyboardView: UIView {
     private let toolbar = UIStackView()
     private let optionsButton = UIButton(type: .system)
     private let layoutButton = UIButton(type: .system)
+    private let hideButton = UIButton(type: .system)
     private let expandButton = UIButton(type: .system)
     private let keypadGlobe = UIButton(type: .custom)
     static let minimumSplitWidth: CGFloat = 560
     private static let bottomMargin: CGFloat = 5
     private static let spaceHitDepth: CGFloat = 16
-    // The system owns the area outside the input view. Reserve the extra room
-    // inside it so the host can deliver low taps without resizing the painted keys.
+    private static let footerHeight: CGFloat = 44
+    // Decimal pads with a separate globe already allocate a footer within the keypad height.
     var extraHeightBelowKeys: CGFloat {
-        displayedModel?.layer == .keypad ? 0 : Self.spaceHitDepth - Self.bottomMargin
+        if displayedModel?.layer == .keypad { return keypadGlobe.isHidden ? Self.footerHeight : 0 }
+        return Self.footerHeight - Self.bottomMargin
     }
     private var suggestions: [UIButton] = []
     private var rows: [[UIButton]] = []
@@ -156,14 +158,13 @@ final class KeyboardView: UIView {
         let buttonWidth = layoutButton.widthAnchor.constraint(equalToConstant: 44)
         buttonWidth.priority = .defaultHigh
         buttonWidth.isActive = true
-        let hideButton = UIButton(type: .system)
-        hideButton.tintColor = Self.ink
-        hideButton.setImage(UIImage(systemName: "keyboard.chevron.compact.down"), for: .normal)
+        hideButton.tintColor = .secondaryLabel
+        let chevron = UIImage.SymbolConfiguration(pointSize: 14, weight: .semibold)
+        hideButton.setImage(UIImage(systemName: "chevron.down", withConfiguration: chevron), for: .normal)
         hideButton.accessibilityLabel = "Hide keyboard"
         hideButton.accessibilityIdentifier = "hide-keyboard"
         hideButton.addAction(UIAction { [weak self] _ in self?.onDismiss?() }, for: .touchUpInside)
-        toolbar.addArrangedSubview(hideButton)
-        hideButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        addSubview(hideButton)
         expandButton.tintColor = .secondaryLabel
         expandButton.accessibilityLabel = "Restore full-width keyboard"
         expandButton.accessibilityIdentifier = "expand-keyboard"
@@ -323,10 +324,13 @@ final class KeyboardView: UIView {
         guard !rows.isEmpty else { return }
         let inset: CGFloat = 4
         let hand = displayedModel?.oneHanded ?? .fullWidth
-        let typingArea = hand.typingArea(in: bounds.inset(by: UIEdgeInsets(
-            top: 0, left: 0, bottom: extraHeightBelowKeys, right: 0)))
         let keypad = displayedModel?.layer == .keypad
+        let typingArea = hand.typingArea(in: bounds.inset(by: UIEdgeInsets(
+            top: 0, left: 0, bottom: keypad ? Self.footerHeight : extraHeightBelowKeys, right: 0)))
         let available = typingArea.insetBy(dx: inset, dy: 0)
+        let footerY = bounds.maxY - Self.footerHeight
+        hideButton.frame = CGRect(x: available.minX, y: footerY, width: 44, height: Self.footerHeight)
+        keypadGlobe.frame = CGRect(x: available.maxX - 44, y: footerY, width: 44, height: Self.footerHeight)
         let gap: CGFloat = typingArea.width < 360 ? 3 : 4
         let rowGap: CGFloat = typingArea.height < 220 ? 5 : 7
         // This strip also provides headroom for top-row previews inside the extension.
@@ -422,9 +426,8 @@ final class KeyboardView: UIView {
 
     private func layoutKeypad(in area: CGRect) {
         let grid = area.insetBy(dx: 5, dy: 6)
-        let footer: CGFloat = keypadGlobe.isHidden ? 0 : 44
         let cellWidth = grid.width / 3
-        let cellHeight = (grid.height - footer) / 4
+        let cellHeight = grid.height / 4
         for (r, row) in rows.enumerated() {
             for (c, button) in row.enumerated() {
                 // On integer pads without an in-extension globe the first cell stays empty.
@@ -434,7 +437,6 @@ final class KeyboardView: UIView {
                 (button as? KeyButton)?.faceInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
             }
         }
-        keypadGlobe.frame = CGRect(x: grid.minX, y: grid.maxY - footer, width: 44, height: footer)
     }
 
     private func controlFrame(of button: UIButton, presented: Bool) -> CGRect {
@@ -482,6 +484,7 @@ final class KeyboardView: UIView {
         guard isUserInteractionEnabled, !isHidden, alpha > 0.01, bounds.contains(point),
               !rows.isEmpty, point.y >= toolbar.frame.maxY else { return super.hitTest(point, with: event) }
         if !keypadGlobe.isHidden, keypadGlobe.frame.contains(point) { return keypadGlobe }
+        if visibleFrame(of: hideButton).contains(point) { return hideButton }
         if let cap = nearestCap(at: point) { return cap }
         if !expandButton.isHidden, visibleFrame(of: expandButton).contains(point) { return expandButton }
         return self
