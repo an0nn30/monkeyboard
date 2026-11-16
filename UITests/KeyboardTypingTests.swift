@@ -1085,6 +1085,57 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual(p.frame.maxX, right, accuracy: 2)
     }
 
+    func testYAndBCanBeTypedAndSwipedFromEitherHalf() throws {
+        let originalOrientation = XCUIDevice.shared.orientation
+        XCUIDevice.shared.orientation = .portrait
+        defer {
+            if originalOrientation != .unknown { XCUIDevice.shared.orientation = originalOrientation }
+        }
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        enableForTest("split-wide-screens", inSettingsOf: app)
+        enableForTest("repeat-split-letters", inSettingsOf: app)
+        enableForTest("glide-typing", inSettingsOf: app)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        let layout = app.buttons["toggle-split-layout"]
+        guard layout.exists else { throw XCTSkip("Open the Duo to test both sides of the keyboard.") }
+        let leftY = app.buttons["key-y-left"], leftB = app.buttons["key-b-left"]
+        let rightY = letter("y", in: app), rightB = letter("b", in: app)
+        XCTAssertLessThan(leftY.frame.maxX, rightY.frame.minX)
+        XCTAssertLessThan(leftB.frame.maxX, rightB.frame.minX)
+
+        for (b, y) in [(leftB, leftY), (rightB, rightY)] {
+            b.press(forDuration: 0.12, thenDragTo: y)
+            XCTAssertEqual((draft.value as? String)?.lowercased(), "by")
+            app.buttons["key-Delete"].tap()
+        }
+        let initial = rightY.label
+        XCTAssertEqual(leftY.label, initial)
+        leftY.tap()
+        rightB.tap()
+        leftB.tap()
+        rightY.tap()
+        XCTAssertEqual(draft.value as? String, initial + "bby")
+
+        app.buttons["key-123"].tap()
+        XCTAssertFalse(leftY.exists)
+        XCTAssertFalse(leftB.exists)
+        app.buttons["key-ABC"].tap()
+        layout.tap()
+        XCTAssertFalse(leftY.exists)
+        XCTAssertFalse(leftB.exists)
+        rightY.tap()
+        rightB.tap()
+        XCTAssertEqual(draft.value as? String, initial + "bbyyb")
+        layout.tap()
+        XCTAssertTrue(leftY.exists && leftB.exists)
+    }
+
     func testSplitLayoutOnWideKeyboard() throws {
         let originalOrientation = XCUIDevice.shared.orientation
         XCUIDevice.shared.orientation = .portrait

@@ -68,6 +68,7 @@ private struct KeyboardSettings: View {
     @State private var percent = KeypressFeedback.storedPercent() ?? KeypressFeedback.initial
     @State private var saveFailed = false
     @State private var split = WideKeyboardLayout.prefersSplit
+    @State private var repeatSplitLetters = WideKeyboardLayout.repeatsLetters
     @State private var layoutSaveFailed = false
     @State private var returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
     @State private var symbolSaveFailed = false
@@ -84,7 +85,7 @@ private struct KeyboardSettings: View {
     var body: some View {
         Form {
             NavigationLink {
-                AppearanceSettings()
+                AppearanceSettings(repeatSplitLetters: repeatSplitLetters)
             } label: {
                 Label("Appearance", systemImage: "paintpalette")
             }
@@ -97,6 +98,13 @@ private struct KeyboardSettings: View {
                         if !layoutSaveFailed { split = newValue }
                     }
                 )).accessibilityIdentifier("split-wide-screens")
+                Toggle("Show Y and B on both sides", isOn: Binding(
+                    get: { repeatSplitLetters },
+                    set: { enabled in
+                        layoutSaveFailed = !WideKeyboardLayout.setRepeatLetters(enabled)
+                        if !layoutSaveFailed { repeatSplitLetters = enabled }
+                    }
+                )).accessibilityIdentifier("repeat-split-letters")
                 if layoutSaveFailed {
                     Text("Couldn’t save the layout. Try again.").foregroundStyle(.red)
                 }
@@ -237,6 +245,7 @@ private struct KeyboardSettings: View {
         useSentence = SentenceScoringSetting.isEnabled
         transformer = TransformerSetting.isEnabled
         split = WideKeyboardLayout.prefersSplit
+        repeatSplitLetters = WideKeyboardLayout.repeatsLetters
         returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
         percent = KeypressFeedback.storedPercent() ?? KeypressFeedback.initial
     }

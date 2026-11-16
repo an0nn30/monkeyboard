@@ -74,6 +74,7 @@ private final class KeyButton: UIButton {
 final class GlideStroke {
     typealias Sample = (point: CGPoint, seconds: TimeInterval)
     let centers: [CGPoint]
+    private let alternateCenters: [Int: CGPoint]
     let pitch: CGSize
     let startTime: TimeInterval
     let bounds: CGRect
@@ -82,17 +83,39 @@ final class GlideStroke {
     private var distance: CGFloat = 0
     private var reach: CGFloat = 0
 
-    init?(centers: [CGPoint], point: CGPoint, time: TimeInterval, bounds: CGRect) {
+    init?(centers: [CGPoint], alternateCenters: [Int: CGPoint] = [:], point: CGPoint, time: TimeInterval, bounds: CGRect) {
         guard centers.count == 26 else { return nil }
         // W and Q share a bank in every layout, as do A and Q.
         let horizontal = abs(centers[22].x - centers[16].x)
         let vertical = abs(centers[0].y - centers[16].y)
         guard horizontal > 4, vertical > 4 else { return nil }
         self.centers = centers
+        self.alternateCenters = alternateCenters
         pitch = CGSize(width: horizontal, height: vertical)
         startTime = time
         samples = [(point, 0)]
         self.bounds = bounds
+    }
+
+    // The decoder takes one center per letter. Prefer the copy where the
+    // stroke starts or ends, then the one it approaches most closely.
+    var decodingCenters: [CGPoint] {
+        guard !alternateCenters.isEmpty else { return centers }
+        func distance(_ point: CGPoint, to center: CGPoint) -> CGFloat {
+            let dx = (point.x - center.x) / pitch.width
+            let dy = (point.y - center.y) / pitch.height
+            return dx * dx + dy * dy
+        }
+        func proximity(to center: CGPoint) -> CGFloat {
+            let endpoint = min(distance(samples[0].point, to: center), distance(samples[samples.count - 1].point, to: center))
+            if endpoint < 0.25 { return endpoint - 1 }
+            return samples.reduce(CGFloat.infinity) { min($0, distance($1.point, to: center)) }
+        }
+        var result = centers
+        for (letter, alternate) in alternateCenters where proximity(to: alternate) < proximity(to: centers[letter]) {
+            result[letter] = alternate
+        }
+        return result
     }
 
     func append(_ point: CGPoint, time: TimeInterval) {
@@ -156,6 +179,7 @@ final class KeyboardView: UIView {
     private var geometryArea = CGRect.null
     private var geometrySplit: Bool?
     private var letterCenters = [CGPoint](repeating: .zero, count: 26)
+    private var alternateLetterCenters: [Int: CGPoint] = [:]
     var onKey: ((Key) -> Void)?
     var onTouch: (() -> Void)?
     var onGlideStart: (() -> Bool)?
@@ -271,6 +295,7 @@ final class KeyboardView: UIView {
         let keypad = model.layer == .keypad
         let wasKeypad = displayedModel?.layer == .keypad
         if animateLayout { layoutIfNeeded(); resetTouches() }
+        if displayedModel?.repeatSplitLetters != model.repeatSplitLetters { geometryArea = .null }
         displayedModel = model
         displayedReturnTitle = returnTitle
         toolbar.isHidden = keypad
@@ -372,6 +397,11 @@ final class KeyboardView: UIView {
                     button.accessibilityIdentifier = "key-Space-right"
                 } else if model.isSplit && key == .space {
                     button.accessibilityIdentifier = "key-Space-left"
+                } else if j == model.repeatedLetterIndex(in: i) {
+                    button.isUserInteractionEnabled = model.isSplit
+                    button.isAccessibilityElement = model.isSplit
+                    button.accessibilityElementsHidden = !model.isSplit
+                    button.accessibilityIdentifier = "key-" + label.lowercased() + "-left"
                 }
             }
         }
@@ -427,9 +457,10 @@ final class KeyboardView: UIView {
         }
         for (i, row) in rows.enumerated() {
             let y = top + CGFloat(i) * (height + rowGap)
+            let extra = displayedModel?.repeatedLetterIndex(in: i)
             func place(_ indices: Range<Int>, from start: CGFloat, width: CGFloat) {
                 var x = start
-                let visible = indices.filter { split || keys[i][$0] != .rightSpace }
+                let visible = indices.filter { split || (keys[i][$0] != .rightSpace && $0 != extra) }
                 let net = width - CGFloat(visible.count - 1) * gap
                 let total = visible.reduce(0) { $0 + weight(keys[i][$1]) }
                 for j in visible {
@@ -456,11 +487,27 @@ final class KeyboardView: UIView {
                 let bank = min(260, available.width * 0.44)
                 let cut = displayedModel.splitIndex(row: i, count: row.count)
                 let stagger = i == 1 ? (bank + gap) / 10 : 0
-                place(0..<cut, from: available.minX + stagger, width: bank)
+                var leftWidth = bank
+                if let extra {
+                    // Extend into the center gap before shrinking any existing keys.
+                    let originalWeight = keys[i][..<extra].reduce(CGFloat.zero) { $0 + weight($1) }
+                    let letterWidth = (bank - CGFloat(extra - 1) * gap) / originalWeight
+                    leftWidth = min(bank + gap + letterWidth, available.width - bank - 4 * gap)
+                }
+                place(0..<cut, from: available.minX + stagger, width: leftWidth)
                 place(cut..<row.count, from: available.maxX - bank + stagger, width: bank - 2 * stagger)
             } else {
                 let indent = i == 1 ? (available.width + gap) / 20 : 0
                 place(row.indices, from: available.minX + indent, width: available.width - 2 * indent)
+            }
+            if let extra {
+                let copy = row[extra]
+                if !split {
+                    let original = row[extra + 1]
+                    (copy as? KeyButton)?.faceInsets = (original as? KeyButton)?.faceInsets ?? .zero
+                    copy.frame = original.frame
+                }
+                copy.alpha = split ? 1 : 0
             }
             if let right = keys[i].firstIndex(of: .rightSpace) {
                 let leftBar = row[right - 1]
@@ -489,14 +536,21 @@ final class KeyboardView: UIView {
             geometryArea = typingArea
             geometrySplit = split
             var centers: [(Int, CGRect)] = []
+            alternateLetterCenters.removeAll(keepingCapacity: true)
             for (r, line) in keys.enumerated() {
                 for (c, key) in line.enumerated() {
                     guard case let .type(text) = key, let ascii = text.lowercased().utf8.first,
                           (97...122).contains(ascii) else { continue }
                     let index = Int(ascii) - 97
                     let frame = keycapFrame(of: rows[r][c])
+                    let center = CGPoint(x: frame.midX, y: frame.midY)
+                    if c == displayedModel?.repeatedLetterIndex(in: r) {
+                        guard split else { continue }
+                        alternateLetterCenters[index] = center
+                    } else {
+                        letterCenters[index] = center
+                    }
                     centers.append((index, frame))
-                    letterCenters[index] = CGPoint(x: frame.midX, y: frame.midY)
                 }
             }
             var masks = [UInt32](repeating: 0, count: 26)
@@ -601,7 +655,8 @@ final class KeyboardView: UIView {
               case let .type(text) = source.key, text.count == 1, text.first?.isLetter == true,
               onGlideStart?() == true else { return }
         guard !letterCenters.contains(.zero),
-              let path = GlideStroke(centers: letterCenters, point: point, time: time, bounds: bounds) else { return }
+              let path = GlideStroke(centers: letterCenters, alternateCenters: alternateLetterCenters,
+                                     point: point, time: time, bounds: bounds) else { return }
         stroke = path
         glideOwner = ObjectIdentifier(source)
     }

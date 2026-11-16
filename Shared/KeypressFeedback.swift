@@ -7,6 +7,7 @@ enum KeyboardSetting: String {
     case font = "keyboard-font"
     case firmness = "keypress-firmness"
     case split = "split-wide-layout"
+    case repeatSplitLetters = "repeat-split-letters"
     case oneHanded = "one-handed-layout"
     case returnAfterSymbol = "return-after-symbol"
     case glideTyping = "glide-typing"
@@ -57,6 +58,8 @@ enum KeyboardSetting: String {
 
 enum WideKeyboardLayout {
     static var prefersSplit: Bool { (KeyboardSetting.split.read() ?? 1) != 0 }
+    static var repeatsLetters: Bool { KeyboardSetting.repeatSplitLetters.read() == 1 }
+    static func setRepeatLetters(_ enabled: Bool) -> Bool { KeyboardSetting.repeatSplitLetters.save(enabled ? 1 : 0) }
     static func setSplit(_ enabled: Bool) -> Bool { KeyboardSetting.split.save(enabled ? 1 : 0) }
 }
 

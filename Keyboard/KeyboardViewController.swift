@@ -166,6 +166,7 @@ final class KeyboardViewController: UIInputViewController {
         accentColor = KeyboardTint.stored()?.keyColor
         keyboardFont = .stored
         prefersSplit = WideKeyboardLayout.prefersSplit
+        model.repeatSplitLetters = WideKeyboardLayout.repeatsLetters
         preferredHand = OneHandedSetting.storedValue.flatMap(OneHandedLayout.init(rawValue:)) ?? .fullWidth
         glideEnabled = GlideTypingSetting.isEnabled
         autoCorrect = AutoCorrectionSetting.isEnabled
@@ -320,7 +321,7 @@ final class KeyboardViewController: UIInputViewController {
         defer { glideStartGeneration = nil }
         // A focus or cursor change while the finger is down cancels this input.
         guard glideStartGeneration == contextGeneration, let origin = glideContext() else { return true }
-        let keys = stroke.centers.map { MBKeyCenter(x: Float($0.x/stroke.pitch.width), y: Float($0.y/stroke.pitch.height)) }
+        let keys = stroke.decodingCenters.map { MBKeyCenter(x: Float($0.x/stroke.pitch.width), y: Float($0.y/stroke.pitch.height)) }
         let points = stroke.samples.map { MBGlideSample(x: Float($0.point.x/stroke.pitch.width),
                                                         y: Float($0.point.y/stroke.pitch.height), seconds: Float($0.seconds)) }
         var buffer = [CChar](repeating: 0, count: 128)

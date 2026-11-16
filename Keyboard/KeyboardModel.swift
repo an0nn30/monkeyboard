@@ -51,6 +51,7 @@ struct KeyboardModel: Equatable {
     var shift = Shift.lower
     var needsGlobe = false
     var isSplit = false
+    var repeatSplitLetters = false
     var oneHanded = OneHandedLayout.fullWidth
     var keyboardType = UIKeyboardType.default
 
@@ -77,6 +78,14 @@ struct KeyboardModel: Equatable {
         }
         rows[2].insert(layer == .letters ? .shift : .symbols, at: 0)
         rows[2].append(.delete)
+        // Keep the two extra controls across split/join transitions so they can
+        // fold into their matching keys in the joined layout.
+        for row in [0, 2] {
+            if let index = repeatedLetterIndex(in: row) {
+                let letter = rows[row][index]
+                rows[row].insert(letter, at: index)
+            }
+        }
         var bottom: [Key] = [.layer]
         if needsGlobe { bottom.append(.globe) }
         let punctuation = keyboardType == .emailAddress ? "@" : (keyboardType == .URL ? "/" : ",")
@@ -86,8 +95,15 @@ struct KeyboardModel: Equatable {
         return rows
     }
 
-    /// The first key in the right bank, in the same order as the joined layout.
+    /// The added key sits immediately before the original Y or B.
+    func repeatedLetterIndex(in row: Int) -> Int? {
+        guard repeatSplitLetters, layer == .letters, row == 0 || row == 2 else { return nil }
+        return 5 // Q W E R T | Y, or Shift Z X C V | B
+    }
+
+    /// The first key in the right bank.
     func splitIndex(row: Int, count: Int) -> Int {
+        if let extra = repeatedLetterIndex(in: row) { return extra + 1 }
         switch row {
         case 0, 1: return 5       // T | Y and G | H on the letter layer
         case 2: return (count + 1) / 2
