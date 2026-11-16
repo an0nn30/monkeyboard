@@ -1,6 +1,7 @@
 //! Stateless English lexical and contextual ranking. No network or user data storage.
 mod context21;
 mod contractions;
+mod edge_letters;
 mod glide;
 pub use glide::{mb_glide_v1, MBGlideSample, MBKeyCenter};
 mod rejoin53;

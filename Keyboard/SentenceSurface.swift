@@ -83,6 +83,45 @@ enum SentenceSurface {
             }
         }
         guard !repairs.isEmpty, let aligned = correspondence(source, proposed) else { return proposed }
+        return restoring(repairs, in: proposed, aligned: aligned)
+    }
+
+    /// Each entry identifies one word and the letter resolved by its release.
+    /// A different one-letter correction or a larger spelling repair can proceed.
+    static func keepingTouchSpellings(_ letters: [Int: Int], from raw: String, in proposed: String) -> String? {
+        guard !letters.isEmpty else { return proposed }
+        let source = Form(raw)
+        guard letters.keys.allSatisfy(source.words.indices.contains) else { return nil }
+        func reopensLetter(at word: Int, proposed spelling: String) -> Bool {
+            guard let letter = letters[word] else { return false }
+            let original = Array(norm(source.words[word])), revised = Array(norm(spelling))
+            return original.count == revised.count && original.indices.contains(letter) &&
+                original[letter] != revised[letter] && original[..<letter] == revised[..<letter] &&
+                original[(letter + 1)...] == revised[(letter + 1)...]
+        }
+        let output = Form(proposed)
+        if output.words.count < source.words.count {
+            guard let groups = correspondence(output, raw) else { return nil }
+            var edits = [Int: String](), start = 0
+            for (index, group) in groups.enumerated() {
+                let end = start + group.split(separator: " ").count
+                // The confirmed letter cannot be aligned across a joined boundary.
+                let joinsTouchedWord = end - start > 1 && (start..<end).contains { letters[$0] != nil }
+                if joinsTouchedWord || reopensLetter(at: start, proposed: output.words[index]) { edits[index] = group }
+                start = end
+            }
+            return output.replace(edits)
+        }
+        guard let aligned = correspondence(source, proposed) else { return nil }
+        var repairs = [Int: String]()
+        for index in letters.keys where aligned[index].contains(" ") || reopensLetter(at: index, proposed: aligned[index]) {
+            repairs[index] = source.words[index]
+        }
+        return restoring(repairs, in: proposed, aligned: aligned)
+    }
+
+    private static func restoring(_ repairs: [Int: String], in proposed: String, aligned: [String]) -> String {
+        guard !repairs.isEmpty else { return proposed }
         let output = Form(proposed)
         let result = NSMutableString(string: proposed)
         var end = output.words.count

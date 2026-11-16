@@ -26,6 +26,31 @@ final class KeyboardViewController: UIInputViewController {
     private var hingeClosed: Bool?
     private var allowsOneHanded = true
     private let corrections = WordCorrections()
+    private struct WordTouches {
+        let document: UUID
+        var expectedBefore: String
+        var masks: [UInt32]
+    }
+    private var wordTouches: WordTouches?
+    private struct TouchReplacement {
+        let typed: String
+        let committed: String
+
+        // Sentence reviewers have no touch coordinates. Give them the resolved
+        // token while preserving the raw input for all surrounding words.
+        func apply(to raw: inout String, protecting letters: inout [Int: Int]) -> Bool {
+            guard raw.hasSuffix(typed) else { return false }
+            let leading = raw.dropLast(typed.count)
+            if let last = leading.last, last.isLetter || last == "'" || last == "’" { return false }
+            let original = SentenceSurface.norm(typed), resolved = SentenceSurface.norm(committed)
+            let differences = zip(original, resolved).enumerated().filter { $0.element.0 != $0.element.1 }
+            guard original.count == resolved.count, differences.count == 1, let letter = differences.first else { return false }
+            raw = String(leading) + committed
+            guard let index = SentenceSurface.Form(raw).words.indices.last else { return false }
+            letters[index] = letter.offset
+            return true
+        }
+    }
     private struct WordEdit {
         let rejection: RejectedSpelling?
         let document: UUID
@@ -36,6 +61,7 @@ final class KeyboardViewController: UIInputViewController {
         let following: String
         var typedAhead = ""
         var acceptsImmediateBackspace = true
+        var isPronounCapitalization = false
 
         var inserted: String { replacement + delimiter + typedAhead }
 
@@ -137,12 +163,14 @@ final class KeyboardViewController: UIInputViewController {
         let anchor: String
         var raw = ""
         var rendered = ""
+        var touchLetters: [Int: Int] = [:]
     }
     private var run: OwnedRun?
     private struct SentenceInput {
         let id = UUID(), document: UUID, anchor: String
         var raw = "", rendered = ""
         var ended = false
+        var touchLetters: [Int: Int] = [:]
     }
     private var sentenceInput: SentenceInput?
     private var sentenceTask: Task<Void, Never>?
@@ -200,7 +228,19 @@ final class KeyboardViewController: UIInputViewController {
             button.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
         }
         board.onLetterGeometry = { [weak self] in self?.corrections.neighborMasks = $0 }
-        board.onKey = { [weak self] key in self?.press(key) }
+        board.onKey = { [weak self] key in
+            guard let self else { return }
+            self.press(key, nearbyLetters: self.board.nearbyLettersForCurrentTap)
+        }
+        board.edgeLetterContext = { [weak self] in
+            guard let self, self.isProseField, !self.insideWord else { return nil }
+            return self.textDocumentProxy.documentContextBeforeInput
+        }
+        board.predictedWordInitials = { [weak self] in
+            guard let self, self.isProseField, !self.insideWord,
+                  let before = self.textDocumentProxy.documentContextBeforeInput, before.last == " " else { return [] }
+            return self.corrections.nextWords(before: before).prefix(2).compactMap { $0.lowercased().first }
+        }
         board.onGlideStart = { [weak self] in
             guard let self, self.model.emojiMode == .closed, self.glideEnabled, self.glideFieldEligible else { return false }
             self.glideStartGeneration = self.contextGeneration
@@ -255,6 +295,7 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        board.coverKeyboardHandoff(true)
         if spellingSettingsToken == -1 {
             notify_register_dispatch(PersonalSpellings.settingsChanged, &spellingSettingsToken, .main) { [weak self] _ in
                 guard let self else { return }
@@ -288,6 +329,11 @@ final class KeyboardViewController: UIInputViewController {
         feedback.prepare(strength)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        board.coverKeyboardHandoff(false)
+    }
+
     private func applyLayout(width: CGFloat, animated: Bool = false) {
         guard width > 0 else { return }
         // Remote keyboard hosts may not provide hinge updates. Fall back to
@@ -312,6 +358,7 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        board.coverKeyboardHandoff(true)
         typingSound.select(.off)
         if spellingSettingsToken != -1 {
             notify_cancel(spellingSettingsToken)
@@ -321,6 +368,7 @@ final class KeyboardViewController: UIInputViewController {
         if let receipt = glideWord, receipt.expected == glideContext() { learnGlideChoice(receipt) }
         glideWord = nil
         glideStartGeneration = nil
+        wordTouches = nil
         abandonSentence()
         run = nil
         board.resetTouches()
@@ -359,7 +407,7 @@ final class KeyboardViewController: UIInputViewController {
 
     private func refreshContext() {
         let proxy = textDocumentProxy
-        if let edit = lastCorrection, !allowsWordSuggestions || !edit.matches(proxy) { lastCorrection = nil }
+        if let edit = lastCorrection, !canUndo(edit) || !edit.matches(proxy) { lastCorrection = nil }
         switch proxy.keyboardAppearance ?? .default {
         case .dark: board.overrideUserInterfaceStyle = .dark
         case .light: board.overrideUserInterfaceStyle = .light
@@ -451,7 +499,7 @@ final class KeyboardViewController: UIInputViewController {
         var options = String(cString: buffer).split(separator: "\t").map { token -> String in
             let word = String(token)
             if model.shift == .locked { return word.uppercased() }
-            if model.shift == .upper || autoUpper || word.hasPrefix("i'") { return word.prefix(1).uppercased() + word.dropFirst() }
+            if model.shift == .upper || autoUpper || word == "i" || word.hasPrefix("i'") { return word.prefix(1).uppercased() + word.dropFirst() }
             return word
         }
         guard let winner = options.first else { return false }
@@ -586,7 +634,7 @@ final class KeyboardViewController: UIInputViewController {
         updateKeys()
     }
 
-    private func press(_ key: Key) {
+    private func press(_ key: Key, nearbyLetters: UInt32 = 0) {
         adoptMemoryBudget()
         if model.emojiMode == .search { pressSearchKey(key); return }
         if handleKeyAfterGlide(key) { return }
@@ -600,7 +648,10 @@ final class KeyboardViewController: UIInputViewController {
             return
         }
         let snapshot = beginSentenceKey(key)
-        defer { if let snapshot { finishSentenceKey(snapshot) } }
+        var touchReplacement: TouchReplacement?
+        defer {
+            if let snapshot { finishSentenceKey(snapshot, touchReplacement: touchReplacement) }
+        }
         validateReview()
         nextWordTask?.cancel()
         if key != .shift { lastShift = nil }
@@ -622,6 +673,7 @@ final class KeyboardViewController: UIInputViewController {
         case .symbols: model.layer = model.layer == .numbers ? .symbols : .numbers
         case .globe: run = nil; advanceToNextInputMode()
         case .delete:
+            wordTouches = nil
             run = nil
             discardReview()
             let replacementShift = selectedWordShift()
@@ -635,11 +687,12 @@ final class KeyboardViewController: UIInputViewController {
             } else if !undoCorrection() { textDocumentProxy.deleteBackward(); keptSpelling = nil }
             applyAutoCase(replacing: replacementShift)
         case let .type(value):
-            if [".", ",", "!", "?", ";", ":"].contains(value) { insertDelimiter(value) }
+            if [".", ",", "!", "?", ";", ":"].contains(value) { touchReplacement = insertDelimiter(value) }
             else {
                 if pendingReview?.suffix.contains(where: { ".!?\n".contains($0) }) == true { discardReview() }
                 deferredReview?.suffix += value
                 pendingReview?.suffix += value
+                recordWordTouch(value, mask: nearbyLetters)
                 recordKey(value)
                 textDocumentProxy.insertText(value)
                 keptSpelling = nil
@@ -649,8 +702,8 @@ final class KeyboardViewController: UIInputViewController {
                 openedSymbolsFromLetters = false
             }
             applyAutoCase()
-        case .space, .rightSpace: insertDelimiter(" "); applyAutoCase()
-        case .enter: insertDelimiter("\n"); applyAutoCase()
+        case .space, .rightSpace: touchReplacement = insertDelimiter(" "); applyAutoCase()
+        case .enter: touchReplacement = insertDelimiter("\n"); applyAutoCase()
         }
         updateKeys()
         scheduleSuggestions()
@@ -749,7 +802,7 @@ final class KeyboardViewController: UIInputViewController {
         return KeySnapshot(input:input,leading:String(before.dropLast(input.rendered.count)),character:c)
     }
 
-    private func finishSentenceKey(_ snapshot: KeySnapshot) {
+    private func finishSentenceKey(_ snapshot: KeySnapshot, touchReplacement: TouchReplacement?) {
         let proxy = textDocumentProxy
         var input = snapshot.input
         guard proxy.attachedDocumentID == input.document, let after = proxy.documentContextBeforeInput,
@@ -760,6 +813,7 @@ final class KeyboardViewController: UIInputViewController {
             let last = snapshot.input.raw.reversed().prefix { $0.isLetter || $0 == "'" || $0 == "’" }
             if corrections.personalPreference(String(last.reversed())) != nil { abandonSentence(); return }
         }
+        if let touchReplacement, !touchReplacement.apply(to: &input.raw, protecting: &input.touchLetters) { abandonSentence(); return }
         input.raw += snapshot.character
         input.rendered = String(after.dropFirst(snapshot.leading.count))
         if ".!?\n".contains(snapshot.character) { input.ended = true }
@@ -783,9 +837,11 @@ final class KeyboardViewController: UIInputViewController {
                 do { try await Task.sleep(nanoseconds: 500_000_000) } catch { return }
             }
             guard !Task.isCancelled else { return }
-            let next = await finisher.review(raw:raw, displayed:displayed, resources:url, leading:input.anchor, atPause: !input.ended,
-                                             hasHeadroom: { Self.hasHeadroom($0) })
-            guard !Task.isCancelled, next != displayed, let self,
+            let proposed = await finisher.review(raw:raw, displayed:displayed, resources:url, leading:input.anchor, atPause: !input.ended,
+                                                 hasHeadroom: { Self.hasHeadroom($0) })
+            guard !Task.isCancelled, proposed != displayed,
+                  let next = SentenceSurface.keepingTouchSpellings(input.touchLetters, from: raw, in: proposed),
+                  next != displayed, let self,
                   var current = self.sentenceInput, current.id == input.id,
                   current.rendered.hasPrefix(displayed), self.autoCorrect, self.usesTransformer,
                   self.allowsWordSuggestions else { return }
@@ -816,8 +872,12 @@ final class KeyboardViewController: UIInputViewController {
     }
 
     private var allowsWordSuggestions: Bool {
+        textDocumentProxy.autocorrectionType != .no && isProseField
+    }
+
+    private var isProseField: Bool {
         let proxy = textDocumentProxy
-        guard proxy.autocorrectionType != .no, proxy.isSecureTextEntry != true,
+        guard proxy.isSecureTextEntry != true,
               (proxy.selectedText ?? "").isEmpty else { return false }
         switch proxy.keyboardType ?? .default {
         case .default, .asciiCapable, .webSearch, .twitter: break
@@ -833,6 +893,26 @@ final class KeyboardViewController: UIInputViewController {
     private var insideWord: Bool {
         guard let next = textDocumentProxy.documentContextAfterInput?.first else { return false }
         return next.isLetter || next.isNumber || "_'’@".contains(next)
+    }
+
+    private func recordWordTouch(_ value: String, mask: UInt32) {
+        guard mask != 0 || wordTouches != nil else { return }
+        let proxy = textDocumentProxy
+        guard autoCorrect, allowsWordSuggestions, value.count == 1, value.first?.isLetter == true,
+              let document = proxy.attachedDocumentID,
+              let before = proxy.documentContextBeforeInput ?? (proxy.hasText ? nil : "") else {
+            wordTouches = nil
+            return
+        }
+        if let old = wordTouches, old.document != document || !before.hasSuffix(old.expectedBefore) || old.masks.count >= 40 {
+            wordTouches = nil
+        }
+        if wordTouches == nil {
+            guard mask != 0 else { return }
+            wordTouches = WordTouches(document: document, expectedBefore: String(before.suffix(32)), masks: [])
+        }
+        wordTouches?.expectedBefore += value
+        wordTouches?.masks.append(mask)
     }
 
     private func recordKey(_ value: String) {
@@ -955,26 +1035,50 @@ final class KeyboardViewController: UIInputViewController {
         return standard
     }
 
-    private func insertDelimiter(_ delimiter: String) {
+    private func insertDelimiter(_ delimiter: String) -> TouchReplacement? {
         let proxy = textDocumentProxy
         let word = prefix()
-        defer { keptSpelling = nil }
+        defer { keptSpelling = nil; wordTouches = nil }
+        if word == "i", word != keptSpelling, !insideWord, isProseField,
+           (proxy.autocapitalizationType ?? .none) != .none || (autoCorrect && allowsWordSuggestions),
+           let document = proxy.attachedDocumentID, let before = proxy.documentContextBeforeInput,
+           corrections.isStandalonePronoun(word, before: before) {
+            let leading = String(before.dropLast().suffix(32))
+            let following = String((proxy.documentContextAfterInput ?? "").prefix(20))
+            proxy.deleteBackward()
+            proxy.insertText("I" + delimiter)
+            lastCorrection = WordEdit(rejection: nil, document: document, original: "i", replacement: "I",
+                                      delimiter: delimiter, leading: leading, following: following, isPronounCapitalization: true)
+            discardReview()
+            rememberBoundary(word, committed: "I", delimiter: delimiter)
+            return nil
+        }
         guard autoCorrect, allowsWordSuggestions, !insideWord, word != keptSpelling, !corrections.preserves(word),
               let document = proxy.attachedDocumentID, let before = proxy.documentContextBeforeInput else {
             run = nil
             discardReview()
             proxy.insertText(delimiter)
-            return
+            return nil
         }
-        let choices = corrections.choices(for: word, before: before, includeCompletions: false)
+        var masks = [UInt32]()
+        if let touches = wordTouches, touches.document == document, before.hasSuffix(touches.expectedBefore),
+           touches.masks.count <= word.count, word.count <= 40 {
+            masks = Array(repeating: 0, count: word.count - touches.masks.count) + touches.masks
+        }
+        let choices = corrections.choices(for: word, before: before, includeCompletions: false, nearbyLetters: masks)
+        let touchReplacement = choices.usesTouchReplacement ? choices.automatic.map { TouchReplacement(typed: word, committed: $0) } : nil
         if choices.usesPersonalReplacement {
             run = nil
             discardReview()
         }
-        if let old = run, !word.isEmpty, old.document == document,
+        if let touchReplacement, var old = run {
+            run = touchReplacement.apply(to: &old.raw, protecting: &old.touchLetters) ? old : nil
+        }
+        if touchReplacement == nil, let old = run, !word.isEmpty, old.document == document,
            before.hasSuffix(old.anchor + old.rendered), (proxy.documentContextAfterInput ?? "").isEmpty,
-           let proposal = proposedSentence(old, word: word, baseline: choices) {
-            let next = proposal.text
+           let proposal = proposedSentence(old, word: word, baseline: choices),
+           let next = SentenceSurface.keepingTouchSpellings(old.touchLetters, from: old.raw, in: proposal.text),
+           (next == proposal.text || next != old.rendered) {
             // Only rewrite the changed suffix. The common prefix stays in place
             // so the host's formatting and undo history survive.
             let common = zip(old.rendered, next).prefix(while: { $0 == $1 }).count
@@ -988,11 +1092,12 @@ final class KeyboardViewController: UIInputViewController {
             }
             for _ in prior { proxy.deleteBackward() }
             proxy.insertText(replacement + delimiter)
-            if [" ", ",", ";", ":"].contains(delimiter) && old.raw.split(separator: " ").count < 12 {
+            if [" ", ",", ";", ":"].contains(delimiter) && old.raw.split(separator: " ").count < 12 &&
+                (proposal.rawAfterJoin == nil || old.touchLetters.isEmpty) {
                 run?.rendered = next + delimiter
                 run?.raw = (proposal.rawAfterJoin ?? old.raw) + delimiter
             } else { run = nil }
-            return
+            return nil
         }
         if let old = run, old.document != document || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
         let committed = choices.automatic ?? word
@@ -1020,7 +1125,7 @@ final class KeyboardViewController: UIInputViewController {
         } else { proxy.insertText(delimiter) }
 
         rememberBoundary(word, committed: committed, delimiter: delimiter)
-        guard usesTransformer else { return }
+        guard usesTransformer else { return touchReplacement }
         let extending = pendingReview != nil
         if delimiter == " ", (!choices.reviewAlternatives.isEmpty || choices.reviewsShortWord), (proxy.documentContextAfterInput ?? "").isEmpty {
             let review = SentenceDecoder.Review(typed: word, leading: String(leading.suffix(4096)),
@@ -1034,6 +1139,7 @@ final class KeyboardViewController: UIInputViewController {
             // received their final right-hand context.
             requestRevision()
         }
+        return touchReplacement
     }
 
     private func finishReview() {
@@ -1127,11 +1233,15 @@ final class KeyboardViewController: UIInputViewController {
         lastCorrection?.typedAhead.append(addition)
     }
 
+    private func canUndo(_ edit: WordEdit) -> Bool {
+        edit.isPronounCapitalization ? isProseField : autoCorrect && allowsWordSuggestions
+    }
+
     private func undoCorrection(fromButton: Bool = false) -> Bool {
         let proxy = textDocumentProxy
         guard let edit = lastCorrection else { return false }
         lastCorrection = nil
-        guard autoCorrect, allowsWordSuggestions, edit.matches(proxy), fromButton || edit.acceptsImmediateBackspace else { return false }
+        guard canUndo(edit), edit.matches(proxy), fromButton || edit.acceptsImmediateBackspace else { return false }
         abandonSentence()
         run = nil
         discardReview()

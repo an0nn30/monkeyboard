@@ -6,18 +6,30 @@ final class KeyboardTypingTests: XCTestCase {
     }
     // Enable MonkeyBoard in the device's keyboard settings before running the suite.
     private func selectMonkeyBoard(in app: XCUIApplication) {
-        let feedback = app.buttons["keyboard-options"]
-        for _ in 0..<3 {
-            if feedback.waitForExistence(timeout: 4) { return }
-            let globe = app.buttons["Next keyboard"].firstMatch
-            if globe.exists { globe.tap() }
-        }
-        XCTAssertTrue(feedback.waitForExistence(timeout: 5), "Enable MonkeyBoard in Settings before testing.")
+        app.switchToKeyboard(showing: app.buttons["keyboard-options"])
     }
 
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
+    }
+
+    func testTopRowKeepsTapAtUpperEdgeOfItsControl() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        letter("s", in: app).tap()
+        letter("o", in: app).coordinate(withNormalizedOffset: CGVector(dx: 0.26, dy: 0.02)).tap()
+        letter("m", in: app).tap()
+        letter("e", in: app).tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "some")
+        app.buttons["keyboard-options"].tap()
+        let menuItem = app.buttons.matching(NSPredicate(format:
+            "identifier != 'keyboard-options' AND (label == 'Full Width' OR label BEGINSWITH 'Keypress Feedback')")).firstMatch
+        XCTAssertTrue(menuItem.waitForExistence(timeout: 4))
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "some")
     }
 
     func testSwitchingKeyboardsDoesNotShowAppleKeysBehindTheToolbar() throws {
@@ -60,6 +72,25 @@ final class KeyboardTypingTests: XCTestCase {
             }
             print("PRESENTATION \(name) screen=\(screen) toolbar=\(frame) edges=\(edges)")
             XCTAssertLessThan(edges, 10, "A second row of keycaps is visible behind the toolbar.")
+
+            // The demo has a flat backdrop. Sample across the bottom of the extension,
+            // away from controls, to catch a handoff cover left up after appearance.
+            let footerY = (app.buttons["hide-keyboard"].frame.maxY - screen.minY) * scale
+            if footerY + 3 * scale < CGFloat(image.height) {
+                let column = try XCTUnwrap(image.cropping(to: CGRect(x: CGFloat(image.width) * 0.65,
+                    y: (footerY - 2 * scale).rounded(), width: 1, height: (4 * scale).rounded())))
+                var pixels = [UInt8](repeating: 0, count: column.height * 4)
+                try pixels.withUnsafeMutableBytes { buffer in
+                    let ctx = try XCTUnwrap(CGContext(data: buffer.baseAddress, width: 1, height: column.height,
+                        bitsPerComponent: 8, bytesPerRow: 4, space: CGColorSpace(name: CGColorSpace.sRGB)!,
+                        bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue))
+                    ctx.draw(column, in: CGRect(x: 0, y: 0, width: 1, height: column.height))
+                }
+                for channel in 0..<3 {
+                    let delta = abs(Int(pixels[channel]) - Int(pixels[pixels.count - 4 + channel]))
+                    XCTAssertLessThanOrEqual(delta, 1, "Visible edge between the keyboard footer and iOS material.")
+                }
+            }
         }
         try checkSurface("MonkeyBoard on first focus")
         app.buttons["hide-keyboard"].tap()
@@ -80,12 +111,8 @@ final class KeyboardTypingTests: XCTestCase {
         draft.tap()
         selectMonkeyBoard(in: app)
         try checkSurface("MonkeyBoard after picking a sound")
-        let ownGlobe = app.buttons["key-Next keyboard"]
-        let systemGlobe = app.buttons["Next keyboard"].firstMatch
-        (ownGlobe.exists ? ownGlobe : systemGlobe).tap()
-        let appleQ = app.keys.matching(NSPredicate(format: "label ==[c] %@", "q")).firstMatch
-        if !appleQ.waitForExistence(timeout: 2), systemGlobe.exists { systemGlobe.tap() }
-        XCTAssertTrue(appleQ.waitForExistence(timeout: 4), "Switch to the English system keyboard")
+        let appleQ = app.keyboards.keys.matching(NSPredicate(format: "label ==[c] %@", "q")).firstMatch
+        app.switchToKeyboard(showing: appleQ)
         XCTAssertFalse(app.buttons["keyboard-options"].exists)
         selectMonkeyBoard(in: app)
         try checkSurface("MonkeyBoard after switching from Apple")

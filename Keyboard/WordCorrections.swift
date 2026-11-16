@@ -50,6 +50,7 @@ final class WordCorrections {
         var reviewAlternatives: [String] = []
         // Only a verified subject + verb frame can reopen a dictionary split.
         var usesPersonalReplacement = false
+        var usesTouchReplacement = false
         var reviewsProtectedBoundary = false
         var reviewsShortWord = false
         var missingLetterOnly = false
@@ -220,8 +221,8 @@ final class WordCorrections {
         return split
     }
 
-    func choices(for word: String, before: String, includeCompletions: Bool) -> Choices {
-        var result = rawChoices(for: word, before: before, includeCompletions: includeCompletions)
+    func choices(for word: String, before: String, includeCompletions: Bool, nearbyLetters: [UInt32] = []) -> Choices {
+        var result = rawChoices(for: word, before: before, includeCompletions: includeCompletions, nearbyLetters: nearbyLetters)
         // Prevent only an exact internal space insertion. Normal spelling,
         // apostrophes, and explicit user shortcuts still use their own policy.
         let lower = word.lowercased()
@@ -280,6 +281,13 @@ final class WordCorrections {
     private static let literalPrompts: [String] = ["type the literal", "identifier is", "code is", "password is", "type exactly", "word is spelled", "spelled exactly", "i wrote", "label says", "saved it as", "username is", "literal word", "please type", "please spell", "i typed", "word is", "literal is", "the word", "the spelling", "the syllable", "the abbreviation", "the variable"]
     private static func isLiteralContext(_ context: String) -> Bool {
         literalPrompts.contains { context == $0 || context.hasSuffix(" " + $0) }
+    }
+
+    func isStandalonePronoun(_ word: String, before: String) -> Bool {
+        guard word == "i", before.hasSuffix("i"), shortcuts[word] == nil, !preserves(word) else { return false }
+        let left = before.dropLast()
+        let boundary = left.last.map { $0.isWhitespace || "(\"“‘[{—".contains($0) } ?? true
+        return boundary && !Self.isLiteralContext(String(left.suffix(160)).lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
     }
 
     private static func uniqueJoin(original: [String], proposed: [String]) -> Int? {
@@ -501,7 +509,33 @@ final class WordCorrections {
         return String(rendered.dropLast(word.count)) + committed
     }
 
-    private func rawChoices(for word: String, before: String, includeCompletions: Bool) -> Choices {
+    // When two dictionary guesses replace the same key, its release point can
+    // distinguish opposite neighbors. Leave ambiguous or unobserved edits to
+    // the existing spelling model.
+    private func touchReplacement(typed: String, baseline: String?, words: [String], nearbyLetters: [UInt32]) -> String? {
+        guard let leading = baseline ?? words.first?.lowercased() else { return nil }
+        let input = Array(typed.utf8), chosen = Array(leading.utf8)
+        guard nearbyLetters.count == input.count, chosen.count == input.count,
+              let index = input.indices.first(where: { input[$0] != chosen[$0] }),
+              input[(index + 1)...] == chosen[(index + 1)...],
+              (97...122).contains(chosen[index]) else { return nil }
+        let mask = nearbyLetters[index]
+        guard mask != 0 else { return nil }
+        if baseline != nil, mask & (1 << (chosen[index] - 97)) != 0 { return nil }
+        var winner: String?
+        for word in words {
+            let candidate = word.lowercased(), bytes = Array(candidate.utf8)
+            guard bytes.count == input.count, (97...122).contains(bytes[index]),
+                  mask & (1 << (bytes[index] - 97)) != 0,
+                  input[..<index] == bytes[..<index], input[(index + 1)...] == bytes[(index + 1)...],
+                  mb_frequency_v1(candidate) > 0, isRecognizedSpelling(candidate) else { continue }
+            if let winner, candidate != winner { return nil }
+            winner = candidate
+        }
+        return winner
+    }
+
+    private func rawChoices(for word: String, before: String, includeCompletions: Bool, nearbyLetters: [UInt32]) -> Choices {
         guard (1...40).contains(word.count), before.hasSuffix(word) else { return Choices() }
         let original = word.lowercased()
         let normalized = original.replacingOccurrences(of: "’", with: "'")
@@ -770,6 +804,18 @@ final class WordCorrections {
                         choices.automatic = cased
                         choices.suggestions.insert(cased, at: 0)
                     }
+                }
+                if !nearbyLetters.isEmpty, !includeCompletions, mayCommit, missed == range,
+                   !contraction, repairedContraction == nil, commonTypos[original] == nil,
+                   personalPreference(word) == nil, mb_frequency_v1(normalized) == 0,
+                   let replacement = touchReplacement(typed: normalized, baseline: choices.automatic?.lowercased(), words: ordered,
+                                                      nearbyLetters: nearbyLetters),
+                   !isRecognizedSpelling(word) {
+                    let cased = word.first?.isUppercase == true ? replacement.prefix(1).uppercased() + replacement.dropFirst() : replacement
+                    choices.automatic = cased
+                    choices.suggestions.insert(cased, at: 0)
+                    choices.reviewAlternatives = []
+                    choices.usesTouchReplacement = true
                 }
                 if choices.automatic == nil, usesSentenceContext, missed == range, mayCommit,
                    normalized.count >= 5 {

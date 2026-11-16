@@ -9,8 +9,12 @@ private final class KeyButton: UIButton {
     var key = Key.space
     weak var board: KeyboardView?
     var acceptsCurrentTouch = false
+    private var contactRadius: CGFloat = 0
 
     private let face = UIView()
+    // iOS can pass a fully clear inter-key pixel to the host before hitTest runs.
+    // Mark only the control's touch target, with one step of 8-bit alpha.
+    private static let hitFill = UIColor(white: 0.5, alpha: 1 / 255)
     var faceInsets = UIEdgeInsets.zero
 
     func setFaceColor(_ color: UIColor, radius: CGFloat = 5) {
@@ -24,7 +28,7 @@ private final class KeyButton: UIButton {
         }
         face.layer.cornerRadius = radius
         face.backgroundColor = color
-        backgroundColor = .clear
+        backgroundColor = Self.hitFill
     }
 
     override func layoutSubviews() {
@@ -36,6 +40,7 @@ private final class KeyButton: UIButton {
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         guard let board else { return false }
         acceptsCurrentTouch = true
+        contactRadius = touch.type == .direct ? touch.majorRadius : 0
         board.begin(self, at: touch.location(in: board), time: touch.timestamp)
         return true
     }
@@ -55,7 +60,8 @@ private final class KeyButton: UIButton {
         guard let board, let touch, acceptsCurrentTouch else { return }
         acceptsCurrentTouch = false
         board.sample(self, at: touch.location(in: board), time: touch.timestamp)
-        board.finish(self, at: touch.location(in: board))
+        let radius = touch.type == .direct ? max(contactRadius, touch.majorRadius) : 0
+        board.finish(self, at: touch.location(in: board), contactRadius: radius)
     }
 
     override func cancelTracking(with event: UIEvent?) {
@@ -179,12 +185,17 @@ final class KeyboardView: UIView {
     private var repeated = false
     private var motionEndsAt: CFTimeInterval = 0
     var onLetterGeometry: (([UInt32]) -> Void)?
+    private var letterNeighborMasks: [UInt32] = []
     private var geometryArea = CGRect.null
     private var geometrySplit: Bool?
     private var letterCenters = [CGPoint](repeating: .zero, count: 26)
     private var alternateLetterCenters: [Int: CGPoint] = [:]
+    private var nearbyLetterRegions: [(bit: UInt32, rect: CGRect)] = []
+    private(set) var nearbyLettersForCurrentTap: UInt32 = 0
     var onKey: ((Key) -> Void)?
     var onTouch: ((Key) -> Void)?
+    var predictedWordInitials: (() -> [Character])?
+    var edgeLetterContext: (() -> String?)?
     var onGlideStart: (() -> Bool)?
     var onGlide: ((GlideStroke) -> Bool)?
     private var activeFingers = Set<ObjectIdentifier>()
@@ -207,13 +218,9 @@ final class KeyboardView: UIView {
         registerForTraitChanges([UITraitUserInterfaceStyle.self]) { (view: KeyboardView, _) in
             view.trail.setAccent(view.displayedAccent, traits: view.traitCollection)
         }
-        // The host can retain a snapshot of the outgoing keyboard during a switch.
-        // Cover our key grid and gutters, leaving UIKit to draw the outer material.
-        isOpaque = true
-        backgroundColor = UIColor { traits in
-            traits.userInterfaceStyle == .dark ? UIColor(white: 34 / 255, alpha: 1)
-                : UIColor(red: 223 / 255, green: 224 / 255, blue: 229 / 255, alpha: 1)
-        }
+        // Let the host's keyboard material continue between the keycaps and into the footer.
+        isOpaque = false
+        backgroundColor = .clear
         toolbar.axis = .horizontal
         toolbar.alignment = .fill
         addSubview(toolbar)
@@ -278,6 +285,18 @@ final class KeyboardView: UIView {
     }
 
     required init?(coder: NSCoder) { fatalError("Use init()") }
+
+    // UIKit can still be compositing the other keyboard during a handoff.
+    // Keep its keycaps out of our grid only while the system is swapping views.
+    func coverKeyboardHandoff(_ covering: Bool) {
+        isOpaque = covering
+        backgroundColor = covering ? Self.handoffFill : .clear
+    }
+
+    private static let handoffFill = UIColor { traits in
+        traits.userInterfaceStyle == .dark ? UIColor(white: 34 / 255, alpha: 1)
+            : UIColor(red: 223 / 255, green: 224 / 255, blue: 229 / 255, alpha: 1)
+    }
 
     func setOptionsMenu(_ menu: UIMenu, feedbackValue: String, showsSplitToggle: Bool) {
         optionsButton.menu = menu
@@ -586,6 +605,11 @@ final class KeyboardView: UIView {
                 }
             }
             var masks = [UInt32](repeating: 0, count: 26)
+            // A release just over a visible edge can belong to either cap.
+            // Cache each region separately, including both faces of split keys.
+            nearbyLetterRegions = centers.map { index, face in
+                (1 << index, face.insetBy(dx: -face.width / 4, dy: -face.height / 4))
+            }
             for (i, a) in centers {
                 for (j, b) in centers where i != j {
                     let x = (a.midX - b.midX) / ((a.width + b.width) / 2 + gap)
@@ -593,6 +617,7 @@ final class KeyboardView: UIView {
                     if x*x + y*y <= 1.65 { masks[i] |= 1 << j }
                 }
             }
+            letterNeighborMasks = masks
             onLetterGeometry?(masks)
         }
     }
@@ -622,6 +647,18 @@ final class KeyboardView: UIView {
     }
     private func visibleFrame(of button: UIButton) -> CGRect { keycapFrame(of: button, presented: true) }
 
+    func nearbyLetters(at point: CGPoint, for key: Key) -> UInt32 {
+        guard displayedModel?.layer == .letters, CACurrentMediaTime() >= motionEndsAt,
+              case let .type(letter) = key, let ascii = letter.lowercased().utf8.first,
+              (97...122).contains(ascii) else { return 0 }
+        let assigned = UInt32(1) << (ascii - 97)
+        var mask: UInt32 = 0
+        for face in nearbyLetterRegions where face.bit != assigned && face.rect.contains(point) {
+            mask |= face.bit
+        }
+        return mask
+    }
+
     private func hitFrame(of button: UIButton) -> CGRect {
         if let cap = button as? KeyButton, cap.key.isSpace {
             return controlFrame(of: cap, presented: true)
@@ -631,7 +668,12 @@ final class KeyboardView: UIView {
 
     // Use the same target at touch-down and lift-off, including during layout animations.
     private func nearestCap(at point: CGPoint) -> UIButton? {
-        guard bounds.contains(point), point.y >= toolbar.frame.maxY else { return nil }
+        guard bounds.contains(point) else { return nil }
+        let letterLayout = displayedModel?.layer == .letters && displayedModel?.emojiMode == .closed
+        let nearTop = point.y < toolbar.frame.maxY
+        if nearTop && (!letterLayout || point.y < toolbar.frame.maxY - 8) { return nil }
+        var edgeLetter: UIButton?
+        var edgeDistance: CGFloat = 8 * 8
         var nearest: UIButton?
         var best = CGFloat.infinity
         for row in rows {
@@ -645,12 +687,19 @@ final class KeyboardView: UIView {
                 guard let key = cap as? KeyButton, case .type = key.key else { continue }
                 let dx = max(r.minX - point.x, point.x - r.maxX, 0)
                 let dy = max(r.minY - point.y, point.y - r.maxY, 0)
-                guard dx <= 4, dy <= 4 else { continue }
                 let distance = dx * dx + dy * dy
+                // Keep an already assigned cap. Only fill unused space within a narrow
+                // band of a letter, including the bottom margin beneath the toolbar.
+                if letterLayout, case .type(let label) = key.key, label.first?.isLetter == true,
+                   distance <= edgeDistance {
+                    edgeLetter = cap
+                    edgeDistance = distance
+                }
+                guard dx <= 4, dy <= 4 else { continue }
                 if distance < best { nearest = cap; best = distance }
             }
         }
-        return nearest
+        return nearest ?? edgeLetter
     }
 
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
@@ -658,7 +707,8 @@ final class KeyboardView: UIView {
             return panel.hitTest(convert(point, to: panel), with: event)
         }
         guard isUserInteractionEnabled, !isHidden, alpha > 0.01, bounds.contains(point),
-              !rows.isEmpty, point.y >= toolbar.frame.maxY else { return super.hitTest(point, with: event) }
+              !rows.isEmpty else { return super.hitTest(point, with: event) }
+        if point.y < toolbar.frame.maxY { return nearestCap(at: point) ?? super.hitTest(point, with: event) }
         if !keypadGlobe.isHidden, keypadGlobe.frame.contains(point) { return keypadGlobe }
         if visibleFrame(of: hideButton).contains(point) { return hideButton }
         if let cap = nearestCap(at: point) { return cap }
@@ -755,9 +805,48 @@ final class KeyboardView: UIView {
         preview.show(char, above: visibleFrame(of: target), in: self, font: displayedFont)
     }
 
-    fileprivate func finish(_ source: KeyButton, at point: CGPoint) {
+    private func contactTarget(at point: CGPoint, assigned: KeyButton?, radius: CGFloat) -> KeyButton? {
+        guard let assigned, case .type(let text) = assigned.key, text.first?.isLetter == true,
+              displayedModel?.layer == .letters, radius.isFinite, radius > 0,
+              let predictedWordInitials else { return assigned }
+        let key = text.lowercased()
+        let face = visibleFrame(of: assigned)
+        if face.insetBy(dx: radius, dy: radius).contains(point) && face.width > radius * 2 && face.height > radius * 2 {
+            return assigned
+        }
+        let reach = CGRect(x: point.x-radius, y: point.y-radius, width: 2*radius, height: 2*radius)
+        var faces = [(key: String, rect: CGRect)](), letters = [String: KeyButton]()
+        for row in rows {
+            for case let button as KeyButton in row where button.isUserInteractionEnabled && !button.isHidden {
+                let rect = visibleFrame(of: button)
+                guard rect.intersects(reach) else { continue }
+                let name = button.accessibilityLabel?.lowercased() ?? ""
+                faces.append((name, rect))
+                if name.count == 1 && name.first?.isLetter == true { letters[name] = button }
+            }
+        }
+        guard letters.count >= 2 else { return assigned }
+        // The perimeter extension only assigns a letter after the normal face
+        // and four-point gap checks miss, or just above the top letter row.
+        let inPerimeter = point.y < toolbar.frame.maxY ||
+            !face.insetBy(dx: -4, dy: -4).contains(point)
+        if inPerimeter, let edgeLetterContext,
+           let alternate = KeyboardContact.perimeterLetter(at: point, radius: radius, assigned: key,
+               faces: faces, masks: letterNeighborMasks, context: edgeLetterContext),
+           let button = letters[alternate] {
+            return button
+        }
+        // Direct touches expose one radius. An ellipse with direction is available
+        // to the synthetic benchmark, but a circular estimate is all UIKit supplies here.
+        let votes = KeyboardContact.coverage(at: point, radiusX: radius, radiusY: radius, angle: 0, faces: faces)
+        let choice = KeyboardContact.preferredCircularLetter(point: key, votes: votes, predictedInitials: predictedWordInitials)
+        guard let choice, choice != key else { return assigned }
+        return letters[choice] ?? assigned
+    }
+
+    fileprivate func finish(_ source: KeyButton, at point: CGPoint, contactRadius: CGFloat = 0) {
         guard source.superview === self else { return }
-        let target = button(at: point, from: source)
+        var target = button(at: point, from: source)
         if isTracing(source), let path = stroke, path.isGlide {
             endStroke()
             cancel(source)
@@ -765,6 +854,7 @@ final class KeyboardView: UIView {
             if onGlide?(path) != true { onKey?(target.key) }
             return
         }
+        target = contactTarget(at: point, assigned: target, radius: contactRadius)
         track(source, target: target)
         let id = ObjectIdentifier(source)
         let alreadyDeleted = source.key == .delete && repeated
@@ -776,7 +866,11 @@ final class KeyboardView: UIView {
             }
         }
         cancel(source)
-        if let target, !alreadyDeleted { onKey?(target.key) }
+        if let target, !alreadyDeleted {
+            nearbyLettersForCurrentTap = nearbyLetters(at: point, for: target.key)
+            onKey?(target.key)
+            nearbyLettersForCurrentTap = 0
+        }
     }
 
     fileprivate func cancel(_ source: KeyButton) {

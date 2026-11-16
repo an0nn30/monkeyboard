@@ -20,6 +20,9 @@ int32_t mb_attested_v1(const char *context, const char *word, char *out, size_t 
 int32_t mb_phrase_evidence_v1(const char *context, char *out, size_t capacity);
 // Occurrence count in the built-in English lexicon. Zero for an absent word.
 uint32_t mb_frequency_v1(const char *word);
+// Compare the frequency of two ASCII next letters given the end of the preceding text.
+// Optional neighbor_masks contains 26 rows for possible slips in that prefix.
+float mb_edge_letter_odds_v1(const char *before, uint8_t point, uint8_t other, const uint32_t *neighbor_masks);
 // Learned safeguards and accidental internal space detector.
 int32_t mb_keep_literal53_v1(const char *left, const char *typed, const char *right, const char *replacement);
 int32_t mb_original_name54_v1(const char *typed);
