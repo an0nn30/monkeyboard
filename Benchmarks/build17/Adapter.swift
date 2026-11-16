@@ -20,6 +20,7 @@ final class ReplayController: KeyboardViewController {
 }
 final class ReplayWorker {
     var model: SentenceDecoder!
+    func releaseForMemoryPressure() { model = nil }
     func submit<T>(_ work: (SentenceDecoder) throws -> T, completion: (T) -> Void) -> Operation {
         do { completion(try work(model)) } catch { fatalError("Decoder failed: \(error)") }
         return Operation()

@@ -235,6 +235,7 @@ final class Contextual55 {
     private func states(_ sequences: [[Int]], selected: [Range<Int>]? = nil) throws -> [State] {
         var output = [State]()
         for offset in stride(from: 0, to: sequences.count, by: Self.batch) {
+            try Task.checkCancellation()
             let chunk = Array(sequences[offset..<min(offset + Self.batch, sequences.count)])
             let vectors = try MLMultiArray(shape: [4, 32, 768], dataType: .float16)
             let tokens = try MLMultiArray(shape: [4, 32], dataType: .int32)
@@ -311,6 +312,47 @@ final class Contextual55 {
             let bias = data.loadUnaligned(fromByteOffset: 12 + (dimension + id) * 4, as: Float.self)
             return vDSP.dot(floats, state.values) * scale + bias - state.mass
         }
+    }
+
+    /// Two readings share one inference batch. At the end of a draft, a
+    /// candidate must fit both an open phrase and a possible sentence ending.
+    func boundaryChoice(literal: String, shown: String, left: String, right: String,
+                        alternatives: [String]) -> String? {
+        guard !alternatives.isEmpty, !Task.isCancelled else { return nil }
+        let before = encode(String(left.suffix(200)).trimmingCharacters(in: .whitespacesAndNewlines))
+        guard before.count >= 2 else { return nil }
+        let after = encode(String(right.prefix(100)))
+        let open = maskedSequence(before: before, after: after)
+        let queries = after.isEmpty ? [open, maskedSequence(before: before, after: encode("."))] : [open]
+        guard let evidence = try? states(queries) else { return nil }
+        for word in alternatives {
+            let pieces = encode(" " + word)
+            guard pieces.count == 1 else { continue }
+            // Compare against the whole model vocabulary as well as close
+            // spelling rivals. A rare literal alone is insufficient evidence.
+            if evidence.allSatisfy({ state in
+                guard state.top.prefix(4).contains(word),
+                      probability(pieces[0], given: state) >= -3.5 else { return false }
+                return !state.top.prefix(8).contains { rival in
+                    guard rival != word, Self.distance(literal, rival) <= 1 else { return false }
+                    let ids = encode(" " + rival)
+                    return ids.count == 1 && probability(pieces[0], given: state) - probability(ids[0], given: state) < 2
+                }
+            }) { return word }
+        }
+
+        // A later word can support the original spelling after an eager
+        // correction. Compare how well each spelling predicts that word.
+        guard alternatives.contains(shown),
+              let next = tokenize(right).first, !next.text.isEmpty, next.text.allSatisfy(\.isLetter),
+              !next.ids.isEmpty else { return nil }
+        let literalPrefix = before + encode(" " + literal)
+        let shownPrefix = before + encode(" " + shown)
+        let queriesForNext = [literalPrefix, shownPrefix].map { maskedSequence(before: $0, after: []) }
+        guard let predictions = try? states(queriesForNext) else { return nil }
+        let id = next.ids[0]
+        let originalScore = probability(id, given: predictions[0])
+        return originalScore >= -4 && originalScore - probability(id, given: predictions[1]) >= 4 ? literal : nil
     }
 
     private func filled(before: [Int], option: [Int], after: [Int]) -> ([Int], Range<Int>) {

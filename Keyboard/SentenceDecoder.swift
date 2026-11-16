@@ -359,6 +359,12 @@ final class DecoderWorker {
         return queue
     }()
     private var decoder: SentenceDecoder?
+    func releaseForMemoryPressure() {
+        queue.cancelAllOperations()
+        // The decoder is confined to this queue, including destruction. An
+        // inference already in progress finishes before its model is released.
+        queue.addBarrierBlock { [weak self] in self?.decoder = nil }
+    }
     @discardableResult
     func submit<T>(_ work: @escaping (SentenceDecoder) throws -> T, completion: @escaping (T) -> Void) -> Operation {
         let operation = BlockOperation()

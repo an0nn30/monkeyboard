@@ -148,10 +148,13 @@ final class KeyboardView: UIView {
     }
     private let toolbar = UIStackView()
     private let optionsButton = UIButton(type: .system)
+    private let undoButton = UIButton(type: .system)
     private let layoutButton = UIButton(type: .system)
     private let hideButton = UIButton(type: .system)
     private let expandButton = UIButton(type: .system)
     private let keypadGlobe = UIButton(type: .custom)
+    // The keyboard extension supplies the panel. Appearance previews only render the keys.
+    weak var emojiPanel: UIView?
     static let minimumSplitWidth: CGFloat = 560
     private static let bottomMargin: CGFloat = 5
     private static let spaceHitDepth: CGFloat = 16
@@ -189,6 +192,7 @@ final class KeyboardView: UIView {
     private var stroke: GlideStroke?
     private let trail = GlideTrail()
     var onWord: ((String) -> Void)?
+    var onUndoCorrection: (() -> Void)?
     var configureGlobe: ((UIButton) -> Void)? {
         didSet { configureGlobe?(keypadGlobe) }
     }
@@ -220,6 +224,16 @@ final class KeyboardView: UIView {
         optionsButton.showsMenuAsPrimaryAction = true
         toolbar.addArrangedSubview(optionsButton)
         optionsButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        undoButton.setImage(UIImage(systemName: "arrow.uturn.backward"), for: .normal)
+        undoButton.tintColor = Self.ink
+        undoButton.accessibilityLabel = "Undo autocorrection"
+        undoButton.accessibilityIdentifier = "undo-autocorrection"
+        undoButton.isHidden = true
+        undoButton.addAction(UIAction { [weak self] _ in self?.onUndoCorrection?() }, for: .touchUpInside)
+        toolbar.addArrangedSubview(undoButton)
+        let undoWidth = undoButton.widthAnchor.constraint(equalToConstant: 44)
+        undoWidth.priority = .defaultHigh
+        undoWidth.isActive = true
         for index in 0..<3 {
             let button = UIButton(type: .system)
             button.titleLabel?.lineBreakMode = .byTruncatingTail
@@ -271,6 +285,11 @@ final class KeyboardView: UIView {
         layoutButton.isHidden = !showsSplitToggle
     }
 
+    func showCorrectionUndo(_ visible: Bool, originalWord: String?) {
+        undoButton.isHidden = !visible
+        undoButton.accessibilityValue = originalWord
+    }
+
     func setSuggestions(_ words: [String]) {
         for (index, button) in suggestions.enumerated() {
             let word = index < words.count ? words[index] : nil
@@ -297,13 +316,14 @@ final class KeyboardView: UIView {
         let keypad = model.layer == .keypad
         let wasKeypad = displayedModel?.layer == .keypad
         if animateLayout { layoutIfNeeded(); resetTouches() }
+        if displayedModel?.emojiMode != model.emojiMode { resetTouches() }
         if displayedModel?.repeatSplitLetters != model.repeatSplitLetters { geometryArea = .null }
         displayedModel = model
         displayedReturnTitle = returnTitle
-        toolbar.isHidden = keypad
+        toolbar.isHidden = keypad || model.emojiMode != .closed
         // Decimal takes the lower-left cell. Keep the system keyboard switch
         // available below the grid on hosts that require an in-extension globe.
-        keypadGlobe.isHidden = !(keypad && model.keyboardType == .decimalPad && model.needsGlobe)
+        keypadGlobe.isHidden = !(model.needsGlobe && (model.emojiMode == .browse || (keypad && model.keyboardType == .decimalPad)))
         expandButton.isHidden = model.oneHanded == .fullWidth
         expandButton.setImage(UIImage(systemName: model.oneHanded == .left ? "chevron.right" : "chevron.left"),
                               for: .normal)
@@ -346,6 +366,7 @@ final class KeyboardView: UIView {
         for (i, row) in next.enumerated() {
             for (j, key) in row.enumerated() {
                 let button = rows[i][j]
+                button.isHidden = model.emojiMode == .browse
                 (button as? KeyButton)?.key = key
                 var title: String?
                 var symbol: String?
@@ -362,6 +383,7 @@ final class KeyboardView: UIView {
                 case .layer: title = model.layer == .letters ? "123" : "ABC"; label = title!
                 case .symbols: title = model.layer == .numbers ? "#+=" : "123"; label = title!
                 case .globe: symbol = "globe"; label = "Next keyboard"
+                case .emoji: symbol = "face.smiling"; label = "Emoji"
                 case .space, .rightSpace: title = "space"; label = "Space"; color = Self.keyFill
                 case .enter:
                     title = returnTitle; symbol = returnTitle == nil ? "return" : nil
@@ -438,8 +460,11 @@ final class KeyboardView: UIView {
         let gap: CGFloat = typingArea.width < 360 ? 3 : 4
         let rowGap: CGFloat = typingArea.height < 220 ? 5 : 7
         // This strip also provides headroom for top-row previews inside the extension.
-        let top: CGFloat = keypad ? 0 : min(61, max(46, typingArea.height * 0.23))
+        let searching = displayedModel?.emojiMode == .search
+        let top: CGFloat = searching ? min(83, typingArea.height * 0.35) :
+            (keypad ? 0 : min(61, max(46, typingArea.height * 0.23)))
         toolbar.frame = CGRect(x: available.minX, y: 0, width: available.width, height: top)
+        emojiPanel?.frame = searching ? toolbar.frame : typingArea
         if hand != .fullWidth {
             let gutterX = hand == .left ? typingArea.maxX : bounds.minX
             let gutterWidth = bounds.width - typingArea.width
@@ -475,8 +500,13 @@ final class KeyboardView: UIView {
                         cap.frame = face.insetBy(dx: -gap / 2, dy: -rowGap / 2)
                     } else if let cap = row[j] as? KeyButton, cap.key.isSpace {
                         let depth = min(Self.spaceHitDepth, max(0, bounds.maxY - face.maxY))
-                        cap.faceInsets = UIEdgeInsets(top: 0, left: 0, bottom: depth, right: 0)
-                        cap.frame = CGRect(x: face.minX, y: face.minY, width: face.width, height: face.height + depth)
+                        // Give Space its half of the gap next to punctuation and the row above.
+                        // The inner edges of the split spacebars face the empty center gutter.
+                        let left = !split || (cap.key == .space && keys[i][j - 1] != .type(",")) ? gap / 2 : 0
+                        let right = !split || cap.key == .rightSpace ? gap / 2 : 0
+                        cap.faceInsets = UIEdgeInsets(top: rowGap / 2, left: left, bottom: depth, right: right)
+                        cap.frame = CGRect(x: face.minX - left, y: face.minY - rowGap / 2,
+                                           width: face.width + left + right, height: face.height + rowGap / 2 + depth)
                     } else {
                         (row[j] as? KeyButton)?.faceInsets = .zero
                         row[j].frame = face
@@ -624,6 +654,9 @@ final class KeyboardView: UIView {
     }
 
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if let panel = emojiPanel, !panel.isHidden, panel.frame.contains(point) {
+            return panel.hitTest(convert(point, to: panel), with: event)
+        }
         guard isUserInteractionEnabled, !isHidden, alpha > 0.01, bounds.contains(point),
               !rows.isEmpty, point.y >= toolbar.frame.maxY else { return super.hitTest(point, with: event) }
         if !keypadGlobe.isHidden, keypadGlobe.frame.contains(point) { return keypadGlobe }

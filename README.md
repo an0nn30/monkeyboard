@@ -2,6 +2,14 @@
 
 A native English QWERTY keyboard for iPhone, with flat keycaps, Apple system type, and a borderless character preview. Press a letter to see its preview immediately, slide to correct it, and lift to insert it. The layout uses the keyboard width supplied by iOS as the available space changes.
 
+Build 66 keeps typing available under memory pressure. If iOS warns that the keyboard is near its limit, MonkeyBoard releases the large prediction models and uses lighter corrections for the rest of that keyboard process. Saved spellings and settings carry over. [Device evidence and simulator regression](Benchmarks/stability/README.md).
+
+Build 64 learns from repeated autocorrect undos, spelling suggestions you select, and swipe alternatives you keep. Open **Keyboard Settings → Learned spellings** to choose Fast (2 matching choices), Balanced (3), or Careful (5). Tap a learned spelling to edit it, forget a single entry, or reset both types of learning and their pending counts. Swipe preferences reorder words the decoder considered for that gesture. Personalization stays on the device and stores no sentences or gesture paths.
+
+Build 63 brings the fading, accent-tinted glide trail from main into the same device build as the learned spellings settings.
+
+Build 62 remembers a spelling after you undo the same autocorrection three times. Your spelling stays as typed in later messages. In **Keyboard Settings → Learned spellings**, use **Forget** for one word or **Reset spelling memory** to clear learned words and pending counts. Learning stays on this device; no sentences or swipe paths are saved for personalization. [Behavior and tests](Benchmarks/build62/README.md).
+
 Build 61 recovers all five longer swipes lost in build 60, including *volleyball*, and keeps all twelve of its new catches. On 8,192 fresh recorded swipes it got 14 more intended words first and lost four, a net gain of ten. [Compare builds 60 and 61](Benchmarks/glide/build61/README.md).
 
 Build 60 recovers the earlier *following* swipe and compares two readings when the finger path points to different long words. On 1,141 fresh longer swipes, it picked 948 correctly on the first try, up from 941. [Compare builds 59 and 60](Benchmarks/glide/build60/README.md).
@@ -24,6 +32,7 @@ Some historical benchmarks use a separately supplied `typo_sentences.md` file in
 
 ## Try it
 
+- Tap the smiley on the bottom row to browse or search emoji. Tap an emoji to insert it, hold it to choose an available skin tone, and tap **ABC** to return to typing. The picker and its recent choices work offline.
 - With the Duo closed, tap **•••** above the keys and choose **Left Hand** or **Right Hand**. The keys and suggestions slide toward that thumb. Tap the arrow in the empty space (or choose **Full Width** in the menu) to expand again. Your choice is remembered separately from the open layout.
 - On wide layouts, the keyboard splits into two thumb-sized groups with a spacebar on each side. The layout button at the right of the suggestion strip slides the keys between split and joined positions. Reduce Motion makes the switch immediate. You can also set **Keyboard Settings → Split on wide screens**.
 - Tap the down chevron beneath the bottom-left keys to dismiss the keyboard. Tap the text field to type again. Hold the globe to choose another enabled keyboard, including Emoji.

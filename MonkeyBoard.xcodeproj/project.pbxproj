@@ -23,8 +23,11 @@
 		BA7200000000000000000002 /* GlideTrail.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7200000000000000000011 /* GlideTrail.swift */; };
 		BB1100000000000000000001 = {isa = PBXBuildFile; fileRef = BB1100000000000000000002; };
 		A554C0908A6B40B6A8000001 /* KeypressFeedback.swift in App */ = {isa = PBXBuildFile; fileRef = A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */; };
+		B06200000000000000000001 /* PersonalSpellings.swift in App */ = {isa = PBXBuildFile; fileRef = B06200000000000000000003 /* PersonalSpellings.swift */; };
 		A554C0908A6B40B6A8000002 /* KeypressFeedback.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */; };
+		B06200000000000000000002 /* PersonalSpellings.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = B06200000000000000000003 /* PersonalSpellings.swift */; };
 		10F0C7C80E5D2DBEE097D025 /* KeyboardTypingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F415B391E00B94095304371 /* KeyboardTypingTests.swift */; };
+		AA6700000000000000000001 /* KeyboardComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6700000000000000000002 /* KeyboardComparisonTests.swift */; };
 		7F1104F39BF31DC86A03D812 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE84E9111416B7C4FCE4F2 /* KeyboardViewController.swift */; };
 		9542B1EE6763F36E91BAEEC7 /* MonkeyBoardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A67810A0A83A645D9FB21135 /* MonkeyBoardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1521AC249C9C58D98FFF5B0 /* KeyboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */; };
@@ -47,6 +50,9 @@
 		BC5500000000000000000009 /* lexical55-context.bin */ = {isa = PBXBuildFile; fileRef = BE5500000000000000000009; };
 		BC550000000000000000000A /* RoBERTa-LICENSE.txt */ = {isa = PBXBuildFile; fileRef = BE550000000000000000000A; };
 		BC550000000000000000000B /* NOTICE.txt */ = {isa = PBXBuildFile; fileRef = BE550000000000000000000B; };
+		E02100000000000000000004 /* EmojiCatalog.swift */ = {isa = PBXBuildFile; fileRef = E02100000000000000000001 /* EmojiCatalog.swift */; };
+		E02100000000000000000005 /* EmojiPickerView.swift */ = {isa = PBXBuildFile; fileRef = E02100000000000000000002 /* EmojiPickerView.swift */; };
+		E02100000000000000000006 /* emoji-en.tsv */ = {isa = PBXBuildFile; fileRef = E02100000000000000000003 /* emoji-en.tsv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +94,10 @@
 		BA7100000000000000000013 /* KeyboardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardFont.swift; sourceTree = "<group>"; };
 		BB1100000000000000000002 /* WordNet-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "keyboard-engine/model/semantics/WordNet-LICENSE.txt"; sourceTree = SOURCE_ROOT; };
 		A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeypressFeedback.swift; sourceTree = "<group>"; };
+		B06200000000000000000003 /* PersonalSpellings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/PersonalSpellings.swift; sourceTree = "<group>"; };
 		A554C0908A6B40B6A8000004 /* SharedSettings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharedSettings.entitlements; sourceTree = "<group>"; };
 		2F415B391E00B94095304371 /* KeyboardTypingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTypingTests.swift; sourceTree = "<group>"; };
+		AA6700000000000000000002 /* KeyboardComparisonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardComparisonTests.swift; sourceTree = "<group>"; };
 		3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModel.swift; sourceTree = "<group>"; };
 		A554C0908A6B40B6A8000007 /* WordCorrections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCorrections.swift; sourceTree = "<group>"; };
@@ -116,6 +124,9 @@
 		BE5500000000000000000009 /* lexical55-context.bin */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Keyboard/Resources/lexical55-context.bin"; sourceTree = SOURCE_ROOT; };
 		BE550000000000000000000A /* RoBERTa-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Benchmarks/build55/model/RoBERTa-LICENSE.txt"; sourceTree = SOURCE_ROOT; };
 		BE550000000000000000000B /* NOTICE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Benchmarks/build55/model/NOTICE.txt"; sourceTree = SOURCE_ROOT; };
+		E02100000000000000000001 /* EmojiCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiCatalog.swift"; sourceTree = "<group>"; };
+		E02100000000000000000002 /* EmojiPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiPickerView.swift"; sourceTree = "<group>"; };
+		E02100000000000000000003 /* emoji-en.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Resources/emoji-en.tsv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -151,6 +162,7 @@
 				CA7000000000000000000001 /* TypingSound.swift */,
 				CA7000000000000000000002 /* TypingSounds */,
 				A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */,
+				B06200000000000000000003 /* PersonalSpellings.swift */,
 				BA7100000000000000000012 /* KeyboardTint.swift */,
 				BA7100000000000000000013 /* KeyboardFont.swift */,
 				B065A3306758C6882394ED94 /* Keyboard */,
@@ -183,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2F415B391E00B94095304371 /* KeyboardTypingTests.swift */,
+				AA6700000000000000000002 /* KeyboardComparisonTests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -192,6 +205,9 @@
 			children = (
 				7F49F9E39446E10A4A749FA9 /* KeyPreview.swift */,
 				BA7200000000000000000011 /* GlideTrail.swift */,
+				E02100000000000000000001 /* EmojiCatalog.swift */,
+				E02100000000000000000002 /* EmojiPickerView.swift */,
+				E02100000000000000000003 /* emoji-en.tsv */,
 				400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */,
 				A554C0908A6B40B6A8000007 /* WordCorrections.swift */,
 				3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */,
@@ -258,7 +274,7 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		BB1100000000000000000003 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (CA7000000000000000000005, BB1100000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
-		DD1200000000000000000004 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (CA7000000000000000000006, BC5500000000000000000006, BC5500000000000000000007, BC5500000000000000000008, BC5500000000000000000009, BC550000000000000000000A, BC550000000000000000000B, DC1200000000000000000003, DC1300000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+		DD1200000000000000000004 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (CA7000000000000000000006, E02100000000000000000006, BC5500000000000000000006, BC5500000000000000000007, BC5500000000000000000008, BC5500000000000000000009, BC550000000000000000000A, BC550000000000000000000B, DC1200000000000000000003, DC1300000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXProject section */
@@ -323,8 +339,11 @@
 				BA7200000000000000000002 /* GlideTrail.swift in Keyboard */,
 				CA7000000000000000000004 /* TypingSound.swift */,
 				A554C0908A6B40B6A8000002 /* KeypressFeedback.swift in Keyboard */,
+				B06200000000000000000002 /* PersonalSpellings.swift in Keyboard */,
 				BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */,
 				BA7100000000000000000008 /* KeyboardFont.swift in Keyboard */,
+				E02100000000000000000004 /* EmojiCatalog.swift */,
+				E02100000000000000000005 /* EmojiPickerView.swift */,
 				D1521AC249C9C58D98FFF5B0 /* KeyboardModel.swift in Sources */,
 				A554C0908A6B40B6A8000006 /* WordCorrections.swift in Sources */,
 				F70BB204E083FA42C1D64BBF /* KeyboardView.swift in Sources */,
@@ -337,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10F0C7C80E5D2DBEE097D025 /* KeyboardTypingTests.swift in Sources */,
+				AA6700000000000000000001 /* KeyboardComparisonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +367,7 @@
 				F01E4187097073B07D62EDE3 /* MonkeyBoardApp.swift in Sources */,
 				CA7000000000000000000003 /* TypingSound.swift */,
 				A554C0908A6B40B6A8000001 /* KeypressFeedback.swift in App */,
+				B06200000000000000000001 /* PersonalSpellings.swift in App */,
 				BA7100000000000000000001 /* AppearanceSettings.swift in App */,
 				BA7100000000000000000002 /* KeyboardTint.swift in App */,
 				BA7100000000000000000007 /* KeyboardFont.swift in App */,

@@ -9,8 +9,19 @@ actor SentenceFinisher {
     private var loaded = false
     var isReady: Bool { lexical != nil && contextual != nil }
 
-    func review(raw: String, displayed: String, resources: URL, leading: String = "") -> String {
-        guard !Task.isCancelled, !raw.contains("@"), !raw.contains("://"), !raw.contains("_") else { return displayed }
+    func releaseForMemoryPressure() {
+        lexical = nil
+        contextual = nil
+        // This worker must not reload if an already queued review reaches it.
+        loaded = true
+    }
+
+    func review(raw: String, displayed: String, resources: URL, leading: String = "", atPause: Bool = false,
+                hasHeadroom: @Sendable (Int) -> Bool = { _ in true }) -> String {
+        // Check on the model's own actor immediately before allocation. A cold
+        // load needs room for the 94 MiB encoder, its vocabulary and inference.
+        guard !Task.isCancelled, hasHeadroom(isReady ? 32 : 144),
+              !raw.contains("@"), !raw.contains("://"), !raw.contains("_") else { return displayed }
         if !loaded {
             lexical = Lexical55(resources: resources)
             contextual = Contextual55(resources: resources)
@@ -29,7 +40,30 @@ actor SentenceFinisher {
         var protected = Set<Int>()
         var lockDistance = [Int:Int]()
         if var words = SentenceSurface.correspondence(typed, prior) {
+            var boundaryDecisions = [Int: String]()
+            let surface = SentenceSurface.Form(prior)
+            if !shouting, words == surface.words {
+                let ns = prior as NSString
+                for i in words.indices.reversed() {
+                    // Revisit the last two words and previously changed spellings.
+                    guard i >= words.count - 2 || typed.words[i] != words[i] else { continue }
+                    let r = surface.ranges[i]
+                    let left = ns.substring(to: r.location), right = ns.substring(from: NSMaxRange(r))
+                    let literal = typed.words[i]
+                    let alternatives = lexical.boundaryAlternatives(for: literal, left: left)
+                    guard !alternatives.isEmpty, words[i] == literal || alternatives.contains(words[i]),
+                          let chosen = contextual.boundaryChoice(literal: literal, shown: words[i],
+                              left: left, right: right, alternatives: alternatives),
+                          chosen == literal || (mb_keep_literal53_v1(left, literal, right, chosen) == 0 &&
+                              mb_literal_supported_v1(left, literal, right, chosen) == 0) else { continue }
+                    boundaryDecisions[i] = chosen
+                }
+                if atPause, boundaryDecisions.contains(where: { words[$0.key] != $0.value }) {
+                    return surface.replace(boundaryDecisions)
+                }
+            }
             for i in words.indices {
+                if let spelling = boundaryDecisions[i] { words[i] = spelling; continue }
                 let literal = typed.words[i], committed = words[i]
                 let left = words[..<i].joined(separator:" ")
                 let right = words[(i+1)...].joined(separator:" ")
@@ -54,7 +88,7 @@ actor SentenceFinisher {
             for (i, word) in words.enumerated() {
                 let n = SentenceSurface.Form(word).words.count
                 let rawWord = typed.words[i]
-                if lexical.protects(rawWord,left:words[..<i].joined(separator:" "),right:words[(i+1)...].joined(separator:" ")) {
+                if boundaryDecisions[i] != nil || lexical.protects(rawWord,left:words[..<i].joined(separator:" "),right:words[(i+1)...].joined(separator:" ")) {
                     protected.formUnion(index..<index+n)
                 }
                 if n == 1, rawWord.lowercased() != word.lowercased(), !lexical.isEstablished(rawWord) {

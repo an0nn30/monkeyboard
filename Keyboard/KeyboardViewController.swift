@@ -1,4 +1,6 @@
 import UIKit
+import os
+import notify
 import MonkeyBoardEngine
 
 private extension UITextDocumentProxy {
@@ -16,18 +18,32 @@ private final class ClickInputView: UIInputView, UIInputViewAudioFeedback {
 final class KeyboardViewController: UIInputViewController {
     private let board = KeyboardView()
     private var model = KeyboardModel()
+    private var emojiPicker: EmojiPickerView?
+    private var emojiDocument: UUID?
+    private var shiftBeforeEmoji = KeyboardModel.Shift.lower
     private var prefersSplit = true
     private var preferredHand = OneHandedLayout.fullWidth
     private var hingeClosed: Bool?
     private var allowsOneHanded = true
     private let corrections = WordCorrections()
     private struct WordEdit {
+        let rejection: RejectedSpelling?
         let document: UUID
         let original: String
         let replacement: String
         let delimiter: String
         let leading: String
         let following: String
+        var typedAhead = ""
+        var acceptsImmediateBackspace = true
+
+        var inserted: String { replacement + delimiter + typedAhead }
+
+        func matches(_ proxy: UITextDocumentProxy) -> Bool {
+            proxy.attachedDocumentID == document && (proxy.selectedText ?? "").isEmpty &&
+                proxy.documentContextBeforeInput?.hasSuffix(leading + inserted) == true &&
+                String((proxy.documentContextAfterInput ?? "").prefix(20)) == following
+        }
     }
     // A review only follows text inserted by this instance of the keyboard.
     private struct PendingReview {
@@ -40,6 +56,46 @@ final class KeyboardViewController: UIInputViewController {
     }
     private let decoder = DecoderWorker()
     private var usesTransformer = false
+    // UIKit can create a new controller in the same extension process when
+    // switching apps. Don't reload discarded models until iOS starts a fresh process.
+    private static var receivedMemoryPressure = false
+    private var releasedPredictionResources = false
+    private static let memoryLog = Logger(subsystem: "dev.dustin.monkeyboard.keyboard", category: "memory")
+
+    nonisolated private static func hasHeadroom(_ mebibytes: Int) -> Bool {
+        #if os(iOS) && !targetEnvironment(simulator)
+        return os_proc_available_memory() >= mebibytes * 1024 * 1024
+        #else
+        // The simulator doesn't enforce the physical keyboard extension's limit.
+        return true
+        #endif
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        typingSound.select(.off)
+        Self.receivedMemoryPressure = true
+        adoptMemoryBudget()
+    }
+
+    private func adoptMemoryBudget() {
+        guard !releasedPredictionResources else { return }
+        guard Self.receivedMemoryPressure || !Self.hasHeadroom(24) else { return }
+        Self.receivedMemoryPressure = true
+        releasedPredictionResources = true
+        Self.memoryLog.notice("Switching to compact corrections for the rest of this keyboard process")
+        usesTransformer = false
+        corrections.usesSentenceContext = false
+        corrections.preparesTransformerReviews = false
+        abandonSentence()
+        run = nil
+        discardReview()
+        nextWordTask?.cancel()
+        decoder.releaseForMemoryPressure()
+        let finisher = sentenceFinisher
+        Task { await finisher.releaseForMemoryPressure() }
+        // Keep the user's text, undo receipt, spelling preferences and keyboard layout.
+    }
     private var pendingReview: PendingReview?
     private var revisionTask: Operation?
     private var deferredReview: PendingReview?
@@ -52,18 +108,29 @@ final class KeyboardViewController: UIInputViewController {
     private struct GlideWord {
         let origin: GlideContext
         let separator: String
-        let word: String
+        let decoderWinner: String
+        var word: String
         let alternatives: [String]
+        var choseAlternative = false
         var inserted: String { separator + word }
         var expected: GlideContext {
             GlideContext(document: origin.document, before: String((origin.before + inserted).suffix(160)), after: origin.after)
         }
     }
+    private var swipePreferences: [String: PersonalSpellings.Preference] = [:]
+    private var learningSpeed = LearningSpeed.balanced
+    private var spellingSettingsToken: Int32 = -1
     private var glideEnabled = true
     private var glideStartGeneration: Int?
     private var glideFieldEligible = false
     private var glideWord: GlideWord?
-    private var lastCorrection: WordEdit?
+    private var lastCorrection: WordEdit? {
+        didSet {
+            if (oldValue == nil) != (lastCorrection == nil) || oldValue?.rejection?.word != lastCorrection?.rejection?.word {
+                board.showCorrectionUndo(lastCorrection != nil, originalWord: lastCorrection?.rejection?.word)
+            }
+        }
+    }
     private var keptSpelling: String?
     private struct OwnedRun {
         let document: UUID
@@ -105,11 +172,6 @@ final class KeyboardViewController: UIInputViewController {
     private var contextGeneration = 0
     private var contextNeedsSetup = true
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        typingSound.select(.off)
-    }
-
     override func loadView() {
         inputView = ClickInputView(frame: .zero, inputViewStyle: .keyboard)
     }
@@ -140,13 +202,19 @@ final class KeyboardViewController: UIInputViewController {
         board.onLetterGeometry = { [weak self] in self?.corrections.neighborMasks = $0 }
         board.onKey = { [weak self] key in self?.press(key) }
         board.onGlideStart = { [weak self] in
-            guard let self, self.glideEnabled, self.glideFieldEligible else { return false }
+            guard let self, self.model.emojiMode == .closed, self.glideEnabled, self.glideFieldEligible else { return false }
             self.glideStartGeneration = self.contextGeneration
             return true
         }
         board.onGlide = { [weak self] stroke in self?.commitGlide(stroke) ?? false }
         board.onTouch = { [weak self] key in self?.playFeedback(key.soundKey) }
         board.onWord = { [weak self] word in self?.insertSuggestion(word) }
+        board.onUndoCorrection = { [weak self] in
+            guard let self, self.undoCorrection(fromButton: true) else { return }
+            self.applyAutoCase()
+            self.updateKeys()
+            self.scheduleSuggestions()
+        }
         board.onDismiss = { [weak self] in self?.dismissKeyboard() }
         board.onExpand = { [weak self] in self?.chooseHand(.fullWidth) }
         board.onAvailableWidthChange = { [weak self] width in self?.applyLayout(width: width) }
@@ -178,8 +246,24 @@ final class KeyboardViewController: UIInputViewController {
         }
     }
 
+    private func reloadSpellingMemory() {
+        learningSpeed = .stored
+        corrections.personalTyping.removeAll()
+        swipePreferences.removeAll()
+        for preference in PersonalSpellings.snapshot().preferences { usePreference(preference) }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if spellingSettingsToken == -1 {
+            notify_register_dispatch(PersonalSpellings.settingsChanged, &spellingSettingsToken, .main) { [weak self] _ in
+                guard let self else { return }
+                self.glideWord = nil
+                self.reloadSpellingMemory()
+                self.scheduleSuggestions()
+            }
+        }
+        reloadSpellingMemory()
         accentColor = KeyboardTint.stored()?.keyColor
         keyboardFont = .stored
         prefersSplit = WideKeyboardLayout.prefersSplit
@@ -188,7 +272,8 @@ final class KeyboardViewController: UIInputViewController {
         glideEnabled = GlideTypingSetting.isEnabled
         autoCorrect = AutoCorrectionSetting.isEnabled
         returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
-        corrections.usesSentenceContext = SentenceScoringSetting.isEnabled
+        adoptMemoryBudget()
+        corrections.usesSentenceContext = !releasedPredictionResources && SentenceScoringSetting.isEnabled
         usesTransformer = corrections.usesSentenceContext && TransformerSetting.isEnabled
         corrections.preparesTransformerReviews = usesTransformer
         applyLayout(width: board.bounds.width)
@@ -228,6 +313,12 @@ final class KeyboardViewController: UIInputViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         typingSound.select(.off)
+        if spellingSettingsToken != -1 {
+            notify_cancel(spellingSettingsToken)
+            spellingSettingsToken = -1
+        }
+        if model.emojiMode != .closed { closeEmojiSession() }
+        if let receipt = glideWord, receipt.expected == glideContext() { learnGlideChoice(receipt) }
         glideWord = nil
         glideStartGeneration = nil
         abandonSentence()
@@ -268,6 +359,7 @@ final class KeyboardViewController: UIInputViewController {
 
     private func refreshContext() {
         let proxy = textDocumentProxy
+        if let edit = lastCorrection, !allowsWordSuggestions || !edit.matches(proxy) { lastCorrection = nil }
         switch proxy.keyboardAppearance ?? .default {
         case .dark: board.overrideUserInterfaceStyle = .dark
         case .light: board.overrideUserInterfaceStyle = .light
@@ -275,7 +367,9 @@ final class KeyboardViewController: UIInputViewController {
         }
         glideFieldEligible = allowsWordSuggestions && !insideWord
         let kind = proxy.keyboardType ?? .default
-        if contextNeedsSetup || kind != model.keyboardType {
+        let changedEmojiDocument = emojiDocument.map { $0 != proxy.attachedDocumentID } ?? false
+        if contextNeedsSetup || kind != model.keyboardType || changedEmojiDocument {
+            if model.emojiMode != .closed { closeEmojiSession() }
             contextNeedsSetup = false
             openedSymbolsFromLetters = false
             model.keyboardType = kind
@@ -289,7 +383,7 @@ final class KeyboardViewController: UIInputViewController {
         // Hosts can report a selection through either input delegate callback.
         // Only change Shift on a transition so the user can still toggle it by hand.
         let selectionShift = selectedWordShift()
-        if selectionShift != lastSelectedWordShift {
+        if model.emojiMode == .closed && selectionShift != lastSelectedWordShift {
             lastSelectedWordShift = selectionShift
             lastShift = nil
             applyAutoCase(replacing: selectionShift)
@@ -334,9 +428,9 @@ final class KeyboardViewController: UIInputViewController {
 
     private func glideContext() -> GlideContext? {
         let proxy = textDocumentProxy
-        guard glideEnabled, model.layer == .letters, allowsWordSuggestions, !insideWord,
+        guard glideEnabled, model.layer == .letters, let document = proxy.attachedDocumentID, allowsWordSuggestions, !insideWord,
               let before = proxy.documentContextBeforeInput ?? (proxy.hasText ? nil : "") else { return nil }
-        return GlideContext(document: proxy.documentIdentifier, before: String(before.suffix(160)),
+        return GlideContext(document: document, before: String(before.suffix(160)),
                             after: String((proxy.documentContextAfterInput ?? "").prefix(32)))
     }
 
@@ -354,14 +448,20 @@ final class KeyboardViewController: UIInputViewController {
         let needsSpace = origin.before.last.map { $0.isLetter || $0.isNumber || ".,!?;:)]}".contains($0) } ?? false
         let autoUpper = lastShift == nil && needsSpace && (casing == .words ||
             (casing == .sentences && origin.before.last.map { ".!?".contains($0) } == true))
-        let options = String(cString: buffer).split(separator: "\t").map { token -> String in
+        var options = String(cString: buffer).split(separator: "\t").map { token -> String in
             let word = String(token)
             if model.shift == .locked { return word.uppercased() }
             if model.shift == .upper || autoUpper || word.hasPrefix("i'") { return word.prefix(1).uppercased() + word.dropFirst() }
             return word
         }
-        guard let word = options.first else { return false }
-        let receipt = GlideWord(origin: origin, separator: needsSpace ? " " : "", word: word, alternatives: options)
+        guard let winner = options.first else { return false }
+        if let previous = glideWord, previous.expected == origin { learnGlideChoice(previous) }
+        if let key = RejectedSpelling.key(winner), let preference = swipePreferences[key],
+           let index = options.firstIndex(where: { RejectedSpelling.key($0) == RejectedSpelling.key(preference.preferred) }) {
+            options.insert(options.remove(at: index), at: 0)
+        }
+        let receipt = GlideWord(origin: origin, separator: needsSpace ? " " : "", decoderWinner: winner,
+                                word: options[0], alternatives: options)
         abandonSentence()
         discardReview()
         run = nil
@@ -376,6 +476,20 @@ final class KeyboardViewController: UIInputViewController {
         applyAutoCase()
         updateKeys()
         return true
+    }
+
+    private func usePreference(_ preference: PersonalSpellings.Preference?) {
+        guard let preference, let key = RejectedSpelling.key(preference.original) else { return }
+        switch preference.input {
+        case .typing: corrections.personalTyping[key] = preference
+        case .swipe: swipePreferences[key] = preference
+        }
+    }
+
+    private func learnGlideChoice(_ receipt: GlideWord) {
+        guard receipt.choseAlternative, receipt.word != receipt.alternatives.first else { return }
+        usePreference(PersonalSpellings.recordChoice(.swipe, original: receipt.decoderWinner,
+                                                     chosen: receipt.word, speed: learningSpeed))
     }
 
     private func handleKeyAfterGlide(_ key: Key) -> Bool {
@@ -396,11 +510,85 @@ final class KeyboardViewController: UIInputViewController {
             textDocumentProxy.insertText(" ")
         default: break
         }
+        learnGlideChoice(receipt)
         glideWord = nil
         return false
     }
 
+    private func closeEmojiSession() {
+        model.emojiMode = .closed
+        model.shift = shiftBeforeEmoji
+        emojiDocument = nil
+        emojiPicker?.removeFromSuperview()
+        emojiPicker = nil
+    }
+
+    private func showEmoji(_ mode: KeyboardModel.EmojiMode) {
+        guard mode != model.emojiMode else { return }
+        if mode == .closed {
+            closeEmojiSession()
+            model.layer = .letters
+            applyAutoCase(replacing: selectedWordShift())
+        } else {
+            if model.emojiMode == .closed {
+                guard let document = textDocumentProxy.attachedDocumentID else { return }
+                shiftBeforeEmoji = model.shift
+                emojiDocument = document
+                abandonSentence()
+                discardReview()
+                run = nil
+                lastCorrection = nil
+                keptSpelling = nil
+                glideWord = nil
+                let picker = EmojiPickerView()
+                picker.onMode = { [weak self] mode in self?.showEmoji(mode) }
+                picker.onInsert = { [weak self] emoji in self?.editFromPicker(emoji) }
+                picker.onDelete = { [weak self] in self?.editFromPicker(nil) }
+                emojiPicker = picker
+                board.addSubview(picker)
+                board.emojiPanel = picker
+            }
+            model.emojiMode = mode
+            model.layer = .letters
+            model.shift = .lower
+            emojiPicker?.setSearching(mode == .search)
+        }
+        openedSymbolsFromLetters = false
+        lastShift = nil
+        updateKeys()
+        scheduleSuggestions()
+    }
+
+    private func editFromPicker(_ emoji: String?) {
+        guard model.emojiMode != .closed, let emojiDocument, emojiDocument == textDocumentProxy.attachedDocumentID else {
+            refreshContext()
+            return
+        }
+        playFeedback(emoji == nil ? .backspace : .regular)
+        if let emoji { textDocumentProxy.insertText(emoji) }
+        else { textDocumentProxy.deleteBackward() }
+    }
+
+    private func pressSearchKey(_ key: Key) {
+        guard let picker = emojiPicker else { return }
+        switch key {
+        case let .type(text):
+            picker.setQuery(picker.query + text)
+            model.shift = .lower
+        case .space, .rightSpace: picker.setQuery(picker.query + " ")
+        case .delete: picker.setQuery(String(picker.query.dropLast()))
+        case .shift: model.shift = model.shift == .lower ? .upper : .lower
+        case .layer: model.layer = model.layer == .letters ? .numbers : .letters
+        case .symbols: model.layer = model.layer == .numbers ? .symbols : .numbers
+        case .enter, .emoji: showEmoji(.browse)
+        case .globe: advanceToNextInputMode()
+        }
+        updateKeys()
+    }
+
     private func press(_ key: Key) {
+        adoptMemoryBudget()
+        if model.emojiMode == .search { pressSearchKey(key); return }
         if handleKeyAfterGlide(key) { return }
         // Numeric fields edit the host selection literally, including a localized decimal separator.
         if model.layer == .keypad {
@@ -416,8 +604,9 @@ final class KeyboardViewController: UIInputViewController {
         validateReview()
         nextWordTask?.cancel()
         if key != .shift { lastShift = nil }
-        if key != .delete { lastCorrection = nil }
+        if key != .delete { trackTypingAfterCorrection(key) }
         switch key {
+        case .emoji: showEmoji(.browse); return
         case .shift:
             let now = ProcessInfo.processInfo.systemUptime
             if let lastShift, now - lastShift < 0.36 {
@@ -439,7 +628,11 @@ final class KeyboardViewController: UIInputViewController {
             // Collapsing this selection is part of Delete. Keep its spelling case
             // for the next letter even if the new caret is at the start of a sentence.
             lastSelectedWordShift = nil
-            if !undoCorrection() { textDocumentProxy.deleteBackward(); keptSpelling = nil }
+            if let edit = lastCorrection, !edit.typedAhead.isEmpty, edit.matches(textDocumentProxy) {
+                lastCorrection?.typedAhead.removeLast()
+                textDocumentProxy.deleteBackward()
+                keptSpelling = nil
+            } else if !undoCorrection() { textDocumentProxy.deleteBackward(); keptSpelling = nil }
             applyAutoCase(replacing: replacementShift)
         case let .type(value):
             if [".", ",", "!", "?", ";", ":"].contains(value) { insertDelimiter(value) }
@@ -476,7 +669,8 @@ final class KeyboardViewController: UIInputViewController {
         case .continue: title = "Continue"
         default: title = nil
         }
-        board.update(model, returnTitle: title, accentColor: accentColor, font: keyboardFont, animateLayout: animateLayout)
+        board.update(model, returnTitle: model.emojiMode == .search ? "Done" : title,
+                     accentColor: accentColor, font: keyboardFont, animateLayout: animateLayout)
     }
 
     private func playFeedback(_ key: TypingSoundKey = .regular) {
@@ -536,19 +730,19 @@ final class KeyboardViewController: UIInputViewController {
         default: abandonSentence(); return nil
         }
         let proxy = textDocumentProxy
-        guard usesTransformer, autoCorrect, allowsWordSuggestions,
+        guard usesTransformer, autoCorrect, allowsWordSuggestions, let document = proxy.attachedDocumentID,
               (proxy.documentContextAfterInput ?? "").isEmpty,
               let before = proxy.documentContextBeforeInput ?? (proxy.hasText ? nil : ""),
               c.count == 1 else { abandonSentence(); return nil }
         let boundary = c.first!.isWhitespace
         if let old = sentenceInput,
-           old.document != proxy.documentIdentifier || !before.hasSuffix(old.anchor + old.rendered) ||
+           old.document != document || !before.hasSuffix(old.anchor + old.rendered) ||
            old.raw.utf8.count >= 240 {
             abandonSentence()
         }
         guard let input = sentenceInput ?? (!boundary && c.first!.isLetter &&
                 (before.isEmpty || before.last!.isWhitespace || ".!?".contains(before.last!))
-                ? SentenceInput(document:proxy.documentIdentifier,anchor:String(before.suffix(24))) : nil)
+                ? SentenceInput(document:document,anchor:String(before.suffix(24))) : nil)
         else { return nil }
         // A later word can change the result; never apply an old prediction over it.
         if !(input.ended && boundary) { sentenceTask?.cancel() }
@@ -558,8 +752,14 @@ final class KeyboardViewController: UIInputViewController {
     private func finishSentenceKey(_ snapshot: KeySnapshot) {
         let proxy = textDocumentProxy
         var input = snapshot.input
-        guard proxy.documentIdentifier == input.document, let after = proxy.documentContextBeforeInput,
+        guard proxy.attachedDocumentID == input.document, let after = proxy.documentContextBeforeInput,
               after.hasPrefix(snapshot.leading) else { abandonSentence(); return }
+        // Start a new review span beyond a protected spelling, so neighboring
+        // words still get corrections without re-opening the user's spelling.
+        if snapshot.character.first.map({ !$0.isLetter && $0 != "'" && $0 != "’" }) == true {
+            let last = snapshot.input.raw.reversed().prefix { $0.isLetter || $0 == "'" || $0 == "’" }
+            if corrections.personalPreference(String(last.reversed())) != nil { abandonSentence(); return }
+        }
         input.raw += snapshot.character
         input.rendered = String(after.dropFirst(snapshot.leading.count))
         if ".!?\n".contains(snapshot.character) { input.ended = true }
@@ -583,14 +783,15 @@ final class KeyboardViewController: UIInputViewController {
                 do { try await Task.sleep(nanoseconds: 500_000_000) } catch { return }
             }
             guard !Task.isCancelled else { return }
-            let next = await finisher.review(raw:raw, displayed:displayed, resources:url, leading:input.anchor)
+            let next = await finisher.review(raw:raw, displayed:displayed, resources:url, leading:input.anchor, atPause: !input.ended,
+                                             hasHeadroom: { Self.hasHeadroom($0) })
             guard !Task.isCancelled, next != displayed, let self,
                   var current = self.sentenceInput, current.id == input.id,
                   current.rendered.hasPrefix(displayed), self.autoCorrect, self.usesTransformer,
                   self.allowsWordSuggestions else { return }
             let tail = String(current.rendered.dropFirst(displayed.count))
             let proxy = self.textDocumentProxy
-            guard tail.allSatisfy({$0.isWhitespace}), proxy.documentIdentifier == current.document,
+            guard tail.allSatisfy({$0.isWhitespace}), proxy.attachedDocumentID == current.document,
                   (proxy.documentContextAfterInput ?? "").isEmpty,
                   proxy.documentContextBeforeInput?.hasSuffix(current.anchor + current.rendered) == true else {return}
             let prefix = zip(displayed,next).prefix(while: { $0==$1 }).count
@@ -600,7 +801,8 @@ final class KeyboardViewController: UIInputViewController {
             self.run = nil
             for _ in old {proxy.deleteBackward()}
             proxy.insertText(new)
-            self.lastCorrection = WordEdit(document:current.document,original:old,replacement:new,delimiter:"",
+            self.lastCorrection = WordEdit(rejection: RejectedSpelling.singleChange(typed: raw, before: displayed, after: next),
+                                          document:current.document,original:old,replacement:new,delimiter:"",
                                           leading:String((current.anchor+displayed.prefix(prefix)).suffix(32)),following:"")
             current.rendered = next+tail
             self.sentenceInput = current
@@ -635,7 +837,7 @@ final class KeyboardViewController: UIInputViewController {
 
     private func recordKey(_ value: String) {
         let proxy = textDocumentProxy
-        guard usesTransformer, autoCorrect, allowsWordSuggestions,
+        guard usesTransformer, autoCorrect, allowsWordSuggestions, let document = proxy.attachedDocumentID,
               (proxy.documentContextAfterInput ?? "").isEmpty,
               // Some UIKit fields return nil, rather than "", until their first
               // character. Only claim that boundary if the host confirms it is empty.
@@ -644,10 +846,10 @@ final class KeyboardViewController: UIInputViewController {
             run = nil
             return
         }
-        if let old = run, old.document != proxy.documentIdentifier || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
+        if let old = run, old.document != document || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
         if run == nil {
             guard before.isEmpty || before.last.map({ $0.isWhitespace || ".!?".contains($0) }) == true else { return }
-            run = OwnedRun(document: proxy.documentIdentifier, anchor: String(before.suffix(32)))
+            run = OwnedRun(document: document, anchor: String(before.suffix(32)))
         }
         run?.raw += value
         run?.rendered += value
@@ -757,15 +959,19 @@ final class KeyboardViewController: UIInputViewController {
         let proxy = textDocumentProxy
         let word = prefix()
         defer { keptSpelling = nil }
-        guard autoCorrect, allowsWordSuggestions, !insideWord, word != keptSpelling,
-              let before = proxy.documentContextBeforeInput else {
+        guard autoCorrect, allowsWordSuggestions, !insideWord, word != keptSpelling, !corrections.preserves(word),
+              let document = proxy.attachedDocumentID, let before = proxy.documentContextBeforeInput else {
             run = nil
             discardReview()
             proxy.insertText(delimiter)
             return
         }
         let choices = corrections.choices(for: word, before: before, includeCompletions: false)
-        if let old = run, !word.isEmpty, old.document == proxy.documentIdentifier,
+        if choices.usesPersonalReplacement {
+            run = nil
+            discardReview()
+        }
+        if let old = run, !word.isEmpty, old.document == document,
            before.hasSuffix(old.anchor + old.rendered), (proxy.documentContextAfterInput ?? "").isEmpty,
            let proposal = proposedSentence(old, word: word, baseline: choices) {
             let next = proposal.text
@@ -776,7 +982,8 @@ final class KeyboardViewController: UIInputViewController {
             discardReview()
             if !prior.isEmpty || !replacement.isEmpty {
                 let earlierWordChanged = common < max(0, old.rendered.count - word.count)
-                lastCorrection = WordEdit(document: old.document, original: prior + (earlierWordChanged ? delimiter : ""), replacement: replacement,
+                lastCorrection = WordEdit(rejection: RejectedSpelling.singleChange(typed: old.raw, before: old.rendered, after: next),
+                                          document: old.document, original: prior + (earlierWordChanged ? delimiter : ""), replacement: replacement,
                                           delimiter: delimiter, leading: String((old.anchor + old.rendered.prefix(common)).suffix(32)), following: "")
             }
             for _ in prior { proxy.deleteBackward() }
@@ -787,12 +994,13 @@ final class KeyboardViewController: UIInputViewController {
             } else { run = nil }
             return
         }
-        if let old = run, old.document != proxy.documentIdentifier || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
+        if let old = run, old.document != document || !before.hasSuffix(old.anchor + old.rendered) { run = nil }
         let committed = choices.automatic ?? word
         let leading = before.dropLast(word.count)
         let anchor = String(leading.suffix(32))
         if committed != word {
-            lastCorrection = WordEdit(document: proxy.documentIdentifier, original: word, replacement: committed,
+            lastCorrection = WordEdit(rejection: RejectedSpelling(word, committed),
+                                      document: document, original: word, replacement: committed,
                                       delimiter: delimiter, leading: anchor,
                                       following: String((proxy.documentContextAfterInput ?? "").prefix(20)))
         }
@@ -817,7 +1025,7 @@ final class KeyboardViewController: UIInputViewController {
         if delimiter == " ", (!choices.reviewAlternatives.isEmpty || choices.reviewsShortWord), (proxy.documentContextAfterInput ?? "").isEmpty {
             let review = SentenceDecoder.Review(typed: word, leading: String(leading.suffix(4096)),
                                                 alternatives: choices.reviewAlternatives, shortWord: choices.reviewsShortWord, missingLetterOnly: choices.missingLetterOnly)
-            let entry = PendingReview(document: proxy.documentIdentifier, request: review,
+            let entry = PendingReview(document: document, request: review,
                                       anchor: anchor, committed: committed, suffix: delimiter)
             if extending { deferredReview = entry } else { pendingReview = entry }
         }
@@ -850,7 +1058,7 @@ final class KeyboardViewController: UIInputViewController {
     private func validateReview() {
         guard let pending = pendingReview else { return }
         let proxy = textDocumentProxy
-        if !allowsWordSuggestions || proxy.documentIdentifier != pending.document ||
+        if !allowsWordSuggestions || proxy.attachedDocumentID != pending.document ||
             !(proxy.documentContextAfterInput ?? "").isEmpty || pending.suffix.count > 80 ||
             proxy.documentContextBeforeInput?.hasSuffix(pending.anchor + pending.committed + pending.suffix) != true {
             discardReview()
@@ -859,6 +1067,7 @@ final class KeyboardViewController: UIInputViewController {
 
     private func requestRevision() {
         guard let pending = pendingReview else { return }
+        guard usesTransformer, Self.hasHeadroom(48) else { discardReview(); return }
         let right = pending.suffix.trimmingCharacters(in: .whitespacesAndNewlines.union(.punctuationCharacters))
         let count = right.split(whereSeparator: { $0.isWhitespace }).count
         guard (1...pending.request.followingWordLimit).contains(count), !right.contains(where: { ".,!?;:\n".contains($0) }) else {
@@ -873,7 +1082,7 @@ final class KeyboardViewController: UIInputViewController {
             self.validateReview()
             guard let current = self.pendingReview, current.id == pending.id,
                   current.suffix.hasPrefix(pending.suffix) else { return }
-            guard let replacement,
+            guard let replacement, !self.corrections.preserves(pending.request.typed),
                   mb_literal_supported_v1(pending.request.leading, pending.request.typed, right, replacement) == 0,
                   (pending.request.typed.lowercased() == replacement.lowercased() || mb_original_name54_v1(pending.request.typed) == 0),
                   mb_keep_literal53_v1(pending.request.leading, pending.request.typed, right, replacement) == 0,
@@ -894,22 +1103,46 @@ final class KeyboardViewController: UIInputViewController {
                 self.run?.rendered = String(old.rendered.dropLast(oldTail.count)) + newTail
             } else { self.run = nil }
             // Restore the old spelling AND everything typed since then on Undo.
-            self.lastCorrection = WordEdit(document: current.document, original: oldTail, replacement: newTail,
+            self.lastCorrection = WordEdit(rejection: current.request.typed == current.committed
+                                           ? RejectedSpelling(current.committed, replacement) : nil,
+                                           document: current.document, original: oldTail, replacement: newTail,
                                            delimiter: "", leading: current.anchor, following: "")
             self.scheduleSuggestions()
         }
     }
 
-    private func undoCorrection() -> Bool {
+    private func trackTypingAfterCorrection(_ key: Key) {
+        guard let edit = lastCorrection else { return }
+        guard edit.matches(textDocumentProxy) else { lastCorrection = nil; return }
+        let addition: String
+        switch key {
+        case .space, .rightSpace: addition = " "
+        case let .type(text) where !".!?\n".contains(text): addition = text
+        case .shift, .layer, .symbols: lastCorrection?.acceptsImmediateBackspace = false; return
+        default: lastCorrection = nil; return
+        }
+        // Limit how far into subsequent text a single Undo may reach.
+        guard edit.typedAhead.count + addition.count <= 48 else { lastCorrection = nil; return }
+        lastCorrection?.acceptsImmediateBackspace = false
+        lastCorrection?.typedAhead.append(addition)
+    }
+
+    private func undoCorrection(fromButton: Bool = false) -> Bool {
         let proxy = textDocumentProxy
         guard let edit = lastCorrection else { return false }
         lastCorrection = nil
-        let inserted = edit.replacement + edit.delimiter
-        guard proxy.documentIdentifier == edit.document, (proxy.selectedText ?? "").isEmpty,
-              proxy.documentContextBeforeInput?.hasSuffix(edit.leading + inserted) == true,
-              String((proxy.documentContextAfterInput ?? "").prefix(20)) == edit.following else { return false }
-        for _ in inserted { proxy.deleteBackward() }
-        proxy.insertText(edit.original)
+        guard autoCorrect, allowsWordSuggestions, edit.matches(proxy), fromButton || edit.acceptsImmediateBackspace else { return false }
+        abandonSentence()
+        run = nil
+        discardReview()
+        if let rejection = edit.rejection, corrections.canLearn(rejection) {
+            usePreference(PersonalSpellings.recordUndo(rejection, speed: learningSpeed))
+        }
+        // Backspace also removes the accepting delimiter on an active-word correction.
+        // The explicit button restores only the correction and keeps all later input.
+        let boundary = fromButton && !edit.original.hasSuffix(edit.delimiter) ? edit.delimiter : ""
+        for _ in edit.inserted { proxy.deleteBackward() }
+        proxy.insertText(edit.original + boundary + edit.typedAhead)
         keptSpelling = prefix()
         return true
     }
@@ -917,7 +1150,7 @@ final class KeyboardViewController: UIInputViewController {
     private func scheduleSuggestions() {
         nextWordTask?.cancel()
         suggestionTask?.cancel()
-        guard model.layer != .keypad else { return }
+        guard model.layer != .keypad, model.emojiMode == .closed else { return }
         // Keep dictionary work out of the touch-down and key-commit paths.
         let task = DispatchWorkItem { [weak self] in self?.refreshSuggestions() }
         suggestionTask = task
@@ -925,8 +1158,9 @@ final class KeyboardViewController: UIInputViewController {
     }
 
     private func refreshSuggestions() {
+        adoptMemoryBudget()
         let proxy = textDocumentProxy
-        guard let document = proxy.attachedDocumentID else {
+        guard model.emojiMode == .closed, let document = proxy.attachedDocumentID else {
             candidateDocument = nil
             candidateWords = []
             board.setSuggestions([])
@@ -947,11 +1181,12 @@ final class KeyboardViewController: UIInputViewController {
         if model.layer == .letters && !insideWord && allowsWordSuggestions {
             if candidatePrefix.isEmpty {
                 candidateWords = corrections.nextWords(before: candidateContext)
-                if usesTransformer {
+                // The next-word model is 35 MiB; leave room for typing during load.
+                if usesTransformer, Self.hasHeadroom(48) {
                     let context = candidateContext
                     nextWordTask = decoder.submit({ try $0.nextWords(before: context) }) { [weak self] words in
-                        guard let self, !words.isEmpty, self.allowsWordSuggestions, !self.insideWord,
-                              self.model.layer == .letters,
+                        guard let self, self.usesTransformer, !words.isEmpty, self.allowsWordSuggestions, !self.insideWord,
+                              self.model.layer == .letters, self.model.emojiMode == .closed,
                               self.textDocumentProxy.attachedDocumentID == document,
                               String((self.textDocumentProxy.documentContextBeforeInput ?? "").suffix(160)) == context
                         else { return }
@@ -979,13 +1214,15 @@ final class KeyboardViewController: UIInputViewController {
             if word != receipt.word {
                 for _ in receipt.word { proxy.deleteBackward() }
                 proxy.insertText(word)
-                glideWord = GlideWord(origin: receipt.origin, separator: receipt.separator,
-                                      word: word, alternatives: receipt.alternatives)
+                var selected = receipt
+                selected.word = word
+                selected.choseAlternative = true
+                glideWord = selected
             }
             return
         }
         guard allowsWordSuggestions, candidateGeneration == contextGeneration, candidateWords.contains(word),
-              candidateDocument == proxy.documentIdentifier,
+              let document = proxy.attachedDocumentID, candidateDocument == document,
               candidateContext == String((proxy.documentContextBeforeInput ?? "").suffix(160)), !insideWord,
               prefix() == candidatePrefix, (proxy.selectedText ?? "").isEmpty,
               proxy.documentContextAfterInput?.first?.isLetter != true else { refreshSuggestions(); return }
@@ -994,6 +1231,16 @@ final class KeyboardViewController: UIInputViewController {
         discardReview()
         lastCorrection = nil
         keptSpelling = nil
+        if !candidatePrefix.isEmpty, let before = proxy.documentContextBeforeInput {
+            if autoCorrect, word == candidatePrefix,
+               let proposed = corrections.choices(for: word, before: before, includeCompletions: false).automatic,
+               let rejection = RejectedSpelling(word, proposed), corrections.canLearn(rejection) {
+                usePreference(PersonalSpellings.recordUndo(rejection, speed: learningSpeed))
+            } else if corrections.isCorrectionChoice(candidatePrefix, chosen: word, before: before) {
+                usePreference(PersonalSpellings.recordChoice(.typing, original: candidatePrefix,
+                                                             chosen: word, speed: learningSpeed))
+            }
+        }
         for _ in candidatePrefix { proxy.deleteBackward() }
         proxy.insertText(word + " ")
         applyAutoCase()

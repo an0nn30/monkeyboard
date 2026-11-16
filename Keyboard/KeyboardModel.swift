@@ -1,7 +1,7 @@
 import UIKit
 
 enum Key: Equatable {
-    case type(String), shift, delete, layer, symbols, globe, space, rightSpace, enter
+    case type(String), shift, delete, layer, symbols, globe, emoji, space, rightSpace, enter
 
     var soundKey: TypingSoundKey {
         switch self {
@@ -55,6 +55,8 @@ struct KeyboardModel: Equatable {
         }
     }
     enum Shift { case lower, upper, locked }
+    enum EmojiMode { case closed, browse, search }
+    var emojiMode = EmojiMode.closed
     var layer = Layer.letters
     var shift = Shift.lower
     var needsGlobe = false
@@ -96,6 +98,7 @@ struct KeyboardModel: Equatable {
         }
         var bottom: [Key] = [.layer]
         if needsGlobe { bottom.append(.globe) }
+        if [.default, .twitter, .webSearch].contains(keyboardType) { bottom.append(.emoji) }
         let punctuation = keyboardType == .emailAddress ? "@" : (keyboardType == .URL ? "/" : ",")
         // Keep the second space control in both layouts so it can slide into the first.
         bottom += [.type(punctuation), .space, .rightSpace, .type("."), .enter]

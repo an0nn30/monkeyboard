@@ -1,0 +1,194 @@
+[
+  {
+    "cohort": "short-words-and-context",
+    "typed": "Someone rang the dor ",
+    "intended": "Someone rang the door ",
+    "apple": "Someone rang the door ",
+    "build68": "Someone rang the door ",
+    "build69": "Someone rang the door "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "Please lock the back dor ",
+    "intended": "Please lock the back door ",
+    "apple": "Please lock the back door ",
+    "build68": "Please lock the back dor ",
+    "build69": "Please lock the back door "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "We can hear the roof leek ",
+    "intended": "We can hear the roof leak ",
+    "apple": "We can hear the roof leek ",
+    "build68": "We can hear the roof leek ",
+    "build69": "We can hear the roof leek "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "They repaired the gas leek ",
+    "intended": "They repaired the gas leak ",
+    "apple": "They repaired the gas leek ",
+    "build68": "They repaired the gas leek ",
+    "build69": "They repaired the gas leak "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "Can you shut the dor gently ",
+    "intended": "Can you shut the door gently ",
+    "apple": "Can you shut the door gently ",
+    "build68": "Can you shut the door gently ",
+    "build69": "Can you shut the door gently "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "I left my bok on the desk ",
+    "intended": "I left my book on the desk ",
+    "apple": "I left my book on the desk ",
+    "build68": "I left my book on the desk ",
+    "build69": "I left my book on the desk "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "She dropped a leek ",
+    "intended": "She dropped a leek ",
+    "apple": "She dropped a leek ",
+    "build68": "She dropped a leek ",
+    "build69": "She dropped a leek "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "The plumber sliced a leek ",
+    "intended": "The plumber sliced a leek ",
+    "apple": "The plumber sliced a leek ",
+    "build68": "The plumber sliced a leek ",
+    "build69": "The plumber sliced a leek "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "The recipe calls for leek ",
+    "intended": "The recipe calls for leek ",
+    "apple": "The recipe calls for leek ",
+    "build68": "The recipe calls for leek ",
+    "build69": "The recipe calls for leek "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "I ordered bok choy ",
+    "intended": "I ordered bok choy ",
+    "apple": "I ordered book choy ",
+    "build68": "I ordered book choy ",
+    "build69": "I ordered bok choy "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "Send the doc rn ",
+    "intended": "Send the doc rn ",
+    "apple": "Send the doc rn ",
+    "build68": "Send the doc rn ",
+    "build69": "Send the doc rn "
+  },
+  {
+    "cohort": "short-words-and-context",
+    "typed": "Bring the dog to the door ",
+    "intended": "Bring the dog to the door ",
+    "apple": "Bring the dog to the door ",
+    "build68": "Bring the dog to the door ",
+    "build69": "Bring the dog to the door "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "A package is at the side dor ",
+    "intended": "A package is at the side door ",
+    "apple": "A package is at the side for ",
+    "build68": "A package is at the side dor ",
+    "build69": "A package is at the side dor "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "Could you knock on the dor ",
+    "intended": "Could you knock on the door ",
+    "apple": "Could you knock on the door ",
+    "build68": "Could you knock on the door ",
+    "build69": "Could you knock on the door "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "Turn to page ten in the bok ",
+    "intended": "Turn to page ten in the book ",
+    "apple": "Turn to page ten in the book ",
+    "build68": "Turn to page ten in the book ",
+    "build69": "Turn to page ten in the book "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "The mechanic stopped the oil leek ",
+    "intended": "The mechanic stopped the oil leak ",
+    "apple": "The mechanic stopped the oil leek ",
+    "build68": "The mechanic stopped the oil leek ",
+    "build69": "The mechanic stopped the oil leak "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "A roofer sealed the leek ",
+    "intended": "A roofer sealed the leak ",
+    "apple": "A roofer sealed the leek ",
+    "build68": "A roofer sealed the leek ",
+    "build69": "A roofer sealed the leek "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "I left the ligths on ",
+    "intended": "I left the lights on ",
+    "apple": "I left the lights on ",
+    "build68": "I left the lights on ",
+    "build69": "I left the lights on "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "Dor is on my team ",
+    "intended": "Dor is on my team ",
+    "apple": "For is on my team ",
+    "build68": "Do is on my team ",
+    "build69": "Do is on my team "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "Roast the leek until soft ",
+    "intended": "Roast the leek until soft ",
+    "apple": "Roast the leek until soft ",
+    "build68": "Roast the leek until soft ",
+    "build69": "Roast the leek until soft "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "The repair crew shared leek soup ",
+    "intended": "The repair crew shared leek soup ",
+    "apple": "The repair crew shared leek soup ",
+    "build68": "The repair crew shared leek soup ",
+    "build69": "The repair crew shared leek soup "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "The noodles came with bok choy ",
+    "intended": "The noodles came with bok choy ",
+    "apple": "The noodles came with book choy ",
+    "build68": "The noodles came with book choy ",
+    "build69": "The noodles came with bok choy "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "Can you grab my mug ",
+    "intended": "Can you grab my mug ",
+    "apple": "Can you grab my mug ",
+    "build68": "Can you grab my mug ",
+    "build69": "Can you grab my mug "
+  },
+  {
+    "cohort": "everyday-confirmation",
+    "typed": "Text me when ur free ",
+    "intended": "Text me when ur free ",
+    "apple": "Text me when ur free ",
+    "build68": "Text me when ur free ",
+    "build69": "Text me when ur free "
+  }
+]

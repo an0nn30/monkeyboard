@@ -12,6 +12,32 @@ final class WordCorrections {
     private let language = "en_US"
     private var knownWords = Set<String>()
     private var shortcuts: [String: String] = [:]
+    var personalTyping: [String: PersonalSpellings.Preference] = [:]
+
+    func personalPreference(_ word: String) -> PersonalSpellings.Preference? {
+        guard !personalTyping.isEmpty, shortcuts[word] == nil, let key = RejectedSpelling.key(word) else { return nil }
+        return personalTyping[key]
+    }
+
+    func preserves(_ word: String) -> Bool { personalPreference(word)?.keepsOriginal == true }
+
+    /// Accept only an explicit spelling choice. The suggestion strip also
+    /// offers prefix completions and next words, which aren't typo evidence.
+    func isCorrectionChoice(_ word: String, chosen: String, before: String) -> Bool {
+        guard let source = RejectedSpelling.key(word), let target = RejectedSpelling.key(chosen),
+              source != target, shortcuts[word] == nil, !knownWords.contains(source) else { return false }
+        let choices = self.choices(for: word, before: before, includeCompletions: false)
+        if target.hasPrefix(source) {
+            return choices.automatic.flatMap(RejectedSpelling.key) == target && !isRecognizedSpelling(word)
+        }
+        return ([choices.automatic].compactMap { $0 } + choices.suggestions)
+            .contains { RejectedSpelling.key($0) == target }
+    }
+
+    func canLearn(_ rejection: RejectedSpelling) -> Bool {
+        // The user configured these expansions explicitly in iOS.
+        shortcuts[rejection.word] == nil
+    }
     // Frequent English typos for which the dictionary can rank a different
     // one-edit word first (e.g. “wired” for “wierd”).
     private let commonTypos = ["teh": "the", "wierd": "weird", "thier": "their",
@@ -23,6 +49,7 @@ final class WordCorrections {
         var suggestions: [String] = []
         var reviewAlternatives: [String] = []
         // Only a verified subject + verb frame can reopen a dictionary split.
+        var usesPersonalReplacement = false
         var reviewsProtectedBoundary = false
         var reviewsShortWord = false
         var missingLetterOnly = false
@@ -214,6 +241,27 @@ final class WordCorrections {
                 result.automatic = nil
             }
         }
+        if let pref = personalPreference(word), !pref.keepsOriginal, before.hasSuffix(word),
+           !knownWords.contains(lower) {
+            let leading = before.dropLast(word.count)
+            let beginsWord = leading.last.map { $0.isWhitespace || "(\"“‘[{—".contains($0) } ?? true
+            guard beginsWord, !Self.isLiteralContext(leading.lowercased().trimmingCharacters(in: .whitespaces)),
+                  word == lower || word == lower.prefix(1).uppercased() + lower.dropFirst() else { return result }
+            var target = pref.preferred
+            if word.first?.isUppercase == true || target == "i" || target.hasPrefix("i'") {
+                target = target.prefix(1).uppercased() + target.dropFirst()
+            }
+            result.suggestions.removeAll { $0.caseInsensitiveCompare(target) == .orderedSame }
+            result.suggestions.insert(target, at: 0)
+            // Keep valid words available in other contexts. Their learned
+            // alternative is automatic only when the base model also chose it.
+            if !isRecognizedSpelling(word) || result.automatic?.caseInsensitiveCompare(target) == .orderedSame {
+                result.automatic = target
+                result.usesPersonalReplacement = true
+                result.reviewAlternatives = []
+                result.reviewsShortWord = false
+            }
+        }
         return result
     }
 
@@ -256,7 +304,7 @@ final class WordCorrections {
         let combined = (leading + raw).lowercased()
         if Self.literalPrompts.contains(where: { combined.contains($0 + " ") }) { return false }
         let tokens = raw.split(whereSeparator: { !$0.isLetter && $0 != "'" && $0 != "’" })
-        return !tokens.contains { knownWords.contains($0.lowercased()) || shortcuts[String($0)] != nil }
+        return !tokens.contains { knownWords.contains($0.lowercased()) || shortcuts[String($0)] != nil || preserves(String($0)) }
     }
 
     // Only the controller can nominate text for lookback: this is an owned

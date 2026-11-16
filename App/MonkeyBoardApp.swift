@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import notify
 
 @main
 struct MonkeyBoardApp: App {
@@ -166,6 +167,14 @@ private struct KeyboardSettings: View {
             } footer: {
                 Text("The transformer suggests the next word and can revise a recent spelling as you keep typing. Tap Delete immediately after a correction to undo it.")
             }
+            Section {
+                NavigationLink {
+                    PersonalSpellingsSettings()
+                } label: {
+                    Label("Learned spellings", systemImage: "text.book.closed")
+                }
+                .accessibilityIdentifier("personal-spellings")
+            }
             Section("Keypress feedback") {
                 Picker("Typing sound", selection: Binding(get: { sound }, set: { next in
                     soundSaveFailed = !next.save()
@@ -273,6 +282,146 @@ private struct KeyboardSettings: View {
         repeatSplitLetters = WideKeyboardLayout.repeatsLetters
         returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
         percent = KeypressFeedback.storedPercent() ?? KeypressFeedback.initial
+    }
+}
+
+private struct PersonalSpellingsSettings: View {
+    @Environment(\.scenePhase) private var phase
+    @State private var snapshot = PersonalSpellings.Snapshot()
+    @State private var speed = LearningSpeed.balanced
+    @State private var editing: PersonalSpellings.Preference?
+    @State private var confirmingReset = false
+    @State private var failed = false
+
+    var body: some View {
+        List {
+            Section {
+                Picker("Learning speed", selection: Binding(get: { speed }, set: { next in
+                    update(next.save())
+                })) {
+                    ForEach([LearningSpeed.careful, .balanced, .fast], id: \.self) { Text($0.title).tag($0) }
+                }
+                .pickerStyle(.segmented)
+                .accessibilityIdentifier("learning-speed")
+            } header: {
+                Text("Learning speed")
+            } footer: {
+                Text("Learn after \(speed.rawValue) matching corrections. Undo an autocorrection or choose a different spelling while typing or swiping.")
+            }
+            if snapshot.preferences.isEmpty {
+                Text("No learned spellings yet").foregroundStyle(.secondary)
+                    .accessibilityIdentifier("no-learned-spellings")
+            } else {
+                preferenceSection(.typing, title: "Typing")
+                preferenceSection(.swipe, title: "Swipe typing")
+            }
+            Section {
+                Button("Reset spelling memory", role: .destructive) { confirmingReset = true }
+                    .disabled(snapshot.preferences.isEmpty && !snapshot.hasPending)
+                    .accessibilityIdentifier("reset-spellings")
+            } footer: {
+                Text("Learned words and pending choices stay on this device. Reset clears both.")
+            }
+            if failed { Text("Couldn’t save the change. Try again.").foregroundStyle(.red) }
+        }
+        .navigationTitle("Learned spellings")
+        .onAppear { reload() }
+        .onChange(of: phase) { _, value in if value == .active { reload() } }
+        .sheet(item: $editing) { preference in
+            EditSpelling(preference: preference) { update(true) }
+        }
+        .alert("Reset spelling memory?", isPresented: $confirmingReset) {
+            Button("Cancel", role: .cancel) {}
+            Button("Reset", role: .destructive) { update(PersonalSpellings.reset()) }
+        } message: { Text("This clears typing and swipe preferences, including choices still being learned.") }
+    }
+
+    @ViewBuilder private func preferenceSection(_ input: SpellingInput, title: String) -> some View {
+        let entries = snapshot.preferences.filter { $0.input == input }
+        if !entries.isEmpty {
+            Section(title) {
+                ForEach(entries) { entry in
+                    let suffix = (input == .swipe ? "swipe-" : "") + entry.original.lowercased()
+                    HStack {
+                        Button {
+                            editing = entry
+                        } label: {
+                            VStack(alignment: .leading) {
+                                Text(verbatim: entry.original)
+                                Text(entry.keepsOriginal ? "Keep spelling" : "Use “\(entry.preferred)”")
+                                    .font(.subheadline).foregroundStyle(.secondary)
+                            }
+                        }
+                        .buttonStyle(.borderless)
+                        .accessibilityLabel("Edit " + entry.original)
+                        .accessibilityIdentifier("edit-spelling-" + suffix)
+                        Spacer()
+                        Button("Forget", role: .destructive) { update(PersonalSpellings.forget(entry)) }
+                            .buttonStyle(.borderless)
+                            .accessibilityLabel("Forget " + entry.original)
+                            .accessibilityIdentifier("forget-spelling-" + suffix)
+                    }
+                }
+            }
+        }
+    }
+
+    private func reload() {
+        snapshot = PersonalSpellings.snapshot()
+        speed = .stored
+    }
+
+    private func update(_ success: Bool) {
+        failed = !success
+        if success { notify_post(PersonalSpellings.settingsChanged) }
+        reload()
+    }
+}
+
+private struct EditSpelling: View {
+    @Environment(\.dismiss) private var dismiss
+    let preference: PersonalSpellings.Preference
+    let didSave: () -> Void
+    @State private var word: String
+    @State private var failed = false
+
+    init(preference: PersonalSpellings.Preference, didSave: @escaping () -> Void) {
+        self.preference = preference
+        self.didSave = didSave
+        _word = State(initialValue: preference.preferred)
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                LabeledContent(preference.input == .swipe ? "Swipe result" : "Typed spelling", value: preference.original)
+                Section {
+                    TextField("Preferred spelling", text: $word)
+                        .accessibilityIdentifier("preferred-spelling")
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                } header: {
+                    Text("Preferred spelling")
+                } footer: {
+                    Text(preference.input == .swipe
+                         ? "This word moves to first place when it’s among the matches for your swipe."
+                         : "Misspellings can be corrected automatically. For a valid word, the alternative appears in suggestions.")
+                }
+                if failed { Text("Couldn’t update this spelling. Reopen it and try again.").foregroundStyle(.red) }
+            }
+            .navigationTitle("Edit spelling")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        guard PersonalSpellings.edit(preference, to: word) else { failed = true; return }
+                        didSave()
+                        dismiss()
+                    }.disabled(RejectedSpelling.key(word) == nil || word == preference.preferred)
+                }
+            }
+        }
     }
 }
 

@@ -11,6 +11,7 @@ enum KeyboardSetting: String {
     case repeatSplitLetters = "repeat-split-letters"
     case oneHanded = "one-handed-layout"
     case returnAfterSymbol = "return-after-symbol"
+    case learningSpeed = "personal-learning-speed"
     case glideTyping = "glide-typing"
     case autocorrection = "autocorrection"
     case transformer = "decoder-15m"
@@ -55,6 +56,11 @@ enum KeyboardSetting: String {
         }
         return result == errSecSuccess
     }
+}
+
+extension LearningSpeed {
+    static var stored: Self { KeyboardSetting.learningSpeed.read().flatMap(Self.init(rawValue:)) ?? .balanced }
+    func save() -> Bool { KeyboardSetting.learningSpeed.save(UInt8(rawValue)) }
 }
 
 enum WideKeyboardLayout {

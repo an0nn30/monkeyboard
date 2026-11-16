@@ -130,6 +130,36 @@ final class Lexical55 {
         return peers(Self.normalized(source)).contains { $0.1 && $0.0 == target }
     }
 
+    /// A narrow set for the fast word-boundary check. Only rare lowercase
+    /// spellings can nominate a much more common word from the same lexicon.
+    func boundaryAlternatives(for token: String, left: String) -> [String] {
+        guard (3...6).contains(token.utf8.count), token.utf8.allSatisfy({ (97...122).contains($0) }),
+              let source = entry(token), source.frequency < 3.3, !source.casual else { return [] }
+        let protected = isLiteralProtected(token)
+        if protected {
+            // A lowercase surname after an article can also be a missing
+            // doubled letter. Names elsewhere and texting vocabulary stay literal.
+            let clause = left.split(whereSeparator: { ".!?;:,\n".contains($0) }).last ?? ""
+            let recent = clause.split(whereSeparator: \.isWhitespace).suffix(2)
+            guard source.flags & 32 != 0, recent.contains(where: {
+                ["the", "a", "my", "your", "our", "his", "her", "their"].contains($0.lowercased())
+            }) else { return [] }
+        }
+        var pool = Set<String>()
+        if !protected {
+            for word in sounds[token] ?? [] where word.count == token.count {
+                if zip(word, token).filter({ $0 != $1 }).count == 1 { pool.insert(word) }
+            }
+        }
+        for i in token.indices {
+            pool.insert(String(token[...i]) + token[i...])
+        }
+        return pool.filter { word in
+            guard let target = entry(word) else { return false }
+            return target.isTarget && target.frequency >= max(3.8, source.frequency + 1.1)
+        }.sorted()
+    }
+
     private static func prefix(_ bytes: [UInt8]) -> UInt16 { UInt16(bytes[0]) << 8 | UInt16(bytes[1]) }
     private static func suffix(_ bytes: [UInt8]) -> UInt16 { 0x8000 | UInt16(bytes[bytes.count - 2]) << 8 | UInt16(bytes.last!) }
 

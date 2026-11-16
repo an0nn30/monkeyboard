@@ -181,6 +181,70 @@ final class KeyboardTypingTests: XCTestCase {
     }
     #endif
 
+    func testEmojiPickerSearchInsertionRecentsAndReturn() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        let smiley = app.buttons["key-Emoji"]
+        XCTAssertTrue(smiley.exists, "The keyboard needs a dedicated emoji key.")
+        smiley.tap()
+        app.buttons["emoji-category-food"].tap()
+        app.cells["emoji-🍇"].tap()
+        XCTAssertEqual(draft.value as? String, "🍇")
+
+        app.buttons["emoji-search"].tap()
+        for character in "monkey" { letter(String(character), in: app).tap() }
+        XCTAssertEqual(draft.value as? String, "🍇", "Search text stays inside the picker.")
+        app.cells["emoji-🐒"].tap()
+        XCTAssertEqual(draft.value as? String, "🍇🐒")
+        app.buttons["emoji-done"].tap()
+        app.buttons["emoji-category-recent"].tap()
+        XCTAssertTrue(app.cells["emoji-🐒"].exists)
+        app.buttons["emoji-category-smileys"].tap()
+        let picker = XCTAttachment(screenshot: app.screenshot())
+        picker.name = "Emoji picker in the keyboard"
+        picker.lifetime = .keepAlways
+        add(picker)
+        app.buttons["emoji-delete"].tap()
+        app.buttons["emoji-abc"].tap()
+        letter("x", in: app).tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "🍇x")
+        smiley.tap()
+        XCTAssertTrue(app.cells["emoji-🐒"].exists)
+    }
+
+    func testEmojiSkinToneAndEditingSearch() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        app.buttons["key-Emoji"].tap()
+        app.buttons["emoji-search"].tap()
+        for character in "zzzz" { letter(String(character), in: app).tap() }
+        XCTAssertTrue(app.staticTexts["No matching emoji"].exists)
+        app.buttons["emoji-clear"].tap()
+        for character in "thumbs upx" {
+            if character == " " {
+                let left = app.buttons["key-Space-left"]
+                (left.exists ? left : app.buttons["key-Space"]).tap()
+            } else { letter(String(character), in: app).tap() }
+        }
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual(app.buttons["emoji-search"].value as? String, "thumbs up")
+        let thumb = app.cells.matching(NSPredicate(format: "label BEGINSWITH %@", "thumbs up")).firstMatch
+        thumb.press(forDuration: 0.8)
+        app.buttons["👍🏽  thumbs up, medium skin tone"].tap()
+        XCTAssertEqual(draft.value as? String, "👍🏽")
+        app.buttons["emoji-done"].tap()
+        app.buttons["emoji-category-recent"].tap()
+        XCTAssertTrue(app.cells["emoji-👍🏽"].exists)
+        app.buttons["emoji-delete"].tap()
+        XCTAssertEqual(draft.value as? String ?? "", "")
+    }
+
     func testAppearanceFontUpdatesPreviewAndLiveKey() throws {
         let app = XCUIApplication()
         let picker = app.buttons["keyboard-font-picker"]
@@ -416,6 +480,8 @@ final class KeyboardTypingTests: XCTestCase {
         app.buttons["hide-keyboard"].tap()
         XCTAssertTrue(feedback.waitForNonExistence(timeout: 3))
         settings.tap()
+        if !slider.isHittable { app.swipeUp() }
+        XCTAssertTrue(slider.waitForExistence(timeout: 3))
         XCTAssertEqual(slider.value as? String, "28%")
     }
 
@@ -496,6 +562,76 @@ final class KeyboardTypingTests: XCTestCase {
         }
     }
 
+    func testSpaceAndPeriodOnEitherSideOfTheirGap() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        let toggle = app.buttons["toggle-split-layout"]
+        let initialLayout = toggle.exists ? toggle.label : nil
+        defer { if let initialLayout, toggle.label != initialLayout { toggle.tap() } }
+        for pass in 0..<(initialLayout == nil ? 1 : 2) {
+            if pass == 1 { toggle.tap() }
+            let period = app.buttons["key-."]
+            let edge = period.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0.5))
+            let original = draft.value as? String ?? ""
+            // The punctuation control starts halfway through the inter-key gap.
+            edge.withOffset(CGVector(dx: -1, dy: 0)).tap()
+            XCTAssertEqual(draft.value as? String, original + " ")
+            edge.withOffset(CGVector(dx: 1, dy: 0)).tap()
+            period.tap()
+            XCTAssertEqual(draft.value as? String, original + " ..")
+        }
+    }
+
+    func testUndoEarlierCorrectionAfterTypingAhead() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("can you fine anything ", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you find anything ")
+        typePhrase("today", in: app)
+        let undo = app.buttons["undo-autocorrection"]
+        XCTAssertTrue(undo.waitForExistence(timeout: 3))
+        undo.tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you fine anything today")
+        typePhrase(" please.", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "can you fine anything today please.")
+        XCTAssertFalse(undo.exists)
+    }
+
+    func testBackspaceDeletesTypedAheadTextAndUndoKeepsTheSpace() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("my keybaord ab", in: app)
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "my keyboard ab")
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "my keyboard a")
+        app.buttons["undo-autocorrection"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "my keybaord a")
+    }
+
+    func testCorrectionUndoExpiresWhenSelectionChanges() {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        typePhrase("put teh mug", in: app)
+        let undo = app.buttons["undo-autocorrection"]
+        XCTAssertTrue(undo.waitForExistence(timeout: 4))
+        let before = draft.value as? String
+        draft.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.15)).doubleTap()
+        XCTAssertTrue(undo.waitForNonExistence(timeout: 3))
+        XCTAssertEqual(draft.value as? String, before)
+    }
+
     func testTapInLetterGapInsertsNearestLetter() {
         let app = XCUIApplication()
         app.launch()
@@ -533,6 +669,39 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertTrue((draft.value as? String)?.hasSuffix("my boog") == true)
     }
 
+    func testTypingSurvivesFieldChangesDuringSentenceReview() throws {
+        let host = XCUIApplication()
+        host.launch()
+        host.textViews["draft"].tap()
+        selectMonkeyBoard(in: host)
+
+        let browser = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
+        let html = """
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>input{display:block;font-size:18px;margin:12px}</style>
+        <input aria-label="First message"><input aria-label="Second message">
+        """
+        let url = try XCTUnwrap(URL(string: "data:text/html;base64," + Data(html.utf8).base64EncodedString()))
+        browser.open(url)
+        let first = browser.textFields["First message"], second = browser.textFields["Second message"]
+        XCTAssertTrue(first.waitForExistence(timeout: 10))
+        first.tap()
+        typePhrase("the novel gos ", in: browser)
+        let original = try XCTUnwrap(first.value as? String)
+        second.tap()
+        typePhrase("on my way", in: browser)
+        XCTAssertEqual((second.value as? String)?.lowercased(), "on my way")
+        XCTAssertEqual(first.value as? String, original)
+
+        browser.buttons["hide-keyboard"].tap()
+        XCTAssertTrue(browser.buttons["hide-keyboard"].waitForNonExistence(timeout: 5))
+        first.coordinate(withNormalizedOffset: CGVector(dx: 0.93, dy: 0.5)).tap()
+        XCTAssertTrue(browser.buttons["hide-keyboard"].waitForExistence(timeout: 5))
+        typePhrase("here", in: browser)
+        XCTAssertEqual((first.value as? String)?.lowercased(), original.lowercased() + "here")
+        XCTAssertEqual((second.value as? String)?.lowercased(), "on my way")
+    }
+
     func testTransformerRevisitsAnEarlierWordAndPreservesTheCaret() {
         let app = XCUIApplication()
         app.launch()
@@ -551,7 +720,7 @@ final class KeyboardTypingTests: XCTestCase {
         type("beside ")
         let revised = NSPredicate(format: "value ==[c] %@", "the novel goes beside ")
         XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: revised, object: draft)],
-                                      timeout: 8), .completed)
+                                      timeout: 8), .completed, "Final draft: \(draft.value as? String ?? "<unavailable>")")
         app.buttons["key-Delete"].tap()
         XCTAssertEqual((draft.value as? String)?.lowercased(), "the novel gos beside ")
         type("my book")
@@ -871,6 +1040,243 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual((draft.value as? String)?.lowercased(), "my dad ")
         app.buttons["key-Delete"].tap()
         XCTAssertEqual((draft.value as? String)?.lowercased(), "my dsd")
+    }
+
+    func testLearningSpeedTypingAndSwipePreferences() throws {
+        #if !targetEnvironment(simulator)
+        throw XCTSkip("Exercises reset only on a simulator with empty spelling memory.")
+        #else
+        let app = XCUIApplication()
+        let draft = app.textViews["draft"]
+        let reset = app.buttons["reset-spellings"]
+        let speed = app.segmentedControls["learning-speed"]
+        func memory() {
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+            let link = app.buttons["personal-spellings"]
+            for _ in 0..<4 where !link.isHittable { app.swipeUp() }
+            link.tap()
+        }
+        func freshDraft() {
+            app.launch()
+            draft.tap()
+            selectMonkeyBoard(in: app)
+        }
+        func space() {
+            let left = app.buttons["key-Space-left"]
+            (left.exists ? left : app.buttons["key-Space"]).tap()
+        }
+        func suggestion(_ word: String) -> XCUIElement {
+            app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@ AND label ==[c] %@",
+                                             "suggestion-", word)).firstMatch
+        }
+        func swipeTo() {
+            letter("t", in: app).press(forDuration: 0.12, thenDragTo: letter("o", in: app))
+        }
+        func expect(_ word: String) {
+            XCTAssertEqual((draft.value as? String)?.lowercased(), word)
+        }
+        func typeTypo() {
+            for ch in "teh" { letter(String(ch), in: app).tap() }
+        }
+        memory()
+        try XCTSkipIf(reset.isEnabled, "Preserve existing user spelling memory.")
+        let originalSpeed = try XCTUnwrap(["Fast", "Balanced", "Careful"].first { speed.buttons[$0].isSelected })
+        addTeardownBlock {
+            memory()
+            if reset.isEnabled {
+                reset.tap()
+                app.alerts.buttons["Reset"].tap()
+            }
+            speed.buttons[originalSpeed].tap()
+        }
+        speed.buttons["Fast"].tap()
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        enableForTest("glide-typing", inSettingsOf: app)
+        enableForTest("auto-correction", inSettingsOf: app)
+
+        freshDraft()
+        swipeTo()
+        suggestion("too").tap()
+        app.buttons["key-Delete"].tap()
+        memory()
+        XCTAssertFalse(reset.isEnabled, "Deleting a swipe discards its feedback")
+
+        freshDraft()
+        swipeTo()
+        for word in ["too", "to", "too"] { suggestion(word).tap() }
+        space()
+        expect("too ")
+        memory()
+        XCTAssertTrue(reset.isEnabled)
+        XCTAssertFalse(app.buttons["edit-spelling-swipe-to"].exists, "One gesture is one choice")
+        freshDraft()
+        swipeTo()
+        expect("to")
+        suggestion("too").tap()
+        space()
+        freshDraft()
+        swipeTo()
+        expect("too")
+        app.buttons["key-Delete"].tap()
+        for ch in "to" { letter(String(ch), in: app).tap() }
+        space()
+        expect("to ")
+
+        memory()
+        XCTAssertTrue(app.buttons["edit-spelling-swipe-to"].exists)
+        speed.buttons["Careful"].tap()
+        for count in 1...5 {
+            freshDraft()
+            typeTypo()
+            let pick = suggestion("the")
+            XCTAssertTrue(pick.waitForExistence(timeout: 3))
+            pick.tap()
+            expect("the ")
+            if count == 4 {
+                memory()
+                XCTAssertFalse(app.buttons["edit-spelling-teh"].exists)
+            }
+        }
+        memory()
+        app.buttons["edit-spelling-teh"].tap()
+        let field = app.textFields["preferred-spelling"]
+        field.tap()
+        field.typeText("n")
+        app.buttons["Save"].tap()
+        freshDraft()
+        typeTypo()
+        space()
+        expect("then ")
+        memory()
+        app.buttons["forget-spelling-swipe-to"].tap()
+        XCTAssertFalse(app.buttons["edit-spelling-swipe-to"].exists)
+        XCTAssertTrue(app.buttons["edit-spelling-teh"].exists)
+        freshDraft()
+        swipeTo()
+        expect("to")
+        memory()
+        reset.tap()
+        app.alerts.buttons["Reset"].tap()
+        XCTAssertTrue(speed.buttons["Careful"].isSelected)
+        XCTAssertFalse(reset.isEnabled)
+        freshDraft()
+        swipeTo()
+        expect("to")
+        app.buttons["key-Delete"].tap()
+        typeTypo()
+        space()
+        expect("the ")
+        #endif
+    }
+
+    func testRepeatedUndosLearnSpellingsAndForgetOrResetThem() throws {
+        #if !targetEnvironment(simulator)
+        throw XCTSkip("Spelling-memory reset is tested only on a simulator.")
+        #else
+        let app = XCUIApplication()
+        let draft = app.textViews["draft"]
+        func openMemory() {
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+            let link = app.buttons["personal-spellings"]
+            for _ in 0..<4 where !link.isHittable { app.swipeUp() }
+            link.tap()
+        }
+        func freshDraft() {
+            app.launch()
+            draft.tap()
+            selectMonkeyBoard(in: app)
+        }
+        func typeWord(_ text: String) {
+            for ch in text { letter(String(ch), in: app).tap() }
+        }
+        func space() {
+            let left = app.buttons["key-Space-left"]
+            (left.exists ? left : app.buttons["key-Space"]).tap()
+        }
+        func expect(_ text: String) {
+            XCTAssertEqual((draft.value as? String)?.lowercased(), text)
+        }
+        func reject(_ typed: String, _ corrected: String) {
+            freshDraft()
+            typeWord(typed)
+            space()
+            expect(corrected + " ")
+            app.buttons["key-Delete"].tap()
+            expect(typed)
+        }
+        let reset = app.buttons["reset-spellings"]
+        openMemory()
+        try XCTSkipIf(reset.isEnabled, "This test needs empty spelling memory; preserve existing user data.")
+        let speeds = app.segmentedControls["learning-speed"].buttons
+        let originalSpeed = try XCTUnwrap(["Fast", "Balanced", "Careful"].first { speeds[$0].isSelected })
+        speeds["Balanced"].tap()
+        addTeardownBlock {
+            openMemory()
+            if reset.isEnabled {
+                reset.tap()
+                app.alerts.buttons["Reset"].tap()
+            }
+            speeds[originalSpeed].tap()
+        }
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        enableForTest("auto-correction", inSettingsOf: app)
+
+        // One rejected correction does not become a preferred spelling.
+        reject("teh", "the")
+        openMemory()
+        XCTAssertTrue(app.staticTexts["no-learned-spellings"].exists)
+        XCTAssertTrue(reset.isEnabled, "Reset should clear pending evidence too")
+        reject("teh", "the")
+        reject("teh", "the")
+
+        freshDraft()
+        typeWord("teh")
+        space()
+        expect("teh ")
+        typeWord("agian")
+        app.buttons["key-."].tap()
+        expect("teh again.")
+        let unchanged = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            (draft.value as? String)?.lowercased() != "teh again."
+        }, object: nil)
+        unchanged.isInverted = true
+        wait(for: [unchanged], timeout: 1.6)
+
+        openMemory()
+        let forget = app.buttons["forget-spelling-teh"]
+        XCTAssertTrue(forget.exists)
+        forget.tap()
+        XCTAssertTrue(app.staticTexts["no-learned-spellings"].exists)
+        reject("teh", "the")   // Forget restores normal autocorrect.
+
+        // A reset must remove both an established word and a pending rejection.
+        reject("agian", "again")
+        reject("agian", "again")
+        reject("agian", "again")
+        openMemory()
+        XCTAssertTrue(app.buttons["forget-spelling-agian"].exists)
+        reset.tap()
+        app.alerts.buttons["Cancel"].tap()
+        XCTAssertTrue(app.buttons["forget-spelling-agian"].exists)
+        reset.tap()
+        app.alerts.buttons["Reset"].tap()
+        XCTAssertTrue(app.staticTexts["no-learned-spellings"].exists)
+        XCTAssertFalse(reset.isEnabled)
+        freshDraft()
+        typeWord("agian")
+        space()
+        expect("again ")
+        reject("teh", "the")
+        reject("teh", "the")
+        freshDraft()
+        typeWord("teh")
+        space()
+        expect("the ")
+        #endif
     }
 
     func testWordCorrectionAndUndo() throws {
