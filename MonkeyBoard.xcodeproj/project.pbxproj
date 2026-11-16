@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA7000000000000000000003 /* TypingSound.swift in App */ = {isa = PBXBuildFile; fileRef = CA7000000000000000000001; };
+		CA7000000000000000000004 /* TypingSound.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = CA7000000000000000000001; };
+		CA7000000000000000000005 /* TypingSounds in App */ = {isa = PBXBuildFile; fileRef = CA7000000000000000000002; };
+		CA7000000000000000000006 /* TypingSounds in Keyboard */ = {isa = PBXBuildFile; fileRef = CA7000000000000000000002; };
 		BA7100000000000000000001 /* AppearanceSettings.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000011 /* AppearanceSettings.swift */; };
 		BA7100000000000000000002 /* KeyboardTint.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000012 /* KeyboardTint.swift */; };
 		BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000012 /* KeyboardTint.swift */; };
@@ -77,6 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA7000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/TypingSound.swift; sourceTree = "<group>"; };
+		CA7000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared/TypingSounds; sourceTree = "<group>"; };
 		BA7100000000000000000011 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		BA7100000000000000000012 /* KeyboardTint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardTint.swift; sourceTree = "<group>"; };
 		BA7100000000000000000013 /* KeyboardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardFont.swift; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 				DD1300000000000000000001 /* leek-review.bin */,
 				4229A49FF531BA6F4EAEB8B4 /* App */,
 				BB1100000000000000000002 /* WordNet-LICENSE.txt */,
+				CA7000000000000000000001 /* TypingSound.swift */,
+				CA7000000000000000000002 /* TypingSounds */,
 				A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */,
 				BA7100000000000000000012 /* KeyboardTint.swift */,
 				BA7100000000000000000013 /* KeyboardFont.swift */,
@@ -249,8 +257,8 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB1100000000000000000003 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (BB1100000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
-		DD1200000000000000000004 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (BC5500000000000000000006, BC5500000000000000000007, BC5500000000000000000008, BC5500000000000000000009, BC550000000000000000000A, BC550000000000000000000B, DC1200000000000000000003, DC1300000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+		BB1100000000000000000003 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (CA7000000000000000000005, BB1100000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+		DD1200000000000000000004 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (CA7000000000000000000006, BC5500000000000000000006, BC5500000000000000000007, BC5500000000000000000008, BC5500000000000000000009, BC550000000000000000000A, BC550000000000000000000B, DC1200000000000000000003, DC1300000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXProject section */
@@ -313,6 +321,7 @@
 				DC1200000000000000000002 /* MonkeyDecoder.mlpackage */,
 				F428ADC15523D29965D8A1C2 /* KeyPreview.swift in Sources */,
 				BA7200000000000000000002 /* GlideTrail.swift in Keyboard */,
+				CA7000000000000000000004 /* TypingSound.swift */,
 				A554C0908A6B40B6A8000002 /* KeypressFeedback.swift in Keyboard */,
 				BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */,
 				BA7100000000000000000008 /* KeyboardFont.swift in Keyboard */,
@@ -336,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01E4187097073B07D62EDE3 /* MonkeyBoardApp.swift in Sources */,
+				CA7000000000000000000003 /* TypingSound.swift */,
 				A554C0908A6B40B6A8000001 /* KeypressFeedback.swift in App */,
 				BA7100000000000000000001 /* AppearanceSettings.swift in App */,
 				BA7100000000000000000002 /* KeyboardTint.swift in App */,
@@ -399,7 +409,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 67;
+				CURRENT_PROJECT_VERSION = 72;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -442,7 +452,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 67;
+				CURRENT_PROJECT_VERSION = 72;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;

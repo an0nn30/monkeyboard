@@ -3,6 +3,14 @@ import UIKit
 enum Key: Equatable {
     case type(String), shift, delete, layer, symbols, globe, space, rightSpace, enter
 
+    var soundKey: TypingSoundKey {
+        switch self {
+        case .delete: .backspace
+        case .space, .rightSpace: .space
+        default: .regular
+        }
+    }
+
     var weight: CGFloat {
         switch self {
         case .shift, .delete, .symbols: return 1.4

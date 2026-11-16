@@ -1,0 +1,5 @@
+Soft Tap, Crisp Tick and Mechanical are adapted from click_005, tick_002 and switch_002 in Interface Sounds by Kenney (CC0).
+https://kenney.nl/assets/interface-sounds
+https://creativecommons.org/publicdomain/zero/1.0/
+
+iOS-Style Click, Soft Knock and Hollow Tap are original synthesized sounds.

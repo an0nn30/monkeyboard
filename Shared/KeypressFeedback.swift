@@ -5,6 +5,7 @@ import UIKit
 enum KeyboardSetting: String {
     case accentTint = "accent-tint-srgb"
     case font = "keyboard-font"
+    case typingSound = "typing-sound"
     case firmness = "keypress-firmness"
     case split = "split-wide-layout"
     case repeatSplitLetters = "repeat-split-letters"
