@@ -65,6 +65,8 @@ private struct TypingRoom: View {
 
 private struct KeyboardSettings: View {
     @Environment(\.scenePhase) private var phase
+    @State private var sound = TypingSound.stored
+    @State private var soundSaveFailed = false
     @State private var percent = KeypressFeedback.storedPercent() ?? KeypressFeedback.initial
     @State private var saveFailed = false
     @State private var split = WideKeyboardLayout.prefersSplit
@@ -157,6 +159,25 @@ private struct KeyboardSettings: View {
                 Text("The transformer suggests the next word and can revise a recent spelling as you keep typing. Tap Delete immediately after a correction to undo it.")
             }
             Section("Keypress feedback") {
+                Picker("Typing sound", selection: Binding(get: { sound }, set: { next in
+                    soundSaveFailed = !next.save()
+                    guard !soundSaveFailed else { return }
+                    sound = next
+                    preview.sound.select(next)
+                    if next != .systemClick { preview.sound.play() }
+                })) {
+                    ForEach(TypingSound.allCases, id: \.self) { Text($0.title).tag($0) }
+                }
+                .pickerStyle(.menu)
+                .accessibilityIdentifier("typing-sound")
+                .accessibilityValue(sound.title)
+                if soundSaveFailed { Text("Couldn’t save the typing sound. Try again.").foregroundStyle(.red) }
+                if sound != .off {
+                    Text(sound == .systemClick
+                         ? "System Click uses Apple’s Keyboard Feedback sound setting. For a deeper Backspace and higher Space, choose iOS-Style Click. Both require Allow Full Access while typing."
+                         : "To hear this while typing, turn on Allow Full Access for MonkeyBoard in iOS keyboard settings.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }
                 VStack(alignment: .leading, spacing: 12) {
                     LabeledContent("Firmness", value: percent == 0 ? "Off" : "\(percent)%")
                         .monospacedDigit()
@@ -180,10 +201,11 @@ private struct KeyboardSettings: View {
                 .padding(.vertical, 6)
                 Button {
                     preview.play(percent)
+                    if sound != .systemClick { preview.sound.play() }
                 } label: {
                     Label("Try a keypress", systemImage: "waveform")
                 }
-                .disabled(percent == 0)
+                .disabled(percent == 0 && (sound == .off || sound == .systemClick))
                 if saveFailed {
                     Text("Couldn’t save the firmness. Adjust the slider to try again.")
                         .foregroundStyle(.red)
@@ -227,11 +249,14 @@ private struct KeyboardSettings: View {
         }
         .background(FeedbackAnchor(preview: preview).frame(width: 1, height: 1))
         .navigationTitle("Keyboard Settings")
+        .onDisappear { preview.sound.select(.off) }
         .onAppear { reload() }
         .onChange(of: phase) { _, next in if next == .active { reload() } }
     }
 
     private func reload() {
+        sound = .stored
+        preview.sound.select(sound)
         glideEnabled = GlideTypingSetting.isEnabled
         autoCorrect = AutoCorrectionSetting.isEnabled
         useSentence = SentenceScoringSetting.isEnabled
@@ -244,6 +269,7 @@ private struct KeyboardSettings: View {
 
 @MainActor
 private final class PreviewFeedback {
+    let sound = TypingSoundPlayer()
     var player: KeypressPlayer?
     private var lastTick = TimeInterval.zero
 

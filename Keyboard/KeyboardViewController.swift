@@ -9,6 +9,10 @@ private extension UITextDocumentProxy {
     }
 }
 
+private final class ClickInputView: UIInputView, UIInputViewAudioFeedback {
+    var enableInputClicksWhenVisible: Bool { true }
+}
+
 final class KeyboardViewController: UIInputViewController {
     private let board = KeyboardView()
     private var model = KeyboardModel()
@@ -81,6 +85,10 @@ final class KeyboardViewController: UIInputViewController {
     private var autoCorrect = true
     private var returnAfterSymbol = true
     private var openedSymbolsFromLetters = false
+    #if MONKEYBOARD_SOUND_BENCHMARK
+    private let soundProbe = SoundFootprintProbe()
+    #endif
+    private let typingSound = TypingSoundPlayer()
     private lazy var feedback = KeypressPlayer(view: board)
     private var strength = KeypressFeedback.initial
     private var lastShift: TimeInterval?
@@ -96,6 +104,15 @@ final class KeyboardViewController: UIInputViewController {
     private var suggestionTask: DispatchWorkItem?
     private var contextGeneration = 0
     private var contextNeedsSetup = true
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        typingSound.select(.off)
+    }
+
+    override func loadView() {
+        inputView = ClickInputView(frame: .zero, inputViewStyle: .keyboard)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,7 +145,7 @@ final class KeyboardViewController: UIInputViewController {
             return true
         }
         board.onGlide = { [weak self] stroke in self?.commitGlide(stroke) ?? false }
-        board.onTouch = { [weak self] in self?.playFeedback() }
+        board.onTouch = { [weak self] key in self?.playFeedback(key.soundKey) }
         board.onWord = { [weak self] word in self?.insertSuggestion(word) }
         board.onDismiss = { [weak self] in self?.dismissKeyboard() }
         board.onExpand = { [weak self] in self?.chooseHand(.fullWidth) }
@@ -174,6 +191,11 @@ final class KeyboardViewController: UIInputViewController {
         usesTransformer = corrections.usesSentenceContext && TransformerSetting.isEnabled
         corrections.preparesTransformerReviews = usesTransformer
         applyLayout(width: board.bounds.width)
+        let sound = TypingSound.stored
+        #if MONKEYBOARD_SOUND_BENCHMARK
+        soundProbe.start(in: view, sound: sound, fullAccess: hasFullAccess)
+        #endif
+        typingSound.select(sound != .off && hasFullAccess ? sound : .off)
         strength = KeypressFeedback.keyboardPercent()
         updateOptionsMenu()
         refreshContext()
@@ -204,6 +226,7 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        typingSound.select(.off)
         glideWord = nil
         glideStartGeneration = nil
         abandonSentence()
@@ -455,8 +478,13 @@ final class KeyboardViewController: UIInputViewController {
         board.update(model, returnTitle: title, accentColor: accentColor, font: keyboardFont, animateLayout: animateLayout)
     }
 
-    private func playFeedback() {
+    private func playFeedback(_ key: TypingSoundKey = .regular) {
         feedback.play(strength)
+        #if MONKEYBOARD_SOUND_BENCHMARK
+        soundProbe.tap(played: typingSound.play(key))
+        #else
+        typingSound.play(key)
+        #endif
     }
 
     private func updateOptionsMenu() {
@@ -972,3 +1000,50 @@ final class KeyboardViewController: UIInputViewController {
         scheduleSuggestions()
     }
 }
+
+
+#if MONKEYBOARD_SOUND_BENCHMARK
+// Only compiled for the hardware A/B test. No typed text is inspected or saved.
+@MainActor private final class SoundFootprintProbe: UILabel {
+    private var taps = 0, submissions = 0
+    private var baseline: UInt64 = 0, peak: UInt64 = 0
+    private var mode = "", access = false
+
+    func start(in view: UIView, sound: TypingSound, fullAccess: Bool) {
+        if superview == nil {
+            frame = CGRect(x: 2, y: 2, width: 2, height: 2)
+            isAccessibilityElement = true
+            accessibilityIdentifier = "sound-footprint-probe"
+            accessibilityLabel = "Typing benchmark"
+            view.addSubview(self)
+        }
+        taps = 0; submissions = 0; mode = sound.title; access = fullAccess
+        baseline = footprint(); peak = baseline
+        publish(baseline)
+    }
+
+    func tap(played: Bool) {
+        taps += 1
+        if played { submissions += 1 }
+        let bytes = footprint()
+        peak = max(peak, bytes)
+        publish(bytes)
+    }
+
+    private func publish(_ bytes: UInt64) {
+        accessibilityValue = "\(mode)|\(access)|\(getpid())|\(taps)|\(submissions)|\(baseline)|\(peak)|\(bytes)"
+    }
+
+    private func footprint() -> UInt64 {
+        var info = task_vm_info_data_t()
+        var n = mach_msg_type_number_t(MemoryLayout.size(ofValue: info) / MemoryLayout<integer_t>.size)
+        let capacity = Int(n)
+        let status = withUnsafeMutablePointer(to: &info) {
+            $0.withMemoryRebound(to: integer_t.self, capacity: capacity) {
+                task_info(mach_task_self_, task_flavor_t(TASK_VM_INFO), $0, &n)
+            }
+        }
+        return status == KERN_SUCCESS ? info.phys_footprint : 0
+    }
+}
+#endif

@@ -20,6 +20,167 @@ final class KeyboardTypingTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    func testSwitchingKeyboardsDoesNotShowAppleKeysBehindTheToolbar() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+
+        func checkSurface(_ name: String) throws {
+            let toolbar = app.buttons["keyboard-options"]
+            let frame = toolbar.frame
+            let shot = app.screenshot()
+            let attachment = XCTAttachment(screenshot: shot)
+            attachment.name = name
+            attachment.lifetime = .keepAlways
+            add(attachment)
+            // An empty band above the suggestion text should show only the keyboard
+            // material. Apple's QWERTY row underneath creates repeated high-contrast
+            // cap edges even when the accessibility tree reports only MonkeyBoard.
+            let screen = app.frame
+            let image = try XCTUnwrap(shot.image.cgImage)
+            let scale = CGFloat(image.width) / screen.width
+            let y = (frame.minY + frame.height * 0.30 - screen.minY) * scale
+            let band = try XCTUnwrap(image.cropping(to: CGRect(x: CGFloat(image.width) * 0.10,
+                y: y.rounded(), width: CGFloat(image.width) * 0.80, height: 1)))
+            var samples = [UInt8](repeating: 0, count: band.width)
+            try samples.withUnsafeMutableBytes { buffer in
+                let ctx = try XCTUnwrap(CGContext(data: buffer.baseAddress, width: band.width,
+                    height: 1, bitsPerComponent: 8, bytesPerRow: band.width,
+                    space: CGColorSpaceCreateDeviceGray(), bitmapInfo: CGImageAlphaInfo.none.rawValue))
+                ctx.draw(band, in: CGRect(x: 0, y: 0, width: band.width, height: 1))
+            }
+            let step = max(1, Int((scale * 1.5).rounded()))
+            var edges = 0, previous = Int(samples[0])
+            for i in stride(from: step, to: samples.count, by: step) {
+                let next = Int(samples[i])
+                if abs(next - previous) > 15 { edges += 1 }
+                previous = next
+            }
+            print("PRESENTATION \(name) screen=\(screen) toolbar=\(frame) edges=\(edges)")
+            XCTAssertLessThan(edges, 10, "A second row of keycaps is visible behind the toolbar.")
+        }
+        try checkSurface("MonkeyBoard on first focus")
+        app.buttons["hide-keyboard"].tap()
+        let picker = openSoundPicker(in: app)
+        let original = try XCTUnwrap(picker.value as? String)
+        addTeardownBlock {
+            app.launch()
+            self.chooseSound(original, picker: self.openSoundPicker(in: app), app: app)
+        }
+        chooseSound(original == "Soft Tap" ? "Hollow Tap" : "Soft Tap", picker: picker, app: app)
+        // Return without relaunching: the reported overlap occurred after auditioning a sound.
+        let back = app.buttons["BackButton"]
+        if back.exists { back.tap() } else {
+            let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.005, dy: 0.48))
+            start.press(forDuration: 0.06, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.90, dy: 0.48)))
+        }
+        XCTAssertTrue(draft.waitForExistence(timeout: 4), "Return to the same draft after selecting a sound")
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        try checkSurface("MonkeyBoard after picking a sound")
+        let ownGlobe = app.buttons["key-Next keyboard"]
+        let systemGlobe = app.buttons["Next keyboard"].firstMatch
+        (ownGlobe.exists ? ownGlobe : systemGlobe).tap()
+        let appleQ = app.keys.matching(NSPredicate(format: "label ==[c] %@", "q")).firstMatch
+        if !appleQ.waitForExistence(timeout: 2), systemGlobe.exists { systemGlobe.tap() }
+        XCTAssertTrue(appleQ.waitForExistence(timeout: 4), "Switch to the English system keyboard")
+        XCTAssertFalse(app.buttons["keyboard-options"].exists)
+        selectMonkeyBoard(in: app)
+        try checkSurface("MonkeyBoard after switching from Apple")
+        app.buttons["hide-keyboard"].tap()
+        draft.tap()
+        XCTAssertTrue(app.buttons["keyboard-options"].waitForExistence(timeout: 4))
+        try checkSurface("MonkeyBoard after reopening")
+        letter("k", in: app).tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "k")
+    }
+
+    private func openSoundPicker(in app: XCUIApplication) -> XCUIElement {
+        app.buttons["keyboard-settings"].tap()
+        let picker = app.buttons["typing-sound"]
+        for _ in 0..<5 where !picker.isHittable { app.swipeUp() }
+        return picker
+    }
+
+    private func chooseSound(_ title: String, picker: XCUIElement, app: XCUIApplication) {
+        picker.tap()
+        app.buttons[title].firstMatch.tap()
+        XCTAssertEqual(picker.value as? String, title)
+    }
+
+    func testTypingSoundPickerPersistsAndTypes() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let picker = openSoundPicker(in: app)
+        let original = try XCTUnwrap(picker.value as? String)
+        addTeardownBlock {
+            app.launch()
+            self.chooseSound(original, picker: self.openSoundPicker(in: app), app: app)
+        }
+        for name in ["System Click", "iOS-Style Click", "Soft Tap", "Crisp Tick", "Mechanical", "Hollow Tap", "Soft Knock", "Off", "Soft Knock"] {
+            chooseSound(name, picker: picker, app: app)
+        }
+        app.launch()
+        XCTAssertEqual(openSoundPicker(in: app).value as? String, "Soft Knock")
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        selectMonkeyBoard(in: app)
+        letter("k", in: app).tap()
+        let space = app.buttons.matching(NSPredicate(format: "identifier IN %@", ["key-Space", "key-Space-left"])).firstMatch
+        space.tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "k ")
+        app.buttons["key-Delete"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "k")
+    }
+
+    #if MONKEYBOARD_SOUND_BENCHMARK
+    func testPhysicalTypingSoundFootprint() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let original = try XCTUnwrap(openSoundPicker(in: app).value as? String)
+        addTeardownBlock {
+            app.launch()
+            self.chooseSound(original, picker: self.openSoundPicker(in: app), app: app)
+        }
+        for mode in ["Off", "Soft Knock", "Soft Knock", "Off"] {
+            app.launch()
+            chooseSound(mode, picker: openSoundPicker(in: app), app: app)
+            app.launch()
+            let draft = app.textViews["draft"]
+            draft.tap()
+            selectMonkeyBoard(in: app)
+            let probe = app.descendants(matching: .any)["sound-footprint-probe"].firstMatch
+            XCTAssertTrue(probe.waitForExistence(timeout: 5))
+            let initial = try XCTUnwrap(probe.value as? String)
+            print("SOUND_START \(initial)")
+            if mode != "Off" {
+                XCTAssertTrue(initial.hasPrefix(mode + "|true|"), "Allow Full Access on the phone to measure actual playback: " + initial)
+            }
+            let passage = "we can meet by the lake "
+            // Capture the key centers once. Tap the actual keyboard, including spaces.
+            var centers: [Character: XCUICoordinate] = [:]
+            for char in Set(passage) {
+                let key = char == " " ? app.buttons.matching(NSPredicate(format: "identifier IN %@", ["key-Space", "key-Space-left"])).firstMatch : letter(String(char), in: app)
+                XCTAssertTrue(key.exists)
+                centers[char] = key.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+            }
+            let text = passage + passage
+            for char in text { centers[char]!.tap() }
+            let result = try XCTUnwrap(probe.value as? String)
+            print("SOUND_RESULT \(result)")
+            let fields = result.components(separatedBy: "|")
+            XCTAssertEqual(fields.count, 8)
+            XCTAssertEqual(Int(fields[3]), text.count)
+            XCTAssertEqual(Int(fields[4]), mode == "Off" ? 0 : text.count)
+            XCTAssertGreaterThan(Int(fields[5]) ?? 0, 0)
+            XCTAssertEqual((draft.value as? String)?.lowercased(), text)
+        }
+    }
+    #endif
+
     func testAppearanceFontUpdatesPreviewAndLiveKey() throws {
         let app = XCUIApplication()
         let picker = app.buttons["keyboard-font-picker"]

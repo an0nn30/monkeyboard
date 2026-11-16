@@ -157,7 +157,7 @@ final class KeyboardView: UIView {
     private var geometrySplit: Bool?
     private var letterCenters = [CGPoint](repeating: .zero, count: 26)
     var onKey: ((Key) -> Void)?
-    var onTouch: (() -> Void)?
+    var onTouch: ((Key) -> Void)?
     var onGlideStart: (() -> Bool)?
     var onGlide: ((GlideStroke) -> Bool)?
     private var activeFingers = Set<ObjectIdentifier>()
@@ -179,11 +179,13 @@ final class KeyboardView: UIView {
         registerForTraitChanges([UITraitUserInterfaceStyle.self]) { (view: KeyboardView, _) in
             view.trail.setAccent(view.displayedAccent, traits: view.traitCollection)
         }
-        // The system draws one tinted surface through the extension and its outer margins.
-        isOpaque = false
-        // The extension is hosted in a remote surface. Fully transparent
-        // pixels between caps can be passed through before UIView.hitTest.
-        backgroundColor = UIColor.secondarySystemFill.withAlphaComponent(0.025)
+        // The host can retain a snapshot of the outgoing keyboard during a switch.
+        // Cover our key grid and gutters, leaving UIKit to draw the outer material.
+        isOpaque = true
+        backgroundColor = UIColor { traits in
+            traits.userInterfaceStyle == .dark ? UIColor(white: 34 / 255, alpha: 1)
+                : UIColor(red: 223 / 255, green: 224 / 255, blue: 229 / 255, alpha: 1)
+        }
         toolbar.axis = .horizontal
         toolbar.alignment = .fill
         addSubview(toolbar)
@@ -620,7 +622,7 @@ final class KeyboardView: UIView {
         else { cancelStroke() }
         lingering.forEach { $0.removeFromSuperview() }
         lingering.removeAll()
-        onTouch?()
+        onTouch?(source.key)
         track(source, target: source)
         if source.key == .delete {
             stopRepeating()
@@ -698,7 +700,7 @@ final class KeyboardView: UIView {
         if deleteOwner == id { stopRepeating() }
     }
 
-    fileprivate func activate(_ key: Key) { onTouch?(); onKey?(key) }
+    fileprivate func activate(_ key: Key) { onTouch?(key); onKey?(key) }
 
     private func stopRepeating() { repeatDelete?.invalidate(); repeatDelete = nil; deleteOwner = nil }
 
