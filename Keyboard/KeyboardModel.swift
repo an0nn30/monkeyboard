@@ -65,6 +65,14 @@ struct KeyboardModel: Equatable {
     var oneHanded = OneHandedLayout.fullWidth
     var keyboardType = UIKeyboardType.default
 
+    var bottomRowShortcut: Key? {
+        switch keyboardType {
+        case .emailAddress: return .type("@")
+        case .URL: return .type("/")
+        default: return nil
+        }
+    }
+
     var rows: [[Key]] {
         let lines: [String]
         switch layer {
@@ -99,9 +107,9 @@ struct KeyboardModel: Equatable {
         var bottom: [Key] = [.layer]
         if needsGlobe { bottom.append(.globe) }
         if [.default, .twitter, .webSearch].contains(keyboardType) { bottom.append(.emoji) }
-        let punctuation = keyboardType == .emailAddress ? "@" : (keyboardType == .URL ? "/" : ",")
+        if let bottomRowShortcut { bottom.append(bottomRowShortcut) }
         // Keep the second space control in both layouts so it can slide into the first.
-        bottom += [.type(punctuation), .space, .rightSpace, .type("."), .enter]
+        bottom += [.space, .rightSpace, .type("."), .enter]
         rows.append(bottom)
         return rows
     }

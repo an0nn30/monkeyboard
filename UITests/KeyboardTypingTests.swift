@@ -1627,6 +1627,7 @@ final class KeyboardTypingTests: XCTestCase {
             let choice = app.buttons[title]
             XCTAssertTrue(choice.waitForExistence(timeout: 2))
             choice.tap()
+            XCTAssertFalse(app.buttons["key-,"].exists)
         }
         func capture(_ name: String) {
             let shot = XCTAttachment(screenshot: app.screenshot())
@@ -1664,12 +1665,13 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertEqual((draft.value as? String)?.lowercased(), "w")
         capture("Right-handed cover keyboard")
         app.buttons["key-123"].tap()
-        app.buttons["key-0"].tap()
+        XCTAssertEqual(app.buttons.matching(identifier: "key-,").count, 1)
+        app.buttons["key-,"].tap()
         if app.buttons["key-123"].exists { app.buttons["key-123"].tap() }
         app.buttons["key-#+="].tap()
         app.buttons["key-="].tap()
         if app.buttons["key-ABC"].exists { app.buttons["key-ABC"].tap() }
-        XCTAssertEqual((draft.value as? String)?.lowercased(), "w0=")
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "w,=")
         app.buttons["hide-keyboard"].tap()
         draft.tap()
         XCTAssertTrue(p.waitForExistence(timeout: 3))
@@ -1815,6 +1817,8 @@ final class KeyboardTypingTests: XCTestCase {
         XCTAssertTrue(singleSpace.exists)
         XCTAssertFalse(leftSpace.exists)
         XCTAssertFalse(rightSpace.exists)
+        XCTAssertFalse(app.buttons["key-,"].exists)
+        app.buttons["key-123"].tap()
         app.buttons["key-,"].tap()
         singleSpace.tap()
         app.buttons["key-."].tap()

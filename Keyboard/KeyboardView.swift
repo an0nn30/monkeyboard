@@ -498,8 +498,12 @@ final class KeyboardView: UIView {
         }
         let height = max(1, (typingArea.height - top - Self.bottomMargin - 3 * rowGap) / 4)
         let split = displayedModel?.isSplit == true
+        let hasShortcut = displayedModel?.bottomRowShortcut != nil
         func weight(_ key: Key) -> CGFloat {
-            split && key.isSpace ? key.weight / 2 : key.weight
+            guard key.isSpace else { return key.weight }
+            let spaceWeight = split ? key.weight / 2 : key.weight
+            // Give the unused shortcut's width to Space (the left bar when split).
+            return spaceWeight + (key == .space && !hasShortcut ? 1 : 0)
         }
         for (i, row) in rows.enumerated() {
             let y = top + CGFloat(i) * (height + rowGap)
@@ -521,7 +525,7 @@ final class KeyboardView: UIView {
                         let depth = min(Self.spaceHitDepth, max(0, bounds.maxY - face.maxY))
                         // Give Space its half of the gap next to punctuation and the row above.
                         // The inner edges of the split spacebars face the empty center gutter.
-                        let left = !split || (cap.key == .space && keys[i][j - 1] != .type(",")) ? gap / 2 : 0
+                        let left = !split || (cap.key == .space && hasShortcut) ? gap / 2 : 0
                         let right = !split || cap.key == .rightSpace ? gap / 2 : 0
                         cap.faceInsets = UIEdgeInsets(top: rowGap / 2, left: left, bottom: depth, right: right)
                         cap.frame = CGRect(x: face.minX - left, y: face.minY - rowGap / 2,
@@ -562,17 +566,6 @@ final class KeyboardView: UIView {
             }
             if let right = keys[i].firstIndex(of: .rightSpace) {
                 let leftBar = row[right - 1]
-                // Keep the shortcut control for the join animation. In split mode
-                // its comma keycap and the gap beside it belong to the left spacebar.
-                let shortcutIndex = right - 2
-                let shortcut = row[shortcutIndex]
-                let absorbsComma = split && keys[i][shortcutIndex] == .type(",")
-                shortcut.alpha = absorbsComma ? 0 : 1
-                shortcut.isUserInteractionEnabled = !absorbsComma
-                shortcut.isAccessibilityElement = !absorbsComma
-                if absorbsComma {
-                    leftBar.frame = leftBar.frame.union(keycapFrame(of: shortcut))
-                }
                 let cap = row[right]
                 if !split {
                     // Both bars share a destination, with the right bar folding into its half.
