@@ -3,6 +3,7 @@ import UIKit
 final class KeyPreview: UIView {
     private let label = UILabel()
     private let shape = CAShapeLayer()
+    private var style = KeyboardStyle.standard
 
     init() {
         super.init(frame: .zero)
@@ -24,10 +25,34 @@ final class KeyPreview: UIView {
     required init?(coder: NSCoder) { fatalError("Use init()") }
 
     private func updateFill() {
-        shape.fillColor = KeyboardView.keyFill.resolvedColor(with: traitCollection).cgColor
+        shape.fillColor = (style == .ios ? KeyboardStyle.iosPreviewFill : KeyboardView.keyFill)
+            .resolvedColor(with: traitCollection).cgColor
     }
 
-    func show(_ character: String, above key: CGRect, in container: UIView, font: KeyboardFont) {
+    func show(_ character: String, above key: CGRect, in container: UIView, font: KeyboardFont,
+              style: KeyboardStyle = .standard) {
+        self.style = style
+        if style == .ios {
+            let width = max(54, min(76, key.width + 24))
+            // The extension cannot paint outside its host. Keep the top-row
+            // preview detached too, fitting its available toolbar headroom.
+            let height = min(72, key.height * 1.5, max(1, key.minY - 3))
+            let x = min(max(0, key.midX - width / 2), container.bounds.width - width)
+            frame = CGRect(x: x, y: max(0, key.minY - height - 3), width: width, height: height)
+            let path = UIBezierPath(roundedRect: bounds, cornerRadius: 15)
+            CATransaction.begin()
+            CATransaction.setDisableActions(true)
+            updateFill()
+            shape.path = path.cgPath
+            shape.shadowPath = path.cgPath
+            shape.shadowOpacity = 0
+            CATransaction.commit()
+            label.frame = bounds
+            label.text = character
+            label.font = UIFont.systemFont(ofSize: min(38, height * 0.8))
+            return
+        }
+        shape.shadowOpacity = 0.14
         let size = min(62, max(42, key.height * 1.24), container.bounds.height - key.height)
         let x = min(max(2, key.midX - size / 2), container.bounds.width - size - 2)
         let y = max(0, key.minY - size - 4)

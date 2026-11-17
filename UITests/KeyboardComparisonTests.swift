@@ -3,6 +3,117 @@ import XCTest
 /// Capture the same actual key taps in the same host with either keyboard selected.
 /// Run on a fresh English simulator per keyboard. Outputs are measurements, including misses.
 final class KeyboardComparisonTests: XCTestCase {
+    func testIOSStylePickerAndTyping() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        var originalStyle: String?
+        var originalReturn: String?
+        func choose(_ name: String) {
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+            let returnToggle = app.switches["return-after-symbol"]
+            if originalReturn == nil {
+                originalReturn = returnToggle.value as? String
+                if originalReturn == "0" { returnToggle.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
+                XCTAssertEqual(returnToggle.value as? String, "1")
+            }
+            app.buttons["appearance-settings"].tap()
+            if originalStyle == nil {
+                originalStyle = app.segmentedControls["keyboard-style-picker"].buttons["iOS"].isSelected ? "iOS" : "Default"
+            }
+            let segment = app.segmentedControls["keyboard-style-picker"].buttons[name]
+            XCTAssertTrue(segment.waitForExistence(timeout: 5))
+            segment.tap()
+            XCTAssertTrue(segment.isSelected)
+        }
+        func showKeyboard() {
+            app.launch()
+            app.textViews["draft"].tap()
+            app.switchToKeyboard(showing: app.buttons["keyboard-options"])
+        }
+        func key(_ label: String) -> XCUIElement {
+            app.buttons.matching(NSPredicate(format: "identifier ==[c] %@", "key-" + label)).firstMatch
+        }
+        addTeardownBlock {
+            guard let originalStyle else { return }
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+            let toggle = app.switches["return-after-symbol"]
+            if let originalReturn, toggle.value as? String != originalReturn { toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
+            app.buttons["appearance-settings"].tap()
+            app.segmentedControls["keyboard-style-picker"].buttons[originalStyle].tap()
+        }
+        choose("Default")
+        showKeyboard()
+        XCTAssertTrue(key(".").exists)
+        choose("iOS")
+        showKeyboard()
+        XCTAssertFalse(key(".").exists)
+        XCTAssertFalse(app.buttons["hide-keyboard"].exists)
+        if app.frame.width >= 560 && key("Space").exists {
+            app.buttons["keyboard-options"].tap()
+            app.buttons["Split Keyboard"].tap()
+        }
+        let space = key("Space-left").exists ? key("Space-left") : key("Space")
+        XCTAssertTrue(space.wait(for: \.isHittable, toEqual: true, timeout: 5), app.debugDescription)
+        print("IOS_STYLE_READY") // Also allows simctl to capture Duo's secondary display.
+        let shot = XCTAttachment(screenshot: app.screenshot())
+        shot.name = "ios-style-keyboard"
+        shot.lifetime = .keepAlways
+        add(shot)
+        key("q").tap()
+        space.tap()
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q ")
+        key("Delete").tap()
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q")
+        key("123").tap()
+        XCTAssertTrue(key(",").waitForExistence(timeout: 4), app.debugDescription)
+        key(",").tap()
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q,")
+        XCTAssertTrue(key("q").exists)
+        key("Return").tap()
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q,\n")
+        app.buttons["keyboard-options"].tap()
+        if app.buttons["Join Keyboard"].exists {
+            app.buttons["Join Keyboard"].tap()
+            XCTAssertTrue(key("Space").wait(for: \.isHittable, toEqual: true, timeout: 5))
+            app.buttons["keyboard-options"].tap()
+            XCTAssertTrue(app.buttons["Split Keyboard"].exists)
+            app.buttons["Split Keyboard"].tap()
+            XCTAssertTrue(key("Space-left").wait(for: \.isHittable, toEqual: true, timeout: 5))
+            app.buttons["keyboard-options"].tap()
+            XCTAssertTrue(app.buttons["Join Keyboard"].exists)
+        }
+        app.buttons["Hide Keyboard"].tap()
+        XCTAssertTrue(app.buttons["keyboard-options"].wait(for: \.isHittable, toEqual: false, timeout: 5))
+        app.buttons["keyboard-settings"].tap()
+        app.buttons["appearance-settings"].tap()
+        XCTAssertTrue(app.segmentedControls["keyboard-style-picker"].buttons["iOS"].isSelected)
+    }
+
+    func testCaptureAppleAppearanceReference() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        app.textViews["draft"].tap()
+        let q = app.keyboards.keys.matching(NSPredicate(format: "label ==[c] 'q'")).firstMatch
+        app.switchToKeyboard(showing: q)
+        app.dismissAppleSlideToTypeIntroduction()
+        XCTAssertTrue(q.waitForExistence(timeout: 5))
+        let shot = XCTAttachment(screenshot: app.screenshot())
+        shot.name = "apple-appearance-reference"
+        shot.lifetime = .keepAlways
+        add(shot)
+        let frames = app.keyboards.keys.allElementsBoundByIndex.map {
+            ["label": $0.label, "frame": NSCoder.string(for: $0.frame)]
+        }
+        let data = try JSONSerialization.data(withJSONObject: frames, options: [.prettyPrinted])
+        let metrics = XCTAttachment(data: data, uniformTypeIdentifier: "public.json")
+        metrics.name = "apple-key-frames"
+        metrics.lifetime = .keepAlways
+        add(metrics)
+    }
+
     func testCaptureSafariSpaceBoundary() throws {
         continueAfterFailure = false
         let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")

@@ -15,7 +15,9 @@
 		BA7100000000000000000002 /* KeyboardTint.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000012 /* KeyboardTint.swift */; };
 		BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000012 /* KeyboardTint.swift */; };
 		BA7100000000000000000007 /* KeyboardFont.swift in App */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000013 /* KeyboardFont.swift */; };
+		BA7700000000000000000001 /* KeyboardStyle.swift in App */ = {isa = PBXBuildFile; fileRef = BA7700000000000000000003 /* KeyboardStyle.swift */; };
 		BA7100000000000000000008 /* KeyboardFont.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7100000000000000000013 /* KeyboardFont.swift */; };
+		BA7700000000000000000002 /* KeyboardStyle.swift in Keyboard */ = {isa = PBXBuildFile; fileRef = BA7700000000000000000003 /* KeyboardStyle.swift */; };
 		BA7100000000000000000004 /* KeyboardView.swift in App */ = {isa = PBXBuildFile; fileRef = 3B0473F267D5EDDA8F3928F0 /* KeyboardView.swift */; };
 		BA7100000000000000000005 /* KeyboardModel.swift in App */ = {isa = PBXBuildFile; fileRef = 400CF142A1DFF732B0D8D685 /* KeyboardModel.swift */; };
 		BA7100000000000000000006 /* KeyPreview.swift in App */ = {isa = PBXBuildFile; fileRef = 7F49F9E39446E10A4A749FA9 /* KeyPreview.swift */; };
@@ -96,6 +98,7 @@
 		BA7100000000000000000011 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		BA7100000000000000000012 /* KeyboardTint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardTint.swift; sourceTree = "<group>"; };
 		BA7100000000000000000013 /* KeyboardFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardFont.swift; sourceTree = "<group>"; };
+		BA7700000000000000000003 /* KeyboardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeyboardStyle.swift; sourceTree = "<group>"; };
 		BB1100000000000000000002 /* WordNet-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "keyboard-engine/model/semantics/WordNet-LICENSE.txt"; sourceTree = SOURCE_ROOT; };
 		A554C0908A6B40B6A8000003 /* KeypressFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/KeypressFeedback.swift; sourceTree = "<group>"; };
 		B06200000000000000000003 /* PersonalSpellings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/PersonalSpellings.swift; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 				B06200000000000000000003 /* PersonalSpellings.swift */,
 				BA7100000000000000000012 /* KeyboardTint.swift */,
 				BA7100000000000000000013 /* KeyboardFont.swift */,
+				BA7700000000000000000003 /* KeyboardStyle.swift */,
 				B065A3306758C6882394ED94 /* Keyboard */,
 				AB620C0894166BAB7FD0E274 /* UITests */,
 				2E88FBA07979B66A55D39FBC /* Configuration */,
@@ -353,6 +357,7 @@
 				B06200000000000000000002 /* PersonalSpellings.swift in Keyboard */,
 				BA7100000000000000000003 /* KeyboardTint.swift in Keyboard */,
 				BA7100000000000000000008 /* KeyboardFont.swift in Keyboard */,
+				BA7700000000000000000002 /* KeyboardStyle.swift in Keyboard */,
 				E02100000000000000000004 /* EmojiCatalog.swift */,
 				E02100000000000000000005 /* EmojiPickerView.swift */,
 				D1521AC249C9C58D98FFF5B0 /* KeyboardModel.swift in Sources */,
@@ -384,6 +389,7 @@
 				BA7100000000000000000001 /* AppearanceSettings.swift in App */,
 				BA7100000000000000000002 /* KeyboardTint.swift in App */,
 				BA7100000000000000000007 /* KeyboardFont.swift in App */,
+				BA7700000000000000000001 /* KeyboardStyle.swift in App */,
 				BA7100000000000000000004 /* KeyboardView.swift in App */,
 				BA7100000000000000000005 /* KeyboardModel.swift in App */,
 				BA7100000000000000000006 /* KeyPreview.swift in App */,
@@ -444,7 +450,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 76;
+				CURRENT_PROJECT_VERSION = 79;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -487,7 +493,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 76;
+				CURRENT_PROJECT_VERSION = 79;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;

@@ -16,6 +16,12 @@ private final class KeyButton: UIButton {
     // Mark only the control's touch target, with one step of 8-bit alpha.
     private static let hitFill = UIColor(white: 0.5, alpha: 1 / 255)
     var faceInsets = UIEdgeInsets.zero
+    var iosStyle = false
+    private var normalFill = UIColor.clear
+    func setPressed(_ pressed: Bool) {
+        alpha = iosStyle || !pressed ? 1 : 0.72
+        face.backgroundColor = iosStyle && pressed ? KeyboardStyle.iosPressedFill : normalFill
+    }
 
     func setFaceColor(_ color: UIColor, radius: CGFloat = 5) {
         if face.superview == nil {
@@ -27,6 +33,7 @@ private final class KeyButton: UIButton {
             insertSubview(face, at: 0)
         }
         face.layer.cornerRadius = radius
+        normalFill = color
         face.backgroundColor = color
         backgroundColor = Self.hitFill
     }
@@ -153,6 +160,10 @@ final class KeyboardView: UIView {
             UIColor(red: 0.75, green: 0.83, blue: 0.95, alpha: 1)
     }
     private let toolbar = UIStackView()
+    private let suggestionSpacer = UIView()
+    private var suggestionSpacerWidth: NSLayoutConstraint!
+    private let suggestionDividers = [UIView(), UIView()]
+    private var showsSplitToggle = false
     private let optionsButton = UIButton(type: .system)
     private let undoButton = UIButton(type: .system)
     private let layoutButton = UIButton(type: .system)
@@ -168,6 +179,9 @@ final class KeyboardView: UIView {
     // Decimal pads with a separate globe already allocate a footer within the keypad height.
     var extraHeightBelowKeys: CGFloat {
         if displayedModel?.layer == .keypad { return keypadGlobe.isHidden ? Self.footerHeight : 0 }
+        if displayedModel?.style == .ios && displayedModel?.emojiMode == .closed {
+            return bounds.width >= 560 && bounds.width < 800 ? 39 : 0
+        }
         return Self.footerHeight - Self.bottomMargin
     }
     private var suggestions: [UIButton] = []
@@ -241,6 +255,11 @@ final class KeyboardView: UIView {
         let undoWidth = undoButton.widthAnchor.constraint(equalToConstant: 44)
         undoWidth.priority = .defaultHigh
         undoWidth.isActive = true
+        suggestionSpacer.isHidden = true
+        toolbar.addArrangedSubview(suggestionSpacer)
+        suggestionSpacerWidth = suggestionSpacer.widthAnchor.constraint(equalToConstant: 0)
+        suggestionSpacerWidth.priority = .defaultHigh
+        suggestionSpacerWidth.isActive = true
         for index in 0..<3 {
             let button = UIButton(type: .system)
             button.titleLabel?.lineBreakMode = .byTruncatingTail
@@ -254,6 +273,11 @@ final class KeyboardView: UIView {
                 button.widthAnchor.constraint(equalTo: first.widthAnchor).isActive = true
             }
             suggestions.append(button)
+        }
+        for divider in suggestionDividers {
+            divider.backgroundColor = UIColor.separator.withAlphaComponent(0.25)
+            divider.isUserInteractionEnabled = false
+            toolbar.addSubview(divider)
         }
         layoutButton.tintColor = Self.ink
         layoutButton.accessibilityIdentifier = "toggle-split-layout"
@@ -301,7 +325,8 @@ final class KeyboardView: UIView {
     func setOptionsMenu(_ menu: UIMenu, feedbackValue: String, showsSplitToggle: Bool) {
         optionsButton.menu = menu
         optionsButton.accessibilityValue = feedbackValue
-        layoutButton.isHidden = !showsSplitToggle
+        self.showsSplitToggle = showsSplitToggle
+        layoutButton.isHidden = !showsSplitToggle || displayedModel?.style == .ios
     }
 
     func showCorrectionUndo(_ visible: Bool, originalWord: String?) {
@@ -320,10 +345,11 @@ final class KeyboardView: UIView {
 
     func update(_ model: KeyboardModel, returnTitle: String?, accentColor: UIColor? = nil,
                 font: KeyboardFont = .system, animateLayout: Bool = false) {
+        let font: KeyboardFont = model.style == .ios ? .system : font
         guard displayedModel != model || displayedReturnTitle != returnTitle ||
               displayedAccent != accentColor || displayedFont != font else { return }
-        if displayedModel == nil || displayedFont != font {
-            let suggestionFont = font.font(ofSize: 15)
+        if displayedModel == nil || displayedFont != font || displayedModel?.style != model.style {
+            let suggestionFont = font.font(ofSize: model.style == .ios ? 17 : 15)
             for button in suggestions { button.titleLabel?.font = suggestionFont }
         }
         displayedFont = font
@@ -336,9 +362,22 @@ final class KeyboardView: UIView {
         let wasKeypad = displayedModel?.layer == .keypad
         if animateLayout { layoutIfNeeded(); resetTouches() }
         if displayedModel?.emojiMode != model.emojiMode { resetTouches() }
-        if displayedModel?.repeatSplitLetters != model.repeatSplitLetters { geometryArea = .null }
+        if displayedModel?.repeatSplitLetters != model.repeatSplitLetters || displayedModel?.style != model.style {
+            resetTouches()
+            geometryArea = .null
+        }
         displayedModel = model
         displayedReturnTitle = returnTitle
+        for button in [optionsButton, undoButton, layoutButton] + suggestions {
+            button.contentEdgeInsets = UIEdgeInsets(top: model.style == .ios ? -12 : 0, left: 0, bottom: 0, right: 0)
+        }
+        for button in suggestions {
+            button.setTitleColor(model.style == .ios ? KeyboardStyle.iosSuggestionInk : Self.ink, for: .normal)
+        }
+        layoutButton.isHidden = !showsSplitToggle || model.style == .ios
+        suggestionSpacer.isHidden = model.style != .ios || !model.isSplit
+        suggestionDividers.forEach { $0.isHidden = model.style != .ios }
+        hideButton.isHidden = model.style == .ios && !keypad && model.emojiMode == .closed
         toolbar.isHidden = keypad || model.emojiMode != .closed
         // Decimal takes the lower-left cell. Keep the system keyboard switch
         // available below the grid on hosts that require an in-extension globe.
@@ -379,8 +418,9 @@ final class KeyboardView: UIView {
             }
         }
         keys = next
+        let ios = model.style == .ios
         let characterFont = font.font(ofSize: keypad ? 25 : 23)
-        let actionFont = keypad ? characterFont : font.font(ofSize: 16)
+        let actionFont = keypad ? characterFont : font.font(ofSize: ios ? 17 : 16)
         lazy var legendFont = font.font(ofSize: 9, weight: .semibold)
         for (i, row) in next.enumerated() {
             for (j, key) in row.enumerated() {
@@ -390,23 +430,27 @@ final class KeyboardView: UIView {
                 var title: String?
                 var symbol: String?
                 var label: String
-                var color = actionFill
+                var color = ios ? KeyboardStyle.iosActionFill : actionFill
                 var keyFont = actionFont
                 switch key {
-                case let .type(text): title = text; label = text; color = Self.keyFill; keyFont = characterFont
+                case let .type(text): title = text; label = text; color = ios ? KeyboardStyle.iosKeyFill : Self.keyFill; keyFont = characterFont
                 case .shift:
                     symbol = model.shift == .locked ? "capslock.fill" : (model.shift == .upper ? "shift.fill" : "shift")
                     label = model.shift == .locked ? "Caps Lock" : "Shift"
-                    if model.shift != .lower { color = accent }
+                    if model.shift != .lower { color = ios ? KeyboardStyle.iosKeyFill : accent }
                 case .delete: symbol = "delete.left"; label = "Delete"
                 case .layer: title = model.layer == .letters ? "123" : "ABC"; label = title!
                 case .symbols: title = model.layer == .numbers ? "#+=" : "123"; label = title!
                 case .globe: symbol = "globe"; label = "Next keyboard"
                 case .emoji: symbol = "face.smiling"; label = "Emoji"
-                case .space, .rightSpace: title = "space"; label = "Space"; color = Self.keyFill
+                case .space, .rightSpace: title = ios ? nil : "space"; label = "Space"; color = ios ? KeyboardStyle.iosKeyFill : Self.keyFill
                 case .enter:
                     title = returnTitle; symbol = returnTitle == nil ? "return" : nil
-                    label = returnTitle ?? "Return"; color = accent
+                    label = returnTitle ?? "Return"; color = ios ? (returnTitle == nil ? KeyboardStyle.iosActionFill : UIColor.systemBlue) : accent
+                    if ios, let returnTitle, ["Go", "Send", "Next", "Continue"].contains(returnTitle) {
+                        title = nil
+                        symbol = "arrow.right"
+                    }
                 }
                 button.setTitle(title, for: .normal)
                 if keypad {
@@ -427,10 +471,16 @@ final class KeyboardView: UIView {
                         button.setAttributedTitle(nil, for: .normal)
                     }
                 }
-                button.setImage(symbol.flatMap { UIImage(systemName: $0) }, for: .normal)
+                button.tintColor = ios && key == .enter && returnTitle != nil ? .white : Self.ink
+                button.setTitleColor(button.tintColor, for: .normal)
+                let config: UIImage.SymbolConfiguration? = ios ? .init(pointSize: 23, weight: .regular) : nil
+                button.setImage(symbol.flatMap { UIImage(systemName: $0, withConfiguration: config) }, for: .normal)
                 button.titleLabel?.font = keyFont
-                if let cap = button as? KeyButton { cap.setFaceColor(color, radius: keypad ? 9 : 5) }
-                else { button.backgroundColor = color }
+                let radius: CGFloat = ios ? 11 : (keypad ? 9 : 5)
+                if let cap = button as? KeyButton {
+                    cap.iosStyle = ios
+                    cap.setFaceColor(color, radius: radius)
+                } else { button.backgroundColor = color; button.layer.cornerRadius = radius }
                 button.accessibilityLabel = label
                 button.accessibilityIdentifier = "key-" + label
                 if key == .rightSpace {
@@ -444,7 +494,7 @@ final class KeyboardView: UIView {
                     button.isUserInteractionEnabled = model.isSplit
                     button.isAccessibilityElement = model.isSplit
                     button.accessibilityElementsHidden = !model.isSplit
-                    button.accessibilityIdentifier = "key-" + label.lowercased() + "-left"
+                    button.accessibilityIdentifier = "key-" + label.lowercased() + (model.nativeSplitRepeats ? "-right" : "-left")
                 }
             }
         }
@@ -467,7 +517,8 @@ final class KeyboardView: UIView {
             onAvailableWidthChange?(bounds.width)
         }
         guard !rows.isEmpty else { return }
-        let inset: CGFloat = 4
+        let ios = displayedModel?.style == .ios
+        let inset: CGFloat = ios ? (bounds.width > 900 ? 85 : (bounds.width > 800 ? 10 : (bounds.width >= 560 ? 11 : 0))) : 4
         let hand = displayedModel?.oneHanded ?? .fullWidth
         let keypad = displayedModel?.layer == .keypad
         let typingArea = hand.typingArea(in: bounds.inset(by: UIEdgeInsets(
@@ -476,13 +527,22 @@ final class KeyboardView: UIView {
         let footerY = bounds.maxY - Self.footerHeight
         hideButton.frame = CGRect(x: available.minX, y: footerY, width: 44, height: Self.footerHeight)
         keypadGlobe.frame = CGRect(x: available.maxX - 44, y: footerY, width: 44, height: Self.footerHeight)
-        let gap: CGFloat = typingArea.width < 360 ? 3 : 4
-        let rowGap: CGFloat = typingArea.height < 220 ? 5 : 7
+        let gap: CGFloat = ios ? (typingArea.width > 800 ? 10 : (typingArea.width >= 560 ? 9 : 6.333)) : (typingArea.width < 360 ? 3 : 4)
+        let rowGap: CGFloat = ios ? (typingArea.width > 800 ? 13 : (typingArea.width >= 560 ? 14 : 11)) : (typingArea.height < 220 ? 5 : 7)
         // This strip also provides headroom for top-row previews inside the extension.
         let searching = displayedModel?.emojiMode == .search
         let top: CGFloat = searching ? min(83, typingArea.height * 0.35) :
-            (keypad ? 0 : min(61, max(46, typingArea.height * 0.23)))
-        toolbar.frame = CGRect(x: available.minX, y: 0, width: available.width, height: top)
+            (keypad ? 0 : (ios ? (typingArea.width > 800 ? 38 : 40) : min(61, max(46, typingArea.height * 0.23))))
+        let toolbarLeft = ios && typingArea.width > 900 ? CGFloat(20) : available.minX
+        let toolbarRight = ios && typingArea.width > 800 ? available.maxX + 10 : available.maxX
+        toolbar.frame = CGRect(x: toolbarLeft, y: 0, width: toolbarRight - toolbarLeft, height: top)
+        let predictionWidth = ios && typingArea.width > 800 ? CGFloat(323.333) : available.width / 2
+        suggestionSpacerWidth.constant = max(0, toolbar.bounds.width - predictionWidth - 44 - (undoButton.isHidden ? 0 : 44))
+        toolbar.layoutIfNeeded()
+        for (index, divider) in suggestionDividers.enumerated() {
+            divider.frame = CGRect(x: suggestions[index + 1].frame.minX, y: (top - 24) / 2 - (ios ? 6 : 0),
+                                   width: 1, height: 24)
+        }
         emojiPanel?.frame = searching ? toolbar.frame : typingArea
         if hand != .fullWidth {
             let gutterX = hand == .left ? typingArea.maxX : bounds.minX
@@ -496,10 +556,19 @@ final class KeyboardView: UIView {
             layoutKeypad(in: typingArea)
             return
         }
-        let height = max(1, (typingArea.height - top - Self.bottomMargin - 3 * rowGap) / 4)
+        let height = max(1, (typingArea.height - top - (ios && typingArea.width >= 560 ? 0 : Self.bottomMargin) - 3 * rowGap) / 4)
         let split = displayedModel?.isSplit == true
         let hasShortcut = displayedModel?.bottomRowShortcut != nil
         func weight(_ key: Key) -> CGFloat {
+            if ios {
+                switch key {
+                case .layer, .globe, .emoji: return 1
+                case .enter: return 1.6
+                case .space: return split ? 2.8 : 5.2 + (hasShortcut ? 0 : 1)
+                case .rightSpace: return 4.65
+                default: return key.weight
+                }
+            }
             guard key.isSpace else { return key.weight }
             let spaceWeight = split ? key.weight / 2 : key.weight
             // Give the unused shortcut's width to Space (the left bar when split).
@@ -515,12 +584,36 @@ final class KeyboardView: UIView {
                 let total = visible.reduce(0) { $0 + weight(keys[i][$1]) }
                 for j in visible {
                     let capWidth = net * weight(keys[i][j]) / total
-                    let face = CGRect(x: x, y: y, width: capWidth, height: height)
+                    var face = CGRect(x: x, y: y, width: capWidth, height: height)
+                    if ios, displayedModel?.layer == .letters, i == 2,
+                       !split || displayedModel?.nativeSplitRepeats == true {
+                        // Apple's Z row keeps the same letter pitch as the rows above,
+                        // with extra breathing room beside Shift and Delete.
+                        let bank = split ? min(275, available.width * 0.44) : available.width
+                        let letterWidth = (bank - (split ? 4 : 9) * gap) / (split ? 5 : 10)
+                        let pitch = letterWidth + gap
+                        let actionWidth = letterWidth * 1.36
+                        if keys[i][j] == .shift {
+                            face = CGRect(x: available.minX, y: y, width: actionWidth, height: height)
+                        } else if keys[i][j] == .delete {
+                            face = CGRect(x: available.maxX - actionWidth, y: y, width: actionWidth, height: height)
+                        } else {
+                            let original = extra != nil && !split && j > extra! ? j - 1 : j
+                            let left = available.minX + (CGFloat(original) + 0.5) * pitch
+                            let right = available.maxX - bank + (CGFloat(j - 5) - 0.5) * pitch
+                            face = CGRect(x: split && j >= 5 ? right : left,
+                                          y: y, width: letterWidth, height: height)
+                        }
+                    }
                     // Extend the actual control frame as well as local hit testing:
                     // the remotely hosted keyboard uses control regions to deliver touches.
                     if let cap = row[j] as? KeyButton, case .type = cap.key {
-                        cap.faceInsets = UIEdgeInsets(top: rowGap / 2, left: gap / 2, bottom: rowGap / 2, right: gap / 2)
-                        cap.frame = face.insetBy(dx: -gap / 2, dy: -rowGap / 2)
+                        // A remotely hosted control extending outside the input view can
+                        // lose its accessible hit point. Keep edge targets inside the host.
+                        let target = face.insetBy(dx: -gap / 2, dy: -rowGap / 2).intersection(bounds)
+                        cap.faceInsets = UIEdgeInsets(top: face.minY - target.minY, left: face.minX - target.minX,
+                                                      bottom: target.maxY - face.maxY, right: target.maxX - face.maxX)
+                        cap.frame = target
                     } else if let cap = row[j] as? KeyButton, cap.key.isSpace {
                         let depth = min(Self.spaceHitDepth, max(0, bounds.maxY - face.maxY))
                         // Give Space its half of the gap next to punctuation and the row above.
@@ -539,18 +632,21 @@ final class KeyboardView: UIView {
             }
             if let displayedModel, displayedModel.isSplit {
                 // Cap thumb reach on the inner display and stagger the home row.
-                let bank = min(260, available.width * 0.44)
+                let bank = ios ? min(275, available.width * 0.44) : min(260, available.width * 0.44)
                 let cut = displayedModel.splitIndex(row: i, count: row.count)
                 let stagger = i == 1 ? (bank + gap) / 10 : 0
-                var leftWidth = bank
-                if let extra {
+                var leftWidth = bank - (ios && i == 3 && typingArea.width > 800 ? 3 : 0)
+                if let extra, !displayedModel.nativeSplitRepeats {
                     // Extend into the center gap before shrinking any existing keys.
                     let originalWeight = keys[i][..<extra].reduce(CGFloat.zero) { $0 + weight($1) }
                     let letterWidth = (bank - CGFloat(extra - 1) * gap) / originalWeight
                     leftWidth = min(bank + gap + letterWidth, available.width - bank - 4 * gap)
                 }
                 place(0..<cut, from: available.minX + stagger, width: leftWidth)
-                place(cut..<row.count, from: available.maxX - bank + stagger, width: bank - 2 * stagger)
+                let nativeRepeats = displayedModel.nativeSplitRepeats
+                let bottomExtension: CGFloat = ios && i == 3 && typingArea.width > 800 ? 3 : 0
+                place(cut..<row.count, from: available.maxX - bank + (nativeRepeats ? -stagger : stagger) - bottomExtension,
+                      width: (nativeRepeats ? bank : bank - 2 * stagger) + bottomExtension)
             } else {
                 let indent = i == 1 ? (available.width + gap) / 20 : 0
                 place(row.indices, from: available.minX + indent, width: available.width - 2 * indent)
@@ -558,7 +654,7 @@ final class KeyboardView: UIView {
             if let extra {
                 let copy = row[extra]
                 if !split {
-                    let original = row[extra + 1]
+                    let original = row[extra + (displayedModel?.nativeSplitRepeats == true ? -1 : 1)]
                     (copy as? KeyButton)?.faceInsets = (original as? KeyButton)?.faceInsets ?? .zero
                     copy.frame = original.frame
                 }
@@ -656,6 +752,9 @@ final class KeyboardView: UIView {
         if let cap = button as? KeyButton, cap.key.isSpace {
             return controlFrame(of: cap, presented: true)
         }
+        if displayedModel?.style == .ios, let cap = button as? KeyButton, case .type = cap.key {
+            return controlFrame(of: cap, presented: true)
+        }
         return visibleFrame(of: button)
     }
 
@@ -703,7 +802,7 @@ final class KeyboardView: UIView {
               !rows.isEmpty else { return super.hitTest(point, with: event) }
         if point.y < toolbar.frame.maxY { return nearestCap(at: point) ?? super.hitTest(point, with: event) }
         if !keypadGlobe.isHidden, keypadGlobe.frame.contains(point) { return keypadGlobe }
-        if visibleFrame(of: hideButton).contains(point) { return hideButton }
+        if !hideButton.isHidden, visibleFrame(of: hideButton).contains(point) { return hideButton }
         if let cap = nearestCap(at: point) { return cap }
         if !expandButton.isHidden, visibleFrame(of: expandButton).contains(point) { return expandButton }
         return self
@@ -785,9 +884,9 @@ final class KeyboardView: UIView {
     private func track(_ source: KeyButton, target: KeyButton?) {
         let id = ObjectIdentifier(source)
         if held[id] === target { return }
-        held[id]?.alpha = 1
+        held[id]?.setPressed(false)
         held[id] = target
-        target?.alpha = 0.72
+        target?.setPressed(true)
         guard displayedModel?.layer != .keypad, let target, case let .type(char) = target.key else {
             previews.removeValue(forKey: id)?.removeFromSuperview()
             return
@@ -795,7 +894,7 @@ final class KeyboardView: UIView {
         let preview = previews[id] ?? KeyPreview()
         if preview.superview == nil { addSubview(preview); previews[id] = preview }
         bringSubviewToFront(preview)
-        preview.show(char, above: visibleFrame(of: target), in: self, font: displayedFont)
+        preview.show(char, above: visibleFrame(of: target), in: self, font: displayedFont, style: displayedModel?.style ?? .standard)
     }
 
     private func contactTarget(at point: CGPoint, assigned: KeyButton?, radius: CGFloat) -> KeyButton? {
@@ -870,7 +969,7 @@ final class KeyboardView: UIView {
         let id = ObjectIdentifier(source)
         activeFingers.remove(id)
         if isTracing(source) { cancelStroke() }
-        held.removeValue(forKey: id)?.alpha = 1
+        held.removeValue(forKey: id)?.setPressed(false)
         previews.removeValue(forKey: id)?.removeFromSuperview()
         if deleteOwner == id { stopRepeating() }
     }
@@ -885,7 +984,7 @@ final class KeyboardView: UIView {
         activeFingers.removeAll()
         stopRepeating()
         for case let button as KeyButton in rows.joined() { button.acceptsCurrentTouch = false }
-        held.values.forEach { $0.alpha = 1 }
+        held.values.forEach { $0.setPressed(false) }
         held.removeAll()
         (Array(previews.values) + lingering).forEach { $0.removeFromSuperview() }
         previews.removeAll()

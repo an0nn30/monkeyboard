@@ -6,6 +6,8 @@ struct AppearanceSettings: View {
     let repeatSplitLetters: Bool
     @State private var tint = KeyboardTint.stored()
     @State private var keyboardFont = KeyboardFont.stored
+    @State private var keyboardStyle = KeyboardStyle.stored
+    @State private var styleSaveFailed = false
     @State private var fontSaveFailed = false
     @State private var photo: PhotosPickerItem?
     @State private var screenshot: ScreenshotPixels?
@@ -14,47 +16,73 @@ struct AppearanceSettings: View {
 
     var body: some View {
         Form {
-            Section("Key tint") {
-                HStack {
-                    Circle().fill(tint.map { Color(uiColor: $0.sourceColor) } ?? .secondary)
-                        .frame(width: 20, height: 20)
-                        .overlay(Circle().strokeBorder(.primary.opacity(0.15)))
-                    Text(tint?.hex ?? "Default").monospacedDigit()
-                        .accessibilityIdentifier("saved-tint")
-                }
-                PhotosPicker(selection: $photo, matching: .images) {
-                    Label("Choose Screenshot", systemImage: "photo")
-                }
-                .accessibilityIdentifier("choose-screenshot")
-                if loading { ProgressView("Opening screenshot…") }
-                if tint != nil {
-                    Button("Restore Default Tint") { save(nil) }
-                }
-                if let errorMessage {
-                    Text(errorMessage).foregroundStyle(.red)
-                }
-            }
             Section {
-                Picker("Keyboard font", selection: Binding(
-                    get: { keyboardFont },
+                Picker("Keyboard style", selection: Binding(
+                    get: { keyboardStyle },
                     set: { choice in
-                        fontSaveFailed = !choice.save()
-                        if !fontSaveFailed { keyboardFont = choice }
+                        styleSaveFailed = !choice.save()
+                        if !styleSaveFailed { keyboardStyle = choice }
                     }
                 )) {
-                    ForEach(KeyboardFont.allCases, id: \.self) { choice in
+                    ForEach(KeyboardStyle.allCases, id: \.self) { choice in
                         Text(choice.title).tag(choice)
                     }
                 }
-                .pickerStyle(.menu)
-                .accessibilityIdentifier("keyboard-font-picker")
-                .accessibilityValue(keyboardFont.title)
-                if fontSaveFailed { Text("Couldn’t save the font. Try again.").foregroundStyle(.red) }
+                .pickerStyle(.segmented)
+                .accessibilityIdentifier("keyboard-style-picker")
+                if styleSaveFailed { Text("Couldn’t save the style. Try again.").foregroundStyle(.red) }
+            } header: {
+                Text("Keyboard style")
+            } footer: {
+                Text(keyboardStyle == .ios
+                     ? "Rounded keys, system lettering, and a wider space bar. Your custom tint and font stay saved for Default."
+                     : "Customize the original MonkeyBoard keyboard with your own tint and font.")
+            }
+            if keyboardStyle == .standard {
+                Section("Key tint") {
+                    HStack {
+                        Circle().fill(tint.map { Color(uiColor: $0.sourceColor) } ?? .secondary)
+                            .frame(width: 20, height: 20)
+                            .overlay(Circle().strokeBorder(.primary.opacity(0.15)))
+                        Text(tint?.hex ?? "Default").monospacedDigit()
+                            .accessibilityIdentifier("saved-tint")
+                    }
+                    PhotosPicker(selection: $photo, matching: .images) {
+                        Label("Choose Screenshot", systemImage: "photo")
+                    }
+                    .accessibilityIdentifier("choose-screenshot")
+                    if loading { ProgressView("Opening screenshot…") }
+                    if tint != nil {
+                        Button("Restore Default Tint") { save(nil) }
+                    }
+                    if let errorMessage {
+                        Text(errorMessage).foregroundStyle(.red)
+                    }
+                }
+            }
+            Section {
+                if keyboardStyle == .standard {
+                    Picker("Keyboard font", selection: Binding(
+                        get: { keyboardFont },
+                        set: { choice in
+                            fontSaveFailed = !choice.save()
+                            if !fontSaveFailed { keyboardFont = choice }
+                        }
+                    )) {
+                        ForEach(KeyboardFont.allCases, id: \.self) { choice in
+                            Text(choice.title).tag(choice)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .accessibilityIdentifier("keyboard-font-picker")
+                    .accessibilityValue(keyboardFont.title)
+                    if fontSaveFailed { Text("Couldn’t save the font. Try again.").foregroundStyle(.red) }
+                }
                 ForEach([UIUserInterfaceStyle.light, .dark], id: \.rawValue) { style in
                     VStack(alignment: .leading, spacing: 6) {
                         Text(style == .dark ? "Dark" : "Light").font(.subheadline.weight(.medium))
-                        SplitKeyboardPreview(tint: tint, font: keyboardFont, style: style, repeatLetters: repeatSplitLetters)
-                            .aspectRatio(669.0 / 289, contentMode: .fit)
+                        SplitKeyboardPreview(tint: tint, font: keyboardFont, style: style, repeatLetters: repeatSplitLetters, keyboardStyle: keyboardStyle)
+                            .aspectRatio(669.0 / keyboardStyle.height(for: 669, compact: false), contentMode: .fit)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .accessibilityHidden(true)
                     }
@@ -63,7 +91,7 @@ struct AppearanceSettings: View {
             } header: {
                 Text("Preview")
             } footer: {
-                Text("Your tint colors Return and Shift when Shift is active.")
+                Text(keyboardStyle == .ios ? "The keyboard follows Light and Dark Mode." : "Your tint colors Return and Shift when Shift is active.")
             }
         }
         .navigationTitle("Appearance")
@@ -231,9 +259,11 @@ private struct SplitKeyboardPreview: UIViewRepresentable {
     let font: KeyboardFont
     let style: UIUserInterfaceStyle
     let repeatLetters: Bool
+    let keyboardStyle: KeyboardStyle
 
     final class Canvas: UIView {
         let board = KeyboardView()
+        var keyboardStyle = KeyboardStyle.standard
 
         init() {
             super.init(frame: .zero)
@@ -247,7 +277,7 @@ private struct SplitKeyboardPreview: UIViewRepresentable {
 
         override func layoutSubviews() {
             super.layoutSubviews()
-            let size = CGSize(width: 669, height: 289)
+            let size = CGSize(width: 669, height: keyboardStyle.height(for: 669, compact: false))
             board.bounds = CGRect(origin: .zero, size: size)
             board.center = CGPoint(x: bounds.midX, y: bounds.midY)
             let scale = min(bounds.width / size.width, bounds.height / size.height)
@@ -259,6 +289,9 @@ private struct SplitKeyboardPreview: UIViewRepresentable {
 
     func updateUIView(_ view: Canvas, context: Context) {
         var model = KeyboardModel()
+        model.style = keyboardStyle
+        view.keyboardStyle = keyboardStyle
+        view.setNeedsLayout()
         model.isSplit = true
         model.repeatSplitLetters = repeatLetters
         model.needsGlobe = true

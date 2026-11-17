@@ -191,6 +191,7 @@ final class KeyboardViewController: UIInputViewController {
     private var keyboardFont = KeyboardFont.system
     private var lastSelectedWordShift: KeyboardModel.Shift?
     private var height: NSLayoutConstraint?
+    private var boardBottom: NSLayoutConstraint?
     private var candidateDocument: UUID?
     private var candidateContext = ""
     private var candidatePrefix = ""
@@ -213,11 +214,13 @@ final class KeyboardViewController: UIInputViewController {
         board.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(board)
         let safe = view.safeAreaLayoutGuide
+        let boardBottom = board.bottomAnchor.constraint(equalTo: safe.bottomAnchor)
+        self.boardBottom = boardBottom
         NSLayoutConstraint.activate([
             board.leadingAnchor.constraint(equalTo: safe.leadingAnchor),
             board.trailingAnchor.constraint(equalTo: safe.trailingAnchor),
             board.topAnchor.constraint(equalTo: view.topAnchor),
-            board.bottomAnchor.constraint(equalTo: safe.bottomAnchor)
+            boardBottom
         ])
         let height = view.heightAnchor.constraint(equalToConstant: 250 + board.extraHeightBelowKeys)
         height.priority = UILayoutPriority(999)
@@ -307,6 +310,7 @@ final class KeyboardViewController: UIInputViewController {
         reloadSpellingMemory()
         accentColor = KeyboardTint.stored()?.keyColor
         keyboardFont = .stored
+        model.style = .stored
         prefersSplit = WideKeyboardLayout.prefersSplit
         model.repeatSplitLetters = WideKeyboardLayout.repeatsLetters
         preferredHand = OneHandedSetting.storedValue.flatMap(OneHandedLayout.init(rawValue:)) ?? .fullWidth
@@ -342,10 +346,13 @@ final class KeyboardViewController: UIInputViewController {
         let split = !cover && width >= KeyboardView.minimumSplitWidth && prefersSplit
         let hand = cover ? preferredHand : .fullWidth
         allowsOneHanded = cover
-        updateOptionsMenu()
-        guard split != model.isSplit || hand != model.oneHanded else { return }
+        guard split != model.isSplit || hand != model.oneHanded else {
+            updateOptionsMenu()
+            return
+        }
         model.isSplit = split
         model.oneHanded = hand
+        updateOptionsMenu()
         updateKeys(animateLayout: animated)
     }
 
@@ -388,7 +395,12 @@ final class KeyboardViewController: UIInputViewController {
             updateKeys()
         }
         let compact = traitCollection.verticalSizeClass == .compact
-        height?.constant = (compact ? 193 : 250) + board.extraHeightBelowKeys + view.safeAreaInsets.bottom
+        let base = model.style == .ios && model.layer != .keypad && model.emojiMode == .closed
+            ? model.style.height(for: board.bounds.width, compact: compact)
+            : (compact ? 193 : 250) + board.extraHeightBelowKeys
+        boardBottom?.constant = model.layer != .keypad && model.emojiMode == .closed
+            ? model.style.bottomOverlap(for: board.bounds.width, safeBottom: view.safeAreaInsets.bottom) : 0
+        height?.constant = base + view.safeAreaInsets.bottom
     }
 
     override func textDidChange(_ textInput: UITextInput?) {
@@ -758,6 +770,15 @@ final class KeyboardViewController: UIInputViewController {
             sections.append(UIMenu(title: "One-handed typing", options: .displayInline, children: positions))
         }
         sections.append(feedback)
+        if model.style == .ios && !allowsOneHanded {
+            sections.append(UIAction(title: model.isSplit ? "Join Keyboard" : "Split Keyboard",
+                                     image: UIImage(systemName: "rectangle.split.2x1")) { [weak self] _ in
+                self?.board.onToggleLayout?()
+            })
+        }
+        sections.append(UIAction(title: "Hide Keyboard", image: UIImage(systemName: "keyboard.chevron.compact.down")) { [weak self] _ in
+            self?.dismissKeyboard()
+        })
         board.setOptionsMenu(UIMenu(children: sections), feedbackValue: value,
                              showsSplitToggle: !allowsOneHanded && board.bounds.width >= KeyboardView.minimumSplitWidth)
     }

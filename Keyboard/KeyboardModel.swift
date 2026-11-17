@@ -64,6 +64,7 @@ struct KeyboardModel: Equatable {
     var repeatSplitLetters = false
     var oneHanded = OneHandedLayout.fullWidth
     var keyboardType = UIKeyboardType.default
+    var style = KeyboardStyle.standard
 
     var bottomRowShortcut: Key? {
         switch keyboardType {
@@ -98,9 +99,9 @@ struct KeyboardModel: Equatable {
         rows[2].append(.delete)
         // Keep the two extra controls across split/join transitions so they can
         // fold into their matching keys in the joined layout.
-        for row in [0, 2] {
+        for row in [0, 1, 2] {
             if let index = repeatedLetterIndex(in: row) {
-                let letter = rows[row][index]
+                let letter = rows[row][nativeSplitRepeats ? index - 1 : index]
                 rows[row].insert(letter, at: index)
             }
         }
@@ -109,24 +110,29 @@ struct KeyboardModel: Equatable {
         if [.default, .twitter, .webSearch].contains(keyboardType) { bottom.append(.emoji) }
         if let bottomRowShortcut { bottom.append(bottomRowShortcut) }
         // Keep the second space control in both layouts so it can slide into the first.
-        bottom += [.space, .rightSpace, .type("."), .enter]
+        bottom += [.space, .rightSpace]
+        if style != .ios { bottom.append(.type(".")) }
+        bottom.append(.enter)
         rows.append(bottom)
         return rows
     }
 
     /// The added key sits immediately before the original Y or B.
     func repeatedLetterIndex(in row: Int) -> Int? {
+        if nativeSplitRepeats { return row == 1 || row == 2 ? 5 : nil }
         guard repeatSplitLetters, layer == .letters, row == 0 || row == 2 else { return nil }
         return 5 // Q W E R T | Y, or Shift Z X C V | B
     }
 
+    var nativeSplitRepeats: Bool { style == .ios && !repeatSplitLetters && layer == .letters }
+
     /// The first key in the right bank.
     func splitIndex(row: Int, count: Int) -> Int {
-        if let extra = repeatedLetterIndex(in: row) { return extra + 1 }
+        if let extra = repeatedLetterIndex(in: row) { return nativeSplitRepeats ? extra : extra + 1 }
         switch row {
         case 0, 1: return 5       // T | Y and G | H on the letter layer
         case 2: return (count + 1) / 2
-        default: return count - 3 // Right space, period, Return
+        default: return count - (style == .ios ? 2 : 3)
         }
     }
 }
