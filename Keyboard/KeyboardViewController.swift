@@ -178,8 +178,7 @@ final class KeyboardViewController: UIInputViewController {
     private var sentenceResources = Bundle.main.resourceURL
 
     private var autoCorrect = true
-    private var returnAfterSymbol = true
-    private var openedSymbolsFromLetters = false
+    private var returnAfterSpace = true
     #if MONKEYBOARD_SOUND_BENCHMARK
     private let soundProbe = SoundFootprintProbe()
     #endif
@@ -313,10 +312,11 @@ final class KeyboardViewController: UIInputViewController {
         model.style = .stored
         prefersSplit = WideKeyboardLayout.prefersSplit
         model.repeatSplitLetters = WideKeyboardLayout.repeatsLetters
+        model.thumbReachPercent = ThumbReachSetting.percent
         preferredHand = OneHandedSetting.storedValue.flatMap(OneHandedLayout.init(rawValue:)) ?? .fullWidth
         glideEnabled = GlideTypingSetting.isEnabled
         autoCorrect = AutoCorrectionSetting.isEnabled
-        returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
+        returnAfterSpace = ReturnAfterSpaceSetting.isEnabled
         adoptMemoryBudget()
         corrections.usesSentenceContext = !releasedPredictionResources && SentenceScoringSetting.isEnabled
         usesTransformer = corrections.usesSentenceContext && TransformerSetting.isEnabled
@@ -431,7 +431,6 @@ final class KeyboardViewController: UIInputViewController {
         if contextNeedsSetup || kind != model.keyboardType || changedEmojiDocument {
             if model.emojiMode != .closed { closeEmojiSession() }
             contextNeedsSetup = false
-            openedSymbolsFromLetters = false
             model.keyboardType = kind
             model.layer = .initial(for: kind)
             view.setNeedsLayout()
@@ -613,7 +612,6 @@ final class KeyboardViewController: UIInputViewController {
             model.shift = .lower
             emojiPicker?.setSearching(mode == .search)
         }
-        openedSymbolsFromLetters = false
         lastShift = nil
         updateKeys()
         scheduleSuggestions()
@@ -635,7 +633,9 @@ final class KeyboardViewController: UIInputViewController {
         case let .type(text):
             picker.setQuery(picker.query + text)
             model.shift = .lower
-        case .space, .rightSpace: picker.setQuery(picker.query + " ")
+        case .space, .rightSpace:
+            picker.setQuery(picker.query + " ")
+            if returnAfterSpace { model.layer = .letters }
         case .delete: picker.setQuery(String(picker.query.dropLast()))
         case .shift: model.shift = model.shift == .lower ? .upper : .lower
         case .layer: model.layer = model.layer == .letters ? .numbers : .letters
@@ -680,8 +680,7 @@ final class KeyboardViewController: UIInputViewController {
                 lastShift = now
             }
         case .layer:
-            openedSymbolsFromLetters = model.layer == .letters
-            model.layer = openedSymbolsFromLetters ? .numbers : .letters
+            model.layer = model.layer == .letters ? .numbers : .letters
         case .symbols: model.layer = model.layer == .numbers ? .symbols : .numbers
         case .globe: run = nil; advanceToNextInputMode()
         case .delete:
@@ -709,12 +708,11 @@ final class KeyboardViewController: UIInputViewController {
                 textDocumentProxy.insertText(value)
                 keptSpelling = nil
             }
-            if openedSymbolsFromLetters && returnAfterSymbol {
-                model.layer = .letters
-                openedSymbolsFromLetters = false
-            }
             applyAutoCase()
-        case .space, .rightSpace: touchReplacement = insertDelimiter(" "); applyAutoCase()
+        case .space, .rightSpace:
+            touchReplacement = insertDelimiter(" ")
+            if returnAfterSpace { model.layer = .letters }
+            applyAutoCase()
         case .enter: touchReplacement = insertDelimiter("\n"); applyAutoCase()
         }
         updateKeys()

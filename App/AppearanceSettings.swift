@@ -4,6 +4,7 @@ import SwiftUI
 
 struct AppearanceSettings: View {
     let repeatSplitLetters: Bool
+    let thumbReach: Int
     @State private var tint = KeyboardTint.stored()
     @State private var keyboardFont = KeyboardFont.stored
     @State private var keyboardStyle = KeyboardStyle.stored
@@ -81,7 +82,7 @@ struct AppearanceSettings: View {
                 ForEach([UIUserInterfaceStyle.light, .dark], id: \.rawValue) { style in
                     VStack(alignment: .leading, spacing: 6) {
                         Text(style == .dark ? "Dark" : "Light").font(.subheadline.weight(.medium))
-                        SplitKeyboardPreview(tint: tint, font: keyboardFont, style: style, repeatLetters: repeatSplitLetters, keyboardStyle: keyboardStyle)
+                        SplitKeyboardPreview(tint: tint, font: keyboardFont, style: style, repeatLetters: repeatSplitLetters, keyboardStyle: keyboardStyle, thumbReach: thumbReach)
                             .aspectRatio(669.0 / keyboardStyle.height(for: 669, compact: false), contentMode: .fit)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .accessibilityHidden(true)
@@ -260,6 +261,7 @@ private struct SplitKeyboardPreview: UIViewRepresentable {
     let style: UIUserInterfaceStyle
     let repeatLetters: Bool
     let keyboardStyle: KeyboardStyle
+    let thumbReach: Int
 
     final class Canvas: UIView {
         let board = KeyboardView()
@@ -294,6 +296,7 @@ private struct SplitKeyboardPreview: UIViewRepresentable {
         view.setNeedsLayout()
         model.isSplit = true
         model.repeatSplitLetters = repeatLetters
+        model.thumbReachPercent = thumbReach
         model.needsGlobe = true
         model.shift = .upper
         view.overrideUserInterfaceStyle = style

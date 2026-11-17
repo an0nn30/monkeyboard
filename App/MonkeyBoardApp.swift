@@ -72,9 +72,11 @@ private struct KeyboardSettings: View {
     @State private var saveFailed = false
     @State private var split = WideKeyboardLayout.prefersSplit
     @State private var repeatSplitLetters = WideKeyboardLayout.repeatsLetters
+    @State private var thumbReach = ThumbReachSetting.percent
+    @State private var reachSaveFailed = false
     @State private var layoutSaveFailed = false
-    @State private var returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
-    @State private var symbolSaveFailed = false
+    @State private var returnAfterSpace = ReturnAfterSpaceSetting.isEnabled
+    @State private var spaceReturnSaveFailed = false
     @State private var glideEnabled = GlideTypingSetting.isEnabled
     @State private var glideSaveFailed = false
     @State private var autoCorrect = AutoCorrectionSetting.isEnabled
@@ -88,7 +90,7 @@ private struct KeyboardSettings: View {
     var body: some View {
         Form {
             NavigationLink {
-                AppearanceSettings(repeatSplitLetters: repeatSplitLetters)
+                AppearanceSettings(repeatSplitLetters: repeatSplitLetters, thumbReach: thumbReach)
             } label: {
                 Label("Appearance", systemImage: "paintpalette")
             }
@@ -108,6 +110,26 @@ private struct KeyboardSettings: View {
                         if !layoutSaveFailed { repeatSplitLetters = enabled }
                     }
                 )).accessibilityIdentifier("repeat-split-letters")
+                VStack(alignment: .leading, spacing: 10) {
+                    LabeledContent("Thumb reach", value: thumbReach == 0 ? "Original" : "\(thumbReach)%")
+                        .monospacedDigit()
+                    Slider(value: Binding(
+                        get: { Double(thumbReach) },
+                        set: { value in
+                            let next = Int(value.rounded())
+                            guard next != thumbReach else { return }
+                            reachSaveFailed = !ThumbReachSetting.save(next)
+                            if !reachSaveFailed { thumbReach = next }
+                        }
+                    ), in: 0...100, step: 5)
+                    .accessibilityLabel("Thumb reach")
+                    .accessibilityIdentifier("thumb-reach")
+                    HStack { Text("Original"); Spacer(); Text("Closer to edges") }
+                        .font(.caption).foregroundStyle(.secondary)
+                    Text("Moves the iOS split keyboard closer to your thumbs while keeping the keys the same size.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }.padding(.vertical, 6)
+                if reachSaveFailed { Text("Couldn’t save thumb reach. Try again.").foregroundStyle(.red) }
                 if layoutSaveFailed {
                     Text("Couldn’t save the layout. Try again.").foregroundStyle(.red)
                 }
@@ -117,16 +139,16 @@ private struct KeyboardSettings: View {
                 Text("Places keys and a spacebar under each thumb when there’s room. You can also switch layouts from the keyboard.")
             }
             Section {
-                Toggle("Return to letters after a symbol", isOn: Binding(
-                    get: { returnAfterSymbol },
+                Toggle("Return to letters after Space", isOn: Binding(
+                    get: { returnAfterSpace },
                     set: { enabled in
-                        symbolSaveFailed = !ReturnAfterSymbolSetting.save(enabled)
-                        if !symbolSaveFailed { returnAfterSymbol = enabled }
+                        spaceReturnSaveFailed = !ReturnAfterSpaceSetting.save(enabled)
+                        if !spaceReturnSaveFailed { returnAfterSpace = enabled }
                     }
-                )).accessibilityIdentifier("return-after-symbol")
-                if symbolSaveFailed { Text("Couldn’t save this setting. Try again.").foregroundStyle(.red) }
+                )).accessibilityIdentifier("return-after-space")
+                if spaceReturnSaveFailed { Text("Couldn’t save this setting. Try again.").foregroundStyle(.red) }
             } footer: {
-                Text("When you open 123 or #+=, typing one number or symbol switches back to ABC.")
+                Text("Keep typing numbers and symbols in 123 or #+=. Press Space to switch back to ABC.")
             }
             Section {
                 Toggle("Glide typing", isOn: Binding(
@@ -280,7 +302,8 @@ private struct KeyboardSettings: View {
         transformer = TransformerSetting.isEnabled
         split = WideKeyboardLayout.prefersSplit
         repeatSplitLetters = WideKeyboardLayout.repeatsLetters
-        returnAfterSymbol = ReturnAfterSymbolSetting.isEnabled
+        thumbReach = ThumbReachSetting.percent
+        returnAfterSpace = ReturnAfterSpaceSetting.isEnabled
         percent = KeypressFeedback.storedPercent() ?? KeypressFeedback.initial
     }
 }

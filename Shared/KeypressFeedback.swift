@@ -10,8 +10,9 @@ enum KeyboardSetting: String {
     case firmness = "keypress-firmness"
     case split = "split-wide-layout"
     case repeatSplitLetters = "repeat-split-letters"
+    case thumbReach = "thumb-reach"
     case oneHanded = "one-handed-layout"
-    case returnAfterSymbol = "return-after-symbol"
+    case returnAfterSpace = "return-after-space"
     case learningSpeed = "personal-learning-speed"
     case glideTyping = "glide-typing"
     case autocorrection = "autocorrection"
@@ -76,9 +77,15 @@ enum OneHandedSetting {
     static func save(_ value: Int) -> Bool { KeyboardSetting.oneHanded.save(UInt8(clamping: value)) }
 }
 
-enum ReturnAfterSymbolSetting {
-    static var isEnabled: Bool { (KeyboardSetting.returnAfterSymbol.read() ?? 1) != 0 }
-    static func save(_ enabled: Bool) -> Bool { KeyboardSetting.returnAfterSymbol.save(enabled ? 1 : 0) }
+enum ThumbReachSetting {
+    static var percent: Int { min(100, KeyboardSetting.thumbReach.read() ?? 0) }
+    static func save(_ percent: Int) -> Bool { KeyboardSetting.thumbReach.save(UInt8(clamping: min(100, max(0, percent)))) }
+}
+
+// A separate preference from the retired one-symbol return option; this behavior defaults on.
+enum ReturnAfterSpaceSetting {
+    static var isEnabled: Bool { (KeyboardSetting.returnAfterSpace.read() ?? 1) != 0 }
+    static func save(_ enabled: Bool) -> Bool { KeyboardSetting.returnAfterSpace.save(enabled ? 1 : 0) }
 }
 
 enum GlideTypingSetting {

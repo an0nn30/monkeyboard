@@ -62,6 +62,7 @@ struct KeyboardModel: Equatable {
     var needsGlobe = false
     var isSplit = false
     var repeatSplitLetters = false
+    var thumbReachPercent = 0
     var oneHanded = OneHandedLayout.fullWidth
     var keyboardType = UIKeyboardType.default
     var style = KeyboardStyle.standard

@@ -362,7 +362,8 @@ final class KeyboardView: UIView {
         let wasKeypad = displayedModel?.layer == .keypad
         if animateLayout { layoutIfNeeded(); resetTouches() }
         if displayedModel?.emojiMode != model.emojiMode { resetTouches() }
-        if displayedModel?.repeatSplitLetters != model.repeatSplitLetters || displayedModel?.style != model.style {
+        if displayedModel?.repeatSplitLetters != model.repeatSplitLetters || displayedModel?.style != model.style ||
+            displayedModel?.thumbReachPercent != model.thumbReachPercent {
             resetTouches()
             geometryArea = .null
         }
@@ -511,30 +512,37 @@ final class KeyboardView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        if bounds.width != lastAvailableWidth {
-            lastAvailableWidth = bounds.width
+        let layoutBounds = bounds
+        if layoutBounds.width != lastAvailableWidth {
+            lastAvailableWidth = layoutBounds.width
             resetTouches()
-            onAvailableWidthChange?(bounds.width)
+            onAvailableWidthChange?(layoutBounds.width)
         }
         guard !rows.isEmpty else { return }
         let ios = displayedModel?.style == .ios
-        let inset: CGFloat = ios ? (bounds.width > 900 ? 85 : (bounds.width > 800 ? 10 : (bounds.width >= 560 ? 11 : 0))) : 4
+        let inset: CGFloat = ios ? (layoutBounds.width > 900 ? 85 : (layoutBounds.width > 800 ? 10 : (layoutBounds.width >= 560 ? 11 : 0))) : 4
         let hand = displayedModel?.oneHanded ?? .fullWidth
         let keypad = displayedModel?.layer == .keypad
-        let typingArea = hand.typingArea(in: bounds.inset(by: UIEdgeInsets(
+        let typingArea = hand.typingArea(in: layoutBounds.inset(by: UIEdgeInsets(
             top: 0, left: 0, bottom: keypad ? Self.footerHeight : extraHeightBelowKeys, right: 0)))
         let available = typingArea.insetBy(dx: inset, dy: 0)
+        let split = displayedModel?.isSplit == true
+        let reach = ios && split && !keypad ? CGFloat(min(100, max(0, displayedModel?.thumbReachPercent ?? 0))) / 100 : 0
+        let leftEdgeShift = max(0, available.minX - bounds.minX - 4) * reach
+        let rightEdgeShift = max(0, bounds.maxX - available.maxX - 4) * reach
         let footerY = bounds.maxY - Self.footerHeight
         hideButton.frame = CGRect(x: available.minX, y: footerY, width: 44, height: Self.footerHeight)
         keypadGlobe.frame = CGRect(x: available.maxX - 44, y: footerY, width: 44, height: Self.footerHeight)
         let gap: CGFloat = ios ? (typingArea.width > 800 ? 10 : (typingArea.width >= 560 ? 9 : 6.333)) : (typingArea.width < 360 ? 3 : 4)
+        let gapReduction = min(3, max(0, gap - 6)) * reach
+        let targetGap = gap - gapReduction
         let rowGap: CGFloat = ios ? (typingArea.width > 800 ? 13 : (typingArea.width >= 560 ? 14 : 11)) : (typingArea.height < 220 ? 5 : 7)
         // This strip also provides headroom for top-row previews inside the extension.
         let searching = displayedModel?.emojiMode == .search
         let top: CGFloat = searching ? min(83, typingArea.height * 0.35) :
             (keypad ? 0 : (ios ? (typingArea.width > 800 ? 38 : 40) : min(61, max(46, typingArea.height * 0.23))))
         let toolbarLeft = ios && typingArea.width > 900 ? CGFloat(20) : available.minX
-        let toolbarRight = ios && typingArea.width > 800 ? available.maxX + 10 : available.maxX
+        let toolbarRight = min(bounds.maxX, (ios && typingArea.width > 800 ? available.maxX + 10 : available.maxX) + rightEdgeShift)
         toolbar.frame = CGRect(x: toolbarLeft, y: 0, width: toolbarRight - toolbarLeft, height: top)
         let predictionWidth = ios && typingArea.width > 800 ? CGFloat(323.333) : available.width / 2
         suggestionSpacerWidth.constant = max(0, toolbar.bounds.width - predictionWidth - 44 - (undoButton.isHidden ? 0 : 44))
@@ -557,7 +565,6 @@ final class KeyboardView: UIView {
             return
         }
         let height = max(1, (typingArea.height - top - (ios && typingArea.width >= 560 ? 0 : Self.bottomMargin) - 3 * rowGap) / 4)
-        let split = displayedModel?.isSplit == true
         let hasShortcut = displayedModel?.bottomRowShortcut != nil
         func weight(_ key: Key) -> CGFloat {
             if ios {
@@ -605,12 +612,28 @@ final class KeyboardView: UIView {
                                           y: y, width: letterWidth, height: height)
                         }
                     }
+                    if reach > 0, let model = displayedModel {
+                        // Keep the original painted dimensions. Move the banks toward
+                        // the edges and reclaim only gaps and lower-row indentation.
+                        let cut = model.splitIndex(row: i, count: row.count)
+                        let left = j < cut
+                        let rank = left ? j : row.count - 1 - j
+                        let bank = min(275, available.width * 0.44)
+                        var offset = (left ? leftEdgeShift : rightEdgeShift) + CGFloat(rank) * gapReduction
+                        if i == 1 { offset += (bank + gap) / 20 * reach }
+                        if i == 2, model.nativeSplitRepeats, case .type = keys[i][j] {
+                            let letterWidth = (bank - 4 * gap) / 5
+                            let extraGap = 1.5 * (letterWidth + gap) - 1.36 * letterWidth - gap
+                            offset += max(0, extraGap) * reach
+                        }
+                        face.origin.x += left ? -offset : offset
+                    }
                     // Extend the actual control frame as well as local hit testing:
                     // the remotely hosted keyboard uses control regions to deliver touches.
                     if let cap = row[j] as? KeyButton, case .type = cap.key {
                         // A remotely hosted control extending outside the input view can
                         // lose its accessible hit point. Keep edge targets inside the host.
-                        let target = face.insetBy(dx: -gap / 2, dy: -rowGap / 2).intersection(bounds)
+                        let target = face.insetBy(dx: -targetGap / 2, dy: -rowGap / 2).intersection(bounds)
                         cap.faceInsets = UIEdgeInsets(top: face.minY - target.minY, left: face.minX - target.minX,
                                                       bottom: target.maxY - face.maxY, right: target.maxX - face.maxX)
                         cap.frame = target
@@ -618,8 +641,8 @@ final class KeyboardView: UIView {
                         let depth = min(Self.spaceHitDepth, max(0, bounds.maxY - face.maxY))
                         // Give Space its half of the gap next to punctuation and the row above.
                         // The inner edges of the split spacebars face the empty center gutter.
-                        let left = !split || (cap.key == .space && hasShortcut) ? gap / 2 : 0
-                        let right = !split || cap.key == .rightSpace ? gap / 2 : 0
+                        let left = !split || (cap.key == .space && hasShortcut) ? targetGap / 2 : 0
+                        let right = !split || cap.key == .rightSpace ? targetGap / 2 : 0
                         cap.faceInsets = UIEdgeInsets(top: rowGap / 2, left: left, bottom: depth, right: right)
                         cap.frame = CGRect(x: face.minX - left, y: face.minY - rowGap / 2,
                                            width: face.width + left + right, height: face.height + rowGap / 2 + depth)
@@ -701,7 +724,7 @@ final class KeyboardView: UIView {
             }
             for (i, a) in centers {
                 for (j, b) in centers where i != j {
-                    let x = (a.midX - b.midX) / ((a.width + b.width) / 2 + gap)
+                    let x = (a.midX - b.midX) / ((a.width + b.width) / 2 + targetGap)
                     let y = (a.midY - b.midY) / (a.height + rowGap)
                     if x*x + y*y <= 1.65 { masks[i] |= 1 << j }
                 }

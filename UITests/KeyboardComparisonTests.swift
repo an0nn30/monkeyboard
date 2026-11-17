@@ -11,7 +11,7 @@ final class KeyboardComparisonTests: XCTestCase {
         func choose(_ name: String) {
             app.launch()
             app.buttons["keyboard-settings"].tap()
-            let returnToggle = app.switches["return-after-symbol"]
+            let returnToggle = app.switches["return-after-space"]
             if originalReturn == nil {
                 originalReturn = returnToggle.value as? String
                 if originalReturn == "0" { returnToggle.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
@@ -38,7 +38,7 @@ final class KeyboardComparisonTests: XCTestCase {
             guard let originalStyle else { return }
             app.launch()
             app.buttons["keyboard-settings"].tap()
-            let toggle = app.switches["return-after-symbol"]
+            let toggle = app.switches["return-after-space"]
             if let originalReturn, toggle.value as? String != originalReturn { toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
             app.buttons["appearance-settings"].tap()
             app.segmentedControls["keyboard-style-picker"].buttons[originalStyle].tap()
@@ -68,11 +68,23 @@ final class KeyboardComparisonTests: XCTestCase {
         XCTAssertEqual(app.textViews["draft"].value as? String, "Q")
         key("123").tap()
         XCTAssertTrue(key(",").waitForExistence(timeout: 4), app.debugDescription)
-        key(",").tap()
-        XCTAssertEqual(app.textViews["draft"].value as? String, "Q,")
+        key("1").tap()
+        XCTAssertTrue(key("2").exists, "Typing a number must keep the numbers page open")
+        key("2").tap()
+        key("Delete").tap()
+        key("3").tap()
+        key(".").tap()
+        key("4").tap()
+        key("#+=").tap()
+        key("[").tap()
+        key("]").tap()
+        XCTAssertTrue(key("ABC").exists)
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q13.4[]")
+        space.tap()
         XCTAssertTrue(key("q").exists)
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q13.4[] ")
         key("Return").tap()
-        XCTAssertEqual(app.textViews["draft"].value as? String, "Q,\n")
+        XCTAssertEqual(app.textViews["draft"].value as? String, "Q13.4[] \n")
         app.buttons["keyboard-options"].tap()
         if app.buttons["Join Keyboard"].exists {
             app.buttons["Join Keyboard"].tap()
@@ -90,6 +102,113 @@ final class KeyboardComparisonTests: XCTestCase {
         app.buttons["appearance-settings"].tap()
         XCTAssertTrue(app.segmentedControls["keyboard-style-picker"].buttons["iOS"].isSelected)
     }
+
+    func testThumbReachMovesSplitKeysAndPersists() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        var originalReach: CGFloat?
+        var originalStyle: String?
+        var originalSplit: String?
+        func settings() {
+            app.launch()
+            app.buttons["keyboard-settings"].tap()
+        }
+        func setReach(_ amount: CGFloat) {
+            settings()
+            let slider = app.sliders["thumb-reach"]
+            XCTAssertTrue(slider.waitForExistence(timeout: 3), "Thumb reach belongs under Layout")
+            slider.adjust(toNormalizedSliderPosition: amount)
+        }
+        func key(_ label: String) -> XCUIElement {
+            app.buttons.matching(NSPredicate(format: "identifier ==[c] %@", "key-" + label)).firstMatch
+        }
+        func showKeyboard() {
+            app.launch()
+            app.textViews["draft"].tap()
+            app.switchToKeyboard(showing: app.buttons["keyboard-options"])
+            XCTAssertTrue(key("Space-left").exists, "Open the Duo simulator for this test")
+        }
+        addTeardownBlock {
+            if let originalReach {
+                setReach(originalReach)
+                if let originalSplit {
+                    let split = app.switches["split-wide-screens"]
+                    if split.value as? String != originalSplit {
+                        split.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap()
+                    }
+                }
+                if let originalStyle {
+                    app.buttons["appearance-settings"].tap()
+                    app.segmentedControls["keyboard-style-picker"].buttons[originalStyle].tap()
+                }
+            }
+        }
+        settings()
+        let slider = app.sliders["thumb-reach"]
+        XCTAssertTrue(slider.waitForExistence(timeout: 3), "Thumb reach belongs under Layout")
+        originalReach = slider.normalizedSliderPosition
+        let split = app.switches["split-wide-screens"]
+        originalSplit = split.value as? String
+        if originalSplit == "0" { split.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
+        app.buttons["appearance-settings"].tap()
+        let styles = app.segmentedControls["keyboard-style-picker"]
+        originalStyle = styles.buttons["iOS"].isSelected ? "iOS" : "Default"
+        styles.buttons["iOS"].tap()
+        // Duo inner-display rotation is controlled in Device Hub; XCUIDevice
+        // orientation can target only its folded display. Exercise the current layout.
+        setReach(0)
+        showKeyboard()
+        let q = key("q").frame, p = key("p").frame, g = key("g").frame
+        setReach(1)
+        settings()
+        XCTAssertEqual(slider.normalizedSliderPosition, 1, accuracy: 0.02, "Reach should survive relaunch")
+        showKeyboard()
+        print("THUMB_REACH host=\(app.frame) qOriginal=\(q) qReached=\(key("q").frame)")
+        XCTAssertLessThan(key("q").frame.minX, q.minX - 3)
+        XCTAssertGreaterThan(key("p").frame.maxX, p.maxX + 3)
+        XCTAssertLessThan(key("g").frame.midX, g.midX - 15)
+        XCTAssertEqual(key("q").frame.height, q.height, accuracy: 1)
+        key("g").tap()
+        key("v").tap()
+        key("Space-left").tap()
+        key("p").tap()
+        key("Space-right").tap()
+        XCTAssertEqual((app.textViews["draft"].value as? String)?.lowercased(), "gv p ")
+        let reachedQ = key("q").frame
+        app.buttons["keyboard-options"].tap()
+        app.buttons["Join Keyboard"].tap()
+        XCTAssertTrue(key("Space").wait(for: \.isHittable, toEqual: true, timeout: 5))
+        app.buttons["keyboard-options"].tap()
+        app.buttons["Split Keyboard"].tap()
+        XCTAssertTrue(key("Space-left").wait(for: \.isHittable, toEqual: true, timeout: 5))
+        XCTAssertEqual(key("q").frame.minX, reachedQ.minX, accuracy: 1, "Joining and splitting must restore reach")
+        let shot = XCTAttachment(screenshot: app.screenshot())
+        shot.name = "thumb-reach"
+        shot.lifetime = .keepAlways
+        add(shot)
+    }
+
+    #if MONKEYBOARD_REACH_PREVIEW
+    /// Explicit simulator demo setup; excluded from normal regression runs.
+    func testPrepareThumbReachPreview() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        let slider = app.sliders["thumb-reach"]
+        XCTAssertTrue(slider.waitForExistence(timeout: 5))
+        slider.adjust(toNormalizedSliderPosition: 0.75)
+        XCTAssertEqual(slider.normalizedSliderPosition, 0.75, accuracy: 0.02)
+        let split = app.switches["split-wide-screens"]
+        if split.value as? String == "0" { split.coordinate(withNormalizedOffset: CGVector(dx: 0.94, dy: 0.5)).tap() }
+        app.buttons["appearance-settings"].tap()
+        app.segmentedControls["keyboard-style-picker"].buttons["iOS"].tap()
+        app.launch()
+        app.textViews["draft"].tap()
+        app.switchToKeyboard(showing: app.buttons["keyboard-options"])
+        XCTAssertTrue(app.buttons["key-Space-left"].exists)
+    }
+    #endif
 
     func testCaptureAppleAppearanceReference() throws {
         continueAfterFailure = false
