@@ -116,6 +116,55 @@ import UIKit
                 }
             }
         }
+        // Match the measured portrait reference without stretching its 49.75pt keycaps.
+        for split in [false, true] {
+            var model = KeyboardModel()
+            model.style = .ios
+            model.isSplit = split
+            board.frame = CGRect(x: 0, y: 0, width: 655, height: model.style.height(for: 655, compact: false))
+            board.update(model, returnTitle: nil)
+            board.setSuggestions(["key", "keyboard", "keys"])
+            board.layoutIfNeeded()
+            let toolbar = board.subviews.compactMap { $0 as? UIStackView }.first!
+            let hints = toolbar.arrangedSubviews.compactMap { $0 as? UIButton }.filter {
+                $0.accessibilityIdentifier?.hasPrefix("suggestion-") == true
+            }
+            check(hints.count == 3, "word candidate count")
+            check(hints[0].titleLabel!.font.pointSize == 21, "iOS hints should match Apple's larger text")
+            check(hints[0].frame.minX < toolbar.bounds.width * 0.15, "hints leave the left half empty")
+            check(hints[2].frame.maxX > toolbar.bounds.width * 0.95, "hints do not fill the bar")
+            let q = board.subviews.compactMap { $0 as? UIButton }.first { $0.accessibilityLabel == "q" }!
+            check(abs(board.keycapFrame(of: q).height - 49.75) < 0.01, "portrait key size changed")
+            check(board.extraHeightBelowKeys <= 3, "hidden dismiss footer leaves keys too high")
+            check(model.style.height(for: 655, compact: false) == 291, "portrait panel is taller than Apple reference")
+            let firstContext = UUID(), nextContext = UUID()
+            var activatedContext: UUID?
+            board.onSuggestedEmoji = { _, context in activatedContext = context }
+            board.setSuggestions(["key", "keyboard", "keys"], emojis: [("🔑", "key"), ("🔐", "locked with key")], emojiContextID: firstContext)
+            board.layoutIfNeeded()
+            let group = toolbar.arrangedSubviews.compactMap { $0 as? UIStackView }.first!
+            check(!group.isHidden && hints[2].isHidden, "emoji pair must share the final candidate cell")
+            let emoji = group.arrangedSubviews.compactMap { $0 as? UIButton }
+            check(emoji.allSatisfy { $0.bounds.width >= 44 && $0.isEnabled }, "emoji targets are too small")
+            check(group.frame.minX >= hints[1].frame.maxX - 0.01, "emoji overlaps word candidates")
+            emoji[0].sendActions(for: .touchDown)
+            board.setSuggestions(["key", "keyboard"], emojis: [("🔑", "key")], emojiContextID: nextContext)
+            emoji[0].sendActions(for: .touchUpInside)
+            check(activatedContext == firstContext, "held emoji rebound to a newer context")
+            _ = emoji[0].accessibilityActivate()
+            check(activatedContext == nextContext, "accessibility activation should use the current offer")
+            board.setSuggestions(["next", "words"])
+            board.layoutIfNeeded()
+            check(group.isHidden && !hints[2].isHidden, "stale emoji remains after context changes")
+        }
+        var compactModel = KeyboardModel()
+        compactModel.style = .ios
+        compactModel.isSplit = true
+        board.frame = CGRect(x: 0, y: 0, width: 655, height: compactModel.style.height(for: 655, compact: true))
+        board.update(compactModel, returnTitle: nil)
+        board.layoutIfNeeded()
+        let compactQ = board.subviews.compactMap { $0 as? UIButton }.first { $0.accessibilityLabel == "q" }!
+        check(abs(board.keycapFrame(of: compactQ).height - 24.25) < 0.01, "portrait adjustment resized compact-height keys")
         for appearance in [UIUserInterfaceStyle.light, .dark] {
             board.overrideUserInterfaceStyle = appearance
             let preview = KeyPreview()

@@ -32,6 +32,8 @@ enum KeyboardStyle: Int, CaseIterable {
     func height(for width: CGFloat, compact: Bool) -> CGFloat {
         guard self == .ios else { return (compact ? 193 : 250) + 39 }
         // The system adds a 12pt top inset around third-party keyboard views.
-        return width >= 560 ? (width > 800 || compact ? 218 : 320) : (compact ? 204 : 258)
+        // Portrait uses 47pt above the keys + four 49.75pt caps + 42pt row gaps
+        // + 3pt below. The old hidden-dismiss footer pushed the caps 36pt upward.
+        return width >= 560 ? (width > 800 || compact ? 218 : 291) : (compact ? 204 : 258)
     }
 }

@@ -210,6 +210,73 @@ final class KeyboardComparisonTests: XCTestCase {
     }
     #endif
 
+    func testEmojiSuggestionsReplaceWordAndKeepTyping() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        app.buttons["appearance-settings"].tap()
+        app.segmentedControls["keyboard-style-picker"].buttons["iOS"].tap()
+        app.launch()
+        let draft = app.textViews["draft"]
+        draft.tap()
+        app.switchToKeyboard(showing: app.buttons["keyboard-options"])
+        func type(_ word: String) {
+            for letter in word {
+                app.buttons.matching(NSPredicate(format: "identifier ==[c] %@", "key-" + String(letter))).firstMatch.tap()
+            }
+        }
+        let first = app.buttons["emoji-suggestion-0"], second = app.buttons["emoji-suggestion-1"]
+        type("key")
+        XCTAssertTrue(first.waitForExistence(timeout: 5), "Typing key should offer emoji")
+        XCTAssertEqual(first.value as? String, "🔑")
+        XCTAssertEqual(second.value as? String, "🔐")
+        XCTAssertTrue(app.buttons["suggestion-0"].isHittable)
+        second.tap()
+        XCTAssertEqual(draft.value as? String, "🔐 ")
+        type("coffee")
+        XCTAssertTrue(first.waitForExistence(timeout: 5))
+        XCTAssertEqual(first.value as? String, "☕")
+        first.tap()
+        XCTAssertEqual(draft.value as? String, "🔐 ☕ ")
+        type("key")
+        XCTAssertTrue(first.waitForExistence(timeout: 5))
+        app.buttons["key-123"].tap()
+        XCTAssertTrue(first.waitForNonExistence(timeout: 5), "No word emoji on the number page")
+        app.buttons["key-ABC"].tap()
+        XCTAssertTrue(first.waitForExistence(timeout: 5))
+        app.buttons["suggestion-0"].tap()
+        XCTAssertEqual((draft.value as? String)?.lowercased(), "🔐 ☕ key ")
+        type("the")
+        XCTAssertTrue(first.waitForNonExistence(timeout: 5), "Function words should keep word predictions")
+    }
+
+    func testIOSKeyboardUsesReferenceBottomInset() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["keyboard-settings"].tap()
+        app.buttons["appearance-settings"].tap()
+        app.segmentedControls["keyboard-style-picker"].buttons["iOS"].tap()
+        app.launch()
+        app.textViews["draft"].tap()
+        let appleQ = app.keyboards.keys.matching(NSPredicate(format: "label ==[c] 'q'")).firstMatch
+        app.switchToKeyboard(showing: appleQ)
+        app.dismissAppleSlideToTypeIntroduction()
+        XCTAssertTrue(appleQ.waitForExistence(timeout: 5))
+        let nativeFrame = appleQ.frame
+        print("APPLE_BASELINE \(nativeFrame)")
+        app.switchToKeyboard(showing: app.buttons["keyboard-options"])
+        let q = app.buttons.matching(NSPredicate(format: "identifier ==[c] 'key-q'")).firstMatch
+        XCTAssertTrue(q.waitForExistence(timeout: 5))
+        print("MONKEY_BASELINE \(q.frame)")
+        // Native simulator keys are shorter than the supplied phone reference.
+        // Keep our key sizes and align the painted bottom row (73pt from the screen edge).
+        if app.frame.width > 560 && app.frame.width < 800 {
+            XCTAssertEqual(app.buttons["key-Return"].frame.maxY, app.frame.maxY - 73, accuracy: 1)
+        }
+    }
+
     func testCaptureAppleAppearanceReference() throws {
         continueAfterFailure = false
         let app = XCUIApplication()

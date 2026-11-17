@@ -146,6 +146,29 @@ final class GlideStroke {
     }
 }
 
+private final class EmojiSuggestionButton: UIButton {
+    var offer: (glyph: String, context: UUID)?
+    var onActivate: ((String, UUID) -> Void)?
+    private var pressedOffer: (glyph: String, context: UUID)?
+
+    init() {
+        super.init(frame: .zero)
+        addAction(UIAction { [weak self] _ in self?.pressedOffer = self?.offer }, for: .touchDown)
+        addAction(UIAction { [weak self] _ in
+            guard let self, let pressedOffer else { return }
+            self.pressedOffer = nil
+            onActivate?(pressedOffer.glyph, pressedOffer.context)
+        }, for: .touchUpInside)
+        addAction(UIAction { [weak self] _ in self?.pressedOffer = nil }, for: [.touchCancel, .touchUpOutside])
+    }
+    required init?(coder: NSCoder) { fatalError("Use init()") }
+    override func accessibilityActivate() -> Bool {
+        guard let offer else { return false }
+        onActivate?(offer.glyph, offer.context)
+        return true
+    }
+}
+
 final class KeyboardView: UIView {
     static let ink = UIColor.label
     static let keyFill = UIColor { traits in
@@ -160,9 +183,9 @@ final class KeyboardView: UIView {
             UIColor(red: 0.75, green: 0.83, blue: 0.95, alpha: 1)
     }
     private let toolbar = UIStackView()
-    private let suggestionSpacer = UIView()
-    private var suggestionSpacerWidth: NSLayoutConstraint!
-    private let suggestionDividers = [UIView(), UIView()]
+    private let suggestionDividers = [UIView(), UIView(), UIView()]
+    private let emojiSuggestions = UIStackView()
+    private var emojiSuggestionButtons: [EmojiSuggestionButton] = []
     private var showsSplitToggle = false
     private let optionsButton = UIButton(type: .system)
     private let undoButton = UIButton(type: .system)
@@ -180,7 +203,7 @@ final class KeyboardView: UIView {
     var extraHeightBelowKeys: CGFloat {
         if displayedModel?.layer == .keypad { return keypadGlobe.isHidden ? Self.footerHeight : 0 }
         if displayedModel?.style == .ios && displayedModel?.emojiMode == .closed {
-            return bounds.width >= 560 && bounds.width < 800 ? 39 : 0
+            return bounds.width >= 560 && bounds.width < 800 ? (bounds.height >= 270 ? 3 : 39) : 0
         }
         return Self.footerHeight - Self.bottomMargin
     }
@@ -217,6 +240,7 @@ final class KeyboardView: UIView {
     private var stroke: GlideStroke?
     private let trail = GlideTrail()
     var onWord: ((String) -> Void)?
+    var onSuggestedEmoji: ((String, UUID) -> Void)?
     var onUndoCorrection: (() -> Void)?
     var configureGlobe: ((UIButton) -> Void)? {
         didSet { configureGlobe?(keypadGlobe) }
@@ -255,11 +279,6 @@ final class KeyboardView: UIView {
         let undoWidth = undoButton.widthAnchor.constraint(equalToConstant: 44)
         undoWidth.priority = .defaultHigh
         undoWidth.isActive = true
-        suggestionSpacer.isHidden = true
-        toolbar.addArrangedSubview(suggestionSpacer)
-        suggestionSpacerWidth = suggestionSpacer.widthAnchor.constraint(equalToConstant: 0)
-        suggestionSpacerWidth.priority = .defaultHigh
-        suggestionSpacerWidth.isActive = true
         for index in 0..<3 {
             let button = UIButton(type: .system)
             button.titleLabel?.lineBreakMode = .byTruncatingTail
@@ -270,9 +289,27 @@ final class KeyboardView: UIView {
             }, for: .touchUpInside)
             toolbar.addArrangedSubview(button)
             if let first = suggestions.first {
-                button.widthAnchor.constraint(equalTo: first.widthAnchor).isActive = true
+                let equalWidth = button.widthAnchor.constraint(equalTo: first.widthAnchor)
+                // The third text cell collapses when emoji occupy its slot.
+                if index == 2 { equalWidth.priority = .defaultHigh }
+                equalWidth.isActive = true
             }
             suggestions.append(button)
+        }
+        emojiSuggestions.axis = .horizontal
+        emojiSuggestions.distribution = .fillEqually
+        emojiSuggestions.isHidden = true
+        toolbar.addArrangedSubview(emojiSuggestions)
+        let emojiWidth = emojiSuggestions.widthAnchor.constraint(equalTo: suggestions[0].widthAnchor)
+        emojiWidth.priority = .defaultHigh // Allow UIStackView to collapse this slot when hidden.
+        emojiWidth.isActive = true
+        for index in 0..<2 {
+            let button = EmojiSuggestionButton()
+            button.titleLabel?.font = .systemFont(ofSize: 24)
+            button.accessibilityIdentifier = "emoji-suggestion-\(index)"
+            button.onActivate = { [weak self] glyph, context in self?.onSuggestedEmoji?(glyph, context) }
+            emojiSuggestions.addArrangedSubview(button)
+            emojiSuggestionButtons.append(button)
         }
         for divider in suggestionDividers {
             divider.backgroundColor = UIColor.separator.withAlphaComponent(0.25)
@@ -334,13 +371,26 @@ final class KeyboardView: UIView {
         undoButton.accessibilityValue = originalWord
     }
 
-    func setSuggestions(_ words: [String]) {
+    func setSuggestions(_ words: [String], emojis: [(glyph: String, label: String)] = [], emojiContextID: UUID? = nil) {
         for (index, button) in suggestions.enumerated() {
             let word = index < words.count ? words[index] : nil
             button.setTitle(word, for: .normal)
             button.isEnabled = word != nil
             button.accessibilityElementsHidden = word == nil
         }
+        let showEmoji = !emojis.isEmpty && displayedModel?.layer == .letters && displayedModel?.emojiMode == .closed
+        suggestions[2].isHidden = showEmoji
+        emojiSuggestions.isHidden = !showEmoji
+        for (index, button) in emojiSuggestionButtons.enumerated() {
+            let match = index < emojis.count ? emojis[index] : nil
+            button.offer = match.flatMap { match in emojiContextID.map { (match.glyph, $0) } }
+            button.setTitle(match?.glyph, for: .normal)
+            button.accessibilityLabel = match.map { "Emoji: " + $0.label }
+            button.accessibilityValue = match?.glyph
+            button.isHidden = match == nil
+            button.isEnabled = showEmoji && match != nil
+        }
+        setNeedsLayout()
     }
 
     func update(_ model: KeyboardModel, returnTitle: String?, accentColor: UIColor? = nil,
@@ -349,7 +399,7 @@ final class KeyboardView: UIView {
         guard displayedModel != model || displayedReturnTitle != returnTitle ||
               displayedAccent != accentColor || displayedFont != font else { return }
         if displayedModel == nil || displayedFont != font || displayedModel?.style != model.style {
-            let suggestionFont = font.font(ofSize: model.style == .ios ? 17 : 15)
+            let suggestionFont = font.font(ofSize: model.style == .ios ? 21 : 15)
             for button in suggestions { button.titleLabel?.font = suggestionFont }
         }
         displayedFont = font
@@ -368,15 +418,15 @@ final class KeyboardView: UIView {
             geometryArea = .null
         }
         displayedModel = model
+        if model.layer != .letters || model.emojiMode != .closed { setSuggestions([]) }
         displayedReturnTitle = returnTitle
-        for button in [optionsButton, undoButton, layoutButton] + suggestions {
-            button.contentEdgeInsets = UIEdgeInsets(top: model.style == .ios ? -12 : 0, left: 0, bottom: 0, right: 0)
+        for button in [optionsButton, undoButton, layoutButton] + suggestions + emojiSuggestionButtons {
+            button.contentEdgeInsets = UIEdgeInsets(top: model.style == .ios ? -7 : 0, left: 0, bottom: 0, right: 0)
         }
         for button in suggestions {
             button.setTitleColor(model.style == .ios ? KeyboardStyle.iosSuggestionInk : Self.ink, for: .normal)
         }
         layoutButton.isHidden = !showsSplitToggle || model.style == .ios
-        suggestionSpacer.isHidden = model.style != .ios || !model.isSplit
         suggestionDividers.forEach { $0.isHidden = model.style != .ios }
         hideButton.isHidden = model.style == .ios && !keypad && model.emojiMode == .closed
         toolbar.isHidden = keypad || model.emojiMode != .closed
@@ -540,16 +590,18 @@ final class KeyboardView: UIView {
         // This strip also provides headroom for top-row previews inside the extension.
         let searching = displayedModel?.emojiMode == .search
         let top: CGFloat = searching ? min(83, typingArea.height * 0.35) :
-            (keypad ? 0 : (ios ? (typingArea.width > 800 ? 38 : 40) : min(61, max(46, typingArea.height * 0.23))))
+            (keypad ? 0 : (ios ? (typingArea.width > 800 ? 38 : (typingArea.width >= 560 && typingArea.height >= 240 ? 47 : 40)) : min(61, max(46, typingArea.height * 0.23))))
         let toolbarLeft = ios && typingArea.width > 900 ? CGFloat(20) : available.minX
         let toolbarRight = min(bounds.maxX, (ios && typingArea.width > 800 ? available.maxX + 10 : available.maxX) + rightEdgeShift)
         toolbar.frame = CGRect(x: toolbarLeft, y: 0, width: toolbarRight - toolbarLeft, height: top)
-        let predictionWidth = ios && typingArea.width > 800 ? CGFloat(323.333) : available.width / 2
-        suggestionSpacerWidth.constant = max(0, toolbar.bounds.width - predictionWidth - 44 - (undoButton.isHidden ? 0 : 44))
         toolbar.layoutIfNeeded()
+        emojiSuggestions.layoutIfNeeded()
+        let edges = [suggestions[1].frame.minX,
+                     emojiSuggestions.isHidden ? suggestions[2].frame.minX : emojiSuggestions.frame.minX,
+                     emojiSuggestions.frame.minX + emojiSuggestionButtons[1].frame.minX]
         for (index, divider) in suggestionDividers.enumerated() {
-            divider.frame = CGRect(x: suggestions[index + 1].frame.minX, y: (top - 24) / 2 - (ios ? 6 : 0),
-                                   width: 1, height: 24)
+            divider.isHidden = !ios || (index == 2 && (emojiSuggestions.isHidden || emojiSuggestionButtons[1].isHidden))
+            divider.frame = CGRect(x: edges[index], y: (top - 24) / 2 - (ios ? 3.5 : 0), width: 1, height: 24)
         }
         emojiPanel?.frame = searching ? toolbar.frame : typingArea
         if hand != .fullWidth {

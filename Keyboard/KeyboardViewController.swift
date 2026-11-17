@@ -196,6 +196,16 @@ final class KeyboardViewController: UIInputViewController {
     private var candidatePrefix = ""
     private var candidateGeneration = 0
     private var candidateWords: [String] = []
+    private struct EmojiCandidateContext {
+        let id = UUID()
+        let document: UUID
+        let before: String
+        let after: String
+        let word: String
+        let generation: Int
+        let choices: [(glyph: String, label: String)]
+    }
+    private var emojiCandidateContext: EmojiCandidateContext?
     private var suggestionTask: DispatchWorkItem?
     private var contextGeneration = 0
     private var contextNeedsSetup = true
@@ -251,6 +261,7 @@ final class KeyboardViewController: UIInputViewController {
         board.onGlide = { [weak self] stroke in self?.commitGlide(stroke) ?? false }
         board.onTouch = { [weak self] key in self?.playFeedback(key.soundKey) }
         board.onWord = { [weak self] word in self?.insertSuggestion(word) }
+        board.onSuggestedEmoji = { [weak self] glyph, context in self?.insertSuggestedEmoji(glyph, context: context) }
         board.onUndoCorrection = { [weak self] in
             guard let self, self.undoCorrection(fromButton: true) else { return }
             self.applyAutoCase()
@@ -420,11 +431,9 @@ final class KeyboardViewController: UIInputViewController {
     private func refreshContext() {
         let proxy = textDocumentProxy
         if let edit = lastCorrection, !canUndo(edit) || !edit.matches(proxy) { lastCorrection = nil }
-        switch proxy.keyboardAppearance ?? .default {
-        case .dark: board.overrideUserInterfaceStyle = .dark
-        case .light: board.overrideUserInterfaceStyle = .light
-        default: board.overrideUserInterfaceStyle = .unspecified
-        }
+        // Inherit UIKit's live keyboard appearance. The proxy can retain the
+        // previous resolved appearance while the host changes light/dark mode;
+        // copying it into a view override freezes every dynamic key color.
         glideFieldEligible = allowsWordSuggestions && !insideWord
         let kind = proxy.keyboardType ?? .default
         let changedEmojiDocument = emojiDocument.map { $0 != proxy.attachedDocumentID } ?? false
@@ -531,7 +540,7 @@ final class KeyboardViewController: UIInputViewController {
         lastShift = nil
         textDocumentProxy.insertText(receipt.inserted)
         glideWord = receipt
-        board.setSuggestions(options)
+        presentSuggestions(options, emojiWord: receipt.word)
         applyAutoCase()
         updateKeys()
         return true
@@ -1288,6 +1297,7 @@ final class KeyboardViewController: UIInputViewController {
 
     private func refreshSuggestions() {
         adoptMemoryBudget()
+        emojiCandidateContext = nil
         let proxy = textDocumentProxy
         guard model.emojiMode == .closed, let document = proxy.attachedDocumentID else {
             candidateDocument = nil
@@ -1297,7 +1307,7 @@ final class KeyboardViewController: UIInputViewController {
         }
         if let receipt = glideWord {
             if receipt.expected == glideContext() {
-                board.setSuggestions(receipt.alternatives)
+                presentSuggestions(receipt.alternatives, emojiWord: receipt.word)
                 return
             }
             glideWord = nil
@@ -1329,7 +1339,65 @@ final class KeyboardViewController: UIInputViewController {
                 candidateWords = [candidatePrefix] + choices.suggestions
             }
         }
-        board.setSuggestions(candidateWords)
+        presentSuggestions(candidateWords, emojiWord: candidatePrefix)
+    }
+
+    private func presentSuggestions(_ words: [String], emojiWord: String) {
+        let emojis = suggestedEmojis(for: emojiWord)
+        board.setSuggestions(words, emojis: emojis, emojiContextID: emojiCandidateContext?.id)
+    }
+
+    private func suggestedEmojis(for word: String) -> [(glyph: String, label: String)] {
+        let proxy = textDocumentProxy
+        guard model.layer == .letters, model.emojiMode == .closed, allowsWordSuggestions, !insideWord,
+              (2...40).contains(word.count), prefix() == word, let document = proxy.attachedDocumentID else { return [] }
+        let before = proxy.documentContextBeforeInput ?? ""
+        if let preceding = before.dropLast(word.count).last,
+           !preceding.isWhitespace && !"([\"“‘".contains(preceding) { return [] }
+        let matches = EmojiPredictionIndex.shared.matches(word)
+        guard !matches.isEmpty else { return [] }
+        let tones = UserDefaults.standard.dictionary(forKey: "emoji.tones") as? [String: String] ?? [:]
+        let choices = matches.map { match -> (glyph: String, label: String) in
+            let preferred = tones[match.glyph]
+            return (preferred.flatMap { match.variants.contains($0) ? $0 : nil } ?? match.glyph, match.name)
+        }
+        emojiCandidateContext = EmojiCandidateContext(document: document,
+            before: String((proxy.documentContextBeforeInput ?? "").suffix(160)),
+            after: String((proxy.documentContextAfterInput ?? "").prefix(32)), word: word,
+            generation: contextGeneration, choices: choices)
+        return choices
+    }
+
+    private func insertSuggestedEmoji(_ glyph: String, context: UUID) {
+        let proxy = textDocumentProxy
+        guard let candidate = emojiCandidateContext, candidate.id == context, candidate.choices.contains(where: { $0.glyph == glyph }),
+              model.layer == .letters, model.emojiMode == .closed, allowsWordSuggestions, !insideWord,
+              candidate.generation == contextGeneration, proxy.attachedDocumentID == candidate.document,
+              candidate.before == String((proxy.documentContextBeforeInput ?? "").suffix(160)),
+              candidate.after == String((proxy.documentContextAfterInput ?? "").prefix(32)),
+              prefix() == candidate.word else { refreshSuggestions(); return }
+        // An emoji is an explicit replacement, never a learned spelling correction.
+        abandonSentence()
+        nextWordTask?.cancel()
+        suggestionTask?.cancel()
+        run = nil
+        discardReview()
+        lastCorrection = nil
+        keptSpelling = nil
+        wordTouches = nil
+        glideWord = nil
+        emojiCandidateContext = nil
+        for _ in candidate.word { proxy.deleteBackward() }
+        let reusesSpace = candidate.after.first == " " || candidate.after.first == "\t"
+        proxy.insertText(glyph + (reusesSpace ? "" : " "))
+        if reusesSpace { proxy.adjustTextPosition(byCharacterOffset: 1) }
+        var recent = UserDefaults.standard.stringArray(forKey: "emoji.recent") ?? []
+        recent.removeAll { $0 == glyph }
+        recent.insert(glyph, at: 0)
+        UserDefaults.standard.set(Array(recent.prefix(32)), forKey: "emoji.recent")
+        applyAutoCase()
+        updateKeys()
+        scheduleSuggestions()
     }
 
     private func insertSuggestion(_ word: String) {
@@ -1347,6 +1415,7 @@ final class KeyboardViewController: UIInputViewController {
                 selected.word = word
                 selected.choseAlternative = true
                 glideWord = selected
+                presentSuggestions(selected.alternatives, emojiWord: word)
             }
             return
         }
